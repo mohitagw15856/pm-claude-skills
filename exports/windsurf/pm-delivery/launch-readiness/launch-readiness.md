@@ -98,5 +98,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/launch-readiness.html
 
-<!-- pm-claude-skills v83.2.0 | skill: launch-readiness | source: skills/launch-readiness/SKILL.md | sha256: ad332c50728df171ab1191591224bbbc4d735a10a673d9b5f303bf437f4b8ce6 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: launch-readiness | source: skills/launch-readiness/SKILL.md | sha256: ad332c50728df171ab1191591224bbbc4d735a10a673d9b5f303bf437f4b8ce6 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

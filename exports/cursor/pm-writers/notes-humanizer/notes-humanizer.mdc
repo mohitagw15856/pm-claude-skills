@@ -191,5 +191,5 @@ Present the output in the four-section structure defined above. The change log m
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/notes-humanizer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: notes-humanizer | source: skills/notes-humanizer/SKILL.md | sha256: c8605921aa8233646d6b2da01a4e4e6ce634537d6678fcd8286a08747a7947a7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: notes-humanizer | source: skills/notes-humanizer/SKILL.md | sha256: c8605921aa8233646d6b2da01a4e4e6ce634537d6678fcd8286a08747a7947a7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

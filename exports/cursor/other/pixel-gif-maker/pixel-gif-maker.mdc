@@ -82,5 +82,5 @@ Drag it into Slack. Want it calmer (sparkle) or bigger (--scale 4)?
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pixel-gif-maker.html
 
-<!-- pm-claude-skills v83.2.0 | skill: pixel-gif-maker | source: skills/pixel-gif-maker/SKILL.md | sha256: c87fcab0c3a2a0928d8ab3137df9d7b7e972c0c87f4e80f4e3585526c60d0e0d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: pixel-gif-maker | source: skills/pixel-gif-maker/SKILL.md | sha256: c87fcab0c3a2a0928d8ab3137df9d7b7e972c0c87f4e80f4e3585526c60d0e0d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

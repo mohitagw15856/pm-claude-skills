@@ -62,5 +62,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/devils-advocate-on-demand.html
 
-<!-- pm-claude-skills v83.2.0 | skill: devils-advocate-on-demand | source: skills/devils-advocate-on-demand/SKILL.md | sha256: 96c12654dbd1f9a2b43b3fddba293b571efd01af8a7975134698d6fe53903635 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: devils-advocate-on-demand | source: skills/devils-advocate-on-demand/SKILL.md | sha256: 96c12654dbd1f9a2b43b3fddba293b571efd01af8a7975134698d6fe53903635 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

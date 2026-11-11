@@ -67,5 +67,5 @@ Source: open-notify.org (position fetched live; orbital constants are stable fac
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/iss-tracker.html
 
-<!-- pm-claude-skills v83.2.0 | skill: iss-tracker | source: skills/iss-tracker/SKILL.md | sha256: d423f3da07f6a1c058275fc8535e819917ff4d5b823b2ec0fc637d85ad48be94 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: iss-tracker | source: skills/iss-tracker/SKILL.md | sha256: d423f3da07f6a1c058275fc8535e819917ff4d5b823b2ec0fc637d85ad48be94 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

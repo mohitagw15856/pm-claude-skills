@@ -71,5 +71,5 @@ Release-management & QA practice — evidence-based go/no-go sign-offs with cove
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/qa-release-signoff.html
 
-<!-- pm-claude-skills v83.2.0 | skill: qa-release-signoff | source: skills/qa-release-signoff/SKILL.md | sha256: b2f6ef8413a4b5a3a24f1a6dabb38b2aaa3fa18fbad970f6aa4f32e992e84a68 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: qa-release-signoff | source: skills/qa-release-signoff/SKILL.md | sha256: b2f6ef8413a4b5a3a24f1a6dabb38b2aaa3fa18fbad970f6aa4f32e992e84a68 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

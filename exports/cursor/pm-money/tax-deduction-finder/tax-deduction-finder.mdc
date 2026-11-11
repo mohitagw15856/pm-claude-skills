@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tax-deduction-finder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: tax-deduction-finder | source: skills/tax-deduction-finder/SKILL.md | sha256: ce32694f07ccdcc85d96e9bee9cd062a6dba4e468b9c4773689e7ecd90b8c087 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: tax-deduction-finder | source: skills/tax-deduction-finder/SKILL.md | sha256: ce32694f07ccdcc85d96e9bee9cd062a6dba4e468b9c4773689e7ecd90b8c087 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

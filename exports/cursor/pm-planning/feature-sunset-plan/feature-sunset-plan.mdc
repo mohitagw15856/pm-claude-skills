@@ -86,5 +86,5 @@ Ask for (if not already provided):
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/feature-sunset-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: feature-sunset-plan | source: skills/feature-sunset-plan/SKILL.md | sha256: f7d6a70c041e752823a547dcb8d6a17f4ba6d94c84470f7de35d956d1ba08a0c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: feature-sunset-plan | source: skills/feature-sunset-plan/SKILL.md | sha256: f7d6a70c041e752823a547dcb8d6a17f4ba6d94c84470f7de35d956d1ba08a0c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

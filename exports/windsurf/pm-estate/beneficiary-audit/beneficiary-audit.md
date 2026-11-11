@@ -76,5 +76,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/beneficiary-audit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: beneficiary-audit | source: skills/beneficiary-audit/SKILL.md | sha256: 0e740cc4fff15572ddbc3a90926c818a2bddbbfd1f004fdb8164058cbf942204 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: beneficiary-audit | source: skills/beneficiary-audit/SKILL.md | sha256: 0e740cc4fff15572ddbc3a90926c818a2bddbbfd1f004fdb8164058cbf942204 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

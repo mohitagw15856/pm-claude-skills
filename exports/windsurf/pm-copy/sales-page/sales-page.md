@@ -67,5 +67,5 @@ Direct-response copywriting (PAS / problem-agitate-solve, unique-mechanism, offe
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sales-page.html
 
-<!-- pm-claude-skills v83.2.0 | skill: sales-page | source: skills/sales-page/SKILL.md | sha256: cdf8c121a209ad7bc8210fa8e778d0336988b506d9d99ed511dbc0f4a9cb9024 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: sales-page | source: skills/sales-page/SKILL.md | sha256: cdf8c121a209ad7bc8210fa8e778d0336988b506d9d99ed511dbc0f4a9cb9024 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

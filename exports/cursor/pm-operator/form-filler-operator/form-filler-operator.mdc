@@ -82,5 +82,5 @@ For computer-use agents with browser control. Without tools, the fact sheet + ma
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/form-filler-operator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: form-filler-operator | source: skills/form-filler-operator/SKILL.md | sha256: 7008451f7d306c8e9a650d9a7ba13fb3bdfcad7ae195a3e0c077833b85f58129 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: form-filler-operator | source: skills/form-filler-operator/SKILL.md | sha256: 7008451f7d306c8e9a650d9a7ba13fb3bdfcad7ae195a3e0c077833b85f58129 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -70,5 +70,5 @@ Recommendation-writing practice — establishing credibility, evidence over adje
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reference-letter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: reference-letter | source: skills/reference-letter/SKILL.md | sha256: 3a78efb8385a1a847319208b4930788e3806146f655ac6a9e4ed77b5df32569f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: reference-letter | source: skills/reference-letter/SKILL.md | sha256: 3a78efb8385a1a847319208b4930788e3806146f655ac6a9e4ed77b5df32569f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

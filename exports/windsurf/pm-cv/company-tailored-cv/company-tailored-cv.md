@@ -86,5 +86,5 @@ If web access is not available, say so, ask the person to paste the job ad and t
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/company-tailored-cv.html
 
-<!-- pm-claude-skills v83.2.0 | skill: company-tailored-cv | source: skills/company-tailored-cv/SKILL.md | sha256: 6584fdd4ae65f848eba3a9b9bbaf5d23065b2d09af9c894830454052bda3e9c0 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: company-tailored-cv | source: skills/company-tailored-cv/SKILL.md | sha256: 6584fdd4ae65f848eba3a9b9bbaf5d23065b2d09af9c894830454052bda3e9c0 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -68,5 +68,5 @@ The Keep a Changelog standard and Semantic Versioning, written for the reader ra
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/changelog-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: changelog-writer | source: skills/changelog-writer/SKILL.md | sha256: db243011dab799729867ee8bedb3d03fe3b82a77f7321e534e37b0dc8c87921b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: changelog-writer | source: skills/changelog-writer/SKILL.md | sha256: db243011dab799729867ee8bedb3d03fe3b82a77f7321e534e37b0dc8c87921b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

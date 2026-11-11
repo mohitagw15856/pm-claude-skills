@@ -64,5 +64,5 @@ A plan's value is realised or destroyed at execution time. The two failure modes
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/executing-plans.html
 
-<!-- pm-claude-skills v83.2.0 | skill: executing-plans | source: skills/executing-plans/SKILL.md | sha256: e02d4eb217d4f9645a6632f497f492e82be2d1d05067c7842518047bf40132b5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: executing-plans | source: skills/executing-plans/SKILL.md | sha256: e02d4eb217d4f9645a6632f497f492e82be2d1d05067c7842518047bf40132b5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

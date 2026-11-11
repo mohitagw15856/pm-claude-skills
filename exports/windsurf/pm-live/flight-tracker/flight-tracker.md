@@ -69,5 +69,5 @@ Source: [adsb.lol / OpenSky] community ADS-B · as of [time] · rerun: `[exact c
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/flight-tracker.html
 
-<!-- pm-claude-skills v83.2.0 | skill: flight-tracker | source: skills/flight-tracker/SKILL.md | sha256: 46f77dc262f69331374e9e91d1a9bdc4ed8d2485ef909b865e574be0e7bf5164 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: flight-tracker | source: skills/flight-tracker/SKILL.md | sha256: 46f77dc262f69331374e9e91d1a9bdc4ed8d2485ef909b865e574be0e7bf5164 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -291,5 +291,5 @@ Tell the user: "Add this to your CLAUDE.md and Superpowers will be active perman
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/claude-superpowers.html
 
-<!-- pm-claude-skills v83.2.0 | skill: claude-superpowers | source: skills/claude-superpowers/SKILL.md | sha256: 8308febc7199d63fc8dcdbc7ed1fe1dc3ec2c9693d1dbc634caec52bbe55fa6a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: claude-superpowers | source: skills/claude-superpowers/SKILL.md | sha256: 8308febc7199d63fc8dcdbc7ed1fe1dc3ec2c9693d1dbc634caec52bbe55fa6a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

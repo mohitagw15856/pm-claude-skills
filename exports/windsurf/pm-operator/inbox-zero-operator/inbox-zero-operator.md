@@ -81,5 +81,5 @@ For computer-use or tool-using agents with mailbox access (Gmail/Outlook APIs or
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inbox-zero-operator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: inbox-zero-operator | source: skills/inbox-zero-operator/SKILL.md | sha256: e6aca105964fd8b31e7dfa620187f0d5f4a860887ae2fcd847f9410dd52e42bc | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: inbox-zero-operator | source: skills/inbox-zero-operator/SKILL.md | sha256: e6aca105964fd8b31e7dfa620187f0d5f4a860887ae2fcd847f9410dd52e42bc | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -77,5 +77,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meeting-prep-pack.html
 
-<!-- pm-claude-skills v83.2.0 | skill: meeting-prep-pack | source: skills/meeting-prep-pack/SKILL.md | sha256: 29c39d822d701f70b918df837ff714785a15c1a2943dfa5f3a2db6ad2c6d1182 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: meeting-prep-pack | source: skills/meeting-prep-pack/SKILL.md | sha256: 29c39d822d701f70b918df837ff714785a15c1a2943dfa5f3a2db6ad2c6d1182 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

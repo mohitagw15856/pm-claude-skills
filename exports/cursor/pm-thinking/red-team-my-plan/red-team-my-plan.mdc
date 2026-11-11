@@ -68,5 +68,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/red-team-my-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: red-team-my-plan | source: skills/red-team-my-plan/SKILL.md | sha256: 3990d07aac77c87b2361cb8c2903f5ecf55abe1fe51ac34e17b436d660f23574 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: red-team-my-plan | source: skills/red-team-my-plan/SKILL.md | sha256: 3990d07aac77c87b2361cb8c2903f5ecf55abe1fe51ac34e17b436d660f23574 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

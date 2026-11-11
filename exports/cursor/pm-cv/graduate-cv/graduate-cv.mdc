@@ -73,5 +73,5 @@ Rules:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/graduate-cv.html
 
-<!-- pm-claude-skills v83.2.0 | skill: graduate-cv | source: skills/graduate-cv/SKILL.md | sha256: 484b56adf9a43bc97e3414f9955bb2abdd33f710d2d9cb05ffa3f8a5bab4a80c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: graduate-cv | source: skills/graduate-cv/SKILL.md | sha256: 484b56adf9a43bc97e3414f9955bb2abdd33f710d2d9cb05ffa3f8a5bab4a80c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

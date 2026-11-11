@@ -81,5 +81,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/moving-house-checklist.html
 
-<!-- pm-claude-skills v83.2.0 | skill: moving-house-checklist | source: skills/moving-house-checklist/SKILL.md | sha256: 7fde63c30c729f04a18d13356c016eb32d2b5d9992f79ab1caa5e33ba4a3bd9e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: moving-house-checklist | source: skills/moving-house-checklist/SKILL.md | sha256: 7fde63c30c729f04a18d13356c016eb32d2b5d9992f79ab1caa5e33ba4a3bd9e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

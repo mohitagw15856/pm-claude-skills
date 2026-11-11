@@ -93,5 +93,5 @@ Every recipe includes the prompt the scheduled run executes. It must contain:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/schedule-recipe.html
 
-<!-- pm-claude-skills v83.2.0 | skill: schedule-recipe | source: skills/schedule-recipe/SKILL.md | sha256: 8866f9fbd8b73492679bd5ef3ce6abfb7b3efb8daa71b326beef1ac48ed72fe8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: schedule-recipe | source: skills/schedule-recipe/SKILL.md | sha256: 8866f9fbd8b73492679bd5ef3ce6abfb7b3efb8daa71b326beef1ac48ed72fe8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

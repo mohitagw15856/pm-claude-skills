@@ -139,5 +139,5 @@ Suggest how to divide competencies across interview rounds to avoid repetition:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hiring-rubric.html
 
-<!-- pm-claude-skills v83.2.0 | skill: hiring-rubric | source: skills/hiring-rubric/SKILL.md | sha256: cd3c7d737877ccaf458520654aa7d47c51bf4b31b6dac431b79d8e66caa8eb8c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: hiring-rubric | source: skills/hiring-rubric/SKILL.md | sha256: cd3c7d737877ccaf458520654aa7d47c51bf4b31b6dac431b79d8e66caa8eb8c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

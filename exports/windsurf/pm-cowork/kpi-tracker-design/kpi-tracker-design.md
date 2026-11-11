@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kpi-tracker-design.html
 
-<!-- pm-claude-skills v83.2.0 | skill: kpi-tracker-design | source: skills/kpi-tracker-design/SKILL.md | sha256: f11c3aaaf3fcdb1648a61e34a03bb2afc7f949a54906dda5f9b6e2b45f220ad0 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: kpi-tracker-design | source: skills/kpi-tracker-design/SKILL.md | sha256: f11c3aaaf3fcdb1648a61e34a03bb2afc7f949a54906dda5f9b6e2b45f220ad0 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

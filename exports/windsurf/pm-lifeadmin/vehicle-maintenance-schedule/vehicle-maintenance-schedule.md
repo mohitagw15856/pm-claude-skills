@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vehicle-maintenance-schedule.html
 
-<!-- pm-claude-skills v83.2.0 | skill: vehicle-maintenance-schedule | source: skills/vehicle-maintenance-schedule/SKILL.md | sha256: 74dbb08196140056a9dab863626fc7a2ecec49a1f285fc5c3193ba2a5927d1e5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: vehicle-maintenance-schedule | source: skills/vehicle-maintenance-schedule/SKILL.md | sha256: 74dbb08196140056a9dab863626fc7a2ecec49a1f285fc5c3193ba2a5927d1e5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -59,5 +59,5 @@ End with: **⚠️ Review checklist** — the specific items counsel must confir
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/privacy-policy-drafter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: privacy-policy-drafter | source: skills/privacy-policy-drafter/SKILL.md | sha256: decd0e234c6d1f909f85ded9a169ade1f807555fa64ecf64c7f398b3be619950 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: privacy-policy-drafter | source: skills/privacy-policy-drafter/SKILL.md | sha256: decd0e234c6d1f909f85ded9a169ade1f807555fa64ecf64c7f398b3be619950 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

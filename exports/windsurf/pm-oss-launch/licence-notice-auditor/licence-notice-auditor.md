@@ -84,5 +84,5 @@ A short checklist of facts only the author can supply (the origin of a font, who
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/licence-notice-auditor.html
 
-<!-- pm-claude-skills v83.2.0 | skill: licence-notice-auditor | source: skills/licence-notice-auditor/SKILL.md | sha256: 40ca0263877365f851f1356428bc64b6c67b1c120475c37e994aca2e22696a5f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: licence-notice-auditor | source: skills/licence-notice-auditor/SKILL.md | sha256: 40ca0263877365f851f1356428bc64b6c67b1c120475c37e994aca2e22696a5f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

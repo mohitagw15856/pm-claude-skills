@@ -84,5 +84,5 @@ This is not legal, tax or immigration advice. For complex cases, a free advice s
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/form-explainer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: form-explainer | source: skills/form-explainer/SKILL.md | sha256: cb451cb10017b508f1f39637f9ee6e288ed785f14bb7e6e3f61110620cc71b50 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: form-explainer | source: skills/form-explainer/SKILL.md | sha256: cb451cb10017b508f1f39637f9ee6e288ed785f14bb7e6e3f61110620cc71b50 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

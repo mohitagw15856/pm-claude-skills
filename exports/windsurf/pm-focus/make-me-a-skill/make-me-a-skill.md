@@ -65,5 +65,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/make-me-a-skill.html
 
-<!-- pm-claude-skills v83.2.0 | skill: make-me-a-skill | source: skills/make-me-a-skill/SKILL.md | sha256: 3ecb051b08977c300b49cd44fc5d5ad99064dcd684869f2c8ea4c903c27268b3 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: make-me-a-skill | source: skills/make-me-a-skill/SKILL.md | sha256: 3ecb051b08977c300b49cd44fc5d5ad99064dcd684869f2c8ea4c903c27268b3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

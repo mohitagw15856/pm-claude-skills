@@ -74,5 +74,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/company-event-ops.html
 
-<!-- pm-claude-skills v83.2.0 | skill: company-event-ops | source: skills/company-event-ops/SKILL.md | sha256: 57a0f02361c2730aa26f0d4e206f2cf61001161887f7d605e5474a2f4bf6f82f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: company-event-ops | source: skills/company-event-ops/SKILL.md | sha256: 57a0f02361c2730aa26f0d4e206f2cf61001161887f7d605e5474a2f4bf6f82f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

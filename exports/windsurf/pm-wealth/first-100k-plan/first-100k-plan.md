@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-100k-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: first-100k-plan | source: skills/first-100k-plan/SKILL.md | sha256: 5d1a6d0a61c1acaf452d6097c0d3509074c551ac7238dccbe5f32a7329e80dd7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: first-100k-plan | source: skills/first-100k-plan/SKILL.md | sha256: 5d1a6d0a61c1acaf452d6097c0d3509074c551ac7238dccbe5f32a7329e80dd7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

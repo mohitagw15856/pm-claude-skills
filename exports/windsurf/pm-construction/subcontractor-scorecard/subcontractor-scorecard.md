@@ -83,5 +83,5 @@ Safety scores of 1–2 cap the overall recommendation at **Conditional** regardl
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/subcontractor-scorecard.html
 
-<!-- pm-claude-skills v83.2.0 | skill: subcontractor-scorecard | source: skills/subcontractor-scorecard/SKILL.md | sha256: 2268f8be7ccd1a7d6b89de51a6e21ba2023ae41786e8d53a1258c9c0660cd0dd | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: subcontractor-scorecard | source: skills/subcontractor-scorecard/SKILL.md | sha256: 2268f8be7ccd1a7d6b89de51a6e21ba2023ae41786e8d53a1258c9c0660cd0dd | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

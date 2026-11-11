@@ -77,5 +77,5 @@ What counts as abnormal (equipment alarm, material mismatch, a defect repeats) a
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-sop-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-sop-writer | source: skills/cn-sop-writer/SKILL.md | sha256: 64ca6b43f926ba3b2e3700ce9b0134c812762d0e3853dcf58938b7d71d4db78e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-sop-writer | source: skills/cn-sop-writer/SKILL.md | sha256: 64ca6b43f926ba3b2e3700ce9b0134c812762d0e3853dcf58938b7d71d4db78e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

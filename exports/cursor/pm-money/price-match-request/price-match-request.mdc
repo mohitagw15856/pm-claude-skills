@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/price-match-request.html
 
-<!-- pm-claude-skills v83.2.0 | skill: price-match-request | source: skills/price-match-request/SKILL.md | sha256: 70307eb1a717685f57b101a06c672976614ea0798424cf28130dd4ad74c24a7d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: price-match-request | source: skills/price-match-request/SKILL.md | sha256: 70307eb1a717685f57b101a06c672976614ea0798424cf28130dd4ad74c24a7d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

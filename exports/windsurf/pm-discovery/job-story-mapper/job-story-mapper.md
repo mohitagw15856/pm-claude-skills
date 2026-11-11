@@ -164,5 +164,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/job-story-mapper.html
 
-<!-- pm-claude-skills v83.2.0 | skill: job-story-mapper | source: skills/job-story-mapper/SKILL.md | sha256: 2185cc6bc66726059550747770e630ced699cca76978ccc7c161b3ee789d3e53 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: job-story-mapper | source: skills/job-story-mapper/SKILL.md | sha256: 2185cc6bc66726059550747770e630ced699cca76978ccc7c161b3ee789d3e53 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

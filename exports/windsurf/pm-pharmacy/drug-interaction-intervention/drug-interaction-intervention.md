@@ -82,5 +82,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/drug-interaction-intervention.html
 
-<!-- pm-claude-skills v83.2.0 | skill: drug-interaction-intervention | source: skills/drug-interaction-intervention/SKILL.md | sha256: c2de9fc6a8fa67514a2f1393f759c41cee39e0ede4a9eb3cb68d36611b79b20c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: drug-interaction-intervention | source: skills/drug-interaction-intervention/SKILL.md | sha256: c2de9fc6a8fa67514a2f1393f759c41cee39e0ede4a9eb3cb68d36611b79b20c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

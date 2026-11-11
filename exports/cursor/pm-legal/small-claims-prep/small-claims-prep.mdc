@@ -85,5 +85,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/small-claims-prep.html
 
-<!-- pm-claude-skills v83.2.0 | skill: small-claims-prep | source: skills/small-claims-prep/SKILL.md | sha256: dab9ed6f6c47b19e7ad3fbf7d544843893cb0ceaecaab2fc0d0fa074bc750fd1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: small-claims-prep | source: skills/small-claims-prep/SKILL.md | sha256: dab9ed6f6c47b19e7ad3fbf7d544843893cb0ceaecaab2fc0d0fa074bc750fd1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

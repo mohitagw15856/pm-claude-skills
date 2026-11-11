@@ -103,5 +103,5 @@ It matches the address against the table above and prints the system and confide
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ats-detector.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ats-detector | source: skills/ats-detector/SKILL.md | sha256: 9fed996751f04291aa0e60fb2e6c051295fc8c7d28042aef662d28077ef9792d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ats-detector | source: skills/ats-detector/SKILL.md | sha256: 9fed996751f04291aa0e60fb2e6c051295fc8c7d28042aef662d28077ef9792d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

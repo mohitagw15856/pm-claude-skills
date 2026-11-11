@@ -119,5 +119,5 @@ is the same budgeting logic for chronic illness.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/masking-budget.html
 
-<!-- pm-claude-skills v83.2.0 | skill: masking-budget | source: skills/masking-budget/SKILL.md | sha256: fbf18da45d6d449e2d080fd68daf2c463b99a40acf41fef66dca11a3fa55da42 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: masking-budget | source: skills/masking-budget/SKILL.md | sha256: fbf18da45d6d449e2d080fd68daf2c463b99a40acf41fef66dca11a3fa55da42 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

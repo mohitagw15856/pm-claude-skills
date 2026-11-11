@@ -67,5 +67,5 @@ Engineering/IC ladder promotion practice — operate-at-level evidence mapped to
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/promotion-packet.html
 
-<!-- pm-claude-skills v83.2.0 | skill: promotion-packet | source: skills/promotion-packet/SKILL.md | sha256: c20e96cd2ffa7bcdeb7043abf017561d6ef09ad13a85883cd2252fe257c8ceca | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: promotion-packet | source: skills/promotion-packet/SKILL.md | sha256: c20e96cd2ffa7bcdeb7043abf017561d6ef09ad13a85883cd2252fe257c8ceca | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

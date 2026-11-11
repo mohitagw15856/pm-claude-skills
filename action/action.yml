@@ -19,9 +19,9 @@ inputs:
     description: 'Anthropic API key (store it as a secret).'
     required: true
   model:
-    description: 'Claude model id.'
+    description: 'Claude model id. Leave empty for the default in data/models.json (the "default" role).'
     required: false
-    default: 'claude-sonnet-4-6'
+    default: ''
   output_file:
     description: 'If set, also write the result to this file.'
     required: false

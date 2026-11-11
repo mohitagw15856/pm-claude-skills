@@ -4,15 +4,17 @@
 //
 // Keys come from the environment: ANTHROPIC_API_KEY, OPENAI_API_KEY, GEMINI_API_KEY.
 
+import { modelFor, requestShape } from './models.mjs';
+
 const PROVIDERS = {
   anthropic: {
     env: 'ANTHROPIC_API_KEY',
-    defaultModel: 'claude-sonnet-4-6',
+    defaultModel: modelFor('default'),
     async complete({ key, model, system, user, maxTokens }) {
       const res = await fetch('https://api.anthropic.com/v1/messages', {
         method: 'POST',
         headers: { 'x-api-key': key, 'anthropic-version': '2023-06-01', 'content-type': 'application/json' },
-        body: JSON.stringify({ model, max_tokens: maxTokens, system, messages: [{ role: 'user', content: user }] }),
+        body: JSON.stringify({ model, ...requestShape(model, maxTokens), system, messages: [{ role: 'user', content: user }] }),
       });
       if (!res.ok) throw new Error(`anthropic ${res.status}: ${(await res.text()).slice(0, 200)}`);
       return (await res.json()).content.map((c) => c.text || '').join('');

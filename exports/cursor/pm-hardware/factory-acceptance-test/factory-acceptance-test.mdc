@@ -83,5 +83,5 @@ From lot size + Level II, derive the sample-size code letter and accept/reject n
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/factory-acceptance-test.html
 
-<!-- pm-claude-skills v83.2.0 | skill: factory-acceptance-test | source: skills/factory-acceptance-test/SKILL.md | sha256: 92fb5292739f7804b4f9d0233866dd983a38f7f48bd654d5c78d56cd288d6084 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: factory-acceptance-test | source: skills/factory-acceptance-test/SKILL.md | sha256: 92fb5292739f7804b4f9d0233866dd983a38f7f48bd654d5c78d56cd288d6084 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

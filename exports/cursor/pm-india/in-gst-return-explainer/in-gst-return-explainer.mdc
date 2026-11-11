@@ -90,5 +90,5 @@ Ask for (if not already provided), else infer and label as an assumption:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/in-gst-return-explainer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: in-gst-return-explainer | source: skills/in-gst-return-explainer/SKILL.md | sha256: 9e107d33652434358cb7c4874db26472b901ce4e8a16f5f80e5bc2782797ca14 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: in-gst-return-explainer | source: skills/in-gst-return-explainer/SKILL.md | sha256: 9e107d33652434358cb7c4874db26472b901ce4e8a16f5f80e5bc2782797ca14 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -78,5 +78,5 @@ Then verify: rewrite one neutral paragraph in the extracted voice and check it a
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/style-fingerprint.html
 
-<!-- pm-claude-skills v83.2.0 | skill: style-fingerprint | source: skills/style-fingerprint/SKILL.md | sha256: aa88ad825d9d646e3d8ff734c72ddefb929d7cb1abaef7cd8210726f7abedbac | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: style-fingerprint | source: skills/style-fingerprint/SKILL.md | sha256: aa88ad825d9d646e3d8ff734c72ddefb929d7cb1abaef7cd8210726f7abedbac | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

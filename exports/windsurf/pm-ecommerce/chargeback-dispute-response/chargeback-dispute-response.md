@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/chargeback-dispute-response.html
 
-<!-- pm-claude-skills v83.2.0 | skill: chargeback-dispute-response | source: skills/chargeback-dispute-response/SKILL.md | sha256: 077a07cc29c6636eccf9aa0a9f8129f2e0b7ffc7a052787c22dd52bf30a3ea66 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: chargeback-dispute-response | source: skills/chargeback-dispute-response/SKILL.md | sha256: 077a07cc29c6636eccf9aa0a9f8129f2e0b7ffc7a052787c22dd52bf30a3ea66 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

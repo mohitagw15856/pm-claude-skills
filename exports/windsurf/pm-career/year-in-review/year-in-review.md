@@ -76,5 +76,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/year-in-review.html
 
-<!-- pm-claude-skills v83.2.0 | skill: year-in-review | source: skills/year-in-review/SKILL.md | sha256: 9b15a2b214489abc692e8a3b7c5309957884ae66bef4e485620a35950d3634ff | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: year-in-review | source: skills/year-in-review/SKILL.md | sha256: 9b15a2b214489abc692e8a3b7c5309957884ae66bef4e485620a35950d3634ff | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

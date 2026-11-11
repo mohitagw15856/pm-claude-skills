@@ -65,5 +65,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/get-more-from-ai.html
 
-<!-- pm-claude-skills v83.2.0 | skill: get-more-from-ai | source: skills/get-more-from-ai/SKILL.md | sha256: 883d05be8d0ada343cdfd5e726bbf461a005fd21bf8c0c9e4ae9017e1e97e9b0 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: get-more-from-ai | source: skills/get-more-from-ai/SKILL.md | sha256: 883d05be8d0ada343cdfd5e726bbf461a005fd21bf8c0c9e4ae9017e1e97e9b0 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

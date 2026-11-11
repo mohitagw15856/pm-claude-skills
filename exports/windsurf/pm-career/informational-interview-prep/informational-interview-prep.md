@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/informational-interview-prep.html
 
-<!-- pm-claude-skills v83.2.0 | skill: informational-interview-prep | source: skills/informational-interview-prep/SKILL.md | sha256: fa764352f20925aca18f08bd9bc6e2127e0521a272995140d7c3cc36dc9a2f20 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: informational-interview-prep | source: skills/informational-interview-prep/SKILL.md | sha256: fa764352f20925aca18f08bd9bc6e2127e0521a272995140d7c3cc36dc9a2f20 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -75,5 +75,5 @@ Voice-of-customer practice — correct NPS/CSAT/CES computation, verbatim themin
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/csat-nps-analysis.html
 
-<!-- pm-claude-skills v83.2.0 | skill: csat-nps-analysis | source: skills/csat-nps-analysis/SKILL.md | sha256: 24c278b888b8562aa46454449f6a25d49d73e66448555a5217709b787f9dbd38 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: csat-nps-analysis | source: skills/csat-nps-analysis/SKILL.md | sha256: 24c278b888b8562aa46454449f6a25d49d73e66448555a5217709b787f9dbd38 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

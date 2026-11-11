@@ -65,5 +65,5 @@ Testimonial/pull-quote editing for marketing (find the strongest line, faithful 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/quote-card.html
 
-<!-- pm-claude-skills v83.2.0 | skill: quote-card | source: skills/quote-card/SKILL.md | sha256: 93845481bbe0971e1c8b8d9d6c055bf81bff950a34abc5c867fe34e572ea7416 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: quote-card | source: skills/quote-card/SKILL.md | sha256: 93845481bbe0971e1c8b8d9d6c055bf81bff950a34abc5c867fe34e572ea7416 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

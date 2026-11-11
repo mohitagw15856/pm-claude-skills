@@ -121,5 +121,5 @@ becomes net-never.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/creator-deal-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: creator-deal-decoder | source: skills/creator-deal-decoder/SKILL.md | sha256: 3585fa22e798844c0bb547cfc82cd0ad56c662f278bd7ea5557268cc80874cbb | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: creator-deal-decoder | source: skills/creator-deal-decoder/SKILL.md | sha256: 3585fa22e798844c0bb547cfc82cd0ad56c662f278bd7ea5557268cc80874cbb | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

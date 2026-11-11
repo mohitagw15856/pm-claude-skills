@@ -66,5 +66,5 @@ A short routine: a fixed time and place, phone away, the child plans the order, 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-homework-helper-parent.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-homework-helper-parent | source: skills/cn-homework-helper-parent/SKILL.md | sha256: 2e9296353659ad3b1c12706f06fbab4c8ec6b8fc3f9e9e570ce31f662ded5e21 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-homework-helper-parent | source: skills/cn-homework-helper-parent/SKILL.md | sha256: 2e9296353659ad3b1c12706f06fbab4c8ec6b8fc3f9e9e570ce31f662ded5e21 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

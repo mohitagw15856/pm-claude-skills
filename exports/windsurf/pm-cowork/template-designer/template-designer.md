@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/template-designer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: template-designer | source: skills/template-designer/SKILL.md | sha256: cc4321656f7a6b00ed084291d03c4f48f56f967503d0477956e548bf561a2c71 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: template-designer | source: skills/template-designer/SKILL.md | sha256: cc4321656f7a6b00ed084291d03c4f48f56f967503d0477956e548bf561a2c71 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -100,5 +100,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/return-to-activity-criteria.html
 
-<!-- pm-claude-skills v83.2.0 | skill: return-to-activity-criteria | source: skills/return-to-activity-criteria/SKILL.md | sha256: 04ab25bedfe100985678d1f1ae17bf9b9df92057c78f73288b83fc723762b88e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: return-to-activity-criteria | source: skills/return-to-activity-criteria/SKILL.md | sha256: 04ab25bedfe100985678d1f1ae17bf9b9df92057c78f73288b83fc723762b88e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

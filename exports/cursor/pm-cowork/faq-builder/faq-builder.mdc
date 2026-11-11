@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/faq-builder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: faq-builder | source: skills/faq-builder/SKILL.md | sha256: 357d7e3015ee0637be530b65ffe1969c28632dc40ac44ccf9659a8e691f700ec | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: faq-builder | source: skills/faq-builder/SKILL.md | sha256: 357d7e3015ee0637be530b65ffe1969c28632dc40ac44ccf9659a8e691f700ec | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

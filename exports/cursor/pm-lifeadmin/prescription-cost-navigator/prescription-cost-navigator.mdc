@@ -77,5 +77,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prescription-cost-navigator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: prescription-cost-navigator | source: skills/prescription-cost-navigator/SKILL.md | sha256: 69b967a8af02dc944b67067087da184ee3d372356f9907af29db26149661eda5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: prescription-cost-navigator | source: skills/prescription-cost-navigator/SKILL.md | sha256: 69b967a8af02dc944b67067087da184ee3d372356f9907af29db26149661eda5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

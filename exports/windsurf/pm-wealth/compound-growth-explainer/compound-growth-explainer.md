@@ -66,5 +66,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/compound-growth-explainer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: compound-growth-explainer | source: skills/compound-growth-explainer/SKILL.md | sha256: d8182d6563e00f9fedc44f455d823e7dfe5b60b3e46187cf4a1e97e8e274a955 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: compound-growth-explainer | source: skills/compound-growth-explainer/SKILL.md | sha256: d8182d6563e00f9fedc44f455d823e7dfe5b60b3e46187cf4a1e97e8e274a955 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -74,5 +74,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/medication-management-system.html
 
-<!-- pm-claude-skills v83.2.0 | skill: medication-management-system | source: skills/medication-management-system/SKILL.md | sha256: 1724789cc7eb5943206625c8e6bea0b8f44f5bca40140533847b30fa5156a4aa | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: medication-management-system | source: skills/medication-management-system/SKILL.md | sha256: 1724789cc7eb5943206625c8e6bea0b8f44f5bca40140533847b30fa5156a4aa | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -79,5 +79,5 @@ Startup cash-management practice — net burn, runway, and "Default Alive or Dea
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/runway-calculator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: runway-calculator | source: skills/runway-calculator/SKILL.md | sha256: 8dcf79fdaa33ae6a2c91beb0efe011886dff3b8d896082a6bff4beefcc5593df | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: runway-calculator | source: skills/runway-calculator/SKILL.md | sha256: 8dcf79fdaa33ae6a2c91beb0efe011886dff3b8d896082a6bff4beefcc5593df | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

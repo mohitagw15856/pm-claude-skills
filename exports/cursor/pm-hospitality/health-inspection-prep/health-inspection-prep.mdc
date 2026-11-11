@@ -64,5 +64,5 @@ How to receive the inspector: cooperate, don't argue, know where the logs and pe
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/health-inspection-prep.html
 
-<!-- pm-claude-skills v83.2.0 | skill: health-inspection-prep | source: skills/health-inspection-prep/SKILL.md | sha256: 150b7b755563cff551a90223d10511d69be5ebe9d64cd81b60ab6a14943e5a93 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: health-inspection-prep | source: skills/health-inspection-prep/SKILL.md | sha256: 150b7b755563cff551a90223d10511d69be5ebe9d64cd81b60ab6a14943e5a93 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

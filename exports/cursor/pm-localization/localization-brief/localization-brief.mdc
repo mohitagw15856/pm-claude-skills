@@ -74,5 +74,5 @@ Localization / internationalization practice — the translate/adapt/rebuild mod
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/localization-brief.html
 
-<!-- pm-claude-skills v83.2.0 | skill: localization-brief | source: skills/localization-brief/SKILL.md | sha256: 2e0cf9b1e142b08379899421ce51b89d73cb2b89543c0d867dfd65f5247b2bf5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: localization-brief | source: skills/localization-brief/SKILL.md | sha256: 2e0cf9b1e142b08379899421ce51b89d73cb2b89543c0d867dfd65f5247b2bf5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

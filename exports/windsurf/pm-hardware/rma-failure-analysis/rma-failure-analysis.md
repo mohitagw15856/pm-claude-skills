@@ -84,5 +84,5 @@ Ask for these if not provided; analyse whatever slice exists, but state the deno
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rma-failure-analysis.html
 
-<!-- pm-claude-skills v83.2.0 | skill: rma-failure-analysis | source: skills/rma-failure-analysis/SKILL.md | sha256: 8830b97d217fdecb4b36b858208e54e6097ad845cedadcc2c1852b7df182fa80 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: rma-failure-analysis | source: skills/rma-failure-analysis/SKILL.md | sha256: 8830b97d217fdecb4b36b858208e54e6097ad845cedadcc2c1852b7df182fa80 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -75,5 +75,5 @@ The exact sentence for the viewer, for example: "This 3D model is illustrative. 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/model-prompt-pack.html
 
-<!-- pm-claude-skills v83.2.0 | skill: model-prompt-pack | source: skills/model-prompt-pack/SKILL.md | sha256: 085b5b576704659b7f081ad88caad3b891dbdc9184e6f3093194e9b691bc3a17 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: model-prompt-pack | source: skills/model-prompt-pack/SKILL.md | sha256: 085b5b576704659b7f081ad88caad3b891dbdc9184e6f3093194e9b691bc3a17 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

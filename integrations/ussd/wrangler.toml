@@ -8,4 +8,5 @@ compatibility_date = "2025-01-01"
 # Secrets: npx wrangler secret put USSD_SECRET   # required; the callback URL is https://<worker>/<USSD_SECRET>
 #          npx wrangler secret put AT_API_KEY    # optional; with AT_USERNAME, sends the link by SMS
 # Vars (optional, in [vars]): AT_USERNAME, AT_SENDER_ID, AT_SANDBOX ("true" for the sandbox)
+#          USSD_MENU = "africa" serves the Nigeria, Kenya and South Africa menu (src/menu-africa.js)
 # Public instance? Bind CAPS_KV to cap SMS per number per day: ../shared/PUBLIC-INSTANCE.md

@@ -68,5 +68,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kids-online-safety-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: kids-online-safety-plan | source: skills/kids-online-safety-plan/SKILL.md | sha256: f4334d0e8a7ef4f4bd95328c35a96e14599506ed287decc2939994217fd07a8e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: kids-online-safety-plan | source: skills/kids-online-safety-plan/SKILL.md | sha256: f4334d0e8a7ef4f4bd95328c35a96e14599506ed287decc2939994217fd07a8e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

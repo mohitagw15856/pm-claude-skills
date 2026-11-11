@@ -7,6 +7,7 @@ import { readFileSync, existsSync, writeFileSync, readdirSync, statSync } from '
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete, parseSkill } from './lib/anthropic.mjs';
+import { modelFor, guidanceFor } from './lib/models.mjs';
 import { parseInputs, promptInputs } from './lib/inputs.mjs';
 
 const PKG_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
@@ -48,6 +49,8 @@ export async function run(argv) {
 
 Usage:
   pm-claude-skills run <skill> [--text "…"] [--input <file>] [--model <m>] [--out <file>] [--local [model]]
+                              [--auto-model]   start from the per-skill model and effort guidance
+                              [--effort low|medium|high|xhigh|max]
   cat notes.txt | pm-claude-skills run meeting-notes        # input can be piped
 
 Examples:
@@ -98,13 +101,16 @@ No setup at all? Run any skill free in the browser: https://mohitagw15856.github
     return 1;
   }
 
-  const model = localModel || getArg(argv, 'model', 'claude-sonnet-4-6');
-  console.error(`▶ Running ${skill} with ${model}${localModel ? ' (local)' : ''}…`);
+  // --auto-model: start from the per-skill guidance (docs/MODEL-GUIDANCE.md). --model still wins.
+  const guide = argv.includes('--auto-model') && !localModel ? guidanceFor(skill) : null;
+  const model = localModel || getArg(argv, 'model', guide ? guide.model : modelFor('default'));
+  const effort = getArg(argv, 'effort', guide ? guide.effort : '') || undefined;
+  console.error(`▶ Running ${skill} with ${model}${localModel ? ' (local)' : ''}${effort && !localModel ? `, effort ${effort}` : ''}…`);
   let out;
   try {
     out = localModel
       ? await completeLocal({ model, system: body + SUFFIX, input })
-      : await complete({ apiKey, model, system: body + SUFFIX, messages: [{ role: 'user', content: input }], maxTokens: 8192 });
+      : await complete({ apiKey, model, effort, system: body + SUFFIX, messages: [{ role: 'user', content: input }], maxTokens: 8192 });
   } catch (e) { console.error(`✗ ${e.message}`); return 1; }
 
   const outFile = getArg(argv, 'out');

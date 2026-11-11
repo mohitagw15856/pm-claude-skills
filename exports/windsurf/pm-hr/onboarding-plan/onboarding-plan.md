@@ -106,5 +106,5 @@ New hire: Have the clarity, tools, support needed? What surprised you? What woul
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/onboarding-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: onboarding-plan | source: skills/onboarding-plan/SKILL.md | sha256: d643447935a2188a4147d5c2a2e67c2ba67c14e59041263444261d515d6e14bf | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: onboarding-plan | source: skills/onboarding-plan/SKILL.md | sha256: d643447935a2188a4147d5c2a2e67c2ba67c14e59041263444261d515d6e14bf | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

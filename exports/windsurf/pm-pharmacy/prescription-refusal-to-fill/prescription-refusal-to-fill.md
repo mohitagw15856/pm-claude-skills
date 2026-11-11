@@ -86,5 +86,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prescription-refusal-to-fill.html
 
-<!-- pm-claude-skills v83.2.0 | skill: prescription-refusal-to-fill | source: skills/prescription-refusal-to-fill/SKILL.md | sha256: 001de8cf1765f32b3bbb97082e7dae3da128197f39ab7e8fe1d15ec441385d55 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: prescription-refusal-to-fill | source: skills/prescription-refusal-to-fill/SKILL.md | sha256: 001de8cf1765f32b3bbb97082e7dae3da128197f39ab7e8fe1d15ec441385d55 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

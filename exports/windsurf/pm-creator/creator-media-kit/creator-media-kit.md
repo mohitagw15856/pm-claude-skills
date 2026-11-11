@@ -62,5 +62,5 @@ End with: **negotiation notes** — the 2–3 levers (usage rights, exclusivity,
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/creator-media-kit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: creator-media-kit | source: skills/creator-media-kit/SKILL.md | sha256: e539ef7cac8a1c932491670c5a5812a3c0c6dde8876d10825a115af0ba731efb | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: creator-media-kit | source: skills/creator-media-kit/SKILL.md | sha256: e539ef7cac8a1c932491670c5a5812a3c0c6dde8876d10825a115af0ba731efb | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

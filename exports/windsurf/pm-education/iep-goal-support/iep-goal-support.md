@@ -62,5 +62,5 @@ What data is collected, how often, and what counts as on-track vs needs-revision
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/iep-goal-support.html
 
-<!-- pm-claude-skills v83.2.0 | skill: iep-goal-support | source: skills/iep-goal-support/SKILL.md | sha256: f243eb286f989c6cb29c9d31bcb3869b78ec6b5248f012e2cf579b895af85c9c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: iep-goal-support | source: skills/iep-goal-support/SKILL.md | sha256: f243eb286f989c6cb29c9d31bcb3869b78ec6b5248f012e2cf579b895af85c9c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

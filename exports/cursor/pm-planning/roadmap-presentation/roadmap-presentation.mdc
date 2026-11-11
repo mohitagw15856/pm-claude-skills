@@ -146,5 +146,5 @@ Every roadmap needs a narrative, not just a timeline. Structure it as:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/roadmap-presentation.html
 
-<!-- pm-claude-skills v83.2.0 | skill: roadmap-presentation | source: skills/roadmap-presentation/SKILL.md | sha256: dbbf75f958efefe6c7aa6af281cf00d20d34065ea70958de5e9450d0d4fb5c3d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: roadmap-presentation | source: skills/roadmap-presentation/SKILL.md | sha256: dbbf75f958efefe6c7aa6af281cf00d20d34065ea70958de5e9450d0d4fb5c3d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

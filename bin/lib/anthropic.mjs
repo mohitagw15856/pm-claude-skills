@@ -2,6 +2,8 @@
 // Shared by the GitHub Action runner, the eval harness, and skill generation.
 // No SDK, no install — just a thin POST wrapper.
 
+import { modelFor, requestShape } from './models.mjs';
+
 // ANTHROPIC_BASE_URL points at a compatible server or a local stand-in for tests.
 const API_URL = (process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com').replace(/\/$/, '') + '/v1/messages';
 
@@ -11,15 +13,17 @@ const API_URL = (process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com').
  * can't hang a CI job forever.
  * @param {object} o
  * @param {string} o.apiKey  - Anthropic API key.
- * @param {string} [o.model] - Model id (default claude-sonnet-4-6).
+ * @param {string} [o.model] - Model id (default: the registry's "default" role, data/models.json).
+ * @param {string} [o.effort]- low | medium | high | xhigh | max. Current models only; omitted, the API default applies.
  * @param {string} [o.system]- System prompt.
  * @param {Array}  o.messages- [{role, content}] messages.
- * @param {number} [o.maxTokens]
+ * @param {number} [o.maxTokens] - Room for the visible answer. Current models think first, so the request
+ *                                 ceiling is this plus thinking headroom (see requestShape in models.mjs).
  * @param {number} [o.timeoutMs] - Per-request timeout (default 120s).
  * @param {number} [o.retries]   - Retries on timeout / 429 / 5xx (default 2).
  * @returns {Promise<string>}
  */
-export async function complete({ apiKey, model = 'claude-sonnet-4-6', system, messages, maxTokens = 4096, timeoutMs = 120000, retries = 5, withUsage = false }) {
+export async function complete({ apiKey, model = modelFor('default'), system, messages, maxTokens = 4096, effort, timeoutMs = 120000, retries = 5, withUsage = false }) {
   if (!apiKey) throw new Error('Missing Anthropic API key (set ANTHROPIC_API_KEY).');
   let lastErr;
   for (let attempt = 0; attempt <= retries; attempt++) {
@@ -34,12 +38,17 @@ export async function complete({ apiKey, model = 'claude-sonnet-4-6', system, me
           'x-api-key': apiKey,
           'anthropic-version': '2023-06-01',
         },
-        body: JSON.stringify({ model, max_tokens: maxTokens, ...(system ? { system } : {}), messages }),
+        body: JSON.stringify({ model, ...requestShape(model, maxTokens, effort), ...(system ? { system } : {}), messages }),
         signal: ctrl.signal,
       });
       if (res.ok) {
         const data = await res.json();
-        const text = (data.content || []).map((c) => c.text || '').join('').trim();
+        // Thinking blocks carry no `text`, so only the answer is joined here.
+        const text = (data.content || []).map((c) => (c.type === undefined || c.type === 'text' ? c.text || '' : '')).join('').trim();
+        // An empty answer with one of these stop reasons is a failure, not a result:
+        // returning '' would be scored or saved as if the model had said nothing.
+        if (!text && data.stop_reason === 'refusal') throw new Error(`Anthropic API: ${model} declined this request (stop_reason refusal).`);
+        if (!text && data.stop_reason === 'max_tokens') throw new Error(`Anthropic API: ${model} used all of max_tokens before answering. Raise maxTokens or lower effort.`);
         // withUsage: return the real token accounting (the prove harness runs on
         // measured usage, never estimates) alongside the text.
         if (withUsage) return { text, usage: data.usage || {}, model: data.model, stopReason: data.stop_reason };

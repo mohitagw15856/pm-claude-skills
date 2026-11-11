@@ -84,5 +84,5 @@ This is not financial advice. For a large loan, or if repayments are already har
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/microloan-comparison.html
 
-<!-- pm-claude-skills v83.2.0 | skill: microloan-comparison | source: skills/microloan-comparison/SKILL.md | sha256: 9d03774c0366bdb33132c973e7d06b9161bd82adb563fe5e98d2000b444a545f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: microloan-comparison | source: skills/microloan-comparison/SKILL.md | sha256: 9d03774c0366bdb33132c973e7d06b9161bd82adb563fe5e98d2000b444a545f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

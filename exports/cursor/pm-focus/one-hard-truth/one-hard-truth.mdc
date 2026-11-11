@@ -66,5 +66,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/one-hard-truth.html
 
-<!-- pm-claude-skills v83.2.0 | skill: one-hard-truth | source: skills/one-hard-truth/SKILL.md | sha256: 0864ad1c1d48829c8612508688f7c378b78d596ea494dcd731d325f9b7b77db4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: one-hard-truth | source: skills/one-hard-truth/SKILL.md | sha256: 0864ad1c1d48829c8612508688f7c378b78d596ea494dcd731d325f9b7b77db4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

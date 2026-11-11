@@ -62,5 +62,5 @@ Duplicates flagged: any sentence used for more than two students, and any studen
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-term-comments.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-term-comments | source: skills/cn-term-comments/SKILL.md | sha256: 46715e2b38d581b308674353d6a35533cf1ed42b9e7da85d13fb63f3e7e47cf9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-term-comments | source: skills/cn-term-comments/SKILL.md | sha256: 46715e2b38d581b308674353d6a35533cf1ed42b9e7da85d13fb63f3e7e47cf9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

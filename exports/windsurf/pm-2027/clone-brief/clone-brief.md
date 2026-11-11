@@ -116,5 +116,5 @@ sending it into; [[the-understudy]] for the deeper version of "represent me."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/clone-brief.html
 
-<!-- pm-claude-skills v83.2.0 | skill: clone-brief | source: skills/clone-brief/SKILL.md | sha256: 4442d95b3b82029d3e3dc74297158e661bddbf30461e947ee44209eb2e1dce16 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: clone-brief | source: skills/clone-brief/SKILL.md | sha256: 4442d95b3b82029d3e3dc74297158e661bddbf30461e947ee44209eb2e1dce16 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

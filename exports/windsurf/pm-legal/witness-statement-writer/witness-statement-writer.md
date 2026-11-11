@@ -73,5 +73,5 @@ Signed: __________  Date: __________
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/witness-statement-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: witness-statement-writer | source: skills/witness-statement-writer/SKILL.md | sha256: a0dc0a0d42b1f1b918deaffde45a4dc9d3558d5d61a90c01643ced59c3bb0ed9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: witness-statement-writer | source: skills/witness-statement-writer/SKILL.md | sha256: a0dc0a0d42b1f1b918deaffde45a4dc9d3558d5d61a90c01643ced59c3bb0ed9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

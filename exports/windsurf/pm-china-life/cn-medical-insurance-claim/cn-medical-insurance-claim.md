@@ -66,5 +66,5 @@ When the person asks for it, or is helping a parent, add a version the older per
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-medical-insurance-claim.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-medical-insurance-claim | source: skills/cn-medical-insurance-claim/SKILL.md | sha256: b9520601f9cc05ab5ede9a3f4ccbc332c23f6009019c9810973fe1a07c6ab83f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-medical-insurance-claim | source: skills/cn-medical-insurance-claim/SKILL.md | sha256: b9520601f9cc05ab5ede9a3f4ccbc332c23f6009019c9810973fe1a07c6ab83f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

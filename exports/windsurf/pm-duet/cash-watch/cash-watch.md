@@ -71,5 +71,5 @@ Given only the apps, **write the full watch anyway**: default floor of six weeks
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cash-watch.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cash-watch | source: skills/cash-watch/SKILL.md | sha256: 63ac77937abdacc3664aaeddd20438ddedb80b6e02347e5efeb1400f1613a84f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cash-watch | source: skills/cash-watch/SKILL.md | sha256: 63ac77937abdacc3664aaeddd20438ddedb80b6e02347e5efeb1400f1613a84f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

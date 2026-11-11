@@ -95,5 +95,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-health-analysis.html
 
-<!-- pm-claude-skills v83.2.0 | skill: product-health-analysis | source: skills/product-health-analysis/SKILL.md | sha256: 3e46b298f5ef29dcbadde1c4ecf28774f234f64f5d599671e5dc0361154e5db7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: product-health-analysis | source: skills/product-health-analysis/SKILL.md | sha256: 3e46b298f5ef29dcbadde1c4ecf28774f234f64f5d599671e5dc0361154e5db7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

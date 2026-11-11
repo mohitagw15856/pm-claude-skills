@@ -31,7 +31,7 @@ The judge scores each output 1–5 on the same fixed rubric the library uses —
 [`tasks-v2.json`](tasks-v2.json) is the answer to v1's ceiling problem ([REPORT.md](REPORT.md) §4–6): 13 briefs where every task carries **deterministic checks** — numbers that must reconcile (runway = cash/burn, RICE scores, churn rates), constraints that must survive into the output, names that must be covered. The harness scores them judge-free alongside the rubric (`gt: pass/total` per task), and `--judges a,b,c` runs a **cross-family judge panel** with per-judge scores and disagreement spread recorded. v2 freezes when the first official run publishes.
 
 ```bash
-node skillbench/run-skillbench.mjs --models claude-sonnet-4-6,gpt-4o \
+node skillbench/run-skillbench.mjs --models claude-sonnet-5-5,gpt-4o \
   --tasks skillbench/tasks-v2.json --judges claude-sonnet-4-6,gpt-4o --dry-run
 ```
 
@@ -39,14 +39,14 @@ node skillbench/run-skillbench.mjs --models claude-sonnet-4-6,gpt-4o \
 
 ```bash
 # Score one model (Anthropic, OpenAI, and Gemini supported via env keys)
-ANTHROPIC_API_KEY=… node skillbench/run-skillbench.mjs --models claude-sonnet-4-6
+ANTHROPIC_API_KEY=… node skillbench/run-skillbench.mjs --models claude-sonnet-5-5
 
 # Compare across providers
 ANTHROPIC_API_KEY=… OPENAI_API_KEY=… GEMINI_API_KEY=… \
-  node skillbench/run-skillbench.mjs --models claude-fable-5,gpt-4o,gemini-2.0-flash
+  node skillbench/run-skillbench.mjs --models claude-fable-5-2,gpt-4o,gemini-2.0-flash
 
 # Estimate cost first
-node skillbench/run-skillbench.mjs --models claude-sonnet-4-6 --dry-run
+node skillbench/run-skillbench.mjs --lineup current --dry-run   # the four current Claude models, with list prices
 ```
 
 Results append to [`results.json`](results.json) (per-model, per-task, bare + skilled + judge scores, with harness + judge versions). The **Run SkillBench** GitHub Action (manual dispatch) produces official runs.
@@ -58,7 +58,7 @@ The day a new model ships, the owner can run the **Model Day-One report** workfl
 The verdict goes skill by skill: **keeps helping** (the skill lifts the score by 0.25 or more), **neutral** (the model does the task about as well alone), or **hurts** (the skill lowers the score by 0.25 or more). It compares with the previous model, so a skill that stopped helping stands out. To run it on results you already have:
 
 ```bash
-node scripts/launch-verdict.mjs --model claude-sonnet-4-6 --baseline claude-haiku-4-5-20251001
+node scripts/launch-verdict.mjs --model claude-sonnet-5-5 --baseline claude-haiku-5-5
 ```
 
 ## The Chinese task set (zh-1)

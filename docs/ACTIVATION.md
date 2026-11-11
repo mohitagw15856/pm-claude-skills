@@ -43,7 +43,7 @@ the sandbox join-code caveat: `integrations/whatsapp/README.md`.
 
 ```bash
 node skillbench/run-skillbench.mjs --tasks skillbench/tasks-v2.json \
-  --models claude-sonnet-4-6,gpt-4o,gemini-2.0-flash \
+  --models claude-sonnet-5-5,gpt-4o,gemini-2.0-flash \
   --judges claude-sonnet-4-6,gpt-4o --dry-run     # cost preview first
 ```
 Needs `ANTHROPIC_API_KEY` + `OPENAI_API_KEY` (+ `GEMINI_API_KEY`). Cross-vendor

@@ -115,6 +115,7 @@
       ['coverage.html', '📈 Eval coverage'],
       ['modelbench.html', '🤖 Model rankings'],
       ['status.html', '📈 Vitals'],
+      ['china-usage.html', '🇨🇳 Mainland usage'],
       ['growth.html', '📈 Growth'],
     ] },
     { group: '🗺 Explore', items: [

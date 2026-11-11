@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/family-emergency-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: family-emergency-plan | source: skills/family-emergency-plan/SKILL.md | sha256: bf6c2370efff080052ca416699a15904a03d6043c7a7abb4ef5c6fee246d52b1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: family-emergency-plan | source: skills/family-emergency-plan/SKILL.md | sha256: bf6c2370efff080052ca416699a15904a03d6043c7a7abb4ef5c6fee246d52b1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

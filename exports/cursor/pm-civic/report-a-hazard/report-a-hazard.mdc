@@ -114,5 +114,5 @@ report" message appears.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/report-a-hazard.html
 
-<!-- pm-claude-skills v83.2.0 | skill: report-a-hazard | source: skills/report-a-hazard/SKILL.md | sha256: 0a8b0ac1bbd472c9ba215a5366330bf4644ffa32ddce9d8cce1090aba74da9d7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: report-a-hazard | source: skills/report-a-hazard/SKILL.md | sha256: 0a8b0ac1bbd472c9ba215a5366330bf4644ffa32ddce9d8cce1090aba74da9d7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

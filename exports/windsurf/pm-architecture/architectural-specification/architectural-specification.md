@@ -95,5 +95,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/architectural-specification.html
 
-<!-- pm-claude-skills v83.2.0 | skill: architectural-specification | source: skills/architectural-specification/SKILL.md | sha256: 94bef6dae6bcc8d257ef766588ca1ebf9b902960e367d69bbc24310b0dea3940 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: architectural-specification | source: skills/architectural-specification/SKILL.md | sha256: 94bef6dae6bcc8d257ef766588ca1ebf9b902960e367d69bbc24310b0dea3940 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

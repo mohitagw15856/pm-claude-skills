@@ -1,11 +1,11 @@
 ---
 name: docx-tracked-changes
-description: "Produce properly-formatted tracked changes for a Word document. Use when asked to redline a document, suggest edits to a contract or document, create tracked changes for review, or mark up a document with proposed revisions. Produces a complete redline with insertions, deletions, and margin comments that can be applied to the source document. Best used with Claude Opus 4.7 or newer for reliable tracked changes handling."
+description: "Produce properly-formatted tracked changes for a Word document. Use when asked to redline a document, suggest edits to a contract or document, create tracked changes for review, or mark up a document with proposed revisions. Produces a complete redline with insertions, deletions, and margin comments that can be applied to the source document. Works best on a model that preserves source text exactly."
 ---
 
 # Word Doc Tracked Changes Skill
 
-Produces properly-structured tracked changes for a Word document — insertions, deletions, replacements, and margin comments formatted so they can be applied directly to the source document. Built to leverage Opus 4.7 improvements in .docx redlining and tracked changes generation.
+Produces properly-structured tracked changes for a Word document — insertions, deletions, replacements, and margin comments formatted so they can be applied directly to the source document.
 
 ## Required Inputs
 
@@ -125,7 +125,7 @@ Instructions for applying the redline:
 - "Review this and suggest changes in tracked changes format"
 - "Give me a redline version of this draft"
 
-## Why This Works Better on Opus 4.7
-Tracked changes require the model to preserve source text exactly while suggesting alternatives — earlier models would paraphrase the original or lose track of which text was original vs suggested. Opus 4.7 improvements specifically target this workflow.
+## Model Requirements
+Tracked changes only work if the original text is reproduced exactly and every edit is marked as an edit. Smaller models tend to paraphrase the source or blur which words are original. If the output will be applied to a contract or another document where wording matters, use a capable current model and spot-check three passages against the source before applying the redline.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/docx-tracked-changes.html

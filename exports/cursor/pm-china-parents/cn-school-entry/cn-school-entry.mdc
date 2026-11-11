@@ -76,5 +76,5 @@ Common mistakes: buying a home for a 学位 without checking the district's 多�
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-school-entry.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-school-entry | source: skills/cn-school-entry/SKILL.md | sha256: 36d3ee1e9dcbc06ff29dbb1b76637127175964376b05a3828785f4b3c006ca19 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-school-entry | source: skills/cn-school-entry/SKILL.md | sha256: 36d3ee1e9dcbc06ff29dbb1b76637127175964376b05a3828785f4b3c006ca19 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -76,5 +76,5 @@ Given only the agent and its apps, **write the full runbook anyway**, ordering r
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-kill-switch-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: agent-kill-switch-plan | source: skills/agent-kill-switch-plan/SKILL.md | sha256: 6a41d9f67a8ce634fb0a7230fc0dff4ea0439190c90745c79c7ef5435b4c987e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: agent-kill-switch-plan | source: skills/agent-kill-switch-plan/SKILL.md | sha256: 6a41d9f67a8ce634fb0a7230fc0dff4ea0439190c90745c79c7ef5435b4c987e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

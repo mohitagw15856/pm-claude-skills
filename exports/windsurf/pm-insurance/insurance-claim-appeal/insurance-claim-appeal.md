@@ -77,5 +77,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/insurance-claim-appeal.html
 
-<!-- pm-claude-skills v83.2.0 | skill: insurance-claim-appeal | source: skills/insurance-claim-appeal/SKILL.md | sha256: 220989ae1d12d9d4b8c6a1b28c5408de6beeac3c3d4463a23b6458d22b2930de | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: insurance-claim-appeal | source: skills/insurance-claim-appeal/SKILL.md | sha256: 220989ae1d12d9d4b8c6a1b28c5408de6beeac3c3d4463a23b6458d22b2930de | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

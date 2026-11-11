@@ -2,6 +2,20 @@
 
 The three most recent additions, in full. The short version is in the [README](../README.md#-whats-new) and every release is in the [changelog](../CHANGELOG.md).
 
+## Regions and new models (v84.0.0)
+
+The library now covers more places and more kinds of work, and its code runs on the current Claude models.
+
+**More places.** Four regional bundles answer the questions people ask where they live: what gratuity is due after seven years in Dubai, what a Saudi contract leaves out, what a Brazilian rescisão or a Mexican finiquito should come to, what grade a German Arbeitszeugnis hides, why a payslip in Lagos or Nairobi has the deductions it has, how to claim UIF in Cape Town. Every one shows its working, marks each statutory figure for checking, and says it is not legal or tax advice. The Gulf skills also exist in Arabic, and the Africa bundle has its own [USSD menu](../integrations/ussd/README.md#the-africa-menu).
+
+**More kinds of work.** Six bundles for people the library had not reached: nurses, farmers, shop-floor retail staff, sports coaches, procurement leads and PhD students.
+
+**China, without a terminal.** Three new packs (e-commerce, start-ups, study abroad) and four new content skills, a [WeChat Mini Program finder](../integrations/wechat-miniprogram/README.md) that works offline, [uTools](../integrations/utools/README.md) and [Quicker](../integrations/quicker/README.md) plugins, [write-back](../integrations/writeback-cn/README.md) to 飞书, 语雀 and 钉钉, and installs for Qwen Code, iFlow and Kimi. The details are in the [China guide](CHINA.md).
+
+**Current models.** One [registry](MODELS.md) names the model for each role, so the next line-up is a one-file change, and a check stops new references to old models. [Per-skill guidance](MODEL-GUIDANCE.md) says where to start each skill (`run <skill> --auto-model`); it is derived from risk tier and length, not measured. [Missions](MISSIONS.md) chain typed pipelines into one long run that stops for review and resumes where it left off.
+
+**What is honest to say.** The Mini Program, the Quicker script and the write-back script are built and tested locally but have not run against the real platforms. The translations are machine-made and await native review. 164 older model references remain at live call sites, because each needs a paid call to verify.
+
 ## Duet support (v83.2.0)
 
 Claude Duet works while you are away: it reads your connected apps, sends a morning brief, checks in every few hours and asks before it acts. Duet uses the skills in your Claude account, so the library already runs inside it. v83.2.0 adds what an unattended agent specifically needs.

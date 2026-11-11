@@ -63,5 +63,5 @@ The impact assessment (see `cn-pipl-pia`), notices and separate consent where re
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-data-export-assessment.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-data-export-assessment | source: skills/cn-data-export-assessment/SKILL.md | sha256: 8974cb023a644a0ac4bc91aac6ea7a14b332cad1f7b22ca90ef3b1151ab1fbf9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-data-export-assessment | source: skills/cn-data-export-assessment/SKILL.md | sha256: 8974cb023a644a0ac4bc91aac6ea7a14b332cad1f7b22ca90ef3b1151ab1fbf9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

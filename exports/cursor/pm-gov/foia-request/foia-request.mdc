@@ -72,5 +72,5 @@ FOIA / public-records practice (specificity, statutory citation, fee-waiver & ex
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/foia-request.html
 
-<!-- pm-claude-skills v83.2.0 | skill: foia-request | source: skills/foia-request/SKILL.md | sha256: 6d2a0cfb1d28e63e10a0d4d308b1a85c3d636513b79d54efc1ae468e8f3870a8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: foia-request | source: skills/foia-request/SKILL.md | sha256: 6d2a0cfb1d28e63e10a0d4d308b1a85c3d636513b79d54efc1ae468e8f3870a8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

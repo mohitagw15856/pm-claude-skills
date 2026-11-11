@@ -67,5 +67,5 @@ Code-review and PR best practices (explain intent, make review easy, surface ris
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pr-description.html
 
-<!-- pm-claude-skills v83.2.0 | skill: pr-description | source: skills/pr-description/SKILL.md | sha256: 2bcfe5ab1106a1f7ecd14daaee3d22f8f60aedcdd2804a529ee3aea9b6aba8f8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: pr-description | source: skills/pr-description/SKILL.md | sha256: 2bcfe5ab1106a1f7ecd14daaee3d22f8f60aedcdd2804a529ee3aea9b6aba8f8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

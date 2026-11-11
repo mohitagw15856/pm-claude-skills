@@ -64,5 +64,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-boring-answer-detector.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-boring-answer-detector | source: skills/the-boring-answer-detector/SKILL.md | sha256: 53d73525da7e06ef828ef5fc80e2f7dacb446f1111b9c0f07fbf68df14b7baa6 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-boring-answer-detector | source: skills/the-boring-answer-detector/SKILL.md | sha256: 53d73525da7e06ef828ef5fc80e2f7dacb446f1111b9c0f07fbf68df14b7baa6 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

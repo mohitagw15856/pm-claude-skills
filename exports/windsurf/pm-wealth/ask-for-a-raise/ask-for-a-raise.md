@@ -66,5 +66,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ask-for-a-raise.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ask-for-a-raise | source: skills/ask-for-a-raise/SKILL.md | sha256: 308027c3e70a984bbbfd05740be475dc7e3f654a272af3a937c42794abdfa682 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ask-for-a-raise | source: skills/ask-for-a-raise/SKILL.md | sha256: 308027c3e70a984bbbfd05740be475dc7e3f654a272af3a937c42794abdfa682 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

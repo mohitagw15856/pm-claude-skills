@@ -66,5 +66,5 @@ Given a current role, years in it and a target field, **write the complete CV an
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/career-changer-cv.html
 
-<!-- pm-claude-skills v83.2.0 | skill: career-changer-cv | source: skills/career-changer-cv/SKILL.md | sha256: 0d20257eb0dffcdbe154ec5b3d3259c17267518a701d8f973330bb9ca15b9e4b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: career-changer-cv | source: skills/career-changer-cv/SKILL.md | sha256: 0d20257eb0dffcdbe154ec5b3d3259c17267518a701d8f973330bb9ca15b9e4b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

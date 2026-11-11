@@ -99,5 +99,5 @@ End verbatim: *"Educational, not financial advice. Decisions with real money bel
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/audited-boundary-check.html
 
-<!-- pm-claude-skills v83.2.0 | skill: audited-boundary-check | source: skills/audited-boundary-check/SKILL.md | sha256: 67bc4ebf3bffaf54a62d2ba1115c2614538110b84c5a494cdeb2837d80fb913b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: audited-boundary-check | source: skills/audited-boundary-check/SKILL.md | sha256: 67bc4ebf3bffaf54a62d2ba1115c2614538110b84c5a494cdeb2837d80fb913b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

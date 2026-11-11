@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hidden-fee-auditor.html
 
-<!-- pm-claude-skills v83.2.0 | skill: hidden-fee-auditor | source: skills/hidden-fee-auditor/SKILL.md | sha256: c8a6a4501e6334a8bc76a0006423ac124480ac2dddd711452c1d4d5682b281b2 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: hidden-fee-auditor | source: skills/hidden-fee-auditor/SKILL.md | sha256: c8a6a4501e6334a8bc76a0006423ac124480ac2dddd711452c1d4d5682b281b2 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

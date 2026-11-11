@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hospital-stay-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: hospital-stay-plan | source: skills/hospital-stay-plan/SKILL.md | sha256: 5388ea8b9b54f05ff7d3a54349816ea739d0f5be8c503b7519c7ffe4ebe84340 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: hospital-stay-plan | source: skills/hospital-stay-plan/SKILL.md | sha256: 5388ea8b9b54f05ff7d3a54349816ea739d0f5be8c503b7519c7ffe4ebe84340 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

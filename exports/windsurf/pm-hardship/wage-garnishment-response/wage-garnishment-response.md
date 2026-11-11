@@ -67,5 +67,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wage-garnishment-response.html
 
-<!-- pm-claude-skills v83.2.0 | skill: wage-garnishment-response | source: skills/wage-garnishment-response/SKILL.md | sha256: 7563bd3947048357011e950a93de0c4a42da3403f157055b2b487223f5d08e2f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: wage-garnishment-response | source: skills/wage-garnishment-response/SKILL.md | sha256: 7563bd3947048357011e950a93de0c4a42da3403f157055b2b487223f5d08e2f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

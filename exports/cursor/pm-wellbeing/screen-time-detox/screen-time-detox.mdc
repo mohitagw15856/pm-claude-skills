@@ -69,5 +69,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/screen-time-detox.html
 
-<!-- pm-claude-skills v83.2.0 | skill: screen-time-detox | source: skills/screen-time-detox/SKILL.md | sha256: 71a073a9a8953bc1c19f1e171d39d00e1688d6240d9941a664d5903fa97e85b5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: screen-time-detox | source: skills/screen-time-detox/SKILL.md | sha256: 71a073a9a8953bc1c19f1e171d39d00e1688d6240d9941a664d5903fa97e85b5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

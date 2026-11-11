@@ -69,5 +69,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/recovery-day-planner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: recovery-day-planner | source: skills/recovery-day-planner/SKILL.md | sha256: 04db171977cb0dce670dab60fe8c55a03cc7c63571b452f44c6b844e59546ee4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: recovery-day-planner | source: skills/recovery-day-planner/SKILL.md | sha256: 04db171977cb0dce670dab60fe8c55a03cc7c63571b452f44c6b844e59546ee4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

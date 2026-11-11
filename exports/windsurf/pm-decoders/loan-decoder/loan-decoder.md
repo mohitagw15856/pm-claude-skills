@@ -89,5 +89,5 @@ Borrower-side loan review practice — total-cost math, APR reconciliation, fee 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/loan-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: loan-decoder | source: skills/loan-decoder/SKILL.md | sha256: 1b829fd366edbf69e7815e0cd7ba6bd77fd7fe3a498d385874daa3ea36971830 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: loan-decoder | source: skills/loan-decoder/SKILL.md | sha256: 1b829fd366edbf69e7815e0cd7ba6bd77fd7fe3a498d385874daa3ea36971830 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

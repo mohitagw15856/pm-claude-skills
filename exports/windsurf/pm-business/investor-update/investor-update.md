@@ -136,5 +136,5 @@ Hi [Investor names or "all"],
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investor-update.html
 
-<!-- pm-claude-skills v83.2.0 | skill: investor-update | source: skills/investor-update/SKILL.md | sha256: 7c43aa7b02be2b3c9a88521def27619f54f965905c7c865fd0c72fdc955ea880 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: investor-update | source: skills/investor-update/SKILL.md | sha256: 7c43aa7b02be2b3c9a88521def27619f54f965905c7c865fd0c72fdc955ea880 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -71,5 +71,5 @@ Talent-sourcing practice — synonym-rich boolean construction, X-ray search, pr
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/boolean-search-builder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: boolean-search-builder | source: skills/boolean-search-builder/SKILL.md | sha256: 077470fb3232ff90c805503eef486ffbba009fb0d46e33348c2fadc0ee4f7c09 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: boolean-search-builder | source: skills/boolean-search-builder/SKILL.md | sha256: 077470fb3232ff90c805503eef486ffbba009fb0d46e33348c2fadc0ee4f7c09 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

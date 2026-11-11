@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/unblock-protocol.html
 
-<!-- pm-claude-skills v83.2.0 | skill: unblock-protocol | source: skills/unblock-protocol/SKILL.md | sha256: 4bcbffd796555fe87245fcfada351f3088929109dc1878e88932143d579192a3 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: unblock-protocol | source: skills/unblock-protocol/SKILL.md | sha256: 4bcbffd796555fe87245fcfada351f3088929109dc1878e88932143d579192a3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

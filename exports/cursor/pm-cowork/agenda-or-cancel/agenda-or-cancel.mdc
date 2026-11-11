@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agenda-or-cancel.html
 
-<!-- pm-claude-skills v83.2.0 | skill: agenda-or-cancel | source: skills/agenda-or-cancel/SKILL.md | sha256: 61f4aabfc8e6780bf0f6b88a9cb839db7f6b220bf2ec4199e2036eaecd62ca4a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: agenda-or-cancel | source: skills/agenda-or-cancel/SKILL.md | sha256: 61f4aabfc8e6780bf0f6b88a9cb839db7f6b220bf2ec4199e2036eaecd62ca4a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

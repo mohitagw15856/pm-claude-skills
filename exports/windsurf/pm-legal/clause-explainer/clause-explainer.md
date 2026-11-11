@@ -62,5 +62,5 @@ The 1–2 things a lawyer should confirm against the full contract.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/clause-explainer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: clause-explainer | source: skills/clause-explainer/SKILL.md | sha256: fc6c088b1bfb47c8171becdf5a210a9d605d0f1e9a38d398a0a4aafa2e0ca3c7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: clause-explainer | source: skills/clause-explainer/SKILL.md | sha256: fc6c088b1bfb47c8171becdf5a210a9d605d0f1e9a38d398a0a4aafa2e0ca3c7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

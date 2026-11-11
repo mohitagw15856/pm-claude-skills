@@ -56,5 +56,5 @@ alwaysApply: false
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/verification-before-completion.html
 
-<!-- pm-claude-skills v83.2.0 | skill: verification-before-completion | source: skills/verification-before-completion/SKILL.md | sha256: fdaa860c9f7101fedb0a26f643b3418e5d21f40245d7132b9916a00024530b87 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: verification-before-completion | source: skills/verification-before-completion/SKILL.md | sha256: fdaa860c9f7101fedb0a26f643b3418e5d21f40245d7132b9916a00024530b87 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -70,5 +70,5 @@ dbt / analytics-engineering best practice — explicit grain, ref/source lineage
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dbt-model-spec.html
 
-<!-- pm-claude-skills v83.2.0 | skill: dbt-model-spec | source: skills/dbt-model-spec/SKILL.md | sha256: 6b1501f736775c334e021155780fbc22d231930daec5f285ec5ed11be84a2578 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: dbt-model-spec | source: skills/dbt-model-spec/SKILL.md | sha256: 6b1501f736775c334e021155780fbc22d231930daec5f285ec5ed11be84a2578 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

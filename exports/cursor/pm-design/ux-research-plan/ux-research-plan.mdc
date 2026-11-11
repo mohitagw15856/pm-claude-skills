@@ -170,5 +170,5 @@ For each insight: "This means we should [design/product implication]" or "This c
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ux-research-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ux-research-plan | source: skills/ux-research-plan/SKILL.md | sha256: 161c35aab7635c1399fa063f81277d0f93f6b2e3a977c5fb0a5b8968faf63663 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ux-research-plan | source: skills/ux-research-plan/SKILL.md | sha256: 161c35aab7635c1399fa063f81277d0f93f6b2e3a977c5fb0a5b8968faf63663 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

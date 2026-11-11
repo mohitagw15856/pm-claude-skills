@@ -61,5 +61,5 @@ Parallel agents multiply speed exactly when the decomposition is right — and m
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/subagent-orchestration.html
 
-<!-- pm-claude-skills v83.2.0 | skill: subagent-orchestration | source: skills/subagent-orchestration/SKILL.md | sha256: bd9e1a4e3398db61ba9e161ffa763cb007c34060a61b56ebd1f45dd5823f0f72 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: subagent-orchestration | source: skills/subagent-orchestration/SKILL.md | sha256: bd9e1a4e3398db61ba9e161ffa763cb007c34060a61b56ebd1f45dd5823f0f72 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -95,5 +95,5 @@ From a thin brief, build the structure with the numbers marked `[to confirm]` â€
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sop-meeting-prep.html
 
-<!-- pm-claude-skills v83.2.0 | skill: sop-meeting-prep | source: skills/sop-meeting-prep/SKILL.md | sha256: 7c4192912fd42823e5bf2d101719b6cfda469e3e24e9c5cc2f37ddc90ec1d3dc | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: sop-meeting-prep | source: skills/sop-meeting-prep/SKILL.md | sha256: 7c4192912fd42823e5bf2d101719b6cfda469e3e24e9c5cc2f37ddc90ec1d3dc | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

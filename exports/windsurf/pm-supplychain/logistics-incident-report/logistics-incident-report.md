@@ -97,5 +97,5 @@ If details are thin, build the report with figures marked `[to confirm]` and lis
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/logistics-incident-report.html
 
-<!-- pm-claude-skills v83.2.0 | skill: logistics-incident-report | source: skills/logistics-incident-report/SKILL.md | sha256: bc92a425c8d98be5086396fd791bfc29619b79938ac1cefe8b4edc68d92917fd | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: logistics-incident-report | source: skills/logistics-incident-report/SKILL.md | sha256: bc92a425c8d98be5086396fd791bfc29619b79938ac1cefe8b4edc68d92917fd | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

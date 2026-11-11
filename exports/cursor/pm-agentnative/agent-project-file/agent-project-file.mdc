@@ -75,5 +75,5 @@ Given only a goal and a time span, **write the full project file anyway**: deriv
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-project-file.html
 
-<!-- pm-claude-skills v83.2.0 | skill: agent-project-file | source: skills/agent-project-file/SKILL.md | sha256: 724da94f10de193fa4160aa5c7a0212c14ba9ba2815dd85114d3e07e77cf689d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: agent-project-file | source: skills/agent-project-file/SKILL.md | sha256: 724da94f10de193fa4160aa5c7a0212c14ba9ba2815dd85114d3e07e77cf689d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

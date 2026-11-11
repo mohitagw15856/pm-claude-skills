@@ -184,5 +184,5 @@ If any step fails, do the following:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/notebooklm-connector.html
 
-<!-- pm-claude-skills v83.2.0 | skill: notebooklm-connector | source: skills/notebooklm-connector/SKILL.md | sha256: 01a64fc2103ebf2944a88563ced40dfa3a947c7cdda8192172d05b8f231a1d47 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: notebooklm-connector | source: skills/notebooklm-connector/SKILL.md | sha256: 01a64fc2103ebf2944a88563ced40dfa3a947c7cdda8192172d05b8f231a1d47 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

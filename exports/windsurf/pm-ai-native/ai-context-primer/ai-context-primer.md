@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-context-primer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ai-context-primer | source: skills/ai-context-primer/SKILL.md | sha256: 99354966c5f5f6386323458a907ee27d76dd4400c453bc73403256933b8c43d1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ai-context-primer | source: skills/ai-context-primer/SKILL.md | sha256: 99354966c5f5f6386323458a907ee27d76dd4400c453bc73403256933b8c43d1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

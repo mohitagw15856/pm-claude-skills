@@ -97,5 +97,5 @@ If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, r
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/outcome-tracker.html
 
-<!-- pm-claude-skills v83.2.0 | skill: outcome-tracker | source: skills/outcome-tracker/SKILL.md | sha256: 531206a78b55065f41f4b7d7845938940b15494492741560f5af3c87ce128df8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: outcome-tracker | source: skills/outcome-tracker/SKILL.md | sha256: 531206a78b55065f41f4b7d7845938940b15494492741560f5af3c87ce128df8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

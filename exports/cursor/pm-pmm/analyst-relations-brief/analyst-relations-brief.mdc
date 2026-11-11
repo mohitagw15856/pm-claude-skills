@@ -105,5 +105,5 @@ Never fabricate metrics, customers, or roadmap dates — mark `[to confirm]` and
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/analyst-relations-brief.html
 
-<!-- pm-claude-skills v83.2.0 | skill: analyst-relations-brief | source: skills/analyst-relations-brief/SKILL.md | sha256: ddb78797f70d8a006c939161997f330ecdea9d5c7c416f48eef5dccfe23addeb | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: analyst-relations-brief | source: skills/analyst-relations-brief/SKILL.md | sha256: ddb78797f70d8a006c939161997f330ecdea9d5c7c416f48eef5dccfe23addeb | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

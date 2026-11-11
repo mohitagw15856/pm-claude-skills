@@ -124,5 +124,5 @@ for the workplace side; [[spoon-planner]] for surviving the process.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/disability-benefit-appeal.html
 
-<!-- pm-claude-skills v83.2.0 | skill: disability-benefit-appeal | source: skills/disability-benefit-appeal/SKILL.md | sha256: f2d4f747ad71aadc8021b207fbad9a32c4e9c5b27047d7b4bafdb1d030772354 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: disability-benefit-appeal | source: skills/disability-benefit-appeal/SKILL.md | sha256: f2d4f747ad71aadc8021b207fbad9a32c4e9c5b27047d7b4bafdb1d030772354 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

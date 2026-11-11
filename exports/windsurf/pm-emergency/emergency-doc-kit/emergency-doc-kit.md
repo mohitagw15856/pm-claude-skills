@@ -126,5 +126,5 @@ for the secure-access thinking; [[after-the-disaster]] uses this kit to start cl
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/emergency-doc-kit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: emergency-doc-kit | source: skills/emergency-doc-kit/SKILL.md | sha256: 6335fa5eba30ab3195ef0509368ca679aaa1d72fde9517a074021d72aafb3b9a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: emergency-doc-kit | source: skills/emergency-doc-kit/SKILL.md | sha256: 6335fa5eba30ab3195ef0509368ca679aaa1d72fde9517a074021d72aafb3b9a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

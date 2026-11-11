@@ -64,5 +64,5 @@ Professional bio practice — the one-liner / short / long convention, specifici
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/personal-bio.html
 
-<!-- pm-claude-skills v83.2.0 | skill: personal-bio | source: skills/personal-bio/SKILL.md | sha256: 5dcd8e6b668e21c96413fc19d3901e502242c9327822f52b64efd878381a4cb4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: personal-bio | source: skills/personal-bio/SKILL.md | sha256: 5dcd8e6b668e21c96413fc19d3901e502242c9327822f52b64efd878381a4cb4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

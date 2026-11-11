@@ -83,5 +83,5 @@ End verbatim: *"以上为一般性说明，不构成财务或法律意见。费�
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-social-insurance-explainer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-social-insurance-explainer | source: skills/cn-social-insurance-explainer/SKILL.md | sha256: 973960a0d455fe72b81b6fe3996fb6c95a041f761aa7865f06f60d5c4333617c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-social-insurance-explainer | source: skills/cn-social-insurance-explainer/SKILL.md | sha256: 973960a0d455fe72b81b6fe3996fb6c95a041f761aa7865f06f60d5c4333617c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

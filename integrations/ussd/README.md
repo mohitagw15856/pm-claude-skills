@@ -35,6 +35,17 @@ Test locally with `node integrations/ussd/test.mjs`; it checks every menu skill 
 
 The menu is one file, [`src/menu.js`](src/menu.js): change the topics and the skills under them, or translate the labels (for Swahili, Hausa or Amharic, copy the file and import it in `src/index.js`). Five topics of up to five skills fit a screen. The first step shown on screen is the skill's own description, in English. For other languages, put the first step in the menu file itself.
 
+## The Africa menu
+
+A second menu ships for Nigeria, Kenya and South Africa, built from the [`pm-africa`](../../plugins/pm-africa) bundle: payslips and pensions in Nigeria, payslips and a wrongly sent M-Pesa payment in Kenya, retrenchment packages and UIF claims in South Africa, plus pricing, a cash book and the scam check. Turn it on with one line in `wrangler.toml`:
+
+```toml
+[vars]
+USSD_MENU = "africa"
+```
+
+It is [`src/menu-africa.js`](src/menu-africa.js), under the same limits as the default menu, and `test.mjs` checks both. The labels are in English; a Swahili, Hausa, Yoruba or isiZulu version is a copy of that file with the labels translated.
+
 ## Limits
 
 USSD sessions time out after about 20 to 180 seconds, depending on the network, and a screen holds about 182 characters. So this is a signpost, not a full answer: the right skill, its first step, and a link to the rest. For a spoken answer, see the [phone line](../phone-line/). For chat, see [WhatsApp](../whatsapp/) or [Telegram](../telegram/).

@@ -62,5 +62,5 @@ Ask for (if not already provided), else infer and label:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prepare-for-duet.html
 
-<!-- pm-claude-skills v83.2.0 | skill: prepare-for-duet | source: skills/prepare-for-duet/SKILL.md | sha256: 5e9375f4f6a41bbe81518a29bc29d27f1ad8bd518270d4d8bccbcc7001343734 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: prepare-for-duet | source: skills/prepare-for-duet/SKILL.md | sha256: 5e9375f4f6a41bbe81518a29bc29d27f1ad8bd518270d4d8bccbcc7001343734 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

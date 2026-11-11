@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cease-and-desist-letter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cease-and-desist-letter | source: skills/cease-and-desist-letter/SKILL.md | sha256: da47726a443efb4214314f949acb2cd784843c4d846fba286bddfbc1c9706af3 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cease-and-desist-letter | source: skills/cease-and-desist-letter/SKILL.md | sha256: da47726a443efb4214314f949acb2cd784843c4d846fba286bddfbc1c9706af3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

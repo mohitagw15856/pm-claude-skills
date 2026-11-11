@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pitch-vs-teach.html
 
-<!-- pm-claude-skills v83.2.0 | skill: pitch-vs-teach | source: skills/pitch-vs-teach/SKILL.md | sha256: 03c2aaf76377bfad6f8348904319de67a7157c5acdd70c58d561edca5af12c05 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: pitch-vs-teach | source: skills/pitch-vs-teach/SKILL.md | sha256: 03c2aaf76377bfad6f8348904319de67a7157c5acdd70c58d561edca5af12c05 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

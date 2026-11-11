@@ -69,5 +69,5 @@ When to come back (suture removal, recheck), the clinic number and hours, and th
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/client-discharge-notes.html
 
-<!-- pm-claude-skills v83.2.0 | skill: client-discharge-notes | source: skills/client-discharge-notes/SKILL.md | sha256: 603e610ef4c537471160ae2583292f8f16c5c4e5d17c3e46b794368856ef3580 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: client-discharge-notes | source: skills/client-discharge-notes/SKILL.md | sha256: 603e610ef4c537471160ae2583292f8f16c5c4e5d17c3e46b794368856ef3580 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -56,5 +56,5 @@ For a sensitive issue, also give:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/parent-communication.html
 
-<!-- pm-claude-skills v83.2.0 | skill: parent-communication | source: skills/parent-communication/SKILL.md | sha256: 46bbc3c24977048c8e86655d30fb9c63201d0b68d83ab25287893087090aa581 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: parent-communication | source: skills/parent-communication/SKILL.md | sha256: 46bbc3c24977048c8e86655d30fb9c63201d0b68d83ab25287893087090aa581 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

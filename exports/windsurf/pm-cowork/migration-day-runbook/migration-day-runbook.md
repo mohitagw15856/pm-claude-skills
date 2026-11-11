@@ -76,5 +76,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/migration-day-runbook.html
 
-<!-- pm-claude-skills v83.2.0 | skill: migration-day-runbook | source: skills/migration-day-runbook/SKILL.md | sha256: 78c8b10ad2175bd4d37549489f80678e3abf269968197198d3ab2902bf83159e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: migration-day-runbook | source: skills/migration-day-runbook/SKILL.md | sha256: 78c8b10ad2175bd4d37549489f80678e3abf269968197198d3ab2902bf83159e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

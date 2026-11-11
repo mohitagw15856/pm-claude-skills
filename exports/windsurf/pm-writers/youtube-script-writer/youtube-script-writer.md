@@ -116,5 +116,5 @@ Every YouTube script must follow this structure to prevent early drop-off:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/youtube-script-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: youtube-script-writer | source: skills/youtube-script-writer/SKILL.md | sha256: c71770796f0d28d15e5c514a770cd10f32fab324a8adff1ce14a72b40b531d20 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: youtube-script-writer | source: skills/youtube-script-writer/SKILL.md | sha256: c71770796f0d28d15e5c514a770cd10f32fab324a8adff1ce14a72b40b531d20 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

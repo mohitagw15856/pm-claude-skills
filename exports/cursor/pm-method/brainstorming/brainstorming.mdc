@@ -79,5 +79,5 @@ Ask for (if not already provided):
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/brainstorming.html
 
-<!-- pm-claude-skills v83.2.0 | skill: brainstorming | source: skills/brainstorming/SKILL.md | sha256: 43d8a0d3f471bf5c278f5fb7512e995981ca96108d57b862f4f539bdec9f9cd5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: brainstorming | source: skills/brainstorming/SKILL.md | sha256: 43d8a0d3f471bf5c278f5fb7512e995981ca96108d57b862f4f539bdec9f9cd5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

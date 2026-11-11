@@ -79,5 +79,5 @@ HIPAA Security Rule (45 CFR §164.308–312) — administrative, physical, and t
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hipaa-safeguards.html
 
-<!-- pm-claude-skills v83.2.0 | skill: hipaa-safeguards | source: skills/hipaa-safeguards/SKILL.md | sha256: 1207f4b037c6c363815f45ebdc419a41b5b3be5fae1ada357d2c81a5537c3f69 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: hipaa-safeguards | source: skills/hipaa-safeguards/SKILL.md | sha256: 1207f4b037c6c363815f45ebdc419a41b5b3be5fae1ada357d2c81a5537c3f69 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

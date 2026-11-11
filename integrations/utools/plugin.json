@@ -1,0 +1,22 @@
+{
+  "pluginName": "PM Skills 技能查找",
+  "description": "说一句你要做的事，离线找到合适的专业技能，回车复制成提示词，粘贴到任意 AI 助手",
+  "author": "Mohit Aggarwal",
+  "homepage": "https://gitee.com/mohitagw/pm-claude-skills",
+  "version": "1.0.0",
+  "logo": "logo.png",
+  "preload": "preload.js",
+  "features": [
+    {
+      "code": "pm_find",
+      "explain": "PM Skills：找技能并复制提示词",
+      "cmds": [
+        "pm",
+        "pmskills",
+        "技能",
+        "找技能",
+        { "type": "over", "label": "用 PM Skills 找技能", "minLength": 2, "maxLength": 200 }
+      ]
+    }
+  ]
+}

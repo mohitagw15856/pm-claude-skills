@@ -80,5 +80,5 @@ Policyholder-side disability review practice — definition-first reading, offse
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/disability-insurance-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: disability-insurance-decoder | source: skills/disability-insurance-decoder/SKILL.md | sha256: 1126b3969b4a24ade9fad90c45f4b09ffe2c012b92ecd851f650c490fd3ca18a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: disability-insurance-decoder | source: skills/disability-insurance-decoder/SKILL.md | sha256: 1126b3969b4a24ade9fad90c45f4b09ffe2c012b92ecd851f650c490fd3ca18a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

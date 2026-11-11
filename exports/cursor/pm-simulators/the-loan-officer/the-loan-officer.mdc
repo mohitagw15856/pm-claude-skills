@@ -77,5 +77,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-loan-officer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-loan-officer | source: skills/the-loan-officer/SKILL.md | sha256: 76586ad4d420fe6da9b4b1128b89b341249171e188eb4193cd3a1b29c4d3d976 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-loan-officer | source: skills/the-loan-officer/SKILL.md | sha256: 76586ad4d420fe6da9b4b1128b89b341249171e188eb4193cd3a1b29c4d3d976 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

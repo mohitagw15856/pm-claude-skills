@@ -115,5 +115,5 @@ To: [opener] · From: [writer, role, occasion]
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-time-capsule.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-time-capsule | source: skills/the-time-capsule/SKILL.md | sha256: 824395fe4e2ab5e2f618bf232efe5572e2234ab251218d9f31e494c60bd5b77c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-time-capsule | source: skills/the-time-capsule/SKILL.md | sha256: 824395fe4e2ab5e2f618bf232efe5572e2234ab251218d9f31e494c60bd5b77c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

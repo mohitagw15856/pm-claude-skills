@@ -90,5 +90,5 @@ Confidence: 0.xx · Source: [model / estimate]
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hire-or-pass.html
 
-<!-- pm-claude-skills v83.2.0 | skill: hire-or-pass | source: skills/hire-or-pass/SKILL.md | sha256: 4d22e66a61249c3917524215d052e935b3d1b89aa7c5a906b16069c0eaaaab42 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: hire-or-pass | source: skills/hire-or-pass/SKILL.md | sha256: 4d22e66a61249c3917524215d052e935b3d1b89aa7c5a906b16069c0eaaaab42 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

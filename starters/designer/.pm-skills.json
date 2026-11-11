@@ -1,6 +1,6 @@
 {
   "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/pm-skills.schema.json",
-  "version": "83.x",
+  "version": "84.x",
   "agents": [
     "claude",
     "cursor"

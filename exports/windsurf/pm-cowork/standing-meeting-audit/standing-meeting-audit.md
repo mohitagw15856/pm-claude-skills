@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/standing-meeting-audit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: standing-meeting-audit | source: skills/standing-meeting-audit/SKILL.md | sha256: 35b0d7afb6ec66013766be89f3605125f49f0f7946145ae716251706504798cc | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: standing-meeting-audit | source: skills/standing-meeting-audit/SKILL.md | sha256: 35b0d7afb6ec66013766be89f3605125f49f0f7946145ae716251706504798cc | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

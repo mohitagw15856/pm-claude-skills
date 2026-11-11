@@ -60,5 +60,5 @@ A 2-line nudge to send if there's no reply in ~5 business days — adds a *new* 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investor-cold-email.html
 
-<!-- pm-claude-skills v83.2.0 | skill: investor-cold-email | source: skills/investor-cold-email/SKILL.md | sha256: 17ebc25945b1345ee429b23ba592ebfe16e1c118ed261c851cae2b9655da5b7c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: investor-cold-email | source: skills/investor-cold-email/SKILL.md | sha256: 17ebc25945b1345ee429b23ba592ebfe16e1c118ed261c851cae2b9655da5b7c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

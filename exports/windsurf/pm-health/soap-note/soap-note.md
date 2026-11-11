@@ -76,5 +76,5 @@ Clinical documentation practice — the SOAP (Subjective, Objective, Assessment,
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/soap-note.html
 
-<!-- pm-claude-skills v83.2.0 | skill: soap-note | source: skills/soap-note/SKILL.md | sha256: adec89b3e811710b4be7f35149e48cc191ca2ccb72fdc1faa1ad95ab12f25c69 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: soap-note | source: skills/soap-note/SKILL.md | sha256: adec89b3e811710b4be7f35149e48cc191ca2ccb72fdc1faa1ad95ab12f25c69 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -121,5 +121,5 @@ answer is offboarding, not bankruptcy.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-bankruptcy.html
 
-<!-- pm-claude-skills v83.2.0 | skill: context-bankruptcy | source: skills/context-bankruptcy/SKILL.md | sha256: 48730d563389c265d92690a995967522d2272fd6d67d571fe3b42c76a50ae41e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: context-bankruptcy | source: skills/context-bankruptcy/SKILL.md | sha256: 48730d563389c265d92690a995967522d2272fd6d67d571fe3b42c76a50ae41e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

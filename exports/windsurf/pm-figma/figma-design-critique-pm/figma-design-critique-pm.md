@@ -87,5 +87,5 @@ Approve / Approve with changes (list) / Revise and re-review (one focus area onl
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-design-critique-pm.html
 
-<!-- pm-claude-skills v83.2.0 | skill: figma-design-critique-pm | source: skills/figma-design-critique-pm/SKILL.md | sha256: 557f91ef214c84e10489d6a48eef542d127a0016b4210ae4ffbe04d2952ab3e4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: figma-design-critique-pm | source: skills/figma-design-critique-pm/SKILL.md | sha256: 557f91ef214c84e10489d6a48eef542d127a0016b4210ae4ffbe04d2952ab3e4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -13,13 +13,14 @@ import { readFileSync, writeFileSync, existsSync, appendFileSync } from 'node:fs
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete, parseSkill } from '../bin/lib/anthropic.mjs';
+import { modelFor } from '../bin/lib/models.mjs';
 import { logEvolution } from './lib/evolution-log.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const apiKey = process.env.ANTHROPIC_API_KEY || '';
 const arg = (n, d) => { const i = process.argv.indexOf(`--${n}`); return i !== -1 ? process.argv[i + 1] : d; };
-const RUN_MODEL = arg('model', 'claude-sonnet-4-6');
-const JUDGE = arg('judge', 'claude-sonnet-4-6'); // cost-optimized; pass --judge claude-opus-4-8 for a stricter pass
+const RUN_MODEL = arg('model', modelFor('default'));
+const JUDGE = arg('judge', modelFor('judge')); // the pinned judge; pass --judge claude-opus-5-5 for a stricter pass
 const MIN_GAIN = parseFloat(arg('min-gain', '0.25'));
 const DRY = process.argv.includes('--dry-run');
 const DIMENSIONS = ['structure', 'completeness', 'usefulness', 'grounding'];

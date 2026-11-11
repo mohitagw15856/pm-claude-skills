@@ -1,0 +1,9 @@
+{
+  "description": "PM Skills 技能查找（离线）",
+  "miniprogramRoot": "miniprogram/",
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "pm-skills-finder",
+  "setting": { "es6": true, "minified": true, "urlCheck": true, "enhance": true },
+  "libVersion": "3.5.0"
+}

@@ -66,5 +66,5 @@ Freemium / subscription conversion practice (value-based gating, trigger-at-inte
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/paywall-optimization.html
 
-<!-- pm-claude-skills v83.2.0 | skill: paywall-optimization | source: skills/paywall-optimization/SKILL.md | sha256: 0cc079e46605117f1fe86a23cfe949d1c4d1a3f1934ffb26a940a0a06ba893a5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: paywall-optimization | source: skills/paywall-optimization/SKILL.md | sha256: 0cc079e46605117f1fe86a23cfe949d1c4d1a3f1934ffb26a940a0a06ba893a5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

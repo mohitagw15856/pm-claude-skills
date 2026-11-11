@@ -168,5 +168,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/retention-analysis.html
 
-<!-- pm-claude-skills v83.2.0 | skill: retention-analysis | source: skills/retention-analysis/SKILL.md | sha256: 6a685b9832777fa72df14d2d08fc1c1aa790c040d1f9f85a2d49aca0bd82eed2 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: retention-analysis | source: skills/retention-analysis/SKILL.md | sha256: 6a685b9832777fa72df14d2d08fc1c1aa790c040d1f9f85a2d49aca0bd82eed2 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

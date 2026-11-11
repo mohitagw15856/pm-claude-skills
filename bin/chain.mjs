@@ -16,6 +16,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawnSync } from 'node:child_process';
 import { complete, parseSkill } from './lib/anthropic.mjs';
+import { modelFor } from './lib/models.mjs';
 
 const PKG_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const getArg = (argv, name, def) => { const i = argv.indexOf('--' + name); return i !== -1 && argv[i + 1] ? argv[i + 1] : def; };
@@ -64,7 +65,7 @@ export async function run(argv) {
   if (!input) input = await readStdin();
   if (!input.trim()) { console.error('No input. Provide --text "…", --input <file>, or pipe via stdin.'); return 1; }
 
-  const model = getArg(argv, 'model', 'claude-sonnet-4-6');
+  const model = getArg(argv, 'model', modelFor('default'));
   const outDir = getArg(argv, 'out-dir', `./${w.id}-artifacts`);
   mkdirSync(outDir, { recursive: true });
 

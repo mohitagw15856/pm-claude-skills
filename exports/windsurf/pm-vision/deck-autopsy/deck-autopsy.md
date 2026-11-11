@@ -75,5 +75,5 @@ A deck is an argument wearing design. This skill reads slide images the way a sc
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deck-autopsy.html
 
-<!-- pm-claude-skills v83.2.0 | skill: deck-autopsy | source: skills/deck-autopsy/SKILL.md | sha256: eefefd3d5586609012aa5540c27327f93c3a0962cdca6b499fc7572210f2bc8c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: deck-autopsy | source: skills/deck-autopsy/SKILL.md | sha256: eefefd3d5586609012aa5540c27327f93c3a0962cdca6b499fc7572210f2bc8c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

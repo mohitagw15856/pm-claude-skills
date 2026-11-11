@@ -85,5 +85,5 @@ Expected level: x.x · Confidence: 0.xx · Source: [model / estimate]
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/renew-or-churn-call.html
 
-<!-- pm-claude-skills v83.2.0 | skill: renew-or-churn-call | source: skills/renew-or-churn-call/SKILL.md | sha256: 564f6ef33155cbdb104f1ffc4b51eb7bdabcbd0597e9c3d7d6fef80c5e25b6f7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: renew-or-churn-call | source: skills/renew-or-churn-call/SKILL.md | sha256: 564f6ef33155cbdb104f1ffc4b51eb7bdabcbd0597e9c3d7d6fef80c5e25b6f7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

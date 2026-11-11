@@ -93,5 +93,5 @@ TCFD/ISSB and ESRS E1 climate-risk practice (physical/transition split, scenario
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/climate-risk-assessment.html
 
-<!-- pm-claude-skills v83.2.0 | skill: climate-risk-assessment | source: skills/climate-risk-assessment/SKILL.md | sha256: 891127b499c6d1a91d724fd45c8250e0b6af9d4dcd0a6f237d1263f2a93409e8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: climate-risk-assessment | source: skills/climate-risk-assessment/SKILL.md | sha256: 891127b499c6d1a91d724fd45c8250e0b6af9d4dcd0a6f237d1263f2a93409e8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -78,5 +78,5 @@ Recruiting & offer practice — candidate-warm, complete offers (verbal then wri
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/offer-letter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: offer-letter | source: skills/offer-letter/SKILL.md | sha256: 1848f430ab2f21a6e9526d3d7d53d88d9f4b5220767ec07e05e063408339a9c9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: offer-letter | source: skills/offer-letter/SKILL.md | sha256: 1848f430ab2f21a6e9526d3d7d53d88d9f4b5220767ec07e05e063408339a9c9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

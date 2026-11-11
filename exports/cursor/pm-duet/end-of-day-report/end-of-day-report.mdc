@@ -58,5 +58,5 @@ Anything the agent could not verify today is listed as "unverified since [time]"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/end-of-day-report.html
 
-<!-- pm-claude-skills v83.2.0 | skill: end-of-day-report | source: skills/end-of-day-report/SKILL.md | sha256: 2bf4d3d166fdfbd7b98e1d068ae05907d1fac9706def65b0da28ef0b456f04e1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: end-of-day-report | source: skills/end-of-day-report/SKILL.md | sha256: 2bf4d3d166fdfbd7b98e1d068ae05907d1fac9706def65b0da28ef0b456f04e1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

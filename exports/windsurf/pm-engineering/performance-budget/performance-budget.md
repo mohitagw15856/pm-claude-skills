@@ -293,5 +293,5 @@ When a breach is detected, work through this checklist in order:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/performance-budget.html
 
-<!-- pm-claude-skills v83.2.0 | skill: performance-budget | source: skills/performance-budget/SKILL.md | sha256: a534f3f0f9f792d1ba32913641b6697e1215aa030e0369862e1901916cd5fbbd | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: performance-budget | source: skills/performance-budget/SKILL.md | sha256: a534f3f0f9f792d1ba32913641b6697e1215aa030e0369862e1901916cd5fbbd | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

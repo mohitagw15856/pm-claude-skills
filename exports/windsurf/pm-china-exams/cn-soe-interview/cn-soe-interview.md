@@ -76,5 +76,5 @@ One question at a time, then: | 维度 | 评分（1 到 5） | 改进建议 |
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-soe-interview.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-soe-interview | source: skills/cn-soe-interview/SKILL.md | sha256: 8866d6f6e06320cda908917cfc8200271ed05d24a11003f3ad867157bf38fa0a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-soe-interview | source: skills/cn-soe-interview/SKILL.md | sha256: 8866d6f6e06320cda908917cfc8200271ed05d24a11003f3ad867157bf38fa0a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

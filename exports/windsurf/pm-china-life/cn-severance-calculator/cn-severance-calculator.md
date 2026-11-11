@@ -102,5 +102,5 @@ End verbatim: *"以上为估算，不构成法律意见。各地规定和裁判�
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-severance-calculator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-severance-calculator | source: skills/cn-severance-calculator/SKILL.md | sha256: ea15cb94ce30c0c0b1187c17aeb1d05c1c43441afa7e3b23b19b8172cbaf31de | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-severance-calculator | source: skills/cn-severance-calculator/SKILL.md | sha256: ea15cb94ce30c0c0b1187c17aeb1d05c1c43441afa7e3b23b19b8172cbaf31de | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

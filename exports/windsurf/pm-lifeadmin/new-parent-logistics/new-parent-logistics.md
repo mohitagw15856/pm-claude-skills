@@ -73,5 +73,5 @@ Night shifts: [split] · Meals: [plan] · Visitors: [policy, verbatim] · Escala
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/new-parent-logistics.html
 
-<!-- pm-claude-skills v83.2.0 | skill: new-parent-logistics | source: skills/new-parent-logistics/SKILL.md | sha256: 1ff14db44c5c814aa629d9d101f7da41fb83359e812b16f693060a93a12a2d39 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: new-parent-logistics | source: skills/new-parent-logistics/SKILL.md | sha256: 1ff14db44c5c814aa629d9d101f7da41fb83359e812b16f693060a93a12a2d39 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

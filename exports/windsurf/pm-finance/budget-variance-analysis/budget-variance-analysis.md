@@ -68,5 +68,5 @@ Does the full-year forecast need updating? State revised expectation and key ass
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/budget-variance-analysis.html
 
-<!-- pm-claude-skills v83.2.0 | skill: budget-variance-analysis | source: skills/budget-variance-analysis/SKILL.md | sha256: 8d5889de88cde4f9fbc29b8d241f1dbfed906c9e0ff07344971c3ef7cca1b1ff | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: budget-variance-analysis | source: skills/budget-variance-analysis/SKILL.md | sha256: 8d5889de88cde4f9fbc29b8d241f1dbfed906c9e0ff07344971c3ef7cca1b1ff | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

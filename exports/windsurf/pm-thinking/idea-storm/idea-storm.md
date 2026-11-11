@@ -66,5 +66,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/idea-storm.html
 
-<!-- pm-claude-skills v83.2.0 | skill: idea-storm | source: skills/idea-storm/SKILL.md | sha256: 182672035a271ad7e23aebff12757d0760a1257ee2b3692fe8b9c0de67016bb2 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: idea-storm | source: skills/idea-storm/SKILL.md | sha256: 182672035a271ad7e23aebff12757d0760a1257ee2b3692fe8b9c0de67016bb2 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

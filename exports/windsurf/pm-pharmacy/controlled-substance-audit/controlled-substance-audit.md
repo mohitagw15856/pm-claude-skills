@@ -90,5 +90,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/controlled-substance-audit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: controlled-substance-audit | source: skills/controlled-substance-audit/SKILL.md | sha256: 4fbb361dbc3706892b534bd69fc639733330ba179032a749d6f3f042e7c748e8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: controlled-substance-audit | source: skills/controlled-substance-audit/SKILL.md | sha256: 4fbb361dbc3706892b534bd69fc639733330ba179032a749d6f3f042e7c748e8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

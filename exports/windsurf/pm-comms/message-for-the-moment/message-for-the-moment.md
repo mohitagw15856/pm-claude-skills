@@ -62,5 +62,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/message-for-the-moment.html
 
-<!-- pm-claude-skills v83.2.0 | skill: message-for-the-moment | source: skills/message-for-the-moment/SKILL.md | sha256: ee1851a48f09fd1b873f0b69a270049c2b2ba4ce9b45f04c296188b525aea64f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: message-for-the-moment | source: skills/message-for-the-moment/SKILL.md | sha256: ee1851a48f09fd1b873f0b69a270049c2b2ba4ce9b45f04c296188b525aea64f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

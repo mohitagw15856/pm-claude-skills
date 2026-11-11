@@ -68,5 +68,5 @@ Donor-stewardship practice — gratitude-first, impact attribution, storytelling
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/donor-update.html
 
-<!-- pm-claude-skills v83.2.0 | skill: donor-update | source: skills/donor-update/SKILL.md | sha256: 17581769c54fbb5b3cc70068e253d76748573b2138f56ae200ce6ab4004029c5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: donor-update | source: skills/donor-update/SKILL.md | sha256: 17581769c54fbb5b3cc70068e253d76748573b2138f56ae200ce6ab4004029c5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

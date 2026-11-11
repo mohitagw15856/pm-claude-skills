@@ -295,5 +295,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/technical-debt-register.html
 
-<!-- pm-claude-skills v83.2.0 | skill: technical-debt-register | source: skills/technical-debt-register/SKILL.md | sha256: 14da909d73337fdde6333d1c97dc25d920b73419843d05e84344976e0cc1682d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: technical-debt-register | source: skills/technical-debt-register/SKILL.md | sha256: 14da909d73337fdde6333d1c97dc25d920b73419843d05e84344976e0cc1682d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

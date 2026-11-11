@@ -183,5 +183,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/technical-spec-template.html
 
-<!-- pm-claude-skills v83.2.0 | skill: technical-spec-template | source: skills/technical-spec-template/SKILL.md | sha256: bdc72c8878b98d030379843cabebd03877b358eeabcb61f339254e641903410e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: technical-spec-template | source: skills/technical-spec-template/SKILL.md | sha256: bdc72c8878b98d030379843cabebd03877b358eeabcb61f339254e641903410e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

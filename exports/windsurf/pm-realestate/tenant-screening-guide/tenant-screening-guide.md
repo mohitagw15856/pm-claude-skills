@@ -82,5 +82,5 @@ Fair-housing & tenant-screening practice — written objective criteria applied 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tenant-screening-guide.html
 
-<!-- pm-claude-skills v83.2.0 | skill: tenant-screening-guide | source: skills/tenant-screening-guide/SKILL.md | sha256: 8e43aa550a3d9ebe4f9bd25a3e84b3b91f11b2dca8d24106b0d6732b8f4ab090 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: tenant-screening-guide | source: skills/tenant-screening-guide/SKILL.md | sha256: 8e43aa550a3d9ebe4f9bd25a3e84b3b91f11b2dca8d24106b0d6732b8f4ab090 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

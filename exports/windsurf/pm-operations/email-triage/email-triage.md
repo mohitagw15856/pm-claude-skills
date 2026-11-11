@@ -199,5 +199,5 @@ This skill works from the Claude mobile app (Dispatch). On mobile, the output re
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/email-triage.html
 
-<!-- pm-claude-skills v83.2.0 | skill: email-triage | source: skills/email-triage/SKILL.md | sha256: 1313ac9f2738b0ac2be03df1a0ad8e6d21e6a72c1c73f5857b1023106d088b08 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: email-triage | source: skills/email-triage/SKILL.md | sha256: 1313ac9f2738b0ac2be03df1a0ad8e6d21e6a72c1c73f5857b1023106d088b08 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -72,5 +72,5 @@ Given only the deal and your goal, **write the full brief anyway**: infer a sens
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-negotiation-brief.html
 
-<!-- pm-claude-skills v83.2.0 | skill: agent-negotiation-brief | source: skills/agent-negotiation-brief/SKILL.md | sha256: d9ab0ba37e8e720e829c2eaac51bd1913d74a7f2849a608bcc061a51bdfe6124 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: agent-negotiation-brief | source: skills/agent-negotiation-brief/SKILL.md | sha256: d9ab0ba37e8e720e829c2eaac51bd1913d74a7f2849a608bcc061a51bdfe6124 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

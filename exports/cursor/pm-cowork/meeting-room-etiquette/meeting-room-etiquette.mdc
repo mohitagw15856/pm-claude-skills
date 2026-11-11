@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meeting-room-etiquette.html
 
-<!-- pm-claude-skills v83.2.0 | skill: meeting-room-etiquette | source: skills/meeting-room-etiquette/SKILL.md | sha256: 9642f636b930512d6f5211f79f17b0e932e4d1eed7dc75b709238605ede3a1b2 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: meeting-room-etiquette | source: skills/meeting-room-etiquette/SKILL.md | sha256: 9642f636b930512d6f5211f79f17b0e932e4d1eed7dc75b709238605ede3a1b2 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

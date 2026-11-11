@@ -87,5 +87,5 @@ Bad month: [minimums-only protocol, restart trigger] · Windfalls: [target-debt 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/debt-payoff.html
 
-<!-- pm-claude-skills v83.2.0 | skill: debt-payoff | source: skills/debt-payoff/SKILL.md | sha256: 95a4f6a03c0f5161bcd2efc2a0894766b5c1eba5d7bfb9b7b22754f72ded0cc7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: debt-payoff | source: skills/debt-payoff/SKILL.md | sha256: 95a4f6a03c0f5161bcd2efc2a0894766b5c1eba5d7bfb9b7b22754f72ded0cc7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

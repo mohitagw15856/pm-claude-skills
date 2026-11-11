@@ -77,5 +77,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/relocation-planner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: relocation-planner | source: skills/relocation-planner/SKILL.md | sha256: 6d315b2ae54d213d54e77d380993d3544421d521fb2dff2efff0d8b2c08286cc | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: relocation-planner | source: skills/relocation-planner/SKILL.md | sha256: 6d315b2ae54d213d54e77d380993d3544421d521fb2dff2efff0d8b2c08286cc | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

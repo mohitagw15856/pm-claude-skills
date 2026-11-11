@@ -71,5 +71,5 @@ Conversion-optimization heuristics (clarity / relevance / motivation / friction 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/conversion-rate-optimization.html
 
-<!-- pm-claude-skills v83.2.0 | skill: conversion-rate-optimization | source: skills/conversion-rate-optimization/SKILL.md | sha256: eb21cd886ca3ec2fc5bf872595322e2c1a48594336e28cc22e25141d3ea7cdcd | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: conversion-rate-optimization | source: skills/conversion-rate-optimization/SKILL.md | sha256: eb21cd886ca3ec2fc5bf872595322e2c1a48594336e28cc22e25141d3ea7cdcd | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

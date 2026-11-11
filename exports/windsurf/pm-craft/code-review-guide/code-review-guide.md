@@ -73,5 +73,5 @@ Senior code-review practice (Google's engineering review guidelines): prioritize
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/code-review-guide.html
 
-<!-- pm-claude-skills v83.2.0 | skill: code-review-guide | source: skills/code-review-guide/SKILL.md | sha256: b1d3259b6ab4d36d114743c4fd8f88af7aae0c6dfbca98c63f5129acdcf4f1f8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: code-review-guide | source: skills/code-review-guide/SKILL.md | sha256: b1d3259b6ab4d36d114743c4fd8f88af7aae0c6dfbca98c63f5129acdcf4f1f8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

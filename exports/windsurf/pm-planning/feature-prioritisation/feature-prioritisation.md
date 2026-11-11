@@ -177,5 +177,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/feature-prioritisation.html
 
-<!-- pm-claude-skills v83.2.0 | skill: feature-prioritisation | source: skills/feature-prioritisation/SKILL.md | sha256: 1306f59a0a738ba0d4be686f668a3747dbdedb2e64509ba559a81555db5680ac | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: feature-prioritisation | source: skills/feature-prioritisation/SKILL.md | sha256: 1306f59a0a738ba0d4be686f668a3747dbdedb2e64509ba559a81555db5680ac | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

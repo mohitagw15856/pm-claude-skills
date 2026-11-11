@@ -76,5 +76,5 @@ Risk-based regression practice — change-impact analysis, tiered smoke/targeted
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/regression-test-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: regression-test-plan | source: skills/regression-test-plan/SKILL.md | sha256: 3e95ec3bbb2788a1afb9642953f27a23a861eca970a8b1958e57469e771a0d40 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: regression-test-plan | source: skills/regression-test-plan/SKILL.md | sha256: 3e95ec3bbb2788a1afb9642953f27a23a861eca970a8b1958e57469e771a0d40 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

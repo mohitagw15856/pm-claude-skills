@@ -37,12 +37,15 @@ const res = await fetch('https://api.anthropic.com/v1/messages', {
     'content-type': 'application/json',
   },
   body: JSON.stringify({
-    model: 'claude-opus-4-8',
-    max_tokens: 2048,
+    model: 'claude-opus-5-5',
+    max_tokens: 8192,                  // current models think first; thinking shares this ceiling
     system: skill.instructions,        // the skill body = the system prompt
     messages: [{ role: 'user', content: userInput }],
   }),
 });
+// The reply can start with a thinking block, so join the text blocks rather than reading content[0].
+const { content } = await res.json();
+const answer = content.filter((b) => b.type === 'text').map((b) => b.text).join('');
 ```
 
 > No-deploy fallback: `https://mohitagw15856.github.io/pm-claude-skills/skills.json` is the

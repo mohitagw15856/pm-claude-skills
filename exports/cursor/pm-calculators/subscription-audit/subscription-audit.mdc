@@ -86,5 +86,5 @@ Deterministic. Cadences: weekly/monthly/quarterly/yearly; output ranks by annual
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/subscription-audit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: subscription-audit | source: skills/subscription-audit/SKILL.md | sha256: da1dc11b1a3ca416cb1346b57b496feee618af3a587c8c4b3591fc4f156b0d1c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: subscription-audit | source: skills/subscription-audit/SKILL.md | sha256: da1dc11b1a3ca416cb1346b57b496feee618af3a587c8c4b3591fc4f156b0d1c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

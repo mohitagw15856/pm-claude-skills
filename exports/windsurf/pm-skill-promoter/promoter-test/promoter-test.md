@@ -73,5 +73,5 @@ Files written: `skills/<name>/evals.json`, `evals/cases.json` (+1 case)
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/promoter-test.html
 
-<!-- pm-claude-skills v83.2.0 | skill: promoter-test | source: skills/promoter-test/SKILL.md | sha256: 01ec4b3586ea078cca1d86d36a8d35a9473f85ee8ef7fc9e3b64cd296b94421a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: promoter-test | source: skills/promoter-test/SKILL.md | sha256: 01ec4b3586ea078cca1d86d36a8d35a9473f85ee8ef7fc9e3b64cd296b94421a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

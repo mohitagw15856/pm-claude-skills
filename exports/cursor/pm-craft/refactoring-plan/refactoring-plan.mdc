@@ -69,5 +69,5 @@ Refactoring discipline (Martin Fowler): behavior-preserving transformations, cha
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/refactoring-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: refactoring-plan | source: skills/refactoring-plan/SKILL.md | sha256: 332d110e94df715fae13933d022333a744b69f7e407c035fcc27e736f99a9b31 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: refactoring-plan | source: skills/refactoring-plan/SKILL.md | sha256: 332d110e94df715fae13933d022333a744b69f7e407c035fcc27e736f99a9b31 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

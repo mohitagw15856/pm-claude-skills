@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
-  "bundles": 154,
-  "skills": 1298,
+  "bundles": 167,
+  "skills": 1352,
   "items": [
     {
       "bundle": "pm-2027",
@@ -187,6 +187,41 @@
       ]
     },
     {
+      "bundle": "pm-africa",
+      "description": "Working life in Nigeria, Kenya and South Africa: payslips decoded, the Nigerian pension account, an M-Pesa reversal dispute, a retrenchment package checked and a UIF claim",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-africa@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-africa"
+      },
+      "skills": [
+        {
+          "name": "ke-mpesa-reversal-dispute",
+          "description": "Handle money sent to the wrong number or taken by fraud on mobile money in Kenya: what to do in the first minutes, how the reversal request works, what to say to the provider, what to do if the recipient refuses, and how to escalate to the police, the regulator or the small claims court."
+        },
+        {
+          "name": "ke-payslip-decoder",
+          "description": "Decode a Kenyan payslip line by line: gross pay, PAYE, the social security contribution, the social health insurance contribution, the affordable housing levy, reliefs and other deductions, with a recalculation and the one-third rule check."
+        },
+        {
+          "name": "ng-payslip-decoder",
+          "description": "Decode a Nigerian payslip line by line: gross pay and its components, PAYE income tax, pension, National Housing Fund, health insurance and other deductions, and whether net pay adds up, with a note on the tax law changes that took effect in 2026."
+        },
+        {
+          "name": "ng-pension-rsa-guide",
+          "description": "Guide a Nigerian worker through their Retirement Savings Account: checking that contributions are remitted, choosing or changing a pension fund administrator, the fund types by age, voluntary contributions, access after job loss, using part of the balance towards a home, and the options at retirement."
+        },
+        {
+          "name": "za-retrenchment-package-check",
+          "description": "Check a retrenchment process and package for an employee in South Africa: whether consultation was done properly, the statutory minimum severance, notice pay, leave pay and other amounts, how the package is taxed, what an offer of alternative work means, and the deadlines for a dispute."
+        },
+        {
+          "name": "za-uif-claim-guide",
+          "description": "Guide a worker in South Africa through an unemployment insurance claim: which benefit applies, eligibility, how credits and the benefit amount work, the documents, the application steps online or at a labour centre, the time limit, and what to do when a claim is delayed or rejected."
+        }
+      ]
+    },
+    {
       "bundle": "pm-agentnative",
       "description": "Build for the agent era: products are getting non-human users. Spec an MCP server properly, audit whether agents can actually use your product, migrate seat pricing before agents break it, design human-in-the-loop approval surfaces, and get voice agents right.",
       "category": "productivity",
@@ -292,6 +327,37 @@
         {
           "name": "sibling-care-summit",
           "description": "Get siblings onto one team about aging parents before the crisis does it for them — a structured family meeting with an agenda that prevents old-roles regression, a fair-not-equal division of care work (money, time, and proximity counted honestly), decision rules for when parents can't decide, and the written summary that prevents six months of 'nobody told me'."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-agriculture",
+      "description": "Run a small or family farm on paper: a season crop plan, a subsidy or grant application, farm records that survive an inspection, a buyer contract check, and a crop insurance claim",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-agriculture@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-agriculture"
+      },
+      "skills": [
+        {
+          "name": "crop-insurance-claim",
+          "description": "Make a crop or livestock insurance claim after drought, flood, pests, disease or hail: report it in time, record the loss properly, and follow up or appeal if the payout is too low or refused."
+        },
+        {
+          "name": "crop-season-plan",
+          "description": "Plan a cropping season for a small or family farm: what to grow on which field, the rotation, a dated calendar from land preparation to sale, input quantities and cost, expected yield and gross margin, and the risks with a fallback for each."
+        },
+        {
+          "name": "farm-buyer-contract-check",
+          "description": "Check a contract between a farmer and a buyer, processor or contract-farming company before signing: price and how it is set, quality grades and who decides them, volume commitments, rejection and deductions, input credit, payment timing, exclusivity, and what happens after a bad harvest."
+        },
+        {
+          "name": "farm-records-book",
+          "description": "Set up or tidy a farm's records so they answer the questions that matter: what was applied where and when, what each field and animal group produced, what it cost and earned, and what an inspector, buyer or bank will ask to see."
+        },
+        {
+          "name": "farm-subsidy-application",
+          "description": "Prepare a farm subsidy, grant or support-scheme application: check eligibility against the scheme's own rules, list the evidence, draft the narrative answers, build the budget table and catch the errors that get claims rejected or penalised."
         }
       ]
     },
@@ -902,6 +968,33 @@
       ]
     },
     {
+      "bundle": "pm-china-ecommerce",
+      "description": "国内电商运营：淘宝、天猫、拼多多、京东商品详情，1688 批发 listing，双 11 大促方案，客服话术。Chinese marketplace operations: listings for Taobao, Tmall, Pinduoduo and JD, 1688 wholesale listings, a Double 11 promotion plan and customer service scripts",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-china-ecommerce@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-china-ecommerce"
+      },
+      "skills": [
+        {
+          "name": "cn-1688-wholesale-listing",
+          "description": "Write a wholesale listing for 1688: a buyer-searchable title, tiered pricing and minimum order quantity, factory and supply-capacity proof, customisation and OEM terms, one-piece dropshipping terms, packaging and delivery details, and the trade terms a purchaser checks before enquiring."
+        },
+        {
+          "name": "cn-customer-service-scripts",
+          "description": "Write customer service scripts (客服话术) for a Chinese online shop: pre-sale answers, payment reminders, order and logistics replies, returns and refunds, complaint and negative-review handling, with the consumer-rights and platform rules each script must respect."
+        },
+        {
+          "name": "cn-double11-promotion-plan",
+          "description": "Plan a shop's 双 11, 618 or other major platform promotion in China: targets broken down by product, the pricing and discount stack checked against platform rules and margin, the phases from 蓄水 to 返场, traffic and content plan, stock, logistics and customer service readiness, risk checks and the post-event review."
+        },
+        {
+          "name": "cn-ecommerce-listing",
+          "description": "Write a product listing for a Chinese consumer marketplace (淘宝, 天猫, 拼多多 or 京东): a keyword-built title within the platform's length limit, selling points, main image and detail page copy, SKU naming, category attributes, and a check against advertising-law banned words."
+        }
+      ]
+    },
+    {
       "bundle": "pm-china-exams",
       "description": "The Chinese exams and early-career pack: the civil service essay (申论) and structured interview (结构化面试), postgraduate entrance exam planning (考研), the thesis proposal (开题报告) and GB/T 7714 references, tech company interview drills (大厂技术面试), campus recruitment (校招 and 三方协议) and state-owned enterprise interviews (国企面试), in Chinese",
       "category": "productivity",
@@ -1046,6 +1139,64 @@
         {
           "name": "cn-school-entry",
           "description": "Use when asked 幼升小怎么准备, 小升初流程, 入学信息采集, 学区房和多校划片, 公民同招, 民办摇号, 随迁子女入学, 居住证入学材料, or plan a child's entry to primary or junior high school in mainland China."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-china-startup",
+      "description": "在中国创业：公司注册、股权分配、高新技术企业认定、专精特新申报、补贴申报、融资商业计划书。Starting a company in China: registration, equity split, High and New Technology Enterprise and Specialised SME applications, subsidy filings and a financing deck",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-china-startup@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-china-startup"
+      },
+      "skills": [
+        {
+          "name": "cn-company-registration",
+          "description": "Plan the registration of a business in mainland China: choose between 个体工商户, 有限责任公司 and 合伙企业, prepare the name, address, business scope, registered capital and officers, follow the steps from name approval to bank account and tax registration, and set up the first-year compliance calendar."
+        },
+        {
+          "name": "cn-equity-split",
+          "description": "Design a founder equity split and its protective terms for a start-up in China: who gets how much and why, control thresholds, vesting and buy-back, the option pool and holding platform, and the terms to put in a founders' agreement."
+        },
+        {
+          "name": "cn-financing-bp",
+          "description": "Build a financing business plan (融资商业计划书, BP) for a Chinese start-up raising seed, angel or Series A money: the storyline, slide-by-slide content, the numbers investors check, the financing ask and use of funds, and preparation for due diligence and term-sheet clauses."
+        },
+        {
+          "name": "cn-high-tech-enterprise-application",
+          "description": "Prepare a 高新技术企业 (High and New Technology Enterprise) recognition application in China: test the company against the recognition conditions, estimate the innovation-capability score, plan the intellectual property, research expense and revenue evidence, and build the application timeline."
+        },
+        {
+          "name": "cn-subsidy-filing",
+          "description": "Find and file for government support available to a small company in China: map the policies that fit the company, check eligibility, prepare the materials, track deadlines, and keep the records that survive a later inspection."
+        },
+        {
+          "name": "cn-zhuanjingtexin-application",
+          "description": "Prepare an application under China's tiered SME programme: 创新型中小企业, 专精特新中小企业 and 专精特新小巨人."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-china-study-abroad",
+      "description": "留学与海归：申请文书、留学签证准备、海归求职。Study abroad for Chinese applicants: application essays, student visa preparation and the returnee job search",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-china-study-abroad@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-china-study-abroad"
+      },
+      "skills": [
+        {
+          "name": "cn-returnee-job-search",
+          "description": "Plan the job search of a Chinese student returning from study abroad (海归): the recruitment calendar, graduate-status and degree-certification rules, where returnees are competitive, converting an overseas CV for Chinese employers, interview preparation and settlement policies."
+        },
+        {
+          "name": "cn-study-abroad-essay",
+          "description": "Coach a Chinese applicant through study-abroad application writing: the personal statement or statement of purpose, the UK undergraduate structured questions, the US application essay and supplements, the CV and the recommendation brief, built from the applicant's real experiences and written in their own voice."
+        },
+        {
+          "name": "cn-study-visa-prep",
+          "description": "Prepare a student visa application for a Chinese student going abroad: the document checklist by country, proof of funds, the application sequence and timing, the interview or genuine-student questions, and the common reasons for refusal."
         }
       ]
     },
@@ -2267,6 +2418,29 @@
         {
           "name": "values-mapped-cv",
           "description": "Map a person's achievements to a target company's published values or leadership principles, so the CV leads with the evidence that company says it rewards."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-dach",
+      "description": "Working life in Germany: decode an Arbeitszeugnis, work out the notice period, and prepare the annual tax return",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-dach@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-dach"
+      },
+      "skills": [
+        {
+          "name": "de-arbeitszeugnis-decoder",
+          "description": "Decode a German employment reference (Arbeitszeugnis): translate the coded phrases into the grade they signal, check the structure and the closing formula, spot omissions and hidden negatives, and draft a correction request."
+        },
+        {
+          "name": "de-kuendigungsfrist-check",
+          "description": "Work out the notice period and last working day for an employment contract in Germany, for resignation or dismissal: the statutory periods by length of service, probation, contract and collective-agreement terms, the written-form rule, and the deadlines that follow."
+        },
+        {
+          "name": "de-steuererklaerung-prep",
+          "description": "Prepare an employee's annual income tax return in Germany: whether filing is required or worthwhile, which forms apply, the documents to gather, the deductions commonly missed, and a walkthrough for the official online portal."
         }
       ]
     },
@@ -4443,6 +4617,33 @@
       ]
     },
     {
+      "bundle": "pm-latam",
+      "description": "Working life in Brazil and Mexico: CLT termination pay, the Brazilian annual income tax return, Mexican finiquito and liquidación, and the Mexican annual tax return",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-latam@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-latam"
+      },
+      "skills": [
+        {
+          "name": "br-irpf-prep",
+          "description": "Prepare an individual's annual income tax return in Brazil (Declaração de Ajuste Anual do IRPF): whether filing is required, which documents to gather, complete versus simplified model, deductions and their evidence, assets and debts, and the mistakes that send a return to review."
+        },
+        {
+          "name": "br-rescisao-clt",
+          "description": "Explain and estimate termination pay (verbas rescisórias) for an employee under Brazil's CLT: which amounts are due for each type of termination, how each is calculated, what happens to the FGTS balance and unemployment insurance, the payment deadline, and what to check on the termination statement."
+        },
+        {
+          "name": "mx-declaracion-anual-prep",
+          "description": "Prepare an individual's annual tax return in Mexico (declaración anual de personas físicas): whether filing is required, the access credentials, the documents, personal deductions and their rules, and how a refund is requested."
+        },
+        {
+          "name": "mx-finiquito-liquidacion",
+          "description": "Explain and estimate what an employee in Mexico is owed when a job ends: finiquito on any separation and liquidación on unjustified dismissal, with each component, the daily wage it is based on, and the steps if the employer underpays."
+        }
+      ]
+    },
+    {
       "bundle": "pm-layoff",
       "description": "The layoff kit: decode the severance agreement, triage the finances, secure references, and craft the announcement — the four artifacts of a layoff handled well",
       "category": "productivity",
@@ -4880,6 +5081,33 @@
       ]
     },
     {
+      "bundle": "pm-mena",
+      "description": "Working life in the Gulf: UAE end-of-service gratuity, residence visa and Emirates ID admin, the Saudi labour contract decoded, and a Gulf job offer checked before you sign",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-mena@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-mena"
+      },
+      "skills": [
+        {
+          "name": "gulf-job-offer-check",
+          "description": "Check a job offer in a Gulf country before accepting: basic wage against total package, allowances, what gratuity will be based on, visa and recruitment costs, probation and notice, flights, medical insurance, family benefits, the cost of living, and the signs of a fraudulent offer."
+        },
+        {
+          "name": "gulf-residence-visa-admin",
+          "description": "Plan the residence and work permit paperwork for someone moving to, working in or leaving a Gulf country: the sequence of steps, who does each one, documents and attestations, family sponsorship, renewals, changing employer, and cancellation with its grace period."
+        },
+        {
+          "name": "ksa-labour-contract-decoder",
+          "description": "Decode an employment contract under Saudi labour law for an employee: contract term, probation, wages and allowances, hours and overtime, leave, notice, the end-of-service award, non-compete and termination clauses, compared with the statutory minimums."
+        },
+        {
+          "name": "uae-gratuity-calculator",
+          "description": "Estimate end-of-service gratuity for a private-sector employee in the United Arab Emirates and check a final settlement: service length, basic wage, the 21-day and 30-day tiers, the two-year cap, unpaid leave, and the other amounts due on leaving."
+        }
+      ]
+    },
+    {
       "bundle": "pm-method",
       "description": "Process discipline for professional work — the difference between an agent that produces output and one that produces outcomes. Interview the requester before building, brainstorm divergent-then-convergent, write and execute real plans, verify before declaring done, orchestrate subagents, work incrementally, and simplify what you built.",
       "category": "productivity",
@@ -5193,6 +5421,33 @@
       ]
     },
     {
+      "bundle": "pm-nursing",
+      "description": "Ward and community nursing paperwork: a structured shift handover, a care plan with measurable goals, an incident report that sticks to facts, and a plain-language update for a patient's family",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-nursing@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-nursing"
+      },
+      "skills": [
+        {
+          "name": "nursing-care-plan",
+          "description": "Draft a nursing care plan from an assessment: prioritised problems, a measurable goal for each, the nursing interventions with their rationale, and how and when each goal is evaluated."
+        },
+        {
+          "name": "nursing-family-update",
+          "description": "Prepare a plain-language update for a patient's family or carer: what has happened, how the patient is now, what happens next, and what the family can do, checked against consent and what the nurse is allowed to share."
+        },
+        {
+          "name": "nursing-incident-report",
+          "description": "Write a factual clinical incident report for a nurse: what happened in time order, what was observed, the immediate actions, who was told and when, with opinion and blame kept out."
+        },
+        {
+          "name": "nursing-shift-handover",
+          "description": "Write a nursing shift handover for a ward, unit or community caseload in ISBAR order, patient by patient, with the sickest first, outstanding tasks timed and owned, and the risks the next shift must watch."
+        }
+      ]
+    },
+    {
       "bundle": "pm-operations",
       "description": "Operations & procurement skills: Process Documentation, SOP Writer, Vendor Evaluation, RFP Writer, Vendor Contract Checklist, Project Status Report, Workshop Facilitation Guide, Risk Register, RACI Matrix, Email Triage, Morning Intelligence. Document workflows, write SOPs and RFPs, review vendor contracts, build risk registers, define RACI matrices, triage your inbox, and auto-generate a morning news brief.",
       "category": "productivity",
@@ -5482,6 +5737,45 @@
       ]
     },
     {
+      "bundle": "pm-phd",
+      "description": "Get through a doctorate: the supervisor update, the literature review, the thesis outline and chapter plan, the reviewer rebuttal letter, and viva preparation with a mock defence",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-phd@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-phd"
+      },
+      "skills": [
+        {
+          "name": "literature-review",
+          "description": "Structure and write a literature review for any research topic."
+        },
+        {
+          "name": "phd-supervisor-update",
+          "description": "Write a doctoral student's update to a supervisor before a meeting: what was done since last time against what was agreed, results and their meaning, what is blocked, decisions needed from the supervisor, and the plan to the next meeting."
+        },
+        {
+          "name": "reviewer-rebuttal-letter",
+          "description": "Write the response-to-reviewers letter for a revised journal article or conference paper: every comment quoted and numbered, a direct answer, the change made with its location in the manuscript, and a courteous, evidenced reply where the authors disagree."
+        },
+        {
+          "name": "the-thesis-defense",
+          "description": "Simulate your thesis defense before the real one — a committee of examiner archetypes probing YOUR actual thesis, the questions you hoped nobody would ask, and a debrief with preparation priorities."
+        },
+        {
+          "name": "thesis-chapter-plan",
+          "description": "Plan one thesis or dissertation chapter in detail: the chapter's claim and its job in the thesis, section-by-section argument, the evidence and sources for each section, a word budget, the figures and tables, and a writing schedule with a first-draft date."
+        },
+        {
+          "name": "thesis-outline",
+          "description": "Build a defensible thesis or dissertation outline — argument-first structure, chapter by chapter, with the through-line visible."
+        },
+        {
+          "name": "viva-prep-pack",
+          "description": "Prepare a doctoral candidate for the viva or thesis defence with a written pack: a three-minute thesis summary, the contribution stated plainly, predicted questions by chapter with answer outlines, the weak points and how to own them, a chapter-by-chapter crib sheet, and a plan for the final two weeks."
+        }
+      ]
+    },
+    {
       "bundle": "pm-physio",
       "description": "Physiotherapy and rehab: initial assessment, programme design, progress notes, return-to-activity criteria, discharge and patient education.",
       "category": "productivity",
@@ -5603,6 +5897,41 @@
         {
           "name": "win-loss-analysis",
           "description": "Analyze why deals are won and lost and turn it into an action plan."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-procurement",
+      "description": "Buy well: write the RFP, score tenders on a weighted matrix, answer an RFP, score suppliers each quarter, track renewal notice dates, and write the renew, renegotiate or exit brief",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-procurement@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-procurement"
+      },
+      "skills": [
+        {
+          "name": "contract-renewal-brief",
+          "description": "Write the decision brief for one supplier contract coming up for renewal: what was bought and used, how the supplier performed, what the market now offers, the options to renew, renegotiate, re-tender or exit with the cost and risk of each, a recommendation and a negotiation position."
+        },
+        {
+          "name": "contract-renewal-tracker",
+          "description": "Never get auto-renewed into another year again — the contract inventory with the dates that matter (notice deadlines, not renewal dates), the calendar system with decision-time buffers, and the renewal-decision ritual that renegotiates instead of rubber-stamping."
+        },
+        {
+          "name": "rfp-response",
+          "description": "Write a compliant, competitive response to an RFP/RFQ/ITT (government or enterprise procurement)."
+        },
+        {
+          "name": "rfp-scoring-matrix",
+          "description": "Build a weighted RFP evaluation matrix and defensible award recommendation."
+        },
+        {
+          "name": "rfp-writer",
+          "description": "Write a clear Request for Proposal that gets comparable, high-quality vendor bids."
+        },
+        {
+          "name": "supplier-scorecard",
+          "description": "Build a quarterly supplier performance scorecard with a weighted grade and a clear escalate/develop/exit call."
         }
       ]
     },
@@ -5840,6 +6169,33 @@
         {
           "name": "resignation-letter",
           "description": "Write a resignation letter that closes a chapter without burning it — short, warm, legally clean, and silent on everything that doesn't belong in a permanent file."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-retail-shopfloor",
+      "description": "Run a shop floor: build the rota, plan and reconcile a stock take, write the shrink report, and hand a shift over so nothing is dropped",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-retail-shopfloor@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-retail-shopfloor"
+      },
+      "skills": [
+        {
+          "name": "retail-shift-handover",
+          "description": "Write a shop-floor shift handover between duty managers or team leaders: trading so far against plan, cash and till position, deliveries and stock issues, staffing, customer issues still open, safety and security matters, and the tasks the next shift must finish."
+        },
+        {
+          "name": "shift-schedule-builder",
+          "description": "Build a staff shift schedule that matches coverage to demand while hitting a labor-cost target."
+        },
+        {
+          "name": "shrink-report",
+          "description": "Write a retail shrink report: how much stock was lost, where, split into theft, damage and waste, supplier and delivery error, and administrative error, with the evidence for each and a short action plan."
+        },
+        {
+          "name": "stock-take-plan",
+          "description": "Plan and reconcile a shop stock take: the count method, zones and teams, the cut-off for deliveries and sales, count sheets, recount rules, and the variance report afterwards."
         }
       ]
     },
@@ -6202,6 +6558,33 @@
         {
           "name": "viral-content-framework",
           "description": "Build a framework for creating shareable, high-reach social media content."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-sports-coaching",
+      "description": "Coach a club or school team: plan the season, plan each session, write to parents, and review the match without blaming players",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-sports-coaching@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-sports-coaching"
+      },
+      "skills": [
+        {
+          "name": "coaching-season-plan",
+          "description": "Plan a season for a club, school or youth sports team: the season's aims, phases from pre-season to the final block, what is trained in each phase, weekly load, key fixtures, player development priorities and how progress is reviewed."
+        },
+        {
+          "name": "coaching-session-plan",
+          "description": "Write a training session plan for a sports team or group: one objective, a timed sequence from warm-up to game-related practice to cool-down, the coaching points for each part, how to make each activity easier or harder, equipment and space, and safety checks."
+        },
+        {
+          "name": "match-review",
+          "description": "Review a match or competition for a team coach: what the plan was, what happened in each phase of the game, three things that worked and three to improve, evidence from notes or stats, individual development notes kept private, and what changes in training this week."
+        },
+        {
+          "name": "sports-parent-comms",
+          "description": "Write messages from a youth sports coach or team manager to parents: the season welcome, weekly logistics, selection and playing-time explanations, a sideline behaviour reminder, a reply to a complaint, and injury or weather notices."
         }
       ]
     },
@@ -6942,13 +7325,17 @@
     },
     {
       "bundle": "pm-zh-content",
-      "description": "Chinese content platforms: 小红书 notes, 公众号 articles, 抖音 short-video scripts and live-commerce (直播带货) scripts, each with a compliance check against restricted advertising claims and undisclosed sponsorship",
+      "description": "Chinese content platforms: 小红书 notes, 公众号 articles, 抖音 and 视频号 short-video scripts, B站 video scripts, 知乎 answers, 小宇宙 podcast outlines and live-commerce (直播带货) scripts, each with a compliance check against restricted advertising claims and undisclosed sponsorship",
       "category": "productivity",
       "install": {
         "claude_code": "/plugin install pm-zh-content@pm-claude-skills",
         "any_tool": "npx pm-claude-skills add --bundle pm-zh-content"
       },
       "skills": [
+        {
+          "name": "bilibili-video-script",
+          "description": "Write a script for a Bilibili (B站) video: a title and cover line that earn the click, an opening that holds the first ten seconds, a chaptered body with points where viewers will post 弹幕, a closing that asks for 一键三连 without begging, and the description, tags and pinned comment."
+        },
         {
           "name": "douyin-script",
           "description": "Write a short-video script for 抖音 (Douyin) or similar vertical-video platforms: a hook in the first three seconds, a shot-by-shot plan with on-screen text, spoken lines timed to the length, and a cover and caption."
@@ -6958,12 +7345,24 @@
           "description": "Plan and script a live-commerce session (直播带货): the run of show, the script for each product segment, interaction prompts, offer timing, and a compliance check of every claim and price statement."
         },
         {
+          "name": "shipinhao-script",
+          "description": "Write a script for WeChat Channels (视频号): a short vertical video or a livestream outline built for sharing among friends and groups, with a first-three-seconds hook, plain spoken language, a title with topics, and a compliant route to follow, add or buy inside the WeChat ecosystem."
+        },
+        {
           "name": "wechat-article",
           "description": "Write a WeChat Official Account (公众号) article: a headline that earns the open, a digest line, a structure built for reading on a phone, and an ending that drives a share or follow, without clickbait the article does not deliver."
         },
         {
           "name": "xiaohongshu-note",
           "description": "Write a 小红书 (Xiaohongshu, RED) note that reads like a real person's experience: a scroll-stopping title, cover text, a body built on specific personal detail, tags, and a compliance check against restricted advertising words."
+        },
+        {
+          "name": "xiaoyuzhou-podcast-outline",
+          "description": "Plan an episode of a Chinese-language podcast for 小宇宙 and other podcast apps: the episode angle and title, a segment outline with timings and questions, the cold open, guest preparation, show notes with a timestamped timeline, and sponsor read placement."
+        },
+        {
+          "name": "zhihu-answer",
+          "description": "Write an answer for Zhihu (知乎): the conclusion in the first lines, the author's standing to answer, a structured argument with evidence and sources, a worked example, the limits of the answer, and disclosure of any interest."
         }
       ]
     }

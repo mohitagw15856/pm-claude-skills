@@ -129,5 +129,5 @@ misinformation supply side.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rabbit-hole-rescue.html
 
-<!-- pm-claude-skills v83.2.0 | skill: rabbit-hole-rescue | source: skills/rabbit-hole-rescue/SKILL.md | sha256: dacd464fcd2cce468a0f52188e2e142610f8f0738be7a19c6025b30999de1d58 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: rabbit-hole-rescue | source: skills/rabbit-hole-rescue/SKILL.md | sha256: dacd464fcd2cce468a0f52188e2e142610f8f0738be7a19c6025b30999de1d58 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

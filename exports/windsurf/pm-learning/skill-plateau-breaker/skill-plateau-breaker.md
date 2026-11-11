@@ -65,5 +65,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/skill-plateau-breaker.html
 
-<!-- pm-claude-skills v83.2.0 | skill: skill-plateau-breaker | source: skills/skill-plateau-breaker/SKILL.md | sha256: 8712637ba4faa40bcbbac96ace28caf83928a20115904cd51ea4ca680424bf1e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: skill-plateau-breaker | source: skills/skill-plateau-breaker/SKILL.md | sha256: 8712637ba4faa40bcbbac96ace28caf83928a20115904cd51ea4ca680424bf1e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

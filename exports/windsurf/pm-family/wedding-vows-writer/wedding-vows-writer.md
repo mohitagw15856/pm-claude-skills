@@ -68,5 +68,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wedding-vows-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: wedding-vows-writer | source: skills/wedding-vows-writer/SKILL.md | sha256: 543f41c7e5e8dce6032127109b2cd872f9e542d3472ecbb9db21488429b27f16 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: wedding-vows-writer | source: skills/wedding-vows-writer/SKILL.md | sha256: 543f41c7e5e8dce6032127109b2cd872f9e542d3472ecbb9db21488429b27f16 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

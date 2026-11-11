@@ -77,5 +77,5 @@ Decode against the resignation reason: **money-only resignations are the only ki
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/counteroffer-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: counteroffer-decoder | source: skills/counteroffer-decoder/SKILL.md | sha256: 15dc37a2d2c441f1336b6455a43572c01a37bfb9ea2da5f3176fdc6faf0163a3 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: counteroffer-decoder | source: skills/counteroffer-decoder/SKILL.md | sha256: 15dc37a2d2c441f1336b6455a43572c01a37bfb9ea2da5f3176fdc6faf0163a3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

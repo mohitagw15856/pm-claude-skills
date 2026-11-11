@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/resignation-letter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: resignation-letter | source: skills/resignation-letter/SKILL.md | sha256: e835d93a232cd4aefc03f4e8ffe6a53e21bf375661e333055ddb0a53f0f3dc80 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: resignation-letter | source: skills/resignation-letter/SKILL.md | sha256: e835d93a232cd4aefc03f4e8ffe6a53e21bf375661e333055ddb0a53f0f3dc80 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

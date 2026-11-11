@@ -76,5 +76,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-due-diligence-call.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-due-diligence-call | source: skills/the-due-diligence-call/SKILL.md | sha256: 9b88d8147129e3d40fd0a50c92a37ef154e4af351b92626328e3e3d22ee21991 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-due-diligence-call | source: skills/the-due-diligence-call/SKILL.md | sha256: 9b88d8147129e3d40fd0a50c92a37ef154e4af351b92626328e3e3d22ee21991 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

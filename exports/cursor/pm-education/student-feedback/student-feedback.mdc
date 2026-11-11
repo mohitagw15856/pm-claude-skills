@@ -60,5 +60,5 @@ If a rubric was given, map the feedback to its criteria.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/student-feedback.html
 
-<!-- pm-claude-skills v83.2.0 | skill: student-feedback | source: skills/student-feedback/SKILL.md | sha256: 4012696b88b02b0f74cbca7bb3b67799cd8ed04ec9007ba344d55b4a00dcb141 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: student-feedback | source: skills/student-feedback/SKILL.md | sha256: 4012696b88b02b0f74cbca7bb3b67799cd8ed04ec9007ba344d55b4a00dcb141 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

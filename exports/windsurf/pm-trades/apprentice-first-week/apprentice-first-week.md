@@ -118,5 +118,5 @@ down for every future hire.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/apprentice-first-week.html
 
-<!-- pm-claude-skills v83.2.0 | skill: apprentice-first-week | source: skills/apprentice-first-week/SKILL.md | sha256: aaad45eb21d00797769e6e30d695738d439527dadeae688f0e212e85126134df | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: apprentice-first-week | source: skills/apprentice-first-week/SKILL.md | sha256: aaad45eb21d00797769e6e30d695738d439527dadeae688f0e212e85126134df | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

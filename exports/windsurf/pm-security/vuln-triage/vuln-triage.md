@@ -67,5 +67,5 @@ Vulnerability management practice (CVSS base/temporal/environmental, exploitabil
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vuln-triage.html
 
-<!-- pm-claude-skills v83.2.0 | skill: vuln-triage | source: skills/vuln-triage/SKILL.md | sha256: 1fb80afcea74020ccd63a96829b3c2bc5522d2f34c4620eeff15af4d24d8e2a7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: vuln-triage | source: skills/vuln-triage/SKILL.md | sha256: 1fb80afcea74020ccd63a96829b3c2bc5522d2f34c4620eeff15af4d24d8e2a7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

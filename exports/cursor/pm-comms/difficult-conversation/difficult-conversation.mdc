@@ -73,5 +73,5 @@ Crucial Conversations (Patterson et al.) and Difficult Conversations (Stone, Pat
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/difficult-conversation.html
 
-<!-- pm-claude-skills v83.2.0 | skill: difficult-conversation | source: skills/difficult-conversation/SKILL.md | sha256: c03c4f46c4c4f4d9793906597b0a00cad412074621b5869d71f5b669c53aaef8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: difficult-conversation | source: skills/difficult-conversation/SKILL.md | sha256: c03c4f46c4c4f4d9793906597b0a00cad412074621b5869d71f5b669c53aaef8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

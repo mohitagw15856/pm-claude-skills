@@ -64,5 +64,5 @@ Given popularity (if provided) and margin, classify: **Star** (high both — fea
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/menu-cost-engineer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: menu-cost-engineer | source: skills/menu-cost-engineer/SKILL.md | sha256: 1e7a3bd5074baf1ff3636437b0134de16463dd00239972b2ba280969d497bfc8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: menu-cost-engineer | source: skills/menu-cost-engineer/SKILL.md | sha256: 1e7a3bd5074baf1ff3636437b0134de16463dd00239972b2ba280969d497bfc8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

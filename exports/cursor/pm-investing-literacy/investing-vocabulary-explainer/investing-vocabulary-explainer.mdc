@@ -98,5 +98,5 @@ Use these when the term matches; otherwise write the misread from the report's c
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investing-vocabulary-explainer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: investing-vocabulary-explainer | source: skills/investing-vocabulary-explainer/SKILL.md | sha256: a7a343c67cf8dd50adda4e6919b146c4cce881a67675efbb578b1458332871fd | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: investing-vocabulary-explainer | source: skills/investing-vocabulary-explainer/SKILL.md | sha256: a7a343c67cf8dd50adda4e6919b146c4cce881a67675efbb578b1458332871fd | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

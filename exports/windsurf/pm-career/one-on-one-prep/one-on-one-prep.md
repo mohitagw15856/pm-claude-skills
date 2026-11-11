@@ -70,5 +70,5 @@ Ask for these only if they aren't already provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/one-on-one-prep.html
 
-<!-- pm-claude-skills v83.2.0 | skill: one-on-one-prep | source: skills/one-on-one-prep/SKILL.md | sha256: 5bf711c043132b8c259f4d166db6436c28a2287d7bac95e5c941fbdd1b206191 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: one-on-one-prep | source: skills/one-on-one-prep/SKILL.md | sha256: 5bf711c043132b8c259f4d166db6436c28a2287d7bac95e5c941fbdd1b206191 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -65,5 +65,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/think-from-another-angle.html
 
-<!-- pm-claude-skills v83.2.0 | skill: think-from-another-angle | source: skills/think-from-another-angle/SKILL.md | sha256: ea3760eb2b642d89812ef80116c608093460b30915a237f879891869f2137632 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: think-from-another-angle | source: skills/think-from-another-angle/SKILL.md | sha256: ea3760eb2b642d89812ef80116c608093460b30915a237f879891869f2137632 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

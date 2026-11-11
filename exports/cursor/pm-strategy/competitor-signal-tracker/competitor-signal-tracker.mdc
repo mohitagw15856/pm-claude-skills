@@ -69,5 +69,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/competitor-signal-tracker.html
 
-<!-- pm-claude-skills v83.2.0 | skill: competitor-signal-tracker | source: skills/competitor-signal-tracker/SKILL.md | sha256: 5787ee262ea48df6f1aa2fba0008c31e2ca9f3ca86e8edb7682f4f1eeda21001 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: competitor-signal-tracker | source: skills/competitor-signal-tracker/SKILL.md | sha256: 5787ee262ea48df6f1aa2fba0008c31e2ca9f3ca86e8edb7682f4f1eeda21001 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

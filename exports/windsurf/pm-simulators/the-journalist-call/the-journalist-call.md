@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-journalist-call.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-journalist-call | source: skills/the-journalist-call/SKILL.md | sha256: 5bb8f9acdc4b3d6cd114eaba005c6eeedfe5f21c580b90cb3e7de44b46992d90 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-journalist-call | source: skills/the-journalist-call/SKILL.md | sha256: 5bb8f9acdc4b3d6cd114eaba005c6eeedfe5f21c580b90cb3e7de44b46992d90 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

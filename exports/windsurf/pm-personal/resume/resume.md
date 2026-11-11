@@ -85,5 +85,5 @@ Achievement-led, ATS-aware resume practice (reverse-chronological, quantified-im
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/resume.html
 
-<!-- pm-claude-skills v83.2.0 | skill: resume | source: skills/resume/SKILL.md | sha256: 94eff797831b8cf3dfdc5638efc02d602a0442779a5caad3fa8d462f3b0b19f8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: resume | source: skills/resume/SKILL.md | sha256: 94eff797831b8cf3dfdc5638efc02d602a0442779a5caad3fa8d462f3b0b19f8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

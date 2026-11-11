@@ -61,5 +61,5 @@ Whether to stay a 小规模纳税人 or register as 一般纳税人 (customers n
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-small-business-tax.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-small-business-tax | source: skills/cn-small-business-tax/SKILL.md | sha256: 54c4f502a6b95e8d95c5f61df967b09458e64f7cef1220058a92a88297c2addc | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-small-business-tax | source: skills/cn-small-business-tax/SKILL.md | sha256: 54c4f502a6b95e8d95c5f61df967b09458e64f7cef1220058a92a88297c2addc | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

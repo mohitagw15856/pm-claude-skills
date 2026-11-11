@@ -76,5 +76,5 @@ Cash management practice — short-horizon (13-week) cash flow forecasting on pa
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cash-flow-forecast.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cash-flow-forecast | source: skills/cash-flow-forecast/SKILL.md | sha256: bd665f020f69f914368efd3086f54b9ccc3d5659054c62c8ca1cbe56f7641d05 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cash-flow-forecast | source: skills/cash-flow-forecast/SKILL.md | sha256: bd665f020f69f914368efd3086f54b9ccc3d5659054c62c8ca1cbe56f7641d05 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

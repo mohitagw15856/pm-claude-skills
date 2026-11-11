@@ -72,5 +72,5 @@ Consumer dispute practice — precise identification, evidence-backed reasoning,
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dispute-letter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: dispute-letter | source: skills/dispute-letter/SKILL.md | sha256: 8609c88b8a975ce5d1eb8ea91f8cc7b2f88e8934822a84c76ba07b3eff7f9b95 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: dispute-letter | source: skills/dispute-letter/SKILL.md | sha256: 8609c88b8a975ce5d1eb8ea91f8cc7b2f88e8934822a84c76ba07b3eff7f9b95 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

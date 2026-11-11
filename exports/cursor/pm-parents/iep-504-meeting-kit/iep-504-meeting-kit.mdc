@@ -79,5 +79,5 @@ Clarify: "How will we measure that, and from what baseline?" · Implementation: 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/iep-504-meeting-kit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: iep-504-meeting-kit | source: skills/iep-504-meeting-kit/SKILL.md | sha256: 895748f4704f5158ce085c3eb01322742c162aa58f1ec5927d5dd9a1e34659f3 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: iep-504-meeting-kit | source: skills/iep-504-meeting-kit/SKILL.md | sha256: 895748f4704f5158ce085c3eb01322742c162aa58f1ec5927d5dd9a1e34659f3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

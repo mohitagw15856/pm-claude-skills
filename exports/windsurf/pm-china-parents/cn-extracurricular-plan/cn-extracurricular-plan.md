@@ -69,5 +69,5 @@ A date (for example after 8 weeks) and three questions to decide whether to cont
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-extracurricular-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-extracurricular-plan | source: skills/cn-extracurricular-plan/SKILL.md | sha256: 0e670887ff5e3d38cebb4bb1ee068f4254dbc2de1270c2251ed63ba4f030a27a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-extracurricular-plan | source: skills/cn-extracurricular-plan/SKILL.md | sha256: 0e670887ff5e3d38cebb4bb1ee068f4254dbc2de1270c2251ed63ba4f030a27a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -59,3 +59,5 @@ The validator (`node scripts/check-pipelines.mjs`, part of `npm run check`) fail
 ## Why contracts first
 
 A pipeline is only as reliable as the shapes it passes. The contracts you add to a skill are what make it chainable here; the `check-skill-schemas` gate keeps them well-formed and the `check-pipelines` gate keeps the chains honest. If you want a skill in a pipeline, give it a contract.
+
+A pipeline is three or four steps. To chain pipelines into one longer run with checkpoints and resume, see [MISSIONS.md](MISSIONS.md).

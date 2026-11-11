@@ -78,5 +78,5 @@ Talent-sourcing strategy practice — profile-first sourcing, channel prioritisa
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sourcing-strategy.html
 
-<!-- pm-claude-skills v83.2.0 | skill: sourcing-strategy | source: skills/sourcing-strategy/SKILL.md | sha256: 56e6ffa91e403eb19dac65c9c48dff9c4a32534097cff17d2a5f0b2613a56dc9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: sourcing-strategy | source: skills/sourcing-strategy/SKILL.md | sha256: 56e6ffa91e403eb19dac65c9c48dff9c4a32534097cff17d2a5f0b2613a56dc9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -121,5 +121,5 @@ because a real attempt already happened.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deepfake-drill.html
 
-<!-- pm-claude-skills v83.2.0 | skill: deepfake-drill | source: skills/deepfake-drill/SKILL.md | sha256: 8af21181651e07167a17ab62a802b527c640ece63d4e756540e33824f35404bd | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: deepfake-drill | source: skills/deepfake-drill/SKILL.md | sha256: 8af21181651e07167a17ab62a802b527c640ece63d4e756540e33824f35404bd | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

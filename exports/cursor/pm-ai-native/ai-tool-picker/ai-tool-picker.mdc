@@ -66,5 +66,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-tool-picker.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ai-tool-picker | source: skills/ai-tool-picker/SKILL.md | sha256: 5f0bf91fc90f7120dad25eda65d2583282dc05b4a66707a2bd14e3e9a46b91cb | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ai-tool-picker | source: skills/ai-tool-picker/SKILL.md | sha256: 5f0bf91fc90f7120dad25eda65d2583282dc05b4a66707a2bd14e3e9a46b91cb | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

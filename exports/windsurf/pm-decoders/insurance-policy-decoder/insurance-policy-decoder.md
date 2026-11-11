@@ -80,5 +80,5 @@ Policyholder-side coverage review practice — declarations/exclusions reconcili
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/insurance-policy-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: insurance-policy-decoder | source: skills/insurance-policy-decoder/SKILL.md | sha256: ded841f7cc85beb47dd0c76f8020f353e501f34efb043ce37ed686a35cd195f3 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: insurance-policy-decoder | source: skills/insurance-policy-decoder/SKILL.md | sha256: ded841f7cc85beb47dd0c76f8020f353e501f34efb043ce37ed686a35cd195f3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

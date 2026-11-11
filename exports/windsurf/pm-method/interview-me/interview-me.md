@@ -66,5 +66,5 @@ Interview when: the request is one sentence for a multi-hour deliverable · the 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/interview-me.html
 
-<!-- pm-claude-skills v83.2.0 | skill: interview-me | source: skills/interview-me/SKILL.md | sha256: 32296e5c9ea32d1ba7abd2c0072ede742d52aa88daf6ce5f3df3ce736d3e4239 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: interview-me | source: skills/interview-me/SKILL.md | sha256: 32296e5c9ea32d1ba7abd2c0072ede742d52aa88daf6ce5f3df3ce736d3e4239 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

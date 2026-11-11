@@ -140,5 +140,5 @@ Ask for (if not already provided):
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sibling-care-summit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: sibling-care-summit | source: skills/sibling-care-summit/SKILL.md | sha256: 240a08e51446a2b1ea8da0a2776d38efb6f7a43b73ab9596bcfa25ac036f7e19 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: sibling-care-summit | source: skills/sibling-care-summit/SKILL.md | sha256: 240a08e51446a2b1ea8da0a2776d38efb6f7a43b73ab9596bcfa25ac036f7e19 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

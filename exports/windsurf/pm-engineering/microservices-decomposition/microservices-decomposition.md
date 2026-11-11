@@ -306,5 +306,5 @@ Conway's Law: the architecture of a system mirrors the communication structure o
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/microservices-decomposition.html
 
-<!-- pm-claude-skills v83.2.0 | skill: microservices-decomposition | source: skills/microservices-decomposition/SKILL.md | sha256: 0a1e7bc2f7a0ccf515af571b79df2924e1112bae47c01f74c04b0a91ceb76b74 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: microservices-decomposition | source: skills/microservices-decomposition/SKILL.md | sha256: 0a1e7bc2f7a0ccf515af571b79df2924e1112bae47c01f74c04b0a91ceb76b74 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

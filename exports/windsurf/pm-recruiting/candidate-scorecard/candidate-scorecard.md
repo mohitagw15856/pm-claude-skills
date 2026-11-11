@@ -71,5 +71,5 @@ Structured-hiring practice — competency ratings anchored to evidence, calibrat
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/candidate-scorecard.html
 
-<!-- pm-claude-skills v83.2.0 | skill: candidate-scorecard | source: skills/candidate-scorecard/SKILL.md | sha256: 9bba57e87460b0b991bde874f9b94b4864ac84af309e6603f629e081466d1632 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: candidate-scorecard | source: skills/candidate-scorecard/SKILL.md | sha256: 9bba57e87460b0b991bde874f9b94b4864ac84af309e6603f629e081466d1632 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

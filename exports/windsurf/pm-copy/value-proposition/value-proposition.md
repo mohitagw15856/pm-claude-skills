@@ -69,5 +69,5 @@ Value-proposition design (Osterwalder) + April Dunford positioning as the upstre
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/value-proposition.html
 
-<!-- pm-claude-skills v83.2.0 | skill: value-proposition | source: skills/value-proposition/SKILL.md | sha256: 73eaeebcfc5bfcfe6ba21020d39197d1c84e2c1d30c0029a3d733b8985655d2e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: value-proposition | source: skills/value-proposition/SKILL.md | sha256: 73eaeebcfc5bfcfe6ba21020d39197d1c84e2c1d30c0029a3d733b8985655d2e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

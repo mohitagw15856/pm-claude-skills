@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deep-work-blocking.html
 
-<!-- pm-claude-skills v83.2.0 | skill: deep-work-blocking | source: skills/deep-work-blocking/SKILL.md | sha256: d6f37bc274639aec1332ce1e35a970a6c8fdd34170ddf3e2db45762c56d7ee7b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: deep-work-blocking | source: skills/deep-work-blocking/SKILL.md | sha256: d6f37bc274639aec1332ce1e35a970a6c8fdd34170ddf3e2db45762c56d7ee7b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

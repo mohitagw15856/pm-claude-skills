@@ -69,5 +69,5 @@ End verbatim: *"This is a plain-language reading, not legal advice — release l
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/severance-agreement-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: severance-agreement-decoder | source: skills/severance-agreement-decoder/SKILL.md | sha256: 9ea79a84ec1b6e92236269a930938f13c2fc22b77f04a994f584f125dd42accf | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: severance-agreement-decoder | source: skills/severance-agreement-decoder/SKILL.md | sha256: 9ea79a84ec1b6e92236269a930938f13c2fc22b77f04a994f584f125dd42accf | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

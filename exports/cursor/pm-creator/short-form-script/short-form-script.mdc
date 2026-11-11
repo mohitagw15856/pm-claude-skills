@@ -68,5 +68,5 @@ End with **▶ Automate:** a one-line note that [ContentGoldMine](https://github
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/short-form-script.html
 
-<!-- pm-claude-skills v83.2.0 | skill: short-form-script | source: skills/short-form-script/SKILL.md | sha256: 5aaf80a7b8030a1f9b2fb763698a4be92267f2af259be133b46b3e41524ca03a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: short-form-script | source: skills/short-form-script/SKILL.md | sha256: 5aaf80a7b8030a1f9b2fb763698a4be92267f2af259be133b46b3e41524ca03a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

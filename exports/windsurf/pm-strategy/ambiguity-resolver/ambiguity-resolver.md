@@ -96,5 +96,5 @@ Input: *"We need to figure out what to do about our enterprise customers."*
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ambiguity-resolver.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ambiguity-resolver | source: skills/ambiguity-resolver/SKILL.md | sha256: 9c95a4f594e37788af8583f25b8ef184507da2fabe68b0c1c2566df6c1be0388 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ambiguity-resolver | source: skills/ambiguity-resolver/SKILL.md | sha256: 9c95a4f594e37788af8583f25b8ef184507da2fabe68b0c1c2566df6c1be0388 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

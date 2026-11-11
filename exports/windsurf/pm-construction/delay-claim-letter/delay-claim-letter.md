@@ -83,5 +83,5 @@ Include the line: *"This draft is not legal advice — route through your contra
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/delay-claim-letter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: delay-claim-letter | source: skills/delay-claim-letter/SKILL.md | sha256: bd59fbfa3095270b5bc31009fba1aa0b8202b2ed0426f230eec34f68f64590ff | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: delay-claim-letter | source: skills/delay-claim-letter/SKILL.md | sha256: bd59fbfa3095270b5bc31009fba1aa0b8202b2ed0426f230eec34f68f64590ff | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

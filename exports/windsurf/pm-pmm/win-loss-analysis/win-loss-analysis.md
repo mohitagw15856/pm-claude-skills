@@ -104,5 +104,5 @@ If the data is thin, say so and analyze what exists rather than inventing outcom
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/win-loss-analysis.html
 
-<!-- pm-claude-skills v83.2.0 | skill: win-loss-analysis | source: skills/win-loss-analysis/SKILL.md | sha256: 3186abc32940bb63bfd7417b97f04665f4d2b59c9c0031502515c640fd12fbbb | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: win-loss-analysis | source: skills/win-loss-analysis/SKILL.md | sha256: 3186abc32940bb63bfd7417b97f04665f4d2b59c9c0031502515c640fd12fbbb | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

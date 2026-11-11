@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/neighbor-dispute-resolver.html
 
-<!-- pm-claude-skills v83.2.0 | skill: neighbor-dispute-resolver | source: skills/neighbor-dispute-resolver/SKILL.md | sha256: ecae10daeaf0eaec4994d1ca97e50b5b24a3b4693da318068e43767b0f5717b2 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: neighbor-dispute-resolver | source: skills/neighbor-dispute-resolver/SKILL.md | sha256: ecae10daeaf0eaec4994d1ca97e50b5b24a3b4693da318068e43767b0f5717b2 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

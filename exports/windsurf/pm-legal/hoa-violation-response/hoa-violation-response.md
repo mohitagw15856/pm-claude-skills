@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hoa-violation-response.html
 
-<!-- pm-claude-skills v83.2.0 | skill: hoa-violation-response | source: skills/hoa-violation-response/SKILL.md | sha256: a713fff3bac75956b662c7bb9e6b6316b9d40adda0d7b54ce4635246c55c7ac4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: hoa-violation-response | source: skills/hoa-violation-response/SKILL.md | sha256: a713fff3bac75956b662c7bb9e6b6316b9d40adda0d7b54ce4635246c55c7ac4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

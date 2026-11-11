@@ -85,5 +85,5 @@ Ask for (if not already provided):
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/human-in-the-loop-design.html
 
-<!-- pm-claude-skills v83.2.0 | skill: human-in-the-loop-design | source: skills/human-in-the-loop-design/SKILL.md | sha256: 5cf745af3e1429f6d8860583d48be6fa3c7d64c8fabc5ecc7789fc1029e362bc | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: human-in-the-loop-design | source: skills/human-in-the-loop-design/SKILL.md | sha256: 5cf745af3e1429f6d8860583d48be6fa3c7d64c8fabc5ecc7789fc1029e362bc | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

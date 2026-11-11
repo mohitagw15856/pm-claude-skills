@@ -78,5 +78,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cross-border-listing.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cross-border-listing | source: skills/cross-border-listing/SKILL.md | sha256: df3479be3efbe988c1e3b38466b5493e0dac4967436f672bc2119a90fe98597d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cross-border-listing | source: skills/cross-border-listing/SKILL.md | sha256: df3479be3efbe988c1e3b38466b5493e0dac4967436f672bc2119a90fe98597d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

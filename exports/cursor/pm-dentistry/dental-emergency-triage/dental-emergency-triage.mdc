@@ -79,5 +79,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dental-emergency-triage.html
 
-<!-- pm-claude-skills v83.2.0 | skill: dental-emergency-triage | source: skills/dental-emergency-triage/SKILL.md | sha256: fc8071c37d5437db447a63716223d3e188876cb57348a2434d5c10ae5b927fb9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: dental-emergency-triage | source: skills/dental-emergency-triage/SKILL.md | sha256: fc8071c37d5437db447a63716223d3e188876cb57348a2434d5c10ae5b927fb9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

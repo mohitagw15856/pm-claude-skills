@@ -83,5 +83,5 @@ For agents with file/OCR access and expense-system access (API or UI). Without t
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/expense-filer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: expense-filer | source: skills/expense-filer/SKILL.md | sha256: f5b2fe107ec1fd5e78361732d7c4c8d78aeb32f172188408f3648d835e9525fe | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: expense-filer | source: skills/expense-filer/SKILL.md | sha256: f5b2fe107ec1fd5e78361732d7c4c8d78aeb32f172188408f3648d835e9525fe | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -92,5 +92,5 @@ Ask for (if not already provided), else infer and label as an assumption:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/in-income-tax-regime-chooser.html
 
-<!-- pm-claude-skills v83.2.0 | skill: in-income-tax-regime-chooser | source: skills/in-income-tax-regime-chooser/SKILL.md | sha256: 48c50da7f4a094c0cad1737a0b1593bb9b836f60d76f1f5d8fcba8524e3e7b29 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: in-income-tax-regime-chooser | source: skills/in-income-tax-regime-chooser/SKILL.md | sha256: 48c50da7f4a094c0cad1737a0b1593bb9b836f60d76f1f5d8fcba8524e3e7b29 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

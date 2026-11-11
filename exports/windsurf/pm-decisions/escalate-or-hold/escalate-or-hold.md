@@ -89,5 +89,5 @@ Confidence: 0.xx · Source: [model / estimate]
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/escalate-or-hold.html
 
-<!-- pm-claude-skills v83.2.0 | skill: escalate-or-hold | source: skills/escalate-or-hold/SKILL.md | sha256: b0e4e228d156ac6a0d99d483a5ca03ca795a97ea1e68baeed3f88e5b2214c4b1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: escalate-or-hold | source: skills/escalate-or-hold/SKILL.md | sha256: b0e4e228d156ac6a0d99d483a5ca03ca795a97ea1e68baeed3f88e5b2214c4b1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -117,5 +117,5 @@ for the deeper newcomer steps; [[two-worlds-translator]] for the cultural side.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/arrival-setup.html
 
-<!-- pm-claude-skills v83.2.0 | skill: arrival-setup | source: skills/arrival-setup/SKILL.md | sha256: 63fa7101704a21979da0765bd2ae0238cbcbce8c6e959caecc31a28e66fd1dd5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: arrival-setup | source: skills/arrival-setup/SKILL.md | sha256: 63fa7101704a21979da0765bd2ae0238cbcbce8c6e959caecc31a28e66fd1dd5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

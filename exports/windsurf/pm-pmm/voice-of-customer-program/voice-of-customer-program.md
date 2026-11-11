@@ -104,5 +104,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/voice-of-customer-program.html
 
-<!-- pm-claude-skills v83.2.0 | skill: voice-of-customer-program | source: skills/voice-of-customer-program/SKILL.md | sha256: 4a978bb372d48a684f309ed227b8e5fa861e64a8f036a818c5d1defa8dad2013 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: voice-of-customer-program | source: skills/voice-of-customer-program/SKILL.md | sha256: 4a978bb372d48a684f309ed227b8e5fa861e64a8f036a818c5d1defa8dad2013 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -346,5 +346,5 @@ For tool-using agents with connected MCP servers (Notion, Linear/Jira, Slack). R
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meeting-notes.html
 
-<!-- pm-claude-skills v83.2.0 | skill: meeting-notes | source: skills/meeting-notes/SKILL.md | sha256: 49d1d9b4d2902dc2b41870fd6e8ab8cd0382229f54cd9a6ee14f3193e5b72cec | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: meeting-notes | source: skills/meeting-notes/SKILL.md | sha256: 49d1d9b4d2902dc2b41870fd6e8ab8cd0382229f54cd9a6ee14f3193e5b72cec | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -149,5 +149,5 @@ Things to tackle in production but out of scope for this design session:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/system-design-interview.html
 
-<!-- pm-claude-skills v83.2.0 | skill: system-design-interview | source: skills/system-design-interview/SKILL.md | sha256: d723c1779c4315aea771cfbc0681f02115b537a4bf54328d53cefc096b180d9e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: system-design-interview | source: skills/system-design-interview/SKILL.md | sha256: d723c1779c4315aea771cfbc0681f02115b537a4bf54328d53cefc096b180d9e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

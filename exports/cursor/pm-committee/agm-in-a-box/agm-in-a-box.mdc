@@ -124,5 +124,5 @@ don't need the box.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agm-in-a-box.html
 
-<!-- pm-claude-skills v83.2.0 | skill: agm-in-a-box | source: skills/agm-in-a-box/SKILL.md | sha256: 87eb9eeddd3aed0f9278c80a8bf60fbfeb6dcbfd51b6d564c52980365575561a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: agm-in-a-box | source: skills/agm-in-a-box/SKILL.md | sha256: 87eb9eeddd3aed0f9278c80a8bf60fbfeb6dcbfd51b6d564c52980365575561a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -183,5 +183,5 @@ For tool-using or computer-use agents that can reach the team's tracker (Jira, L
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sprint-planning.html
 
-<!-- pm-claude-skills v83.2.0 | skill: sprint-planning | source: skills/sprint-planning/SKILL.md | sha256: 19e3bfeaa7fb7a05a6b79c819ef8c5df23cd54f88193b791a34bd53e80333f7c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: sprint-planning | source: skills/sprint-planning/SKILL.md | sha256: 19e3bfeaa7fb7a05a6b79c819ef8c5df23cd54f88193b791a34bd53e80333f7c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

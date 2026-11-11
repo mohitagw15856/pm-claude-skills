@@ -70,5 +70,5 @@ Job-description analysis practice — requirement triage, signal-reading, ATS ke
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jd-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: jd-decoder | source: skills/jd-decoder/SKILL.md | sha256: d88cea9b7e84da0a8203a56c8bdece7b38de15767cdd093381650f224a85a9e6 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: jd-decoder | source: skills/jd-decoder/SKILL.md | sha256: d88cea9b7e84da0a8203a56c8bdece7b38de15767cdd093381650f224a85a9e6 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

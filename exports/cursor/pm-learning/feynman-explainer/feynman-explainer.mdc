@@ -64,5 +64,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/feynman-explainer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: feynman-explainer | source: skills/feynman-explainer/SKILL.md | sha256: cc07a39718bf1d8b6217bdf7d0428f053f66e479f2928f63f78c8d3c982297b9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: feynman-explainer | source: skills/feynman-explainer/SKILL.md | sha256: cc07a39718bf1d8b6217bdf7d0428f053f66e479f2928f63f78c8d3c982297b9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -1,0 +1,78 @@
+{
+  "$schema": "../schemas/mission.schema.json",
+  "id": "bad-quarter-reset",
+  "name": "After an incident and a churn spike: recover, re-plan, build",
+  "summary": "Write up the incident and plan the repair sprint, stop for review, diagnose the churn and rank the quarter, stop again, then take the top bet through a competitor teardown, a PRD and stories to a second sprint plan. Three typed pipelines, ten steps.",
+  "model_role": "frontier",
+  "effort": "high",
+  "inputs": {
+    "type": "object",
+    "properties": {
+      "incident_title": { "type": "string" },
+      "severity": { "type": "string" },
+      "narrative": { "type": "string", "description": "What happened, in your own words" },
+      "project": { "type": "string" },
+      "objectives": { "type": "array", "items": { "type": "string" } },
+      "period": { "type": "string" },
+      "customers_start": { "type": "integer" },
+      "customers_churned": { "type": "integer" },
+      "churn_reasons": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": { "reason": { "type": "string" }, "count": { "type": "integer" }, "source": { "type": "string" } },
+          "required": ["reason"]
+        }
+      },
+      "owner": { "type": "string" },
+      "okr_period": { "type": "string" },
+      "product": { "type": "object" },
+      "competitors": { "type": "array", "items": { "type": "string" } },
+      "target_user": { "type": "string" },
+      "sprint_length_weeks": { "type": "integer" },
+      "team_size": { "type": "integer" }
+    },
+    "required": ["incident_title", "severity", "narrative", "project", "objectives", "period", "customers_start", "customers_churned", "owner", "okr_period", "product", "competitors", "target_user", "sprint_length_weeks", "team_size"]
+  },
+  "stages": [
+    {
+      "id": "recover",
+      "pipeline": "incident-to-sprint",
+      "inputs": {
+        "title": "$.input.incident_title",
+        "severity": "$.input.severity",
+        "narrative": "$.input.narrative",
+        "project": "$.input.project",
+        "objectives": "$.input.objectives",
+        "sprint_length_weeks": "$.input.sprint_length_weeks",
+        "team_size": "$.input.team_size"
+      },
+      "checkpoint": "Read the post-mortem and the repair sprint before the mission plans anything new. The root cause should be agreed by the people who were there."
+    },
+    {
+      "id": "diagnose",
+      "pipeline": "churn-to-roadmap",
+      "inputs": {
+        "period": "$.input.period",
+        "customers_start": "$.input.customers_start",
+        "customers_churned": "$.input.customers_churned",
+        "churn_reasons": "$.input.churn_reasons",
+        "owner": "$.input.owner",
+        "okr_period": "$.input.okr_period"
+      },
+      "checkpoint": "Read the ranked roadmap. The next stage builds the item ranked first."
+    },
+    {
+      "id": "build",
+      "pipeline": "competitor-to-sprint",
+      "inputs": {
+        "product": "$.input.product",
+        "competitors": "$.input.competitors",
+        "feature_name": "$.diagnose.roadmap.ranked[0].name",
+        "target_user": "$.input.target_user",
+        "sprint_length_weeks": "$.input.sprint_length_weeks",
+        "team_size": "$.input.team_size"
+      }
+    }
+  ]
+}

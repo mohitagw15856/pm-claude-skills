@@ -77,5 +77,5 @@ Fundraising practice — donor-centred case construction (need, solution, credib
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/case-for-support.html
 
-<!-- pm-claude-skills v83.2.0 | skill: case-for-support | source: skills/case-for-support/SKILL.md | sha256: c949bb17ccd7dac3af9dd8df2df61520af70ee7da8ce625bc4a4fe6890dac661 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: case-for-support | source: skills/case-for-support/SKILL.md | sha256: c949bb17ccd7dac3af9dd8df2df61520af70ee7da8ce625bc4a4fe6890dac661 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

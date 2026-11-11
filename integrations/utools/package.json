@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "type": "commonjs",
+  "description": "Marks the uTools plugin sources as CommonJS, which is what uTools loads. Not published."
+}

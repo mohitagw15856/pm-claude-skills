@@ -167,5 +167,5 @@ Every mode returns the same disciplined shape:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sql-query-explainer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: sql-query-explainer | source: skills/sql-query-explainer/SKILL.md | sha256: ef92aaee5e5c8b614a099fe3ad8dd0ade30b496566857917c4ab353be010546e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: sql-query-explainer | source: skills/sql-query-explainer/SKILL.md | sha256: ef92aaee5e5c8b614a099fe3ad8dd0ade30b496566857917c4ab353be010546e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

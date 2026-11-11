@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-phd",
+  "version": "1.0.0",
+  "description": "Get through a doctorate: the supervisor update, the literature review, the thesis outline and chapter plan, the reviewer rebuttal letter, and viva preparation with a mock defence",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "phd",
+    "doctorate",
+    "thesis",
+    "viva",
+    "peer-review",
+    "academia"
+  ]
+}

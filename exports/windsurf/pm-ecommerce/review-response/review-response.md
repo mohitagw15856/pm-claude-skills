@@ -70,5 +70,5 @@ Online reputation & customer-service practice — specific, ownership-led public
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/review-response.html
 
-<!-- pm-claude-skills v83.2.0 | skill: review-response | source: skills/review-response/SKILL.md | sha256: 3813c12bda7a40e5ee1848f2c3211041f7bb2edeaeec9602cf7488ea8ef786b2 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: review-response | source: skills/review-response/SKILL.md | sha256: 3813c12bda7a40e5ee1848f2c3211041f7bb2edeaeec9602cf7488ea8ef786b2 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

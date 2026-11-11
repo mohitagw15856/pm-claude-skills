@@ -75,5 +75,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/plain-language-rewrite.html
 
-<!-- pm-claude-skills v83.2.0 | skill: plain-language-rewrite | source: skills/plain-language-rewrite/SKILL.md | sha256: 06f80c452997a08a6879ac973162c94ec1c354565beb0758561b1082d5f874d7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: plain-language-rewrite | source: skills/plain-language-rewrite/SKILL.md | sha256: 06f80c452997a08a6879ac973162c94ec1c354565beb0758561b1082d5f874d7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

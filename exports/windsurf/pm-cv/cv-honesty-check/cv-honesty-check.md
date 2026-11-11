@@ -67,5 +67,5 @@ Risk levels:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cv-honesty-check.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cv-honesty-check | source: skills/cv-honesty-check/SKILL.md | sha256: 192377e04b6efc1e38602fd35dc6026bd48fa7d48a80bedb28135a144cb3f423 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cv-honesty-check | source: skills/cv-honesty-check/SKILL.md | sha256: 192377e04b6efc1e38602fd35dc6026bd48fa7d48a80bedb28135a144cb3f423 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

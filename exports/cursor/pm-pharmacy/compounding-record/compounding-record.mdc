@@ -95,5 +95,5 @@ Verified by: [second person, where required] · [date/time]
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/compounding-record.html
 
-<!-- pm-claude-skills v83.2.0 | skill: compounding-record | source: skills/compounding-record/SKILL.md | sha256: 34316df58efcd0a7081f86bdced5ef8f7c4efd48d264d99c2a9a9b2e7cd7e0aa | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: compounding-record | source: skills/compounding-record/SKILL.md | sha256: 34316df58efcd0a7081f86bdced5ef8f7c4efd48d264d99c2a9a9b2e7cd7e0aa | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

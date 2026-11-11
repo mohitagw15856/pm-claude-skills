@@ -80,5 +80,5 @@ Business-case / capital-budgeting practice — ROI, payback period, NPV, and ass
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/roi-estimator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: roi-estimator | source: skills/roi-estimator/SKILL.md | sha256: 366e24f458c7169ce4ffd432f8f5c03c36ea3d45ce5ae92c4c54b0b94b3c3c34 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: roi-estimator | source: skills/roi-estimator/SKILL.md | sha256: 366e24f458c7169ce4ffd432f8f5c03c36ea3d45ce5ae92c4c54b0b94b3c3c34 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

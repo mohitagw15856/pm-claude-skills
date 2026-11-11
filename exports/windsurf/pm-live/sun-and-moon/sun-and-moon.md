@@ -69,5 +69,5 @@ Source: [sunrise-sunset.org / Open-Meteo] · times local to [zone] · rerun: `[e
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sun-and-moon.html
 
-<!-- pm-claude-skills v83.2.0 | skill: sun-and-moon | source: skills/sun-and-moon/SKILL.md | sha256: 4f49cb492b1b4cc43d7c646ddbc5beb0c6a114591e3b8d2b3bb61577a6af8554 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: sun-and-moon | source: skills/sun-and-moon/SKILL.md | sha256: 4f49cb492b1b4cc43d7c646ddbc5beb0c6a114591e3b8d2b3bb61577a6af8554 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

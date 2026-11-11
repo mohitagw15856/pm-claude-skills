@@ -82,5 +82,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pharmacy-counselling-script.html
 
-<!-- pm-claude-skills v83.2.0 | skill: pharmacy-counselling-script | source: skills/pharmacy-counselling-script/SKILL.md | sha256: ac6c5a2efbbcbf422fa17a0441cde1230556e29a9d5b85eaf1366ba68588bdfd | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: pharmacy-counselling-script | source: skills/pharmacy-counselling-script/SKILL.md | sha256: ac6c5a2efbbcbf422fa17a0441cde1230556e29a9d5b85eaf1366ba68588bdfd | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

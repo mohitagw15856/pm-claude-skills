@@ -75,5 +75,5 @@ The Investment Policy Statement framework (goals, risk, allocation, rules) used 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investing-policy-statement.html
 
-<!-- pm-claude-skills v83.2.0 | skill: investing-policy-statement | source: skills/investing-policy-statement/SKILL.md | sha256: 41100f89c8ded11aa934e5ae84d92ddb7c685c91d5776bde0049527043f8dd7b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: investing-policy-statement | source: skills/investing-policy-statement/SKILL.md | sha256: 41100f89c8ded11aa934e5ae84d92ddb7c685c91d5776bde0049527043f8dd7b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

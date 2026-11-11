@@ -81,5 +81,5 @@ Then:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/feishu-doc-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: feishu-doc-writer | source: skills/feishu-doc-writer/SKILL.md | sha256: b6feb35276c62a03811261d8f81e0341e398111dbc094db813b801cb9c64d6f7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: feishu-doc-writer | source: skills/feishu-doc-writer/SKILL.md | sha256: b6feb35276c62a03811261d8f81e0341e398111dbc094db813b801cb9c64d6f7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

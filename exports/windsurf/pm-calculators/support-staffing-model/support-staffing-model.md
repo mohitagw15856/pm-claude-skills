@@ -54,5 +54,5 @@ Prints the base case (`base 15 on-queue / 22 rostered · SL 81% · ASA 38s · oc
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/support-staffing-model.html
 
-<!-- pm-claude-skills v83.2.0 | skill: support-staffing-model | source: skills/support-staffing-model/SKILL.md | sha256: 8d1ff1eeac1cc78e10343efd9bcf026fe20ce708281676b933319d0c9565d787 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: support-staffing-model | source: skills/support-staffing-model/SKILL.md | sha256: 8d1ff1eeac1cc78e10343efd9bcf026fe20ce708281676b933319d0c9565d787 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

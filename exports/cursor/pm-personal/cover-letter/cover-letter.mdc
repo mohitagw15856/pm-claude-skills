@@ -70,5 +70,5 @@ Modern cover-letter practice — specific hook, evidence-to-need mapping, human 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cover-letter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cover-letter | source: skills/cover-letter/SKILL.md | sha256: 6255f3850810b0a834c9340af5063eb6c173d145a1f61bf560f2aaa8b0d5c00c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cover-letter | source: skills/cover-letter/SKILL.md | sha256: 6255f3850810b0a834c9340af5063eb6c173d145a1f61bf560f2aaa8b0d5c00c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

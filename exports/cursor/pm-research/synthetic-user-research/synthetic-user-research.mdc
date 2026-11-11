@@ -89,5 +89,5 @@ Ask for (if not already provided):
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/synthetic-user-research.html
 
-<!-- pm-claude-skills v83.2.0 | skill: synthetic-user-research | source: skills/synthetic-user-research/SKILL.md | sha256: 27555e3d4988c9233c1e34ea6795cfbfdb67e202d586de09237220091f61dad8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: synthetic-user-research | source: skills/synthetic-user-research/SKILL.md | sha256: 27555e3d4988c9233c1e34ea6795cfbfdb67e202d586de09237220091f61dad8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

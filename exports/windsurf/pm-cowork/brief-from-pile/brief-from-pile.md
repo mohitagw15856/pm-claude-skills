@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/brief-from-pile.html
 
-<!-- pm-claude-skills v83.2.0 | skill: brief-from-pile | source: skills/brief-from-pile/SKILL.md | sha256: 588b5315cf29dde545d4d9271fec3346bed67e63c10921f76a23d1b3eea42874 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: brief-from-pile | source: skills/brief-from-pile/SKILL.md | sha256: 588b5315cf29dde545d4d9271fec3346bed67e63c10921f76a23d1b3eea42874 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

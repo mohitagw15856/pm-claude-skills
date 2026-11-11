@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cross-examine-me.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cross-examine-me | source: skills/cross-examine-me/SKILL.md | sha256: 0dcc0b6003d30c6a59749ec55b5c99f5bb00bf0640f0886fe3e298f23e860fd1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cross-examine-me | source: skills/cross-examine-me/SKILL.md | sha256: 0dcc0b6003d30c6a59749ec55b5c99f5bb00bf0640f0886fe3e298f23e860fd1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

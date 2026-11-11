@@ -82,5 +82,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/receipts-audit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: receipts-audit | source: skills/receipts-audit/SKILL.md | sha256: 2e573a07dbbd4380f6f457cbc0d9e0365c3739df8605e1bb9c61d3dde40a3f83 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: receipts-audit | source: skills/receipts-audit/SKILL.md | sha256: 2e573a07dbbd4380f6f457cbc0d9e0365c3739df8605e1bb9c61d3dde40a3f83 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -122,5 +122,5 @@ neighbors for business finances — but a professional owns the tax itself.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tax-residency-primer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: tax-residency-primer | source: skills/tax-residency-primer/SKILL.md | sha256: a3ebace8a324fdb854e3998d06ffc95128bf5521269139ea316a9dd4876307ca | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: tax-residency-primer | source: skills/tax-residency-primer/SKILL.md | sha256: a3ebace8a324fdb854e3998d06ffc95128bf5521269139ea316a9dd4876307ca | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

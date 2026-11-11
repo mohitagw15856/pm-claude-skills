@@ -7,6 +7,7 @@
 import { writeFileSync, mkdirSync, existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { complete, parseSkill } from './lib/anthropic.mjs';
+import { modelFor } from './lib/models.mjs';
 
 function getArg(argv, name, def) {
   const i = argv.indexOf(`--${name}`);
@@ -76,7 +77,7 @@ export async function run(argv) {
   }
   const apiKey = process.env.ANTHROPIC_API_KEY || '';
   if (!apiKey) { console.error('Set ANTHROPIC_API_KEY to generate a skill.'); return 1; }
-  const model = getArg(argv, 'model', 'claude-sonnet-4-6');
+  const model = getArg(argv, 'model', modelFor('default'));
   const outDir = getArg(argv, 'out', 'skills');
   const dryRun = argv.includes('--dry-run');
 

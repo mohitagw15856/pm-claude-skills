@@ -76,5 +76,5 @@ Earns a discount: [list with exchange rates] · Floor: $[N] ([why]) · Below flo
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-your-services.html
 
-<!-- pm-claude-skills v83.2.0 | skill: pricing-your-services | source: skills/pricing-your-services/SKILL.md | sha256: 0ac1af0aca552f2f2670fb374f14630320f11b51b6f3cc8eed65ee1ecf8173bb | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: pricing-your-services | source: skills/pricing-your-services/SKILL.md | sha256: 0ac1af0aca552f2f2670fb374f14630320f11b51b6f3cc8eed65ee1ecf8173bb | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

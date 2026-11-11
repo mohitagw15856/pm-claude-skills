@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/childcare-comparison.html
 
-<!-- pm-claude-skills v83.2.0 | skill: childcare-comparison | source: skills/childcare-comparison/SKILL.md | sha256: ec337706e78e688b00d4a1185317541cf9512e9134ce18065fe2adc78403902a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: childcare-comparison | source: skills/childcare-comparison/SKILL.md | sha256: ec337706e78e688b00d4a1185317541cf9512e9134ce18065fe2adc78403902a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

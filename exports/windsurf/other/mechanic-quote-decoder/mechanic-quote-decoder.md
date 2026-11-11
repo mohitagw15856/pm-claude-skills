@@ -140,5 +140,5 @@ trade; [[car-tco]] for whether this car is worth fixing at all.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/mechanic-quote-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: mechanic-quote-decoder | source: skills/mechanic-quote-decoder/SKILL.md | sha256: dedf56d868c7247ec113c8b5b9409ab0d308221d4264801daf299f555083ebf6 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: mechanic-quote-decoder | source: skills/mechanic-quote-decoder/SKILL.md | sha256: dedf56d868c7247ec113c8b5b9409ab0d308221d4264801daf299f555083ebf6 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

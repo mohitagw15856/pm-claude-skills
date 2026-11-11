@@ -67,5 +67,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/generate-then-execute.html
 
-<!-- pm-claude-skills v83.2.0 | skill: generate-then-execute | source: skills/generate-then-execute/SKILL.md | sha256: 1005f6ea4266130ba89b8ee0aa1d53dda7f1efae0c8dd06fd5ea3fbc8a9b3f03 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: generate-then-execute | source: skills/generate-then-execute/SKILL.md | sha256: 1005f6ea4266130ba89b8ee0aa1d53dda7f1efae0c8dd06fd5ea3fbc8a9b3f03 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

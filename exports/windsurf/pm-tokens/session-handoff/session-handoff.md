@@ -67,5 +67,5 @@ Engineering handoff / pairing-rotation practice and incident-handoff (SBAR-style
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/session-handoff.html
 
-<!-- pm-claude-skills v83.2.0 | skill: session-handoff | source: skills/session-handoff/SKILL.md | sha256: a80c8251124b0e60c175175c0969fe91b2c73f21e0e4442556fba527dc69568a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: session-handoff | source: skills/session-handoff/SKILL.md | sha256: a80c8251124b0e60c175175c0969fe91b2c73f21e0e4442556fba527dc69568a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -78,5 +78,5 @@ Standard SaaS metrics definitions (Bessemer / a16z / KeyBanc) — NRR/GRR, quick
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/saas-metrics.html
 
-<!-- pm-claude-skills v83.2.0 | skill: saas-metrics | source: skills/saas-metrics/SKILL.md | sha256: 0fe85ee3d2bc56712274638d11bc934ba59f988e0707198ae9e778af6476cb71 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: saas-metrics | source: skills/saas-metrics/SKILL.md | sha256: 0fe85ee3d2bc56712274638d11bc934ba59f988e0707198ae9e778af6476cb71 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

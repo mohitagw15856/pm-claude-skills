@@ -79,5 +79,5 @@ SaaS unit-economics practice (David Skok / for Entrepreneurs) — margin-based L
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/unit-economics.html
 
-<!-- pm-claude-skills v83.2.0 | skill: unit-economics | source: skills/unit-economics/SKILL.md | sha256: cb64a7333a34b2eaca5fd3596c0f3160cef2daaceb3e55ae2d50e9674f3c10db | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: unit-economics | source: skills/unit-economics/SKILL.md | sha256: cb64a7333a34b2eaca5fd3596c0f3160cef2daaceb3e55ae2d50e9674f3c10db | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -82,5 +82,5 @@ For agents with calendar access (Google/Microsoft APIs or UI). Without tools, th
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/calendar-defrag.html
 
-<!-- pm-claude-skills v83.2.0 | skill: calendar-defrag | source: skills/calendar-defrag/SKILL.md | sha256: 927383ee8fbf8b0c7e8d0a8cb488365ef3eda342a465d39e041b3bd0a5cc2d08 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: calendar-defrag | source: skills/calendar-defrag/SKILL.md | sha256: 927383ee8fbf8b0c7e8d0a8cb488365ef3eda342a465d39e041b3bd0a5cc2d08 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

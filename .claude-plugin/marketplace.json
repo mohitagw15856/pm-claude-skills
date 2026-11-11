@@ -1,13 +1,117 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "83.2.0",
+  "version": "84.0.0",
   "description": "PM stands for Professional, not just Product Management. 1250 Claude Skills + 4 agent templates across 144 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-china-study-abroad",
+      "description": "留学与海归：申请文书、留学签证准备、海归求职。Study abroad for Chinese applicants: application essays, student visa preparation and the returnee job search",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-study-abroad",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-china-startup",
+      "description": "在中国创业：公司注册、股权分配、高新技术企业认定、专精特新申报、补贴申报、融资商业计划书。Starting a company in China: registration, equity split, High and New Technology Enterprise and Specialised SME applications, subsidy filings and a financing deck",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-startup",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-china-ecommerce",
+      "description": "国内电商运营：淘宝、天猫、拼多多、京东商品详情，1688 批发 listing，双 11 大促方案，客服话术。Chinese marketplace operations: listings for Taobao, Tmall, Pinduoduo and JD, 1688 wholesale listings, a Double 11 promotion plan and customer service scripts",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-ecommerce",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-africa",
+      "description": "Working life in Nigeria, Kenya and South Africa: payslips decoded, the Nigerian pension account, an M-Pesa reversal dispute, a retrenchment package checked and a UIF claim",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-africa",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-dach",
+      "description": "Working life in Germany: decode an Arbeitszeugnis, work out the notice period, and prepare the annual tax return",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-dach",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-latam",
+      "description": "Working life in Brazil and Mexico: CLT termination pay, the Brazilian annual income tax return, Mexican finiquito and liquidación, and the Mexican annual tax return",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-latam",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-mena",
+      "description": "Working life in the Gulf: UAE end-of-service gratuity, residence visa and Emirates ID admin, the Saudi labour contract decoded, and a Gulf job offer checked before you sign",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-mena",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-phd",
+      "description": "Get through a doctorate: the supervisor update, the literature review, the thesis outline and chapter plan, the reviewer rebuttal letter, and viva preparation with a mock defence",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-phd",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-procurement",
+      "description": "Buy well: write the RFP, score tenders on a weighted matrix, answer an RFP, score suppliers each quarter, track renewal notice dates, and write the renew, renegotiate or exit brief",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-procurement",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-sports-coaching",
+      "description": "Coach a club or school team: plan the season, plan each session, write to parents, and review the match without blaming players",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-sports-coaching",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-retail-shopfloor",
+      "description": "Run a shop floor: build the rota, plan and reconcile a stock take, write the shrink report, and hand a shift over so nothing is dropped",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-retail-shopfloor",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-agriculture",
+      "description": "Run a small or family farm on paper: a season crop plan, a subsidy or grant application, farm records that survive an inspection, a buyer contract check, and a crop insurance claim",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-agriculture",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-nursing",
+      "description": "Ward and community nursing paperwork: a structured shift handover, a care plan with measurable goals, an incident report that sticks to facts, and a plain-language update for a patient's family",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-nursing",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-india",
       "description": "Working life in India: file the right GST returns on time, withdraw EPF, calculate gratuity, choose between the old and new income tax regimes, decode the four labour codes, and settle a notice period and full and final payment",
@@ -130,7 +234,7 @@
     },
     {
       "name": "pm-zh-content",
-      "description": "Chinese content platforms: 小红书 notes, 公众号 articles, 抖音 short-video scripts and live-commerce (直播带货) scripts, each with a compliance check against restricted advertising claims and undisclosed sponsorship",
+      "description": "Chinese content platforms: 小红书 notes, 公众号 articles, 抖音 and 视频号 short-video scripts, B站 video scripts, 知乎 answers, 小宇宙 podcast outlines and live-commerce (直播带货) scripts, each with a compliance check against restricted advertising claims and undisclosed sponsorship",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-zh-content",

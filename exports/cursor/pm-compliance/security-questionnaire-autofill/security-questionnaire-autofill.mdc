@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/security-questionnaire-autofill.html
 
-<!-- pm-claude-skills v83.2.0 | skill: security-questionnaire-autofill | source: skills/security-questionnaire-autofill/SKILL.md | sha256: 818d81511001bf68eb095f085690725489898867732961ae5300553287d542cc | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: security-questionnaire-autofill | source: skills/security-questionnaire-autofill/SKILL.md | sha256: 818d81511001bf68eb095f085690725489898867732961ae5300553287d542cc | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

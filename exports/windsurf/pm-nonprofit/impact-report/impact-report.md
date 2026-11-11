@@ -69,5 +69,5 @@ Nonprofit reporting and donor-stewardship practice — outcomes over activities,
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/impact-report.html
 
-<!-- pm-claude-skills v83.2.0 | skill: impact-report | source: skills/impact-report/SKILL.md | sha256: 1a237c2807861c0e3840d2354ebde9bf615cad6287a01ada0649c5bbe24ad934 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: impact-report | source: skills/impact-report/SKILL.md | sha256: 1a237c2807861c0e3840d2354ebde9bf615cad6287a01ada0649c5bbe24ad934 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -9,6 +9,41 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [84.0.0] - Regions and new models - 2026-11-11
+
+**1374 skills · 167 bundles** (from 1310 · 153 at v83.2.0). 54 new skills and 13 new bundles in this release, on top of the work merged since v83.2.0.
+
+### Added
+- **Six profession bundles**: `pm-nursing` (shift handover, care plan, incident report, family update), `pm-agriculture` (season plan, subsidy application, records book, buyer contract check), `pm-retail-shopfloor` (stock take, shrink report, shift handover), `pm-sports-coaching` (season and session plans, parent communication, match review), `pm-procurement` (contract renewal brief, with the RFP and supplier skills) and `pm-phd` (supervisor update, chapter plan, reviewer rebuttal, viva prep).
+- **Four regional bundles**, each marked high-stakes and stamped for rule review: `pm-mena` (UAE gratuity, Gulf residence visas, Saudi contracts, Gulf job offers), `pm-latam` (Brazilian rescisão CLT and IRPF, Mexican finiquito and declaración anual), `pm-dach` (Arbeitszeugnis, Kündigungsfrist, Steuererklärung) and `pm-africa` (payslips and pensions in Nigeria, payslips and M-Pesa reversals in Kenya, retrenchment and UIF in South Africa).
+- **Three China bundles**: `pm-china-ecommerce` (淘宝 and 拼多多 listings, 1688 wholesale, 双11 plans, customer-service scripts), `pm-china-startup` (company registration, equity split, 高新技术企业, 专精特新, subsidies, financing plan) and `pm-china-study-abroad` (essays, visa preparation, returnee job search). `pm-zh-content` gains Bilibili, 知乎, 视频号 and 小宇宙 skills.
+- **China tools**: a WeChat Mini Program skill finder that works offline; uTools and Quicker plugins; `--agent qwen`, `--agent iflow` and `--agent kimi` installs for the domestic coding CLIs; write-back of a skill's output to 飞书文档, 语雀 and 钉钉文档; a weekly page of mainland usage from public counters (npmmirror, Gitee, ModelScope).
+- **Translations**: the four Gulf skills in Arabic, ten skills in German and nine more in French, all machine-translated and labelled as awaiting native review. The side-by-side reader lays right-to-left languages out from the right.
+- **USSD**: a second menu for Nigeria, Kenya and South Africa (`USSD_MENU = "africa"`).
+- **Model registry**: `data/models.json` names the model for each of five roles (default, fast, deep, frontier, judge) on the current Claude line-up, and code asks for a role. `scripts/check-model-refs.mjs` fails on an unlisted model id and on any new reference to a legacy model. See `docs/MODELS.md`.
+- **Per-skill model and effort guidance**: `data/model-guidance.json`, derived from each skill's risk tier and length, and `pm-claude-skills run <skill> --auto-model`. Derived, not measured; `docs/MODEL-GUIDANCE.md` says so.
+- **Missions**: `missions/<id>.json` chains typed pipelines into one run with human checkpoints and `--resume`, validated link by link against the contracts. Two ship: `retention-quarter` and `bad-quarter-reset`. See `docs/MISSIONS.md`.
+- **Prompt audit**: `scripts/prompt-audit.mjs` scans every skill for text written for older models. `docs/PROMPT-AUDIT.md` has the result; naming a model version in a skill now fails `npm run check`.
+- **Since v83.2.0, already merged**: typed skill contracts and pipelines, a hosted broker document, the lockfile and memory commands, an India pack, Copilot, Gemini CLI and OpenAI Agents exports, provenance footers on every export, a red-team corpus, starters, an offline bundle, a setup wizard, a git hook, the year in review, Hindi and Spanish translations (#502, #503); the Agent Arena, result cards and the Skill Hack (#485); the small-model badge and rule-change watchers (#484); LTS skills and a course pack (#483); launch-day verdicts (#482); `/.well-known/agent-skills.json` (#481); and four agent skills (#473, #474, #477, #479).
+
+### Changed
+- The shared Claude client adds room for thinking to `max_tokens` on current models, joins the text blocks of a reply, and raises an error on an empty answer.
+- SkillBench takes `--lineup current` and `--effort`, and reads replies that begin with a thinking block.
+- The translation check has a `--strict` mode, now in `npm run check`: a translation whose English source gained or lost a section fails.
+- `rfp-writer`, `rfp-response`, `contract-renewal-tracker` and `shift-schedule-builder` now list a new bundle as their home (they remain in their earlier bundles too), so their export paths moved.
+- The Python package needs Python 3.10 or later.
+
+### Fixed
+- The mainland agent tool and the chat bots fetched a skills index that stopped being committed in #502; they now read the committed `data/skills-index.min.json`.
+- A pipeline with an optional input that was not supplied stopped at the first step; the input is now left out.
+- SkillBench read only the first content block of a reply, which is empty when the model thinks first.
+
+### Not done
+- 164 references in 77 files still name a legacy model (Workers, browser pages, workflows). Each needs one live call to verify, so they wait; the baseline can only shrink.
+- SkillBench has not been run on the current line-up. It costs API credit and waits for approval.
+- The Mini Program has not been previewed in WeChat DevTools or submitted for review, the Quicker script has not been run on Windows, and the write-back script has not called the real platforms.
+
+
 ## [83.2.0] - Duet support - 2026-10-23
 
 **1310 skills · 153 bundles** (from 1301 · 153 at v83.1.0). 21 Duet-ready skills are now designed for Claude Duet and other proactive agents.

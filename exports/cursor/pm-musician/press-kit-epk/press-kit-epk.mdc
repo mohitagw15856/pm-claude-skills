@@ -138,5 +138,5 @@ the general-press cousin; [[personal-bio]] for the human behind the act.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/press-kit-epk.html
 
-<!-- pm-claude-skills v83.2.0 | skill: press-kit-epk | source: skills/press-kit-epk/SKILL.md | sha256: d3e204391796535f573c8f58294230087c14b7bab91fdeece15a9221c6b3000f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: press-kit-epk | source: skills/press-kit-epk/SKILL.md | sha256: d3e204391796535f573c8f58294230087c14b7bab91fdeece15a9221c6b3000f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

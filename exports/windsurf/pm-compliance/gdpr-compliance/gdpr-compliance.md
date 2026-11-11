@@ -80,5 +80,5 @@ EU GDPR — Art. 6 (lawful basis), Art. 9 (special category), Art. 30 (ROPA), Ar
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/gdpr-compliance.html
 
-<!-- pm-claude-skills v83.2.0 | skill: gdpr-compliance | source: skills/gdpr-compliance/SKILL.md | sha256: c0478769e1d105bdf9e932c4d8a1e1c5715d49a32e5610de14cbac0fb5f9b3e8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: gdpr-compliance | source: skills/gdpr-compliance/SKILL.md | sha256: c0478769e1d105bdf9e932c4d8a1e1c5715d49a32e5610de14cbac0fb5f9b3e8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

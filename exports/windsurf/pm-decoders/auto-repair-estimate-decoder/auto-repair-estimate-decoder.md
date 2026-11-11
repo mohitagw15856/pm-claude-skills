@@ -79,5 +79,5 @@ Consumer-side repair-order review practice — symptom-to-line reconciliation, u
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/auto-repair-estimate-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: auto-repair-estimate-decoder | source: skills/auto-repair-estimate-decoder/SKILL.md | sha256: e673ddc32de3ddca4cda122826d53e46610ed71143d000c46d2a82ad21a168c1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: auto-repair-estimate-decoder | source: skills/auto-repair-estimate-decoder/SKILL.md | sha256: e673ddc32de3ddca4cda122826d53e46610ed71143d000c46d2a82ad21a168c1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

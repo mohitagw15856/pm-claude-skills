@@ -16,6 +16,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete } from '../bin/lib/anthropic.mjs';
+import { modelFor } from '../bin/lib/models.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const arg = (n, d) => { const i = process.argv.indexOf('--' + n); return i >= 0 && process.argv[i + 1] && !process.argv[i + 1].startsWith('--') ? process.argv[i + 1] : d; };
@@ -55,7 +56,7 @@ async function runReport(r, date) {
   if (!key) { console.error('  ! ANTHROPIC_API_KEY not set'); process.exit(1); }
   const out = await complete({
     apiKey: key,
-    model: r.model || 'claude-sonnet-4-6',
+    model: r.model || modelFor('default'),
     system: buildSystem(skill),
     messages: [{ role: 'user', content: userMessage }],
     maxTokens: 4096,

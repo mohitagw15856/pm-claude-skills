@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/financial-independence-roadmap.html
 
-<!-- pm-claude-skills v83.2.0 | skill: financial-independence-roadmap | source: skills/financial-independence-roadmap/SKILL.md | sha256: 18f7f25b665ea12d9003901cade728c562ae91fa481413fe8cbaf61ec5dce7f3 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: financial-independence-roadmap | source: skills/financial-independence-roadmap/SKILL.md | sha256: 18f7f25b665ea12d9003901cade728c562ae91fa481413fe8cbaf61ec5dce7f3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

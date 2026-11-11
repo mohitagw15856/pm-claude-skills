@@ -76,5 +76,5 @@ Brand & product naming practice — strategy-driven generation, criteria-based e
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-naming.html
 
-<!-- pm-claude-skills v83.2.0 | skill: product-naming | source: skills/product-naming/SKILL.md | sha256: feda7b9da6453277e2e02f153ea1fcac212bca2b57c2b9830beb18a018e9dc95 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: product-naming | source: skills/product-naming/SKILL.md | sha256: feda7b9da6453277e2e02f153ea1fcac212bca2b57c2b9830beb18a018e9dc95 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

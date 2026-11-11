@@ -67,5 +67,5 @@ UX writing & onboarding practice — empty states as activation moments, differe
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/empty-state-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: empty-state-writer | source: skills/empty-state-writer/SKILL.md | sha256: 840e57e2867d53992e1c4936a287cfb6084ce8f8fa17f82dad8825f278fe676a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: empty-state-writer | source: skills/empty-state-writer/SKILL.md | sha256: 840e57e2867d53992e1c4936a287cfb6084ce8f8fa17f82dad8825f278fe676a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

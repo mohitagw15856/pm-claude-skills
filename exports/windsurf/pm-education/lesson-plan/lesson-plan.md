@@ -80,5 +80,5 @@ A short, purposeful task that reinforces the objective.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lesson-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: lesson-plan | source: skills/lesson-plan/SKILL.md | sha256: 346dd705f5b416f0cf65f3500d40f7ebb92018366a45f022cfea0b46d6754090 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: lesson-plan | source: skills/lesson-plan/SKILL.md | sha256: 346dd705f5b416f0cf65f3500d40f7ebb92018366a45f022cfea0b46d6754090 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

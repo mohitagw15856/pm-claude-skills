@@ -85,5 +85,5 @@ Input shape in the script docstring. The script computes vesting month-by-month 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/offer-comparison.html
 
-<!-- pm-claude-skills v83.2.0 | skill: offer-comparison | source: skills/offer-comparison/SKILL.md | sha256: b0e3108b7db0a5cdd4950fa0434f33b5ea398bf97dcec0511e682371cbe4c2b4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: offer-comparison | source: skills/offer-comparison/SKILL.md | sha256: b0e3108b7db0a5cdd4950fa0434f33b5ea398bf97dcec0511e682371cbe4c2b4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

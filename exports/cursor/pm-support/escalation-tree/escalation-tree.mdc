@@ -75,5 +75,5 @@ Support & incident-management practice — severity matrices, tiered ownership, 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/escalation-tree.html
 
-<!-- pm-claude-skills v83.2.0 | skill: escalation-tree | source: skills/escalation-tree/SKILL.md | sha256: 48d2e212c3cff51ab410e7ec46f997d70f22795d4b8d0e4790b1282e02e0e6e8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: escalation-tree | source: skills/escalation-tree/SKILL.md | sha256: 48d2e212c3cff51ab410e7ec46f997d70f22795d4b8d0e4790b1282e02e0e6e8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -54,5 +54,5 @@ A short list of the choices made: terms kept in English because readers use them
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/huawen-business-writing.html
 
-<!-- pm-claude-skills v83.2.0 | skill: huawen-business-writing | source: skills/huawen-business-writing/SKILL.md | sha256: 92b820c1696c95673e7c689558da35fb09c47b84d8600d71ae9d912bd3ba0cbf | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: huawen-business-writing | source: skills/huawen-business-writing/SKILL.md | sha256: 92b820c1696c95673e7c689558da35fb09c47b84d8600d71ae9d912bd3ba0cbf | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

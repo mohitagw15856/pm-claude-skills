@@ -89,5 +89,5 @@ Part of the pm-design-taste bundle in the library at https://github.com/mohitagw
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/emil-design-eng-pointer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: emil-design-eng-pointer | source: skills/emil-design-eng-pointer/SKILL.md | sha256: 6bac0851b703bf38228550ae2042d43bbd58ee16d7ff70dba68a414c66384e9d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: emil-design-eng-pointer | source: skills/emil-design-eng-pointer/SKILL.md | sha256: 6bac0851b703bf38228550ae2042d43bbd58ee16d7ff70dba68a414c66384e9d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

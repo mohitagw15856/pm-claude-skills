@@ -77,5 +77,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/long-term-care-options.html
 
-<!-- pm-claude-skills v83.2.0 | skill: long-term-care-options | source: skills/long-term-care-options/SKILL.md | sha256: 95192a3e96c0f99e7b7a2e173382c5c5ff14ad81a9e5c3d438e9c7007e704fb6 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: long-term-care-options | source: skills/long-term-care-options/SKILL.md | sha256: 95192a3e96c0f99e7b7a2e173382c5c5ff14ad81a9e5c3d438e9c7007e704fb6 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

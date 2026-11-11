@@ -71,5 +71,5 @@ Board-management practice — pre-circulated reading, metrics-vs-plan transparen
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/board-pre-read.html
 
-<!-- pm-claude-skills v83.2.0 | skill: board-pre-read | source: skills/board-pre-read/SKILL.md | sha256: 48478978156e90c491781158e15c91463d52e58d9dc3a19a853287eaa45a0c43 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: board-pre-read | source: skills/board-pre-read/SKILL.md | sha256: 48478978156e90c491781158e15c91463d52e58d9dc3a19a853287eaa45a0c43 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

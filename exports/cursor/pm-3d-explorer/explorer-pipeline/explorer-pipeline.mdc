@@ -84,5 +84,5 @@ At the end of each session: what is done, what is blocked (and on whom), and the
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/explorer-pipeline.html
 
-<!-- pm-claude-skills v83.2.0 | skill: explorer-pipeline | source: skills/explorer-pipeline/SKILL.md | sha256: 7ba12c04c941f37703ae34c9d41d3f897fa12fd41366abb3a635556ae21e2c1f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: explorer-pipeline | source: skills/explorer-pipeline/SKILL.md | sha256: 7ba12c04c941f37703ae34c9d41d3f897fa12fd41366abb3a635556ae21e2c1f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

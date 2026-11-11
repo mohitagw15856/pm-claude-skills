@@ -68,5 +68,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/personal-operating-manual.html
 
-<!-- pm-claude-skills v83.2.0 | skill: personal-operating-manual | source: skills/personal-operating-manual/SKILL.md | sha256: e03d6b83db5e676fe6b30fd45e1cc0887e11d1d59149ba0b7e983deaaea369f4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: personal-operating-manual | source: skills/personal-operating-manual/SKILL.md | sha256: e03d6b83db5e676fe6b30fd45e1cc0887e11d1d59149ba0b7e983deaaea369f4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

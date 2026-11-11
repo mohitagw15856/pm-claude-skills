@@ -69,5 +69,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/grieving-at-work.html
 
-<!-- pm-claude-skills v83.2.0 | skill: grieving-at-work | source: skills/grieving-at-work/SKILL.md | sha256: 5b3eb18f2d66b0b8b21696ecfc410f22ebafc0e54da81d4a2e2ec6d373369e77 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: grieving-at-work | source: skills/grieving-at-work/SKILL.md | sha256: 5b3eb18f2d66b0b8b21696ecfc410f22ebafc0e54da81d4a2e2ec6d373369e77 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

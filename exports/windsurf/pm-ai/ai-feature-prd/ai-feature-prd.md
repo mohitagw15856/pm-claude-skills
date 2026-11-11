@@ -76,5 +76,5 @@ Standard PRD practice (see [`prd-template`](../prd-template/SKILL.md)) extended 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-feature-prd.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ai-feature-prd | source: skills/ai-feature-prd/SKILL.md | sha256: 5554d4fa4b7ab30c204e6d84110bfc5954fe898a297fc1db00ac51abd60d8c66 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ai-feature-prd | source: skills/ai-feature-prd/SKILL.md | sha256: 5554d4fa4b7ab30c204e6d84110bfc5954fe898a297fc1db00ac51abd60d8c66 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

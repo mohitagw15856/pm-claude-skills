@@ -76,5 +76,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/epic-progress-report.html
 
-<!-- pm-claude-skills v83.2.0 | skill: epic-progress-report | source: skills/epic-progress-report/SKILL.md | sha256: dc4d08bc316a1f858b347e5eddd104a54885fa7e52f07a825fcec4a9d20db2fd | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: epic-progress-report | source: skills/epic-progress-report/SKILL.md | sha256: dc4d08bc316a1f858b347e5eddd104a54885fa7e52f07a825fcec4a9d20db2fd | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

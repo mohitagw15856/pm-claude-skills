@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/async-instead.html
 
-<!-- pm-claude-skills v83.2.0 | skill: async-instead | source: skills/async-instead/SKILL.md | sha256: f367e9fd543a3219b883cd27147345820b63231c6f76dd57124c8f598fce17b7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: async-instead | source: skills/async-instead/SKILL.md | sha256: f367e9fd543a3219b883cd27147345820b63231c6f76dd57124c8f598fce17b7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -79,5 +79,5 @@ ISO/IEC 27001 (ISMS clauses 4–10) and Annex A control set + the Statement of A
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/iso-27001-isms.html
 
-<!-- pm-claude-skills v83.2.0 | skill: iso-27001-isms | source: skills/iso-27001-isms/SKILL.md | sha256: 17265e1b174a64292a771b905346289ebcbd56123e93f2afb36116747b993a90 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: iso-27001-isms | source: skills/iso-27001-isms/SKILL.md | sha256: 17265e1b174a64292a771b905346289ebcbd56123e93f2afb36116747b993a90 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

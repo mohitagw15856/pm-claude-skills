@@ -140,5 +140,5 @@ One or two concrete things that would prevent this class of error recurring:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/debugging-log-analyser.html
 
-<!-- pm-claude-skills v83.2.0 | skill: debugging-log-analyser | source: skills/debugging-log-analyser/SKILL.md | sha256: ae34e3add858fd2f5a09fa575d7c0ea91f8b0cd71f2426a4ab55e6dde61b0f6a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: debugging-log-analyser | source: skills/debugging-log-analyser/SKILL.md | sha256: ae34e3add858fd2f5a09fa575d7c0ea91f8b0cd71f2426a4ab55e6dde61b0f6a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

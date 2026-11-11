@@ -68,5 +68,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/love-letter-helper.html
 
-<!-- pm-claude-skills v83.2.0 | skill: love-letter-helper | source: skills/love-letter-helper/SKILL.md | sha256: badc8dc8e1d0aef1b37dfeaa9ec805c9de5a3dc7cfcd7ed2c02d1e66e5607d72 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: love-letter-helper | source: skills/love-letter-helper/SKILL.md | sha256: badc8dc8e1d0aef1b37dfeaa9ec805c9de5a3dc7cfcd7ed2c02d1e66e5607d72 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

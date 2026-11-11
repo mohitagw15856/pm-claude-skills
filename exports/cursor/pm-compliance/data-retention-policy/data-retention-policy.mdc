@@ -76,5 +76,5 @@ Data-minimisation practice — GDPR Art. 5(1)(e) storage limitation, sector rete
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-retention-policy.html
 
-<!-- pm-claude-skills v83.2.0 | skill: data-retention-policy | source: skills/data-retention-policy/SKILL.md | sha256: 31b81b231ef40783d10575930af5a116da4fd216a8f6bb775522bd636624aa31 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: data-retention-policy | source: skills/data-retention-policy/SKILL.md | sha256: 31b81b231ef40783d10575930af5a116da4fd216a8f6bb775522bd636624aa31 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

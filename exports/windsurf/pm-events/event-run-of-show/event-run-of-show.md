@@ -94,5 +94,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/event-run-of-show.html
 
-<!-- pm-claude-skills v83.2.0 | skill: event-run-of-show | source: skills/event-run-of-show/SKILL.md | sha256: 41163ada73d3e979d0b6523a674edf71a67842c0eba7ac55f62c07463a66fc7d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: event-run-of-show | source: skills/event-run-of-show/SKILL.md | sha256: 41163ada73d3e979d0b6523a674edf71a67842c0eba7ac55f62c07463a66fc7d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

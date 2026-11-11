@@ -68,5 +68,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/name-what-im-feeling.html
 
-<!-- pm-claude-skills v83.2.0 | skill: name-what-im-feeling | source: skills/name-what-im-feeling/SKILL.md | sha256: 469a5495ff13ae224ea54f95c4d8a07ab18311af8f29d0248bb989711822633f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: name-what-im-feeling | source: skills/name-what-im-feeling/SKILL.md | sha256: 469a5495ff13ae224ea54f95c4d8a07ab18311af8f29d0248bb989711822633f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->
