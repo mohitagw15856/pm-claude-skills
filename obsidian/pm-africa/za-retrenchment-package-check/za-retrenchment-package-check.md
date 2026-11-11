@@ -1,0 +1,123 @@
+---
+aliases: ["Retrenchment Package Check (South Africa)"]
+tags: [pm-skills, skill]
+skill: za-retrenchment-package-check
+description: "Check a retrenchment process and package for an employee in South Africa: whether consultation was done properly, the statutory minimum severance, notice pay, leave pay and other amounts, how the package is taxed, what an offer of alternative work means, and the deadlines for a dispute. Use when asked I got a section 189 letter, is my retrenchment package fair, calculate my severance pay, what am I owed if I am retrenched, or should I sign this retrenchment agreement. Produces a process check, a package table with working, a tax note, questions for the consultation, points to negotiate and the referral deadline. Not legal advice."
+---
+
+# Retrenchment Package Check (South Africa)
+
+Retrenchment is dismissal for the employer's operational reasons, and the law requires a real consultation before the decision, not an announcement. Employees often negotiate only the severance figure and miss notice pay, leave, the tax directive and the wording of the agreement they sign. This skill checks the process and the money. The statutory minimums below are the commonly cited positions and must be verified; it is not legal advice.
+
+## What This Skill Produces
+
+- A process check against the consultation requirements
+- A package table: each amount, the minimum, what was offered, the gap
+- A note on how severance is taxed and what a tax directive is
+- Questions and proposals to raise in consultation
+- What to check before signing a settlement agreement
+- Dispute routes and deadlines
+
+## Required Inputs
+
+Ask for these if not provided:
+
+- The notice or invitation to consult (the section 189 letter) and its date
+- Start date, current remuneration and how it is structured
+- The offer: severance formula, notice, leave, bonus, benefits, any ex gratia amount
+- Whether alternative positions were offered
+- The selection criteria used
+- Employer size and number of people affected
+- Union or workplace forum involvement
+- Whether a settlement or waiver has been presented
+
+## Framework
+
+1. **Consultation must come first.** The employer must invite consultation in writing and disclose reasons, alternatives considered, numbers affected, selection criteria, timing, severance proposed, assistance offered and re-employment prospects. Consultation is meant to seek consensus on avoiding and minimising dismissals. Large-scale retrenchments by bigger employers follow an extended process with facilitation and minimum periods.
+2. **Selection criteria** must be agreed or fair and objective. Last-in-first-out, skills and performance-based criteria are used; criteria that discriminate are unlawful.
+3. **Severance.** The statutory minimum is one week's remuneration for each completed year of continuous service. Contracts, policies and collective agreements often provide more.
+4. **Alternative employment.** An employee who unreasonably refuses a reasonable alternative offered by the employer can lose the statutory severance. Assess what "reasonable" means for the role, pay and location before refusing.
+5. **Notice.** Statutory minimum notice depends on service: one week in the first six months, two weeks up to a year, four weeks after a year, or the longer contractual period. It can be worked or paid.
+6. **Other amounts.** Accrued leave, pro rata bonus where contractual, outstanding commission, and pension or provident fund options.
+7. **Tax.** Severance benefits are taxed under a special table with a lifetime tax-free portion shared with retirement lump sums. The employer applies for a tax directive before paying. Verify the current threshold.
+8. **Unemployment insurance.** Retrenched employees can claim; the employer must provide the forms.
+9. **The agreement.** A full-and-final settlement closes later claims. Check that every amount, the payment date, the reference letter and any restraint are in writing.
+10. **Disputes.** Referral to the conciliation body must be made within a short period from dismissal; verify the deadline and route.
+
+## Output Format
+
+### Retrenchment check: [employer], [role]
+
+**Process**
+| Requirement | Done? | Evidence | Concern |
+|---|---|---|---|
+| Written invitation to consult | | | |
+| Reasons and alternatives disclosed | | | |
+| Selection criteria disclosed and fair | | | |
+| Real opportunity to make proposals | | | |
+| Alternatives to dismissal explored | | | |
+
+**Package**
+| Item | Minimum or contractual | Offered | Gap | Working |
+|---|---|---|---|---|
+| Severance | | | | |
+| Notice pay | | | | |
+| Leave pay | | | | |
+| Bonus or commission | | | | |
+| Other | | | | |
+
+**Tax:** [how severance is taxed, directive needed, figure to verify]
+
+**Raise in consultation**
+1. [question or proposal]
+
+**Before signing**
+- [ ] All amounts and the payment date are listed
+- [ ] The tax directive has been applied for
+- [ ] Unemployment insurance forms and a certificate of service will be provided
+- [ ] You understand what claims you give up
+
+**Dispute route and deadline:** [to verify]
+
+**Assumptions and gaps**
+- [Remuneration basis assumed]
+- [Documents not yet seen]
+
+*A checking aid, not legal advice. Verify against the current legislation or with a union, a labour lawyer or the conciliation body.*
+
+## Quality Checks
+
+- [ ] Process is assessed before money
+- [ ] Severance shows completed years and weekly remuneration
+- [ ] Notice is checked against service length and the contract
+- [ ] The alternative-employment rule is explained where an offer exists
+- [ ] The tax note flags the directive and marks thresholds for verification
+- [ ] The settlement warning appears
+
+## Anti-Patterns
+
+- **Do not treat a decision announced before consultation as normal.**
+- **Do not calculate severance on basic pay** if remuneration includes regular allowances.
+- **Do not advise refusing alternative work** without warning about severance.
+- **Do not quote the tax-free amount as certain.**
+- **Do not encourage signing under pressure the same day.**
+
+## Example Trigger Phrases
+
+- "I received a section 189 notice. What should I ask in the consultation?"
+- "Eight years of service, R32,000 a month. What is the minimum I should get?"
+- "They offered me a lower-paid role. If I say no, do I lose severance?"
+- "Check this retrenchment agreement before I sign."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/za-retrenchment-package-check.html
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text; replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}
+
+<!-- pm-claude-skills v84.0.0 | skill: za-retrenchment-package-check | source: skills/za-retrenchment-package-check/SKILL.md | sha256: d6cb79560d3a52e8135e84b4fe7d2f334935d15b3bb38e3d2136500bf4a94e56 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->
