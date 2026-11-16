@@ -1,19 +1,11 @@
 {
- "updated": "2026-11-10T23:18:23.590Z",
+ "updated": "2026-11-16T17:11:45.378Z",
  "window_days": 90,
  "note": "Counts only. npmmirror, Gitee and ModelScope are reachable in mainland China; npmjs.org is included for scale. Mirror downloads include bots and CI.",
- "mirror_share_30d_percent": 4.9,
+ "mirror_share_30d_percent": 3.6,
  "sources": {
   "npmmirror": {
    "daily": [
-    {
-     "day": "2026-08-14",
-     "downloads": 1
-    },
-    {
-     "day": "2026-08-17",
-     "downloads": 11
-    },
     {
      "day": "2026-08-18",
      "downloads": 2
@@ -285,38 +277,26 @@
     {
      "day": "2026-11-08",
      "downloads": 2
+    },
+    {
+     "day": "2026-11-11",
+     "downloads": 1
+    },
+    {
+     "day": "2026-11-12",
+     "downloads": 4
+    },
+    {
+     "day": "2026-11-15",
+     "downloads": 2
     }
    ],
    "last7": 19,
-   "last30": 335,
-   "last90": 905
+   "last30": 333,
+   "last90": 900
   },
   "npm": {
    "daily": [
-    {
-     "day": "2026-08-12",
-     "downloads": 241
-    },
-    {
-     "day": "2026-08-13",
-     "downloads": 356
-    },
-    {
-     "day": "2026-08-14",
-     "downloads": 403
-    },
-    {
-     "day": "2026-08-15",
-     "downloads": 272
-    },
-    {
-     "day": "2026-08-16",
-     "downloads": 411
-    },
-    {
-     "day": "2026-08-17",
-     "downloads": 796
-    },
     {
      "day": "2026-08-18",
      "downloads": 857
@@ -652,17 +632,42 @@
     {
      "day": "2026-11-09",
      "downloads": 307
+    },
+    {
+     "day": "2026-11-10",
+     "downloads": 411
+    },
+    {
+     "day": "2026-11-11",
+     "downloads": 356
+    },
+    {
+     "day": "2026-11-12",
+     "downloads": 423
+    },
+    {
+     "day": "2026-11-13",
+     "downloads": 611
+    },
+    {
+     "day": "2026-11-14",
+     "downloads": 500
+    },
+    {
+     "day": "2026-11-15",
+     "downloads": 742
     }
    ],
-   "last7": 2542,
-   "last30": 6462,
-   "last90": 33445
+   "last7": 3350,
+   "last30": 8845,
+   "last90": 34009
   },
   "gitee": {
    "stars": 1,
    "forks": 0,
    "watchers": 1,
-   "pushed_at": "2026-11-10T22:37:03+08:00"
+   "pushed_at": "2026-11-16T19:25:38+08:00",
+   "clones30": 10
   },
   "modelscope": {
    "dataset_downloads": 16,
@@ -674,6 +679,14 @@
    "date": "2026-11-10",
    "npmmirror_30d": 335,
    "npm_30d": 6462,
+   "gitee_stars": 1,
+   "ms_dataset": 16,
+   "ms_model": 6
+  },
+  {
+   "date": "2026-11-16",
+   "npmmirror_30d": 333,
+   "npm_30d": 8845,
    "gitee_stars": 1,
    "ms_dataset": 16,
    "ms_model": 6
