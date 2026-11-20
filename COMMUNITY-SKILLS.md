@@ -31,6 +31,7 @@ A directory of **skill repos and packs built by the community** that follow the
 | [easybrandkit](https://github.com/EminBudak/easybrandkit) | [@EminBudak](https://github.com/EminBudak) | Saves a website's real logo files, colors and fonts as BRAND.md and brand.json, for when an agent has to design something on brand. | https://github.com/EminBudak/easybrandkit |
 
 | resume-claim-guard | [Korey Wang Tianru](https://korey2028.tech) | Interviews candidates to lock a verified fact sheet before tailoring resumes to job descriptions, preventing hallucinated metrics | [korey2028-prog/resume-claim-guard](https://github.com/korey2028-prog/resume-claim-guard) |
+| [YouTube Transcript](https://github.com/tubeagentkit/youtube-transcript-skills) | [@tubeagentkit](https://github.com/tubeagentkit) | Fetches a YouTube video's transcript (any caption language it has, with timestamps), searches YouTube and lists channel or playlist videos, for summarizing or quoting talks, demos and interviews. | https://github.com/tubeagentkit/youtube-transcript-skills |
 <!-- COMMUNITY-SKILLS:ROWS-BELOW
   Add your row directly above this comment, keeping the four columns in order:
   | [Name](https://github.com/you/your-repo) | [@you](https://github.com/you) | One concise line — what it produces and when to use it. | https://github.com/you/your-repo |
