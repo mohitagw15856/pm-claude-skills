@@ -29,6 +29,7 @@ A directory of **skill repos and packs built by the community** that follow the
 | [agent-skills](https://github.com/mblode/agent-skills) | [@mblode](https://github.com/mblode) | Nobody ships AI slop on purpose. These skills make sure you don't. UI audits, typography, docs, PR review, and releases. | https://github.com/mblode/agent-skills |
 | [Tokenrip Handoff Kit](https://github.com/aleksandarperak33-hub/tokenrip-handoff-kit) | [@aleksandarperak33-hub](https://github.com/aleksandarperak33-hub) | Save a task, decision, sources and next action in Tokenrip, then continue from the exact saved record in another connected assistant. | https://github.com/aleksandarperak33-hub/tokenrip-handoff-kit |
 | [easybrandkit](https://github.com/EminBudak/easybrandkit) | [@EminBudak](https://github.com/EminBudak) | Saves a website's real logo files, colors and fonts as BRAND.md and brand.json, for when an agent has to design something on brand. | https://github.com/EminBudak/easybrandkit |
+| [Auteo Skills](https://github.com/AuteoAI/skills) | [@AuteoAI](https://github.com/AuteoAI) | Generate images, videos, music, and speech from agent prompts using the Auteo CLI and an Auteo account. | https://github.com/AuteoAI/skills |
 
 | resume-claim-guard | [Korey Wang Tianru](https://korey2028.tech) | Interviews candidates to lock a verified fact sheet before tailoring resumes to job descriptions, preventing hallucinated metrics | [korey2028-prog/resume-claim-guard](https://github.com/korey2028-prog/resume-claim-guard) |
 <!-- COMMUNITY-SKILLS:ROWS-BELOW
