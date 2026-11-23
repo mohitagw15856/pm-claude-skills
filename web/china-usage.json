@@ -1,31 +1,11 @@
 {
- "updated": "2026-11-16T17:11:45.378Z",
+ "updated": "2026-11-23T19:21:38.885Z",
  "window_days": 90,
  "note": "Counts only. npmmirror, Gitee and ModelScope are reachable in mainland China; npmjs.org is included for scale. Mirror downloads include bots and CI.",
- "mirror_share_30d_percent": 3.6,
+ "mirror_share_30d_percent": 1.6,
  "sources": {
   "npmmirror": {
    "daily": [
-    {
-     "day": "2026-08-18",
-     "downloads": 2
-    },
-    {
-     "day": "2026-08-19",
-     "downloads": 2
-    },
-    {
-     "day": "2026-08-20",
-     "downloads": 1
-    },
-    {
-     "day": "2026-08-21",
-     "downloads": 3
-    },
-    {
-     "day": "2026-08-22",
-     "downloads": 1
-    },
     {
      "day": "2026-08-25",
      "downloads": 2
@@ -289,42 +269,42 @@
     {
      "day": "2026-11-15",
      "downloads": 2
+    },
+    {
+     "day": "2026-11-16",
+     "downloads": 2
+    },
+    {
+     "day": "2026-11-17",
+     "downloads": 6
+    },
+    {
+     "day": "2026-11-18",
+     "downloads": 1
+    },
+    {
+     "day": "2026-11-19",
+     "downloads": 4
+    },
+    {
+     "day": "2026-11-20",
+     "downloads": 2
+    },
+    {
+     "day": "2026-11-21",
+     "downloads": 3
+    },
+    {
+     "day": "2026-11-22",
+     "downloads": 2
     }
    ],
-   "last7": 19,
-   "last30": 333,
-   "last90": 900
+   "last7": 20,
+   "last30": 178,
+   "last90": 911
   },
   "npm": {
    "daily": [
-    {
-     "day": "2026-08-18",
-     "downloads": 857
-    },
-    {
-     "day": "2026-08-19",
-     "downloads": 468
-    },
-    {
-     "day": "2026-08-20",
-     "downloads": 884
-    },
-    {
-     "day": "2026-08-21",
-     "downloads": 579
-    },
-    {
-     "day": "2026-08-22",
-     "downloads": 20
-    },
-    {
-     "day": "2026-08-23",
-     "downloads": 72
-    },
-    {
-     "day": "2026-08-24",
-     "downloads": 181
-    },
     {
      "day": "2026-08-25",
      "downloads": 56
@@ -379,11 +359,11 @@
     },
     {
      "day": "2026-09-07",
-     "downloads": 0
+     "downloads": 6251
     },
     {
      "day": "2026-09-08",
-     "downloads": 0
+     "downloads": 2152
     },
     {
      "day": "2026-09-09",
@@ -656,18 +636,46 @@
     {
      "day": "2026-11-15",
      "downloads": 742
+    },
+    {
+     "day": "2026-11-16",
+     "downloads": 1039
+    },
+    {
+     "day": "2026-11-17",
+     "downloads": 535
+    },
+    {
+     "day": "2026-11-18",
+     "downloads": 484
+    },
+    {
+     "day": "2026-11-19",
+     "downloads": 421
+    },
+    {
+     "day": "2026-11-20",
+     "downloads": 248
+    },
+    {
+     "day": "2026-11-21",
+     "downloads": 141
+    },
+    {
+     "day": "2026-11-22",
+     "downloads": 267
     }
    ],
-   "last7": 3350,
-   "last30": 8845,
-   "last90": 34009
+   "last7": 3135,
+   "last30": 10665,
+   "last90": 42486
   },
   "gitee": {
    "stars": 1,
    "forks": 0,
    "watchers": 1,
-   "pushed_at": "2026-11-16T19:25:38+08:00",
-   "clones30": 10
+   "pushed_at": "2026-11-23T20:50:36+08:00",
+   "clones30": 5
   },
   "modelscope": {
    "dataset_downloads": 16,
@@ -687,6 +695,14 @@
    "date": "2026-11-16",
    "npmmirror_30d": 333,
    "npm_30d": 8845,
+   "gitee_stars": 1,
+   "ms_dataset": 16,
+   "ms_model": 6
+  },
+  {
+   "date": "2026-11-23",
+   "npmmirror_30d": 178,
+   "npm_30d": 10665,
    "gitee_stars": 1,
    "ms_dataset": 16,
    "ms_model": 6
