@@ -80,6 +80,7 @@ Return the script as a table with the part, the seconds, and the line.
 
 ### 2. pricing-strategy
 
+- **Live:** https://www.youtube.com/watch?v=Q2Wbjx4Duck (published 27 November 2026, made in Descript with a recreated interface)
 - **Problem scene:** a founder at a whiteboard covered in crossed-out price points.
 - **Request to record:** the eval case for `pricing-strategy`.
 - **Three callouts:** the value metric, the tier design, the risks and what to test.

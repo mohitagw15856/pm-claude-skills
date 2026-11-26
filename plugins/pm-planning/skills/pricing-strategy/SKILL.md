@@ -157,6 +157,8 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Evaluate freemium vs paid."
 - "Prepare a pricing change."
 
+Watch the demo: https://www.youtube.com/watch?v=Q2Wbjx4Duck
+
 Install only this skill: `npx pm-claude-skills add --skills pricing-strategy`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-strategy.html
