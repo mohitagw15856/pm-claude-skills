@@ -70,6 +70,7 @@ export const STEPS = [
   "node tests/exports-lint.mjs",
   "node tests/i18n-parity.mjs",
   "node scripts/build-disambiguation.mjs",
+  "node scripts/check-eval-coverage.mjs --check --base origin/main",
   "node scripts/sync-bundles.mjs --check",
   "node scripts/build-cursor-plugins.mjs --check",
   "node scripts/skill-audit.mjs",

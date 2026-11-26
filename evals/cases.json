@@ -1916,6 +1916,50 @@
     {
       "skill": "xiaoyuzhou-podcast-outline",
       "input": "小宇宙播客，一期60分钟，两位主播对谈，主题是'在大厂做了十年后去小城市开咖啡店'，嘉宾是当事人。请写节目大纲、提问清单、时间轴和shownotes。"
+    },
+    {
+      "skill": "verified-security-audit",
+      "input": "Audit our Express API (I own the repo and authorise this review, read-only). What matters most is customer payment tokens. Entry points: POST /login, POST /upload (multipart), GET /files/:name which does res.sendFile(path.join(UPLOAD_DIR, req.params.name)), and GET /search?q= which builds the SQL with a template string. Verify each finding before reporting and give me findings.json for our tracker."
+    },
+    {
+      "skill": "live-competitor-capture",
+      "input": "I need evidence for a teardown of a competitor's project management tool. Question: how many steps and required fields before a new user creates their first task, and what is in the free plan? I have a browser automation tool. Plan the capture and give me the log format. Public pages and my own trial account only."
+    },
+    {
+      "skill": "product-knowledge-graph",
+      "input": "Our docs/ folder has about 60 Markdown PRDs, specs and decision records. Terms that matter: Checkout, Saved Cards, Refunds, Ledger service, SMB segment. I ran the script and it printed: wrote graph.json: 61 documents, 143 edges, 9 orphans. prd-checkout.md is linked from 14 documents. Question: what depends on the Checkout PRD, and which specs are orphaned?"
+    },
+    {
+      "skill": "failure-pattern-library",
+      "input": "Check this plan: we migrate all 40,000 accounts from the old billing database to the new one on Saturday night in one run. Rollback is restore from backup (we have not rehearsed a restore). The payments team will then switch their webhook over, and Dana knows how the reconciliation job works. Success means billing works on Monday."
+    },
+    {
+      "skill": "design-doc-review",
+      "input": "Review this design doc as the owner of the notifications service. Title: Move notification delivery to a queue. Problem: sends are slow. Proposal: API writes to a queue, workers send email and push, retry three times. Schema: add status column to notifications. Rollout: deploy Tuesday. No alternatives section, no rollback section, nothing on duplicate sends or ordering. Stage: final sign-off."
+    },
+    {
+      "skill": "scope-cutter",
+      "input": "We planned a reporting feature for Q1: custom report builder, 12 chart types, scheduled email delivery, PDF and CSV export, sharing with permissions, and a template gallery. Outcome: finance leads can get this month's numbers into their spreadsheet without asking us. Two engineers, six weeks. We promised one customer, in writing, CSV export by end of February. What do we cut?"
+    },
+    {
+      "skill": "app-store-submission-guard",
+      "input": "Check before I submit to the Apple App Store: a habit tracker with account sign-up by email, a 4.99 monthly premium tier sold through our own web checkout linked from the settings screen, HealthKit step import, and push reminders. Location permission is requested at launch with the default prompt text. Listing says the number one habit app. No demo account prepared and no in-app account deletion yet."
+    },
+    {
+      "skill": "demo-video-kit",
+      "input": "Make a 45 second demo for our landing page from one screen recording, /Users/me/rec.mov. Good moments: 0:12 to 0:20 creating a project, 0:45.5 to 0:58 inviting the team, 1:30 to 1:41 the finished dashboard. Captions only, no voice. The viewer should believe setup takes under a minute. Give me the shot list and tell me how to get the captions and ffmpeg commands."
+    },
+    {
+      "skill": "svg-diagram-studio",
+      "input": "Draw our Q1 to Q3 roadmap as one self-contained HTML file for a slide: Q1 Checkout redesign (done), Q2 Saved cards (in progress) and Refunds self-service (not started), Q3 Multi-currency (not started). The claim: payments work ships before international expansion. No Mermaid, must work offline."
+    },
+    {
+      "skill": "stitch-design-handoff",
+      "input": "Turn this into prompts for Google Stitch, mobile: a returns flow for a clothing shop app. User picks an order, picks items, chooses a reason from five options, chooses refund or exchange, gets a QR code to show at a drop-off point. Brand: off-white background, one dark green accent, rounded cards. No sample copy written yet."
+    },
+    {
+      "skill": "equity-research-note",
+      "input": "Write a research note from these figures I copied from the FY2025 annual report (dated February 2026) of a listed software company: revenue 412m, up 18%; subscription revenue 371m; gross margin 74%; operating margin 6% reported, 15% adjusted (excludes share-based pay of 37m); net revenue retention 108%; customers over 100k: 420. I hold some shares and want to test my thesis over three years. No price or consensus numbers supplied."
     }
   ]
 }

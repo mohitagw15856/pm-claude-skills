@@ -38,6 +38,8 @@ export const GENERATORS = [
   'scripts/build-catalogue.mjs',
   'scripts/build-mirror-index.mjs',
   'scripts/build-model-guidance.mjs',
+  'scripts/build-trust-numbers.mjs',
+  'scripts/build-readme-onboarding.mjs',
 ];
 
 function main() {
