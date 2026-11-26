@@ -1,4 +1,7 @@
-"""Regression tests for input rejection before workbook creation."""
+"""Regression tests for input rejection before workbook creation.
+
+Run:  python3 -m unittest tests/test_cohort_model.py -v
+"""
 import importlib.util
 import json
 from pathlib import Path
@@ -8,7 +11,8 @@ import tempfile
 import unittest
 import zipfile
 
-SCRIPT = Path(__file__).with_name("cohort_model.py")
+ROOT = Path(__file__).resolve().parent.parent
+SCRIPT = ROOT / "skills" / "cohort-curve-model" / "scripts" / "cohort_model.py"
 spec = importlib.util.spec_from_file_location("cohort_model", SCRIPT)
 model = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(model)
