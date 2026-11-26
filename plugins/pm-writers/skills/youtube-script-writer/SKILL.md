@@ -116,6 +116,8 @@ Every YouTube script must follow this structure to prevent early drop-off:
 - "I need a YouTube outline and script for a tutorial on clean code in Python."
 - "Draft a retention-optimized YouTube script on how to build a SaaS in 2026."
 
+Watch the 52-second demo: https://www.youtube.com/watch?v=2ewtEaM28AU
+
 Install only this skill: `npx pm-claude-skills add --skills youtube-script-writer`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/youtube-script-writer.html
