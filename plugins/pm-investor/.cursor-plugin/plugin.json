@@ -1,0 +1,21 @@
+{
+  "name": "pm-investor",
+  "displayName": "PM Skills: Investor",
+  "version": "1.0.0",
+  "description": "For the individual investor: equity research note, earnings call summary, portfolio review, stock snapshot, investing policy statement and annual report tutor. General information, not financial advice",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "investing",
+    "equity",
+    "portfolio",
+    "earnings"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

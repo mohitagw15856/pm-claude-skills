@@ -10,7 +10,8 @@ Claude Code **subagents** built from this library's skills — focused personas 
 | `launch-captain` | Positioning, GTM, launch checklists, competitor teardowns | product-positioning-doc, go-to-market, product-launch-checklist, competitor-teardown |
 | `research-lead` | Interview guides, research synthesis, assumption tests | discovery-interview-guide, user-interview-synthesis, assumption-mapper, ux-research-plan |
 | `data-analyst` | Metric definitions, experiment design, retention and cohort analysis | metrics-framework, ab-test-planner, cohort-analysis, cohort-curve-model |
-| `product-director` | Work that spans the whole team: splits it, routes each part to one specialist, resolves conflicts and returns one answer | the six agents above |
+| `seo-lead` | Technical SEO audits, keyword clusters, content briefs, structured data | technical-seo-audit, keyword-cluster-map, seo-content-brief, schema-markup |
+| `product-director` | Work that spans the whole team: splits it, routes each part to one specialist, resolves conflicts and returns one answer | the six product agents above |
 
 ## Install
 

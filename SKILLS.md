@@ -1,4 +1,4 @@
-# 🗂️ All 1385 Skills — full catalog
+# 🗂️ All 1390 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -95,7 +95,7 @@
 | **Stakeholder Influence Mapper** (`stakeholder-influence-mapper`) | Map stakeholders for a product decision and produce a tailored influence strategy with talking points. | — |
 | **Strategic Narrative Generator** (`strategic-narrative-generator`) | Generate the strategic story connecting a product roadmap to company goals in a form non-technical stakeholders can repeat. | — |
 
-## 📣 Marketing & Growth (49 skills)
+## 📣 Marketing & Growth (46 skills)
 
 ### `pm-copy` — 7 skills
 
@@ -120,7 +120,7 @@
 | **Newsletter Writer** (`newsletter-writer`) | Write a full creator newsletter issue — subject line, preview text, hook, body with a clear takeaway, and a CTA — in the writer's voice, for… | — |
 | **Short-Form Script** (`short-form-script`) | Write a short-form video script for TikTok, Instagram Reels, or YouTube Shorts — built on the hook→retention→payoff structure that drives watch-time. | — |
 
-### `pm-growth` — 13 skills
+### `pm-growth` — 11 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -133,12 +133,10 @@
 | **Messaging Framework** (`messaging-framework`) | Build a messaging framework (message house) that the whole company can use consistently. | — |
 | **Paid Acquisition Plan** (`paid-acquisition-plan`) | Plan a paid acquisition / performance marketing program with unit economics that work. | — |
 | **Paywall Optimization** (`paywall-optimization`) | Design or optimize a paywall / upgrade screen to convert free users to paid without killing trust. | — |
-| **Programmatic SEO** (`programmatic-seo`) | Plan a programmatic SEO strategy — generate many ranking pages from a data set and a template. | — |
 | **Referral Program Design** (`referral-program-design`) | Design a referral or viral-loop program that actually drives growth. | — |
 | **Retention Loop Design** (`retention-loop-design`) | Design retention and engagement loops that bring users back. | — |
-| **Schema Markup** (`schema-markup`) | Generate structured-data (Schema.org / JSON-LD) markup to win rich results in search. | — |
 
-### `pm-gtm` — 8 skills · 1 eval-scored
+### `pm-gtm` — 7 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -148,7 +146,6 @@
 | **Go-To-Market** (`go-to-market`) | Create go-to-market assets for any product or feature. | ✅ 4.5/5 |
 | **Media Pitch** (`media-pitch`) | Write a media pitch or press outreach email for any story or announcement. | — |
 | **Product Positioning Doc** (`product-positioning-doc`) | Write a product positioning document and messaging framework. | — |
-| **SEO Content Brief** (`seo-content-brief`) | Create a structured SEO content brief for any target keyword or topic. | — |
 | **Social Media Strategy** (`social-media-strategy`) | Build a social media strategy for a brand, product, or creator. | — |
 
 ### `pm-pmm` — 9 skills · 8 eval-scored
@@ -722,7 +719,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 4/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (924 skills)
+## 🌍 Industries & Public Sector (932 skills)
 
 ### `other` — 22 skills · 12 eval-scored
 
@@ -1476,9 +1473,9 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **App Store Submission Guard** (`app-store-submission-guard`) | Check a mobile app build against the common reasons app store reviewers reject submissions, before it is submitted. | — |
+| **Current Practice Check** (`current-practice-check`) | Check advice about tools, prices, model names, regulations and best practice for staleness before it is given, by dating each claim, marking what… | — |
 | **Demo Video Kit** (`demo-video-kit`) | Produce a short product demo video from screen recordings: a shot list, narration, timed captions and the exact ffmpeg commands to cut, join and… | — |
 | **Design Doc Review** (`design-doc-review`) | Review a technical design document or RFC the way a careful senior reviewer would: restate what it proposes, test the problem statement, probe the… | — |
-| **Equity Research Note** (`equity-research-note`) | Write a structured research note on a listed company from filings and figures the user supplies: the business in plain words, what drives revenue… | — |
 | **Failure Pattern Library** (`failure-pattern-library`) | Check a plan, launch or system against a catalogue of named ways that projects and systems commonly fail, and report which patterns it is exposed… | — |
 | **Live Competitor Capture** (`live-competitor-capture`) | Plan and run an evidence-first walkthrough of a competitor's public product with a browser tool, capturing dated screenshots and observations… | — |
 | **Product Knowledge Graph** (`product-knowledge-graph`) | Turn a folder of PRDs, specs, research notes and decision records into a graph of documents and the links between them, built by the bundled… | — |
@@ -1658,15 +1655,23 @@
 | **Policy Renewal Review** (`policy-renewal-review`) | Run a pre-renewal review of an insurance programme: scan coverage gaps against current operations, test limit adequacy against inflation and… | — |
 | **Underwriting Narrative** (`underwriting-narrative`) | Write the underwriting file narrative for a risk: the risk story, exposure quantification, loss-history read, mitigating and aggravating factors… | — |
 
-### `pm-investing-literacy` — 5 skills · 5 eval-scored
+### `pm-investing-literacy` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Annual Report Tutor** (`annual-report-tutor`) | Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the… | ✅ 3/5 |
 | **Audited Boundary Check** (`audited-boundary-check`) | Use when asked to check whether a figure is audited, which headline numbers sit outside the audited accounts, what 'adjusted' or 'underlying'… | ✅ 5/5 |
 | **Company Compare, Same Definitions** (`company-compare-same-definitions`) | Use when asked to compare two annual reports, put two companies from the same sector side by side, or check whether two companies' adjusted… | ✅ 4.8/5 |
 | **Investing Vocabulary Explainer** (`investing-vocabulary-explainer`) | Use when asked what a term means in an annual report, to explain EBITDA, goodwill, free cash flow, working capital or diluted EPS, or to define… | ✅ 4.5/5 |
 | **Profit to Cash Walk** (`profit-to-cash-walk`) | Use when asked to reconcile operating profit to free cash flow, walk from EBIT to FCF, explain why profit and cash differ in this report, or show… | ✅ 4.3/5 |
+
+### `pm-investor` — 4 skills · 1 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Annual Report Tutor** (`annual-report-tutor`) | Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the… | ✅ 3/5 |
+| **Earnings Call Summary** (`earnings-call-summary`) | Summarise a company's earnings release and call transcript the user supplies: what was reported against what was guided, what changed in the… | — |
+| **Equity Research Note** (`equity-research-note`) | Write a structured research note on a listed company from filings and figures the user supplies: the business in plain words, what drives revenue… | — |
+| **Portfolio Review** (`portfolio-review`) | Review a personal investment portfolio against the owner's own goals and rules: how it is spread, where it is concentrated, what it costs, how far… | — |
 
 ### `pm-invisible-illness` — 4 skills · 4 eval-scored
 
@@ -2034,6 +2039,16 @@
 | **Injection Spotter** (`injection-spotter`) | Spot prompt-injection in untrusted content before an agent acts on it — the anatomy of injected instructions across the channels attackers use… | — |
 | **Tool Permission Review** (`tool-permission-review`) | Review what an agent is actually allowed to do before you turn it loose — the tool-by-tool audit (each capability's blast radius), the… | — |
 
+### `pm-seo` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Keyword Cluster Map** (`keyword-cluster-map`) | Group a keyword list into topic clusters by search intent, assign one page to each cluster, and show where existing pages compete with each other. | — |
+| **Programmatic SEO** (`programmatic-seo`) | Plan a programmatic SEO strategy — generate many ranking pages from a data set and a template. | — |
+| **Schema Markup** (`schema-markup`) | Generate structured-data (Schema.org / JSON-LD) markup to win rich results in search. | — |
+| **SEO Content Brief** (`seo-content-brief`) | Create a structured SEO content brief for any target keyword or topic. | — |
+| **Technical SEO Audit** (`technical-seo-audit`) | Audit a website's technical search health from evidence the user supplies (crawl exports, page source, server responses, sitemap, robots file… | — |
+
 ### `pm-sidehustle` — 5 skills · 2 eval-scored
 
 | Skill | What it does | Eval |
@@ -2265,4 +2280,4 @@
 
 ---
 
-_1385 skills across 170 bundles · 399 eval-scored (29%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1390 skills across 172 bundles · 399 eval-scored (29%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

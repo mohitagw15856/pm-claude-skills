@@ -35,6 +35,19 @@ Stay inside what any member of the public may see. Do not use another person's c
 6. **Separate observed from inferred.** "The free plan lists three projects" is observed. "They are targeting small teams" is inferred. Keep them in different columns.
 7. **Log the gaps and the date.** State what could not be reached and when the capture was made. Evidence about a competitor expires.
 
+## Programmatic Helper
+
+This skill ships `scripts/capture_log.py`, with no dependencies beyond the standard library. It keeps the dated log and renders the evidence table and the counts, so nothing is retyped. It never opens a browser or a network connection: you or your browser tool do the capturing.
+
+```bash
+python3 scripts/capture_log.py init log.json --competitor "Acme" --question "Steps before first task?"
+python3 scripts/capture_log.py add log.json --flow signup --url https://example.com/signup \
+    --headline "Start free" --action "Create account" --fields "email,password" --shot acme-signup-01.png
+python3 scripts/capture_log.py report log.json
+```
+
+`add` stamps today's date unless `--date` is given, numbers the step, and refuses an address that is not `http` or `https`. `report` prints the evidence log as a table, counts screens and fields per flow, and lists entries that have no screenshot.
+
 ## Output Format
 
 # Capture: [competitor] · [flow] · [date]

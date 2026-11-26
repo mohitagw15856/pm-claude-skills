@@ -36,6 +36,8 @@ State plainly that store guidelines change. Ask the user to confirm against the 
 7. **Thin or broken.** Crashes on launch, a wrapped website with no native value, dead buttons, test data left in.
 8. **Sensitive categories.** Health claims, financial advice, gambling, children: each needs evidence, licences or specific design. Flag and route to a qualified reviewer; do not clear these alone.
 
+The full catalogue, with a self-check and the usual fix for each pattern, is in [`references/rejection-patterns.md`](references/rejection-patterns.md). It links to both stores' current policy pages and gives no section numbers on purpose.
+
 For each cause, record one of: **found**, **not found in the material given**, or **could not check** with what is needed to check it.
 
 ## Output Format

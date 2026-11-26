@@ -11,6 +11,8 @@ The output is production-ready thumbnail candidates you can drop directly into y
 
 ---
 
+> **Not quite this?** Use `youtube-script-writer` for the script behind a video thumbnail, and `hook-writer` for the title or hook text that sits beside it.
+
 ## Prerequisites
 
 Both of these must be in place before the skill can generate images:
@@ -631,5 +633,7 @@ Before marking the task complete, verify each item:
 ---
 
 *Originally created by Karen Spinner (Wondering About AI) — adapted and extended for this library.*
+
+Install only this skill: `npx pm-claude-skills add --skills thumbnail-creator`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thumbnail-creator.html

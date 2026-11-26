@@ -26,6 +26,7 @@ def load(skill, name):
 
 video, VIDEO = load("demo-video-kit", "demo_video")
 graph, GRAPH = load("product-knowledge-graph", "knowledge_graph")
+capture, CAPTURE = load("live-competitor-capture", "capture_log")
 
 
 class DemoVideoTests(unittest.TestCase):
@@ -136,6 +137,56 @@ class KnowledgeGraphTests(unittest.TestCase):
             g = graph.build_graph(self.make(d))
         with self.assertRaisesRegex(ValueError, "Did you mean: prd.md"):
             graph.neighbours(g, "prd")
+
+
+
+class CaptureLogTests(unittest.TestCase):
+    def empty(self):
+        return {"competitor": "Acme", "question": "Steps?", "entries": []}
+
+    def test_entries_are_numbered_and_cleaned(self):
+        log = self.empty()
+        capture.add_entry(log, " signup ", "https://example.com/a", "Start  free", "Create account", "email, password,,", "a.png", "2026-11-27", "")
+        capture.add_entry(log, "signup", "https://example.com/b", "", "", "", "", "2026-11-28", "")
+        self.assertEqual([e["step"] for e in log["entries"]], [1, 2])
+        self.assertEqual(log["entries"][0]["flow"], "signup")
+        self.assertEqual(log["entries"][0]["headline"], "Start free")
+        self.assertEqual(log["entries"][0]["fields"], ["email", "password"])
+
+    def test_bad_addresses_and_dates_are_refused(self):
+        for url in ("javascript:alert(1)", "example.com", "", "ftp://x.y", "https://a b"):
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                capture.add_entry(self.empty(), "x", url, "", "", "", "", "2026-11-27", "")
+        for date in ("27/11/2026", "2026-02-30", "today"):
+            with self.subTest(date=date), self.assertRaises(ValueError):
+                capture.add_entry(self.empty(), "x", "https://a.b", "", "", "", "", date, "")
+        with self.assertRaises(ValueError):
+            capture.add_entry(self.empty(), "  ", "https://a.b", "", "", "", "", "2026-11-27", "")
+
+    def test_report_counts_and_escapes_table_pipes(self):
+        log = self.empty()
+        capture.add_entry(log, "signup", "https://example.com/a", "Start | free", "Go", "email,password", "a.png", "2026-11-27", "")
+        capture.add_entry(log, "pricing", "https://example.com/p", "Plans", "", "", "", "2026-11-29", "")
+        text = capture.render(log)
+        self.assertIn('"Start \\| free" / "Go"', text)
+        self.assertIn("**Captured:** 2026-11-27 to 2026-11-29", text)
+        self.assertIn("- signup: 1 screen(s), 2 field(s) asked for", text)
+        self.assertIn("- pricing: 1 screen(s), 0 field(s) asked for", text)
+        self.assertIn("Entries with no screenshot: 2", text)
+
+    def test_init_never_overwrites_and_errors_are_messages(self):
+        with tempfile.TemporaryDirectory() as d:
+            log = Path(d) / "log.json"
+            run = lambda *argv: subprocess.run([sys.executable, str(CAPTURE), *argv], capture_output=True, text=True)
+            self.assertEqual(run("init", str(log), "--competitor", "Acme").returncode, 0)
+            self.assertEqual(run("add", str(log), "--flow", "signup", "--url", "https://example.com").returncode, 0)
+            again = run("init", str(log))
+            self.assertNotEqual(again.returncode, 0)
+            self.assertEqual(len(json.loads(log.read_text(encoding="utf-8"))["entries"]), 1)
+            for argv in (["report", str(Path(d) / "missing.json")], ["add", str(log), "--flow", "x", "--url", "nope"]):
+                result = run(*argv)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertNotIn("Traceback", result.stderr)
 
 
 if __name__ == "__main__":

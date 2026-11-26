@@ -9,6 +9,22 @@
   },
   "plugins": [
     {
+      "name": "pm-investor",
+      "description": "For the individual investor: equity research note, earnings call summary, portfolio review, stock snapshot, investing policy statement and annual report tutor. General information, not financial advice",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-investor",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-seo",
+      "description": "Search visibility: technical SEO audit, keyword cluster map, SEO content brief, schema markup, programmatic SEO and answer engine optimisation",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-seo",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-daily-ten",
       "description": "The ten skills to install first: the ones behind the README example and the built-in slash commands. PRD, interview synthesis, stakeholder update, RICE, sprint planning, retro, executive summary, meeting notes, competitor teardown and customer health scorecard",
       "version": "1.0.0",

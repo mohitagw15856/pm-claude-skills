@@ -111,6 +111,7 @@
     { group: '🏛 Trust', items: [
       ['credential.html', '🔏 Credentials'],
       ['partners.html', '🤝 Partners'],
+      ['sponsor.html', '💛 Sponsor'],
       ['leaderboard.html', '📊 Leaderboard'],
       ['jobs-exam.html', '📝 Jobs exam'],
       ['coverage.html', '📈 Eval coverage'],

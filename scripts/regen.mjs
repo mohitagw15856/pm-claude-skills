@@ -59,7 +59,7 @@ function main() {
   copyFileSync(join(ROOT, 'web/skills.json'), join(ROOT, 'python/pm_skills/skills.json'));
   console.log('✓ copied data/risk-tiers.json to web/ and web/skills.json to python/pm_skills/');
   if (failed.length) { console.error(`\n${failed.length} generator(s) failed: ${failed.join(', ')}`); return 1; }
-  console.log('\nRegenerated. Review with git status, then run npm run check.');
+  console.log('\nRegenerated. If skills or bundles were added, run node scripts/sync-counts.mjs to update the counts in docs.\nThen review with git status and run npm run check.');
   return 0;
 }
 

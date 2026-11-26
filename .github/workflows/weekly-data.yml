@@ -6,6 +6,7 @@ name: Weekly data refresh
 #   - web/feedback.json and web/ab-status.json: opt-in ratings from GoatCounter
 #   - web/trending.json and web/china-usage.json: most-run skills and the mainland counters
 #   - web/skill-of-the-week.json: the featured skill, with X and LinkedIn posts in the summary
+#   - data/sponsor-traffic.json: daily repository views, when the TRAFFIC_TOKEN secret is set
 #
 # ONE-TIME SETUP:
 #   1. GoatCounter, Settings, "API tokens": create a token with "Read statistics" and add
@@ -29,6 +30,9 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    env:
+      # At job level so the traffic step's `if` can see whether the secret exists.
+      TRAFFIC_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -61,6 +65,17 @@ jobs:
           POST_WEBHOOK_URL: ${{ secrets.POST_WEBHOOK_URL }}
         run: node scripts/skill-of-the-week.mjs
 
+      # GitHub keeps repository traffic for 14 days only. Recording it weekly builds the
+      # history the monthly sponsor report needs. Traffic is owner-only, so this needs a
+      # personal access token in the secret TRAFFIC_TOKEN (fine-grained, this repository,
+      # Administration: read). Without the secret the step is skipped.
+      - name: Record repository traffic for the sponsor report
+        if: env.TRAFFIC_TOKEN != ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
+        run: node scripts/sponsor-report.mjs > /dev/null
+
       # main is protected (requires pull requests), so open one instead of pushing.
       # create-pull-request does nothing when none of the files changed.
       - name: Open one PR with the refreshed data
@@ -73,6 +88,7 @@ jobs:
             web/trending.json
             web/china-usage.json
             web/skill-of-the-week.json
+            data/sponsor-traffic.json
           branch: weekly-data
           delete-branch: true
           commit-message: "chore(data): weekly refresh of ratings, trending and skill of the week"
@@ -93,8 +109,8 @@ jobs:
           set -euo pipefail
           files=$(gh pr diff "$PR" --name-only --repo "$GITHUB_REPOSITORY")
           echo "$files"
-          if [ -z "$files" ] || echo "$files" | grep -qvE '^web/(feedback|ab-status|trending|china-usage|skill-of-the-week)\.json$'; then
-            echo "::warning::PR #$PR changes files outside the five weekly data files; leaving it for review."
+          if [ -z "$files" ] || echo "$files" | grep -qvE '^(web/(feedback|ab-status|trending|china-usage|skill-of-the-week)|data/sponsor-traffic)\.json$'; then
+            echo "::warning::PR #$PR changes files outside the weekly data files; leaving it for review."
             exit 0
           fi
           gh pr merge "$PR" --squash --delete-branch --repo "$GITHUB_REPOSITORY"

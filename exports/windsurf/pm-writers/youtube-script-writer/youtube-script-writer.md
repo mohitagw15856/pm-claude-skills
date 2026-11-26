@@ -7,6 +7,8 @@ description: "Write a high-retention YouTube script — explainer, tutorial, vid
 
 This skill helps creators write highly engaging, structured, and visually-dynamic scripts optimized for YouTube's retention algorithm. It converts raw ideas, articles, or transcripts into a ready-to-shoot script with clear visual cues, pacing indicators, and audio directions.
 
+> **Not quite this?** Use `short-form-script` for a vertical video under a minute, `clip-factory` to cut clips out of a long recording you already have, and `thumbnail-creator` for the thumbnail.
+
 ## What This Skill Produces
 
 - **3 Title & Thumbnail Concepts:** CTR-optimized titles matching distinct psychological triggers (curiosity, result-driven, contrarian) paired with clear visual thumbnail layout suggestions.
@@ -114,7 +116,9 @@ Every YouTube script must follow this structure to prevent early drop-off:
 - "I need a YouTube outline and script for a tutorial on clean code in Python."
 - "Draft a retention-optimized YouTube script on how to build a SaaS in 2026."
 
+Install only this skill: `npx pm-claude-skills add --skills youtube-script-writer`
+
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/youtube-script-writer.html
 
-<!-- pm-claude-skills v84.0.0 | skill: youtube-script-writer | source: skills/youtube-script-writer/SKILL.md | sha256: c71770796f0d28d15e5c514a770cd10f32fab324a8adff1ce14a72b40b531d20 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: youtube-script-writer | source: skills/youtube-script-writer/SKILL.md | sha256: 663518eaa88720b62f28d04be2465cdc5fa4e90ca05e30509350bf795120f389 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

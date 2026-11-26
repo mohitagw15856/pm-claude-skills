@@ -16,7 +16,7 @@
 //   node web/build-skills.mjs && node scripts/build-exports.mjs   (or: npm run check)
 //
 // No dependencies.
-import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, cpSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -137,7 +137,9 @@ function main() {
     else wired.push(s);
     const dstDir = join(root, 'plugins', name, 'skills', s);
     mkdirSync(dstDir, { recursive: true });
-    copyFileSync(srcFile, join(dstDir, 'SKILL.md'));
+    // Copy the whole skill folder, not only SKILL.md: helper scripts and references ship
+    // with the bundle, and a copy without them is a skill that points at missing files.
+    cpSync(srcDir, dstDir, { recursive: true, filter: (f) => !/(^|[\\/])(__pycache__|\.DS_Store)$/.test(f) });
   }
 
   // 3. marketplace entry

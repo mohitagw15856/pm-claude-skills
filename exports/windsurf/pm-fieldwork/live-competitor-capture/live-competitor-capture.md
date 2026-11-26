@@ -35,6 +35,19 @@ Stay inside what any member of the public may see. Do not use another person's c
 6. **Separate observed from inferred.** "The free plan lists three projects" is observed. "They are targeting small teams" is inferred. Keep them in different columns.
 7. **Log the gaps and the date.** State what could not be reached and when the capture was made. Evidence about a competitor expires.
 
+## Programmatic Helper
+
+This skill ships `scripts/capture_log.py`, with no dependencies beyond the standard library. It keeps the dated log and renders the evidence table and the counts, so nothing is retyped. It never opens a browser or a network connection: you or your browser tool do the capturing.
+
+```bash
+python3 scripts/capture_log.py init log.json --competitor "Acme" --question "Steps before first task?"
+python3 scripts/capture_log.py add log.json --flow signup --url https://example.com/signup \
+    --headline "Start free" --action "Create account" --fields "email,password" --shot acme-signup-01.png
+python3 scripts/capture_log.py report log.json
+```
+
+`add` stamps today's date unless `--date` is given, numbers the step, and refuses an address that is not `http` or `https`. `report` prints the evidence log as a table, counts screens and fields per flow, and lists entries that have no screenshot.
+
 ## Output Format
 
 # Capture: [competitor] · [flow] · [date]
@@ -89,5 +102,5 @@ Stay inside what any member of the public may see. Do not use another person's c
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/live-competitor-capture.html
 
-<!-- pm-claude-skills v84.0.0 | skill: live-competitor-capture | source: skills/live-competitor-capture/SKILL.md | sha256: b288b32cdab445975340b8b4346d71c562277676f4c7ee3647c60236613ad192 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: live-competitor-capture | source: skills/live-competitor-capture/SKILL.md | sha256: d7062ee784a6324fb47cabfc93edba38489aa318dac9a5119ca70fd4d8204f7c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

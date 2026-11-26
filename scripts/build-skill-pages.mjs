@@ -12,6 +12,10 @@ import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const BASE = 'https://mohitagw15856.github.io/pm-claude-skills';
+// A skill's own share image when one has been rendered into web/og/, else the site card.
+// Only some skills have their own image, and pointing at a file that does not exist
+// leaves the link preview blank on every social platform.
+const ogImage = (name) => (existsSync(join(root, 'web', 'og', `${name}.jpg`)) ? `${BASE}/og/${name}.jpg` : `${BASE}/docs-assets/social-card.png`);
 const REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
 
 const skillsJson = join(root, 'web', 'skills.json');
@@ -310,13 +314,13 @@ ${existsSync(join(root, 'skills-i18n', 'zh', s.name, 'SKILL.md')) ? `<link rel="
 <meta property="og:title" content="${esc(s.title)} — AI Agent Skill" />
 <meta property="og:description" content="${metaDesc}" />
 <meta property="og:url" content="${url}" />
-<meta property="og:image" content="${BASE}/og/${s.name}.jpg" />
+<meta property="og:image" content="${ogImage(s.name)}" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="${esc(s.title)} — AI Agent Skill" />
 <meta name="twitter:description" content="${metaDesc}" />
-<meta name="twitter:image" content="${BASE}/og/${s.name}.jpg" />
+<meta name="twitter:image" content="${ogImage(s.name)}" />
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 <script type="application/ld+json">${JSON.stringify(faq)}</script>
 <style>${CSS}</style>

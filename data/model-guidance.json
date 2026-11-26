@@ -1704,6 +1704,11 @@
    "effort": "medium",
    "rule": "base"
   },
+  "current-practice-check": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "customer-advisory-board": {
    "role": "default",
    "effort": "medium",
@@ -2281,6 +2286,11 @@
    "rule": "base"
   },
   "drug-interaction-intervention": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
+  "earnings-call-summary": {
    "role": "default",
    "effort": "medium",
    "rule": "base"
@@ -3665,6 +3675,11 @@
    "effort": "high",
    "rule": "high-stakes"
   },
+  "keyword-cluster-map": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "kids-online-safety-plan": {
    "role": "deep",
    "effort": "high",
@@ -4724,6 +4739,11 @@
    "role": "default",
    "effort": "medium",
    "rule": "vision"
+  },
+  "portfolio-review": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
   },
   "post-event-debrief": {
    "role": "default",
@@ -6302,6 +6322,11 @@
    "rule": "base"
   },
   "technical-debt-register": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
+  "technical-seo-audit": {
    "role": "default",
    "effort": "medium",
    "rule": "base"

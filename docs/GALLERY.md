@@ -14,7 +14,7 @@ Paste a strategy doc and watch five archetype executives debate it around a rend
 
 Every skill a star, every bundle a constellation; fly through the library instead of scrolling it.
 
-[![Galaxy flythrough](../web/docs-assets/demo-galaxy.webp)](https://mohitagw15856.github.io/pm-claude-skills/galaxy.html)
+[![Galaxy flythrough](https://github.com/mohitagw15856/pm-claude-skills/raw/media/docs-assets/demo-galaxy.webp)](https://mohitagw15856.github.io/pm-claude-skills/galaxy.html)
 
 ## 🏢 The Firm — don't run tools, employ a staff
 
@@ -53,12 +53,12 @@ Any skill dissected live: which sections do what, where the framework's teeth ar
 
 | Demo | What it shows |
 |---|---|
-| ![playground](../web/docs-assets/playground-demo.webp) | The Playground — pick a skill, fill the form, run it |
-| ![boardroom](../web/docs-assets/boardroom-demo.webp) | The Boardroom deliberating |
+| ![playground](https://github.com/mohitagw15856/pm-claude-skills/raw/media/docs-assets/playground-demo.webp) | The Playground — pick a skill, fill the form, run it |
+| ![boardroom](https://github.com/mohitagw15856/pm-claude-skills/raw/media/docs-assets/boardroom-demo.webp) | The Boardroom deliberating |
 | ![agent](../web/docs-assets/agent-demo.webp) | The agent template running a skill end-to-end |
-| ![canvas](../web/docs-assets/canvas-demo.webp) | The Canvas — skills composed visually |
-| ![compare](../web/docs-assets/compare-demo.webp) | Model comparison on one brief |
-| ![firm](../web/docs-assets/firm-demo.webp) | Hiring from The Firm |
+| ![canvas](https://github.com/mohitagw15856/pm-claude-skills/raw/media/docs-assets/canvas-demo.webp) | The Canvas — skills composed visually |
+| ![compare](https://github.com/mohitagw15856/pm-claude-skills/raw/media/docs-assets/compare-demo.webp) | Model comparison on one brief |
+| ![firm](https://github.com/mohitagw15856/pm-claude-skills/raw/media/docs-assets/firm-demo.webp) | Hiring from The Firm |
 
 ---
 

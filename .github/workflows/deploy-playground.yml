@@ -307,6 +307,21 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v6
 
+      # The large demo recordings live on the media branch, not on main. Copy them in
+      # so their site URLs (…/docs-assets/<name>.webp) keep working. Never overwrites a
+      # file that is on main, and a missing branch only skips the recordings.
+      - name: Restore demo recordings from the media branch
+        run: |
+          set -euo pipefail
+          if git fetch --no-tags --depth=1 origin media 2>/dev/null; then
+            for f in $(git ls-tree -r --name-only FETCH_HEAD docs-assets | grep -E '^docs-assets/[a-z0-9-]+\.webp$'); do
+              [ -e "web/$f" ] || git show "FETCH_HEAD:$f" > "web/$f"
+            done
+            ls -l web/docs-assets/*.webp | wc -l
+          else
+            echo "::warning::media branch not available; demo recordings are not in this deploy."
+          fi
+
       - name: Upload web/ as Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:

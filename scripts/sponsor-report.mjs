@@ -221,6 +221,14 @@ async function main() {
       npmWeek: await npmPoint('last-week'), npmMonth: await npmPoint('last-month'),
       topReferrer: referrers[0] || null,
     };
+    // The same figures as data, for the sponsor page on the site (web/sponsor.html).
+    writeFileSync(join(ROOT, 'web', 'sponsor-reach.json'), JSON.stringify({
+      asOf: figures.when.toISOString().slice(0, 10),
+      stars: figures.stars, forks: figures.forks, views14: figures.views14, uniques14: figures.uniques14,
+      frontViews14: figures.front ? figures.front.count : null, frontUniques14: figures.front ? figures.front.uniques : null,
+      npmWeek: figures.npmWeek, npmMonth: figures.npmMonth,
+      topReferrer: figures.topReferrer ? { name: figures.topReferrer.referrer, views: figures.topReferrer.count } : null,
+    }, null, 2) + '\n');
     for (const [file, lang] of Object.entries(REACH_FILES)) {
       const full = join(ROOT, file);
       if (!existsSync(full)) continue;

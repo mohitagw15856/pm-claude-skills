@@ -5,6 +5,7 @@
 // Usage:
 //   node scripts/new-skill.mjs --name churn-forecaster --description "..."
 //   node scripts/new-skill.mjs            # interactive (prompts for the basics)
+//   node scripts/new-skill.mjs --name acme-setup --sponsor "Acme"   # a labelled sponsored skill (see SPONSORS.md)
 //   npm run new-skill -- --name my-skill
 //
 // No dependencies.
@@ -29,14 +30,17 @@ function parseArgs(argv) {
 const titleCase = (name) =>
   name.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 
-function template({ name, title, description }) {
+function template({ name, title, description, sponsor }) {
+  // A sponsored skill says so in its description and its first line (the rules are in SPONSORS.md).
+  const label = sponsor ? `Sponsored by ${sponsor}. ` : '';
+  const notice = sponsor ? `\n> **Sponsored skill.** This skill is sponsored by ${sponsor} and covers ${sponsor}'s own product only. It passes the same checks as every other skill.\n` : '';
   return `---
 name: ${name}
-description: "${description}"
+description: "${label}${description}"
 ---
 
 # ${title} Skill
-
+${notice}
 One-line summary of the value this skill delivers. <!-- TODO: rewrite -->
 
 ## What This Skill Produces
@@ -80,7 +84,10 @@ async function resolveInputs(args) {
   title = title || titleCase(name);
   // A default description that already satisfies SkillCheck (what / use when / produces).
   description = description || `Summarise what ${title} does in one line. Use when asked to [trigger phrases the user would say]. Produces [the concrete artifact].`;
-  return { name, title, description };
+  // --sponsor "Company": only letters, digits, spaces and a few marks, so the name cannot break the frontmatter.
+  const sponsor = typeof args.sponsor === 'string' ? args.sponsor.trim() : '';
+  if (args.sponsor !== undefined && !/^[\p{L}\p{N}][\p{L}\p{N} .&'-]{0,59}$/u.test(sponsor)) throw new Error('Invalid --sponsor. Give the company name: letters, numbers, spaces, and . & \' - only.');
+  return { name, title, description, sponsor };
 }
 
 async function main() {
