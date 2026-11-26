@@ -10,6 +10,7 @@ Retention data has a shape, and the shape is the business. This skill fits the s
 ## Required Inputs
 
 - **Observed retention by period** — from period 0 (100%) through at least period 3-4. Percent or fraction, either works. More periods = a trustworthy fit; 4 is the floor.
+- **Every period must be above zero.** The log-log fit cannot use a zero, so the script refuses the input rather than silently dropping the period. If a small cohort reaches zero in its later periods, trim the trailing zero periods before fitting and say that you did. Retention above the period 0 value, negative numbers and non-numeric entries are refused too.
 - **ARPU per period** (optional) — revenue per *retained* user per period. Without it, LTV is reported in lifetime-period multiples instead of currency.
 - **Projection horizon** (optional, default 24 periods).
 

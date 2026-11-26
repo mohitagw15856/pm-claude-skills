@@ -80,11 +80,31 @@ def write_xlsx(out, data):
         for i, x in enumerate(sheet_xmls):
             z.writestr(f"xl/worksheets/sheet{i+1}.xml", x)
 
+def normalize_observed(raw):
+    """Validate the log-fit domain before normalizing period zero."""
+    if not isinstance(raw, list) or len(raw) < 4:
+        raise ValueError("observed must be an array of at least 4 periods")
+    if any(isinstance(x, bool) or not isinstance(x, (int, float)) for x in raw):
+        raise ValueError("observed periods must be numbers, not strings or booleans")
+    try:
+        obs = [float(x) for x in raw]
+    except OverflowError as exc:
+        raise ValueError("observed periods must be finite") from exc
+    if any(not math.isfinite(x) for x in obs):
+        raise ValueError("observed periods must be finite")
+    if any(x <= 0 for x in obs):
+        raise ValueError("the log-log power fit requires positive retention in every period; zero periods cannot be discarded")
+    if any(x > obs[0] for x in obs[1:]):
+        raise ValueError("retention cannot exceed the period-zero cohort")
+    normalized = [x / obs[0] for x in obs]
+    if any(x <= 0 for x in normalized):
+        raise ValueError("retention is too small to normalize without underflow")
+    return normalized
+
 def fit_power(obs):
     """obs: [r0, r1, ...] fractions. Fit r(t)=a*t^-b on t>=1 via log-log OLS."""
-    pts = [(t, r) for t, r in enumerate(obs) if t >= 1 and r > 0]
-    if len(pts) < 3:
-        sys.exit("need at least 4 observed periods (period 0 + 3 more) with retention > 0")
+    obs = normalize_observed(obs)
+    pts = list(enumerate(obs))[1:]
     xs = [math.log(t) for t, _ in pts]
     ys = [math.log(r) for _, r in pts]
     n = len(pts)
@@ -104,18 +124,27 @@ def main():
     sub = ap.add_subparsers(dest="cmd", required=True)
     f = sub.add_parser("fit")
     f.add_argument("out")
-    f.add_argument("--observed", help="JSON array of retention by period (percent or fraction)")
-    f.add_argument("--observed-file")
+    source = f.add_mutually_exclusive_group(required=True)
+    source.add_argument("--observed", help="JSON array of retention by period (percent or fraction)")
+    source.add_argument("--observed-file")
     f.add_argument("--arpu", type=float, default=0.0, help="revenue per retained user per period (0 = LTV sheet in multiples)")
     f.add_argument("--horizon", type=int, default=24, help="periods to project (default 24)")
     a = ap.parse_args()
 
-    raw = json.loads(open(a.observed_file).read() if a.observed_file else a.observed)
-    obs = [float(x) for x in raw]
-    if max(obs) > 1.5: obs = [x / 100.0 for x in obs]          # percents → fractions
-    if obs[0] != 0: obs = [x / obs[0] for x in obs]            # normalise period 0 to 1.0
-
-    A, B, r2 = fit_power(obs)
+    try:
+        if not math.isfinite(a.arpu) or a.arpu < 0:
+            raise ValueError("ARPU must be finite and nonnegative")
+        if a.horizon < 1:
+            raise ValueError("horizon must be at least 1")
+        if a.observed_file:
+            with open(a.observed_file, encoding="utf-8") as handle:
+                raw = json.load(handle)
+        else:
+            raw = json.loads(a.observed)
+        obs = normalize_observed(raw)
+        A, B, r2 = fit_power(obs)
+    except (ValueError, OSError, OverflowError) as exc:
+        ap.error(str(exc))
     fitted = [1.0] + [min(1.0, A * t ** -B) for t in range(1, a.horizon + 1)]
     floor = sum(obs[-3:]) / min(3, len(obs)) if len(obs) >= 3 else obs[-1]
     lifetime_periods = sum(fitted)
