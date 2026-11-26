@@ -48,7 +48,7 @@
       "logo": "https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/assets/sponsors/focusee-light.png",
       "tier": "README banner",
       "placement": "readme-banner",
-      "term": "2026-11"
+      "since": "2026-11-25"
     }
   ],
   "contact": "mailto:mohit15856@gmail.com?subject=Sponsoring%20PM%20Skills",
@@ -57,21 +57,21 @@
       "id": "readme-banner",
       "name": "README banner",
       "where": "Top of the English README, under the title",
-      "term": "calendar month",
+      "term": "one month",
       "price": "on request"
     },
     {
       "id": "readme-zh-banner",
       "name": "Chinese README banner",
       "where": "Top of README.zh-CN.md and the Gitee and GitCode mirrors",
-      "term": "calendar month",
+      "term": "one month",
       "price": "on request"
     },
     {
       "id": "site",
       "name": "Playground and site",
       "where": "Sponsor wall on the community page and the playground footer",
-      "term": "calendar month",
+      "term": "one month",
       "price": "on request"
     },
     {
@@ -92,7 +92,7 @@
       "id": "sponsored-skill",
       "name": "Sponsored skill or bundle",
       "where": "A labelled skill about the sponsor's own product",
-      "term": "calendar month",
+      "term": "one month",
       "price": "on request"
     }
   ]

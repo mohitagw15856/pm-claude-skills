@@ -11,6 +11,7 @@
     </picture>
   </a>
 </p>
+<p align="center"><sub><a href="#-sponsor-this-project">Sponsor this project</a>: who you reach, what you can book and the terms</sub></p>
 
 > **One request to your AI, one finished deliverable back: the PRD, the stakeholder update and the decision call, at a senior product manager's standard.**
 
@@ -247,6 +248,39 @@ An honest summary of what is checked, measured and still unreviewed, computed fr
 </details>
 
 **Privacy, stated plainly:** everything installable runs locally. Skills are inert markdown on your machine; the CLI, the exports and the local MCP server send nothing anywhere, and telemetry is off unless you set `PM_SKILLS_TELEMETRY=1` (skill name only, never content). The two things that do leave your machine are your prompts to whichever model provider you chose, and requests to the hosted playground or hosted MCP if you opt to use them. Full statements: [docs/TELEMETRY.md](docs/TELEMETRY.md) · report a vulnerability: [SECURITY.md](SECURITY.md) · licence: [MIT](LICENSE). Verify a release: `npx pm-claude-skills verify --release` (signed SBOM, Sigstore provenance). Verify one skill: its SHA-256 is published in [`/.well-known/agent-skills.json`](https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json), so running `shasum -a 256` on your copy of the file should match; every exported file carries the same hash in a provenance footer. Agent-native skills are red-teamed on every change ([evals/adversarial](evals/adversarial/cases.json)).
+
+## 💛 Sponsor this project
+
+Put your product in front of the product managers, engineers, founders and operators who use this library. The banner at the top of this page is one of six placements; each is exclusive to one sponsor for its term.
+
+<!-- sponsor-reach:start (written by scripts/sponsor-report.mjs --update-docs) -->
+Figures as of 26 November 2026:
+
+| Measure | Figure | Source |
+|---|---:|---|
+| GitHub stars | 1,608 | GitHub |
+| Forks | 290 | GitHub |
+| Repository page views, last 14 days | 14,366 | GitHub traffic |
+| Unique repository visitors, last 14 days | 6,860 | GitHub traffic |
+| Views of the repository front page, where the README banner sits, last 14 days | 1,720 (1,380 unique) | GitHub traffic |
+| npm downloads, last 7 days | 1,962 | npm |
+| npm downloads, last 30 days | 11,086 | npm |
+
+Top source of visitors in those 14 days: Google, 4,772 views.
+<!-- sponsor-reach:end -->
+
+| You can book | Where it appears |
+|---|---|
+| README banner | Top of this page, under the title, light and dark |
+| Chinese README banner | Top of [README.zh-CN.md](README.zh-CN.md), the front page of the Gitee and GitCode mirrors |
+| Playground and site | Sponsor wall and playground footer |
+| Release newsletter | One labelled line in each release issue |
+| Skill of the week | "Supported by" line on the weekly featured-skill post |
+| Sponsored skill | A labelled skill about your own product |
+
+**To book or ask for pricing:** email [mohit15856@gmail.com](mailto:mohit15856@gmail.com?subject=Sponsoring%20PM%20Skills). Terms, the monthly report you get back and the rules for sponsored skills are in **[SPONSORS.md](SPONSORS.md)**. Individuals can sponsor through [GitHub Sponsors](https://github.com/sponsors/mohitagw15856).
+
+Current sponsor: **[FocuSee](https://focusee.ai/?utm_source=github&utm_medium=display&utm_campaign=pm_claude_skills_2611&utm_content=readme_sponsor_section)**, since 25 November 2026.
 
 ## 🙌 Community
 

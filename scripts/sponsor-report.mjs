@@ -10,6 +10,7 @@
 //   node scripts/sponsor-report.mjs --month 2026-11 --sponsor FocuSee
 //   node scripts/sponsor-report.mjs --month 2026-11 --out report.md
 //   node scripts/sponsor-report.mjs --no-fetch --month 2026-11    report from the log only
+//   node scripts/sponsor-report.mjs --update-docs                 also refresh the reach table in README.md and SPONSORS.md
 //   node scripts/sponsor-report.mjs --selftest
 //
 // It reports views, not clicks: GitHub does not record outbound clicks, so the sponsor
@@ -84,6 +85,52 @@ export function render({ month, sponsor, totals, paths, referrers, npm, generate
   return lines.join('\n');
 }
 
+// The reach table shown to possible sponsors. One block, written into every file that carries the markers.
+export const REACH_START = '<!-- sponsor-reach:start (written by scripts/sponsor-report.mjs --update-docs) -->';
+export const REACH_END = '<!-- sponsor-reach:end -->';
+
+export function last14(log) {
+  const rows = Object.entries(log.days || {}).sort().slice(-14);
+  return { views: rows.reduce((n, [, v]) => n + v.views, 0), days: rows.length, first: rows.length ? rows[0][0] : null, last: rows.length ? rows[rows.length - 1][0] : null };
+}
+
+export function renderReach({ date, stars, forks, views14, uniques14, front, npmWeek, npmMonth, topReferrer }) {
+  const row = (label, value, source) => (value == null ? null : `| ${label} | ${value} | ${source} |`);
+  const lines = [
+    REACH_START,
+    `Figures as of ${date}:`,
+    '',
+    '| Measure | Figure | Source |',
+    '|---|---:|---|',
+    row('GitHub stars', stars == null ? null : num(stars), 'GitHub'),
+    row('Forks', forks == null ? null : num(forks), 'GitHub'),
+    row('Repository page views, last 14 days', views14 == null ? null : num(views14), 'GitHub traffic'),
+    row('Unique repository visitors, last 14 days', uniques14 == null ? null : num(uniques14), 'GitHub traffic'),
+    row('Views of the repository front page, where the README banner sits, last 14 days', front ? `${num(front.count)} (${num(front.uniques)} unique)` : null, 'GitHub traffic'),
+    row('npm downloads, last 7 days', npmWeek == null ? null : num(npmWeek), 'npm'),
+    row('npm downloads, last 30 days', npmMonth == null ? null : num(npmMonth), 'npm'),
+  ].filter((l) => l !== null);
+  if (topReferrer) lines.push('', `Top source of visitors in those 14 days: ${topReferrer.referrer}, ${num(topReferrer.count)} views.`);
+  lines.push(REACH_END);
+  return lines.join('\n');
+}
+
+// Replace the marked block in a document. Returns null when the markers are missing or out of order.
+export function replaceReach(text, block) {
+  const a = text.indexOf(REACH_START); const b = text.indexOf(REACH_END);
+  if (a < 0 || b < a) return null;
+  return text.slice(0, a) + block + text.slice(b + REACH_END.length);
+}
+
+async function npmPoint(range) {
+  try {
+    const res = await fetch(`https://api.npmjs.org/downloads/point/${range}/${PACKAGE}`);
+    if (!res.ok) return null;
+    const body = await res.json();
+    return Number.isFinite(body.downloads) ? body.downloads : null;
+  } catch { return null; }
+}
+
 function gh(path) { return JSON.parse(execFileSync('gh', ['api', path], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] })); }
 
 async function npmDownloads(month) {
@@ -111,7 +158,14 @@ function selftest() {
   eq('zero npm downloads is reported, not hidden', /npm downloads in the month \| 0 \|/.test(text), true);
   eq('numbers are grouped and table pipes escaped', /`\/a\\\|b` \| 1,234 \| 5 \|/.test(text), true);
   eq('an empty month renders', /Days on record \| 0 of 31 \|/.test(render({ month: '2026-10', totals: monthTotals(log, '2026-10'), generated: 'x' })), true);
-  console.log(fails ? `sponsor-report selftest: ${fails} failure(s)` : 'sponsor-report selftest: 7 passed ✓');
+  const block = renderReach({ date: '1 December 2026', stars: 1608, forks: 0, views14: 14366, uniques14: null, front: { count: 1720, uniques: 1380 }, npmWeek: null, npmMonth: 11086, topReferrer: { referrer: 'Google', count: 4772 } });
+  eq('reach block shows zero, skips unknown figures', [/\| Forks \| 0 \|/.test(block), /Unique repository visitors/.test(block), /last 7 days/.test(block), /1,720 \(1,380 unique\)/.test(block)], [true, false, false, true]);
+  const doc = `intro\n${REACH_START}\nold\n${REACH_END}\noutro`;
+  eq('the block is replaced in place and nothing else moves', replaceReach(doc, block), `intro\n${block}\noutro`);
+  eq('replacing twice changes nothing', replaceReach(replaceReach(doc, block), block), `intro\n${block}\noutro`);
+  eq('a document without markers is left alone', replaceReach('no markers here', block), null);
+  eq('last14 takes the latest fourteen recorded days', last14({ days: Object.fromEntries(Array.from({ length: 20 }, (_, i) => [`2026-11-${String(i + 1).padStart(2, '0')}`, { views: 1, uniques: 1 }])) }), { views: 14, days: 14, first: '2026-11-07', last: '2026-11-20' });
+  console.log(fails ? `sponsor-report selftest: ${fails} failure(s)` : 'sponsor-report selftest: 12 passed ✓');
   return fails ? 1 : 0;
 }
 
@@ -122,16 +176,38 @@ async function main() {
   const month = opt('--month') || new Date().toISOString().slice(0, 7);
   if (!/^\d{4}-(0[1-9]|1[0-2])$/.test(month)) { console.error('--month must look like 2026-11'); return 2; }
   let log = existsSync(LOG) ? JSON.parse(readFileSync(LOG, 'utf8')) : { _comment: 'Daily repository views recorded by scripts/sponsor-report.mjs. GitHub keeps 14 days; this file keeps the rest.', days: {} };
-  let paths = []; let referrers = [];
+  let paths = []; let referrers = []; let summary = null;
   if (!argv.includes('--no-fetch')) {
     try {
-      log = mergeDays(log, gh(`repos/${REPO}/traffic/views`).views || []);
+      const traffic = gh(`repos/${REPO}/traffic/views`);
+      summary = { views14: traffic.count, uniques14: traffic.uniques };
+      log = mergeDays(log, traffic.views || []);
       paths = gh(`repos/${REPO}/traffic/popular/paths`).slice(0, 5);
       referrers = gh(`repos/${REPO}/traffic/popular/referrers`).slice(0, 8);
       writeFileSync(LOG, JSON.stringify(log, null, 2) + '\n');
     } catch (e) {
       console.error(`Could not read GitHub traffic (${String(e.stderr || e.message).trim().split('\n')[0]}). Is gh signed in with push access? Reporting from the log only.`);
     }
+  }
+  if (argv.includes('--update-docs')) {
+    if (!summary) { console.error('--update-docs needs live GitHub traffic; nothing was changed.'); return 1; }
+    let repo = {};
+    try { repo = gh(`repos/${REPO}`); } catch { /* stars and forks are left out */ }
+    const block = renderReach({
+      date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }),
+      stars: repo.stargazers_count ?? null, forks: repo.forks_count ?? null,
+      views14: summary.views14, uniques14: summary.uniques14,
+      front: paths.find((p) => p.path === `/${REPO}`) || null,
+      npmWeek: await npmPoint('last-week'), npmMonth: await npmPoint('last-month'),
+      topReferrer: referrers[0] || null,
+    });
+    for (const file of ['README.md', 'SPONSORS.md']) {
+      const full = join(ROOT, file);
+      const next = replaceReach(readFileSync(full, 'utf8'), block);
+      if (next === null) console.error(`${file}: reach markers not found, left unchanged.`);
+      else { writeFileSync(full, next); console.log(`${file}: reach table refreshed.`); }
+    }
+    return 0;
   }
   const report = render({ month, sponsor: opt('--sponsor'), totals: monthTotals(log, month), paths, referrers, npm: await npmDownloads(month), generated: new Date().toISOString().slice(0, 10) });
   const out = opt('--out');
