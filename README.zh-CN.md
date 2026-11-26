@@ -219,6 +219,39 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 用中文提 Issue，[GitHub](https://github.com/mohitagw15856/pm-claude-skills/issues) 和 [Gitee](https://gitee.com/mohitagw/pm-claude-skills/issues) 都可以。某个技能不符合国内实际，或者你想要新技能，都欢迎告诉我们。
 </details>
 
+## 💛 赞助本项目
+
+把你的产品放到使用这个技能库的产品经理、工程师、创业者和运营人员面前。共有六个赞助位，每个赞助位在约定期限内只给一家赞助方。
+
+<!-- sponsor-reach:start (written by scripts/sponsor-report.mjs --update-docs) -->
+数据截至 2026年11月26日：
+
+| 指标 | 数值 | 来源 |
+|---|---:|---|
+| GitHub 星标 | 1,608 | GitHub |
+| Fork 数 | 290 | GitHub |
+| 仓库页面浏览量（近 14 天） | 14,366 | GitHub 流量统计 |
+| 仓库独立访客（近 14 天） | 6,860 | GitHub 流量统计 |
+| 仓库首页浏览量，即 README 横幅所在页面（近 14 天） | 1,720 (1,380 独立访客) | GitHub 流量统计 |
+| npm 下载量（近 7 天） | 1,962 | npm |
+| npm 下载量（近 30 天） | 11,086 | npm |
+
+这 14 天里最大的访客来源：Google，4,772 次浏览。
+<!-- sponsor-reach:end -->
+
+| 可预订的位置 | 展示在哪里 |
+|---|---|
+| README 横幅 | [英文 README](README.md) 顶部，标题下方，含浅色和深色两版 |
+| 中文 README 横幅 | 本页顶部，同时也是 Gitee 和 GitCode 镜像的首页 |
+| Playground 与网站 | 赞助墙和 Playground 页脚 |
+| 版本通讯 | 每期版本通讯中一行带标注的赞助信息 |
+| 每周技能 | 每周精选技能帖子中的“由…支持”一行 |
+| 赞助技能 | 一个明确标注为赞助、只讲你自家产品的技能 |
+
+**预订或询价：** 发邮件到 [mohit15856@gmail.com](mailto:mohit15856@gmail.com?subject=Sponsoring%20PM%20Skills)。期限、每月回报给你的数据报告，以及赞助技能的规则，见 **[SPONSORS.md](SPONSORS.md)**（英文）。个人可以通过 [GitHub Sponsors](https://github.com/sponsors/mohitagw15856) 赞助。
+
+当前赞助方：**[FocuSee](https://focusee.ai/?utm_source=github&utm_medium=display&utm_campaign=pm_claude_skills_2611&utm_content=readme_sponsor_section)**，自 2026 年 11 月 25 日起。
+
 ## 参与贡献
 
 - 某个技能不符合国内实际情况？用中文提 Issue，[GitHub](https://github.com/mohitagw15856/pm-claude-skills/issues) 和 [Gitee](https://gitee.com/mohitagw/pm-claude-skills/issues) 都可以

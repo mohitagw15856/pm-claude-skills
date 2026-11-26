@@ -210,6 +210,39 @@ cp -r pm-claude-skills/skills-i18n/zh-TW/tw-labour-standards ~/.claude/skills/
 技能會把需要核實的數字標出來，請以積金局和勞動部的最新公告為準。發現過時的地方，歡迎開 Issue 告訴我們。
 </details>
 
+## 💛 贊助本專案
+
+把你的產品放到使用這個技能庫的產品經理、工程師、創業者和營運人員面前。共有六個贊助位，每個贊助位在約定期限內只給一家贊助方。
+
+<!-- sponsor-reach:start (written by scripts/sponsor-report.mjs --update-docs) -->
+資料截至 2026年11月26日：
+
+| 指標 | 數值 | 來源 |
+|---|---:|---|
+| GitHub 星標 | 1,608 | GitHub |
+| Fork 數 | 290 | GitHub |
+| 儲存庫頁面瀏覽量（近 14 天） | 14,366 | GitHub 流量統計 |
+| 儲存庫不重複訪客（近 14 天） | 6,860 | GitHub 流量統計 |
+| 儲存庫首頁瀏覽量，也就是 README 橫幅所在頁面（近 14 天） | 1,720 (1,380 不重複訪客) | GitHub 流量統計 |
+| npm 下載量（近 7 天） | 1,962 | npm |
+| npm 下載量（近 30 天） | 11,086 | npm |
+
+這 14 天裡最大的訪客來源：Google，4,772 次瀏覽。
+<!-- sponsor-reach:end -->
+
+| 可預訂的位置 | 顯示在哪裡 |
+|---|---|
+| README 橫幅 | [英文 README](README.md) 頂部，標題下方，含淺色和深色兩版 |
+| 中文 README 橫幅 | [簡體中文 README](README.zh-CN.md) 頂部，同時也是 Gitee 和 GitCode 鏡像的首頁 |
+| Playground 與網站 | 贊助牆和 Playground 頁尾 |
+| 版本電子報 | 每期版本電子報中一行標明贊助的資訊 |
+| 每週技能 | 每週精選技能貼文中的「由…支持」一行 |
+| 贊助技能 | 一個明確標示為贊助、只介紹你自家產品的技能 |
+
+**預訂或詢價：** 來信 [mohit15856@gmail.com](mailto:mohit15856@gmail.com?subject=Sponsoring%20PM%20Skills)。期限、每月回報給你的數據報告，以及贊助技能的規則，請見 **[SPONSORS.md](SPONSORS.md)**（英文）。個人可以透過 [GitHub Sponsors](https://github.com/sponsors/mohitagw15856) 贊助。
+
+目前贊助方：**[FocuSee](https://focusee.ai/?utm_source=github&utm_medium=display&utm_campaign=pm_claude_skills_2611&utm_content=readme_sponsor_section)**，自 2026 年 11 月 25 日起。
+
 ## 參與貢獻
 
 - 某個技能不符合香港或台灣的實際情況？用繁體中文開 [Issue](https://github.com/mohitagw15856/pm-claude-skills/issues) 就好

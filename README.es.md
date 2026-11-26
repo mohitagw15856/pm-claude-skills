@@ -65,6 +65,39 @@ Los 169 bundles con sus comandos de instalación: [docs/catalogue.md](docs/catal
 - Las skills legales, fiscales y laborales terminan con un descargo claro e indican a qué profesional acudir; no sustituyen a uno.
 - Privacidad: todo corre en local. Las skills, la CLI y los exports no envían nada. Detalles: [docs/TELEMETRY.md](docs/TELEMETRY.md) · [SECURITY.md](SECURITY.md) · licencia: [MIT](LICENSE)
 
+## 💛 Patrocina este proyecto
+
+Pon tu producto delante de los product managers, ingenieros, fundadores y responsables de operaciones que usan esta biblioteca. Hay seis espacios de patrocinio y cada uno es exclusivo de un patrocinador durante su periodo.
+
+<!-- sponsor-reach:start (written by scripts/sponsor-report.mjs --update-docs) -->
+Cifras a 26 de noviembre de 2026:
+
+| Medida | Cifra | Fuente |
+|---|---:|---|
+| Estrellas en GitHub | 1,608 | GitHub |
+| Forks | 290 | GitHub |
+| Vistas de páginas del repositorio, últimos 14 días | 14,366 | Tráfico de GitHub |
+| Visitantes únicos del repositorio, últimos 14 días | 6,860 | Tráfico de GitHub |
+| Vistas de la portada del repositorio, donde está el banner del README, últimos 14 días | 1,720 (1,380 únicos) | Tráfico de GitHub |
+| Descargas en npm, últimos 7 días | 1,962 | npm |
+| Descargas en npm, últimos 30 días | 11,086 | npm |
+
+Principal origen de las visitas en esos 14 días: Google, 4,772 vistas.
+<!-- sponsor-reach:end -->
+
+| Puedes reservar | Dónde aparece |
+|---|---|
+| Banner del README | Arriba del [README en inglés](README.md), bajo el título, en versión clara y oscura |
+| Banner del README en chino | Arriba de [README.zh-CN.md](README.zh-CN.md), que es también la portada de los espejos en Gitee y GitCode |
+| Playground y sitio | Muro de patrocinadores y pie del playground |
+| Boletín de versiones | Una línea identificada como patrocinio en cada número |
+| Skill de la semana | Línea "con el apoyo de" en la publicación semanal de la skill destacada |
+| Skill patrocinada | Una skill identificada como patrocinada, sobre tu propio producto |
+
+**Para reservar o pedir precios:** escribe a [mohit15856@gmail.com](mailto:mohit15856@gmail.com?subject=Sponsoring%20PM%20Skills). Las condiciones, el informe mensual que recibes y las reglas de las skills patrocinadas están en **[SPONSORS.md](SPONSORS.md)** (en inglés). Las personas pueden patrocinar mediante [GitHub Sponsors](https://github.com/sponsors/mohitagw15856).
+
+Patrocinador actual: **[FocuSee](https://focusee.ai/?utm_source=github&utm_medium=display&utm_campaign=pm_claude_skills_2611&utm_content=readme_sponsor_section)**, desde el 25 de noviembre de 2026.
+
 ## 🤝 Participa
 
 Añade una skill por PR ([el estándar](SKILL-AUTHORING-STANDARD.md), [CONTRIBUTING](CONTRIBUTING.md)), [pide una](https://github.com/mohitagw15856/pm-claude-skills/issues/new?labels=skill-request&title=Skill:%20) y vótala en el [tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/), o comparte un resultado en [Show and Tell](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=show-and-tell.yml).

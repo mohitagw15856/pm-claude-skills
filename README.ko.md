@@ -68,6 +68,39 @@ PM Skills에는 기획, 개발, 데이터, 디자인, 마케팅, 영업, 인사,
 - 브라우저에서 바로 써 보기: [Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 - 하고 싶은 일로 스킬 찾기: [find](https://mohitagw15856.github.io/pm-claude-skills/find.html)
 
+## 💛 이 프로젝트 후원하기
+
+이 스킬 라이브러리를 쓰는 프로덕트 매니저, 엔지니어, 창업자, 운영 담당자에게 여러분의 제품을 알리세요. 후원 자리는 여섯 가지이며, 각 자리는 약정 기간 동안 한 후원사에게만 제공됩니다.
+
+<!-- sponsor-reach:start (written by scripts/sponsor-report.mjs --update-docs) -->
+2026년 11월 26일 기준 수치:
+
+| 지표 | 수치 | 출처 |
+|---|---:|---|
+| GitHub 스타 | 1,608 | GitHub |
+| 포크 | 290 | GitHub |
+| 저장소 페이지 조회수 (최근 14일) | 14,366 | GitHub 트래픽 |
+| 저장소 순 방문자 (최근 14일) | 6,860 | GitHub 트래픽 |
+| README 배너가 놓인 저장소 첫 페이지 조회수 (최근 14일) | 1,720 (1,380 순 방문자) | GitHub 트래픽 |
+| npm 다운로드 (최근 7일) | 1,962 | npm |
+| npm 다운로드 (최근 30일) | 11,086 | npm |
+
+이 14일 동안 가장 큰 유입 경로: Google, 조회 4,772회.
+<!-- sponsor-reach:end -->
+
+| 예약할 수 있는 자리 | 노출 위치 |
+|---|---|
+| README 배너 | [영문 README](README.md) 맨 위, 제목 바로 아래 (라이트/다크) |
+| 중국어 README 배너 | [README.zh-CN.md](README.zh-CN.md) 맨 위. Gitee와 GitCode 미러의 첫 화면이기도 합니다 |
+| 플레이그라운드와 사이트 | 후원사 목록과 플레이그라운드 하단 |
+| 릴리스 뉴스레터 | 릴리스마다 발송되는 뉴스레터에 후원 표시가 붙은 한 줄 |
+| 이주의 스킬 | 매주 소개하는 스킬 게시물의 "후원" 한 줄 |
+| 후원 스킬 | 후원임을 명시한, 자사 제품에 관한 스킬 |
+
+**예약 및 가격 문의:** [mohit15856@gmail.com](mailto:mohit15856@gmail.com?subject=Sponsoring%20PM%20Skills)으로 메일을 보내 주세요. 기간, 매달 받는 보고서, 후원 스킬 규칙은 **[SPONSORS.md](SPONSORS.md)**(영문)에 있습니다. 개인은 [GitHub Sponsors](https://github.com/sponsors/mohitagw15856)로 후원할 수 있습니다.
+
+현재 후원사: **[FocuSee](https://focusee.ai/?utm_source=github&utm_medium=display&utm_campaign=pm_claude_skills_2611&utm_content=readme_sponsor_section)**, 2026년 11월 25일부터.
+
 ## 참여하기
 
 - 한국 실정에 맞지 않는 스킬이 있나요? 한국어로 [Issue](https://github.com/mohitagw15856/pm-claude-skills/issues)를 열어 주세요

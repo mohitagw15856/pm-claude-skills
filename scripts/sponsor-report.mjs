@@ -10,7 +10,7 @@
 //   node scripts/sponsor-report.mjs --month 2026-11 --sponsor FocuSee
 //   node scripts/sponsor-report.mjs --month 2026-11 --out report.md
 //   node scripts/sponsor-report.mjs --no-fetch --month 2026-11    report from the log only
-//   node scripts/sponsor-report.mjs --update-docs                 also refresh the reach table in README.md and SPONSORS.md
+//   node scripts/sponsor-report.mjs --update-docs                 also refresh the reach table in SPONSORS.md and every README language
 //   node scripts/sponsor-report.mjs --selftest
 //
 // It reports views, not clicks: GitHub does not record outbound clicks, so the sponsor
@@ -94,23 +94,39 @@ export function last14(log) {
   return { views: rows.reduce((n, [, v]) => n + v.views, 0), days: rows.length, first: rows.length ? rows[0][0] : null, last: rows.length ? rows[rows.length - 1][0] : null };
 }
 
-export function renderReach({ date, stars, forks, views14, uniques14, front, npmWeek, npmMonth, topReferrer }) {
+// Labels for the reach table in each README language. English is the fallback.
+export const REACH_LABELS = {
+  en: { asOf: (d) => `Figures as of ${d}:`, head: ['Measure', 'Figure', 'Source'], stars: 'GitHub stars', forks: 'Forks', views: 'Repository page views, last 14 days', uniques: 'Unique repository visitors, last 14 days', front: 'Views of the repository front page, where the README banner sits, last 14 days', unique: 'unique', week: 'npm downloads, last 7 days', month: 'npm downloads, last 30 days', traffic: 'GitHub traffic', top: (r, n) => `Top source of visitors in those 14 days: ${r}, ${n} views.`, locale: 'en-GB' },
+  'zh-CN': { asOf: (d) => `数据截至 ${d}：`, head: ['指标', '数值', '来源'], stars: 'GitHub 星标', forks: 'Fork 数', views: '仓库页面浏览量（近 14 天）', uniques: '仓库独立访客（近 14 天）', front: '仓库首页浏览量，即 README 横幅所在页面（近 14 天）', unique: '独立访客', week: 'npm 下载量（近 7 天）', month: 'npm 下载量（近 30 天）', traffic: 'GitHub 流量统计', top: (r, n) => `这 14 天里最大的访客来源：${r}，${n} 次浏览。`, locale: 'zh-CN' },
+  'zh-TW': { asOf: (d) => `資料截至 ${d}：`, head: ['指標', '數值', '來源'], stars: 'GitHub 星標', forks: 'Fork 數', views: '儲存庫頁面瀏覽量（近 14 天）', uniques: '儲存庫不重複訪客（近 14 天）', front: '儲存庫首頁瀏覽量，也就是 README 橫幅所在頁面（近 14 天）', unique: '不重複訪客', week: 'npm 下載量（近 7 天）', month: 'npm 下載量（近 30 天）', traffic: 'GitHub 流量統計', top: (r, n) => `這 14 天裡最大的訪客來源：${r}，${n} 次瀏覽。`, locale: 'zh-TW' },
+  ko: { asOf: (d) => `${d} 기준 수치:`, head: ['지표', '수치', '출처'], stars: 'GitHub 스타', forks: '포크', views: '저장소 페이지 조회수 (최근 14일)', uniques: '저장소 순 방문자 (최근 14일)', front: 'README 배너가 놓인 저장소 첫 페이지 조회수 (최근 14일)', unique: '순 방문자', week: 'npm 다운로드 (최근 7일)', month: 'npm 다운로드 (최근 30일)', traffic: 'GitHub 트래픽', top: (r, n) => `이 14일 동안 가장 큰 유입 경로: ${r}, 조회 ${n}회.`, locale: 'ko-KR' },
+  ja: { asOf: (d) => `${d} 時点の数値:`, head: ['指標', '数値', '出典'], stars: 'GitHub スター', forks: 'フォーク', views: 'リポジトリのページビュー（直近 14 日）', uniques: 'リポジトリのユニーク訪問者（直近 14 日）', front: 'README バナーが表示されるリポジトリのトップページのビュー（直近 14 日）', unique: 'ユニーク', week: 'npm ダウンロード（直近 7 日）', month: 'npm ダウンロード（直近 30 日）', traffic: 'GitHub トラフィック', top: (r, n) => `この 14 日間で最も多い流入元: ${r}、${n} ビュー。`, locale: 'ja-JP' },
+  es: { asOf: (d) => `Cifras a ${d}:`, head: ['Medida', 'Cifra', 'Fuente'], stars: 'Estrellas en GitHub', forks: 'Forks', views: 'Vistas de páginas del repositorio, últimos 14 días', uniques: 'Visitantes únicos del repositorio, últimos 14 días', front: 'Vistas de la portada del repositorio, donde está el banner del README, últimos 14 días', unique: 'únicos', week: 'Descargas en npm, últimos 7 días', month: 'Descargas en npm, últimos 30 días', traffic: 'Tráfico de GitHub', top: (r, n) => `Principal origen de las visitas en esos 14 días: ${r}, ${n} vistas.`, locale: 'es-ES' },
+  'pt-BR': { asOf: (d) => `Números em ${d}:`, head: ['Medida', 'Número', 'Fonte'], stars: 'Estrelas no GitHub', forks: 'Forks', views: 'Visualizações de páginas do repositório, últimos 14 dias', uniques: 'Visitantes únicos do repositório, últimos 14 dias', front: 'Visualizações da página inicial do repositório, onde fica o banner do README, últimos 14 dias', unique: 'únicos', week: 'Downloads no npm, últimos 7 dias', month: 'Downloads no npm, últimos 30 dias', traffic: 'Tráfego do GitHub', top: (r, n) => `Principal origem das visitas nesses 14 dias: ${r}, ${n} visualizações.`, locale: 'pt-BR' },
+};
+// Which language each document with a reach table is written in.
+export const REACH_FILES = { 'README.md': 'en', 'SPONSORS.md': 'en', 'README.zh-CN.md': 'zh-CN', 'README.zh-TW.md': 'zh-TW', 'README.ko.md': 'ko', 'README.ja.md': 'ja', 'README.es.md': 'es', 'README.pt-BR.md': 'pt-BR' };
+
+export function renderReach({ when, date, lang = 'en', stars, forks, views14, uniques14, front, npmWeek, npmMonth, topReferrer }) {
+  const L = REACH_LABELS[lang] || REACH_LABELS.en;
+  const num = (n) => Number(n).toLocaleString('en-GB');   // one number format everywhere, so figures match across languages
+  if (when) date = when.toLocaleDateString(L.locale, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
   const row = (label, value, source) => (value == null ? null : `| ${label} | ${value} | ${source} |`);
   const lines = [
     REACH_START,
-    `Figures as of ${date}:`,
+    L.asOf(date),
     '',
-    '| Measure | Figure | Source |',
+    `| ${L.head.join(' | ')} |`,
     '|---|---:|---|',
-    row('GitHub stars', stars == null ? null : num(stars), 'GitHub'),
-    row('Forks', forks == null ? null : num(forks), 'GitHub'),
-    row('Repository page views, last 14 days', views14 == null ? null : num(views14), 'GitHub traffic'),
-    row('Unique repository visitors, last 14 days', uniques14 == null ? null : num(uniques14), 'GitHub traffic'),
-    row('Views of the repository front page, where the README banner sits, last 14 days', front ? `${num(front.count)} (${num(front.uniques)} unique)` : null, 'GitHub traffic'),
-    row('npm downloads, last 7 days', npmWeek == null ? null : num(npmWeek), 'npm'),
-    row('npm downloads, last 30 days', npmMonth == null ? null : num(npmMonth), 'npm'),
+    row(L.stars, stars == null ? null : num(stars), 'GitHub'),
+    row(L.forks, forks == null ? null : num(forks), 'GitHub'),
+    row(L.views, views14 == null ? null : num(views14), L.traffic),
+    row(L.uniques, uniques14 == null ? null : num(uniques14), L.traffic),
+    row(L.front, front ? `${num(front.count)} (${num(front.uniques)} ${L.unique})` : null, L.traffic),
+    row(L.week, npmWeek == null ? null : num(npmWeek), 'npm'),
+    row(L.month, npmMonth == null ? null : num(npmMonth), 'npm'),
   ].filter((l) => l !== null);
-  if (topReferrer) lines.push('', `Top source of visitors in those 14 days: ${topReferrer.referrer}, ${num(topReferrer.count)} views.`);
+  if (topReferrer) lines.push('', L.top(topReferrer.referrer, num(topReferrer.count)));
   lines.push(REACH_END);
   return lines.join('\n');
 }
@@ -165,7 +181,11 @@ function selftest() {
   eq('replacing twice changes nothing', replaceReach(replaceReach(doc, block), block), `intro\n${block}\noutro`);
   eq('a document without markers is left alone', replaceReach('no markers here', block), null);
   eq('last14 takes the latest fourteen recorded days', last14({ days: Object.fromEntries(Array.from({ length: 20 }, (_, i) => [`2026-11-${String(i + 1).padStart(2, '0')}`, { views: 1, uniques: 1 }])) }), { views: 14, days: 14, first: '2026-11-07', last: '2026-11-20' });
-  console.log(fails ? `sponsor-report selftest: ${fails} failure(s)` : 'sponsor-report selftest: 12 passed ✓');
+  const zh = renderReach({ when: new Date(Date.UTC(2026, 10, 26)), lang: 'zh-CN', stars: 1608, front: { count: 1720, uniques: 1380 }, topReferrer: { referrer: 'Google', count: 4772 } });
+  eq('a translated table uses its own labels and date, the same digits', [zh.includes('数据截至 2026年11月26日：'), zh.includes('| GitHub 星标 | 1,608 | GitHub |'), zh.includes('1,720 (1,380 独立访客)'), zh.includes('Google，4,772 次浏览')], [true, true, true, true]);
+  eq('every language has every label', Object.values(REACH_LABELS).map((l) => Object.keys(l).length), Object.values(REACH_LABELS).map(() => Object.keys(REACH_LABELS.en).length));
+  eq('an unknown language falls back to English', renderReach({ date: 'x', lang: 'xx', stars: 1 }).includes('| GitHub stars | 1 | GitHub |'), true);
+  console.log(fails ? `sponsor-report selftest: ${fails} failure(s)` : 'sponsor-report selftest: 15 passed ✓');
   return fails ? 1 : 0;
 }
 
@@ -193,17 +213,18 @@ async function main() {
     if (!summary) { console.error('--update-docs needs live GitHub traffic; nothing was changed.'); return 1; }
     let repo = {};
     try { repo = gh(`repos/${REPO}`); } catch { /* stars and forks are left out */ }
-    const block = renderReach({
-      date: new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }),
+    const figures = {
+      when: new Date(),
       stars: repo.stargazers_count ?? null, forks: repo.forks_count ?? null,
       views14: summary.views14, uniques14: summary.uniques14,
       front: paths.find((p) => p.path === `/${REPO}`) || null,
       npmWeek: await npmPoint('last-week'), npmMonth: await npmPoint('last-month'),
       topReferrer: referrers[0] || null,
-    });
-    for (const file of ['README.md', 'SPONSORS.md']) {
+    };
+    for (const [file, lang] of Object.entries(REACH_FILES)) {
       const full = join(ROOT, file);
-      const next = replaceReach(readFileSync(full, 'utf8'), block);
+      if (!existsSync(full)) continue;
+      const next = replaceReach(readFileSync(full, 'utf8'), renderReach({ ...figures, lang }));
       if (next === null) console.error(`${file}: reach markers not found, left unchanged.`);
       else { writeFileSync(full, next); console.log(`${file}: reach table refreshed.`); }
     }
