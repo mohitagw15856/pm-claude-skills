@@ -2,6 +2,16 @@
 
 # 🧠 PM Skills: Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
+<p align="center"><sub>Sponsored by</sub></p>
+<p align="center">
+  <a href="https://focusee.ai/?utm_source=github&utm_medium=display&utm_campaign=pm_claude_skills_2611&utm_content=readme_banner">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/focusee-dark.png">
+      <img src="assets/sponsors/focusee-light.png" alt="FocuSee: Record Better Software Demos and Tutorials with Auto-Editing" width="830">
+    </picture>
+  </a>
+</p>
+
 > **One request to your AI, one finished deliverable back: the PRD, the stakeholder update and the decision call, at a senior product manager's standard.**
 
 Try it right now. Install below, then paste this into your assistant:
