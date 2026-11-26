@@ -121,5 +121,5 @@ Install only this skill: `npx pm-claude-skills add --skills youtube-script-write
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/youtube-script-writer.html
 
-<!-- pm-claude-skills v84.0.0 | skill: youtube-script-writer | source: skills/youtube-script-writer/SKILL.md | sha256: 663518eaa88720b62f28d04be2465cdc5fa4e90ca05e30509350bf795120f389 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: youtube-script-writer | source: skills/youtube-script-writer/SKILL.md | sha256: 663518eaa88720b62f28d04be2465cdc5fa4e90ca05e30509350bf795120f389 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

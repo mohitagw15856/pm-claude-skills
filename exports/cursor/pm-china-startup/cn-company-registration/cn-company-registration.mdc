@@ -104,5 +104,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-company-registration.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cn-company-registration | source: skills/cn-company-registration/SKILL.md | sha256: 2a3a6c054511a6fa134cf50ad93f6db23b921f8888497cbe7867e18c020275e6 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cn-company-registration | source: skills/cn-company-registration/SKILL.md | sha256: 2a3a6c054511a6fa134cf50ad93f6db23b921f8888497cbe7867e18c020275e6 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

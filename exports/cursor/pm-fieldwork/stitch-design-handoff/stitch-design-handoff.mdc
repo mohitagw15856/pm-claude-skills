@@ -94,5 +94,5 @@ Constraints:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stitch-design-handoff.html
 
-<!-- pm-claude-skills v84.0.0 | skill: stitch-design-handoff | source: skills/stitch-design-handoff/SKILL.md | sha256: 4ce58f3b0bc1d11b17bdfb5723657d356e7fd975cbdd14039ffb0e68e7f7a2f6 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: stitch-design-handoff | source: skills/stitch-design-handoff/SKILL.md | sha256: 4ce58f3b0bc1d11b17bdfb5723657d356e7fd975cbdd14039ffb0e68e7f7a2f6 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

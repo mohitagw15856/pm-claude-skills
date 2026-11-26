@@ -102,5 +102,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/gulf-job-offer-check.html
 
-<!-- pm-claude-skills v84.0.0 | skill: gulf-job-offer-check | source: skills/gulf-job-offer-check/SKILL.md | sha256: b24656a95b6a2cf19a48a6af7b375894c8e6c6574f632e079d70f5ba868e6dcc | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: gulf-job-offer-check | source: skills/gulf-job-offer-check/SKILL.md | sha256: b24656a95b6a2cf19a48a6af7b375894c8e6c6574f632e079d70f5ba868e6dcc | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

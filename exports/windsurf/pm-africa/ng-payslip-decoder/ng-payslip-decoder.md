@@ -97,5 +97,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ng-payslip-decoder.html
 
-<!-- pm-claude-skills v84.0.0 | skill: ng-payslip-decoder | source: skills/ng-payslip-decoder/SKILL.md | sha256: e523cab13e6a17d136f61e0866c4eb20019dcbb7adc034b75ef2123d493dd162 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: ng-payslip-decoder | source: skills/ng-payslip-decoder/SKILL.md | sha256: e523cab13e6a17d136f61e0866c4eb20019dcbb7adc034b75ef2123d493dd162 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

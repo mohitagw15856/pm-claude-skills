@@ -98,5 +98,5 @@ Compute only from the figures supplied. If a value, fee or target is missing, sh
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/portfolio-review.html
 
-<!-- pm-claude-skills v84.0.0 | skill: portfolio-review | source: skills/portfolio-review/SKILL.md | sha256: ab338b540b6eed0ab7790ee711e3609f66f29ec615a10b1de7110dc857b8ffef | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: portfolio-review | source: skills/portfolio-review/SKILL.md | sha256: ab338b540b6eed0ab7790ee711e3609f66f29ec615a10b1de7110dc857b8ffef | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -9,6 +9,10 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [84.1.0] - Fieldwork and sponsors - 2026-11-27
+
+1,390 skills across 171 bundles (from 1,374 across 167 in v84.0.0).
+
 ### Added
 - **Eleven skills, in a new `pm-fieldwork` bundle:** `verified-security-audit`, `live-competitor-capture`, `product-knowledge-graph`, `failure-pattern-library`, `design-doc-review`, `scope-cutter`, `app-store-submission-guard`, `demo-video-kit`, `svg-diagram-studio`, `stitch-design-handoff` and `equity-research-note`. Two ship tested helper scripts: `demo_video.py` (captions and ffmpeg commands from a shot list) and `knowledge_graph.py` (a document graph from Markdown links and terms).
 - **`pm-daily-ten` bundle:** the ten skills behind the README example and the built-in slash commands.
@@ -37,6 +41,7 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 - The six most-viewed skills link to their related skills and show a one-skill install command.
 
 ### Fixed
+- Six skills wired into new bundles keep their original catalogue home and export path, through the new pin file `data/skill-home.json`.
 - Skill pages no longer point their share image at a file that does not exist; skills without their own image use the site card.
 - `new-bundle.mjs` copies the whole skill folder into a bundle, not only `SKILL.md`.
 - `check-model-refs` no longer fails on the legacy row in `docs/MODELS.md`.

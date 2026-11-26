@@ -540,5 +540,5 @@ Not all content benefits equally. Use this to set expectations with the user abo
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/aeo-optimizer.html
 
-<!-- pm-claude-skills v84.0.0 | skill: aeo-optimizer | source: skills/aeo-optimizer/SKILL.md | sha256: d67f745b5551bbf1f2993738442950d6ad2c7c71edf34b0be6bb02e618141e4c | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: aeo-optimizer | source: skills/aeo-optimizer/SKILL.md | sha256: d67f745b5551bbf1f2993738442950d6ad2c7c71edf34b0be6bb02e618141e4c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

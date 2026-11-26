@@ -1,6 +1,22 @@
 # What's new
 
-The three most recent additions, in full. The short version is in the [README](../README.md#-whats-new) and every release is in the [changelog](../CHANGELOG.md).
+The most recent additions, in full. The short version is in the [README](../README.md#-whats-new) and every release is in the [changelog](../CHANGELOG.md).
+
+## Fieldwork and sponsors (v84.1.0)
+
+Sixteen new skills, tools that check work without calling a model, and a clear offer for sponsors.
+
+**Evidence first.** The [pm-fieldwork](../plugins/pm-fieldwork/) bundle holds skills that separate what was seen from what was guessed: a security audit that re-checks every finding before reporting it, a competitor walkthrough with a dated evidence log, a document graph built from real links, a catalogue of named failure patterns, design doc review, scope cutting, app store submission checks, demo video assembly, diagrams as one self-contained file, an AI design tool handoff and a check for advice that has gone stale.
+
+**Search and investing.** [pm-seo](../plugins/pm-seo/) adds a technical SEO audit and a keyword cluster map. [pm-investor](../plugins/pm-investor/) adds an equity research note, an earnings call summary and a portfolio review. They work only from figures you supply and are not financial advice.
+
+**Checks with no model call.** `npx pm-claude-skills lint prd.md` flags placeholders left in, a PRD with no number in its success metrics and action items with no owner. A [GitHub Action](installation.md#other-ways-in) runs the same linter in CI. The MCP server gained `list_calculators` and `run_calculator`, which run the bundled Python calculators in a temporary folder with no shell.
+
+**More ways in.** Cursor can add this repository as a plugin marketplace, there are two n8n templates, one file of [working rules](../templates/pm-rules/PM-RULES.md) to paste into any assistant, and a page for [annotating a draft](https://mohitagw15856.github.io/pm-claude-skills/annotate.html) and sending the comments back.
+
+**Sponsorship.** [SPONSORS.md](../SPONSORS.md) lists six placements, the audience figures with their sources and the terms. Every README language carries the same section.
+
+**What is honest to say.** The n8n templates and the Cursor manifests follow the published formats but have not been run in n8n or Cursor. The rejection-pattern list for app stores gives no guideline section numbers and has not been reviewed against the current rules. The new README sections in six languages are machine translations awaiting review.
 
 ## Regions and new models (v84.0.0)
 

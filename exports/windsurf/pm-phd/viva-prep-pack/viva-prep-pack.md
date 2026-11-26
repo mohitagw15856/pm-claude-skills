@@ -98,5 +98,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/viva-prep-pack.html
 
-<!-- pm-claude-skills v84.0.0 | skill: viva-prep-pack | source: skills/viva-prep-pack/SKILL.md | sha256: 8c316b2c35dc70d8b6e10cdbee24263cc37511633131ed3a9cc0645b0e6aab22 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: viva-prep-pack | source: skills/viva-prep-pack/SKILL.md | sha256: 8c316b2c35dc70d8b6e10cdbee24263cc37511633131ed3a9cc0645b0e6aab22 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -102,5 +102,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/contract-renewal-brief.html
 
-<!-- pm-claude-skills v84.0.0 | skill: contract-renewal-brief | source: skills/contract-renewal-brief/SKILL.md | sha256: 27c1f0e12f878753a0ec12ea61888ef8872065b661b3d606f42038e23b8dc0d4 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: contract-renewal-brief | source: skills/contract-renewal-brief/SKILL.md | sha256: 27c1f0e12f878753a0ec12ea61888ef8872065b661b3d606f42038e23b8dc0d4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

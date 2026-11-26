@@ -166,12 +166,12 @@ def how(c):
 
 def releases(c):
     W,H=920,340
-    rel=[("v83.0.0","16 Oct","For everyone, everywhere",["Easy Read and Teach me","Voice, Hinglish and Taglish","Offline on a Raspberry Pi"],c['muted']),
-         ("v83.1.0","22 Oct","Duet-ready",["The duet block","Morning brief and alerts","Send-approval gate"],c['blue']),
-         ("v83.2.0","23 Oct","Duet support",["21 Duet-ready skills","Small-business watchers","Add to Claude, every skill"],c['purple']),
-         ("v84.0.0","11 Nov","Regions and new models",["Four regional packs","WeChat finder, write-back","Model registry, missions"],c['green'])]
+    rel=[("v83.1.0","22 Oct","Duet-ready",["The duet block","Morning brief and alerts","Send-approval gate"],c['muted']),
+         ("v83.2.0","23 Oct","Duet support",["21 Duet-ready skills","Small-business watchers","Add to Claude, every skill"],c['blue']),
+         ("v84.0.0","11 Nov","Regions and new models",["Four regional packs","WeChat finder, write-back","Model registry, missions"],c['purple']),
+         ("v84.1.0","27 Nov","Fieldwork and sponsors",["Fieldwork, SEO, investing","Document linter, calculators","Cursor plugins, sponsor kit"],c['green'])]
     o=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" {FONT}>',
-       '<title>Recent releases: v83.0.0 For everyone, everywhere (16 October), v83.1.0 Duet-ready (22 October), v83.2.0 Duet support (23 October) and v84.0.0 Regions and new models (11 November), the latest.</title>',
+       '<title>Recent releases: v83.1.0 Duet-ready (22 October), v83.2.0 Duet support (23 October), v84.0.0 Regions and new models (11 November) and v84.1.0 Fieldwork and sponsors (27 November), the latest.</title>',
        f'<rect width="{W}" height="{H}" rx="16" fill="{c["bg"]}"/>',
        f'<text x="{W//2}" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="{c["text"]}">What\'s new, release by release</text>',
        f'<line x1="70" y1="96" x2="850" y2="96" stroke="{c["border"]}" stroke-width="4" stroke-linecap="round"/>']

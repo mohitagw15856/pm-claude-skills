@@ -118,5 +118,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-financing-bp.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cn-financing-bp | source: skills/cn-financing-bp/SKILL.md | sha256: deb4632e70c62d9268a8da3403dc5b6d1fe4545e7b41fd55c1a06d320234ff2c | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cn-financing-bp | source: skills/cn-financing-bp/SKILL.md | sha256: deb4632e70c62d9268a8da3403dc5b6d1fe4545e7b41fd55c1a06d320234ff2c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

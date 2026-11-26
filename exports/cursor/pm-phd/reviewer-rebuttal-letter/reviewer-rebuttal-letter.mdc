@@ -99,5 +99,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reviewer-rebuttal-letter.html
 
-<!-- pm-claude-skills v84.0.0 | skill: reviewer-rebuttal-letter | source: skills/reviewer-rebuttal-letter/SKILL.md | sha256: 4f19c3878a291ddfab76827fd0705ba2a5761357344cb28abb3a7c66b2dd610f | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: reviewer-rebuttal-letter | source: skills/reviewer-rebuttal-letter/SKILL.md | sha256: 4f19c3878a291ddfab76827fd0705ba2a5761357344cb28abb3a7c66b2dd610f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

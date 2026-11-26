@@ -116,5 +116,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-equity-split.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cn-equity-split | source: skills/cn-equity-split/SKILL.md | sha256: 291fc0e17258be58161e056f9a1119bd9347ff1492aceb4113694f7bff12e4fa | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cn-equity-split | source: skills/cn-equity-split/SKILL.md | sha256: 291fc0e17258be58161e056f9a1119bd9347ff1492aceb4113694f7bff12e4fa | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -105,5 +105,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/mx-declaracion-anual-prep.html
 
-<!-- pm-claude-skills v84.0.0 | skill: mx-declaracion-anual-prep | source: skills/mx-declaracion-anual-prep/SKILL.md | sha256: 672ec360e1c011286ed1f30192fce2fcc6e5ea2610c93d9ee6bd9c907f2314f9 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: mx-declaracion-anual-prep | source: skills/mx-declaracion-anual-prep/SKILL.md | sha256: 672ec360e1c011286ed1f30192fce2fcc6e5ea2610c93d9ee6bd9c907f2314f9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

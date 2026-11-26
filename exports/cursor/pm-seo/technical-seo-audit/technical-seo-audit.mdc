@@ -86,5 +86,5 @@ Do not state that a page is or is not indexed, or quote a ranking, a traffic fig
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/technical-seo-audit.html
 
-<!-- pm-claude-skills v84.0.0 | skill: technical-seo-audit | source: skills/technical-seo-audit/SKILL.md | sha256: acfdb4f9c7afd5cd3523960f65314ef09ebcfcad09cb2b60d6d31b528eb85d5e | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: technical-seo-audit | source: skills/technical-seo-audit/SKILL.md | sha256: acfdb4f9c7afd5cd3523960f65314ef09ebcfcad09cb2b60d6d31b528eb85d5e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

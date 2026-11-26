@@ -94,5 +94,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stock-take-plan.html
 
-<!-- pm-claude-skills v84.0.0 | skill: stock-take-plan | source: skills/stock-take-plan/SKILL.md | sha256: a074ca6612da567c95d67ee71accaff3c23a34a07c2dc0e1b1400c5ef3aaa025 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: stock-take-plan | source: skills/stock-take-plan/SKILL.md | sha256: a074ca6612da567c95d67ee71accaff3c23a34a07c2dc0e1b1400c5ef3aaa025 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

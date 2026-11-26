@@ -102,5 +102,5 @@ Show the working: years in tier one times 21 times daily wage, plus years in tie
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/uae-gratuity-calculator.html
 
-<!-- pm-claude-skills v84.0.0 | skill: uae-gratuity-calculator | source: skills/uae-gratuity-calculator/SKILL.md | sha256: 529394c9da733612e8f80e214eb02bab354f9e157158f842cfd6160918534538 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: uae-gratuity-calculator | source: skills/uae-gratuity-calculator/SKILL.md | sha256: 529394c9da733612e8f80e214eb02bab354f9e157158f842cfd6160918534538 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

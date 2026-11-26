@@ -103,5 +103,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-customer-service-scripts.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cn-customer-service-scripts | source: skills/cn-customer-service-scripts/SKILL.md | sha256: 3e3da88c42dc9e9c8d5d7cb4ed6aa530ea52e8fc47f82758539bdf8e130bdfb5 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cn-customer-service-scripts | source: skills/cn-customer-service-scripts/SKILL.md | sha256: 3e3da88c42dc9e9c8d5d7cb4ed6aa530ea52e8fc47f82758539bdf8e130bdfb5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

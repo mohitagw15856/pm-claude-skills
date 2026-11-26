@@ -92,5 +92,5 @@ If a figure is not supplied, write "not supplied" in its place. Never estimate a
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/equity-research-note.html
 
-<!-- pm-claude-skills v84.0.0 | skill: equity-research-note | source: skills/equity-research-note/SKILL.md | sha256: 069fe823a47ec562ed015304e3723acfbe681542e7c62d53e2ce8debd9e076aa | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: equity-research-note | source: skills/equity-research-note/SKILL.md | sha256: 069fe823a47ec562ed015304e3723acfbe681542e7c62d53e2ce8debd9e076aa | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

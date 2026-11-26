@@ -97,5 +97,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ke-payslip-decoder.html
 
-<!-- pm-claude-skills v84.0.0 | skill: ke-payslip-decoder | source: skills/ke-payslip-decoder/SKILL.md | sha256: c804f4d63202a83aa4aa1f62da236ed01b30c416f4ac92237ba6d3793b2b4ef1 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: ke-payslip-decoder | source: skills/ke-payslip-decoder/SKILL.md | sha256: c804f4d63202a83aa4aa1f62da236ed01b30c416f4ac92237ba6d3793b2b4ef1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

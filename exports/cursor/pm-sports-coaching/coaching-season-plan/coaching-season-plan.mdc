@@ -93,5 +93,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/coaching-season-plan.html
 
-<!-- pm-claude-skills v84.0.0 | skill: coaching-season-plan | source: skills/coaching-season-plan/SKILL.md | sha256: 2ebd9231a3c61f9f83e8c52956ddd1ccd06e5ffd0cee702f581d457694b096de | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: coaching-season-plan | source: skills/coaching-season-plan/SKILL.md | sha256: 2ebd9231a3c61f9f83e8c52956ddd1ccd06e5ffd0cee702f581d457694b096de | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

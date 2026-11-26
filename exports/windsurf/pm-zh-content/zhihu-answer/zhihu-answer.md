@@ -112,5 +112,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/zhihu-answer.html
 
-<!-- pm-claude-skills v84.0.0 | skill: zhihu-answer | source: skills/zhihu-answer/SKILL.md | sha256: 1743950ec0f41e0a52ade0717b979183a150a9d647eac0283186f286376235a5 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: zhihu-answer | source: skills/zhihu-answer/SKILL.md | sha256: 1743950ec0f41e0a52ade0717b979183a150a9d647eac0283186f286376235a5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

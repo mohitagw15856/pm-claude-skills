@@ -110,5 +110,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-study-visa-prep.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cn-study-visa-prep | source: skills/cn-study-visa-prep/SKILL.md | sha256: 3856a0edf05156d184026dab15c62857ec8cff93fd7299ba026c463ce0cb5a2b | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cn-study-visa-prep | source: skills/cn-study-visa-prep/SKILL.md | sha256: 3856a0edf05156d184026dab15c62857ec8cff93fd7299ba026c463ce0cb5a2b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

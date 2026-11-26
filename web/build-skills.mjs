@@ -58,6 +58,14 @@ if (existsSync(pluginsDir)) {
     }
   }
 }
+// A skill in several bundles keeps a pinned home (data/skill-home.json), so adding it to a
+// new bundle does not move its catalogue entry or its export path.
+try {
+  const pins = JSON.parse(readFileSync(join(pluginsDir, '..', 'data', 'skill-home.json'), 'utf8')).home || {};
+  for (const [skill, plugin] of Object.entries(pins)) {
+    if (existsSync(join(pluginsDir, plugin, 'skills', skill, 'SKILL.md'))) skillToPlugin[skill] = plugin;
+  }
+} catch { /* no pin file: alphabetical order decides, as before */ }
 
 // --- Parse YAML-ish frontmatter (name + description only) ---
 // Permission manifest (SkillSpec §9.1): metadata.permissions { tools: [...], approval }.

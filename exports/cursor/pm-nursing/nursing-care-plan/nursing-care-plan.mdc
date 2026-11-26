@@ -87,5 +87,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/nursing-care-plan.html
 
-<!-- pm-claude-skills v84.0.0 | skill: nursing-care-plan | source: skills/nursing-care-plan/SKILL.md | sha256: e3db0dc5f37d043fea8d300df81f26a0cff2faa8f99ef7680f4b8533f42fbefb | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: nursing-care-plan | source: skills/nursing-care-plan/SKILL.md | sha256: e3db0dc5f37d043fea8d300df81f26a0cff2faa8f99ef7680f4b8533f42fbefb | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

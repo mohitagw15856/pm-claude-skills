@@ -116,5 +116,5 @@ Once certified/compliant, what needs to continue:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/compliance-checklist.html
 
-<!-- pm-claude-skills v84.0.0 | skill: compliance-checklist | source: skills/compliance-checklist/SKILL.md | sha256: 5ae0f578e36f407d16975037113fde429070d1352b35785502ab20936bf941fa | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: compliance-checklist | source: skills/compliance-checklist/SKILL.md | sha256: 5ae0f578e36f407d16975037113fde429070d1352b35785502ab20936bf941fa | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

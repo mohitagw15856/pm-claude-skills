@@ -320,6 +320,13 @@ function buildBundleMap() {
       for (const s of readdirSync(pSkills)) map[s] = plugin;
     }
   }
+  // Pinned homes (data/skill-home.json): a skill wired into a new bundle keeps its export path.
+  try {
+    const pins = JSON.parse(readFileSync(join(root, 'data', 'skill-home.json'), 'utf8')).home || {};
+    for (const [skill, plugin] of Object.entries(pins)) {
+      if (existsSync(join(pluginsDir, plugin, 'skills', skill, 'SKILL.md'))) map[skill] = plugin;
+    }
+  } catch { /* no pin file: alphabetical order decides */ }
   return map;
 }
 

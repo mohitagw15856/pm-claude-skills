@@ -98,5 +98,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/shrink-report.html
 
-<!-- pm-claude-skills v84.0.0 | skill: shrink-report | source: skills/shrink-report/SKILL.md | sha256: 1031b5178fcdcbe5a273afce96048270913ff526636f8a79bf2628f4afaa385c | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: shrink-report | source: skills/shrink-report/SKILL.md | sha256: 1031b5178fcdcbe5a273afce96048270913ff526636f8a79bf2628f4afaa385c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

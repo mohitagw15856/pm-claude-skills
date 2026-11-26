@@ -81,5 +81,5 @@ Do not invent estimates. If no sizes are given, sort by relative size (small, me
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/scope-cutter.html
 
-<!-- pm-claude-skills v84.0.0 | skill: scope-cutter | source: skills/scope-cutter/SKILL.md | sha256: 74d0dac8b9e9cd9acc706f22bcb4d439f65017cb455fc280a2349566a26e2e47 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: scope-cutter | source: skills/scope-cutter/SKILL.md | sha256: 74d0dac8b9e9cd9acc706f22bcb4d439f65017cb455fc280a2349566a26e2e47 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

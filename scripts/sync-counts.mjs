@@ -10,7 +10,12 @@
 //   node scripts/sync-counts.mjs --dry     list what would change
 //
 // It only ever swaps one number for another inside the phrase check-drift quoted, so it
-// cannot touch coordinates in an SVG or an unrelated figure. No dependencies.
+// cannot touch coordinates in an SVG or an unrelated figure.
+//
+// Caution: check-drift treats any "N skills" as a claim about the whole library, so a
+// subset written in digits ("16 skills in four bundles") is rewritten to the library
+// total. Write subsets in words ("sixteen new skills") or as "skills: 16", and read the
+// diff with --dry before running this after writing new prose. No dependencies.
 import { spawnSync } from 'node:child_process';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join } from 'node:path';

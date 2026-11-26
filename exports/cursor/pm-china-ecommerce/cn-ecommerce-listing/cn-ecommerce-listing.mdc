@@ -103,5 +103,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-ecommerce-listing.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cn-ecommerce-listing | source: skills/cn-ecommerce-listing/SKILL.md | sha256: 96a40cc683a6f1ced2ae154cab3f94adc8fce1cbcda75f179443ceaa8c66d9fa | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cn-ecommerce-listing | source: skills/cn-ecommerce-listing/SKILL.md | sha256: 96a40cc683a6f1ced2ae154cab3f94adc8fce1cbcda75f179443ceaa8c66d9fa | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -114,5 +114,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-double11-promotion-plan.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cn-double11-promotion-plan | source: skills/cn-double11-promotion-plan/SKILL.md | sha256: 036d97da347d812396480f7209cc3cad65cfd27658df0a902ef41a99d039e16b | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cn-double11-promotion-plan | source: skills/cn-double11-promotion-plan/SKILL.md | sha256: 036d97da347d812396480f7209cc3cad65cfd27658df0a902ef41a99d039e16b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

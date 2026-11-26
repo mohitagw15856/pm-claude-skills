@@ -58,5 +58,5 @@ It prints the fit (`a=0.619 b=0.371 R²=1.000 lifetime≈7.7 periods LTV≈308`)
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cohort-curve-model.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cohort-curve-model | source: skills/cohort-curve-model/SKILL.md | sha256: fc8dcdb95932d16e65de6277a16c4215c84dafe40fd08daea88d6f6f948d8b49 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cohort-curve-model | source: skills/cohort-curve-model/SKILL.md | sha256: fc8dcdb95932d16e65de6277a16c4215c84dafe40fd08daea88d6f6f948d8b49 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

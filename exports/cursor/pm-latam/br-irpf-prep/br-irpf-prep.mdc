@@ -106,5 +106,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/br-irpf-prep.html
 
-<!-- pm-claude-skills v84.0.0 | skill: br-irpf-prep | source: skills/br-irpf-prep/SKILL.md | sha256: a38803859a2ea4f672113fa94786518a702e9dddf66e151f7d3001080fafa721 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: br-irpf-prep | source: skills/br-irpf-prep/SKILL.md | sha256: a38803859a2ea4f672113fa94786518a702e9dddf66e151f7d3001080fafa721 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

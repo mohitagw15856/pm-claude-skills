@@ -96,5 +96,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thesis-chapter-plan.html
 
-<!-- pm-claude-skills v84.0.0 | skill: thesis-chapter-plan | source: skills/thesis-chapter-plan/SKILL.md | sha256: f20aa4f74762d200177686287ac797121a4a0c4a486e99dff153f5cadab39b86 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: thesis-chapter-plan | source: skills/thesis-chapter-plan/SKILL.md | sha256: f20aa4f74762d200177686287ac797121a4a0c4a486e99dff153f5cadab39b86 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

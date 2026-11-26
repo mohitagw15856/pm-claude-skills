@@ -99,5 +99,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bilibili-video-script.html
 
-<!-- pm-claude-skills v84.0.0 | skill: bilibili-video-script | source: skills/bilibili-video-script/SKILL.md | sha256: 12ca8d8064287d859ac825f541740dfd485b45defcd5fc5d7ae3b7a56aeb0e33 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: bilibili-video-script | source: skills/bilibili-video-script/SKILL.md | sha256: 12ca8d8064287d859ac825f541740dfd485b45defcd5fc5d7ae3b7a56aeb0e33 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

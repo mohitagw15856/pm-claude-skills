@@ -100,5 +100,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/za-uif-claim-guide.html
 
-<!-- pm-claude-skills v84.0.0 | skill: za-uif-claim-guide | source: skills/za-uif-claim-guide/SKILL.md | sha256: b582aaa8a814f9a4c78f04f5da2ff44b399d2e0fa34b99d94d1cc632e813d28b | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: za-uif-claim-guide | source: skills/za-uif-claim-guide/SKILL.md | sha256: b582aaa8a814f9a4c78f04f5da2ff44b399d2e0fa34b99d94d1cc632e813d28b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

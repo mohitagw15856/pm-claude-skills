@@ -131,5 +131,5 @@ Tracked changes only work if the original text is reproduced exactly and every e
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/docx-tracked-changes.html
 
-<!-- pm-claude-skills v84.0.0 | skill: docx-tracked-changes | source: skills/docx-tracked-changes/SKILL.md | sha256: f8746568343849a330aab4928947f75489b39bb539f4357643ab1369e5f64af7 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: docx-tracked-changes | source: skills/docx-tracked-changes/SKILL.md | sha256: f8746568343849a330aab4928947f75489b39bb539f4357643ab1369e5f64af7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

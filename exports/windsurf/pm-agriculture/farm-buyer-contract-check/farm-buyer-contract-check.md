@@ -93,5 +93,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/farm-buyer-contract-check.html
 
-<!-- pm-claude-skills v84.0.0 | skill: farm-buyer-contract-check | source: skills/farm-buyer-contract-check/SKILL.md | sha256: 5186f87877b5caade96c9113f5da24b26038543cbb36618a1e12cac09ab78367 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: farm-buyer-contract-check | source: skills/farm-buyer-contract-check/SKILL.md | sha256: 5186f87877b5caade96c9113f5da24b26038543cbb36618a1e12cac09ab78367 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

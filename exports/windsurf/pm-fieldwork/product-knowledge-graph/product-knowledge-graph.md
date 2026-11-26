@@ -94,5 +94,5 @@ python3 scripts/knowledge_graph.py orphans graph.json
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-knowledge-graph.html
 
-<!-- pm-claude-skills v84.0.0 | skill: product-knowledge-graph | source: skills/product-knowledge-graph/SKILL.md | sha256: 57ea465542ee9744c47004b79a871f276e506a38eb3449d49d7af50d2973053c | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: product-knowledge-graph | source: skills/product-knowledge-graph/SKILL.md | sha256: 57ea465542ee9744c47004b79a871f276e506a38eb3449d49d7af50d2973053c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

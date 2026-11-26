@@ -103,5 +103,5 @@ If the guidance is not supplied, say that eligibility cannot be confirmed and pr
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/farm-subsidy-application.html
 
-<!-- pm-claude-skills v84.0.0 | skill: farm-subsidy-application | source: skills/farm-subsidy-application/SKILL.md | sha256: 8dfdbf825464a261a721dbb5e122559a463d0a5a950d106b85e3818cff489752 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: farm-subsidy-application | source: skills/farm-subsidy-application/SKILL.md | sha256: 8dfdbf825464a261a721dbb5e122559a463d0a5a950d106b85e3818cff489752 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -82,5 +82,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sports-parent-comms.html
 
-<!-- pm-claude-skills v84.0.0 | skill: sports-parent-comms | source: skills/sports-parent-comms/SKILL.md | sha256: 6c66d086b97d826ce21a95c1115e80806fa98ba57198c14d220b387214b0a61a | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: sports-parent-comms | source: skills/sports-parent-comms/SKILL.md | sha256: 6c66d086b97d826ce21a95c1115e80806fa98ba57198c14d220b387214b0a61a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -124,5 +124,5 @@ Status, signed off by, date.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-design-qa.html
 
-<!-- pm-claude-skills v84.0.0 | skill: figma-design-qa | source: skills/figma-design-qa/SKILL.md | sha256: e2b5bc9e25686a1795a274bad1208bb35c02d8b3f4f9fa2ff54bec06d6ce7548 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: figma-design-qa | source: skills/figma-design-qa/SKILL.md | sha256: e2b5bc9e25686a1795a274bad1208bb35c02d8b3f4f9fa2ff54bec06d6ce7548 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->
