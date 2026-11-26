@@ -1,0 +1,31 @@
+{
+  "name": "pm-education",
+  "displayName": "PM Skills: Education",
+  "version": "1.0.0",
+  "description": "Educator skills: Lesson Plan, Rubric Builder, Quiz Generator, Parent Communication, IEP Goal Support, Student Feedback. Build standards-aligned lessons with differentiation, fair grading rubrics, quizzes with answer keys, warm parent messages, measurable SMART IEP goals, and constructive feedback that tells students how to improve. A drafting aid for teachers — not legal advice.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "education",
+    "teaching",
+    "teacher",
+    "lesson-plan",
+    "rubric",
+    "quiz",
+    "assessment",
+    "iep",
+    "special-education",
+    "differentiation",
+    "feedback",
+    "parent-communication",
+    "k12",
+    "classroom"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

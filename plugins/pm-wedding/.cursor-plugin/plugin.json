@@ -1,0 +1,22 @@
+{
+  "name": "pm-wedding",
+  "displayName": "PM Skills: Wedding",
+  "version": "1.0.0",
+  "description": "The wedding pack: a budget that survives to the wedding, vendor contracts decoded before signing, and the day-of logistics that keep the couple out of the production booth",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "wedding",
+    "budget",
+    "vendors",
+    "planning",
+    "contracts"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

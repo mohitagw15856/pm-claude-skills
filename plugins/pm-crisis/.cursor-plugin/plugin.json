@@ -1,0 +1,24 @@
+{
+  "name": "pm-crisis",
+  "displayName": "PM Skills: Crisis",
+  "version": "1.0.0",
+  "description": "Crisis & sensitive communications skills for high-stakes moments: PR Crisis Response, Incident Public Statement, Customer Outage Notice, Layoff Communication, and Apology Letter.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "crisis-communications",
+    "pr",
+    "incident",
+    "outage",
+    "layoff",
+    "apology",
+    "reputation"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

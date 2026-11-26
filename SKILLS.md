@@ -1,4 +1,4 @@
-# 🗂️ All 1374 Skills — full catalog
+# 🗂️ All 1385 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -383,15 +383,14 @@
 | **Thumbnail Creator Skill (via Gemini)** (`thumbnail-creator`) | Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. | — |
 | **YouTube Script Writer** (`youtube-script-writer`) | Write a high-retention YouTube script — explainer, tutorial, video essay, review, or talking head — on the packaging then cold-open then… | — |
 
-## 🤝 Customers & Sales (26 skills)
+## 🤝 Customers & Sales (25 skills)
 
-### `pm-cs` — 7 skills · 2 eval-scored
+### `pm-cs` — 6 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Churn Analysis** (`churn-analysis`) | Produce a structured churn analysis that separates avoidable from unavoidable churn. | ✅ 4.5/5 |
 | **Customer Escalation Brief** (`cs-escalation-brief`) | Write a structured escalation brief for an at-risk customer account. | — |
-| **Customer Health Scorecard** (`cs-health-scorecard`) | Build a customer health scorecard for a specific account. | ✅ 4.8/5 |
 | **Customer Success Plan** (`customer-success-plan`) | Build a joint customer success plan for a specific account. | — |
 | **QBR Deck** (`qbr-deck`) | Build a Quarterly Business Review (QBR) deck structure and narrative for a customer account. | — |
 | **Renewal Playbook** (`renewal-playbook`) | Build a structured renewal playbook for a customer account. | — |
@@ -723,7 +722,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 4/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (912 skills)
+## 🌍 Industries & Public Sector (924 skills)
 
 ### `other` — 22 skills · 12 eval-scored
 
@@ -1215,13 +1214,12 @@
 | **Layoff Communication** (`layoff-communication`) | Plan and write the communications for a layoff or restructure with clarity and dignity. | ✅ 4.8/5 |
 | **PR Crisis Response** (`pr-crisis-response`) | Build a crisis communications plan to respond fast and credibly when something goes wrong. | ✅ 4.8/5 |
 
-### `pm-cross` — 11 skills · 1 eval-scored
+### `pm-cross` — 10 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Action Runner** (`action-runner`) | Turn a skill's recommendations into real, executed actions — open the tickets, file the issues, post the updates — safely: dry-run preview… | — |
 | **Brief Builder** (`brief-builder`) | Interview the user with sharp, one-at-a-time questions to turn a vague request into a tight, complete brief any other skill can run on. | — |
-| **Executive Summary** (`executive-summary`) | Write an executive summary for any document, report, or proposal. | ✅ 4.1/5 |
 | **Grant Proposal** (`grant-proposal`) | Write a structured grant proposal or funding application for any grant type. | — |
 | **Last 30 Days Research** (`last-30-days-research`) | Searches Reddit, X/Twitter, and the broader web for recent opinions, sentiment, and signal on any topic. | — |
 | **NotebookLM Connector** (`notebooklm-connector`) | Automates NotebookLM from Claude Code using browser automation via the Claude Chrome extension — creating notebooks, adding sources, and… | — |
@@ -1263,6 +1261,13 @@
 | **Arbeitszeugnis Decoder (Germany)** (`de-arbeitszeugnis-decoder`) | Decode a German employment reference (Arbeitszeugnis): translate the coded phrases into the grade they signal, check the structure and the closing… | — |
 | **Kündigungsfrist Check (Germany)** (`de-kuendigungsfrist-check`) | Work out the notice period and last working day for an employment contract in Germany, for resignation or dismissal: the statutory periods by… | — |
 | **Steuererklärung Prep (Germany)** (`de-steuererklaerung-prep`) | Prepare an employee's annual income tax return in Germany: whether filing is required or worthwhile, which forms apply, the documents to gather… | — |
+
+### `pm-daily-ten` — 2 skills · 2 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Customer Health Scorecard** (`cs-health-scorecard`) | Build a customer health scorecard for a specific account. | ✅ 4.8/5 |
+| **Executive Summary** (`executive-summary`) | Write an executive summary for any document, report, or proposal. | ✅ 4.1/5 |
 
 ### `pm-dead-mentors` — 5 skills · 5 eval-scored
 
@@ -1465,6 +1470,22 @@
 | **Relationship Check-In** (`relationship-check-in`) | Run a calm, regular relationship check-in with your partner — a structured 'how are we doing' conversation that catches small things before they… | — |
 | **School Choice Decision** (`school-choice-decision`) | Choose the right school for a specific child by weighing what actually matters to them and your family — not just rankings. | — |
 | **Wedding Vows Writer** (`wedding-vows-writer`) | Write personal wedding vows that sound like you — specific, heartfelt, and the right length — instead of generic or cheesy. | — |
+
+### `pm-fieldwork` — 11 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **App Store Submission Guard** (`app-store-submission-guard`) | Check a mobile app build against the common reasons app store reviewers reject submissions, before it is submitted. | — |
+| **Demo Video Kit** (`demo-video-kit`) | Produce a short product demo video from screen recordings: a shot list, narration, timed captions and the exact ffmpeg commands to cut, join and… | — |
+| **Design Doc Review** (`design-doc-review`) | Review a technical design document or RFC the way a careful senior reviewer would: restate what it proposes, test the problem statement, probe the… | — |
+| **Equity Research Note** (`equity-research-note`) | Write a structured research note on a listed company from filings and figures the user supplies: the business in plain words, what drives revenue… | — |
+| **Failure Pattern Library** (`failure-pattern-library`) | Check a plan, launch or system against a catalogue of named ways that projects and systems commonly fail, and report which patterns it is exposed… | — |
+| **Live Competitor Capture** (`live-competitor-capture`) | Plan and run an evidence-first walkthrough of a competitor's public product with a browser tool, capturing dated screenshots and observations… | — |
+| **Product Knowledge Graph** (`product-knowledge-graph`) | Turn a folder of PRDs, specs, research notes and decision records into a graph of documents and the links between them, built by the bundled… | — |
+| **Scope Cutter** (`scope-cutter`) | Cut a feature, project or release down to the smallest version that still delivers the outcome, by challenging each part to earn its place. | — |
+| **Stitch Design Handoff** (`stitch-design-handoff`) | Turn a PRD or feature brief into prompts and a screen plan for an AI design generator such as Google Stitch, so the first generated screens match… | — |
+| **SVG Diagram Studio** (`svg-diagram-studio`) | Draw a roadmap, journey map, swimlane, funnel, quadrant or system picture as one self-contained HTML file with inline SVG, with no Mermaid and no… | — |
+| **Verified Security Audit** (`verified-security-audit`) | Run a security audit in separate phases where every finding is re-checked by an independent verification pass before it is reported, and deliver… | — |
 
 ### `pm-fleet` — 6 skills
 
@@ -2244,4 +2265,4 @@
 
 ---
 
-_1374 skills across 168 bundles · 399 eval-scored (29%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1385 skills across 170 bundles · 399 eval-scored (29%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

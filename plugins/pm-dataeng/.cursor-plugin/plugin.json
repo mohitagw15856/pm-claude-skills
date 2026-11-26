@@ -1,0 +1,25 @@
+{
+  "name": "pm-dataeng",
+  "displayName": "PM Skills: Dataeng",
+  "version": "1.0.0",
+  "description": "Analytics-engineering skills: dbt Model Spec, Data Contract, Metric Semantic Layer, Experiment Readout (with a stdlib significance calculator), SQL Optimizer, and Data Quality Checks.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "data-engineering",
+    "analytics-engineering",
+    "dbt",
+    "data-contract",
+    "semantic-layer",
+    "ab-testing",
+    "sql",
+    "data-quality"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

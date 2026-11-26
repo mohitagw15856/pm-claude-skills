@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Annotate a draft and send the feedback back | PM Skills</title>
+<meta name="description" content="Paste a document your assistant wrote, comment on any paragraph, mark each comment as blocking or optional, and copy one structured revision request to send back. Runs in your browser; nothing is uploaded." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/annotate.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .an-wrap { max-width: 1100px; margin: 0 auto; padding: 16px 22px 70px; }
+  .an-wrap h1 { font-size: 28px; margin-bottom: 6px; }
+  .an-wrap h2 { font-size: 18px; margin: 22px 0 8px; }
+  .lead, .muted { color: var(--muted); line-height: 1.6; }
+  .an-wrap label { display: block; font-weight: 600; margin: 12px 0 6px; }
+  .an-wrap textarea, .an-wrap select { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 10px 12px; font: inherit; }
+  .an-wrap textarea { min-height: 120px; resize: vertical; }
+  .an-wrap select { width: auto; }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 10px 0; }
+  .btn { border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 9px 14px; font: inherit; cursor: pointer; min-height: 44px; }
+  .btn.primary { font-weight: 700; border-width: 2px; }
+  .cols { display: grid; grid-template-columns: 3fr 2fr; gap: 22px; }
+  .blk { display: block; width: 100%; text-align: left; white-space: pre-wrap; overflow-wrap: anywhere; border: 1px solid transparent; border-left: 3px solid var(--border); background: none; color: var(--text); font: inherit; line-height: 1.55; padding: 8px 10px; margin: 4px 0; border-radius: 6px; cursor: pointer; }
+  .blk:hover, .blk:focus-visible { border-color: var(--border); background: var(--panel); }
+  .blk.has { border-left-width: 6px; font-weight: 600; }
+  .blk.sel { outline: 2px solid var(--text); outline-offset: 1px; }
+  .cm { border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; margin: 8px 0; }
+  .cm .q { color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+  .cm .t { margin: 4px 0; overflow-wrap: anywhere; white-space: pre-wrap; }
+  .cm .k { font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+  #out { min-height: 220px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+  @media (max-width: 820px) { .cols { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="an-wrap">
+  <h1>Annotate a draft</h1>
+  <p class="lead">Paste a document your assistant wrote. Click any paragraph to comment on it, mark each comment as blocking or optional, then copy one structured revision request to send back. Everything stays in this browser tab: nothing is uploaded and no model is called.</p>
+
+  <label for="src">The document (Markdown or plain text)</label>
+  <textarea id="src" placeholder="Paste the PRD, update or plan here"></textarea>
+  <div class="row">
+    <button class="btn primary" id="load" type="button">Load for review</button>
+    <button class="btn" id="clear" type="button">Start again</button>
+    <span class="muted" id="status" role="status"></span>
+  </div>
+
+  <div class="cols" id="work" hidden>
+    <section aria-labelledby="h-doc">
+      <h2 id="h-doc">Document</h2>
+      <p class="muted">Select a paragraph. If you highlight some of its text first, the comment attaches to that text.</p>
+      <div id="doc"></div>
+    </section>
+    <section aria-labelledby="h-cm">
+      <h2 id="h-cm">Comments</h2>
+      <p class="muted" id="target">No paragraph selected.</p>
+      <label for="note">Your comment</label>
+      <textarea id="note" placeholder="What should change, and why"></textarea>
+      <div class="row">
+        <label for="sev" style="margin:0">Weight</label>
+        <select id="sev">
+          <option value="blocking">Blocking: must be fixed</option>
+          <option value="optional">Optional: take it or explain</option>
+        </select>
+        <button class="btn primary" id="add" type="button">Add comment</button>
+      </div>
+      <div id="list"></div>
+    </section>
+  </div>
+
+  <section id="result" aria-labelledby="h-out" hidden>
+    <h2 id="h-out">Revision request</h2>
+    <p class="muted">Paste this back to the assistant that wrote the draft.</p>
+    <label for="out">Feedback to send</label>
+    <textarea id="out" readonly></textarea>
+    <div class="row">
+      <button class="btn primary" id="copy" type="button">Copy</button>
+      <span class="muted" id="copied" role="status"></span>
+    </div>
+  </section>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  'use strict';
+  var el = function (id) { return document.getElementById(id); };
+  var blocks = [];      // the document, split into paragraphs
+  var comments = [];    // { block, quote, note, sev }
+  var current = -1;     // index of the selected paragraph
+  var quote = '';       // highlighted text inside it, if any
+
+  // Split on blank lines, keeping fenced code blocks whole.
+  function split(text) {
+    var out = [], buf = [], fenced = false;
+    text.replace(/\r\n?/g, '\n').split('\n').forEach(function (line) {
+      if (/^\s*(```|~~~)/.test(line)) fenced = !fenced;
+      if (!fenced && line.trim() === '') { if (buf.length) { out.push(buf.join('\n')); buf = []; } }
+      else buf.push(line);
+    });
+    if (buf.length) out.push(buf.join('\n'));
+    return out;
+  }
+
+  function shorten(s, n) { s = s.replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n - 1) + '…' : s; }
+
+  // Every piece of pasted text reaches the page as a text node, never parsed as markup.
+  function node(tag, cls, text) { var n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; }
+
+  function drawDoc() {
+    var doc = el('doc'); doc.textContent = '';
+    blocks.forEach(function (text, i) {
+      var b = node('button', 'blk' + (i === current ? ' sel' : '') + (comments.some(function (c) { return c.block === i; }) ? ' has' : ''), text);
+      b.type = 'button';
+      b.setAttribute('aria-pressed', i === current ? 'true' : 'false');
+      b.addEventListener('click', function () {
+        var picked = String(window.getSelection ? window.getSelection() : '').trim();
+        current = i;
+        quote = picked && text.indexOf(picked) !== -1 ? picked : '';
+        el('target').textContent = 'Commenting on paragraph ' + (i + 1) + ': "' + shorten(quote || text, 110) + '"';
+        drawDoc();
+        el('note').focus();
+      });
+      doc.appendChild(b);
+    });
+  }
+
+  function drawComments() {
+    var list = el('list'); list.textContent = '';
+    comments.forEach(function (c, i) {
+      var box = node('div', 'cm');
+      box.appendChild(node('div', 'k', (c.sev === 'blocking' ? 'BLOCKING' : 'OPTIONAL') + ' · paragraph ' + (c.block + 1)));
+      box.appendChild(node('div', 'q', '"' + shorten(c.quote, 140) + '"'));
+      box.appendChild(node('div', 't', c.note));
+      var rm = node('button', 'btn', 'Remove comment ' + (i + 1));
+      rm.type = 'button';
+      rm.addEventListener('click', function () { comments.splice(i, 1); drawComments(); drawDoc(); });
+      box.appendChild(rm);
+      list.appendChild(box);
+    });
+    el('result').hidden = comments.length === 0;
+    el('out').value = comments.length ? buildRequest() : '';
+    save();
+  }
+
+  function buildRequest() {
+    var blocking = comments.filter(function (c) { return c.sev === 'blocking'; }).length;
+    var lines = [
+      'Revise the document below using these review comments.',
+      'Address every blocking comment. For each optional comment, either apply it or say in one line why you did not.',
+      'Change nothing that no comment asks for. Do not invent facts, numbers or dates to satisfy a comment: if one needs information you do not have, ask for it.',
+      'Return the full revised document, then a short list of what you changed, comment by comment.',
+      '',
+      '## Comments (' + comments.length + ', of which ' + blocking + ' blocking)',
+      ''
+    ];
+    comments.slice().sort(function (a, b) { return a.block - b.block; }).forEach(function (c, i) {
+      lines.push((i + 1) + '. [' + (c.sev === 'blocking' ? 'BLOCKING' : 'OPTIONAL') + '] Paragraph ' + (c.block + 1) + ', on: "' + shorten(c.quote, 200) + '"');
+      lines.push('   Comment: ' + c.note.replace(/\s*\n\s*/g, ' '));
+    });
+    lines.push('', '## Document', '', blocks.join('\n\n'));
+    return lines.join('\n');
+  }
+
+  // Remember the session in this browser only. Storage can be blocked; the page works without it.
+  var KEY = 'pm-skills-annotate-v1';
+  function save() { try { localStorage.setItem(KEY, JSON.stringify({ src: el('src').value, comments: comments })); } catch (e) { /* storage unavailable */ } }
+  function restore() {
+    try {
+      var s = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (!s || typeof s.src !== 'string' || !s.src.trim()) return;
+      el('src').value = s.src;
+      load();
+      comments = (Array.isArray(s.comments) ? s.comments : []).filter(function (c) {
+        return c && Number.isInteger(c.block) && c.block >= 0 && c.block < blocks.length && typeof c.note === 'string' && typeof c.quote === 'string' && (c.sev === 'blocking' || c.sev === 'optional');
+      });
+      drawComments(); drawDoc();
+    } catch (e) { /* nothing saved, or unreadable */ }
+  }
+
+  function load() {
+    blocks = split(el('src').value);
+    comments = []; current = -1; quote = '';
+    el('work').hidden = blocks.length === 0;
+    el('status').textContent = blocks.length ? blocks.length + ' paragraph' + (blocks.length === 1 ? '' : 's') + ' loaded.' : 'Paste a document first.';
+    el('target').textContent = 'No paragraph selected.';
+    drawDoc(); drawComments();
+  }
+
+  el('load').addEventListener('click', load);
+  el('clear').addEventListener('click', function () { el('src').value = ''; load(); el('status').textContent = 'Cleared.'; });
+  el('add').addEventListener('click', function () {
+    var note = el('note').value.trim();
+    if (current < 0) { el('target').textContent = 'Select a paragraph first.'; return; }
+    if (!note) { el('target').textContent = 'Write the comment first.'; el('note').focus(); return; }
+    comments.push({ block: current, quote: quote || blocks[current], note: note, sev: el('sev').value === 'optional' ? 'optional' : 'blocking' });
+    el('note').value = ''; quote = '';
+    drawComments(); drawDoc();
+  });
+  el('copy').addEventListener('click', function () {
+    var out = el('out');
+    var done = function (ok) { el('copied').textContent = ok ? 'Copied.' : 'Select the text and copy it by hand.'; };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(out.value).then(function () { done(true); }, function () { out.select(); done(false); });
+    else { out.select(); done(false); }
+  });
+  restore();
+})();
+</script>
+</body>
+</html>

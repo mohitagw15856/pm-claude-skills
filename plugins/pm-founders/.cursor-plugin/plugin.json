@@ -1,0 +1,31 @@
+{
+  "name": "pm-founders",
+  "displayName": "PM Skills: Founders",
+  "version": "1.0.0",
+  "description": "Founder & startup skills: Startup Idea Validator, Fundraising FAQ, Cap Table Explainer, Founder-Market Fit, Investor Cold Email, Runway Planner. Pressure-test an idea, prep for investor Q&A, explain dilution and SAFEs, articulate why-you/why-now, write outreach that gets replies, and decide when to raise. Not legal or financial advice.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "startup",
+    "founder",
+    "fundraising",
+    "venture-capital",
+    "pitch",
+    "cap-table",
+    "dilution",
+    "safe",
+    "runway",
+    "burn-rate",
+    "yc",
+    "investor",
+    "seed",
+    "series-a"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

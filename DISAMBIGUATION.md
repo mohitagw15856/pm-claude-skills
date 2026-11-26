@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1374 live skills across 167 bundles, plus 12 retired names that still resolve.
+> 1385 live skills across 169 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -19,6 +19,7 @@ choosing between them.
 | These two get confused | | | How to choose |
 |---|---|---|---|
 | Acquirer Red Team / Red-Team My Plan | `acquirer-red-team` | `red-team-my-plan` | Modelling how an acquirer will attack your numbers in diligence vs general plan stress-testing. |
+| Agent Design Review / Design Doc Review | `agent-design-review` | `design-doc-review` | Reviewing the design of an AI agent (tools, permissions, autonomy) vs reviewing any engineering design document or RFC. |
 | Agent Incident Postmortem / Incident Postmortem | `agent-incident-postmortem` | `incident-postmortem` | Agent incidents have failure modes (runaway tool use, shipped hallucinations) that a general postmortem does not prompt for. |
 | Agent Observability Spec / Agent Spec | `agent-observability-spec` | `agent-spec` | Specifying an agent's behaviour before building vs specifying its tracing and alerting in production. |
 | AI-Assisted Performance Review / Performance Review | `ai-assisted-performance-review` | `performance-review` | Judging performance when output is AI-assisted raises attribution questions a standard review does not. |
@@ -38,6 +39,7 @@ choosing between them.
 | Contract Review / Venue Contract Review | `contract-review` | `venue-contract-review` | General contract review vs the venue-specific commercial exposure — minimum spend, attrition, cancellation ladder — that a general review does not look for. |
 | Crop Insurance Claim / Insurance Claim | `crop-insurance-claim` | `insurance-claim` | Crop and livestock policies work differently from household and personal claims: index or area-based payouts on weather or yield triggers, field evidence before replanting, and enrolment through banks or cooperatives. |
 | Design Critique / Figma Design Critique — PM Perspective | `design-critique` | `figma-design-critique-pm` | General UX critique frameworks vs a PM-lens critique run against a Figma file. |
+| Design Doc Review / Figma Design Review | `design-doc-review` | `figma-design-review` | Reviewing a written technical design document or RFC for irreversible decisions and failure cases, vs reviewing visual designs in a Figma file. |
 | Discharge Summary / Physiotherapy Discharge Summary | `discharge-summary` | `physio-discharge-summary` | A hospital inpatient discharge summary vs closing an outpatient physiotherapy episode against the goals set at assessment. |
 | Email Triage / Email Triage System | `email-triage` | `email-triage-system` | Triaging a live Gmail inbox down to what needs you vs installing a durable four-verb habit. |
 | Engineering Hiring Rubric / Hiring Rubric | `engineering-hiring-rubric` | `hiring-rubric` | Domain specialisation — technical interview scorecards vs a rubric for any role. |
@@ -189,6 +191,16 @@ assuming the skill you want is missing.
 - `context-switch-budget` · pm-cowork — Treat context switches as the budget line they are — the switch census (how fragmented the week really is), the batching moves that consolidate scattered same-kind work, the calendar defrag that turns Swiss cheese into slabs, and the switch-cost line for saying no.
 - `context-switch-recovery` · pm-focus — Reconstruct where you were and what's next after an interruption, so a broken focus doesn't cost you the whole thread.
 
+**`product-*`** (7)
+
+- `product-description` · pm-ecommerce — Write a product description / listing that sells and ranks.
+- `product-health-analysis` · pm-analytics — Interpret product metrics against goals and surface actionable signals.
+- `product-knowledge-graph` · pm-fieldwork — Turn a folder of PRDs, specs, research notes and decision records into a graph of documents and the links between them, built by the bundled script from real links and named terms, then answer questions by walking it.
+- `product-launch-checklist` · pm-delivery — Generate a comprehensive pre-launch, launch day, and post-launch checklist for any product release.
+- `product-naming` · pm-uxwriting — Generate and evaluate names for a product, feature, or release.
+- `product-positioning-doc` · pm-gtm — Write a product positioning document and messaging framework.
+- `product-recall-check` · pm-lifeadmin — Find out whether something you own — a car, appliance, car seat, food item, or gadget — is under a safety recall, and what to do about it.
+
 **`email-*`** (6)
 
 - `email-agent-preflight` · pm-seatbelt — Run the pre-flight checklist before an agent touches an inbox — the read-vs-send permission line, the injection-in-email-body threat, the send-guard rules, and the blast-radius limits that keep a compromised agent from mailing the company.
@@ -225,15 +237,6 @@ assuming the skill you want is missing.
 - `meeting-prep-pack` · pm-cowork — Arrive at a meeting armed in fifteen minutes — the prep pack: what this meeting decides, your position with its reasons, the other attendees' likely stances, the questions to ask, and the outcome you're steering toward.
 - `meeting-room-etiquette` · pm-cowork — Set the shared-space norms that end the small daily frictions — meeting room booking discipline (the ghost-booking cure), hybrid-call room behavior, the shared kitchen/space contracts, and the enforcement that works without a hall monitor.
 
-**`product-*`** (6)
-
-- `product-description` · pm-ecommerce — Write a product description / listing that sells and ranks.
-- `product-health-analysis` · pm-analytics — Interpret product metrics against goals and surface actionable signals.
-- `product-launch-checklist` · pm-delivery — Generate a comprehensive pre-launch, launch day, and post-launch checklist for any product release.
-- `product-naming` · pm-uxwriting — Generate and evaluate names for a product, feature, or release.
-- `product-positioning-doc` · pm-gtm — Write a product positioning document and messaging framework.
-- `product-recall-check` · pm-lifeadmin — Find out whether something you own — a car, appliance, car seat, food item, or gadget — is under a safety recall, and what to do about it.
-
 **`client-*`** (5)
 
 - `client-discharge-notes` · pm-veterinary — Write clear at-home care instructions for a pet owner after a veterinary visit, procedure, or hospitalization.
@@ -265,6 +268,14 @@ assuming the skill you want is missing.
 - `dental-insurance-preauth` · pm-dentistry — Write a dental pre-authorisation request or claim narrative that gets approved the first time — the diagnosis, the documented failure of lesser treatment, and the attachments a reviewer needs, assembled in the order they assess them.
 - `dental-recall-reactivation` · pm-dentistry — Build a dental recall and reactivation system that brings lapsed patients back without nagging — the segments worth contacting, the message that works for each, the cadence, and the measure that tells you whether it is working.
 - `dental-referral-letter` · pm-dentistry — Write a dental referral letter a specialist can act on without ringing you back — the question you are actually asking, the findings and images that support it, and what you have already tried.
+
+**`design-*`** (5)
+
+- `design-critique` · pm-design — Give structured, constructive feedback on any design using UX frameworks.
+- `design-doc-review` · pm-fieldwork — Review a technical design document or RFC the way a careful senior reviewer would: restate what it proposes, test the problem statement, probe the alternatives, find the unhandled failure cases, and return comments ranked by how much they should block.
+- `design-handoff-brief` · pm-advanced — Transform feature briefs into structured design briefs that give designers the context they need before opening Figma.
+- `design-system-audit` · pm-design — Audit a design system for consistency, coverage, and quality.
+- `design-system-generate` · pm-design — Generate a complete, accessibility-checked design system from scratch — colour ramps, type scale, spacing, elevation, and exports for CSS, Tailwind, design tokens, Figma, VS Code and PowerPoint.
 
 **`expense-*`** (5)
 
@@ -386,13 +397,6 @@ assuming the skill you want is missing.
 - `contract-renewal-tracker` · pm-procurement — Never get auto-renewed into another year again — the contract inventory with the dates that matter (notice deadlines, not renewal dates), the calendar system with decision-time buffers, and the renewal-decision ritual that renegotiates instead of rubber-stamping.
 - `contract-review` · pm-legal — Review and summarise any contract or legal agreement.
 
-**`design-*`** (4)
-
-- `design-critique` · pm-design — Give structured, constructive feedback on any design using UX frameworks.
-- `design-handoff-brief` · pm-advanced — Transform feature briefs into structured design briefs that give designers the context they need before opening Figma.
-- `design-system-audit` · pm-design — Audit a design system for consistency, coverage, and quality.
-- `design-system-generate` · pm-design — Generate a complete, accessibility-checked design system from scratch — colour ramps, type scale, spacing, elevation, and exports for CSS, Tailwind, design tokens, Figma, VS Code and PowerPoint.
-
 **`event-*`** (4)
 
 - `event-budget-plan` · pm-events — Build an event budget that survives the event — every cost line including the ones people forget, the contingency sized to the actual risk, and the tracking that shows overspend while it can still be stopped.
@@ -404,7 +408,7 @@ assuming the skill you want is missing.
 
 - `executive-cv` · pm-cv — Write an executive or senior leadership CV and the matching board biography: scope, business results and governance up front, two to three pages, written for search firms and boards.
 - `executive-presence` · pm-comms — Sharpen how you show up in high-stakes rooms — communicate with gravitas, concision, and confidence.
-- `executive-summary` · pm-cross — Write an executive summary for any document, report, or proposal.
+- `executive-summary` · pm-daily-ten — Write an executive summary for any document, report, or proposal.
 - `executive-update` · pm-strategy — Transform detailed product updates into concise executive briefings.
 
 **`interview-*`** (4)

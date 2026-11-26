@@ -10,7 +10,7 @@ A library of professional **Agent Skills** — each a plain `SKILL.md` file that
 
 - **New skill / bundle:** scaffold with `node scripts/new-skill.mjs` or `node scripts/new-bundle.mjs` — don't hand-wire `plugins/` and `marketplace.json`.
 - **Every skill must pass the L3 / SkillSpec gate.** Validate with `node scripts/skillcheck.mjs`.
-- **Keep counts honest.** After adding skills, run `node scripts/check-drift.mjs` (skill/bundle counts across docs must match) and regenerate derived files with `npm run check`.
+- **Keep counts honest.** After adding or editing skills, run `npm run regen` (bundle copies and every generated file), then `npm run check` (every gate, with a full report). `node scripts/check-drift.mjs` alone checks that skill and bundle counts match across docs.
 - **Don't hand-edit generated files** (`web/skills.json`, `exports/**`, `web/catalog.html`, `web/coverage.html`) — they're rebuilt.
 - **Ship via a branch + PR**, not direct pushes to `main`.
 

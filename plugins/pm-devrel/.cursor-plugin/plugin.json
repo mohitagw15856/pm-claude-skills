@@ -1,0 +1,24 @@
+{
+  "name": "pm-devrel",
+  "displayName": "PM Skills: Devrel",
+  "version": "1.0.0",
+  "description": "Developer-relations & open-source maintainer skills: Launch Post (Show HN/Product Hunt), Docs Quickstart, Conference Talk Proposal, Changelog Writer, README Writer, and Contributor Guide. Ship and grow developer tools and OSS projects.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "devrel",
+    "open-source",
+    "developer-relations",
+    "documentation",
+    "changelog",
+    "readme",
+    "launch"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

@@ -1,6 +1,6 @@
 # Contributing to pm-claude-skills
 
-> 🗺 **New here?** [REPO-MAP.md](REPO-MAP.md) shows which single folder your contribution touches — skill authors only ever need `skills/` (sparse-clone recipe inside).
+> 🗺 **New here?** [docs/REPO-MAP.md](docs/REPO-MAP.md) shows which single folder your contribution touches — skill authors only ever need `skills/` (sparse-clone recipe inside).
 
 Thank you for wanting to contribute. This repo grows through community submissions — every profession added makes it more useful for everyone.
 

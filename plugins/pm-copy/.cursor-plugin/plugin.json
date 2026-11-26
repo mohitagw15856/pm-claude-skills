@@ -1,0 +1,25 @@
+{
+  "name": "pm-copy",
+  "displayName": "PM Skills: Copy",
+  "version": "1.0.0",
+  "description": "Copywriting & conversion skills: Value Proposition, Landing Page Copy, Sales Page, Ad Copy, Cold Email, Headline Options, and Email Sequence. Words that convert — pairs with the themed PDF export.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "copywriting",
+    "conversion",
+    "landing-page",
+    "sales-copy",
+    "ad-copy",
+    "cold-email",
+    "headlines",
+    "marketing"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

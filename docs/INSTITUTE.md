@@ -22,4 +22,4 @@
 
 ## Governance (v1, honest about scale)
 
-Today the Institute is one maintainer and a public process: changes to instruments happen by PR with the reasoning in the open; disputes are argued in issues; the standing decisions live in [OPERATIONS.md](../OPERATIONS.md). The intent as adoption grows: SkillSpec spins into a [neutral foundation](FOUNDATION.md) with co-maintainers from adopting projects. Written down now so the trajectory is a commitment, not a pivot.
+Today the Institute is one maintainer and a public process: changes to instruments happen by PR with the reasoning in the open; disputes are argued in issues; the standing decisions live in [OPERATIONS.md](OPERATIONS.md). The intent as adoption grows: SkillSpec spins into a [neutral foundation](FOUNDATION.md) with co-maintainers from adopting projects. Written down now so the trajectory is a commitment, not a pivot.

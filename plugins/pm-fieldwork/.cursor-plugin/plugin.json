@@ -1,0 +1,22 @@
+{
+  "name": "pm-fieldwork",
+  "displayName": "PM Skills: Fieldwork",
+  "version": "1.0.0",
+  "description": "Evidence-first working tools: verified security audits, dated competitor capture, a document knowledge graph, a failure pattern catalogue, design doc review, scope cutting, app store submission checks, demo video assembly, dependency-free SVG diagrams, AI design tool handoff and equity research notes",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "audit",
+    "evidence",
+    "review",
+    "diagram",
+    "video"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

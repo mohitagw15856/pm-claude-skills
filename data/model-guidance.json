@@ -323,6 +323,11 @@
    "effort": "high",
    "rule": "high-stakes"
   },
+  "app-store-submission-guard": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "vision"
+  },
   "appliance-buying-guide": {
    "role": "default",
    "effort": "medium",
@@ -2009,6 +2014,11 @@
    "effort": "medium",
    "rule": "base"
   },
+  "demo-video-kit": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "dental-clinical-note": {
    "role": "default",
    "effort": "medium",
@@ -2055,6 +2065,11 @@
    "rule": "base"
   },
   "design-critique": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
+  "design-doc-review": {
    "role": "default",
    "effort": "medium",
    "rule": "base"
@@ -2385,6 +2400,11 @@
    "effort": "medium",
    "rule": "base"
   },
+  "equity-research-note": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "error-decoder": {
    "role": "fast",
    "effort": "low",
@@ -2621,6 +2641,11 @@
    "rule": "short"
   },
   "factory-acceptance-test": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
+  "failure-pattern-library": {
    "role": "default",
    "effort": "medium",
    "rule": "base"
@@ -3830,6 +3855,11 @@
    "effort": "low",
    "rule": "short"
   },
+  "live-competitor-capture": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "vision"
+  },
   "livestream-sales-script": {
    "role": "fast",
    "effort": "low",
@@ -4846,6 +4876,11 @@
    "effort": "medium",
    "rule": "base"
   },
+  "product-knowledge-graph": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "product-launch-checklist": {
    "role": "default",
    "effort": "medium",
@@ -5581,6 +5616,11 @@
    "effort": "high",
    "rule": "consequential"
   },
+  "scope-cutter": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "screen-time-detox": {
    "role": "default",
    "effort": "high",
@@ -6016,6 +6056,11 @@
    "effort": "low",
    "rule": "short"
   },
+  "stitch-design-handoff": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "vision"
+  },
   "stock-snapshot": {
    "role": "default",
    "effort": "medium",
@@ -6165,6 +6210,11 @@
    "role": "default",
    "effort": "medium",
    "rule": "base"
+  },
+  "svg-diagram-studio": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "vision"
   },
   "sycophancy-challenger": {
    "role": "default",
@@ -6707,6 +6757,11 @@
    "rule": "base"
   },
   "verification-before-completion": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
+  "verified-security-audit": {
    "role": "default",
    "effort": "medium",
    "rule": "base"

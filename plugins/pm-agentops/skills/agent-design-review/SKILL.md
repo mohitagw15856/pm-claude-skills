@@ -11,6 +11,8 @@ architecture against the decisions that actually determine reliability, and rank
 the demo but not in prod" becomes a specific list of changes. (Writing a new agent spec? Use
 [`agent-spec`](../agent-spec/SKILL.md).)
 
+> **Not quite this?** Use `design-doc-review` when the document under review is a general engineering design document or RFC, not an agent's design.
+
 ## Working from a brief
 
 Given a sketch ("a research agent that searches, reads, and writes a report"), **deliver the full review

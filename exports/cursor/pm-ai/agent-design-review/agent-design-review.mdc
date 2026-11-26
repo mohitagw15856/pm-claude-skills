@@ -12,6 +12,8 @@ architecture against the decisions that actually determine reliability, and rank
 the demo but not in prod" becomes a specific list of changes. (Writing a new agent spec? Use
 [`agent-spec`](../agent-spec/SKILL.md).)
 
+> **Not quite this?** Use `design-doc-review` when the document under review is a general engineering design document or RFC, not an agent's design.
+
 ## Working from a brief
 
 Given a sketch ("a research agent that searches, reads, and writes a report"), **deliver the full review
@@ -84,5 +86,5 @@ LLM agent design practice — bounded control flow, least-privilege tool use, co
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-design-review.html
 
-<!-- pm-claude-skills v84.0.0 | skill: agent-design-review | source: skills/agent-design-review/SKILL.md | sha256: b689c65c7e3f066be4e129c5e717c5b2cde4e9f6cc28ac102d81b0aa08bcb183 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: agent-design-review | source: skills/agent-design-review/SKILL.md | sha256: 77af6b378e9c6d8de2df2594ddbef197bfb860f28095c02e7377f9086b7f79f3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
-  "bundles": 167,
-  "skills": 1352,
+  "bundles": 169,
+  "skills": 1363,
   "items": [
     {
       "bundle": "pm-2027",
@@ -2445,6 +2445,58 @@
       ]
     },
     {
+      "bundle": "pm-daily-ten",
+      "description": "The ten skills to install first: the ones behind the README example and the built-in slash commands. PRD, interview synthesis, stakeholder update, RICE, sprint planning, retro, executive summary, meeting notes, competitor teardown and customer health scorecard",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-daily-ten@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-daily-ten"
+      },
+      "skills": [
+        {
+          "name": "competitor-teardown",
+          "description": "Produce a structured competitive analysis for any product or market."
+        },
+        {
+          "name": "cs-health-scorecard",
+          "description": "Build a customer health scorecard for a specific account."
+        },
+        {
+          "name": "executive-summary",
+          "description": "Write an executive summary for any document, report, or proposal."
+        },
+        {
+          "name": "meeting-notes",
+          "description": "Structure and format meeting notes following PM best practices."
+        },
+        {
+          "name": "prd-template",
+          "description": "Create a Product Requirements Document following proven PM template structure."
+        },
+        {
+          "name": "retro-analysis",
+          "description": "Analyses sprint delivery data and produces a structured retrospective brief."
+        },
+        {
+          "name": "rice-prioritisation",
+          "description": "Scores and ranks product initiatives using the RICE framework."
+        },
+        {
+          "name": "sprint-planning",
+          "description": "Structure and facilitate sprint planning sessions."
+        },
+        {
+          "name": "stakeholder-update",
+          "description": "Create concise executive stakeholder updates using the BLUF (Bottom Line Up Front) framework.",
+          "duet_ready": "designed-for-duet"
+        },
+        {
+          "name": "user-interview-synthesis",
+          "description": "Synthesises user interview transcripts into structured research findings."
+        }
+      ]
+    },
+    {
       "bundle": "pm-data",
       "description": "Data & analytics skills: Metrics Framework, SQL Query Explainer, Dashboard Brief, Chart Data Extractor, Cohort Analysis, Data Pipeline Spec, A/B Test Readout, Metric Tree Builder, Data Quality Audit. Build metric trees, explain SQL, spec dashboards, run cohort retention with LTV modelling, design ETL/ELT pipelines, read out A/B tests with significance and guardrails, and audit datasets for quality before you trust them.",
       "category": "productivity",
@@ -3595,6 +3647,61 @@
         {
           "name": "wedding-vows-writer",
           "description": "Write personal wedding vows that sound like you — specific, heartfelt, and the right length — instead of generic or cheesy."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-fieldwork",
+      "description": "Evidence-first working tools: verified security audits, dated competitor capture, a document knowledge graph, a failure pattern catalogue, design doc review, scope cutting, app store submission checks, demo video assembly, dependency-free SVG diagrams, AI design tool handoff and equity research notes",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-fieldwork@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-fieldwork"
+      },
+      "skills": [
+        {
+          "name": "app-store-submission-guard",
+          "description": "Check a mobile app build against the common reasons app store reviewers reject submissions, before it is submitted."
+        },
+        {
+          "name": "demo-video-kit",
+          "description": "Produce a short product demo video from screen recordings: a shot list, narration, timed captions and the exact ffmpeg commands to cut, join and caption it, computed by the bundled script."
+        },
+        {
+          "name": "design-doc-review",
+          "description": "Review a technical design document or RFC the way a careful senior reviewer would: restate what it proposes, test the problem statement, probe the alternatives, find the unhandled failure cases, and return comments ranked by how much they should block."
+        },
+        {
+          "name": "equity-research-note",
+          "description": "Write a structured research note on a listed company from filings and figures the user supplies: the business in plain words, what drives revenue and margin, a bull, base and bear case with the assumptions behind each, valuation as a range, and what would change the view."
+        },
+        {
+          "name": "failure-pattern-library",
+          "description": "Check a plan, launch or system against a catalogue of named ways that projects and systems commonly fail, and report which patterns it is exposed to with the early warning sign for each."
+        },
+        {
+          "name": "live-competitor-capture",
+          "description": "Plan and run an evidence-first walkthrough of a competitor's public product with a browser tool, capturing dated screenshots and observations, then separate what was seen from what was inferred."
+        },
+        {
+          "name": "product-knowledge-graph",
+          "description": "Turn a folder of PRDs, specs, research notes and decision records into a graph of documents and the links between them, built by the bundled script from real links and named terms, then answer questions by walking it."
+        },
+        {
+          "name": "scope-cutter",
+          "description": "Cut a feature, project or release down to the smallest version that still delivers the outcome, by challenging each part to earn its place."
+        },
+        {
+          "name": "stitch-design-handoff",
+          "description": "Turn a PRD or feature brief into prompts and a screen plan for an AI design generator such as Google Stitch, so the first generated screens match the product intent."
+        },
+        {
+          "name": "svg-diagram-studio",
+          "description": "Draw a roadmap, journey map, swimlane, funnel, quadrant or system picture as one self-contained HTML file with inline SVG, with no Mermaid and no external libraries."
+        },
+        {
+          "name": "verified-security-audit",
+          "description": "Run a security audit in separate phases where every finding is re-checked by an independent verification pass before it is reported, and deliver the result as both a readable report and machine-readable JSON."
         }
       ]
     },

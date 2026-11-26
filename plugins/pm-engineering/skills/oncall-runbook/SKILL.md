@@ -9,6 +9,42 @@ Produce a complete on-call runbook for a service — giving the on-call engineer
 
 A good on-call runbook reduces mean time to resolution (MTTR) by eliminating the "what do I do first?" problem. It is written for the on-call engineer who has just been paged and needs to act, not for someone calmly reading documentation.
 
+## Where this sits — the spine's terminus
+
+Last in the incident-response spine: **`/slo-error-budget` (frame) →
+`/debugging-log-analyser` → `/incident-postmortem` → `oncall-runbook`**. It receives the
+**contributing factors and action items** from `/incident-postmortem` and turns the
+detection/mitigation learnings into an entry that makes the *next* responder minutes, not
+hours — closing the loop so the same incident doesn't recur at full cost. *Runbook entry*,
+*detection/mitigation time*, and the loop are defined once in
+[`docs/craft/incident-response.md`](../../docs/craft/incident-response.md).
+
+## The loop
+
+A runbook fails when it's written for a calm reader instead of a paged one at 3am.
+Phase 1 sets the audience; every later choice serves it.
+
+1. **Write for the paged engineer, not the documentarian.** The reader has just been
+   woken and needs to *act* — so lead with the fastest safe mitigation, put copy-pasteable
+   commands first, and defer background. Prose that explains before it acts fails at 3am.
+   **Done when:** each alert's entry lets a non-expert take the first safe action within a
+   minute of opening it, without reading theory.
+2. **Turn postmortem learnings into per-alert procedures.** For each known failure (the
+   incident-postmortem's are the highest-value), write detect → mitigate → escalate:
+   the exact checks, the copy-pasteable commands, the rollback, and when to page whom.
+   **Done when:** every alert maps to a procedure with concrete commands and a clear
+   mitigation, not just "investigate."
+3. **Make escalation and handoff unambiguous.** Who to page, when, and how to hand off
+   mid-incident — because the second failure mode after "what do I do?" is "who do I
+   wake, and when is it okay to?"
+   **Done when:** the escalation matrix names people/rotations and the trigger for each,
+   and the handoff template captures state so the next responder isn't starting cold.
+4. **Close the loop back to prevention.** Flag where a runbook step reveals a gap that
+   should become monitoring or an `/slo-error-budget` action — the runbook is where the
+   loop's learnings surface the next prevention.
+   **Done when:** gaps found while writing the runbook are logged as detection/prevention
+   improvements, not silently absorbed.
+
 ## Required Inputs
 
 Ask for these if not already provided:

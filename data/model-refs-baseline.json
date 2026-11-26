@@ -1,7 +1,7 @@
 {
   "_comment": "Legacy Claude model references that are allowed to remain, by file. Written by scripts/check-model-refs.mjs --update. The check fails if a count rises or a new file appears, so this can only shrink. Each remaining file is a live API call site that needs a test call before it moves; see docs/MODELS.md.",
   "registryChecked": "2026-11-10",
-  "total": 164,
+  "total": 165,
   "files": {
     ".github/actions/score-skills/README.md": 3,
     ".github/actions/score-skills/action.yml": 2,
@@ -23,6 +23,7 @@
     "docs/ACTIVATION.md": 1,
     "docs/JEV-DECISION-LAYER.md": 1,
     "docs/LOCAL-MODELS.md": 1,
+    "docs/MODELS.md": 1,
     "docs/arena.md": 2,
     "evals/promptfoo/promptfooconfig.yaml": 1,
     "evals/run-evals.mjs": 9,

@@ -1,0 +1,23 @@
+{
+  "name": "pm-insurance",
+  "displayName": "PM Skills: Insurance",
+  "version": "1.0.0",
+  "description": "Insurance professional skills: claims triage with coverage-trigger checks, underwriting file narratives, pre-renewal reviews, and risk-register coverage-gap analysis — analytical support for claims handlers, underwriters, and brokers.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "insurance",
+    "claims",
+    "underwriting",
+    "coverage",
+    "renewal",
+    "broker"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

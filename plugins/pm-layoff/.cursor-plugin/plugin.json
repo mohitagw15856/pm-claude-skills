@@ -1,0 +1,22 @@
+{
+  "name": "pm-layoff",
+  "displayName": "PM Skills: Layoff",
+  "version": "1.0.0",
+  "description": "The layoff kit: decode the severance agreement, triage the finances, secure references, and craft the announcement — the four artifacts of a layoff handled well",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "layoff",
+    "severance",
+    "job-loss",
+    "references",
+    "career"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "pm-autopilot",
+  "displayName": "PM Skills: Autopilot",
+  "version": "1.0.0",
+  "description": "Put recurring rituals on autopilot: charter what to automate, schedule it on any runner (Claude Code routines, cron, n8n, GitHub Actions), and make every run delta-aware so it reports what changed, not what it already said. Ships with the recurring skills worth scheduling.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "automation",
+    "scheduling",
+    "recurring",
+    "routines",
+    "autopilot"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

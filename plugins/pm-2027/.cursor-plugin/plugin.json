@@ -1,0 +1,18 @@
+{
+  "name": "pm-2027",
+  "displayName": "PM Skills: 2027",
+  "version": "1.0.0",
+  "description": "2027 skills.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "2027"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

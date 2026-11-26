@@ -1,0 +1,22 @@
+{
+  "name": "pm-agentnative",
+  "displayName": "PM Skills: Agentnative",
+  "version": "1.0.0",
+  "description": "Build for the agent era: products are getting non-human users. Spec an MCP server properly, audit whether agents can actually use your product, migrate seat pricing before agents break it, design human-in-the-loop approval surfaces, and get voice agents right.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "agents",
+    "mcp",
+    "agent-ready",
+    "pricing",
+    "voice"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

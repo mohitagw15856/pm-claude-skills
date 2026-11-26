@@ -1,0 +1,27 @@
+{
+  "name": "pm-business",
+  "displayName": "PM Skills: Business",
+  "version": "1.0.0",
+  "description": "Business, strategy & governance skills: Investor Update, Board Deck Narrative, Board Pre-Read, Board Minutes, Decision Memo, Strategy Memo, Capital Allocation, and Job Application. Write investor updates investors read, structure board materials, capture formal board decisions, and make crisp strategy calls.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "product-management",
+    "business",
+    "strategy",
+    "investor-update",
+    "board-deck",
+    "board-minutes",
+    "governance",
+    "startup",
+    "career",
+    "job-application"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "pm-figma",
+  "displayName": "PM Skills: Figma",
+  "version": "1.0.0",
+  "description": "Figma skills for PMs and designers: Component Audit, Design Brief, Annotation Guide, Design Review, User Flow Planner, Variant Matrix, Spacing System, Prototype Plan, Design QA, PM Design Critique. Work smarter across the full Figma design lifecycle.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "figma",
+    "design",
+    "product-management",
+    "design-system",
+    "components",
+    "prototype",
+    "handoff",
+    "ux"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

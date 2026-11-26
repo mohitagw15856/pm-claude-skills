@@ -1,0 +1,25 @@
+{
+  "name": "pm-planning",
+  "displayName": "PM Skills: Planning",
+  "version": "3.0.0",
+  "description": "Planning & strategy skills: OKR Builder, Feature Prioritisation (RICE/MoSCoW/Kano/ICE), Roadmap Presentation, Pricing Strategy, RICE + Impact Matrix, Roadmap Narrative.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "product-management",
+    "okr",
+    "prioritisation",
+    "roadmap",
+    "pricing",
+    "rice",
+    "moscow",
+    "kano"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

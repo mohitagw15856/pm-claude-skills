@@ -1,0 +1,18 @@
+{
+  "name": "pm-maintainer",
+  "displayName": "PM Skills: Maintainer",
+  "version": "1.0.0",
+  "description": "Maintainer skills.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "maintainer"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

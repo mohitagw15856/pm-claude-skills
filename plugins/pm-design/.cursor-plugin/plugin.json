@@ -1,0 +1,25 @@
+{
+  "name": "pm-design",
+  "displayName": "PM Skills: Design",
+  "version": "1.0.0",
+  "description": "Design & UX skills: UX Research Plan, Design Critique, Accessibility Audit. Create research plans with discussion guides, critique designs using JTBD and Gestalt principles, and audit for WCAG 2.2 compliance.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "product-management",
+    "design",
+    "ux",
+    "user-research",
+    "accessibility",
+    "wcag",
+    "usability",
+    "design-critique"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

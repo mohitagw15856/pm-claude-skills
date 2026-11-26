@@ -1,0 +1,24 @@
+{
+  "name": "pm-supplychain",
+  "displayName": "PM Skills: Supplychain",
+  "version": "1.0.0",
+  "description": "Supply chain & procurement skills: weighted RFP scoring, supplier scorecards, S&OP meeting prep, demand forecast interrogation, inventory policy (ABC/XYZ), and logistics incident reports — buyer and planner judgment.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "supply-chain",
+    "procurement",
+    "rfp",
+    "sop",
+    "forecast",
+    "inventory",
+    "logistics"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

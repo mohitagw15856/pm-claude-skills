@@ -1,0 +1,25 @@
+{
+  "name": "pm-localization",
+  "displayName": "PM Skills: Localization",
+  "version": "1.0.0",
+  "description": "Translation & localization skills: Professional Translator, Transcreation, Localization Brief, Subtitle & Caption, Glossary Builder, and i18n Readiness Review. Reach every market — translation as a real job, not word-for-word.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "localization",
+    "translation",
+    "i18n",
+    "l10n",
+    "transcreation",
+    "subtitles",
+    "glossary",
+    "multilingual"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

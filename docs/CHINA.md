@@ -196,14 +196,14 @@ What is in place, and what still needs an account or a decision.
 | Item | Status | To finish |
 |---|---|---|
 | npm mirror install line | Done | Nothing. npmmirror syncs from npmjs automatically |
-| Gitee mirror | Live: gitee.com/mohitagw/pm-claude-skills, synced on every push to main by `.github/workflows/mirror-gitee.yml` | Nothing. The push key is an account SSH key (Gitee deploy keys are read-only) |
+| Gitee mirror | Live: gitee.com/mohitagw/pm-claude-skills, synced on every push to main by `.github/workflows/mirror-china.yml` | Nothing. The push key is an account SSH key (Gitee deploy keys are read-only) |
 | ModelScope dataset mirror | Live: modelscope.ai mohitagw15856/pm-skills-instruct, published on every release by `.github/workflows/publish-modelscope.yml` | Nothing. Uses secret `MODELSCOPE_TOKEN` and variables `MODELSCOPE_DATASET` and `MODELSCOPE_HOST` |
 | Chinese model providers in the playground | Done in `web/providers.js` | Doubao is untested with a real key: its error responses carry no CORS headers, so only a valid key and activated model will work |
 | Trae, Qoder, Lingma, CodeBuddy | Done in `bin/cli.mjs` (`--agent`) | Rule files are generated at install time, not committed |
 | Router understands Chinese | Done (`integrations/jev/catalog.mjs`, `find`) | Coverage grows with every translated description in `skills-i18n/zh/` |
 | Hosted MCP and usage counter reachable from China | **Needs a custom domain** | `workers.dev` is blocked in mainland China. Add a domain to Cloudflare, attach it to the `pm-skills-mcp` worker (Workers, Settings, Domains and Routes, Add custom domain), then point `web/providers.js`, `web/nav.js`, `web/app.js` and `web/live.js` at it. Even then, reachability from China is not guaranteed |
 | Playground reachable from China | Partly | GitHub Pages is slow or blocked at times. A copy is published to the ModelScope Studio mohitagw15856/pm-skills-playground by `.github/workflows/publish-modelscope-studio.yml` (variable `MODELSCOPE_STUDIO`); its deployment framework is Static, saved in the Studio's `ms_deploy.json`, which the sync keeps. A mainland host of our own would need an ICP filing |
-| GitCode mirror | Workflow ready: `.github/workflows/mirror-gitcode.yml` | Create the GitCode repository, add an SSH key to the GitCode account, set secret `GITCODE_SSH_KEY` and variable `GITCODE_REPO` |
+| GitCode mirror | Workflow ready: `.github/workflows/mirror-china.yml` | Create the GitCode repository, add an SSH key to the GitCode account, set secret `GITCODE_SSH_KEY` and variable `GITCODE_REPO` |
 | Chinese release notes on Gitee | Workflow ready: `.github/workflows/publish-gitee-release.yml`, notes in `docs/releases-zh/<tag>.md` | Create a Gitee personal access token (projects scope) and set secret `GITEE_TOKEN` |
 | Dify plugin | `.github/workflows/deploy-playground.yml` publishes [`pm_skills.difypkg`](https://mohitagw15856.github.io/pm-claude-skills/dify/pm_skills.difypkg) with the site | Nothing. Marketplace listing would need Dify's review and signing |
 | Chinese routing quality | `docs/ZH-ROUTING.md`, 200 requests, `npm run eval:zh-routing` | Nothing |

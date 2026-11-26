@@ -7,7 +7,7 @@ description: "Runs a structured PM design review against product requirements. U
 
 Runs a structured PM design review — checking that a design meets product requirements, covers all user flows, and is ready for engineering. This is a requirements-and-outcomes review, not an aesthetic critique.
 
-> **Not quite this?** Use `figma-design-qa` when you need a strict check against the spec.
+> **Not quite this?** Use `figma-design-qa` when you need a strict check against the spec. Use `design-doc-review` when the thing under review is a written technical design document or RFC, not a visual design.
 
 ## Required Inputs
 
@@ -79,5 +79,5 @@ Approved / Approved with changes (list) / Needs revision (focus area + next revi
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-design-review.html
 
-<!-- pm-claude-skills v84.0.0 | skill: figma-design-review | source: skills/figma-design-review/SKILL.md | sha256: d9be428b40f0b57eaaa9857ed2b6ac2eea7e98a696c02df1455f6f625de38954 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: figma-design-review | source: skills/figma-design-review/SKILL.md | sha256: b319d09e104212c0ab499317d348a53e7a59b42dcd2baf1c2d16622ad63ab4de | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

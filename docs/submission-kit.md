@@ -40,7 +40,7 @@ Opened from your account by Claude (see the PR links in the session summary) —
 
 ## 5. After all four
 
-Update the "Still to submit" section of [`OPERATIONS.md`](../OPERATIONS.md) — move the completed ones into the live-links table with their listing URLs.
+Update the "Still to submit" section of [`OPERATIONS.md`](OPERATIONS.md) — move the completed ones into the live-links table with their listing URLs.
 
 ---
 

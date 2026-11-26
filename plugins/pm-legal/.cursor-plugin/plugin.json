@@ -1,0 +1,29 @@
+{
+  "name": "pm-legal",
+  "displayName": "PM Skills: Legal",
+  "version": "1.2.0",
+  "description": "Legal skills: Contract Review, NDA Analyser, Legal Brief, Compliance Checklist, Privacy Policy Drafter, Demand Letter, Clause Explainer. Flag risks in contracts and NDAs, draft legal memos in IRAC format, generate GDPR/SOC 2/FCA compliance checklists, draft plain-language privacy policies and demand letters, and decode any contract clause. Not a substitute for qualified legal advice.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "legal",
+    "contract-review",
+    "nda",
+    "compliance",
+    "gdpr",
+    "legal-brief",
+    "risk",
+    "privacy-policy",
+    "demand-letter",
+    "cease-and-desist",
+    "clause",
+    "ccpa"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

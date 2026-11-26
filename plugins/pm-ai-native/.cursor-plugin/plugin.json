@@ -1,0 +1,22 @@
+{
+  "name": "pm-ai-native",
+  "displayName": "PM Skills: Ai Native",
+  "version": "1.0.0",
+  "description": "Skills for using AI itself well — picking the right tool, delegating to it, briefing it with context, designing AI workflows, verifying its output, and catching its mistakes.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "agents",
+    "prompting",
+    "automation",
+    "productivity"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

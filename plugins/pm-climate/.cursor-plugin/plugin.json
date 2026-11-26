@@ -1,0 +1,24 @@
+{
+  "name": "pm-climate",
+  "displayName": "PM Skills: Climate",
+  "version": "1.0.0",
+  "description": "Sustainability & ESG skills allergic to greenwash: GHG inventory sanity checks, CSRD/ESRS-flavored disclosure drafting, climate risk assessment (physical + transition), and a greenwashing self-audit that grades your claims before someone else does.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "esg",
+    "sustainability",
+    "carbon",
+    "ghg",
+    "csrd",
+    "climate-risk",
+    "greenwashing"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

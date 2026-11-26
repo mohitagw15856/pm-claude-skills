@@ -1,6 +1,6 @@
 ---
 name: wage-garnishment-response
-description: "Respond fast when your wages are being garnished or about to be — the deadlines, the exemptions that can reduce or stop it, and the steps that actually protect your paycheck. Use when asked they're garnishing my wages, how do I stop wage garnishment, I got a garnishment notice, or can they take my whole paycheck. Produces the urgent-deadline map (garnishments have short windows to object), the exemptions that may reduce or stop it (income limits, protected funds like benefits, head-of-household), how to file a claim of exemption or challenge, options to negotiate or resolve the underlying debt, and where to get legal aid immediately — so you act inside the window instead of watching your pay disappear. Not legal advice; centers fast legal-aid help."
+description: "Respond fast when your wages are being garnished or about to be — the deadlines, the exemptions that can reduce or stop it, and the steps that protect your paycheck. Use when asked they're garnishing my wages, how do I stop wage garnishment, I got a garnishment notice, or can they take my whole paycheck. Produces the urgent-deadline map, the exemptions that may reduce or stop it (income caps, protected funds like benefits, head-of-household), how to file a claim of exemption, options to resolve the underlying debt, and where to get legal aid immediately. Not legal advice; centers fast legal-aid help."
 ---
 
 # Wage-Garnishment Response

@@ -1,0 +1,119 @@
+{
+  "name": "PM Skills: find and fetch a skill",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a1",
+      "name": "Run manually",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "q1",
+              "name": "query",
+              "value": "explain a metric drop to leadership",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a2",
+      "name": "What you need",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://pm-skills-mcp.pm-claude-skills.workers.dev/v1/search",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "q",
+              "value": "={{ $json.query }}"
+            },
+            {
+              "name": "limit",
+              "value": "5"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a3",
+      "name": "Search skills",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://pm-skills-mcp.pm-claude-skills.workers.dev/v1/skills/{{ encodeURIComponent($json.skills[0].name) }}",
+        "options": {}
+      },
+      "id": "a4",
+      "name": "Get the best match",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Run manually": {
+      "main": [
+        [
+          {
+            "node": "What you need",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "What you need": {
+      "main": [
+        [
+          {
+            "node": "Search skills",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search skills": {
+      "main": [
+        [
+          {
+            "node": "Get the best match",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}

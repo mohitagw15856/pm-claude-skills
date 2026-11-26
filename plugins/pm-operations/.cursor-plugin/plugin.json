@@ -1,0 +1,27 @@
+{
+  "name": "pm-operations",
+  "displayName": "PM Skills: Operations",
+  "version": "1.2.0",
+  "description": "Operations & procurement skills: Process Documentation, SOP Writer, Vendor Evaluation, RFP Writer, Vendor Contract Checklist, Project Status Report, Workshop Facilitation Guide. Document workflows, write audit-ready SOPs and RFPs, evaluate vendors and review their contracts, produce RAG status reports, and design facilitated workshops.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "operations",
+    "process",
+    "sop",
+    "vendor",
+    "procurement",
+    "project-management",
+    "rag-status",
+    "facilitation",
+    "workshop",
+    "working-session"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

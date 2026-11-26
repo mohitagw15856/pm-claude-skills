@@ -1,0 +1,24 @@
+{
+  "name": "pm-analytics",
+  "displayName": "PM Skills: Analytics",
+  "version": "3.0.0",
+  "description": "Data & metrics skills: Data Analysis Standard, Retention Analysis, Product Health Analysis. Structure metric deep-dives, funnel analysis, cohort studies and churn investigations.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "product-management",
+    "analytics",
+    "retention",
+    "metrics",
+    "funnel",
+    "cohort",
+    "churn"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "pm-nonprofit",
+  "displayName": "PM Skills: Nonprofit",
+  "version": "1.0.0",
+  "description": "Nonprofit fundraising & stewardship skills: Impact Report, Case for Support, and Donor Update. Show funders what their giving achieved and keep supporters close.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "nonprofit",
+    "fundraising",
+    "donor",
+    "impact-report",
+    "case-for-support",
+    "stewardship",
+    "grants"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

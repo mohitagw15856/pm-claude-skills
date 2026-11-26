@@ -1,0 +1,25 @@
+{
+  "name": "pm-jobsearch",
+  "displayName": "PM Skills: Jobsearch",
+  "version": "1.0.0",
+  "description": "Land the job: JD Decoder, Company Brief, Outreach Message, Follow-Up Sequence, and Interview Prep. The active-job-hunt toolkit — pairs with the pm-personal documents (resume, cover letter, LinkedIn) and the Job Search hub.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "job-search",
+    "interview-prep",
+    "job-description",
+    "networking",
+    "outreach",
+    "follow-up",
+    "career",
+    "hiring"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

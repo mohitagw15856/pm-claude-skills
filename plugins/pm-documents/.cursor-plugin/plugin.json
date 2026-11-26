@@ -1,0 +1,25 @@
+{
+  "name": "pm-documents",
+  "displayName": "PM Skills: Documents",
+  "version": "1.0.0",
+  "description": "Produce real, editable Office files (not markdown): Excel Model (live formulas), Slide Deck (.pptx), and Word Document (.docx). Generated via openpyxl / python-pptx / python-docx — needs a code-execution environment (Claude Code, API code tool, or Claude.ai).",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "docx",
+    "pptx",
+    "xlsx",
+    "excel",
+    "powerpoint",
+    "word",
+    "document-generation",
+    "office"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

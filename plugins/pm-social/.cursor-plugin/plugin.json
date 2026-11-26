@@ -1,0 +1,24 @@
+{
+  "name": "pm-social",
+  "displayName": "PM Skills: Social",
+  "version": "1.0.0",
+  "description": "Social Media skills: Social Media Audit, Influencer Brief, Community Management Playbook, Social Ad Campaign, Viral Content Framework. Score your social presence, brief influencer partnerships, manage communities at scale, plan paid social campaigns with full ad copy, and build a repeatable system for shareable content.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "social-media",
+    "influencer-marketing",
+    "community-management",
+    "paid-social",
+    "content-strategy",
+    "viral-content",
+    "social-audit"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

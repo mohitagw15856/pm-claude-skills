@@ -5,7 +5,7 @@
 # risk; this file lets trusted co-maintainers own the bundles they know.
 #
 # Today every path resolves to the maintainer. As co-maintainers join
-# (see MAINTAINERS.md), add a line per bundle ABOVE the catch-all — later
+# (see docs/MAINTAINERS.md), add a line per bundle ABOVE the catch-all — later
 # lines win, so specific bundle rules must come after the default.
 
 # Default: everything

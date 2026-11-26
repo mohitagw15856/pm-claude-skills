@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1386 skills exported. Copy a `.mdc rule` into the tool to use it.
+1397 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 Every file ends with a provenance comment: library version, source path, the SHA-256 of the source
 `SKILL.md` and the licence. The same hash is published at `https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json`,
@@ -69,6 +69,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | API Test Plan | `pm-qa` | `pm-qa/api-test-plan/api-test-plan.mdc` |
 | API Versioning Strategy | `pm-engineering` | `pm-engineering/api-versioning-strategy/api-versioning-strategy.mdc` |
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/apology-letter.mdc` |
+| App Store Submission Guard | `pm-fieldwork` | `pm-fieldwork/app-store-submission-guard/app-store-submission-guard.mdc` |
 | Appliance Buying Guide | `pm-lifeadmin` | `pm-lifeadmin/appliance-buying-guide/appliance-buying-guide.mdc` |
 | Application Tracker | `pm-cv` | `pm-cv/application-tracker/application-tracker.mdc` |
 | Apprentice First Week | `pm-trades` | `pm-trades/apprentice-first-week/apprentice-first-week.mdc` |
@@ -341,7 +342,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Cross-border Platform Playbook (跨境平台选择与入驻) | `pm-chuhai` | `pm-chuhai/crossborder-platform-playbook/crossborder-platform-playbook.mdc` |
 | Crypto Prices | `pm-live` | `pm-live/crypto-prices/crypto-prices.mdc` |
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/cs-escalation-brief.mdc` |
-| Customer Health Scorecard | `pm-cs` | `pm-cs/cs-health-scorecard/cs-health-scorecard.mdc` |
+| Customer Health Scorecard | `pm-daily-ten` | `pm-daily-ten/cs-health-scorecard/cs-health-scorecard.mdc` |
 | CSAT / NPS Analysis | `pm-support` | `pm-support/csat-nps-analysis/csat-nps-analysis.mdc` |
 | Currency Rates | `pm-live` | `pm-live/currency-rates/currency-rates.mdc` |
 | Customer Advisory Board | `pm-pmm` | `pm-pmm/customer-advisory-board/customer-advisory-board.mdc` |
@@ -406,6 +407,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Demo Clip Storyboard | `pm-oss-launch` | `pm-oss-launch/demo-clip-storyboard/demo-clip-storyboard.mdc` |
 | Demo Data Generator | `pm-oss-launch` | `pm-oss-launch/demo-data-generator/demo-data-generator.mdc` |
 | Demo Script | `pm-cowork` | `pm-cowork/demo-script/demo-script.mdc` |
+| Demo Video Kit | `pm-fieldwork` | `pm-fieldwork/demo-video-kit/demo-video-kit.mdc` |
 | Dental Clinical Note | `pm-dentistry` | `pm-dentistry/dental-clinical-note/dental-clinical-note.mdc` |
 | Dental Emergency Triage | `pm-dentistry` | `pm-dentistry/dental-emergency-triage/dental-emergency-triage.mdc` |
 | Dental Pre-Authorisation & Claim Narrative | `pm-dentistry` | `pm-dentistry/dental-insurance-preauth/dental-insurance-preauth.mdc` |
@@ -416,6 +418,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Dependency Conflict Resolver | `pm-engineering` | `pm-engineering/dependency-conflict-resolver/dependency-conflict-resolver.mdc` |
 | Deprecation Comms Plan | `pm-devrel` | `pm-devrel/deprecation-comms-plan/deprecation-comms-plan.mdc` |
 | Design Critique | `pm-design` | `pm-design/design-critique/design-critique.mdc` |
+| Design Doc Review | `pm-fieldwork` | `pm-fieldwork/design-doc-review/design-doc-review.mdc` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/design-handoff-brief.mdc` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/design-system-audit.mdc` |
 | Design System Generate | `pm-design` | `pm-design/design-system-generate/design-system-generate.mdc` |
@@ -481,6 +484,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Engineering Weekly Report | `pm-engineering` | `pm-engineering/engineering-weekly-report/engineering-weekly-report.mdc` |
 | Entity-Relationship Diagram | `pm-visuals` | `pm-visuals/entity-relationship-diagram/entity-relationship-diagram.mdc` |
 | Epic Progress Report | `pm-delivery` | `pm-delivery/epic-progress-report/epic-progress-report.mdc` |
+| Equity Research Note | `pm-fieldwork` | `pm-fieldwork/equity-research-note/equity-research-note.mdc` |
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/error-decoder.mdc` |
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/error-message-writer.mdc` |
 | Escalate or Hold | `pm-decisions` | `pm-decisions/escalate-or-hold/escalate-or-hold.mdc` |
@@ -508,7 +512,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Executing Plans | `pm-method` | `pm-method/executing-plans/executing-plans.mdc` |
 | Executive CV | `pm-cv` | `pm-cv/executive-cv/executive-cv.mdc` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/executive-presence.mdc` |
-| Executive Summary | `pm-cross` | `pm-cross/executive-summary/executive-summary.mdc` |
+| Executive Summary | `pm-daily-ten` | `pm-daily-ten/executive-summary/executive-summary.mdc` |
 | Executive Update | `pm-strategy` | `pm-strategy/executive-update/executive-update.mdc` |
 | Exit Interview Strategy | `pm-resignation` | `pm-resignation/exit-interview-strategy/exit-interview-strategy.mdc` |
 | Exit Waterfall | `pm-calculators` | `pm-calculators/exit-waterfall/exit-waterfall.mdc` |
@@ -529,6 +533,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Expungement Navigator | `pm-reentry` | `pm-reentry/expungement-navigator/expungement-navigator.mdc` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/fact-check-pass.mdc` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/factory-acceptance-test.mdc` |
+| Failure Pattern Library | `pm-fieldwork` | `pm-fieldwork/failure-pattern-library/failure-pattern-library.mdc` |
 | Fair Split | `pm-calculators` | `pm-calculators/fair-split/fair-split.mdc` |
 | Faith Transition Companion | `pm-identity` | `pm-identity/faith-transition-companion/faith-transition-companion.mdc` |
 | Family Cookbook Archivist | `pm-family` | `pm-family/family-cookbook-archivist/family-cookbook-archivist.mdc` |
@@ -770,6 +775,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | LinkedIn Profile | `pm-personal` | `pm-personal/linkedin-profile/linkedin-profile.mdc` |
 | Literature Review | `pm-research` | `pm-research/literature-review/literature-review.mdc` |
 | Literature Review Builder | `pm-students` | `pm-students/literature-review-builder/literature-review-builder.mdc` |
+| Live Competitor Capture | `pm-fieldwork` | `pm-fieldwork/live-competitor-capture/live-competitor-capture.mdc` |
 | Livestream Sales Script (直播带货) | `pm-zh-content` | `pm-zh-content/livestream-sales-script/livestream-sales-script.mdc` |
 | LLM Cost & Latency Budget | `pm-ai` | `pm-ai/llm-cost-latency-budget/llm-cost-latency-budget.mdc` |
 | LLM Guardrails Spec | `pm-ai` | `pm-ai/llm-guardrails-spec/llm-guardrails-spec.mdc` |
@@ -973,6 +979,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Process Documentation | `pm-operations` | `pm-operations/process-documentation/process-documentation.mdc` |
 | Product Description | `pm-ecommerce` | `pm-ecommerce/product-description/product-description.mdc` |
 | Product Health Analysis | `pm-analytics` | `pm-analytics/product-health-analysis/product-health-analysis.mdc` |
+| Product Knowledge Graph | `pm-fieldwork` | `pm-fieldwork/product-knowledge-graph/product-knowledge-graph.mdc` |
 | Product Launch Checklist | `pm-delivery` | `pm-delivery/product-launch-checklist/product-launch-checklist.mdc` |
 | Product Naming | `pm-uxwriting` | `pm-uxwriting/product-naming/product-naming.mdc` |
 | Product Positioning Doc | `pm-gtm` | `pm-gtm/product-positioning-doc/product-positioning-doc.mdc` |
@@ -1120,6 +1127,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Scholarship Essay | `pm-students` | `pm-students/scholarship-essay/scholarship-essay.mdc` |
 | School Choice Decision | `pm-family` | `pm-family/school-choice-decision/school-choice-decision.mdc` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/scope-creep-response.mdc` |
+| Scope Cutter | `pm-fieldwork` | `pm-fieldwork/scope-cutter/scope-cutter.mdc` |
 | Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/screen-time-detox.mdc` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/screenshot-teardown.mdc` |
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/second-opinion-request.mdc` |
@@ -1207,6 +1215,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Statement of Work | `pm-consulting` | `pm-consulting/statement-of-work/statement-of-work.mdc` |
 | Status Report Pipeline | `pm-cowork` | `pm-cowork/status-report-pipeline/status-report-pipeline.mdc` |
 | Steelman the Weird Option | `pm-thinking` | `pm-thinking/steelman-the-weird-option/steelman-the-weird-option.mdc` |
+| Stitch Design Handoff | `pm-fieldwork` | `pm-fieldwork/stitch-design-handoff/stitch-design-handoff.mdc` |
 | Stock Snapshot | `pm-live` | `pm-live/stock-snapshot/stock-snapshot.mdc` |
 | Stock Take Plan | `pm-retail-shopfloor` | `pm-retail-shopfloor/stock-take-plan/stock-take-plan.mdc` |
 | Stoic Setback Debrief | `pm-dead-mentors` | `pm-dead-mentors/stoic-setback-debrief/stoic-setback-debrief.mdc` |
@@ -1237,6 +1246,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Support Staffing Model | `pm-calculators` | `pm-calculators/support-staffing-model/support-staffing-model.mdc` |
 | Support the Bereaved | `pm-grief` | `pm-grief/support-the-bereaved/support-the-bereaved.mdc` |
 | Survey Design Basics | `pm-cowork` | `pm-cowork/survey-design-basics/survey-design-basics.mdc` |
+| SVG Diagram Studio | `pm-fieldwork` | `pm-fieldwork/svg-diagram-studio/svg-diagram-studio.mdc` |
 | Sycophancy Challenger | `pm-cross` | `pm-cross/sycophancy-challenger/sycophancy-challenger.mdc` |
 | Synthetic User Research | `pm-research` | `pm-research/synthetic-user-research/synthetic-user-research.mdc` |
 | System Design Interview | `pm-engineering` | `pm-engineering/system-design-interview/system-design-interview.mdc` |
@@ -1346,6 +1356,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Venue Access Check | `pm-accessibility` | `pm-accessibility/venue-access-check/venue-access-check.mdc` |
 | Venue Contract Review | `pm-events` | `pm-events/venue-contract-review/venue-contract-review.mdc` |
 | Verification Before Completion | `pm-method` | `pm-method/verification-before-completion/verification-before-completion.mdc` |
+| Verified Security Audit | `pm-fieldwork` | `pm-fieldwork/verified-security-audit/verified-security-audit.mdc` |
 | Version Chaos Untangler | `pm-cowork` | `pm-cowork/version-chaos-untangler/version-chaos-untangler.mdc` |
 | Vet Estimate Decoder | `pm-decoders` | `pm-decoders/vet-estimate-decoder/vet-estimate-decoder.mdc` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/viral-content-framework.mdc` |
