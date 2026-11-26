@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-11-09T17:40:44.451Z",
+  "generatedAt": "2026-11-23T19:21:38.839Z",
   "window": "7d",
   "skills": [
+    {
+      "name": "youtube-script-writer",
+      "count": 6
+    },
+    {
+      "name": "system-design-interview",
+      "count": 3
+    },
+    {
+      "name": "short-form-script",
+      "count": 2
+    },
     {
       "name": "meeting-notes",
       "count": 2
     },
     {
-      "name": "exam-study-plan",
+      "name": "hook-writer",
       "count": 1
     },
     {
-      "name": "idea-storm",
+      "name": "ab-test-planner",
       "count": 1
     },
     {
-      "name": "interview-me",
+      "name": "dental-clinical-note",
       "count": 1
     },
     {
-      "name": "the-thesis-defense",
-      "count": 1
-    },
-    {
-      "name": "expense-audit",
-      "count": 1
-    },
-    {
-      "name": "clip-factory",
-      "count": 1
-    },
-    {
-      "name": "board-minutes",
+      "name": "resignation-letter",
       "count": 1
     }
   ]
