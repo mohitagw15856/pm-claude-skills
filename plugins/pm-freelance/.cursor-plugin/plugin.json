@@ -1,0 +1,22 @@
+{
+  "name": "pm-freelance",
+  "displayName": "PM Skills: Freelance",
+  "version": "1.0.0",
+  "description": "Freelance business survival: price your services with structure, shut down scope creep without losing the client, and collect late invoices with a graduated ladder",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "freelance",
+    "pricing",
+    "scope-creep",
+    "invoicing",
+    "consulting"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

@@ -1,5 +1,5 @@
 name: "📈 Share an ROI story"
-description: Tell us how a skill saved you time — we'll feature it (with credit) in CASE_STUDIES.md, the site, and the README.
+description: Tell us how a skill saved you time — we'll feature it (with credit) in docs/CASE_STUDIES.md, the site, and the README.
 title: "[ROI] <skill> saved <time>"
 labels: ["roi-story"]
 body:

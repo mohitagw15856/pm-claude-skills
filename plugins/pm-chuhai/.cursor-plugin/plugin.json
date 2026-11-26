@@ -1,0 +1,26 @@
+{
+  "name": "pm-chuhai",
+  "displayName": "PM Skills: Chuhai",
+  "version": "1.0.0",
+  "description": "The 出海 pack for Chinese companies going global: market entry planning, choosing and launching on Temu, TikTok Shop, Amazon and SHEIN, cross-border marketplace listings written for the buyer, and a PIPL and GDPR crosswalk for data flowing in and out of China",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "chuhai",
+    "go-global",
+    "cross-border",
+    "pipl",
+    "gdpr",
+    "ecommerce",
+    "temu",
+    "tiktok-shop",
+    "amazon"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

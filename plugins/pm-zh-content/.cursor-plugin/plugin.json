@@ -1,0 +1,27 @@
+{
+  "name": "pm-zh-content",
+  "displayName": "PM Skills: Zh Content",
+  "version": "1.1.0",
+  "description": "Chinese content platforms: 小红书 notes, 公众号 articles, 抖音 and 视频号 short-video scripts, B站 video scripts, 知乎 answers, 小宇宙 podcast outlines and live-commerce (直播带货) scripts, each with a compliance check against restricted advertising claims and undisclosed sponsorship",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "xiaohongshu",
+    "wechat",
+    "douyin",
+    "livestream",
+    "content",
+    "chinese",
+    "bilibili",
+    "zhihu",
+    "wechat-channels",
+    "podcast"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

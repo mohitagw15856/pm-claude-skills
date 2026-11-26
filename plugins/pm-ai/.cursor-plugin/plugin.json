@@ -1,0 +1,25 @@
+{
+  "name": "pm-ai",
+  "displayName": "PM Skills: Ai",
+  "version": "1.1.0",
+  "description": "AI/ML engineering skills for shipping AI features responsibly: Model Card, AI Eval Plan, RAG Design Doc, Agent Spec, Dataset Datasheet, AI Feature PRD, LLM Cost & Latency Budget, Prompt Optimizer, Eval Rubric Designer, RAG Architecture Review, LLM Guardrails Spec, Agent Design Review, and Model Selection Advisor.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "ml",
+    "llm",
+    "rag",
+    "agents",
+    "model-card",
+    "evaluation",
+    "ai-engineering"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

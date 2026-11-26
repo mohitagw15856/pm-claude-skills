@@ -1,7 +1,7 @@
 name: Design tokens
 
 # The design system document must match the stylesheet, and the number of
-# stray values in the stylesheet may only go down. See DESIGN.md.
+# stray values in the stylesheet may only go down. See docs/DESIGN.md.
 
 on:
   push:

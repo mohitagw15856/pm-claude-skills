@@ -1,0 +1,26 @@
+{
+  "name": "pm-personal",
+  "displayName": "PM Skills: Personal",
+  "version": "1.0.0",
+  "description": "Personal & professional documents for you: Resume/CV, Cover Letter, Personal Bio, LinkedIn Profile, Portfolio Page, and One-Pager. Pair with the playground's themed PDF export for beautifully typeset output.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "resume",
+    "cv",
+    "cover-letter",
+    "linkedin",
+    "portfolio",
+    "bio",
+    "one-pager",
+    "personal-branding",
+    "job-search"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

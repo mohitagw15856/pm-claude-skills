@@ -1,5 +1,5 @@
 {
-  "_comment": "Curated role personas: each maps to a skill loadout + the matching Workflow Recipe + subagent. Canonical source for the playground onboarding chips (web/app.js) and PERSONAS.md. Keep skill names in sync with skills.json.",
+  "_comment": "Curated role personas: each maps to a skill loadout + the matching Workflow Recipe + subagent. Canonical source for the playground onboarding chips (web/app.js) and docs/PERSONAS.md. Keep skill names in sync with skills.json.",
   "personas": [
     {
       "id": "product-manager", "name": "Product Manager", "emoji": "📦",

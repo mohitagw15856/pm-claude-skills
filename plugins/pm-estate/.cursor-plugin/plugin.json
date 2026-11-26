@@ -1,0 +1,22 @@
+{
+  "name": "pm-estate",
+  "displayName": "PM Skills: Estate",
+  "version": "1.0.0",
+  "description": "The estate pack: the first two weeks after a death, the executor's settlement ladder, the digital legacy plan, and the beneficiary audit that catches what wills can't override",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "estate",
+    "executor",
+    "death",
+    "legacy",
+    "beneficiary"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

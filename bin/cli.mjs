@@ -940,7 +940,7 @@ Usage:
   npx pm-claude-skills install <owner/repo>   # install skills from ANY GitHub repo — security-scanned + SkillSpec-graded
   npx pm-claude-skills install @<namespace>/<skill>   # by name from the signed community registry (hash-pinned; --verify-signature)
   npx pm-claude-skills prove --skill <dir> --tasks <file>  # A/B-verify a skill: on vs off, real token counts\n  npx pm-claude-skills mcp-audit [--connect]        # your MCP servers are charging you rent - measure it
-  npx pm-claude-skills skillcheck [--dir <path>]    # validate your own SKILL.md files (--strict, --json)\n  npx pm-claude-skills verify                 # integrity check: detect drift in anything "install" brought in
+  npx pm-claude-skills skillcheck [--dir <path>]    # validate your own SKILL.md files (--strict, --json)\n  npx pm-claude-skills lint <file.md>               # lint a finished document: placeholders, PRD metrics with no number, unowned actions (--type, --strict, --json)\n  npx pm-claude-skills verify                 # integrity check: detect drift in anything "install" brought in
   npx pm-claude-skills chain <workflow>       # run a whole multi-skill pipeline (chain --list to see them)
   npx pm-claude-skills pipeline list|validate|run <id> --input in.json   # typed chains: each step bound to the next by contract
   npx pm-claude-skills mission list|plan|run <id> --input in.json        # pipelines chained into one long run with checkpoints and resume
@@ -1110,6 +1110,12 @@ else if (cmd === 'skillcheck') {
   process.argv = [process.argv[0], process.argv[1], ...process.argv.slice(3)];
   const { run } = await import('./skillcheck.mjs');
   run();
+}
+else if (cmd === 'lint') {
+  // Deterministic checks on a finished document (placeholders, a PRD with no number
+  // in its metrics, action items with no owner). No model call.
+  const { run } = await import('./doclint.mjs');
+  process.exit(run(process.argv.slice(3)));
 }
 else if (cmd === 'verify') {
   const { run } = await import('./verify.mjs');

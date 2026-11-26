@@ -1,0 +1,22 @@
+{
+  "name": "pm-agentops",
+  "displayName": "PM Skills: Agentops",
+  "version": "1.0.0",
+  "description": "Operate AI agents and LLM features in production: prompt regression suites, model migration plans, context-engineering reviews, agent incident postmortems, and observability specs — plus the pm-ai evaluation and cost skills they build on.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "agentops",
+    "llmops",
+    "evals",
+    "observability",
+    "ai-operations"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

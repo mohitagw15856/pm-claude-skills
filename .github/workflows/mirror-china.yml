@@ -1,0 +1,89 @@
+name: Mirror to Gitee and GitCode
+
+# Keeps read-only mirrors on Gitee and GitCode, which are faster and more reliable than
+# GitHub from mainland China. Pushes main and the release tags after every push to main,
+# and once a day as a catch-up. One workflow run covers both hosts (two jobs), where
+# there used to be one workflow per host.
+#
+# Each host does nothing until it is set up, so forks and the main repo stay green:
+#   1. Create an empty repository on the host (for example mohitagw15856/pm-claude-skills).
+#   2. Create an SSH key pair and add the public key to your account's SSH keys there
+#      (Gitee deploy keys are read-only, so they cannot push).
+#   3. In this repository's settings, add the secret GITEE_SSH_KEY or GITCODE_SSH_KEY
+#      (the private key) and the variable GITEE_REPO or GITCODE_REPO (owner/name).
+# See docs/CHINA.md.
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  schedule:
+    - cron: '20 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mirror-china
+  cancel-in-progress: true
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { label: Gitee, key: GITEE, host: gitee.com }
+          - { label: GitCode, key: GITCODE, host: gitcode.com }
+    name: Mirror to ${{ matrix.label }}
+    env:
+      LABEL: ${{ matrix.label }}
+      KEY_NAME: ${{ matrix.key }}
+      MIRROR_HOST: ${{ matrix.host }}
+      MIRROR_SSH_KEY: ${{ secrets[format('{0}_SSH_KEY', matrix.key)] }}
+      MIRROR_REPO: ${{ vars[format('{0}_REPO', matrix.key)] }}
+    steps:
+      - name: Check the mirror is set up
+        id: gate
+        run: |
+          if [ -z "$MIRROR_SSH_KEY" ] || [ -z "$MIRROR_REPO" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::${KEY_NAME}_SSH_KEY or ${KEY_NAME}_REPO is not set; skipping the ${LABEL} mirror (see docs/CHINA.md)."
+          elif ! printf '%s' "$MIRROR_REPO" | grep -Eq '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$'; then
+            echo "::error::${KEY_NAME}_REPO must look like owner/name"
+            exit 1
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v7
+        if: steps.gate.outputs.enabled == 'true'
+        with:
+          fetch-depth: 0
+      - name: Push main and tags to the mirror
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$MIRROR_SSH_KEY" > ~/.ssh/mirror && chmod 600 ~/.ssh/mirror
+          ssh-keyscan -t ed25519,rsa "$MIRROR_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/mirror -o IdentitiesOnly=yes"
+          git remote add mirror "git@${MIRROR_HOST}:${MIRROR_REPO}.git"
+          # Mirror readers see the Chinese README first: README.zh-CN.md becomes README.md and
+          # the English one becomes README.en.md, which the host offers as the English version.
+          # This one extra commit exists only on the mirror and is rebuilt on every sync.
+          git config user.name "pm-skills-bot"
+          git config user.email "actions@github.com"
+          if [ -f README.zh-CN.md ]; then
+            git mv -f README.md README.en.md
+            cp README.zh-CN.md README.md
+            sed -i 's#](README.md)#](README.en.md)#g; s#href="README.md"#href="README.en.md"#g' README.md README.zh-TW.md README.ko.md
+            git add README.md README.en.md README.zh-TW.md README.ko.md
+            git commit -q -m "${LABEL}: 中文 README 优先 (README.en.md is the English version)"
+          fi
+          # The host occasionally refuses a connection; retry with back-off before failing.
+          push() { for i in 1 2 3; do "$@" && return 0; echo "::warning::push attempt $i failed; retrying"; sleep $((i * 20)); done; return 1; }
+          push git push --force mirror HEAD:refs/heads/main
+          push git push --force mirror 'refs/tags/v*:refs/tags/v*' || echo "::warning::tag push failed; main was mirrored"
+          rm -f ~/.ssh/mirror

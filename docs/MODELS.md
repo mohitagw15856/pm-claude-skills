@@ -52,7 +52,7 @@ It scans the repository for Claude model ids and fails on two things: an id the 
 
 ## What is not migrated yet
 
-164 references in 77 files still name a legacy model. They are live call sites that this repository cannot test without spending credit: the Cloudflare Workers, the browser pages that call the API with the visitor's key, and workflow files. Each needs one real call to confirm the three changes above before its default moves. They all still work, because the legacy ids are still served.
+165 references in 78 files still name a legacy model (one of them is the legacy row in the table above). They are live call sites that this repository cannot test without spending credit: the Cloudflare Workers, the browser pages that call the API with the visitor's key, and workflow files. Each needs one real call to confirm the three changes above before its default moves. They all still work, because the legacy ids are still served.
 
 To migrate one:
 

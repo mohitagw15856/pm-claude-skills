@@ -1,0 +1,25 @@
+{
+  "name": "pm-consulting",
+  "displayName": "PM Skills: Consulting",
+  "version": "1.0.0",
+  "description": "Consulting & freelance skills: Consulting Proposal, Statement of Work, Client Discovery, Case Study Write-up, Rate Card, and Engagement Retro. Win, scope, deliver, and grow client work — pairs with the themed PDF export.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "consulting",
+    "freelance",
+    "proposal",
+    "statement-of-work",
+    "client",
+    "case-study",
+    "pricing",
+    "agency"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

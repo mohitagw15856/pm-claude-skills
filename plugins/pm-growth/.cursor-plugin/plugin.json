@@ -1,0 +1,27 @@
+{
+  "name": "pm-growth",
+  "displayName": "PM Skills: Growth",
+  "version": "1.0.0",
+  "description": "Growth & marketing skills: Marketing Funnel Plan, Lifecycle/CRM Plan, Paid Acquisition Plan, Growth Experiment Backlog, Retention Loop Design, Referral Program Design, Messaging Framework, and Conversion Rate Optimization.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "growth",
+    "marketing",
+    "funnel",
+    "lifecycle",
+    "crm",
+    "paid-acquisition",
+    "retention",
+    "referral",
+    "cro",
+    "messaging"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

@@ -152,5 +152,11 @@ const data = {
   branches,
 };
 mkdirSync(outDir, { recursive: true });
+// Keep the previous timestamp when nothing else changed, so a rerun that produces the
+// same tree leaves no diff (the stamp alone used to dirty the file on every run).
+try {
+  const prev = JSON.parse(readFileSync(join(outDir, 'data.json'), 'utf8'));
+  if (JSON.stringify({ ...prev, generated: '' }) === JSON.stringify({ ...data, generated: '' })) data.generated = prev.generated;
+} catch { /* no previous file, or unreadable: write a fresh stamp */ }
 writeFileSync(join(outDir, 'data.json'), JSON.stringify(data) + '\n');
 console.log(`Wrote site/tech-tree/data.json: ${data.counts.branches} branches, ${data.counts.researched} researched, ${data.counts.inResearch} in research, ${data.counts.proposed} proposed.`);

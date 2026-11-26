@@ -9,7 +9,9 @@
 // Pure Node standard library — no dependencies. Protocol: newline-delimited
 // JSON-RPC 2.0 (the MCP stdio transport). All logging goes to stderr so it
 // never corrupts the protocol stream on stdout.
-import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
+import { readdirSync, readFileSync, existsSync, statSync, mkdtempSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createInterface } from 'node:readline';
@@ -137,7 +139,58 @@ const SKILL_ITEM = {
 // All tools are read-only lookups over the bundled library — non-destructive, idempotent, closed-world.
 const READONLY = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false };
 
+// Calculators are the one exception to "read-only": they run a bundled Python helper and
+// may write output files, always inside a fresh temporary folder.
+const CALCULATOR = { readOnlyHint: false, destructiveHint: false, idempotentHint: true, openWorldHint: false };
+
 const TOOLS = [
+  {
+    name: 'list_calculators',
+    title: 'List the bundled calculators',
+    description:
+      'List the Python helper scripts that ship with skills (cohort curves, RICE, runway simulation, sprint capacity and others). Each one computes a result instead of estimating it. Use this to find a calculator, then call run_calculator with --help in args to see its options.',
+    inputSchema: {
+      type: 'object',
+      additionalProperties: false,
+      properties: { query: { type: 'string', description: 'Optional text to match against the skill or script name.' } },
+    },
+    outputSchema: {
+      type: 'object',
+      properties: {
+        count: { type: 'number' },
+        calculators: { type: 'array', items: { type: 'object', properties: { id: { type: 'string', description: 'skill/script.py, the id run_calculator takes.' }, skill: { type: 'string' }, summary: { type: 'string' } }, required: ['id', 'skill'] } },
+      },
+      required: ['count', 'calculators'],
+    },
+    annotations: { title: 'List the bundled calculators', ...READONLY },
+  },
+  {
+    name: 'run_calculator',
+    title: 'Run a bundled calculator',
+    description:
+      'Run one bundled Python helper with the given arguments and return what it printed. Needs python3 on this machine. The script runs with no shell, in a fresh temporary folder, with a time limit; output files it writes land in that folder and their paths are returned. Arguments that are absolute paths or contain ".." are refused, so pass data inline (for example a JSON array) and plain file names. Pass ["--help"] to see a calculator\'s options.',
+    inputSchema: {
+      type: 'object',
+      additionalProperties: false,
+      properties: {
+        id: { type: 'string', description: 'The calculator id from list_calculators, e.g. "cohort-curve-model/cohort_model.py".' },
+        args: { type: 'array', items: { type: 'string' }, description: 'Command-line arguments, one string each, e.g. ["fit","out.xlsx","--observed","[100,62,48,41]"].' },
+      },
+      required: ['id'],
+    },
+    outputSchema: {
+      type: 'object',
+      properties: {
+        ok: { type: 'boolean', description: 'True when the script exited with status 0.' },
+        exitCode: { type: 'number' },
+        output: { type: 'string', description: 'What the script printed (stdout, then stderr).' },
+        folder: { type: 'string', description: 'The temporary folder the script ran in.' },
+        files: { type: 'array', items: { type: 'string' }, description: 'Full paths of files the script wrote.' },
+      },
+      required: ['ok', 'exitCode', 'output'],
+    },
+    annotations: { title: 'Run a bundled calculator', ...CALCULATOR },
+  },
   {
     name: 'check_contrast',
     title: 'Check colour contrast',
@@ -505,8 +558,88 @@ function dupePairs() {
   return DUPE_PAIRS;
 }
 
+// ── Calculators: the bundled skills/<skill>/scripts/<name>.py helpers ───────────────────
+// The list is read from disk, and run_calculator accepts only an id from that list, so a
+// caller can never name a script outside the package.
+function loadCalculators() {
+  const out = [];
+  const dir = join(PKG_ROOT, 'skills');
+  if (!existsSync(dir)) return out;
+  for (const skill of readdirSync(dir).sort()) {
+    const scripts = join(dir, skill, 'scripts');
+    if (!existsSync(scripts) || !statSync(scripts).isDirectory()) continue;
+    for (const file of readdirSync(scripts).sort()) {
+      if (!/^[a-z0-9_]+\.py$/.test(file) || file.startsWith('test_')) continue;
+      let summary = '';
+      try {
+        const m = readFileSync(join(scripts, file), 'utf8').match(/^(?:#![^\n]*\r?\n)?\s*(?:"""|\'\'\')\s*([^\r\n]+)/);
+        if (m) summary = m[1].replace(/("""|\'\'\')\s*$/, '').trim();
+      } catch { /* unreadable: list it without a summary */ }
+      out.push({ id: `${skill}/${file}`, skill, summary, path: join(scripts, file) });
+    }
+  }
+  return out;
+}
+let CALCULATORS = null;
+const calculators = () => (CALCULATORS ||= loadCalculators());
+
+const MAX_CALC_ARGS = 40;
+const MAX_CALC_ARG_CHARS = 20000;
+function checkCalculatorArgs(args) {
+  if (args === undefined) return [];
+  if (!Array.isArray(args)) throw new Error('args must be an array of strings');
+  if (args.length > MAX_CALC_ARGS) throw new Error(`too many arguments (limit ${MAX_CALC_ARGS})`);
+  for (const a of args) {
+    if (typeof a !== 'string') throw new Error('every argument must be a string');
+    if (a.length > MAX_CALC_ARG_CHARS) throw new Error(`an argument is longer than ${MAX_CALC_ARG_CHARS} characters`);
+    if (a.includes('\0')) throw new Error('arguments cannot contain a null character');
+    // Files stay inside the temporary folder: no absolute paths, no home shortcut, no climbing out.
+    const value = a.startsWith('--') && a.includes('=') ? a.slice(a.indexOf('=') + 1) : a;
+    if (/^([\\/]|~|[A-Za-z]:[\\/])/.test(value) || /(^|[\\/])\.\.([\\/]|$)/.test(value)) {
+      throw new Error(`argument "${a.slice(0, 60)}" looks like a path outside the working folder; pass data inline or use a plain file name`);
+    }
+  }
+  return args;
+}
+
+function listCalculators(args) {
+  const q = String(args.query || '').toLowerCase().trim();
+  const found = calculators().filter((c) => !q || c.id.toLowerCase().includes(q) || c.summary.toLowerCase().includes(q));
+  const rows = found.map(({ id, skill, summary }) => ({ id, skill, summary }));
+  const text = rows.length
+    ? rows.map((c) => `- ${c.id}${c.summary ? `: ${c.summary}` : ''}`).join('\n')
+    : 'No calculator matches.';
+  return { text, structured: { count: rows.length, calculators: rows } };
+}
+
+function runCalculator(args) {
+  const id = String(args.id || '').trim();
+  const calc = calculators().find((c) => c.id === id);
+  if (!calc) throw new Error(`Unknown calculator "${id}". Call list_calculators for the ids.`);
+  const argv = checkCalculatorArgs(args.args);
+  const folder = mkdtempSync(join(tmpdir(), 'pm-skills-calc-'));
+  let output = '';
+  let exitCode = 0;
+  try {
+    output = execFileSync('python3', ['-I', calc.path, ...argv], {
+      cwd: folder, encoding: 'utf8', timeout: 30000, maxBuffer: 1024 * 1024, stdio: ['ignore', 'pipe', 'pipe'],
+      env: { PATH: process.env.PATH || '', LANG: 'C.UTF-8', PYTHONIOENCODING: 'utf-8', PYTHONDONTWRITEBYTECODE: '1' },
+    });
+  } catch (e) {
+    if (e.code === 'ENOENT') throw new Error('python3 was not found on this machine; the calculators need it.');
+    if (e.code === 'ETIMEDOUT' || e.signal === 'SIGTERM') throw new Error('the calculator ran past the 30 second limit and was stopped.');
+    exitCode = typeof e.status === 'number' ? e.status : 1;
+    output = `${e.stdout || ''}${e.stderr || ''}` || String(e.message || e);
+  }
+  const files = readdirSync(folder).sort().map((f) => join(folder, f));
+  const text = `${output.trimEnd()}${files.length ? `\n\nFiles written:\n${files.map((f) => `- ${f}`).join('\n')}` : ''}` || '(no output)';
+  return { text, structured: { ok: exitCode === 0, exitCode, output: output.trimEnd(), folder, files } };
+}
+
 function runTool(name, args = {}) {
   if (name === 'check_contrast') return checkContrast(args);
+  if (name === 'list_calculators') return listCalculators(args);
+  if (name === 'run_calculator') return runCalculator(args);
   if (name === 'disambiguate_skill') {
     const want = String(args.name || '').trim();
     if (!want) throw new Error('name is required');

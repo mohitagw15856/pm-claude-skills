@@ -1,0 +1,24 @@
+{
+  "name": "pm-sea",
+  "displayName": "PM Skills: Sea",
+  "version": "1.0.0",
+  "description": "Singapore and Malaysia: CPF and EPF (KWSP) explained and checked against payslips, Singapore Employment Act entitlements and claims, and 新马华文 business writing with local terms and bilingual versions",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "singapore",
+    "malaysia",
+    "cpf",
+    "epf",
+    "kwsp",
+    "employment-act",
+    "huawen"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

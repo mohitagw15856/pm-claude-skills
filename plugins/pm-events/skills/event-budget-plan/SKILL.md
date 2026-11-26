@@ -34,6 +34,10 @@ Ask for these if not provided:
 5. **Model headcount sensitivity.** Cost per head at minimum, expected, and maximum attendance. This is the number that decides ticket price and whether the event is viable.
 6. **Schedule cash flow, not just totals.** An affordable event with deposits clustered in one month can still fail.
 
+## Deeper Material
+
+- **[`references/worked-example.md`](references/worked-example.md)** — a 300-person conference where the venue minimum-spend clause bites at low attendance and unsigned sponsorship is deliberately excluded. Read it when the shape of a good output is unclear, or to calibrate how specific the entries should be.
+
 ## Output Format
 
 ### Event budget: [event] · [date] · [headcount] · v[n]

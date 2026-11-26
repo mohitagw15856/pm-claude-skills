@@ -1,0 +1,25 @@
+{
+  "name": "pm-people",
+  "displayName": "PM Skills: People",
+  "version": "1.0.0",
+  "description": "Leadership & people skills: Performance Review, Hiring Rubric, Team Offsite Planner. Write structured reviews, build interview scorecards, and plan offsites from goals to minute-by-minute agenda.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "product-management",
+    "leadership",
+    "management",
+    "performance-review",
+    "hiring",
+    "interview",
+    "offsite",
+    "people"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

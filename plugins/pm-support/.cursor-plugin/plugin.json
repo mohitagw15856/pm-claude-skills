@@ -1,0 +1,25 @@
+{
+  "name": "pm-support",
+  "displayName": "PM Skills: Support",
+  "version": "1.0.0",
+  "description": "Support & customer-ops skills: Support Macro, Help-Center Article, CSAT/NPS Analysis (with an NPS calculator), Support Runbook, Escalation Tree, and KB Audit. For frontline support, CX, and success teams.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "customer-support",
+    "help-center",
+    "knowledge-base",
+    "nps",
+    "csat",
+    "escalation",
+    "runbook",
+    "customer-experience"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

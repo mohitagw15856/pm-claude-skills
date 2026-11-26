@@ -1,6 +1,6 @@
 # Design system: master file
 
-The values behind [`DESIGN.md`](../DESIGN.md). Read this before changing any page in `web/`. The single source of the values is `web/styles.css`; this file documents them, and [`scripts/check-design-tokens.mjs`](../scripts/check-design-tokens.mjs) fails if the two disagree.
+The values behind [`docs/DESIGN.md`](../docs/DESIGN.md). Read this before changing any page in `web/`. The single source of the values is `web/styles.css`; this file documents them, and [`scripts/check-design-tokens.mjs`](../scripts/check-design-tokens.mjs) fails if the two disagree.
 
 Last measured: 2026-09-28.
 
@@ -82,7 +82,7 @@ The stylesheet currently uses 14 radii, and `--radius` is referenced once.
 | API key field | The key is needed | 450ms, three times | ease | Points to the one field that blocks the run |
 | Text cursor | While output streams | 1s, looping | steps | Shows the stream is live |
 
-Rules for new motion: entering elements use ease-out, most motion stays under 300ms, and every animation is switched off under `prefers-reduced-motion`. The skill card entrance breaks the first two rules and is listed in the open findings in `DESIGN.md`.
+Rules for new motion: entering elements use ease-out, most motion stays under 300ms, and every animation is switched off under `prefers-reduced-motion`. The skill card entrance breaks the first two rules and is listed in the open findings in `docs/DESIGN.md`.
 
 ## The ratchet
 

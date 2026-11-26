@@ -18,6 +18,8 @@ That's it: every skill and workflow recipe in the library is now available in ev
 | `search_skills` | Keyword search across name, description, and body — returns the best matches. |
 | `disambiguate_skill` | Which of two similar skills to use, and why. Returns the confusable neighbours with the rule for choosing, whether the name has been retired and what replaced it, and the family of skills sharing its first word. Call it when search returns near-identical candidates, or before concluding a skill is missing. |
 | `get_skill` | Return the full instructions for one skill by name, ready to apply. A retired name still resolves and comes back with a one-line notice naming its successor. |
+| `list_calculators` | List the bundled Python calculators (cohort curves, RICE, runway simulation and others), with an optional text filter. |
+| `run_calculator` | Run one calculator with the arguments you give and return what it printed. Needs `python3`. Runs with no shell, in a fresh temporary folder, with a 30 second limit; absolute paths and `..` in arguments are refused, and any files it writes are returned as paths in that folder. |
 | `list_workflows` | List workflow recipes — named chains of skills (e.g. ship-a-feature). |
 | `get_workflow` | Return one recipe: the ordered skills to run and what each produces. |
 | `run_skill` | **Execute a skill with zero API key** — via [MCP sampling](https://modelcontextprotocol.io/docs/concepts/sampling), the generation runs on *your client's* model. Pass `name` + `input`, get the finished artifact back. If your client doesn't support sampling yet, the tool says so and points you at `get_skill`. |

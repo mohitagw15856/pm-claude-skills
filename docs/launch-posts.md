@@ -175,7 +175,7 @@ real links filled in, lead assets ready. Post **mid-week (Tue–Thu), ~8–10am 
 
 ## 6. Skill of the week — automated
 
-A scheduled GitHub Action (`.github/workflows/skill-of-the-week.yml`) picks a featured skill every
+A scheduled GitHub Action (`.github/workflows/weekly-data.yml`) picks a featured skill every
 Monday and composes ready-to-post X + LinkedIn copy (in the Action's job summary). Add a
 `POST_WEBHOOK_URL` secret (Zapier / Make / Buffer / Slack) to auto-publish. Run locally:
 `npm run skill-of-the-week`.

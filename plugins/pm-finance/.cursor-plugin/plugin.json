@@ -1,0 +1,27 @@
+{
+  "name": "pm-finance",
+  "displayName": "PM Skills: Finance",
+  "version": "1.1.0",
+  "description": "Finance skills: Financial Model Narrative, Budget Variance Analysis, Investor Pitch Deck, Financial Due Diligence, Tax Planning Checklist. Turn numbers into board-ready narratives, explain variances, structure pitch decks, generate DD checklists, and review year-end tax planning opportunities.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "finance",
+    "financial-model",
+    "budget",
+    "variance",
+    "pitch-deck",
+    "due-diligence",
+    "investor",
+    "tax",
+    "tax-planning",
+    "year-end"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

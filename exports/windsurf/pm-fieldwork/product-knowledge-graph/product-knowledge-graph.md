@@ -1,0 +1,98 @@
+---
+trigger: model_decision
+description: "Turn a folder of PRDs, specs, research notes and decision records into a graph of documents and the links between them, built by the bundled script from real links and named terms, then answer questions by walking it. Use when asked to map how our docs connect, which documents mention this feature, find orphaned specs, what depends on this PRD, or build a knowledge graph of our product docs without a vector database. Produces a graph file, a map of clusters and orphans, answers that cite the documents they came from, and a list of links worth adding."
+---
+
+# Product Knowledge Graph Skill
+
+Product knowledge lives in documents that refer to each other: a PRD points to research, a decision record overrides a spec, three teams write about the same feature under different names. Search finds documents; it does not show which ones are connected, which contradict each other, or which nobody links to any more. This skill builds that picture from evidence that can be checked by eye, the links and the terms actually in the files, with no embeddings and no service to run. To tidy a personal notes collection, use `knowledge-gardening`.
+
+## What This Skill Produces
+
+- **`graph.json`**: documents as nodes, and edges from Markdown links, wiki links and shared terms
+- **A map**: the clusters, the hubs that many documents rely on, and the orphans
+- **Cited answers**: questions answered by walking the graph, each claim tied to a document
+- **Suggested links**: pairs of documents that share a term but do not link to each other
+- **A staleness list**: hubs that many documents depend on and that deserve an owner
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The folder** of Markdown documents
+- **The terms that matter**: feature names, customer segments, systems, metrics. One per line. Synonyms should be listed together so the user can decide whether they mean the same thing
+- **The question**, if there is one: impact of a change, onboarding reading order, finding duplicates
+
+## Framework: Build From Evidence, Then Walk
+
+1. **Agree the terms.** A graph built on vague terms connects everything to everything. Use names specific to the product.
+2. **Build.** Run the script. An edge exists only where a link or a listed term is present in the text.
+3. **Read the shape first.** Look at orphans (documents nothing connects to), hubs (documents many depend on) and bridges (documents that are the only connection between two groups).
+4. **Answer by walking.** For "what depends on this PRD", list its incoming edges, then theirs. State the path taken so the reader can follow it.
+5. **Flag disagreement.** Where two connected documents state different things about the same term, quote both and say which is newer if dates are present. Do not pick a winner without the user.
+6. **Propose links.** Documents that share a term but have no link are candidates for a cross-reference.
+7. **State the limits.** The graph sees links and listed terms. It does not understand meaning, and a document that discusses a feature without naming it will not be connected.
+
+## Programmatic Helper
+
+This skill ships `scripts/knowledge_graph.py`, with no dependencies beyond the standard library. Run it instead of estimating connections:
+
+```bash
+python3 scripts/knowledge_graph.py build docs/ --out graph.json --terms terms.txt
+python3 scripts/knowledge_graph.py neighbours graph.json "prd-checkout.md"
+python3 scripts/knowledge_graph.py orphans graph.json
+```
+
+`build` scans the folder (hidden folders skipped, symbolic links not followed, links that point outside the folder ignored, code blocks ignored) and prints the document, edge and orphan counts. `neighbours` lists what a document links to and what links to it, with the kind of edge. `orphans` lists documents with no connections. Output is sorted, so two runs on the same folder give the same file.
+
+## Output Format
+
+# Knowledge Graph: [folder]
+
+**Built from:** [N documents · N edges · N orphans, as printed by the script] · **Terms used:** [list]
+
+## Shape
+- **Hubs:** [documents most linked to]
+- **Orphans:** [documents with no connections]
+- **Bridges:** [documents that alone connect two groups]
+
+## Answer: [the question]
+[Answer, with each claim followed by the document it came from and the path walked]
+
+## Disagreements Found
+| Term | Document A says | Document B says | Newer |
+|------|-----------------|-----------------|-------|
+
+## Links Worth Adding
+| From | To | Shared term |
+|------|----|-------------|
+
+## What the Graph Cannot See
+[Unlisted synonyms, non-Markdown files, meaning without the term]
+
+## Quality Checks
+
+- [ ] Counts in the report are the counts the script printed
+- [ ] Every claim in an answer names its source document
+- [ ] Disagreements quote both documents
+- [ ] The terms list was agreed with the user, not invented
+- [ ] The limits section is present
+
+## Anti-Patterns
+
+- [ ] Do not describe connections the graph does not contain
+- [ ] Do not use generic terms such as "user" or "data" as graph terms
+- [ ] Do not resolve a contradiction between documents silently
+- [ ] Do not treat an orphan as worthless; it may simply be unlinked
+- [ ] Do not present term co-occurrence as a dependency
+
+## Example Trigger Phrases
+
+- "Map how our product docs connect."
+- "Which specs are orphaned?"
+- "What depends on this PRD?"
+- "Build a knowledge graph of this docs folder without a vector database."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-knowledge-graph.html
+
+<!-- pm-claude-skills v84.0.0 | skill: product-knowledge-graph | source: skills/product-knowledge-graph/SKILL.md | sha256: 57ea465542ee9744c47004b79a871f276e506a38eb3449d49d7af50d2973053c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

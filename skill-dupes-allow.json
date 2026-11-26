@@ -230,6 +230,16 @@
       "a": "crop-insurance-claim",
       "b": "insurance-claim",
       "reason": "Crop and livestock policies work differently from household and personal claims: index or area-based payouts on weather or yield triggers, field evidence before replanting, and enrolment through banks or cooperatives."
+    },
+    {
+      "a": "design-doc-review",
+      "b": "figma-design-review",
+      "reason": "Reviewing a written technical design document or RFC for irreversible decisions and failure cases, vs reviewing visual designs in a Figma file."
+    },
+    {
+      "a": "agent-design-review",
+      "b": "design-doc-review",
+      "reason": "Reviewing the design of an AI agent (tools, permissions, autonomy) vs reviewing any engineering design document or RFC."
     }
   ]
 }

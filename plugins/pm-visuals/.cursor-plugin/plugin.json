@@ -1,0 +1,28 @@
+{
+  "name": "pm-visuals",
+  "displayName": "PM Skills: Visuals",
+  "version": "1.0.0",
+  "description": "Turn ideas into visuals: Flowchart, Architecture Diagram, User Journey Map, Org Chart, Sequence Diagram, Mind Map, Gantt Roadmap, ER Diagram, and Chart (bar/line/pie) — plus Announcement & Quote cards. Diagram & chart skills render live in the playground and export to PNG/SVG; card skills export as image.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "diagram",
+    "mermaid",
+    "flowchart",
+    "architecture",
+    "gantt",
+    "roadmap",
+    "sequence-diagram",
+    "er-diagram",
+    "mindmap",
+    "org-chart",
+    "visualization"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

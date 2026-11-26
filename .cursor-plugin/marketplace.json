@@ -1,0 +1,857 @@
+{
+  "name": "pm-claude-skills",
+  "owner": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "metadata": {
+    "description": "Professional agent skills in bundles: product management, engineering, customer success, careers and more. The same SKILL.md files that ship for Claude."
+  },
+  "plugins": [
+    {
+      "name": "pm-daily-ten",
+      "source": "plugins/pm-daily-ten",
+      "description": "The ten skills to install first: the ones behind the README example and the built-in slash commands. PRD, interview synthesis, stakeholder update, RICE, sprint planning, retro, executive summary, meeting notes, competitor teardown and customer health scorecard"
+    },
+    {
+      "name": "pm-fieldwork",
+      "source": "plugins/pm-fieldwork",
+      "description": "Evidence-first working tools: verified security audits, dated competitor capture, a document knowledge graph, a failure pattern catalogue, design doc review, scope cutting, app store submission checks, demo video assembly, dependency-free SVG diagrams, AI design tool handoff and equity research notes"
+    },
+    {
+      "name": "pm-china-study-abroad",
+      "source": "plugins/pm-china-study-abroad",
+      "description": "留学与海归：申请文书、留学签证准备、海归求职。Study abroad for Chinese applicants: application essays, student visa preparation and the returnee job search"
+    },
+    {
+      "name": "pm-china-startup",
+      "source": "plugins/pm-china-startup",
+      "description": "在中国创业：公司注册、股权分配、高新技术企业认定、专精特新申报、补贴申报、融资商业计划书。Starting a company in China: registration, equity split, High and New Technology Enterprise and Specialised SME applications, subsidy filings and a financing deck"
+    },
+    {
+      "name": "pm-china-ecommerce",
+      "source": "plugins/pm-china-ecommerce",
+      "description": "国内电商运营：淘宝、天猫、拼多多、京东商品详情，1688 批发 listing，双 11 大促方案，客服话术。Chinese marketplace operations: listings for Taobao, Tmall, Pinduoduo and JD, 1688 wholesale listings, a Double 11 promotion plan and customer service scripts"
+    },
+    {
+      "name": "pm-africa",
+      "source": "plugins/pm-africa",
+      "description": "Working life in Nigeria, Kenya and South Africa: payslips decoded, the Nigerian pension account, an M-Pesa reversal dispute, a retrenchment package checked and a UIF claim"
+    },
+    {
+      "name": "pm-dach",
+      "source": "plugins/pm-dach",
+      "description": "Working life in Germany: decode an Arbeitszeugnis, work out the notice period, and prepare the annual tax return"
+    },
+    {
+      "name": "pm-latam",
+      "source": "plugins/pm-latam",
+      "description": "Working life in Brazil and Mexico: CLT termination pay, the Brazilian annual income tax return, Mexican finiquito and liquidación, and the Mexican annual tax return"
+    },
+    {
+      "name": "pm-mena",
+      "source": "plugins/pm-mena",
+      "description": "Working life in the Gulf: UAE end-of-service gratuity, residence visa and Emirates ID admin, the Saudi labour contract decoded, and a Gulf job offer checked before you sign"
+    },
+    {
+      "name": "pm-phd",
+      "source": "plugins/pm-phd",
+      "description": "Get through a doctorate: the supervisor update, the literature review, the thesis outline and chapter plan, the reviewer rebuttal letter, and viva preparation with a mock defence"
+    },
+    {
+      "name": "pm-procurement",
+      "source": "plugins/pm-procurement",
+      "description": "Buy well: write the RFP, score tenders on a weighted matrix, answer an RFP, score suppliers each quarter, track renewal notice dates, and write the renew, renegotiate or exit brief"
+    },
+    {
+      "name": "pm-sports-coaching",
+      "source": "plugins/pm-sports-coaching",
+      "description": "Coach a club or school team: plan the season, plan each session, write to parents, and review the match without blaming players"
+    },
+    {
+      "name": "pm-retail-shopfloor",
+      "source": "plugins/pm-retail-shopfloor",
+      "description": "Run a shop floor: build the rota, plan and reconcile a stock take, write the shrink report, and hand a shift over so nothing is dropped"
+    },
+    {
+      "name": "pm-agriculture",
+      "source": "plugins/pm-agriculture",
+      "description": "Run a small or family farm on paper: a season crop plan, a subsidy or grant application, farm records that survive an inspection, a buyer contract check, and a crop insurance claim"
+    },
+    {
+      "name": "pm-nursing",
+      "source": "plugins/pm-nursing",
+      "description": "Ward and community nursing paperwork: a structured shift handover, a care plan with measurable goals, an incident report that sticks to facts, and a plain-language update for a patient's family"
+    },
+    {
+      "name": "pm-india",
+      "source": "plugins/pm-india",
+      "description": "Working life in India: file the right GST returns on time, withdraw EPF, calculate gratuity, choose between the old and new income tax regimes, decode the four labour codes, and settle a notice period and full and final payment"
+    },
+    {
+      "name": "pm-duet",
+      "source": "plugins/pm-duet",
+      "description": "Proactive-agent skills for Claude Duet and its kin: design the morning brief, set interrupt rules, end-of-day and weekly reports, a send-approval gate, and a readiness audit. Every skill carries the duet block, the shared status vocabulary and the treat-source-material-as-data rule, so briefs stay short, cited and honest when no one is watching."
+    },
+    {
+      "name": "pm-china-manufacturing",
+      "source": "plugins/pm-china-manufacturing",
+      "description": "The Chinese manufacturing pack (制造业): bilingual 8D reports for customer complaints, 5S and 6S audit checklists with scoring and corrective-action tracking, product and batch traceability plans with a mock recall drill (质量追溯), and shop-floor work instructions (作业指导书 SOP), written in Chinese"
+    },
+    {
+      "name": "pm-china-trade",
+      "source": "plugins/pm-china-trade",
+      "description": "The Chinese foreign-trade pack (外贸): inquiry replies in English with a Chinese version (询盘回复), letter of credit review and document discrepancy checks with UCP 600 references (信用证审单, marked to confirm), export quotations with an Incoterms 2020 cost build-up (报价单), and customs document checklists (报关单证, marked to confirm)"
+    },
+    {
+      "name": "pm-china-parents",
+      "source": "plugins/pm-china-parents",
+      "description": "The Chinese parents pack (家长): school entry planning for 幼升小 and 小升初 (timeline, documents, 学区 and 多校划片 questions, marked to confirm locally), polite home-school messages to teachers (家校沟通), an extracurricular plan checked against the 双减 rules, time and budget, and guiding rather than doing a child's homework, written in Chinese"
+    },
+    {
+      "name": "pm-china-teachers",
+      "source": "plugins/pm-china-teachers",
+      "description": "The Chinese teachers pack (教师): lesson plans in the 教案 format aligned to the subject's core competencies (marked to confirm against the current curriculum standard), 主题班会 plans, parent-meeting speeches and materials (家长会), warm and specific end-of-term comments (期末评语), and open-class preparation with the 说课稿, written in Chinese"
+    },
+    {
+      "name": "pm-japan",
+      "source": "plugins/pm-japan",
+      "description": "Working in Japan: year-end tax adjustment (年末調整), the tax return (確定申告) with e-Tax, resignation procedures from notice to unemployment benefit, and the 稟議書 approval request, in Japanese"
+    },
+    {
+      "name": "pm-korea",
+      "source": "plugins/pm-korea",
+      "description": "Working in Korea: year-end tax settlement (연말정산), severance pay and retirement pensions (퇴직금, 퇴직연금), the 항목별 자기소개서 for Korean employers, and 개조식 보고서 and 주간보고, in Korean"
+    },
+    {
+      "name": "pm-sea",
+      "source": "plugins/pm-sea",
+      "description": "Singapore and Malaysia: CPF and EPF (KWSP) explained and checked against payslips, Singapore Employment Act entitlements and claims, and 新马华文 business writing with local terms and bilingual versions"
+    },
+    {
+      "name": "pm-china-yearend",
+      "source": "plugins/pm-china-yearend",
+      "description": "The Chinese year-end season pack (述职季): the year-end review (年终总结 / 述职报告), the 述职 PPT outline and timed speaking script, the year-end bonus explained (年终奖, 13薪 and how the bonus is taxed, marked to confirm), and next year's personal OKR and development plan (个人发展计划), written in Chinese"
+    },
+    {
+      "name": "pm-hk-tw",
+      "source": "plugins/pm-hk-tw",
+      "description": "Hong Kong and Taiwan in Traditional Chinese: the Mandatory Provident Fund (強積金), Taiwan's Labor Standards Act (勞動基準法) with worked calculations and where to get help, and Hong Kong marketing copy and social posts in written Cantonese (粵語文案)"
+    },
+    {
+      "name": "pm-china-compliance",
+      "source": "plugins/pm-china-compliance",
+      "description": "China compliance for product and engineering teams: MLPS 2.0 grading and gaps (等保), data export routes and filings (数据出境), PIPL impact assessments (个人信息保护影响评估) and generative AI filing and content labelling (大模型备案), all preparation for counsel and licensed assessors"
+    },
+    {
+      "name": "pm-3d-explorer",
+      "source": "plugins/pm-3d-explorer",
+      "description": "Topic in, interactive 3D explorer out: the interface brief and mock prompt, image-to-3D prompts with a sourced parts list, a single-file Three.js viewer with clickable labelled parts, exploded view and quiz mode, and a pipeline that runs them in order"
+    },
+    {
+      "name": "pm-oss-launch",
+      "source": "plugins/pm-oss-launch",
+      "description": "Take a side project from works-on-my-machine to a repo strangers install, trust and contribute to: a benefit-led README, a no-signup demo, an importer from competitors, good first issues, a licence audit and NOTICE file, fortnightly releases, one-command self-hosting, a read-only MCP server and the 20-second demo clip"
+    },
+    {
+      "name": "pm-china-exams",
+      "source": "plugins/pm-china-exams",
+      "description": "The Chinese exams and early-career pack: the civil service essay (申论) and structured interview (结构化面试), postgraduate entrance exam planning (考研), the thesis proposal (开题报告) and GB/T 7714 references, tech company interview drills (大厂技术面试), campus recruitment (校招 and 三方协议) and state-owned enterprise interviews (国企面试), in Chinese"
+    },
+    {
+      "name": "pm-zh-content",
+      "source": "plugins/pm-zh-content",
+      "description": "Chinese content platforms: 小红书 notes, 公众号 articles, 抖音 and 视频号 short-video scripts, B站 video scripts, 知乎 answers, 小宇宙 podcast outlines and live-commerce (直播带货) scripts, each with a compliance check against restricted advertising claims and undisclosed sponsorship"
+    },
+    {
+      "name": "pm-china-life",
+      "source": "plugins/pm-china-life",
+      "description": "Life admin in mainland China: decode a labour contract, estimate severance (N, N+1, 2N), prepare the annual income tax reconciliation, understand social insurance and the housing fund, withdraw the housing fund, claim medical insurance, check city hukou routes and points, plan small-business taxes, plan gaokao university applications, and help ageing parents with 医保, 社保, 养老金, banking and scam protection (帮爸妈办事, with a plain-language 长辈版)"
+    },
+    {
+      "name": "pm-chuhai",
+      "source": "plugins/pm-chuhai",
+      "description": "The 出海 pack for Chinese companies going global: market entry planning, choosing and launching on Temu, TikTok Shop, Amazon and SHEIN, cross-border marketplace listings written for the buyer, and a PIPL and GDPR crosswalk for data flowing in and out of China"
+    },
+    {
+      "name": "pm-china-work",
+      "source": "plugins/pm-china-work",
+      "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩), the 复盘 project review, PRD reviews (需求评审), job-level comparison (职级对标), official documents to GB/T 9704 (公文), a jargon translator that turns 互联网黑话 into plain words (and back, for fun), and Feishu docs, DingTalk logs and WeCom announcements, written in Chinese to the conventions managers expect"
+    },
+    {
+      "name": "pm-cv",
+      "source": "plugins/pm-cv",
+      "description": "The CV studio: interview your experience into a master inventory, then a CV shaped for one company (its tracking system, country, sector, values and job ad), with sector variants, a bilingual Chinese and English CV, an honesty check and an ATS-safe Word export"
+    },
+    {
+      "name": "pm-design-taste",
+      "source": "plugins/pm-design-taste",
+      "description": "The design taste pack: a five-stage UI pipeline (direction, system, motion, critique, verification) that stops generic AI-looking interfaces, plus pointers to five specialist design skills with install commands and author credit"
+    },
+    {
+      "name": "pm-skill-promoter",
+      "source": "plugins/pm-skill-promoter",
+      "description": "Close the loop between what you keep asking your assistant for and reusable skills: scan your transcripts for recurring patterns, draft a skill in this library's format, test its triggers, and publish a complete release package"
+    },
+    {
+      "name": "pm-decisions",
+      "source": "plugins/pm-decisions",
+      "description": "Typed, calibrated decisions instead of prose: renew-or-churn, escalate-or-hold, ship-or-slip, hire-or-pass — each with a state schema, defined options, and thresholds a program or a person can act on"
+    },
+    {
+      "name": "pm-investing-literacy",
+      "source": "plugins/pm-investing-literacy",
+      "description": "Financial literacy for reading company accounts: a beginner's tutor for an uploaded annual report, an audited-boundary check on every headline figure, a profit-to-cash walk with the arithmetic shown, a same-definitions comparison of two companies, and a vocabulary explainer anchored to the document. Every figure carries a page reference and anything missing is marked not disclosed. Educational — not financial advice; decisions with real money belong with a regulated adviser."
+    },
+    {
+      "name": "pm-physio",
+      "source": "plugins/pm-physio",
+      "description": "Physiotherapy and rehab: initial assessment, programme design, progress notes, return-to-activity criteria, discharge and patient education."
+    },
+    {
+      "name": "pm-fleet",
+      "source": "plugins/pm-fleet",
+      "description": "Trucking and fleet operations: incident investigation, hours compliance, maintenance programmes, freight rates, audits and driver retention."
+    },
+    {
+      "name": "pm-events",
+      "source": "plugins/pm-events",
+      "description": "Event planning: run of show, budgets, venue contracts, supplier briefs, safety plans and post-event debriefs."
+    },
+    {
+      "name": "pm-architecture",
+      "source": "plugins/pm-architecture",
+      "description": "Architectural practice: project briefs, site analysis, planning statements, specifications, RFIs and client design presentations."
+    },
+    {
+      "name": "pm-pharmacy",
+      "source": "plugins/pm-pharmacy",
+      "description": "Pharmacy practice: medication reviews, patient counselling, clinical interventions, dispensing decisions and controlled-substance audits."
+    },
+    {
+      "name": "pm-dentistry",
+      "source": "plugins/pm-dentistry",
+      "description": "Dental practice: treatment plan presentation, clinical notes, insurance pre-auth, emergency triage, recall and referrals."
+    },
+    {
+      "name": "pm-hardship",
+      "source": "plugins/pm-hardship",
+      "description": "Money in crisis — debt collectors, the benefits cliff, the bankruptcy decision, wage garnishment, and triaging which bills to pay first."
+    },
+    {
+      "name": "pm-grief",
+      "source": "plugins/pm-grief",
+      "description": "The logistics and the human side of losing someone — notifications, the year of firsts, eulogies, grieving at work, and supporting the bereaved."
+    },
+    {
+      "name": "pm-reentry",
+      "source": "plugins/pm-reentry",
+      "description": "Rebuilding life after incarceration — expungement, work and housing with a record, the first 90 days out, and reconnecting with family."
+    },
+    {
+      "name": "pm-emergency",
+      "source": "plugins/pm-emergency",
+      "description": "Emergency skills."
+    },
+    {
+      "name": "pm-newcomer",
+      "source": "plugins/pm-newcomer",
+      "description": "Newcomer skills."
+    },
+    {
+      "name": "pm-accessibility",
+      "source": "plugins/pm-accessibility",
+      "description": "Accessibility skills."
+    },
+    {
+      "name": "pm-civic",
+      "source": "plugins/pm-civic",
+      "description": "Civic skills."
+    },
+    {
+      "name": "pm-identity",
+      "source": "plugins/pm-identity",
+      "description": "Identity skills."
+    },
+    {
+      "name": "pm-invisible-illness",
+      "source": "plugins/pm-invisible-illness",
+      "description": "Invisible Illness skills."
+    },
+    {
+      "name": "pm-neurodivergent",
+      "source": "plugins/pm-neurodivergent",
+      "description": "Neurodivergent skills."
+    },
+    {
+      "name": "pm-ai-native",
+      "source": "plugins/pm-ai-native",
+      "description": "Skills for using AI itself well — picking the right tool, delegating to it, briefing it with context, designing AI workflows, verifying its output, and catching its mistakes."
+    },
+    {
+      "name": "pm-caregiving",
+      "source": "plugins/pm-caregiving",
+      "description": "Caregiving & aging skills for looking after a loved one: advocate at medical appointments, navigate a hospital stay, coordinate the care team, manage medications, assess aging in place, compare long-term-care options, prevent caregiver burnout, arrange respite, and have the end-of-life and family-decision conversations. Not medical, legal, or financial advice."
+    },
+    {
+      "name": "pm-wealth",
+      "source": "plugins/pm-wealth",
+      "description": "Money-building skills (the offense to pm-money's defense): investing basics, index funds, asking for a raise, your first milestone, compounding, FI roadmap, and a financial checkup. Educational — not financial advice; account/tax specifics are jurisdiction-dependent."
+    },
+    {
+      "name": "pm-learning",
+      "source": "plugins/pm-learning",
+      "description": "Learning & mastery skills: build a roadmap for any skill, remember what you read and study (spaced repetition, active reading), learn by doing, break plateaus, and map your knowledge gaps."
+    },
+    {
+      "name": "pm-focus",
+      "source": "plugins/pm-focus",
+      "description": "Executive-function & focus skills for getting unstuck and running your own brain: beat activation-energy paralysis, triage overwhelm, protect your energy, build a personal memory file, and make hard decisions when depleted. ADHD-friendly, useful for everyone."
+    },
+    {
+      "name": "pm-thinking",
+      "source": "plugins/pm-thinking",
+      "description": "Thinking-mode skills that change HOW your AI reasons, not just what it does: escape the generic answer, run cognitive panels, and adversarially stress-test your own decisions. Inspired by parallel-divergent-ideation research."
+    },
+    {
+      "name": "pm-family",
+      "source": "plugins/pm-family",
+      "description": "Family, care & relationships skills: new-baby logistics, childcare & school choice, co-parenting messages, family emergency planning, wedding vows, love letters, long-distance relationships, in-law boundaries, condolences, relationship check-ins, and blending families."
+    },
+    {
+      "name": "pm-digital-safety",
+      "source": "plugins/pm-digital-safety",
+      "description": "Consumer digital self-defense skills: identity-theft recovery, data-broker removal, account recovery, ransomware first response, backups, phishing triage, passwords & 2FA, kids' online safety, securing a lost phone, oversharing audit, doxxing response, and safe online shopping."
+    },
+    {
+      "name": "pm-wellbeing",
+      "source": "plugins/pm-wellbeing",
+      "description": "Personal wellbeing & self-improvement skills: home workouts, stretching & mobility, posture, habit-building, journaling, gratitude, sleep, couch-to-5K, desk ergonomics, energy, screen-time, and recovery days. Educational — not medical advice."
+    },
+    {
+      "name": "pm-hobbies",
+      "source": "plugins/pm-hobbies",
+      "description": "Skills for hobbies & leisure: wine pairing, cocktails from what you have, houseplant care, sourdough troubleshooting, board-game nights, tabletop campaigns, stargazing, birdwatching, chess openings, karaoke picks, fantasy-league drafting, and starting any new hobby."
+    },
+    {
+      "name": "pm-musician",
+      "source": "plugins/pm-musician",
+      "description": "Musician skills."
+    },
+    {
+      "name": "pm-kitchen",
+      "source": "plugins/pm-kitchen",
+      "description": "Kitchen skills."
+    },
+    {
+      "name": "pm-aging-parents",
+      "source": "plugins/pm-aging-parents",
+      "description": "Aging Parents skills."
+    },
+    {
+      "name": "pm-maintainer",
+      "source": "plugins/pm-maintainer",
+      "description": "Maintainer skills."
+    },
+    {
+      "name": "pm-committee",
+      "source": "plugins/pm-committee",
+      "description": "Committee skills."
+    },
+    {
+      "name": "pm-trades",
+      "source": "plugins/pm-trades",
+      "description": "Trades skills."
+    },
+    {
+      "name": "pm-newgen",
+      "source": "plugins/pm-newgen",
+      "description": "Newgen skills."
+    },
+    {
+      "name": "pm-2027",
+      "source": "plugins/pm-2027",
+      "description": "2027 skills."
+    },
+    {
+      "name": "pm-tabletop",
+      "source": "plugins/pm-tabletop",
+      "description": "Tabletop skills."
+    },
+    {
+      "name": "pm-dead-mentors",
+      "source": "plugins/pm-dead-mentors",
+      "description": "Dead Mentors skills."
+    },
+    {
+      "name": "pm-seatbelt",
+      "source": "plugins/pm-seatbelt",
+      "description": "Agent safety seatbelts: the pre-flight security checklists you run before an agent touches email, the browser, files, or goes autonomous — least-privilege reviews, prompt-injection spotting, and the blast-radius drill"
+    },
+    {
+      "name": "pm-cowork-live",
+      "source": "plugins/pm-cowork-live",
+      "description": "12 Claude Cowork-native skills that act on your real data through connectors and the sandbox — Gmail/Calendar inbox triage, meeting prep and follow-up sweeps; Drive/Docs/Sheets audits, restructures and decks; Notion/Slack decision logs, DB hygiene and async standups; GitHub/Linear issue triage, PR descriptions and changelogs. Each drives real tools and returns an artifact — not a framework you run by hand."
+    },
+    {
+      "name": "pm-cowork",
+      "source": "plugins/pm-cowork",
+      "description": "100 cowork skills for the AI-coworker era: inbox and email ops, files and folders, spreadsheets, documents, meetings, team collaboration, research, presentations, personal work ops, and office admin — the office knowledge work an AI coworker actually does"
+    },
+    {
+      "name": "pm-tokens",
+      "source": "plugins/pm-tokens",
+      "description": "Token optimization for every stage of the agent journey: crush tool outputs before they enter context, navigate code by map instead of reading files, diet the output register, budget the window cache-aware, measure everything, and hand off sessions at 5% of transcript size"
+    },
+    {
+      "name": "pm-sidehustle",
+      "source": "plugins/pm-sidehustle",
+      "description": "Side-hustle setup done in the right order: the employer-conflict check, money hygiene, the first client contract's eight clauses, and the quarterly tax rhythm"
+    },
+    {
+      "name": "pm-wedding",
+      "source": "plugins/pm-wedding",
+      "description": "The wedding pack: a budget that survives to the wedding, vendor contracts decoded before signing, and the day-of logistics that keep the couple out of the production booth"
+    },
+    {
+      "name": "pm-scam-defense",
+      "source": "plugins/pm-scam-defense",
+      "description": "Scam defense: decode the suspicious message against known scam anatomies, respond to data breaches by what actually leaked, and protect aging parents with dignity intact"
+    },
+    {
+      "name": "pm-estate",
+      "source": "plugins/pm-estate",
+      "description": "The estate pack: the first two weeks after a death, the executor's settlement ladder, the digital legacy plan, and the beneficiary audit that catches what wills can't override"
+    },
+    {
+      "name": "pm-live",
+      "source": "plugins/pm-live",
+      "description": "Live data, zero API keys: weather, air quality, currency, crypto, world clock, holidays, dictionary, Wikipedia, earthquakes, and Hacker News — all over plain curl with fallbacks and honest sourcing"
+    },
+    {
+      "name": "pm-parents",
+      "source": "plugins/pm-parents",
+      "description": "School-age parenting ops: parent-teacher conferences that inform, IEP/504 meetings walked in prepared, and college applications supported without takeover"
+    },
+    {
+      "name": "pm-renters",
+      "source": "plugins/pm-renters",
+      "description": "Renter's rights toolkit: recover the security deposit, escalate ignored repairs, and answer a rent increase with leverage instead of resignation"
+    },
+    {
+      "name": "pm-resignation",
+      "source": "plugins/pm-resignation",
+      "description": "The clean-exit kit: the three-sentence resignation letter, the counteroffer decoded, exit-interview strategy, and the handoff that makes you missed for the right reasons"
+    },
+    {
+      "name": "pm-freelance",
+      "source": "plugins/pm-freelance",
+      "description": "Freelance business survival: price your services with structure, shut down scope creep without losing the client, and collect late invoices with a graduated ladder"
+    },
+    {
+      "name": "pm-layoff",
+      "source": "plugins/pm-layoff",
+      "description": "The layoff kit: decode the severance agreement, triage the finances, secure references, and craft the announcement — the four artifacts of a layoff handled well"
+    },
+    {
+      "name": "pm-students",
+      "source": "plugins/pm-students",
+      "description": "Skills for students who want to learn, not outsource: study-guide synthesis with retrieval practice, literature reviews that argue, thesis outlines an examiner respects, statement COACHING (the words stay yours - integrity is structural), financial-aid appeals that offices act on, and exam plans that survive a bad Tuesday."
+    },
+    {
+      "name": "pm-operator",
+      "source": "plugins/pm-operator",
+      "description": "The judgment layer for agents that ACT: inbox zero, calendar defrag, expense filing, form filling, and subscription audits — computer-use skills where analysis is free, every action is approval-gated per SkillSpec Execution blocks, and the irreversible button always belongs to the human."
+    },
+    {
+      "name": "pm-simulators",
+      "source": "plugins/pm-simulators",
+      "description": "Adversarial roleplay: simulate the specific hostile reader you fear — opposing counsel attacking your contract, the VC partner meeting after you leave the room, a consumer-protection investigator reading your claims, the customer who quietly churns, and the acquirer's red team chipping your price. Each produces the adversary's real artifact plus an out-of-character debrief with fixes."
+    },
+    {
+      "name": "pm-decoders",
+      "source": "plugins/pm-decoders",
+      "description": "AI reads the fine print for you: leases, medical bills, terms of service, loans, benefits packages, and HOA covenants decoded into plain English with ranked red flags, the questions to ask, and what's actually negotiable. Not legal advice — a sharp friend who reads contracts."
+    },
+    {
+      "name": "pm-banking",
+      "source": "plugins/pm-banking",
+      "description": "Banking & lending skills: credit memos with covenant headroom, quarterly covenant compliance reviews, KYC/AML escalation write-ups, and portfolio risk briefs — credit and compliance judgment for analysts and RMs."
+    },
+    {
+      "name": "pm-insurance",
+      "source": "plugins/pm-insurance",
+      "description": "Insurance professional skills: claims triage with coverage-trigger checks, underwriting file narratives, pre-renewal reviews, and risk-register coverage-gap analysis — analytical support for claims handlers, underwriters, and brokers."
+    },
+    {
+      "name": "pm-climate",
+      "source": "plugins/pm-climate",
+      "description": "Sustainability & ESG skills allergic to greenwash: GHG inventory sanity checks, CSRD/ESRS-flavored disclosure drafting, climate risk assessment (physical + transition), and a greenwashing self-audit that grades your claims before someone else does."
+    },
+    {
+      "name": "pm-supplychain",
+      "source": "plugins/pm-supplychain",
+      "description": "Supply chain & procurement skills: weighted RFP scoring, supplier scorecards, S&OP meeting prep, demand forecast interrogation, inventory policy (ABC/XYZ), and logistics incident reports — buyer and planner judgment."
+    },
+    {
+      "name": "pm-hardware",
+      "source": "plugins/pm-hardware",
+      "description": "Hardware & physical-product skills: hardware PRDs with cost stacks, BOM cost review, EVT/DVT/PVT gate reviews, factory acceptance tests (AQL), tooling risk assessment, and RMA failure analysis (8D) — NPI judgment for HW PMs and ops leads."
+    },
+    {
+      "name": "pm-construction",
+      "source": "plugins/pm-construction",
+      "description": "Construction & trades professional skills: bid/tender review, change orders, punch lists, toolbox-talk safety briefings, subcontractor scorecards, and delay claim letters — real field judgment for PMs, supers, and owners' reps."
+    },
+    {
+      "name": "pm-warroom",
+      "source": "plugins/pm-warroom",
+      "description": "The adversarial bundle — skills that attack your work before reality does: Premortem Assassin (twelve failure vectors), Devil's Twin (the opposition's best memo), Metric Gaslighting Detector (how dashboards lie), Decision Autopsy (process vs outcome), and Assumption Bounty (hidden beliefs, priced)."
+    },
+    {
+      "name": "pm-method",
+      "source": "plugins/pm-method",
+      "description": "Process discipline for professional work — the difference between an agent that produces output and one that produces outcomes. Interview the requester before building, brainstorm divergent-then-convergent, write and execute real plans, verify before declaring done, orchestrate subagents, work incrementally, and simplify what you built."
+    },
+    {
+      "name": "pm-aiwork",
+      "source": "plugins/pm-aiwork",
+      "description": "Working with AI, organisation-side: the questions every manager is asking this year. Audit whether the AI spend paid, redesign roles AI has changed, write a usable AI policy, review performance when output is AI-assisted, and clear the slop out of your content."
+    },
+    {
+      "name": "pm-agentnative",
+      "source": "plugins/pm-agentnative",
+      "description": "Build for the agent era: products are getting non-human users. Spec an MCP server properly, audit whether agents can actually use your product, migrate seat pricing before agents break it, design human-in-the-loop approval surfaces, and get voice agents right."
+    },
+    {
+      "name": "pm-vision",
+      "source": "plugins/pm-vision",
+      "description": "Vision-first skills: point a camera or screenshot at the work and get the structured artifact — whiteboard photos become specs, competitor screenshots become teardowns, slide photos become board pre-reads, chart images become data tables. Built for multimodal models (Fable 5, Sonnet, Gemini); attach images in the playground or paste them in Claude Code."
+    },
+    {
+      "name": "pm-agentops",
+      "source": "plugins/pm-agentops",
+      "description": "Operate AI agents and LLM features in production: prompt regression suites, model migration plans, context-engineering reviews, agent incident postmortems, and observability specs — plus the pm-ai evaluation and cost skills they build on."
+    },
+    {
+      "name": "pm-autopilot",
+      "source": "plugins/pm-autopilot",
+      "description": "Put recurring rituals on autopilot: charter what to automate, schedule it on any runner (Claude Code routines, cron, n8n, GitHub Actions), and make every run delta-aware so it reports what changed, not what it already said. Ships with the recurring skills worth scheduling."
+    },
+    {
+      "name": "pm-security",
+      "source": "plugins/pm-security",
+      "description": "Hands-on application & operational security skills: Threat Model (STRIDE), Security Review, Vulnerability Triage (CVSS), Security Incident Response, and Pentest Report. Defensive security and authorized testing for systems you own or are permitted to assess."
+    },
+    {
+      "name": "pm-gov",
+      "source": "plugins/pm-gov",
+      "description": "Government & public-policy skills: RFP Response, Policy Memo, Public Comment, Briefing Note, FOIA Request, and Regulatory Impact Analysis. For public servants, GovTech vendors, policy teams, and anyone working with government — drafting aids, not legal advice."
+    },
+    {
+      "name": "pm-pmm",
+      "source": "plugins/pm-pmm",
+      "description": "Product Marketing skills: Win/Loss Analysis, Sales Enablement, Pricing-Page Copy, Analyst Relations, Customer Advisory Boards, Voice of Customer, Launch Tiering, and Demo Scripts. Turn product value into messaging, enablement, and launches that land."
+    },
+    {
+      "name": "pm-craft",
+      "source": "plugins/pm-craft",
+      "description": "Engineering craft & process discipline for working with coding agents: TDD Workflow, Bug Diagnosis, Refactoring Plan, Session Handoff, PR Description, and Code Review Guide. How to work, not just what to ship — the disciplines that keep AI-assisted code sane."
+    },
+    {
+      "name": "pm-money",
+      "source": "plugins/pm-money",
+      "description": "Personal-finance skills for individuals: Budget Builder, Debt Payoff Plan, Investing Policy Statement, Net Worth Statement, Savings Goal Plan, Expense Audit, and Lower My Bill. Educational planning aids — not regulated financial advice."
+    },
+    {
+      "name": "pm-devrel",
+      "source": "plugins/pm-devrel",
+      "description": "Developer-relations & open-source maintainer skills: Launch Post (Show HN/Product Hunt), Docs Quickstart, Conference Talk Proposal, Changelog Writer, README Writer, and Contributor Guide. Ship and grow developer tools and OSS projects."
+    },
+    {
+      "name": "pm-realestate",
+      "source": "plugins/pm-realestate",
+      "description": "Real-estate skills for agents, buyers, and investors: Property Listing, Comparative Market Analysis, Property Offer Letter, Property Investment Analysis, Open House Plan, and Tenant Screening Guide. Market, price, and evaluate property — Fair-Housing-aware drafting aids, not legal advice."
+    },
+    {
+      "name": "pm-qa",
+      "source": "plugins/pm-qa",
+      "description": "QA & testing skills: Test Case Writer, Bug Report, Exploratory Test Charter, Regression Test Plan, QA Release Sign-off, and API Test Plan. Find bugs early and ship with evidence, not vibes."
+    },
+    {
+      "name": "pm-visuals",
+      "source": "plugins/pm-visuals",
+      "description": "Turn ideas into visuals: Flowchart, Architecture Diagram, User Journey Map, Org Chart, Sequence Diagram, Mind Map, Gantt Roadmap, ER Diagram, and Chart (bar/line/pie) — plus Announcement & Quote cards. Diagram & chart skills render live in the playground and export to PNG/SVG; card skills export as image."
+    },
+    {
+      "name": "pm-localization",
+      "source": "plugins/pm-localization",
+      "description": "Translation & localization skills: Professional Translator, Transcreation, Localization Brief, Subtitle & Caption, Glossary Builder, and i18n Readiness Review. Reach every market — translation as a real job, not word-for-word."
+    },
+    {
+      "name": "pm-accounting",
+      "source": "plugins/pm-accounting",
+      "description": "Accounting & bookkeeping skills for finance ops and small businesses: Invoice Generator, Expense Policy, Collections Email, Financial Statement Explainer, Bookkeeping Categorization, and Cash Flow Forecast. Practical money admin — drafting aids, not tax/accounting advice."
+    },
+    {
+      "name": "pm-recruiting",
+      "source": "plugins/pm-recruiting",
+      "description": "Recruiting & talent-sourcing skills: Boolean Search Builder, Recruiter Outreach, Interview Question Bank, Candidate Scorecard, Offer Letter, and Sourcing Strategy. Source, assess, and close candidates — structured and fair."
+    },
+    {
+      "name": "pm-uxwriting",
+      "source": "plugins/pm-uxwriting",
+      "description": "UX writing & content design skills: Microcopy Writer, Error Message Writer, Empty State Writer, Product Naming, Content Style Guide, and Onboarding Copy. The small words that make a product clear, usable, and on-voice."
+    },
+    {
+      "name": "pm-ecommerce",
+      "source": "plugins/pm-ecommerce",
+      "description": "E-commerce & retail skills that sell: Product Description, Marketplace Listing Optimizer, Return & Refund Policy, Promotion Plan, Review Response, and Category Page Brief. Listings that rank and convert, promos with the margin math, and reviews handled well."
+    },
+    {
+      "name": "pm-support",
+      "source": "plugins/pm-support",
+      "description": "Support & customer-ops skills: Support Macro, Help-Center Article, CSAT/NPS Analysis (with an NPS calculator), Support Runbook, Escalation Tree, and KB Audit. For frontline support, CX, and success teams."
+    },
+    {
+      "name": "pm-consulting",
+      "source": "plugins/pm-consulting",
+      "description": "Consulting & freelance skills: Consulting Proposal, Statement of Work, Client Discovery, Case Study Write-up, Rate Card, and Engagement Retro. Win, scope, deliver, and grow client work — pairs with the themed PDF export."
+    },
+    {
+      "name": "pm-dataeng",
+      "source": "plugins/pm-dataeng",
+      "description": "Analytics-engineering skills: dbt Model Spec, Data Contract, Metric Semantic Layer, Experiment Readout (with a stdlib significance calculator), SQL Optimizer, and Data Quality Checks."
+    },
+    {
+      "name": "pm-documents",
+      "source": "plugins/pm-documents",
+      "description": "Produce real, editable Office files (not markdown): Excel Model (live formulas), Slide Deck (.pptx), and Word Document (.docx). Generated via openpyxl / python-pptx / python-docx — needs a code-execution environment (Claude Code, API code tool, or Claude.ai)."
+    },
+    {
+      "name": "pm-comms",
+      "source": "plugins/pm-comms",
+      "description": "Communication & influence skills everyone needs: Difficult Conversation, Giving Feedback, Managing Up, Executive Presence, Saying No, and a Persuasion Brief. The soft skills that decide careers."
+    },
+    {
+      "name": "pm-crisis",
+      "source": "plugins/pm-crisis",
+      "description": "Crisis & sensitive communications skills for high-stakes moments: PR Crisis Response, Incident Public Statement, Customer Outage Notice, Layoff Communication, and Apology Letter."
+    },
+    {
+      "name": "pm-health",
+      "source": "plugins/pm-health",
+      "description": "Healthcare documentation skills for clinicians and health teams (drafting aids for clinician review, not medical advice): SOAP Note, Discharge Summary, Prior Authorization Letter, and Clinical Trial Protocol."
+    },
+    {
+      "name": "pm-lifeadmin",
+      "source": "plugins/pm-lifeadmin",
+      "description": "Life-admin letters that get results: Complaint Letter, Dispute Letter, Reference Letter, Rental Application, and Insurance Claim. The everyday correspondence everyone needs, done well."
+    },
+    {
+      "name": "pm-calculators",
+      "source": "plugins/pm-calculators",
+      "description": "Executable business calculators & models — each ships a stdlib script: Unit Economics (LTV/CAC), SaaS Metrics (NRR/quick ratio), Runway (default alive/dead), Pricing, ROI/NPV — plus computed models that emit real .xlsx with live formulas: cohort curve fitting (LTV), Monte Carlo runway (P10/P50/P90), and Van Westendorp pricing. Verifiable math, not vibes."
+    },
+    {
+      "name": "pm-copy",
+      "source": "plugins/pm-copy",
+      "description": "Copywriting & conversion skills: Value Proposition, Landing Page Copy, Sales Page, Ad Copy, Cold Email, Headline Options, and Email Sequence. Words that convert — pairs with the themed PDF export."
+    },
+    {
+      "name": "pm-jobsearch",
+      "source": "plugins/pm-jobsearch",
+      "description": "Land the job: JD Decoder, Company Brief, Outreach Message, Follow-Up Sequence, and Interview Prep. The active-job-hunt toolkit — pairs with the pm-personal documents (resume, cover letter, LinkedIn) and the Job Search hub."
+    },
+    {
+      "name": "pm-personal",
+      "source": "plugins/pm-personal",
+      "description": "Personal & professional documents for you: Resume/CV, Cover Letter, Personal Bio, LinkedIn Profile, Portfolio Page, and One-Pager. Pair with the playground's themed PDF export for beautifully typeset output."
+    },
+    {
+      "name": "pm-career",
+      "source": "plugins/pm-career",
+      "description": "Career & growth skills for advocating for yourself: Brag Doc, Self-Review, Promotion Packet, 1:1 Prep, Career Ladder Map, and Salary Negotiation (with a total-comp comparison script)."
+    },
+    {
+      "name": "pm-compliance",
+      "source": "plugins/pm-compliance",
+      "description": "Compliance & trust skills for regulated and enterprise teams: SOC 2 Readiness, GDPR Compliance, HIPAA Safeguards, ISO 27001 ISMS, Vendor Security Review, and Data Retention Policy. Each ships a stdlib scoring/validation script."
+    },
+    {
+      "name": "pm-growth",
+      "source": "plugins/pm-growth",
+      "description": "Growth & marketing skills: Marketing Funnel Plan, Lifecycle/CRM Plan, Paid Acquisition Plan, Growth Experiment Backlog, Retention Loop Design, Referral Program Design, Messaging Framework, and Conversion Rate Optimization."
+    },
+    {
+      "name": "pm-ai",
+      "source": "plugins/pm-ai",
+      "description": "AI/ML engineering skills for shipping AI features responsibly: Model Card, AI Eval Plan, RAG Design Doc, Agent Spec, Dataset Datasheet, AI Feature PRD, LLM Cost & Latency Budget, Prompt Optimizer, Eval Rubric Designer, RAG Architecture Review, LLM Guardrails Spec, Agent Design Review, and Model Selection Advisor."
+    },
+    {
+      "name": "pm-essentials",
+      "source": "plugins/pm-essentials",
+      "description": "Core PM skills: PRD Template, Meeting Notes, Stakeholder Update, User Research Synthesis, and Competitive Analysis. The 5 skills every PM needs first."
+    },
+    {
+      "name": "pm-discovery",
+      "source": "plugins/pm-discovery",
+      "description": "Discovery & research skills: Discovery Interview Guide, Job Story Mapper, User Interview Synthesis, Assumption Mapper. Structure user research from screener to synthesis."
+    },
+    {
+      "name": "pm-planning",
+      "source": "plugins/pm-planning",
+      "description": "Planning & strategy skills: OKR Builder, Feature Prioritisation (RICE/MoSCoW/Kano/ICE), Roadmap Presentation, Pricing Strategy, RICE + Impact Matrix, Roadmap Narrative."
+    },
+    {
+      "name": "pm-delivery",
+      "source": "plugins/pm-delivery",
+      "description": "Sprint & delivery skills: Sprint Planning, Technical Spec Template, A/B Test Planner, Go-to-Market Planner, Product Launch Checklist, Sprint Brief, Retro Analysis, User Story Writer, Launch Readiness."
+    },
+    {
+      "name": "pm-analytics",
+      "source": "plugins/pm-analytics",
+      "description": "Data & metrics skills: Data Analysis Standard, Retention Analysis, Product Health Analysis. Structure metric deep-dives, funnel analysis, cohort studies and churn investigations."
+    },
+    {
+      "name": "pm-strategy",
+      "source": "plugins/pm-strategy",
+      "description": "Strategy & stakeholder skills: Competitor Signal Tracker, Competitive Intelligence Monitor, Stakeholder Influence Mapper, Strategic Narrative Generator, Executive Update, Ambiguity Resolver."
+    },
+    {
+      "name": "pm-advanced",
+      "source": "plugins/pm-advanced",
+      "description": "Advanced PM skills: AI Product Canvas, Multi-Source Signal Synthesiser, Experiment Designer, Design Handoff Brief. For senior PMs working on complex or AI-powered products."
+    },
+    {
+      "name": "pm-rituals",
+      "source": "plugins/pm-rituals",
+      "description": "PM Weekly Review: a 20-minute structured ritual covering metrics movement, shipping progress, customer insights, and next week's top 3 priorities in a shareable update."
+    },
+    {
+      "name": "pm-gtm",
+      "source": "plugins/pm-gtm",
+      "description": "Marketing & GTM skills: Go-To-Market Planner, Content Calendar, Competitor Teardown, Email Campaign, SEO Content Brief, Media Pitch. Build positioning statements, messaging pillars, feature lists, use cases, SEO-optimised content briefs, and journalist pitches."
+    },
+    {
+      "name": "pm-engineering",
+      "source": "plugins/pm-engineering",
+      "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record, Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, Runbook Writer, CI/CD Playbook, SLO & Error Budget, Developer Onboarding Doc, On-Call Runbook, Security Threat Model, Performance Budget, Database Schema Design, Database Migration Plan, Technical Debt Register, RFC Writer, Capacity Planning, Load Testing Plan, Disaster Recovery Plan, Feature Flag Guide, Dependency Audit, Service Catalog Entry, Monitoring Setup Guide, Local Dev Setup, API Versioning Strategy, Infra-as-Code Review, Engineering Weekly Report, Tech Radar, Sprint Velocity Analysis, Microservices Decomposition, Engineering Hiring Rubric, Context Mode, Claude Superpowers, Skill Security Auditor, Error Decoder, Regex Builder, Git Troubleshooter, Dependency Conflict Resolver, Code Explainer, Writing Great Skills. 44 structured skills for engineering teams, SREs, technical PMs, and Claude Code power users — including a meta-skill for authoring high-quality SKILL.md files."
+    },
+    {
+      "name": "pm-cs",
+      "source": "plugins/pm-cs",
+      "description": "Customer Success skills: Customer Health Scorecard, QBR Deck, Escalation Brief, Churn Analysis. Score account health with a weighted RAG framework, build structured QBR decks with value narratives, write crisp escalation briefs for at-risk accounts, and analyse churn by category and segment with prioritised interventions."
+    },
+    {
+      "name": "pm-data",
+      "source": "plugins/pm-data",
+      "description": "Data & analytics skills: Metrics Framework, SQL Query Explainer, Dashboard Brief, Cohort Analysis, Data Pipeline Spec, Chart Data Extractor, A/B Test Readout, Metric Tree Builder, Data Quality Audit. Build North Star metric trees, explain and optimise SQL, spec dashboards, read out A/B test results with significance and guardrails, and audit datasets for quality before you trust them."
+    },
+    {
+      "name": "pm-people",
+      "source": "plugins/pm-people",
+      "description": "Leadership & people skills: Performance Review, Hiring Rubric, Team Offsite Planner. Write structured reviews, build interview scorecards, and plan offsites from goals to minute-by-minute agenda."
+    },
+    {
+      "name": "pm-design",
+      "source": "plugins/pm-design",
+      "description": "Design & UX skills: UX Research Plan, Design Critique, Accessibility Audit. Create research plans with discussion guides, critique designs using JTBD and Gestalt principles, and audit for WCAG 2.2 compliance."
+    },
+    {
+      "name": "pm-business",
+      "source": "plugins/pm-business",
+      "description": "Business, strategy & governance skills: Investor Update, Board Deck Narrative, Board Pre-Read, Board Minutes, Decision Memo, Strategy Memo, Capital Allocation, and Job Application. Write investor updates investors read, structure board materials, capture formal board decisions, and make crisp strategy calls."
+    },
+    {
+      "name": "pm-legal",
+      "source": "plugins/pm-legal",
+      "description": "Legal skills: Contract Review, NDA Analyser, Legal Brief, Compliance Checklist, Privacy Policy Drafter, Demand Letter, Clause Explainer. Flag risks in contracts and NDAs, draft legal memos in IRAC format, generate GDPR/SOC 2/FCA compliance checklists, draft plain-language privacy policies and demand letters, and decode any contract clause. Not a substitute for qualified legal advice."
+    },
+    {
+      "name": "pm-founders",
+      "source": "plugins/pm-founders",
+      "description": "Founder & startup skills: Startup Idea Validator, Fundraising FAQ, Cap Table Explainer, Founder-Market Fit, Investor Cold Email, Runway Planner. Pressure-test an idea, prep for investor Q&A, explain dilution and SAFEs, articulate why-you/why-now, write outreach that gets replies, and decide when to raise. Not legal or financial advice."
+    },
+    {
+      "name": "pm-education",
+      "source": "plugins/pm-education",
+      "description": "Educator skills: Lesson Plan, Rubric Builder, Quiz Generator, Parent Communication, IEP Goal Support, Student Feedback. Build standards-aligned lessons with differentiation, fair grading rubrics, quizzes with answer keys, warm parent messages, measurable SMART IEP goals, and constructive feedback that tells students how to improve. A drafting aid for teachers — not legal advice."
+    },
+    {
+      "name": "pm-creator",
+      "source": "plugins/pm-creator",
+      "description": "Content creator skills: Content Repurposer, Hook Writer, Short-Form Script, Newsletter Writer, Creator Brand Kit, Creator Media Kit. Atomize one piece into a multi-platform pack (thread, LinkedIn, newsletter, carousel, Reel), write scroll-stopping hooks, script TikToks/Reels/Shorts, draft newsletter issues, define your niche/voice/pillars, and land sponsorships. The craft layer of the creator stack — pairs with the ContentGoldMine app for one-click automation."
+    },
+    {
+      "name": "pm-finance",
+      "source": "plugins/pm-finance",
+      "description": "Finance skills: Financial Model Narrative, Budget Variance Analysis, Investor Pitch Deck, Financial Due Diligence, Tax Planning Checklist. Turn numbers into board-ready narratives, explain variances, structure pitch decks, generate DD checklists, and review year-end tax planning opportunities."
+    },
+    {
+      "name": "pm-hr",
+      "source": "plugins/pm-hr",
+      "description": "HR skills: Job Description Writer, Onboarding Plan, Employee Engagement Survey, Redundancy Consultation, Change Management Plan. Write inclusive JDs, build 30/60/90-day plans, design engagement surveys, structure redundancy processes, and manage organisational change with stakeholder analysis and adoption metrics."
+    },
+    {
+      "name": "pm-sales",
+      "source": "plugins/pm-sales",
+      "description": "Sales skills: Sales Battlecard, Discovery Call Prep, Proposal Writer, Account Plan, Sales Forecasting Model. Build competitive battlecards, prepare discovery calls, write winning proposals, create account plans, and build pipeline-based revenue forecasts with scenario analysis."
+    },
+    {
+      "name": "pm-operations",
+      "source": "plugins/pm-operations",
+      "description": "Operations & procurement skills: Process Documentation, SOP Writer, Vendor Evaluation, RFP Writer, Vendor Contract Checklist, Project Status Report, Workshop Facilitation Guide. Document workflows, write audit-ready SOPs and RFPs, evaluate vendors and review their contracts, produce RAG status reports, and design facilitated workshops."
+    },
+    {
+      "name": "pm-nonprofit",
+      "source": "plugins/pm-nonprofit",
+      "description": "Nonprofit fundraising & stewardship skills: Impact Report, Case for Support, and Donor Update. Show funders what their giving achieved and keep supporters close."
+    },
+    {
+      "name": "pm-research",
+      "source": "plugins/pm-research",
+      "description": "Research and healthcare skills: Clinical Case Summary, Research Protocol, Patient Communication, Literature Review. Write SBAR handovers, design research protocols, draft accessible patient communications, and structure literature reviews."
+    },
+    {
+      "name": "pm-cross",
+      "source": "plugins/pm-cross",
+      "description": "Cross-profession skills: Press Release, Grant Proposal, Executive Summary, Teaching Lesson Plan. Write journalist-ready press releases, structure grant applications, produce decision-ready executive summaries, and design complete lesson plans for any subject, audience, or setting."
+    },
+    {
+      "name": "pm-figma",
+      "source": "plugins/pm-figma",
+      "description": "Figma skills for PMs and designers: Component Audit, Design Brief, Annotation Guide, Design Review, User Flow Planner, Variant Matrix, Spacing System, Prototype Plan, Design QA, PM Design Critique. Work smarter across the full Figma design lifecycle."
+    },
+    {
+      "name": "pm-social",
+      "source": "plugins/pm-social",
+      "description": "Social Media skills: Social Media Audit, Influencer Brief, Community Management Playbook, Social Ad Campaign, Viral Content Framework. Score your social presence, brief influencer partnerships, manage communities at scale, plan paid social campaigns with full ad copy, and build a repeatable system for shareable content."
+    },
+    {
+      "name": "pm-writers",
+      "source": "plugins/pm-writers",
+      "description": "Writers & Content Creators skills: Instagram Post Downloader, AEO Optimizer, Thumbnail Creator, Substack Notes Scraper, Notes Humanizer, YouTube Script Writer. Download Instagram carousels as PDFs, restructure articles for AI citation, generate thumbnail candidates via Gemini, export Substack Notes analytics to Excel, strip AI writing patterns from any text, and write retention-optimized YouTube scripts with hooks and visual/audio cues."
+    },
+    {
+      "name": "pm-teaching",
+      "source": "plugins/pm-teaching",
+      "description": "The K-12 teaching pack: standards-aligned lesson plans, measurable IEP goals, parent-conference prep for the hard conversations, and function-based behavior intervention plans"
+    },
+    {
+      "name": "pm-hospitality",
+      "source": "plugins/pm-hospitality",
+      "description": "The restaurants & hospitality pack: menu costing and pricing, health-inspection self-audits, demand-matched shift schedules, front-of-house training, and defensible guest-incident logs"
+    },
+    {
+      "name": "pm-journalism",
+      "source": "plugins/pm-journalism",
+      "description": "The journalism pack: sharpen a story pitch an editor will buy, prep source and accountability interviews, run a claim-by-claim fact-check pass, and protect a confidential source"
+    },
+    {
+      "name": "pm-veterinary",
+      "source": "plugins/pm-veterinary",
+      "description": "The veterinary practice pack: tiered treatment plans with honest owner estimates, the compassionate euthanasia conversation, plain-language discharge notes, and life-stage wellness plans"
+    }
+  ]
+}

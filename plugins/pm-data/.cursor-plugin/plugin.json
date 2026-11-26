@@ -1,0 +1,30 @@
+{
+  "name": "pm-data",
+  "displayName": "PM Skills: Data",
+  "version": "1.3.0",
+  "description": "Data & analytics skills: Metrics Framework, SQL Query Explainer, Dashboard Brief, Cohort Analysis, Data Pipeline Spec, Chart Data Extractor, A/B Test Readout, Metric Tree Builder, Data Quality Audit. Build North Star metric trees, explain and optimise SQL, spec dashboards, read out A/B test results with significance and guardrails, and audit datasets for quality before you trust them.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "product-management",
+    "data",
+    "analytics",
+    "metrics",
+    "north-star",
+    "sql",
+    "dashboard",
+    "kpi",
+    "ab-test",
+    "experimentation",
+    "metric-tree",
+    "data-quality",
+    "cohort"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

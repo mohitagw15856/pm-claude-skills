@@ -1,0 +1,20 @@
+{
+  "name": "pm-daily-ten",
+  "displayName": "PM Skills: Daily Ten",
+  "version": "1.0.0",
+  "description": "The ten skills to install first: the ones behind the README example and the built-in slash commands. PRD, interview synthesis, stakeholder update, RICE, sprint planning, retro, executive summary, meeting notes, competitor teardown and customer health scorecard",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "starter",
+    "core",
+    "essentials"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

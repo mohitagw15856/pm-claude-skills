@@ -1,0 +1,27 @@
+{
+  "name": "pm-hr",
+  "displayName": "PM Skills: Hr",
+  "version": "1.1.0",
+  "description": "HR skills: Job Description Writer, Onboarding Plan, Employee Engagement Survey, Redundancy Consultation, Change Management Plan. Write inclusive JDs, build 30/60/90-day plans, design engagement surveys, structure redundancy processes, and manage organisational change with stakeholder analysis and adoption metrics.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "hr",
+    "people",
+    "job-description",
+    "onboarding",
+    "engagement",
+    "redundancy",
+    "recruitment",
+    "change-management",
+    "transformation",
+    "organisational-change"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

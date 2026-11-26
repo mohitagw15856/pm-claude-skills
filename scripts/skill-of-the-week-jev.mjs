@@ -5,7 +5,7 @@
 // staleness, what shipped this release — and prints the pick with the reason.
 //   node scripts/skill-of-the-week-jev.mjs [--json]      # no key → highest-signal candidate, labelled
 //   node scripts/skill-of-the-week-jev.mjs --selftest
-// Wire: run this first in .github/workflows/skill-of-the-week.yml and pass the pick to the
+// Wire: run this first in .github/workflows/weekly-data.yml and pass the pick to the
 // existing script's output, or leave the rotation as the fallback (both are deterministic).
 import { readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';

@@ -1,0 +1,24 @@
+{
+  "name": "pm-construction",
+  "displayName": "PM Skills: Construction",
+  "version": "1.0.0",
+  "description": "Construction & trades professional skills: bid/tender review, change orders, punch lists, toolbox-talk safety briefings, subcontractor scorecards, and delay claim letters — real field judgment for PMs, supers, and owners' reps.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "construction",
+    "contractor",
+    "tender",
+    "change-order",
+    "punch-list",
+    "safety",
+    "delay-claim"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

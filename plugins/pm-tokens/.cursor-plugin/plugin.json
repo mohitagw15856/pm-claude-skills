@@ -1,0 +1,23 @@
+{
+  "name": "pm-tokens",
+  "displayName": "PM Skills: Tokens",
+  "version": "1.0.0",
+  "description": "Token optimization for every stage of the agent journey: crush tool outputs before they enter context, navigate code by map instead of reading files, diet the output register, budget the window cache-aware, measure everything, and hand off sessions at 5% of transcript size",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "tokens",
+    "context",
+    "compression",
+    "cost",
+    "optimization",
+    "cache"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

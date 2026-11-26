@@ -31,7 +31,7 @@ const has = (f) => process.argv.includes(f);
 const RECORDS = [
   /^examples\/samples\//, /^skillbench\/reports\//, /^skillbench\/results\.json$/, /^skillbench\/REPORT\.md$/, /^skillbench\/community\//,
   /^training\//, /^dataset\//, /^web\/samples\.json$/, /^web\/modelbench\.json$/, /^evals\/results/, /^evals\/zh-routing-results\.json$/,
-  /^CHANGELOG\.md$/, /^RELEASE_NOTES\.md$/, /^EVOLUTION\.md$/, /^BUILD_NOTES\.md$/, /^newsletters?\//, /^announcements\//, /^firm-sessions\//,
+  /^CHANGELOG\.md$/, /^docs\/RELEASE_NOTES\.md$/, /^docs\/changelog\//, /^EVOLUTION\.md$/, /^docs\/BUILD_NOTES\.md$/, /^newsletters?\//, /^announcements\//, /^firm-sessions\//,
   /^skill-releases\//, /^docs\/case-studies\//, /^docs\/paper\//, /^docs\/reports\//, /^data\/evolution-log\.json$/, /^CASE_STUDIES\.md$/, /^growth\//, /^proposals\//,
 ];
 // Frozen task sets and eval inputs: a model name inside a task's text is part of the task.

@@ -1,6 +1,8 @@
 ---
 name: pr-description-writer
 description: "Write a clear, structured pull request description from a git diff, branch summary, or commit list. Use when asked to write a PR description, draft a pull request, or document code changes. Produces a description with summary, motivation, changes made, testing steps, and reviewer guidance."
+deprecated: 2026-08-21
+supersededBy: pr-description
 ---
 
 # PR Description Writer Skill

@@ -54,8 +54,8 @@ if (toolsVer !== rootVer) problems.push(`tools-pkg/package.json: version ${tools
 // Any "<number> skills"-ish claim in these files must use the current number
 // (small tolerance for subset claims like "50 production skills").
 const LIVING = [
-  'README.md', 'CHEATSHEET.md', 'PERSONAS.md', 'CONTRIBUTING.md', 'docs/SHOWCASE.md',
-  'REPO-MAP.md', 'QUICKSTART.md', 'AGENTS.md', 'TIERS.md', 'PACKS.md', 'ROADMAP.md',
+  'README.md', 'CHEATSHEET.md', 'docs/PERSONAS.md', 'CONTRIBUTING.md', 'docs/SHOWCASE.md',
+  'docs/REPO-MAP.md', 'QUICKSTART.md', 'AGENTS.md', 'TIERS.md', 'PACKS.md', 'ROADMAP.md',
   'docs/FOUNDATION.md', 'docs/print/README.md', 'training/README.md', 'training/MODEL_CARD.md',
   'README.zh-CN.md', 'README.zh-TW.md', 'README.ko.md', 'README.ja.md', 'README.es.md', 'README.pt-BR.md', 'docs/CHINA.md',
   ...readdirSync(join(root, 'web')).filter((n) => n.endsWith('.html')).map((n) => `web/${n}`),

@@ -1,0 +1,22 @@
+{
+  "name": "pm-aiwork",
+  "displayName": "PM Skills: Aiwork",
+  "version": "1.0.0",
+  "description": "Working with AI, organisation-side: the questions every manager is asking this year. Audit whether the AI spend paid, redesign roles AI has changed, write a usable AI policy, review performance when output is AI-assisted, and clear the slop out of your content.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "ai-adoption",
+    "policy",
+    "roi",
+    "performance",
+    "content-quality"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

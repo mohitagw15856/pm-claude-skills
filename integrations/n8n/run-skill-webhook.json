@@ -1,0 +1,118 @@
+{
+  "name": "PM Skills: run a skill from a webhook",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "pm-skill",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "b1",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://pm-skills-mcp.pm-claude-skills.workers.dev/v1/skills/{{ encodeURIComponent($json.body.skill) }}",
+        "options": {}
+      },
+      "id": "b2",
+      "name": "Get the skill",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "anthropicApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ model: 'claude-haiku-5-5', max_tokens: 4000, system: $json.instructions, messages: [{ role: 'user', content: String($('Webhook').item.json.body.input || '') }] }) }}",
+        "options": {}
+      },
+      "id": "b3",
+      "name": "Run it on your model",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ skill: $('Webhook').item.json.body.skill, output: $json.content[0].text }) }}",
+        "options": {}
+      },
+      "id": "b4",
+      "name": "Reply",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Get the skill",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get the skill": {
+      "main": [
+        [
+          {
+            "node": "Run it on your model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run it on your model": {
+      "main": [
+        [
+          {
+            "node": "Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false
+}
