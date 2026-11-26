@@ -72,6 +72,39 @@ npx pm-claude-skills add --bundle pm-japan
 - 法律・税務・労務系のスキルは明確な免責事項で終わり、相談すべき窓口を示します。専門家の代わりにはなりません。
 - プライバシー: ローカルで完結します。スキル、CLI、エクスポートは何も送信しません。詳細: [docs/TELEMETRY.md](docs/TELEMETRY.md) · [SECURITY.md](SECURITY.md) · ライセンス: [MIT](LICENSE)
 
+## 💛 このプロジェクトのスポンサーになる
+
+このスキルライブラリを使うプロダクトマネージャー、エンジニア、創業者、運用担当者に、あなたの製品を届けられます。枠は 6 種類あり、それぞれ契約期間中は 1 社だけに提供します。
+
+<!-- sponsor-reach:start (written by scripts/sponsor-report.mjs --update-docs) -->
+2026年11月26日 時点の数値:
+
+| 指標 | 数値 | 出典 |
+|---|---:|---|
+| GitHub スター | 1,608 | GitHub |
+| フォーク | 290 | GitHub |
+| リポジトリのページビュー（直近 14 日） | 14,366 | GitHub トラフィック |
+| リポジトリのユニーク訪問者（直近 14 日） | 6,860 | GitHub トラフィック |
+| README バナーが表示されるリポジトリのトップページのビュー（直近 14 日） | 1,720 (1,380 ユニーク) | GitHub トラフィック |
+| npm ダウンロード（直近 7 日） | 1,962 | npm |
+| npm ダウンロード（直近 30 日） | 11,086 | npm |
+
+この 14 日間で最も多い流入元: Google、4,772 ビュー。
+<!-- sponsor-reach:end -->
+
+| 予約できる枠 | 表示される場所 |
+|---|---|
+| README バナー | [英語版 README](README.md) の最上部、タイトルの直下（ライトとダーク） |
+| 中国語 README バナー | [README.zh-CN.md](README.zh-CN.md) の最上部。Gitee と GitCode のミラーのトップページでもあります |
+| プレイグラウンドとサイト | スポンサー一覧とプレイグラウンドのフッター |
+| リリースニュースレター | 各リリース号に、スポンサーと明記した 1 行 |
+| 今週のスキル | 毎週の注目スキル投稿に「提供」の 1 行 |
+| スポンサードスキル | スポンサー提供と明記した、自社製品についてのスキル |
+
+**予約と料金のお問い合わせ:** [mohit15856@gmail.com](mailto:mohit15856@gmail.com?subject=Sponsoring%20PM%20Skills) までメールでご連絡ください。期間、毎月お送りするレポート、スポンサードスキルのルールは **[SPONSORS.md](SPONSORS.md)**（英語）にあります。個人の方は [GitHub Sponsors](https://github.com/sponsors/mohitagw15856) から支援できます。
+
+現在のスポンサー: **[FocuSee](https://focusee.ai/?utm_source=github&utm_medium=display&utm_campaign=pm_claude_skills_2611&utm_content=readme_sponsor_section)**（2026 年 11 月 25 日から）
+
 ## 🤝 参加する
 
 スキルの追加は PR で([執筆標準](SKILL-AUTHORING-STANDARD.md)・[CONTRIBUTING](CONTRIBUTING.md))、欲しいスキルは [リクエスト](https://github.com/mohitagw15856/pm-claude-skills/issues/new?labels=skill-request&title=Skill:%20)から。使ってみた結果の共有は [Show and Tell](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=show-and-tell.yml) へ。
