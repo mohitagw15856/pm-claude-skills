@@ -104,5 +104,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/de-steuererklaerung-prep.html
 
-<!-- pm-claude-skills v84.0.0 | skill: de-steuererklaerung-prep | source: skills/de-steuererklaerung-prep/SKILL.md | sha256: d4db2936ab498da1ad5ee26421745a7aadd00ae932e35fd55e69fc33d1067c93 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: de-steuererklaerung-prep | source: skills/de-steuererklaerung-prep/SKILL.md | sha256: d4db2936ab498da1ad5ee26421745a7aadd00ae932e35fd55e69fc33d1067c93 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

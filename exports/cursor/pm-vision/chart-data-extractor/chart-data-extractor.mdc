@@ -104,5 +104,5 @@ Reading values off a chart depends on image resolution: a model that sees the ch
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/chart-data-extractor.html
 
-<!-- pm-claude-skills v84.0.0 | skill: chart-data-extractor | source: skills/chart-data-extractor/SKILL.md | sha256: 3519a8ec2f5190555cccd5b81359c01b67d76f738e19158f3cd7ff70109f973f | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: chart-data-extractor | source: skills/chart-data-extractor/SKILL.md | sha256: 3519a8ec2f5190555cccd5b81359c01b67d76f738e19158f3cd7ff70109f973f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

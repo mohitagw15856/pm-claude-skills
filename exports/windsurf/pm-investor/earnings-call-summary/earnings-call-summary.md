@@ -94,5 +94,5 @@ Quote figures exactly as the document gives them, with the unit and period. If a
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/earnings-call-summary.html
 
-<!-- pm-claude-skills v84.0.0 | skill: earnings-call-summary | source: skills/earnings-call-summary/SKILL.md | sha256: 67b19c7b9d15bcdb3b2a31b1fa2f8d990c3347242446e8aa19e374521394cc9a | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: earnings-call-summary | source: skills/earnings-call-summary/SKILL.md | sha256: 67b19c7b9d15bcdb3b2a31b1fa2f8d990c3347242446e8aa19e374521394cc9a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

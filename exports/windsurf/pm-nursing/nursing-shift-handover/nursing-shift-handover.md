@@ -94,5 +94,5 @@ Remind the user once: use bed numbers or initials unless their organisation has 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/nursing-shift-handover.html
 
-<!-- pm-claude-skills v84.0.0 | skill: nursing-shift-handover | source: skills/nursing-shift-handover/SKILL.md | sha256: e56b42018c0cbce95bd530e9075226f4554521d13851beb13b33268a6f8ffe56 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: nursing-shift-handover | source: skills/nursing-shift-handover/SKILL.md | sha256: e56b42018c0cbce95bd530e9075226f4554521d13851beb13b33268a6f8ffe56 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -77,5 +77,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/svg-diagram-studio.html
 
-<!-- pm-claude-skills v84.0.0 | skill: svg-diagram-studio | source: skills/svg-diagram-studio/SKILL.md | sha256: d5715c6e28a6e40329be5b874ebb0d5332b878f8ca1945a0e7f1e11bbdfd0ed8 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: svg-diagram-studio | source: skills/svg-diagram-studio/SKILL.md | sha256: d5715c6e28a6e40329be5b874ebb0d5332b878f8ca1945a0e7f1e11bbdfd0ed8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

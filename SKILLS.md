@@ -95,7 +95,7 @@
 | **Stakeholder Influence Mapper** (`stakeholder-influence-mapper`) | Map stakeholders for a product decision and produce a tailored influence strategy with talking points. | — |
 | **Strategic Narrative Generator** (`strategic-narrative-generator`) | Generate the strategic story connecting a product roadmap to company goals in a form non-technical stakeholders can repeat. | — |
 
-## 📣 Marketing & Growth (46 skills)
+## 📣 Marketing & Growth (49 skills)
 
 ### `pm-copy` — 7 skills
 
@@ -120,7 +120,7 @@
 | **Newsletter Writer** (`newsletter-writer`) | Write a full creator newsletter issue — subject line, preview text, hook, body with a clear takeaway, and a CTA — in the writer's voice, for… | — |
 | **Short-Form Script** (`short-form-script`) | Write a short-form video script for TikTok, Instagram Reels, or YouTube Shorts — built on the hook→retention→payoff structure that drives watch-time. | — |
 
-### `pm-growth` — 11 skills
+### `pm-growth` — 13 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -133,10 +133,12 @@
 | **Messaging Framework** (`messaging-framework`) | Build a messaging framework (message house) that the whole company can use consistently. | — |
 | **Paid Acquisition Plan** (`paid-acquisition-plan`) | Plan a paid acquisition / performance marketing program with unit economics that work. | — |
 | **Paywall Optimization** (`paywall-optimization`) | Design or optimize a paywall / upgrade screen to convert free users to paid without killing trust. | — |
+| **Programmatic SEO** (`programmatic-seo`) | Plan a programmatic SEO strategy — generate many ranking pages from a data set and a template. | — |
 | **Referral Program Design** (`referral-program-design`) | Design a referral or viral-loop program that actually drives growth. | — |
 | **Retention Loop Design** (`retention-loop-design`) | Design retention and engagement loops that bring users back. | — |
+| **Schema Markup** (`schema-markup`) | Generate structured-data (Schema.org / JSON-LD) markup to win rich results in search. | — |
 
-### `pm-gtm` — 7 skills · 1 eval-scored
+### `pm-gtm` — 8 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -146,6 +148,7 @@
 | **Go-To-Market** (`go-to-market`) | Create go-to-market assets for any product or feature. | ✅ 4.5/5 |
 | **Media Pitch** (`media-pitch`) | Write a media pitch or press outreach email for any story or announcement. | — |
 | **Product Positioning Doc** (`product-positioning-doc`) | Write a product positioning document and messaging framework. | — |
+| **SEO Content Brief** (`seo-content-brief`) | Create a structured SEO content brief for any target keyword or topic. | — |
 | **Social Media Strategy** (`social-media-strategy`) | Build a social media strategy for a brand, product, or creator. | — |
 
 ### `pm-pmm` — 9 skills · 8 eval-scored
@@ -380,14 +383,15 @@
 | **Thumbnail Creator Skill (via Gemini)** (`thumbnail-creator`) | Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. | — |
 | **YouTube Script Writer** (`youtube-script-writer`) | Write a high-retention YouTube script — explainer, tutorial, video essay, review, or talking head — on the packaging then cold-open then… | — |
 
-## 🤝 Customers & Sales (25 skills)
+## 🤝 Customers & Sales (26 skills)
 
-### `pm-cs` — 6 skills · 1 eval-scored
+### `pm-cs` — 7 skills · 2 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Churn Analysis** (`churn-analysis`) | Produce a structured churn analysis that separates avoidable from unavoidable churn. | ✅ 4.5/5 |
 | **Customer Escalation Brief** (`cs-escalation-brief`) | Write a structured escalation brief for an at-risk customer account. | — |
+| **Customer Health Scorecard** (`cs-health-scorecard`) | Build a customer health scorecard for a specific account. | ✅ 4.8/5 |
 | **Customer Success Plan** (`customer-success-plan`) | Build a joint customer success plan for a specific account. | — |
 | **QBR Deck** (`qbr-deck`) | Build a Quarterly Business Review (QBR) deck structure and narrative for a customer account. | — |
 | **Renewal Playbook** (`renewal-playbook`) | Build a structured renewal playbook for a customer account. | — |
@@ -719,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 4/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (932 skills)
+## 🌍 Industries & Public Sector (928 skills)
 
 ### `other` — 22 skills · 12 eval-scored
 
@@ -1211,12 +1215,13 @@
 | **Layoff Communication** (`layoff-communication`) | Plan and write the communications for a layoff or restructure with clarity and dignity. | ✅ 4.8/5 |
 | **PR Crisis Response** (`pr-crisis-response`) | Build a crisis communications plan to respond fast and credibly when something goes wrong. | ✅ 4.8/5 |
 
-### `pm-cross` — 10 skills
+### `pm-cross` — 11 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Action Runner** (`action-runner`) | Turn a skill's recommendations into real, executed actions — open the tickets, file the issues, post the updates — safely: dry-run preview… | — |
 | **Brief Builder** (`brief-builder`) | Interview the user with sharp, one-at-a-time questions to turn a vague request into a tight, complete brief any other skill can run on. | — |
+| **Executive Summary** (`executive-summary`) | Write an executive summary for any document, report, or proposal. | ✅ 4.1/5 |
 | **Grant Proposal** (`grant-proposal`) | Write a structured grant proposal or funding application for any grant type. | — |
 | **Last 30 Days Research** (`last-30-days-research`) | Searches Reddit, X/Twitter, and the broader web for recent opinions, sentiment, and signal on any topic. | — |
 | **NotebookLM Connector** (`notebooklm-connector`) | Automates NotebookLM from Claude Code using browser automation via the Claude Chrome extension — creating notebooks, adding sources, and… | — |
@@ -1258,13 +1263,6 @@
 | **Arbeitszeugnis Decoder (Germany)** (`de-arbeitszeugnis-decoder`) | Decode a German employment reference (Arbeitszeugnis): translate the coded phrases into the grade they signal, check the structure and the closing… | — |
 | **Kündigungsfrist Check (Germany)** (`de-kuendigungsfrist-check`) | Work out the notice period and last working day for an employment contract in Germany, for resignation or dismissal: the statutory periods by… | — |
 | **Steuererklärung Prep (Germany)** (`de-steuererklaerung-prep`) | Prepare an employee's annual income tax return in Germany: whether filing is required or worthwhile, which forms apply, the documents to gather… | — |
-
-### `pm-daily-ten` — 2 skills · 2 eval-scored
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **Customer Health Scorecard** (`cs-health-scorecard`) | Build a customer health scorecard for a specific account. | ✅ 4.8/5 |
-| **Executive Summary** (`executive-summary`) | Write an executive summary for any document, report, or proposal. | ✅ 4.1/5 |
 
 ### `pm-dead-mentors` — 5 skills · 5 eval-scored
 
@@ -1655,20 +1653,20 @@
 | **Policy Renewal Review** (`policy-renewal-review`) | Run a pre-renewal review of an insurance programme: scan coverage gaps against current operations, test limit adequacy against inflation and… | — |
 | **Underwriting Narrative** (`underwriting-narrative`) | Write the underwriting file narrative for a risk: the risk story, exposure quantification, loss-history read, mitigating and aggravating factors… | — |
 
-### `pm-investing-literacy` — 4 skills · 4 eval-scored
+### `pm-investing-literacy` — 5 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Annual Report Tutor** (`annual-report-tutor`) | Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the… | ✅ 3/5 |
 | **Audited Boundary Check** (`audited-boundary-check`) | Use when asked to check whether a figure is audited, which headline numbers sit outside the audited accounts, what 'adjusted' or 'underlying'… | ✅ 5/5 |
 | **Company Compare, Same Definitions** (`company-compare-same-definitions`) | Use when asked to compare two annual reports, put two companies from the same sector side by side, or check whether two companies' adjusted… | ✅ 4.8/5 |
 | **Investing Vocabulary Explainer** (`investing-vocabulary-explainer`) | Use when asked what a term means in an annual report, to explain EBITDA, goodwill, free cash flow, working capital or diluted EPS, or to define… | ✅ 4.5/5 |
 | **Profit to Cash Walk** (`profit-to-cash-walk`) | Use when asked to reconcile operating profit to free cash flow, walk from EBIT to FCF, explain why profit and cash differ in this report, or show… | ✅ 4.3/5 |
 
-### `pm-investor` — 4 skills · 1 eval-scored
+### `pm-investor` — 3 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Annual Report Tutor** (`annual-report-tutor`) | Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the… | ✅ 3/5 |
 | **Earnings Call Summary** (`earnings-call-summary`) | Summarise a company's earnings release and call transcript the user supplies: what was reported against what was guided, what changed in the… | — |
 | **Equity Research Note** (`equity-research-note`) | Write a structured research note on a listed company from filings and figures the user supplies: the business in plain words, what drives revenue… | — |
 | **Portfolio Review** (`portfolio-review`) | Review a personal investment portfolio against the owner's own goals and rules: how it is spread, where it is concentrated, what it costs, how far… | — |
@@ -2039,14 +2037,11 @@
 | **Injection Spotter** (`injection-spotter`) | Spot prompt-injection in untrusted content before an agent acts on it — the anatomy of injected instructions across the channels attackers use… | — |
 | **Tool Permission Review** (`tool-permission-review`) | Review what an agent is actually allowed to do before you turn it loose — the tool-by-tool audit (each capability's blast radius), the… | — |
 
-### `pm-seo` — 5 skills
+### `pm-seo` — 2 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Keyword Cluster Map** (`keyword-cluster-map`) | Group a keyword list into topic clusters by search intent, assign one page to each cluster, and show where existing pages compete with each other. | — |
-| **Programmatic SEO** (`programmatic-seo`) | Plan a programmatic SEO strategy — generate many ranking pages from a data set and a template. | — |
-| **Schema Markup** (`schema-markup`) | Generate structured-data (Schema.org / JSON-LD) markup to win rich results in search. | — |
-| **SEO Content Brief** (`seo-content-brief`) | Create a structured SEO content brief for any target keyword or topic. | — |
 | **Technical SEO Audit** (`technical-seo-audit`) | Audit a website's technical search health from evidence the user supplies (crawl exports, page source, server responses, sitemap, robots file… | — |
 
 ### `pm-sidehustle` — 5 skills · 2 eval-scored
@@ -2280,4 +2275,4 @@
 
 ---
 
-_1390 skills across 172 bundles · 399 eval-scored (29%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1390 skills across 171 bundles · 399 eval-scored (29%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

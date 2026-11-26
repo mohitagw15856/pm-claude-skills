@@ -97,5 +97,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/gulf-residence-visa-admin.html
 
-<!-- pm-claude-skills v84.0.0 | skill: gulf-residence-visa-admin | source: skills/gulf-residence-visa-admin/SKILL.md | sha256: cb7001e95ee230e60aed97d0c053c681821be3e39e065c6e1f53c2e3a22e2cd3 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: gulf-residence-visa-admin | source: skills/gulf-residence-visa-admin/SKILL.md | sha256: cb7001e95ee230e60aed97d0c053c681821be3e39e065c6e1f53c2e3a22e2cd3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

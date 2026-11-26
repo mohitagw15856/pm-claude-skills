@@ -101,5 +101,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-returnee-job-search.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cn-returnee-job-search | source: skills/cn-returnee-job-search/SKILL.md | sha256: 69e5a2486b72913d46f7fba58498db9742d1af2c314ed59375e25b86f669fcfa | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cn-returnee-job-search | source: skills/cn-returnee-job-search/SKILL.md | sha256: 69e5a2486b72913d46f7fba58498db9742d1af2c314ed59375e25b86f669fcfa | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

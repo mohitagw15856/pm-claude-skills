@@ -103,5 +103,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/verified-security-audit.html
 
-<!-- pm-claude-skills v84.0.0 | skill: verified-security-audit | source: skills/verified-security-audit/SKILL.md | sha256: 639c859917a01ddf199c7cb86abc4adcf6fea5f9dad449be5944624fffb7d720 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: verified-security-audit | source: skills/verified-security-audit/SKILL.md | sha256: 639c859917a01ddf199c7cb86abc4adcf6fea5f9dad449be5944624fffb7d720 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

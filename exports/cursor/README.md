@@ -63,7 +63,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/ambiguity-resolver.mdc` |
 | Analyst Relations Brief | `pm-pmm` | `pm-pmm/analyst-relations-brief/analyst-relations-brief.mdc` |
 | Announcement Card | `pm-visuals` | `pm-visuals/announcement-card/announcement-card.mdc` |
-| Annual Report Tutor | `pm-investor` | `pm-investor/annual-report-tutor/annual-report-tutor.mdc` |
+| Annual Report Tutor | `pm-investing-literacy` | `pm-investing-literacy/annual-report-tutor/annual-report-tutor.mdc` |
 | API Docs Writer | `pm-engineering` | `pm-engineering/api-docs-writer/api-docs-writer.mdc` |
 | API For Yourself | `pm-2027` | `pm-2027/api-for-yourself/api-for-yourself.mdc` |
 | API Test Plan | `pm-qa` | `pm-qa/api-test-plan/api-test-plan.mdc` |
@@ -342,7 +342,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Cross-border Platform Playbook (跨境平台选择与入驻) | `pm-chuhai` | `pm-chuhai/crossborder-platform-playbook/crossborder-platform-playbook.mdc` |
 | Crypto Prices | `pm-live` | `pm-live/crypto-prices/crypto-prices.mdc` |
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/cs-escalation-brief.mdc` |
-| Customer Health Scorecard | `pm-daily-ten` | `pm-daily-ten/cs-health-scorecard/cs-health-scorecard.mdc` |
+| Customer Health Scorecard | `pm-cs` | `pm-cs/cs-health-scorecard/cs-health-scorecard.mdc` |
 | CSAT / NPS Analysis | `pm-support` | `pm-support/csat-nps-analysis/csat-nps-analysis.mdc` |
 | Currency Rates | `pm-live` | `pm-live/currency-rates/currency-rates.mdc` |
 | Current Practice Check | `pm-fieldwork` | `pm-fieldwork/current-practice-check/current-practice-check.mdc` |
@@ -514,7 +514,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Executing Plans | `pm-method` | `pm-method/executing-plans/executing-plans.mdc` |
 | Executive CV | `pm-cv` | `pm-cv/executive-cv/executive-cv.mdc` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/executive-presence.mdc` |
-| Executive Summary | `pm-daily-ten` | `pm-daily-ten/executive-summary/executive-summary.mdc` |
+| Executive Summary | `pm-cross` | `pm-cross/executive-summary/executive-summary.mdc` |
 | Executive Update | `pm-strategy` | `pm-strategy/executive-update/executive-update.mdc` |
 | Exit Interview Strategy | `pm-resignation` | `pm-resignation/exit-interview-strategy/exit-interview-strategy.mdc` |
 | Exit Waterfall | `pm-calculators` | `pm-calculators/exit-waterfall/exit-waterfall.mdc` |
@@ -991,7 +991,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Professional Brain | `pm-cross` | `pm-cross/professional-brain/professional-brain.mdc` |
 | Professional Translator | `pm-localization` | `pm-localization/professional-translator/professional-translator.mdc` |
 | Profit to Cash Walk | `pm-investing-literacy` | `pm-investing-literacy/profit-to-cash-walk/profit-to-cash-walk.mdc` |
-| Programmatic SEO | `pm-seo` | `pm-seo/programmatic-seo/programmatic-seo.mdc` |
+| Programmatic SEO | `pm-growth` | `pm-growth/programmatic-seo/programmatic-seo.mdc` |
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/project-status-report.mdc` |
 | Promoter Draft | `pm-skill-promoter` | `pm-skill-promoter/promoter-draft/promoter-draft.mdc` |
 | Promoter Publish | `pm-skill-promoter` | `pm-skill-promoter/promoter-publish/promoter-publish.mdc` |
@@ -1127,7 +1127,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Scam Message Decoder | `pm-scam-defense` | `pm-scam-defense/scam-message-decoder/scam-message-decoder.mdc` |
 | Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/schedule-monte-carlo.mdc` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/schedule-recipe.mdc` |
-| Schema Markup | `pm-seo` | `pm-seo/schema-markup/schema-markup.mdc` |
+| Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.mdc` |
 | Scholarship Essay | `pm-students` | `pm-students/scholarship-essay/scholarship-essay.mdc` |
 | School Choice Decision | `pm-family` | `pm-family/school-choice-decision/school-choice-decision.mdc` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/scope-creep-response.mdc` |
@@ -1145,7 +1145,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Self-Review | `pm-career` | `pm-career/self-review/self-review.mdc` |
 | Send Approval Check | `pm-duet` | `pm-duet/send-approval-check/send-approval-check.mdc` |
 | Sensory Audit | `pm-neurodivergent` | `pm-neurodivergent/sensory-audit/sensory-audit.mdc` |
-| SEO Content Brief | `pm-seo` | `pm-seo/seo-content-brief/seo-content-brief.mdc` |
+| SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/seo-content-brief.mdc` |
 | Sequence Diagram | `pm-visuals` | `pm-visuals/sequence-diagram/sequence-diagram.mdc` |
 | Server Training Guide | `pm-hospitality` | `pm-hospitality/server-training-guide/server-training-guide.mdc` |
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/service-catalog-entry.mdc` |

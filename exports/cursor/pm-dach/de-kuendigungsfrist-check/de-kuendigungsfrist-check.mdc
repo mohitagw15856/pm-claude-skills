@@ -113,5 +113,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/de-kuendigungsfrist-check.html
 
-<!-- pm-claude-skills v84.0.0 | skill: de-kuendigungsfrist-check | source: skills/de-kuendigungsfrist-check/SKILL.md | sha256: ae45332969e20963ef4760f667f85dc1172cf74d19222b7b792331b0b1bf2f7f | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: de-kuendigungsfrist-check | source: skills/de-kuendigungsfrist-check/SKILL.md | sha256: ae45332969e20963ef4760f667f85dc1172cf74d19222b7b792331b0b1bf2f7f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

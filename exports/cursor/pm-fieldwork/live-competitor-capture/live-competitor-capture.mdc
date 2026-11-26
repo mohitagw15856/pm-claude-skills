@@ -103,5 +103,5 @@ python3 scripts/capture_log.py report log.json
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/live-competitor-capture.html
 
-<!-- pm-claude-skills v84.0.0 | skill: live-competitor-capture | source: skills/live-competitor-capture/SKILL.md | sha256: d7062ee784a6324fb47cabfc93edba38489aa318dac9a5119ca70fd4d8204f7c | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: live-competitor-capture | source: skills/live-competitor-capture/SKILL.md | sha256: d7062ee784a6324fb47cabfc93edba38489aa318dac9a5119ca70fd4d8204f7c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

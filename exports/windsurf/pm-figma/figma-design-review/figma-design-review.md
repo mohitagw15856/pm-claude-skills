@@ -79,5 +79,5 @@ Approved / Approved with changes (list) / Needs revision (focus area + next revi
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-design-review.html
 
-<!-- pm-claude-skills v84.0.0 | skill: figma-design-review | source: skills/figma-design-review/SKILL.md | sha256: b319d09e104212c0ab499317d348a53e7a59b42dcd2baf1c2d16622ad63ab4de | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: figma-design-review | source: skills/figma-design-review/SKILL.md | sha256: b319d09e104212c0ab499317d348a53e7a59b42dcd2baf1c2d16622ad63ab4de | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

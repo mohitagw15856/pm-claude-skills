@@ -102,5 +102,5 @@ This audit depends on reading slide images precisely: where text overflows, what
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pptx-slide-auditor.html
 
-<!-- pm-claude-skills v84.0.0 | skill: pptx-slide-auditor | source: skills/pptx-slide-auditor/SKILL.md | sha256: 28e2d95b72238665815462fc0c0a99d4b9e7d0291d4dc880600e4df995e757c4 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: pptx-slide-auditor | source: skills/pptx-slide-auditor/SKILL.md | sha256: 28e2d95b72238665815462fc0c0a99d4b9e7d0291d4dc880600e4df995e757c4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

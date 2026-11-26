@@ -119,5 +119,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-high-tech-enterprise-application.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cn-high-tech-enterprise-application | source: skills/cn-high-tech-enterprise-application/SKILL.md | sha256: 5a90070ca5605be73bfe14b895409b99fa4a14cb8073106d65201424b35014b4 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cn-high-tech-enterprise-application | source: skills/cn-high-tech-enterprise-application/SKILL.md | sha256: 5a90070ca5605be73bfe14b895409b99fa4a14cb8073106d65201424b35014b4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

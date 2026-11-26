@@ -111,5 +111,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-study-abroad-essay.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cn-study-abroad-essay | source: skills/cn-study-abroad-essay/SKILL.md | sha256: 031357ad2cfd3ea4bbe98d04d0a19e83edcf809e104efbb9082e6769cf4989d9 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cn-study-abroad-essay | source: skills/cn-study-abroad-essay/SKILL.md | sha256: 031357ad2cfd3ea4bbe98d04d0a19e83edcf809e104efbb9082e6769cf4989d9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

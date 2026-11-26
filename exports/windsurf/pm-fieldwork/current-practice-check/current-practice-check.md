@@ -95,5 +95,5 @@ If a search or documentation tool is available, use it for the must-verify items
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/current-practice-check.html
 
-<!-- pm-claude-skills v84.0.0 | skill: current-practice-check | source: skills/current-practice-check/SKILL.md | sha256: ba97119edd461438734b0fc60534dd0af739f3997cb647f41a30d81daf3e99e2 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: current-practice-check | source: skills/current-practice-check/SKILL.md | sha256: ba97119edd461438734b0fc60534dd0af739f3997cb647f41a30d81daf3e99e2 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

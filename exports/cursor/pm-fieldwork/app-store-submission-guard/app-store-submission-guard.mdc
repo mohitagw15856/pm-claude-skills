@@ -89,5 +89,5 @@ For each cause, record one of: **found**, **not found in the material given**, o
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/app-store-submission-guard.html
 
-<!-- pm-claude-skills v84.0.0 | skill: app-store-submission-guard | source: skills/app-store-submission-guard/SKILL.md | sha256: 43101b254c303d4de84068d6a9fa060526696e41f9f2d88878c41b56deb31d2b | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: app-store-submission-guard | source: skills/app-store-submission-guard/SKILL.md | sha256: 43101b254c303d4de84068d6a9fa060526696e41f9f2d88878c41b56deb31d2b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -638,5 +638,5 @@ Install only this skill: `npx pm-claude-skills add --skills thumbnail-creator`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thumbnail-creator.html
 
-<!-- pm-claude-skills v84.0.0 | skill: thumbnail-creator | source: skills/thumbnail-creator/SKILL.md | sha256: 8cafef46e59f50504dc0e62dc4920de57876ee46a4535f71ede39815af487383 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: thumbnail-creator | source: skills/thumbnail-creator/SKILL.md | sha256: 8cafef46e59f50504dc0e62dc4920de57876ee46a4535f71ede39815af487383 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

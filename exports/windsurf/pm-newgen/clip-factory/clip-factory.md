@@ -113,5 +113,5 @@ Install only this skill: `npx pm-claude-skills add --skills clip-factory`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/clip-factory.html
 
-<!-- pm-claude-skills v84.0.0 | skill: clip-factory | source: skills/clip-factory/SKILL.md | sha256: 57373b41c4860117fbd057e5b50df7f94012124b13a1aa90c1bbc759693a4bfd | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: clip-factory | source: skills/clip-factory/SKILL.md | sha256: 57373b41c4860117fbd057e5b50df7f94012124b13a1aa90c1bbc759693a4bfd | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

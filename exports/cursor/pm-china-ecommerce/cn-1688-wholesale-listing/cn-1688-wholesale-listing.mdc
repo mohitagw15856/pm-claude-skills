@@ -106,5 +106,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-1688-wholesale-listing.html
 
-<!-- pm-claude-skills v84.0.0 | skill: cn-1688-wholesale-listing | source: skills/cn-1688-wholesale-listing/SKILL.md | sha256: f90ccc882c81a06424f19c48a00ccc235a1f0b716bb348b63a1c91b330418db5 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: cn-1688-wholesale-listing | source: skills/cn-1688-wholesale-listing/SKILL.md | sha256: f90ccc882c81a06424f19c48a00ccc235a1f0b716bb348b63a1c91b330418db5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

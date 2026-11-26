@@ -96,5 +96,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/retail-shift-handover.html
 
-<!-- pm-claude-skills v84.0.0 | skill: retail-shift-handover | source: skills/retail-shift-handover/SKILL.md | sha256: 00afe5d57a98b59a38ab233b58113e44aa1e9ffa3f2951855d12c29f2a253171 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: retail-shift-handover | source: skills/retail-shift-handover/SKILL.md | sha256: 00afe5d57a98b59a38ab233b58113e44aa1e9ffa3f2951855d12c29f2a253171 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

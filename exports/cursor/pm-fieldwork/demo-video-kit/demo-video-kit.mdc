@@ -101,5 +101,5 @@ python3 scripts/demo_video.py plan shots.json --out build --size 1920x1080 --fps
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/demo-video-kit.html
 
-<!-- pm-claude-skills v84.0.0 | skill: demo-video-kit | source: skills/demo-video-kit/SKILL.md | sha256: 6f003305e5a952dafeb3453d2a8d821bdb0c1bfc356b075f49d3aa8a5cd66765 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: demo-video-kit | source: skills/demo-video-kit/SKILL.md | sha256: 6f003305e5a952dafeb3453d2a8d821bdb0c1bfc356b075f49d3aa8a5cd66765 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

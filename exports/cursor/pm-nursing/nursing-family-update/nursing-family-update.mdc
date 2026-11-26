@@ -89,5 +89,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/nursing-family-update.html
 
-<!-- pm-claude-skills v84.0.0 | skill: nursing-family-update | source: skills/nursing-family-update/SKILL.md | sha256: 3cc0992ee87a7e755df6ef75d0f41b7b3bb1873d157418cef3d89d7e61ca924e | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: nursing-family-update | source: skills/nursing-family-update/SKILL.md | sha256: 3cc0992ee87a7e755df6ef75d0f41b7b3bb1873d157418cef3d89d7e61ca924e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

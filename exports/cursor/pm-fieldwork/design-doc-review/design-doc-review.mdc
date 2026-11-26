@@ -90,5 +90,5 @@ Review only what the document says. Where the review depends on a fact about the
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/design-doc-review.html
 
-<!-- pm-claude-skills v84.0.0 | skill: design-doc-review | source: skills/design-doc-review/SKILL.md | sha256: 900602a9e1392a201bd04843d15cfa01f12638610140f14ce1e8e7751b2b0f29 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: design-doc-review | source: skills/design-doc-review/SKILL.md | sha256: 900602a9e1392a201bd04843d15cfa01f12638610140f14ce1e8e7751b2b0f29 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -100,5 +100,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ng-pension-rsa-guide.html
 
-<!-- pm-claude-skills v84.0.0 | skill: ng-pension-rsa-guide | source: skills/ng-pension-rsa-guide/SKILL.md | sha256: d56079b620a3b20d4922963c9cc1781e20c46f427caad257c4a7f9f1aaa4cb8e | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: ng-pension-rsa-guide | source: skills/ng-pension-rsa-guide/SKILL.md | sha256: d56079b620a3b20d4922963c9cc1781e20c46f427caad257c4a7f9f1aaa4cb8e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

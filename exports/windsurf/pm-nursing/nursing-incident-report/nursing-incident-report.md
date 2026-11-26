@@ -96,5 +96,5 @@ Ask for these if not provided. Never guess a time, a dose or a name.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/nursing-incident-report.html
 
-<!-- pm-claude-skills v84.0.0 | skill: nursing-incident-report | source: skills/nursing-incident-report/SKILL.md | sha256: c8a4000d7f8473fe53dc5cd2109a0b8df3ca5024dc0b627f7ce6df87ed525cf1 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: nursing-incident-report | source: skills/nursing-incident-report/SKILL.md | sha256: c8a4000d7f8473fe53dc5cd2109a0b8df3ca5024dc0b627f7ce6df87ed525cf1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

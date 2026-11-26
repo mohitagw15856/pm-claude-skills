@@ -100,5 +100,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/de-arbeitszeugnis-decoder.html
 
-<!-- pm-claude-skills v84.0.0 | skill: de-arbeitszeugnis-decoder | source: skills/de-arbeitszeugnis-decoder/SKILL.md | sha256: 5049162e968ce3c82498572ea122570f36b1f1cc8df7322998bbafe36e57d22f | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: de-arbeitszeugnis-decoder | source: skills/de-arbeitszeugnis-decoder/SKILL.md | sha256: 5049162e968ce3c82498572ea122570f36b1f1cc8df7322998bbafe36e57d22f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

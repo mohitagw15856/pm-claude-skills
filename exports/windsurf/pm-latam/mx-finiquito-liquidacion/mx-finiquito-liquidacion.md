@@ -107,5 +107,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/mx-finiquito-liquidacion.html
 
-<!-- pm-claude-skills v84.0.0 | skill: mx-finiquito-liquidacion | source: skills/mx-finiquito-liquidacion/SKILL.md | sha256: 0d5f524a13b32a67040b349432e597f5ced834fe530fc293a75ff7d4f2b0920a | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: mx-finiquito-liquidacion | source: skills/mx-finiquito-liquidacion/SKILL.md | sha256: 0d5f524a13b32a67040b349432e597f5ced834fe530fc293a75ff7d4f2b0920a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

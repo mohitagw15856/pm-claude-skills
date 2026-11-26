@@ -86,5 +86,5 @@ Use only the volumes and difficulty scores in the user's export. If none are sup
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/keyword-cluster-map.html
 
-<!-- pm-claude-skills v84.0.0 | skill: keyword-cluster-map | source: skills/keyword-cluster-map/SKILL.md | sha256: b97e644170fe2537178e46e49d9a27ab9e48944d4ea25dc7026203a7de7e4248 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: keyword-cluster-map | source: skills/keyword-cluster-map/SKILL.md | sha256: b97e644170fe2537178e46e49d9a27ab9e48944d4ea25dc7026203a7de7e4248 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

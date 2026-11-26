@@ -72,5 +72,5 @@ Install only this skill: `npx pm-claude-skills add --skills short-form-script`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/short-form-script.html
 
-<!-- pm-claude-skills v84.0.0 | skill: short-form-script | source: skills/short-form-script/SKILL.md | sha256: e371a13a4ea2f080b1ac96c6106979ceeaf7cf3228bacd2969989bbbfb0743d9 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: short-form-script | source: skills/short-form-script/SKILL.md | sha256: e371a13a4ea2f080b1ac96c6106979ceeaf7cf3228bacd2969989bbbfb0743d9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

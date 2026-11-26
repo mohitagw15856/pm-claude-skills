@@ -102,5 +102,5 @@ To add a pattern from the user's incident, write: a short name, the shape in one
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/failure-pattern-library.html
 
-<!-- pm-claude-skills v84.0.0 | skill: failure-pattern-library | source: skills/failure-pattern-library/SKILL.md | sha256: 460f52b55f634c2ba713b3b9b9c62b5b9f99cad875104355861c88d5659d5143 | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: failure-pattern-library | source: skills/failure-pattern-library/SKILL.md | sha256: 460f52b55f634c2ba713b3b9b9c62b5b9f99cad875104355861c88d5659d5143 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

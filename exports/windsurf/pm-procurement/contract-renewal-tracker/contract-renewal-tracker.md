@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/contract-renewal-tracker.html
 
-<!-- pm-claude-skills v84.0.0 | skill: contract-renewal-tracker | source: skills/contract-renewal-tracker/SKILL.md | sha256: 71e0aff4fba248ba073744b337e892b6c0f7575109a79e0936ae2058ab76941d | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: contract-renewal-tracker | source: skills/contract-renewal-tracker/SKILL.md | sha256: 71e0aff4fba248ba073744b337e892b6c0f7575109a79e0936ae2058ab76941d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

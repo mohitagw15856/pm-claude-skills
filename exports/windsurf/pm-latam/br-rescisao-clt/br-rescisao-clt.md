@@ -112,5 +112,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/br-rescisao-clt.html
 
-<!-- pm-claude-skills v84.0.0 | skill: br-rescisao-clt | source: skills/br-rescisao-clt/SKILL.md | sha256: bd2dbff6c573f83221fc051f7e7511846f1688bfa2ae6c509f886677ef670e8a | licence: MIT
+<!-- pm-claude-skills v84.1.0 | skill: br-rescisao-clt | source: skills/br-rescisao-clt/SKILL.md | sha256: bd2dbff6c573f83221fc051f7e7511846f1688bfa2ae6c509f886677ef670e8a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->
