@@ -32,6 +32,7 @@ A directory of **skill repos and packs built by the community** that follow the
 | [Levea AI Video Editor](https://github.com/brajendrak00068/agentic-ai-video-production) | [@brajendrak00068](https://github.com/brajendrak00068) | Agent skills and MCP server for turning recordings or prompts into vertical clips, 200+ animated caption templates, 9:16 speaker reframing, B-roll, and verified MP4 exports. | https://github.com/brajendrak00068/agentic-ai-video-production |
 
 | resume-claim-guard | [Korey Wang Tianru](https://korey2028.tech) | Interviews candidates to lock a verified fact sheet before tailoring resumes to job descriptions, preventing hallucinated metrics | [korey2028-prog/resume-claim-guard](https://github.com/korey2028-prog/resume-claim-guard) |
+| [YouTube Transcript](https://github.com/tubeagentkit/youtube-transcript-skills) | [@tubeagentkit](https://github.com/tubeagentkit) | Fetches a YouTube video's transcript (any caption language it has, with timestamps), searches YouTube and lists channel or playlist videos, for summarizing or quoting talks, demos and interviews. | https://github.com/tubeagentkit/youtube-transcript-skills |
 <!-- COMMUNITY-SKILLS:ROWS-BELOW
   Add your row directly above this comment, keeping the four columns in order:
   | [Name](https://github.com/you/your-repo) | [@you](https://github.com/you) | One concise line — what it produces and when to use it. | https://github.com/you/your-repo |
