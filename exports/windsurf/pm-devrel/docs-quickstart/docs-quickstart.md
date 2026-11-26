@@ -71,3 +71,8 @@ Developer documentation practice (the Diátaxis "tutorial" / time-to-first-succe
 - "Write a getting-started guide for our API."
 - "Get a developer to a working call in five minutes."
 - "Write onboarding docs for developers."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/docs-quickstart.html
+
+<!-- pm-claude-skills v84.0.0 | skill: docs-quickstart | source: skills/docs-quickstart/SKILL.md | sha256: ef780c5f04f9d26f363a08047c62efe49ca91844794769e0a62dea362105a11f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

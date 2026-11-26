@@ -68,3 +68,5 @@ FOIA / public-records practice (specificity, statutory citation, fee-waiver & ex
 - "Write a freedom of information request to the council."
 - "Request these public records."
 - "Make this records request hard to deny."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/foia-request.html

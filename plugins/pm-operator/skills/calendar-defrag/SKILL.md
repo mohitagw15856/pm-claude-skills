@@ -79,3 +79,5 @@ For agents with calendar access (Google/Microsoft APIs or UI). Without tools, th
 - "Get me focus time."
 - "Audit my meetings."
 - "Fix my week."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/calendar-defrag.html

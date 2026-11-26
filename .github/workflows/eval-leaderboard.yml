@@ -124,6 +124,7 @@ jobs:
         run: node scripts/build-leaderboard.mjs
 
       - name: Open a PR with the refreshed results
+        id: cpr
         uses: peter-evans/create-pull-request@v8
         with:
           add-paths: evals/results.json
@@ -136,3 +137,20 @@ jobs:
 
             Merging this publishes the **real** numbers on the live leaderboard — the
             Pages deploy is triggered by changes to `evals/results.json`.
+
+      # Data-only PR: merge it straight away if it touches nothing but the expected files.
+      # Anything else is left open for a person to review.
+      - name: Merge the data-only PR
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          set -euo pipefail
+          files=$(gh pr diff "$PR" --name-only --repo "$GITHUB_REPOSITORY")
+          echo "$files"
+          if [ -z "$files" ] || echo "$files" | grep -qvE '^evals/results\.json$'; then
+            echo "::warning::PR #$PR changes files outside evals/results.json; leaving it for review."
+            exit 0
+          fi
+          gh pr merge "$PR" --squash --delete-branch --repo "$GITHUB_REPOSITORY"

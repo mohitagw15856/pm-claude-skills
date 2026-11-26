@@ -75,3 +75,5 @@ Ask for these if not provided:
 - "Localise my product listing for Amazon Germany."
 - "Write a TikTok Shop UK listing for this phone stand."
 - "检查一下我的 listing 有没有违规的词。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cross-border-listing.html

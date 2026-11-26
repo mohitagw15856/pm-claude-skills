@@ -7,7 +7,7 @@
 <meta name="description" content="An open, reproducible benchmark of how well AI models do real professional work — PRDs, postmortems, board updates, OKRs — scored 1–5 by a pinned LLM judge on a fixed rubric. Model rankings, per-domain breakdown, and the skill-lift finding. Run it yourself." />
 <link rel="stylesheet" href="styles.css" />
 <style>
-  .mb-wrap { max-width: 940px; margin: 0 auto; padding: 16px 22px 70px; }
+  .mb-wrap { max-width: 940px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 16px 22px 70px; }
   .mb-lead { color: var(--muted); font-size: 15.5px; line-height: 1.6; max-width: 760px; }
   .mb-lead strong { color: var(--text); }
   .mb-meta { font-size: 12.5px; color: var(--muted); margin: 8px 0 18px; }
@@ -57,6 +57,13 @@
     <p id="liftText"></p>
   </div>
 
+  <section id="arena" aria-labelledby="arenaHead">
+    <h2 class="section" id="arenaHead">🥊 Agent Arena</h2>
+    <p class="mb-lead">Community-run results for any model or agent behind an OpenAI-compatible endpoint, on the same tasks and rubric as the rankings above. Every row links to its public run or its saved outputs, and the score is recomputed from the per-task numbers before it is ranked. A row graded by a judge other than the pinned one is marked, because its score is not strictly comparable.</p>
+    <div id="arenaBoard"><p class="empty">Loading…</p></div>
+    <div class="cta-row"><a class="btn btn-primary" href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/arena.md">🥊 Enter the Arena</a></div>
+  </section>
+
   <h2 class="section">🔬 How it's scored</h2>
   <p class="mb-lead">Each model runs every task two ways — <strong>bare</strong> (task only) and <strong>skilled</strong> (task + the matching <code>SKILL.md</code>). The judge scores each output <strong>1–5</strong> on the same fixed rubric the library uses — structure, completeness, usefulness, grounding — with the judge model + version pinned per release. The headline <strong>SkillBench score</strong> is the mean skilled score; <strong>skill lift</strong> is skilled minus bare.</p>
 
@@ -85,10 +92,30 @@ function heat(v){ // 1–5 → red→green
   const t=Math.max(0,Math.min(1,(v-1)/4)); const h=Math.round(8+t*(130-8));
   return 'hsl('+h+' 62% 62%)';
 }
+const esc=(s)=>String(s==null?'':s).replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// Agent Arena rows come from community files (validated in tests/checks/arena.mjs); escape everything anyway.
+function renderArena(data){
+  const box=el('arenaBoard');
+  if(SET==='zh'){ box.innerHTML='<p class="empty">The Arena runs on the English task set. <a href="modelbench.html#arena">See it there</a>.</p>'; return; }
+  const rows=data.arena||[];
+  if(!rows.length){ box.innerHTML='<p class="empty">No entries yet. The Arena starts empty on purpose: every row has to come from a run anyone can inspect, so nothing here is seeded or estimated. Run the benchmark on your model or agent and open a pull request to be first on the board.</p>'; return; }
+  const body=rows.map((r,i)=>{
+    const lc=r.lift>0.05?'pos':r.lift<-0.05?'neg':'zero';
+    const link=/^https:\/\//.test(r.link||'')?`<a href="${esc(r.link)}" rel="noopener">${r.provenance==='actions'?'Actions run':'Saved outputs'}</a>`:'';
+    return `<tr><td class="rank">${i+1}</td>
+      <td class="model">${esc(r.agent||r.model)}${r.agent?`<div style="font-size:11px;color:var(--muted);font-weight:400">${esc(r.model)}</div>`:''}</td>
+      <td><span class="scoreval">${Number(r.score).toFixed(2)}</span></td>
+      <td><span class="lift ${lc}">${r.lift>0?'+':''}${Number(r.lift).toFixed(2)}</span></td>
+      <td>${esc(r.judge)}${r.pinnedJudge?'':' <span class="lift neg" title="not the pinned judge">unpinned</span>'}</td>
+      <td>${link}</td><td>${esc(r.date)}</td></tr>`;
+  }).join('');
+  box.innerHTML=`<div style="overflow-x:auto"><table class="mb"><thead><tr><th>#</th><th>Entrant</th><th>Score</th><th>Lift</th><th>Judge</th><th>Proof</th><th>Date</th></tr></thead><tbody>${body}</tbody></table></div>`;
+}
 init();
 async function init(){
   document.querySelectorAll('#setswitch a').forEach((a,i)=>{ if((i===1)===(SET==='zh')) a.setAttribute('aria-current','page'); });
-  let data; try{ data=await (await fetch(SET==='zh'?'modelbench-zh.json':'modelbench.json')).json(); }catch(e){ el('board').innerHTML='<p class="empty">Could not load results.</p>'; return; }
+  let data; try{ data=await (await fetch(SET==='zh'?'modelbench-zh.json':'modelbench.json')).json(); }catch(e){ el('board').innerHTML='<p class="empty">Could not load results.</p>'; el('arenaBoard').innerHTML=''; return; }
+  renderArena(data);
   const models=data.models||[];
   el('meta').textContent=`${models.length} model(s) · ${data.taskCount} tasks across ${(data.domains||[]).length} domains · task set v${data.taskSetVersion} · judge pinned per run · updated ${new Date(data.generated).toISOString().slice(0,10)}`;
   if(!models.length){ el('board').innerHTML='<p class="empty">No model runs yet — run the harness below to seed the board.</p>'; return; }

@@ -82,3 +82,8 @@ Feature name/
 - "Map out the states for [feature] before we start designing"
 - "Help me structure my Figma file for [feature]"
 - "What do we need to design before handing this to the developer?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-user-flow-planner.html
+
+<!-- pm-claude-skills v84.0.0 | skill: figma-user-flow-planner | source: skills/figma-user-flow-planner/SKILL.md | sha256: fe7243d9e0d237b99bc0dcb6fc08921f0a354bed15da3453d3158e8b6bf1e1a9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

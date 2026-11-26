@@ -3,10 +3,34 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "outputDirectory": "web",
-  "buildCommand": null,
+  "buildCommand": "node web/build-skills.mjs",
   "headers": [
-    { "source": "/skills.json", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] },
-    { "source": "/advisories.json", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] },
-    { "source": "/federated.json", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] }
+    {
+      "source": "/skills.json",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/advisories.json",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/federated.json",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
   ]
 }

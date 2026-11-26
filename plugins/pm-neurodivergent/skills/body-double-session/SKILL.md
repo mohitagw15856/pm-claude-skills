@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Body double with me."
 - "I only work when someone's around."
 - "Sit with me while I do my taxes."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/body-double-session.html

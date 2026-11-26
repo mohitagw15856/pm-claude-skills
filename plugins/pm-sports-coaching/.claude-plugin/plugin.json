@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-sports-coaching",
+  "version": "1.0.0",
+  "description": "Coach a club or school team: plan the season, plan each session, write to parents, and review the match without blaming players",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "sports",
+    "coaching",
+    "season-plan",
+    "session-plan",
+    "youth-sport"
+  ]
+}

@@ -32,6 +32,10 @@
     .verdict .c { font-weight: 600; }
     .verdict .n { display: block; font-weight: 400; color: #888; font-size: 12px; margin-top: 1px; }
     .mini { width: auto; padding: 6px 12px; margin-top: 10px; background: #444; }
+    .ctx { border: 1px solid #d97757; border-radius: 10px; padding: 9px 11px; margin: 0 0 10px; }
+    .ctx p { margin: 0 0 6px; font-weight: 600; }
+    .ctx a { display: inline-block; margin: 0 6px 6px 0; padding: 3px 8px; border-radius: 8px; background: #d97757; color: #fff; text-decoration: none; font-size: 12px; }
+    .opt { display: flex; gap: 8px; align-items: flex-start; font-size: 11.5px; color: #777; margin-top: 10px; }
     .detected { font-size: 11.5px; color: #d97757; margin: -4px 0 8px; }
   </style>
 </head>
@@ -46,11 +50,13 @@
   </div>
 
   <div class="body" id="viewInsert">
-    <p><b id="count">198</b> professional skills, ready to drop into your chat.</p>
+    <div class="ctx" id="ctx" hidden></div>
+    <p><b id="count">1,200+</b> professional skills, ready to drop into your chat.</p>
     <p>Open <b>ChatGPT</b>, <b>Claude.ai</b> or <b>Gemini</b>, then click the floating <b>🧠 Skills</b> button to pick one — it inserts the framework into the message box. Add your task and send.</p>
     <a class="btn" href="https://mohitagw15856.github.io/pm-claude-skills/" target="_blank" rel="noopener">Open the Playground ↗</a>
     <a class="btn" style="background:#444;margin-top:8px" href="https://github.com/mohitagw15856/pm-claude-skills" target="_blank" rel="noopener">⭐ Star on GitHub</a>
     <p class="tip">Works on chatgpt.com · claude.ai · gemini.google.com. Skills run locally — nothing is sent to us.</p>
+    <label class="opt"><input type="checkbox" id="nudgeToggle" /> Suggest skills as I browse (a lease, a job ad, a medical bill…). Matching happens on your device; nothing about the page is sent anywhere. Needs permission to read pages.</label>
   </div>
 
   <div class="body" id="viewLint" hidden>
@@ -67,6 +73,7 @@
     <p class="tip">Your key is stored in this browser (extension storage) and sent only to api.anthropic.com when you click Lint.</p>
   </div>
 
+  <script src="context-match.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>

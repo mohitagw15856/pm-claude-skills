@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "Write a follow-up that isn't pushy."
 - "How long do I wait before chasing?"
 - "Manage my waiting-on list."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/follow-up-chaser.html

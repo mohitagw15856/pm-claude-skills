@@ -83,3 +83,5 @@ WARNING: Take advice from an employment lawyer or qualified HR professional befo
 - "Help me structure a redundancy consultation"
 - "Draft an at-risk letter for [role]"
 - "What is the process for making someone redundant in the UK?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/redundancy-consultation.html

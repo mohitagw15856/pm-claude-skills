@@ -68,3 +68,5 @@ Conversion-optimization heuristics (clarity / relevance / motivation / friction 
 - "Audit a landing/signup/checkout page."
 - "Reduce funnel drop-off."
 - "Plan A/B tests for a page."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/conversion-rate-optimization.html

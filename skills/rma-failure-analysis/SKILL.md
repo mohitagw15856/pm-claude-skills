@@ -81,3 +81,5 @@ Ask for these if not provided; analyse whatever slice exists, but state the deno
 - "Run failure analysis on returned units."
 - "Write an 8D report."
 - "Figure out why return rates are climbing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rma-failure-analysis.html

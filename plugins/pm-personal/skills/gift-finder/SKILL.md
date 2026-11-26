@@ -64,3 +64,5 @@ Why it fits: [specific to them].
 - "Need a thank-you present for a neighbour who watched our dog."
 - "Secret Santa at work, $25 limit, don't know them well."
 - "I have no idea what to buy my teenage niece."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/gift-finder.html

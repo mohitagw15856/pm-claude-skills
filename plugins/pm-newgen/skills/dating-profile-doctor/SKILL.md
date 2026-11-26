@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Why am I getting no matches?"
 - "What do I say first?"
 - "Roast my Hinge prompts."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dating-profile-doctor.html

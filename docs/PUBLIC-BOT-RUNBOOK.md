@@ -15,8 +15,8 @@ Your best skills (`pm-hardship`, `pm-grief`, `pm-caregiving`, `pm-newcomer`) are
 1. **Disclaimers in the reply, not a footer no one reads.** Every high-stakes skill's output (see `data/risk-tiers.json`) starts with a one-line "educational, not legal/medical/financial advice — confirm locally" and ends with the real-help pointer.
 2. **Crisis routing.** If a message suggests self-harm or immediate danger, the bot replies with crisis-line information for the user's country *before anything else* and does not continue the skill. Detect conservatively (better a false positive).
 3. **No PII collection.** Never ask for account numbers, IDs, addresses. Don't log message bodies. State the privacy posture in `/start` and `/privacy`.
-4. **Rate limits + abuse.** Per-user daily cap; block obvious abuse; a `/report` command.
-5. **Jurisdiction ask.** For money/legal packs, ask the country first so replies can say what's verified vs. not (and use `variants/` where they exist).
+4. **Rate limits + abuse.** Per-user daily cap (implemented: [`integrations/shared/caps.js`](../integrations/shared/caps.js), set up via [PUBLIC-INSTANCE.md](../integrations/shared/PUBLIC-INSTANCE.md)); block obvious abuse; a `/report` command.
+5. **Jurisdiction ask.** For money/legal packs, ask the country first so replies can say what's verified vs. not (and use `overlays/` where they exist).
 
 ## Crisis routing — the implementation
 `integrations/jev/crisis.mjs` is the first thing every inbound message hits, before any menu or skill:

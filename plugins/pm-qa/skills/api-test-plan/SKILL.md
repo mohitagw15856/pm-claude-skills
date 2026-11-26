@@ -74,3 +74,5 @@ API testing practice — contract/schema validation, status-code correctness, au
 - "Write API test cases."
 - "Plan REST/GraphQL endpoint testing."
 - "Validate an API contract."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/api-test-plan.html

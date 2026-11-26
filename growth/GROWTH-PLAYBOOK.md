@@ -46,7 +46,7 @@ Legend: ✅ done · 🟡 partial (activate/upgrade) · 🔴 gap (build) · 🧑 
 
 | # | Move | Status | Next action |
 |---|---|---|---|
-| 15 | "Request a skill" board | ✅ | `.github/ISSUE_TEMPLATE/skill-request.md` exists. Pin it; build the top-voted weekly. |
+| 15 | "Request a skill" board | ✅ | `.github/ISSUE_TEMPLATE/skill-request.yml` exists. Pin it; build the top-voted weekly. |
 | 16 | Good-first-skill + contributors wall | 🟡 | `submit-skill.yml` exists. Add 5 "good first skill" issues + a contributors section. |
 | 17 | "Fork this for your team" template | 🔴→✅ | Guide: `growth/fork-for-your-team.md`. |
 

@@ -62,3 +62,8 @@ Source: [ip-api.com / ipify] · rerun: `[exact curl]`
 - "What's my public IP?"
 - "Where is this IP from?"
 - "Is this IP a VPN/datacenter?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ip-lookup.html
+
+<!-- pm-claude-skills v84.0.0 | skill: ip-lookup | source: skills/ip-lookup/SKILL.md | sha256: 0169c8751b89888013783c6cf04bb3997afa064293f4ddd2c43a1d9fc83119d3 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -413,3 +413,5 @@ Accept the current state and revisit the problem in [timeframe].
 - "Create a design doc."
 - "Write an architecture decision for review."
 - "Produce a technical specification for team feedback."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rfc-writer.html

@@ -9,7 +9,7 @@ This skill converts a business question or monitoring need into a complete, impl
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **The business question this dashboard should answer** (e.g. "How is our activation funnel performing this week?")
 - **Primary audience** (exec / product team / operations / customer success / engineering)
 - **Refresh cadence** (real-time / hourly / daily / weekly)
@@ -128,3 +128,8 @@ Flag any fields that may not exist in current data infrastructure.
 - "Give me a spec for a [team] performance dashboard"
 - "What should go on a [topic] dashboard?"
 - "Write a dashboard brief for our [metric] monitoring"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dashboard-brief.html
+
+<!-- pm-claude-skills v84.0.0 | skill: dashboard-brief | source: skills/dashboard-brief/SKILL.md | sha256: 5fed470eeea463429dc50909406bfd7fc10125461f01ee5231830c16b2ef18d0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

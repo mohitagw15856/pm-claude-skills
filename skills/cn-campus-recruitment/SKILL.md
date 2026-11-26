@@ -81,3 +81,5 @@ Ask for these if not provided:
 - "帮我改一份校招简历，投数据分析岗。"
 - "手上有两个 offer，三方协议要不要现在签？"
 - "Plan my campus recruitment season in China for software engineering roles."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-campus-recruitment.html

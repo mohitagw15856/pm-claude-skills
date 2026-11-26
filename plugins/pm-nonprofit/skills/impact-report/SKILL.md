@@ -66,3 +66,5 @@ Nonprofit reporting and donor-stewardship practice — outcomes over activities,
 - "Write our annual report for donors."
 - "Write the grant outcomes report."
 - "Report results to our funders."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/impact-report.html

@@ -71,3 +71,5 @@ Principled-negotiation practice (*Getting to Yes* — Fisher & Ury: BATNA, inter
 - "Counter a job offer."
 - "Prepare for a comp conversation."
 - "Compare offers."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/salary-negotiation.html

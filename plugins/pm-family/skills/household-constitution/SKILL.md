@@ -77,3 +77,5 @@ Ask for these if not provided:
 - "Stop having the same argument about chores."
 - "Write house rules everyone agrees to."
 - "Agree screen-time rules as a family."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/household-constitution.html

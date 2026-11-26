@@ -54,3 +54,5 @@ How to confirm the fix (`npm ls <pkg>`, a clean reinstall, the build), and one h
 - "pip can't resolve these versions."
 - "These two packages won't co-exist."
 - "My lockfile keeps fighting me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dependency-conflict-resolver.html

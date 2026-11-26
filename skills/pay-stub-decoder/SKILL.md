@@ -66,3 +66,5 @@ End verbatim: *"This is a plain-language reading, not tax or legal advice — pa
 - "Why is my paycheck smaller than expected?"
 - "What are all these deductions?"
 - "Check my paycheck for mistakes."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pay-stub-decoder.html

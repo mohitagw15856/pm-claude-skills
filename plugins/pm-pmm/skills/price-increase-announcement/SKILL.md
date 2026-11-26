@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Write the pricing change email and FAQ."
 - "We're raising prices 15% — help me communicate it without a churn spike."
 - "Draft customer and internal comms for new pricing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/price-increase-announcement.html

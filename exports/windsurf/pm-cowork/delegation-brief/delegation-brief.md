@@ -68,3 +68,8 @@ Ask for these if not provided:
 - "My delegations come back wrong."
 - "Write a brief for this task I'm giving away."
 - "How much detail do I give?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/delegation-brief.html
+
+<!-- pm-claude-skills v84.0.0 | skill: delegation-brief | source: skills/delegation-brief/SKILL.md | sha256: d0dad52d82cf36bd0a99bfa794522ea3652266199bf6c0b55c272844c68bfbd4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

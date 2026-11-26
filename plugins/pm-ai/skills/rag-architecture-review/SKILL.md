@@ -74,3 +74,5 @@ Retrieval-Augmented Generation practice — staged diagnosis, separated retrieva
 - "Audit a RAG pipeline."
 - "Diagnose wrong/ungrounded answers from a 'chat with your docs' feature."
 - "Improve an already-built knowledge assistant."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rag-architecture-review.html

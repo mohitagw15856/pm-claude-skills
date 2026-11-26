@@ -101,3 +101,5 @@ If the data is thin, say so and analyze what exists rather than inventing outcom
 - "Why are we losing enterprise deals to [Competitor]?"
 - "Summarize these win/loss interviews into themes and actions"
 - "Turn our CRM closed-lost reasons into a report for the QBR"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/win-loss-analysis.html

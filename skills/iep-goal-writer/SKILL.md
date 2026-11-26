@@ -58,3 +58,5 @@ How and how often the goal is measured, so a progress report can be written from
 - "Draft annual goals."
 - "Make a goal measurable."
 - "List accommodations."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/iep-goal-writer.html

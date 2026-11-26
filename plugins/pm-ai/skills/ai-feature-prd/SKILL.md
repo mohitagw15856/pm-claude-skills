@@ -73,3 +73,5 @@ Standard PRD practice (see [`prd-template`](../prd-template/SKILL.md)) extended 
 - "Spec an AI/LLM feature."
 - "Write a PRD for a feature that uses a model."
 - "Plan an AI capability."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-feature-prd.html

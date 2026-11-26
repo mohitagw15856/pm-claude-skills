@@ -61,3 +61,5 @@ Complex work fails in a predictable way: start confidently, discover mid-flight,
 - "Write a plan with checkpoints for this task."
 - "Break this into steps before doing anything."
 - "Write an execution plan with stop conditions."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/writing-plans.html

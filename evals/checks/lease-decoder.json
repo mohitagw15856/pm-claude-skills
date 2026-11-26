@@ -1,0 +1,15 @@
+{
+  "skill": "lease-decoder",
+  "cases": [
+    {
+      "name": "clause decode with severities and the disclaimer",
+      "prompt": "Decode this lease before I sign: 12-month term at 1,450 a month, clause 9 auto-renews for 12 months unless 90 days written notice, clause 14 makes the tenant pay all repairs under 250, clause 18 requires professional cleaning receipts for deposit return, entry on 24 hours notice.",
+      "pass": {
+        "must_include": ["Severity", "🔴", "not legal/financial advice"],
+        "must_match": ["red flag", "auto.?renew"],
+        "forbid": ["[insert", "lorem ipsum"],
+        "min_lines": 20
+      }
+    }
+  ]
+}

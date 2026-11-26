@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Untangle this nested IF formula."
 - "Make this formula maintainable."
 - "Rewrite this formula with helper columns."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/formula-detangler.html

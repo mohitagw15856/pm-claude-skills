@@ -80,3 +80,5 @@ Include the line: *"This draft is not legal advice — route through your contra
 - "Draft a time extension request."
 - "Respond to weather."
 - "Paper a delay for a claim."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/delay-claim-letter.html

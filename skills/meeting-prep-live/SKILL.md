@@ -81,3 +81,5 @@ A **Meeting Brief** artifact:
 - "Get me ready for the 2pm with the design team."
 - "What do I need for the sync with Acme tomorrow?"
 - "Pull the context for my 1:1 and give me questions to ask."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meeting-prep-live.html

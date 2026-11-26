@@ -4,11 +4,16 @@
 // (task + the matching SKILL.md). A pinned judge scores all outputs on the
 // library's fixed 1–5 rubric, two passes, mean taken.
 //
-//   ANTHROPIC_API_KEY=… node skillbench/run-skillbench.mjs --models claude-sonnet-4-6
-//   … OPENAI_API_KEY=… GEMINI_API_KEY=… --models claude-fable-5,gpt-4o,gemini-2.0-flash
+//   ANTHROPIC_API_KEY=… node skillbench/run-skillbench.mjs --models claude-sonnet-5-5
+//   … OPENAI_API_KEY=… GEMINI_API_KEY=… --models claude-fable-5-2,gpt-4o,gemini-2.0-flash
+//   --lineup current     add every current Claude model from data/models.json to --models
+//   --effort <level>     low | medium | high | xhigh | max for current Claude models (default: the API's)
 //   --dry-run            plan + cost estimate, no API calls
 //   --judge <model>      override the pinned judge (discloses in results)
 //   --tasks <path>       alternate task set (default: skillbench/tasks.json)
+//   --skip-missing-keys  run only the listed models whose provider key is set
+//   --only <ids>         run only these task ids (comma-separated); for diagnosis
+//   --save-outputs <dir> also write each bare and skilled output to <dir> as Markdown
 //   --out <path>         results file (default: skillbench/results.json; the Chinese
 //                        task set writes skillbench/results-zh.json)
 //
@@ -22,9 +27,10 @@
 // Providers' monthly free credits (HF_TOKEN), sf:<org>/<model> uses SiliconFlow
 // (SILICONFLOW_API_KEY; several open models are free there, the rest pay-as-you-go,
 // sign-up with a mainland phone number). The prefix is stripped before the call.
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { REGISTRY, modelFor, modelInfo, requestShape } from '../bin/lib/models.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
@@ -35,13 +41,22 @@ const HARNESS_VERSION = '1.1';
 // --judges a,b,c runs a cross-family panel (1 pass each, mean + spread recorded);
 // --judge keeps the single-judge behaviour (2 passes, mean). v2 default panels
 // exist so no single family grades its own outputs unchallenged.
-const JUDGES = (arg('judges', '') || arg('judge', 'claude-sonnet-4-6')).split(',').map((s) => s.trim()).filter(Boolean);
+const JUDGES = (arg('judges', '') || arg('judge', modelFor('judge'))).split(',').map((s) => s.trim()).filter(Boolean);
 const JUDGE = JUDGES.join('+');
-const models = (arg('models', '') || '').split(',').map((s) => s.trim()).filter(Boolean);
+let models = (arg('models', '') || '').split(',').map((s) => s.trim()).filter(Boolean);
+// --lineup current: the four current Claude models, so a new line-up needs no edit here.
+if (arg('lineup', '') === 'current') models = [...new Set([...models, ...REGISTRY.current.map((m) => m.id)])];
+else if (arg('lineup', '')) { console.error('--lineup takes "current".'); process.exit(1); }
+const EFFORT = arg('effort', '') || undefined;
 const dryRun = has('dry-run');
-if (!models.length) { console.error('Usage: --models model-a,model-b [--dry-run]'); process.exit(1); }
+if (!models.length) { console.error('Usage: --models model-a,model-b | --lineup current  [--dry-run]'); process.exit(1); }
 
-const { version: taskSetVersion, tasks } = JSON.parse(readFileSync(arg('tasks', join(__dirname, 'tasks.json')), 'utf8'));
+const taskFile = JSON.parse(readFileSync(arg('tasks', join(__dirname, 'tasks.json')), 'utf8'));
+const taskSetVersion = taskFile.version;
+const only = (arg('only', '') || '').split(',').map((x) => x.trim()).filter(Boolean);
+const tasks = only.length ? taskFile.tasks.filter((t) => only.includes(t.id)) : taskFile.tasks;
+if (only.length && !tasks.length) { console.error(`--only matched no task ids in the task set.`); process.exit(1); }
+const saveDir = arg('save-outputs', '');
 const outPath = arg('out', join(__dirname, 'results.json'));
 
 // ── Provider adapters (single-shot completion; no streaming needed) ──────────
@@ -50,6 +65,15 @@ const outPath = arg('out', join(__dirname, 'results.json'));
 const COMPAT = [
   [/^modelscope:/, process.env.MODELSCOPE_INFERENCE_URL || 'https://api-inference.modelscope.ai/v1', 'MODELSCOPE_TOKEN', 'modelscope:'],
   [/^hf:/, 'https://router.huggingface.co/v1', 'HF_TOKEN', 'hf:'],
+  // A model you serve yourself (Ollama, vLLM, llama.cpp): local:<model>. Ollama ignores
+  // the key, but one must be set (LOCAL_API_KEY=x) so a missing key is never silent.
+  // Cloudflare Workers AI (Qwen, DeepSeek and others on a free daily allowance):
+  // cf:@cf/<org>/<model>, with CLOUDFLARE_ACCOUNT_ID and a token allowed to use Workers AI.
+  [/^cf:/, `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID || 'missing-account-id'}/ai/v1`, 'CLOUDFLARE_API_TOKEN', 'cf:'],
+  // A second self-hosted server for the judge (so a model is not judged by itself):
+  // local-judge:<model> at JUDGE_BASE_URL. No API credit.
+  [/^local-judge:/, process.env.JUDGE_BASE_URL || 'http://localhost:8000/v1', 'LOCAL_API_KEY', 'local-judge:'],
+  [/^local:/, process.env.LOCAL_BASE_URL || 'http://localhost:11434/v1', 'LOCAL_API_KEY', 'local:'],
   [/^sf:/, process.env.SILICONFLOW_BASE_URL || 'https://api.siliconflow.cn/v1', 'SILICONFLOW_API_KEY', 'sf:'],
   [/^(gpt|o\d|chatgpt)/, process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1', 'OPENAI_API_KEY'],
   [/^deepseek/, 'https://api.deepseek.com', 'DEEPSEEK_API_KEY'],
@@ -62,7 +86,22 @@ function providerOf(model) {
   if (/^claude/.test(model)) return 'anthropic';
   if (COMPAT.some(([re]) => re.test(model))) return 'openai';
   if (/^gemini/.test(model)) return 'google';
-  throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-*, doubao-*, modelscope:*, hf:* or sf:*).`);
+  throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-*, doubao-*, modelscope:*, hf:*, sf:*, cf:* or local:*).`);
+}
+// The env var a model's provider needs, for --skip-missing-keys.
+function keyVarOf(model) {
+  const prov = providerOf(model);
+  if (prov === 'anthropic') return 'ANTHROPIC_API_KEY';
+  if (prov === 'google') return 'GEMINI_API_KEY';
+  return COMPAT.find(([re]) => re.test(model))[2];
+}
+// --skip-missing-keys: a scheduled run lists every model it would like and runs
+// the ones whose provider key is set, instead of failing on the first missing key.
+if (has('skip-missing-keys')) {
+  const skipped = models.filter((m) => !process.env[keyVarOf(m)]);
+  if (skipped.length) console.log(`Skipping (no provider key set): ${skipped.join(', ')}`);
+  models = models.filter((m) => process.env[keyVarOf(m)]);
+  if (!models.length) { console.log('No model has a provider key set; nothing to run.'); process.exit(0); }
 }
 async function complete({ model, system, user, maxTokens = 4096 }) {
   const prov = providerOf(model);
@@ -72,11 +111,16 @@ async function complete({ model, system, user, maxTokens = 4096 }) {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
-      body: JSON.stringify({ model, max_tokens: maxTokens, ...(system ? { system } : {}), messages: [{ role: 'user', content: user }] }),
+      // requestShape adds thinking headroom (and effort, if asked) for current models only.
+      body: JSON.stringify({ model, ...requestShape(model, maxTokens, EFFORT), ...(system ? { system } : {}), messages: [{ role: 'user', content: user }] }),
     });
     const j = await res.json();
     if (!res.ok) throw new Error(`${model}: ${j.error?.message || res.status}`);
-    return j.content?.[0]?.text || '';
+    // Current models return a thinking block first, so the answer is every text block joined,
+    // not content[0]. An empty answer is an error: scoring '' would look like a real result.
+    const text = (j.content || []).filter((c) => c.type === 'text').map((c) => c.text || '').join('');
+    if (!text.trim()) throw new Error(`${model}: empty answer (stop_reason ${j.stop_reason || 'unknown'})`);
+    return text;
   }
   if (prov === 'openai') {
     const [, base, keyVar, prefix = ''] = COMPAT.find(([re]) => re.test(model));
@@ -88,11 +132,14 @@ async function complete({ model, system, user, maxTokens = 4096 }) {
     const res = await fetch(base.replace(/\/$/, '') + '/chat/completions', {
       method: 'POST',
       headers: { 'content-type': 'application/json', authorization: 'Bearer ' + key },
-      body: JSON.stringify({ model: model.slice(prefix.length), max_tokens: maxTokens, messages: msgs }),
+      // Self-hosted Qwen3 (local:, local-judge:) answers without thinking, so the judge's
+      // 300 tokens reach the score and answers are not cut off mid-thought.
+      body: JSON.stringify({ model: model.slice(prefix.length), max_tokens: maxTokens, ...(/^local/.test(prefix) ? { chat_template_kwargs: { enable_thinking: false } } : {}), messages: msgs }),
     });
     const j = await res.json();
     if (!res.ok) throw new Error(`${model}: ${j.error?.message || res.status}`);
-    return j.choices?.[0]?.message?.content || '';
+    // Reasoning models put their thinking in <think> blocks; the judge scores the answer.
+    return (j.choices?.[0]?.message?.content || '').replace(/<think>[\s\S]*?<\/think>\s*/g, '').replace(/<think>[\s\S]*$/, '').trim();
   }
   // google
   const key = process.env.GEMINI_API_KEY;
@@ -158,10 +205,20 @@ const skillBody = (name) => readFileSync(join(root, 'skills', name, 'SKILL.md'),
 const genCalls = models.length * tasks.length * 2;
 const judgeCalls = genCalls * 2;
 console.log(`SkillBench v${taskSetVersion} · ${models.length} model(s) × ${tasks.length} tasks × 2 modes = ${genCalls} generations + ${judgeCalls} judge passes (judge: ${JUDGE})`);
-if (dryRun) { console.log('~rough cost: generations dominate; expect the cost of ~' + genCalls + ' medium completions per full run. Dry run — no calls made.'); process.exit(0); }
+if (dryRun) {
+  console.log('~rough cost: generations dominate; expect the cost of ~' + genCalls + ' medium completions per full run.');
+  // List prices from the registry so the spend can be judged before any call is made.
+  for (const m of [...new Set([...models, ...JUDGES])]) {
+    const info = modelInfo(m);
+    if (info && Number.isFinite(info.input)) console.log(`  ${m}: $${info.input} in / $${info.output} out per million tokens${info.status === 'legacy' ? ' (legacy)' : ''}${info.thinking ? ', thinks before answering (billed as output)' : ''}`);
+  }
+  console.log('Dry run — no calls made.');
+  process.exit(0);
+}
 
 // ── Run ───────────────────────────────────────────────────────────────────────
 const results = existsSync(outPath) ? JSON.parse(readFileSync(outPath, 'utf8')) : { _comment: 'SkillBench results. One entry per model per run. See skillbench/README.md.', runs: [] };
+const failedModels = [];
 for (const model of models) {
   console.log(`\n▶ ${model}`);
   const perTask = [];
@@ -177,6 +234,11 @@ for (const model of models) {
       const js = await judgeScore(t.input, skilled);
       entry.skilled = js.score; if (js.spread !== undefined) { entry.skilledSpread = js.spread; entry.skilledJudges = js.perJudge; }
       const gtS = groundTruth(t, skilled); if (gtS) entry.gtSkilled = gtS;
+      if (saveDir) {
+        mkdirSync(saveDir, { recursive: true });
+        const safe = model.replace(/[^a-zA-Z0-9.-]+/g, '_');
+        writeFileSync(join(saveDir, `${safe}--${t.id}.md`), `# ${t.id} · ${model}\n\n## Task\n\n${t.input}\n\n## Bare (score ${entry.bare})\n\n${bare}\n\n## With skill (score ${entry.skilled})\n\n${skilled}\n`);
+      }
       console.log(`bare ${entry.bare ?? '–'}${gtB ? ` (gt ${gtB.pass}/${gtB.total})` : ''} · skilled ${entry.skilled ?? '–'}${gtS ? ` (gt ${gtS.pass}/${gtS.total})` : ''}`);
     } catch (e) {
       entry.error = String(e.message || e).slice(0, 200);
@@ -193,9 +255,25 @@ for (const model of models) {
     lift: ok.length ? +(mean('skilled') - mean('bare')).toFixed(2) : null,
     tasks: perTask,
   };
+  // A run where every task failed (quota, outage) must not overwrite a good earlier one.
+  // A run where every task failed (quota, outage, no credit) is never saved: it
+  // would replace good scores, or publish an empty row. Report why instead.
+  if (!ok.length) {
+    const why = (perTask.find((x) => x.error) || {}).error || 'no scores';
+    const hint = /\b402\b/.test(why) ? ' (402 Payment Required: the provider\'s free credits are used up)' : /\b(401|403)\b/.test(why) ? ' (the key is missing a permission or is wrong)' : /\b429\b/.test(why) ? ' (rate-limited)' : '';
+    console.log(`  ✗ every task failed, nothing saved: ${why}${hint}`);
+    failedModels.push(`${model}: ${why}${hint}`);
+    continue;
+  }
   results.runs = results.runs.filter((r) => !(r.model === model && r.taskSetVersion === taskSetVersion));
   results.runs.push(run);
   console.log(`  → SkillBench ${run.score ?? '–'} · bare ${run.bare ?? '–'} · skill lift ${run.lift > 0 ? '+' : ''}${run.lift ?? '–'}`);
 }
-writeFileSync(outPath, JSON.stringify(results, null, 2) + '\n');
-console.log(`\nWrote ${outPath}`);
+// A diagnostic --only run covers a few tasks; saving it would replace the model's full run.
+if (only.length && !process.argv.includes('--out')) console.log('\n--only: diagnostic run, results not saved (pass --out to save them).');
+else { writeFileSync(outPath, JSON.stringify(results, null, 2) + '\n'); console.log(`\nWrote ${outPath}`); }
+if (failedModels.length) {
+  console.error(`\n${failedModels.length} of ${models.length} model(s) produced no scores:\n  ${failedModels.join('\n  ')}`);
+  if (process.env.GITHUB_ACTIONS) for (const f of failedModels) console.log(`::warning::${f}`);
+  if (failedModels.length === models.length) process.exit(1);
+}

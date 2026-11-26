@@ -87,3 +87,5 @@ Ask for these if not provided:
 - "Prepare for a controlled-drug inspection"
 - "How do I investigate a CD discrepancy?"
 - "What are our reporting obligations for a controlled substance loss?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/controlled-substance-audit.html

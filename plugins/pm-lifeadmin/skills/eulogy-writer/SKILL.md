@@ -1,6 +1,8 @@
 ---
 name: eulogy-writer
 description: "Help someone write a eulogy — the hardest writing most people ever do, at the worst possible time. Use when someone must speak at a funeral or memorial and doesn't know where to start, or has fragments and no shape. Produces a 3-5 minute eulogy built from their memories in their voice, plus a delivery copy formatted for shaking hands — gentle process, no interrogation, nothing invented."
+deprecated: 2026-08-25
+supersededBy: eulogy-and-obituary-writer
 ---
 
 # Eulogy Writer
@@ -15,6 +17,10 @@ Gathered gently — a few at a time, never as a form:
 - **Two or three specific memories** — small beats grand: how they answered the phone, what they always said, the thing everyone will smile at. Fragments and half-sentences are enough; that's what the skill is for.
 - **One true sentence** the speaker wants said, if they have it. Many do; it becomes the spine.
 - Tone check: is laughter welcome in this room? (Usually yes; always ask.)
+
+## Working from a brief
+
+Given a name, a few details and the room, **write the full eulogy anyway**, about four to five minutes spoken, built from the details given and in the tone asked for. Mark one or two [bracketed] places where another story would fit. Offer questions that would deepen it afterwards, not before.
 
 ## The Shape That Works
 
@@ -44,3 +50,5 @@ Gathered gently — a few at a time, never as a form:
 - [ ] Do not summarise the whole life — a eulogy is a portrait, not a résumé; the gaps are allowed
 - [ ] Do not sand off the person's edges — "he was difficult and we loved him" is a better sentence than any halo
 - [ ] Do not produce only a polished artifact — the delivery copy with pause marks is the part they'll actually clutch at the podium
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/eulogy-writer.html

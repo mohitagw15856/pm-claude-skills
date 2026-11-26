@@ -100,3 +100,5 @@ It matches the address against the table above and prints the system and confide
 - "Is my CV ATS friendly?"
 - "How should I format my CV for Greenhouse?"
 - "Will this two-column CV get through Taleo?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ats-detector.html

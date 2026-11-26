@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "How should I play this socially? Something feels off."
 - "I can't tell if my boss is annoyed or just busy — read it for me."
 - "What's the unspoken dynamic in this group?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/read-the-room.html

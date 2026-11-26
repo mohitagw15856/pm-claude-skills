@@ -9,7 +9,7 @@ Produces a complete SEO content brief that writers can use to create content tha
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Target keyword or topic**
 - **Target audience** (who is searching for this?)
 - **Website or domain** (for internal linking context)
@@ -132,3 +132,5 @@ Each heading is the exact H2/H3 to use (these are what Google reads):
 - [ ] Do not skip the competitor gap analysis — without it, the brief produces content that duplicates what already ranks
 - [ ] Do not leave the FAQ section without real "People Also Ask" questions — fabricated questions miss search volume opportunities
 - [ ] Do not write a title tag longer than 60 characters — it will be truncated in search results and undermine ranking
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/seo-content-brief.html

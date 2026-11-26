@@ -75,3 +75,5 @@ Data-visualization practice (chart-type-to-intent: trend/comparison/composition)
 - "Graph our monthly revenue."
 - "Visualise these metrics."
 - "Show these numbers as a picture instead of a table."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/chart.html

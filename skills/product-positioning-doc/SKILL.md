@@ -9,7 +9,7 @@ This skill produces a complete product positioning document following the April 
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Product name** and what it does
 - **Target customer** — who is it for? (role, company type, size)
 - **Problem it solves** — what pain or goal does it address?
@@ -245,3 +245,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Define our product positioning — who is this for and why should they care?"
 - "Create a positioning statement and messaging hierarchy for [launch]"
 - "Help me articulate our differentiation vs [Competitor]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-positioning-doc.html

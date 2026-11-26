@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Write a repair request."
 - "How long can they ignore a broken heater?"
 - "What are my options if repairs never happen?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/repair-request-escalation.html

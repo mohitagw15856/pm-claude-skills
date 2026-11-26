@@ -77,3 +77,5 @@ Business-case / capital-budgeting practice — ROI, payback period, NPV, and ass
 - "Justify a purchase/initiative."
 - "Work out payback period."
 - "Compare options by return."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/roi-estimator.html

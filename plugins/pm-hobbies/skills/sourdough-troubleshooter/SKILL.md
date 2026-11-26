@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "My starter isn't bubbling anymore, help."
 - "No oven spring and a pale crust — what do I change?"
 - "It worked last month and now every loaf is a brick."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sourdough-troubleshooter.html

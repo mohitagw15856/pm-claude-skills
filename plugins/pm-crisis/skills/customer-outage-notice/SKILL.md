@@ -76,3 +76,5 @@ Incident-communication practice — phased status updates (investigating/identif
 - "Write a status-page update for this incident."
 - "Email customers about the service disruption."
 - "Write a maintenance notice."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/customer-outage-notice.html

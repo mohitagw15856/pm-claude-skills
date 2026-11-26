@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Compare these two moving estimates for me."
 - "How do I avoid getting scammed by a moving company?"
 - "What should I ask a mover before booking a long-distance move?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/moving-quote-decoder.html

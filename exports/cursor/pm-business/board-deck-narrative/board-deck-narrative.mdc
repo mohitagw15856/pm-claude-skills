@@ -10,7 +10,7 @@ This skill builds the complete narrative and slide structure for a board present
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Company stage and context** (Seed / Series A / Growth — and where you are in the year)
 - **Board meeting type** (Regular quarterly / Annual / Special / Fundraise-related)
 - **Key themes for this meeting** (e.g. strong growth quarter / pivoting strategy / hiring challenge / fundraise update)
@@ -168,3 +168,8 @@ Ask the user for these if not provided:
 - "Help me create the narrative for our board presentation"
 - "Write the slide structure for our annual board review"
 - "Design a board deck for [specific context — e.g. fundraise update]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/board-deck-narrative.html
+
+<!-- pm-claude-skills v84.0.0 | skill: board-deck-narrative | source: skills/board-deck-narrative/SKILL.md | sha256: 8c76103afcfec9ab452acfb76856bd0609f97160fe645f3b147e3df2c5f30e4a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

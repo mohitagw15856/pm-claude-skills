@@ -67,3 +67,8 @@ Ask for these if not provided:
 - "Our filenames are chaos."
 - "What should we call our files?"
 - "Fix the v2-final-FINAL problem."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/filename-convention.html
+
+<!-- pm-claude-skills v84.0.0 | skill: filename-convention | source: skills/filename-convention/SKILL.md | sha256: a3fddb56ce97bbeacc2289778253841173bb7f0d5b735419d396ba84758b3de3 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

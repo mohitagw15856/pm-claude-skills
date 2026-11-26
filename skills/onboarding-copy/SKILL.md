@@ -64,3 +64,5 @@ Product onboarding & activation practice — outcome-led welcome, guided path to
 - "Write our welcome flow."
 - "Write the product tour tooltips."
 - "Write activation messages for new users."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/onboarding-copy.html

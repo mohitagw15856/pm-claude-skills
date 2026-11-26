@@ -62,3 +62,8 @@ Ask for these if not provided:
 - "How do I remember what I study instead of forgetting it?"
 - "I keep cramming and forgetting — set me up a real system."
 - "What should I make flashcards for vs. not?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spaced-repetition-setup.html
+
+<!-- pm-claude-skills v84.0.0 | skill: spaced-repetition-setup | source: skills/spaced-repetition-setup/SKILL.md | sha256: 9eabd5a1931fa1b3e79cdb37b01a20debd9145918c1cb1ed77b2588ad82629ac | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

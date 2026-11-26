@@ -75,6 +75,24 @@ Señala cualquier cosa que merezca atención adicional:
 - Closes #[número de issue] (si aplica)
 - Related to #[número de PR/issue]
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/reviewer-empathy.md`** — Descripciones de PR como navegación para la revisión. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/pr-template.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| **El porqué sobre el qué** | La descripción solo repite el diff; no se da la motivación | El qué está claro, pero el porqué es flojo o genérico ("mejora el código") | Problema, objetivo y enfoque son explícitos; la descripción añade el contexto que el diff no puede transmitir |
+| **Título y estructura** | Un solo párrafo sin estructura; título vago, sin prefijo de tipo o de más de 72 caracteres | Estructurado con encabezados, pero el título o el uso de secciones falla (secciones de relleno sin completar) | Prefijo de tipo válido, modo imperativo, menos de 72 caracteres; las secciones permiten al revisor ir directo a lo que necesita |
+| **Reproducibilidad de las pruebas** | Sin pasos de prueba | Hay pasos, pero asumen familiaridad con el código o saltan casos límite | Alguien ajeno al código puede reproducir la verificación: comandos, datos de prueba, flags y al menos un caso límite |
+| **Guía al revisor calibrada por riesgo** | PR de alto riesgo sin notas para el revisor, o notas puramente de plantilla | Hay notas, pero no nombran ninguna disyuntiva, incertidumbre o elemento fuera de alcance concreto | La guía se ajusta al riesgo: en alto riesgo señala preocupaciones específicas y disyuntivas deliberadas; en bajo riesgo se limita a una línea o se omite |
+
 ## Verificaciones de Calidad
 - [ ] El título está en modo imperativo y tiene menos de 72 caracteres
 - [ ] El resumen explica qué Y por qué (no solo qué)

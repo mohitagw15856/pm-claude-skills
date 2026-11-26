@@ -77,3 +77,5 @@ EU GDPR — Art. 6 (lawful basis), Art. 9 (special category), Art. 30 (ROPA), Ar
 - "Decide a lawful basis."
 - "Handle data-subject requests."
 - "Check whether a DPIA is needed."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/gdpr-compliance.html

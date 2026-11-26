@@ -81,3 +81,5 @@ Ask for these if not provided:
 - "Write me a final demand letter before I sue in small claims."
 - "My landlord kept my deposit unfairly — how do I file?"
 - "What evidence do I need and what do I say at the hearing?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/small-claims-prep.html

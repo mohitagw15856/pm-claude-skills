@@ -11,6 +11,7 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete, parseSkill } from '../bin/lib/anthropic.mjs';
+import { modelFor } from '../bin/lib/models.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const REPO = process.env.GITHUB_REPOSITORY;
@@ -77,7 +78,7 @@ async function main() {
   const system = body + '\n\n---\nExecute this skill now on the input below and produce the complete output. Do not ask follow-up questions — work with what is given and note any assumptions.';
   let output;
   try {
-    output = await complete({ apiKey: API_KEY, model: 'claude-sonnet-4-6', system, messages: [{ role: 'user', content: input }], maxTokens: 4096 });
+    output = await complete({ apiKey: API_KEY, model: modelFor('default'), system, messages: [{ role: 'user', content: input }], maxTokens: 4096 });
   } catch (e) {
     await postComment(`⚠️ The \`${name}\` skill failed to run: ${e.message}` + FOOTER);
     process.exit(1);

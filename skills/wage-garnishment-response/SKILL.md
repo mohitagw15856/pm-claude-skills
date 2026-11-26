@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "Can they legally take my entire paycheck?"
 - "How do I claim an exemption to reduce a garnishment?"
 - "Is it too late to fight a garnishment that already started?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wage-garnishment-response.html

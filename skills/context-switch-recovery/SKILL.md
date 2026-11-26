@@ -59,3 +59,5 @@ Ask for these if not provided:
 - "I forgot what I was working on. Here's what I remember…"
 - "I was mid-thought and got pulled away — help me recover it."
 - "How do I get back into this after being distracted?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-switch-recovery.html

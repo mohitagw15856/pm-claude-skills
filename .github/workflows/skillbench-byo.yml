@@ -1,8 +1,9 @@
-# Bring-your-model SkillBench — run the benchmark on YOUR model, in YOUR fork,
-# on YOUR key. Fork this repo, add BYO_API_KEY (and optionally BYO_BASE_URL for
-# any OpenAI-compatible endpoint) as fork secrets, run this workflow, then PR
-# the produced skillbench/community/<model>.json back with the run link.
-# Costs the submitter ~$1-5 in inference; costs this repo nothing.
+# Bring-your-model SkillBench (the Agent Arena, docs/arena.md): run the benchmark
+# on YOUR model or agent endpoint, in YOUR fork, on YOUR key. Fork this repo, add
+# BYO_API_KEY (and BYO_BASE_URL for any OpenAI-compatible endpoint) as fork
+# secrets, run this workflow, then PR the produced skillbench/community/<model>.json
+# back. The file carries this run's link, which is the provenance reviewers check.
+# Costs the submitter a few dollars of inference at most; costs this repo nothing.
 name: SkillBench (bring your model)
 on:
   workflow_dispatch:
@@ -10,6 +11,16 @@ on:
       model:
         description: 'Model id as your endpoint expects it (e.g. my-model-v2)'
         required: true
+      agent:
+        description: 'Optional label when an agent sits behind the endpoint (e.g. "My agent 2.1")'
+        required: false
+        default: ''
+      judge:
+        description: 'Judge model. The default is pinned for comparability; another judge is shown as unpinned.'
+        required: false
+        default: 'claude-sonnet-4-6'
+permissions:
+  contents: read
 jobs:
   bench:
     runs-on: ubuntu-latest
@@ -19,22 +30,30 @@ jobs:
         with: { node-version: '24' }
       - name: Run SkillBench
         env:
+          MODEL: ${{ inputs.model }}
+          JUDGE: ${{ inputs.judge }}
+          BYO_BASE_URL: ${{ secrets.BYO_BASE_URL }}
           OPENAI_API_KEY: ${{ secrets.BYO_API_KEY }}
-          OPENAI_BASE_URL: ${{ secrets.BYO_BASE_URL }}
+          LOCAL_API_KEY: ${{ secrets.BYO_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.BYO_JUDGE_KEY }}
-        run: node skillbench/run-skillbench.mjs --models "${{ inputs.model }}"
-      - name: Stage community result
         run: |
-          mkdir -p skillbench/community
-          node -e "
-            const r = require('./skillbench/results.json');
-            const m = '${{ inputs.model }}'.replace(/[^a-zA-Z0-9._-]/g, '_');
-            require('fs').writeFileSync('skillbench/community/' + m + '.json', JSON.stringify({
-              submitted_via: 'skillbench-byo', run: process.env.GITHUB_SERVER_URL + '/' + process.env.GITHUB_REPOSITORY + '/actions/runs/' + process.env.GITHUB_RUN_ID,
-              ...r,
-            }, null, 2));
-          "
+          set -euo pipefail
+          # A custom endpoint goes through the OpenAI-compatible local: route.
+          route="$MODEL"
+          if [ -n "${BYO_BASE_URL:-}" ] && [[ "$MODEL" != *:* ]]; then route="local:$MODEL"; export LOCAL_BASE_URL="$BYO_BASE_URL"; fi
+          node skillbench/run-skillbench.mjs --models "$route" --judge "$JUDGE" \
+            --out "$RUNNER_TEMP/byo.json" --save-outputs "$RUNNER_TEMP/outputs"
+      - name: Stage the Arena submission
+        env:
+          MODEL: ${{ inputs.model }}
+          AGENT: ${{ inputs.agent }}
+        run: |
+          set -euo pipefail
+          node scripts/stage-arena-submission.mjs --results "$RUNNER_TEMP/byo.json" --model "$MODEL" \
+            ${AGENT:+--agent "$AGENT"} --run "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
       - uses: actions/upload-artifact@v7
         with:
           name: skillbench-community-result
-          path: skillbench/community/
+          path: |
+            skillbench/community/*.json
+            ${{ runner.temp }}/outputs/

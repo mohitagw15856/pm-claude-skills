@@ -1,0 +1,8 @@
+page { background: #f6f7f9; color: #1f2329; font-size: 30rpx; line-height: 1.6; }
+.wrap { padding: 24rpx 28rpx 60rpx; }
+.card { background: #fff; border-radius: 16rpx; padding: 24rpx; margin-bottom: 20rpx; }
+.muted { color: #646a73; font-size: 26rpx; }
+.title { font-weight: 600; font-size: 32rpx; }
+.btn { background: #1456f0; color: #fff; border-radius: 12rpx; margin-top: 20rpx; }
+.btn.secondary { background: #eef3ff; color: #1456f0; }
+.chip { display: inline-block; padding: 8rpx 20rpx; margin: 0 12rpx 12rpx 0; border-radius: 999rpx; background: #eef3ff; color: #1456f0; font-size: 26rpx; }

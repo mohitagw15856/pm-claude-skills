@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "My teenager's on social media — what should our agreement be?"
 - "What are the warning signs my child is being bullied or groomed online?"
 - "Screen-time and online rules that won't start a war with my kid."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kids-online-safety-plan.html

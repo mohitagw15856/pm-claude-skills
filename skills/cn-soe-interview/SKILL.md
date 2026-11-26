@@ -74,3 +74,5 @@ One question at a time, then: | 维度 | 评分（1 到 5） | 改进建议 |
 - "国企笔试一般考什么？怎么复习？"
 - "国企 offer 和互联网 offer 怎么选？"
 - "Prepare me for a state-owned enterprise interview in China."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-soe-interview.html

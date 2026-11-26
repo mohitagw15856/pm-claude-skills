@@ -72,3 +72,5 @@ A rough first pass: it pulls bullet lines from the job ad and counts how many of
 - "Score my CV against this job description."
 - "What am I missing for this role? Should I apply?"
 - "帮我看看我的简历和这个岗位要求的匹配度。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jd-gap-score.html

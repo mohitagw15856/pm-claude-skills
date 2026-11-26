@@ -90,3 +90,8 @@ Ask for these if not provided:
 - "Write a letter to the GP at discharge"
 - "What should the patient leave with at discharge?"
 - "How do I document discharging someone who stopped attending?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/physio-discharge-summary.html
+
+<!-- pm-claude-skills v84.0.0 | skill: physio-discharge-summary | source: skills/physio-discharge-summary/SKILL.md | sha256: 86a9aa9c9e5407f80c45c60427d77665006bf719e6fe54dd6607ae8512d8dd02 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

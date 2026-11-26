@@ -114,3 +114,5 @@ which atom first; [[masking-budget]] and [[meltdown-map]] for the ND context aro
 - "Body double with me."
 - "I only work when someone's around."
 - "Sit with me while I do my taxes."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/body-double-session.html

@@ -70,3 +70,5 @@ Five likely questions from the 评委 or 教研组 (why this method, how you kno
 - "借班上课，课前怎么跟学生快速熟悉？"
 - "评课老师可能会问什么？帮我准备回答。"
 - "Help me prepare an observed lesson and lesson talk for a Chinese school competition."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-open-class.html

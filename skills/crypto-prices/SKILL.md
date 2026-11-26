@@ -61,3 +61,5 @@ Source: [CoinGecko / Coinbase] at [timestamp, UTC] · rerun: `[exact curl]`
 - "What's bitcoin at?"
 - "How's the crypto market today?"
 - "Price of some altcoin."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/crypto-prices.html

@@ -67,3 +67,5 @@ Headline-writing practice (Ogilvy, Advertising's clarity-over-cleverness, the 4 
 - "Give me subject lines for this email."
 - "Improve this weak headline."
 - "Write a hook for this ad."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/headline-options.html

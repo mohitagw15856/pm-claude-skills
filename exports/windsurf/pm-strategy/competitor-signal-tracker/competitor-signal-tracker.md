@@ -9,7 +9,7 @@ Turn scattered competitor information into structured strategic intelligence —
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Competitor name(s)** and the signals/updates to analyse
 - **Your product's current roadmap or strategic priorities** (to assess relevance)
 - **Time period** the signals cover (this week, this month, etc.)
@@ -65,3 +65,8 @@ Ask the user for these if not provided:
 - "Analyse this competitor's price change."
 - "What does their new partnership signal?"
 - "Write this month's competitive intelligence report."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/competitor-signal-tracker.html
+
+<!-- pm-claude-skills v84.0.0 | skill: competitor-signal-tracker | source: skills/competitor-signal-tracker/SKILL.md | sha256: 5787ee262ea48df6f1aa2fba0008c31e2ca9f3ca86e8edb7682f4f1eeda21001 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

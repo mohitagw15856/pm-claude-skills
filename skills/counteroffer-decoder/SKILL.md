@@ -73,3 +73,5 @@ Decode against the resignation reason: **money-only resignations are the only ki
 - "My company countered my resignation."
 - "Should I accept a counteroffer?"
 - "Decode this retention offer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/counteroffer-decoder.html

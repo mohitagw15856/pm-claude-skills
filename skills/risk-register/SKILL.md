@@ -9,7 +9,7 @@ This skill produces a complete risk register for a project, programme, or produc
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Project or product name**
 - **Project stage** (discovery / delivery / launch / live / programme-level)
 - **Key objectives** — what is the project trying to achieve?
@@ -217,3 +217,5 @@ A risk is closed when:
 - [ ] Do not delete closed risks — they provide an audit trail; archive them instead
 - [ ] Do not confuse risks with issues — a risk is something that might happen; an issue is something that has already happened
 - [ ] Do not leave Critical or High risks without a contingency plan — what happens if the mitigation fails must be documented
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/risk-register.html

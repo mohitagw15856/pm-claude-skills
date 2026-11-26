@@ -62,3 +62,5 @@ Ask for these if not provided:
 - [ ] Do not demo on unseeded data — "Test test 123" breaks the story's spell mid-sentence
 - [ ] Do not improvise around breakage — the bridge lines exist because live composure is a rehearsal product
 - [ ] Do not show the exec the click-depth — altitude-match the version to the audience or lose them at Settings
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/demo-script.html

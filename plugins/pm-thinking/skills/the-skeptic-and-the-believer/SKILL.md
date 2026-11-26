@@ -58,3 +58,5 @@ Ask for these if not provided:
 - "I'm really excited about this — believer vs skeptic, go."
 - "Bull case and bear case on this investment idea."
 - "Talk me through both extremes on whether this is worth it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-skeptic-and-the-believer.html

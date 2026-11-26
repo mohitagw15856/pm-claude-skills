@@ -112,7 +112,7 @@ Positioning options:
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Product or service** being priced
 - **Current pricing** (if any — and why it's being reviewed)
 - **Target customer segments** (size, role, willingness to pay)
@@ -154,3 +154,8 @@ Ask the user for these if not provided:
 - "Design pricing tiers."
 - "Evaluate freemium vs paid."
 - "Prepare a pricing change."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-strategy.html
+
+<!-- pm-claude-skills v84.0.0 | skill: pricing-strategy | source: skills/pricing-strategy/SKILL.md | sha256: 34c5018a2a2df8d274590484a6e5479cec9c73975195bc7c5e7a122ea6a7d163 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -66,3 +66,8 @@ The single highest-impact move (a cut, a price change, a growth push) and what i
 - "Decide when to raise."
 - "Figure out if the company is default-alive."
 - "Plan a scenario with hiring/cuts."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/runway-planner.html
+
+<!-- pm-claude-skills v84.0.0 | skill: runway-planner | source: skills/runway-planner/SKILL.md | sha256: a4110188621eba4a0917a5f3f82f9519001865b1df18f9205c40be038df1ed58 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

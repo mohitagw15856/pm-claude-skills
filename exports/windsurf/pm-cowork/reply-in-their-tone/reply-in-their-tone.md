@@ -64,3 +64,8 @@ Formality: [level, evidence] · Length: [theirs] · Directness: [direct/cushione
 - "Reply to this email."
 - "Draft a response that doesn't sound stiff."
 - "Answer this without sounding like a robot."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reply-in-their-tone.html
+
+<!-- pm-claude-skills v84.0.0 | skill: reply-in-their-tone | source: skills/reply-in-their-tone/SKILL.md | sha256: 732aaed5b80917e0eb9b2b1eaa2d6e78ef66b9e04d62ea4e7cd8122f90e2c41f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

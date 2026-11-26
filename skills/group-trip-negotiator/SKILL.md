@@ -131,3 +131,5 @@ edition; [[clone-brief]] for the friend who can't make the planning call;
 - "How do we split costs fairly?"
 - "Agree a budget for the group trip."
 - "Get the group chat to actually book something."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/group-trip-negotiator.html

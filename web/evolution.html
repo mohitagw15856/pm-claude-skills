@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Evolution log: the skills that rewrote themselves | PM Skills</title>
+<meta name="description" content="Every time this library rewrote one of its own skills: the score before, the score after, and whether the rewrite was kept. Losses included." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/evolution.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .ev-wrap { max-width: 980px; margin: 0 auto; padding: 16px 22px 70px; }
+  .ev-wrap h1 { font-size: 28px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; max-width: 760px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 18px 0; }
+  .stat { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 14px; }
+  .stat b { display: block; font-size: 24px; }
+  .stat span { color: var(--muted); font-size: 13px; }
+  .entry { display: grid; grid-template-columns: 96px 1fr auto; gap: 12px; align-items: center; border-top: 1px solid var(--border); padding: 12px 0; }
+  .entry .date { color: var(--muted); font-size: 13px; }
+  .entry .skill { font-weight: 600; overflow-wrap: anywhere; }
+  .entry .loop { color: var(--muted); font-size: 13px; }
+  .delta { font-variant-numeric: tabular-nums; font-size: 14px; text-align: right; white-space: nowrap; }
+  .won { color: #1a8f4c; } .held { color: var(--muted); }
+  .track { height: 6px; background: var(--border); border-radius: 3px; position: relative; margin-top: 6px; }
+  .track i { position: absolute; top: 0; height: 6px; border-radius: 3px; }
+  .empty { color: var(--muted); padding: 20px 0; }
+  @media (max-width: 560px) { .entry { grid-template-columns: 1fr auto; } .entry .date { grid-column: 1 / -1; } }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="ev-wrap">
+  <h1>The skills that rewrote themselves</h1>
+  <p class="lead">This library rewrites its own weakest skills. A model proposes a rewrite, a judge scores it against the original, and only a clear win is kept; a person still reviews every change before it merges. Every attempt is listed here, <strong>including the ones that lost</strong>. Source: <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/EVOLUTION.md">EVOLUTION.md</a>.</p>
+  <div class="stats" id="stats"></div>
+  <div id="log"><p class="empty">Loading…</p></div>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
+  fetch('evolution-log.json').then(function (r) { return r.json(); }).then(function (d) {
+    var s = d.stats;
+    document.getElementById('stats').innerHTML = [
+      [s.attempts, 'rewrite attempts'], [s.kept, 'kept'], [s.rejected, 'original held'],
+      [s.avgGain == null ? 'n/a' : '+' + s.avgGain.toFixed(2), 'average gain when kept'],
+    ].map(function (x) { return '<div class="stat"><b>' + esc(x[0]) + '</b><span>' + esc(x[1]) + '</span></div>'; }).join('');
+    if (!d.entries.length) { document.getElementById('log').innerHTML = '<p class="empty">No rewrites yet.</p>'; return; }
+    document.getElementById('log').innerHTML = d.entries.map(function (e) {
+      var lo = Math.min(e.before || 0, e.after || 0), hi = Math.max(e.before || 0, e.after || 0);
+      var bar = e.before != null && e.after != null ? '<div class="track"><i style="left:' + (lo / 5 * 100) + '%;width:' + Math.max(1, (hi - lo) / 5 * 100) + '%;background:' + (e.kept ? '#1a8f4c' : 'var(--muted)') + '"></i></div>' : '';
+      var link = e.pr ? ' · <a href="' + REPO + '/pull/' + encodeURIComponent(e.pr) + '">#' + esc(e.pr) + '</a>' : e.run ? ' · <a href="' + REPO + '/actions/runs/' + encodeURIComponent(e.run) + '">run</a>' : '';
+      return '<div class="entry"><div class="date">' + esc(e.date) + '</div><div><a class="skill" href="skill/' + encodeURIComponent(e.skill) + '.html">' + esc(e.skill) + '</a><div class="loop">' + esc(d.loops[e.loop] || e.loop) + link + '</div>' + bar + '</div>' +
+        '<div class="delta ' + (e.kept ? 'won' : 'held') + '">' + (e.before == null ? 'n/a' : e.before.toFixed(2)) + ' → ' + (e.after == null ? 'n/a' : e.after.toFixed(2)) + '<br>' + (e.kept ? '✅ kept' : '🛡 original held') + '</div></div>';
+    }).join('');
+  }).catch(function () { document.getElementById('log').innerHTML = '<p class="empty">Could not load the log.</p>'; });
+})();
+</script>
+</body>
+</html>

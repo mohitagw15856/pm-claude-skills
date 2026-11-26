@@ -79,3 +79,8 @@ Design the model first (per this skill), then emit the JSON and run `create`. Ho
 - "Build a financial model in Excel."
 - "Make a budget spreadsheet with live formulas."
 - "Make me an .xlsx forecast I can edit."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/excel-model.html
+
+<!-- pm-claude-skills v84.0.0 | skill: excel-model | source: skills/excel-model/SKILL.md | sha256: fe7bb2426751e00ea95d323b780cf6b49e31dd7dee750c0cdb1566718dc6c741 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

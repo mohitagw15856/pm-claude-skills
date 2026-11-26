@@ -23,6 +23,10 @@ Ask for (if not already provided):
 - **Where it can run** — Claude Code (routines/loops), a server with cron, n8n, or GitHub Actions
 - **Where the output should land** — file in a repo, Slack/email, a Brain folder, a PR
 
+## Working from a brief
+
+Given what the user runs and where the output should go, **write the working setup anyway**: choose the runner from what they described, give the complete run prompt, the schedule definition with the time zone handled, and how to test it once by hand. Use placeholders only for paths you cannot infer.
+
 ## Runner Selection
 
 Pick the simplest runner the user already has, in this order:
@@ -86,3 +90,8 @@ Every recipe includes the prompt the scheduled run executes. It must contain:
 - "Set up a routine."
 - "Automate a weekly report."
 - "Wire a skill into n8n or GitHub Actions."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/schedule-recipe.html
+
+<!-- pm-claude-skills v84.0.0 | skill: schedule-recipe | source: skills/schedule-recipe/SKILL.md | sha256: 8866f9fbd8b73492679bd5ef3ce6abfb7b3efb8daa71b326beef1ac48ed72fe8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

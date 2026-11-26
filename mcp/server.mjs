@@ -62,6 +62,24 @@ function loadTiers() {
   } catch { return {}; }
 }
 
+// Permission manifest (SkillSpec §9.1) and typed contract (§9.2). The manifest is a
+// closed allow-list the runtime enforces: run_skill refuses a skill whose approval
+// is "always" unless the caller passes approved:true after a human said yes.
+function parsePermissions(text) {
+  const fm = (text.match(/^---\r?\n([\s\S]*?)\r?\n---/) || [])[1] || '';
+  const meta = (fm.match(/^metadata:\r?\n((?:[ \t]+.*\r?\n?)*)/m) || [])[1] || '';
+  const block = (meta.match(/^[ \t]+permissions:\r?\n((?:[ \t]{4}.*\r?\n?)*)/m) || [])[1] || '';
+  if (!block) return null;
+  const get = (k) => (block.match(new RegExp(`^[ \\t]+${k}:[ \\t]*(.*?)[ \\t]*$`, 'm')) || [])[1];
+  const tools = (get('tools') || '[]').replace(/^\[|\]$/g, '').split(',').map((t) => t.trim()).filter(Boolean);
+  return { tools, approval: get('approval') || 'never' };
+}
+function loadContract(name) {
+  const f = join(PKG_ROOT, 'schemas', 'skills', `${name}.json`);
+  if (!existsSync(f)) return null;
+  try { const c = JSON.parse(readFileSync(f, 'utf8')); return { inputs: c.inputs, outputs: c.outputs }; } catch { return null; }
+}
+
 function loadSkills() {
   const dir = join(PKG_ROOT, 'skills');
   const tiers = loadTiers();
@@ -82,6 +100,8 @@ function loadSkills() {
       // through to this server, so retired skills were still being listed.
       deprecated: meta.deprecated || null,
       supersededBy: meta.supersededBy || null,
+      permissions: parsePermissions(readFileSync(file, 'utf8')),
+      contract: loadContract(name),
       body: body.trim(),
     });
   }
@@ -160,6 +180,7 @@ const TOOLS = [
         name: { type: 'string', description: 'The skill to run (from list_skills / search_skills).' },
         input: { type: 'string', description: 'The user\'s input for the skill — the raw notes, brief, or task.' },
         inputs: { type: 'object', description: 'Optional structured fields (from get_skill_inputs) — merged into the input as labeled lines.', additionalProperties: { type: 'string' } },
+        approved: { type: 'boolean', description: 'Set true only after a human approved the run. Required for skills whose permission manifest says approval: always.' },
       },
       required: ['name'],
     },
@@ -241,6 +262,27 @@ const TOOLS = [
       required: ['name', 'instructions'],
     },
     annotations: { title: 'Get a skill', ...READONLY },
+  },
+  {
+    name: 'get_skill_contract',
+    title: 'Get a skill\'s typed contract and permissions',
+    description: 'Get the JSON Schema contract (inputs and outputs) and the permission manifest (allowed tools, approval rule) a skill declares, so agents can chain skills deterministically and know what they may do. Skills without a contract return only what they declare.',
+    inputSchema: {
+      type: 'object',
+      additionalProperties: false,
+      properties: { name: { type: 'string', description: 'The exact skill id (from list_skills / search_skills).' } },
+      required: ['name'],
+    },
+    outputSchema: {
+      type: 'object',
+      properties: {
+        name: { type: 'string', description: 'The skill id.' },
+        permissions: { type: 'object', description: 'Permission manifest: tools (closed allow-list) and approval (never | destructive | always).' },
+        contract: { type: 'object', description: 'JSON Schema for inputs and outputs, when the skill declares one.' },
+      },
+      required: ['name'],
+    },
+    annotations: { title: 'Get skill contract', ...READONLY },
   },
   {
     name: 'get_skill_inputs',
@@ -537,9 +579,21 @@ function runTool(name, args = {}) {
       text: notice + s.body,
       structured: {
         name: s.name, title: s.title, instructions: s.body,
+        ...(s.permissions ? { permissions: s.permissions } : {}),
+        ...(s.contract ? { contract: s.contract } : {}),
         ...(s.deprecated ? { deprecated: s.deprecated, supersededBy: s.supersededBy } : {}),
       },
     };
+  }
+  if (name === 'get_skill_contract') {
+    const sc = byName.get(String(args.name || '').trim());
+    if (!sc) throw new Error(`Unknown skill: ${args.name}`);
+    const text = [
+      `${sc.name}`,
+      sc.permissions ? `permissions: tools=[${sc.permissions.tools.join(', ')}] approval=${sc.permissions.approval}` : 'permissions: none declared (drafting only, no tools)',
+      sc.contract ? `contract: ${Object.keys(sc.contract.inputs?.properties || {}).length} typed input(s), ${Object.keys(sc.contract.outputs?.properties || {}).length} typed output(s)` : 'contract: none declared; use get_skill_inputs for the parsed inputs',
+    ].join('\n');
+    return { text, structured: { name: sc.name, ...(sc.permissions ? { permissions: sc.permissions } : {}), ...(sc.contract ? { contract: sc.contract } : {}) } };
   }
   if (name === 'get_skill_inputs') {
     const s2 = byName.get(String(args.name || '').trim());
@@ -596,6 +650,9 @@ const RUN_SUFFIX =
 async function runSkillViaSampling(args) {
   const s = byName.get(String(args.name || '').trim());
   if (!s) throw new Error(`Unknown skill "${args.name}". Use search_skills or list_skills to find one.`);
+  if (s.permissions && s.permissions.approval === 'always' && args.approved !== true) {
+    throw new Error(`"${s.name}" declares approval: always (tools: ${s.permissions.tools.join(', ') || 'none'}). Ask the human, then call run_skill again with approved: true.`);
+  }
   // Structured fields (from get_skill_inputs) compose into labeled lines; free
   // text rides along after. At least one of the two must carry content.
   if (args.inputs && typeof args.inputs === 'object') {

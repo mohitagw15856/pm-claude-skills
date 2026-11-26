@@ -1,7 +1,28 @@
+<sub>**English** · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [한국어](README.ko.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Português (BR)](README.pt-BR.md)</sub>
+
 # 🧠 PM Skills: Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
-> **Your landlord kept your deposit. You got laid off on a Tuesday. Your boss wants the PRD by Friday.**
-> Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes: 1285 of them, one markdown file each. *(PM stands for Professional. Yes, we get asked.)*
+<p align="center"><sub>Sponsored by</sub></p>
+<p align="center">
+  <a href="https://focusee.ai/?utm_source=github&utm_medium=display&utm_campaign=pm_claude_skills_2611&utm_content=readme_banner">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="assets/sponsors/focusee-dark.png">
+      <img src="assets/sponsors/focusee-light.png" alt="FocuSee: Record Better Software Demos and Tutorials with Auto-Editing" width="830">
+    </picture>
+  </a>
+</p>
+
+> **One request to your AI, one finished deliverable back: the PRD, the stakeholder update and the decision call, at a senior product manager's standard.**
+
+Try it right now. Install below, then paste this into your assistant:
+
+```text
+Here are my discovery notes from six customer calls: [paste your notes].
+Turn them into a one-page PRD, a risk register with owners, and a
+stakeholder update I can send to leadership today.
+```
+
+Your assistant loads [user-interview-synthesis](skills/user-interview-synthesis/SKILL.md), [prd-template](skills/prd-template/SKILL.md) and [stakeholder-update](skills/stakeholder-update/SKILL.md) and returns the three documents, not advice about writing them. Not a PM? The same library covers engineers, job seekers, students, founders and 中文用户, below.
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/">
@@ -25,6 +46,9 @@
   <a href="https://mohitagw15856.github.io/pm-claude-skills/"><strong>▶ Playground</strong></a> ·
   <a href="#-install-in-30-seconds"><strong>⚡ Install</strong></a> ·
   <a href="SKILLS.md"><strong>📚 All skills</strong></a> ·
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/worked-examples.html"><strong>📘 Worked examples</strong></a> ·
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/ai-at-work.html"><strong>🏆 Best AI for your job</strong></a> ·
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/how.html"><strong>❓ How do I…?</strong></a> ·
   <a href="docs/SHOWCASE.md"><strong>🖼 Showcase</strong></a> ·
   <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/"><strong>🌳 Tech tree</strong></a> ·
   <a href="README.zh-CN.md"><strong>🇨🇳 简体中文</strong></a> ·
@@ -38,12 +62,18 @@
   <a href="https://github.com/mohitagw15856/pm-claude-skills/releases"><img src="https://img.shields.io/github/v/release/mohitagw15856/pm-claude-skills?label=version&color=brightgreen" alt="Version"></a>
   <a href="https://www.npmjs.com/package/pm-claude-skills"><img src="https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837" alt="npm"></a>
   <a href="#-install-in-30-seconds"><img src="https://img.shields.io/badge/Anthropic%20Plugin%20Directory-Published-D97757?logo=anthropic&logoColor=white" alt="In the official Anthropic plugin directory"></a>
+  <a href="https://github.com/BehiSecc/awesome-claude-skills"><img src="https://img.shields.io/badge/Listed%20in-awesome--claude--skills-blue" alt="Listed in awesome-claude-skills"></a>
+  <a href="https://codespaces.new/mohitagw15856/pm-claude-skills"><img src="https://img.shields.io/badge/Open%20in-Codespaces-181717?logo=github" alt="Open in GitHub Codespaces"></a>
   <a href=".github/workflows/skillcheck.yml"><img src="https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck" alt="SkillCheck"></a>
+  <a href="SKILLSPEC.md"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Fbadge%3Frepo%3Dmohitagw15856%2Fpm-claude-skills%26path%3Dskills" alt="SkillSpec conformance level, graded live"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-lightgrey" alt="License"></a>
 </p>
 
+> **Your landlord kept your deposit. You got laid off on a Tuesday. Your boss wants the PRD by Friday.**
+> Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes: 1374 of them, one markdown file each. *(PM stands for Professional. Yes, we get asked.)*
+
 <!-- AEO Answer Capsule — 68 words -->
-PM Skills is an open-source library of 1285 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
+PM Skills is an open-source library of 1374 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
 <!-- End AEO Capsule -->
 
 ## ⚡ Install in 30 seconds
@@ -54,7 +84,44 @@ npx pm-claude-skills add                                            # any tool: 
 npx --registry=https://registry.npmmirror.com pm-claude-skills add  # 中国大陆镜像
 ```
 
-Then just say what you need: *"Decode this job ad and tell me where I am weak."* Nothing here can break your setup: a skill is a markdown file your AI reads; installing copies text files, uninstalling deletes them. [Read one first](skills/lease-decoder/SKILL.md). Per-tool instructions: [docs/installation.md](docs/installation.md) · ChatGPT and Gemini: copy from [`exports/`](exports/) · MCP: `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp`
+Then just say what you need: *"Decode this job ad and tell me where I am weak."* Nothing here can break your setup: a skill is a markdown file your AI reads; installing copies text files, uninstalling deletes them. [Read one first](skills/lease-decoder/SKILL.md). Per-tool instructions: [docs/installation.md](docs/installation.md) · ChatGPT and Gemini: copy from [`exports/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports) · MCP: `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp` · **No install at all:** point any MCP client at the hosted broker `https://pm-skills-mcp.pm-claude-skills.workers.dev/mcp` ([how it works](docs/BROKER.md)) · **Starting a team?** clone a [starter template](docs/STARTERS.md) for your role · **No network?** every release ships an [offline bundle](docs/OFFLINE-BUNDLE.md) you can serve on a laptop
+
+## 🔄 Keep it updated
+
+Skills improve every week. Whichever way you installed, updating is one step.
+
+| You installed with | Update with |
+|---|---|
+| `npx pm-claude-skills add` (any tool) | Run the same command again. `npx pm-claude-skills doctor` lists what is installed and what is stale. |
+| The Claude Code marketplace | Open `/plugin`, pick the pm-claude-skills marketplace and choose Update. |
+| The Python package | `pip install -U pm-skills` |
+| The MCP server | Use `npx -y -p pm-claude-skills@latest pm-claude-skills-mcp` in your MCP config and every start is the latest release. |
+| A fork of this repository | The bundled `sync-fork.yml` workflow fast-forwards your `main` every week. See [docs/fork-sync.md](docs/fork-sync.md). |
+
+Stuck? The **[FAQ](docs/faq/README.md)** answers the common questions in English, [简体中文](docs/faq/zh-CN.md), [繁體中文](docs/faq/zh-TW.md), [日本語](docs/faq/ja.md), [한국어](docs/faq/ko.md), [Español](docs/faq/es.md) and [Português](docs/faq/pt-BR.md).
+
+## 🌅 Claude Duet, OpenAI Dots and other proactive agents
+
+**PM Skills works with [Claude Duet](https://claude.com/)**, Anthropic's proactive agent. Duet uses the skills in your Claude account, so every skill here can run inside it. Agents that work while you're away fail in new ways: briefs that pad, uncited claims, acting instead of drafting, saying "done" about a draft. So **21 Duet-ready skills are built for unattended use**. They keep briefs short and cited, draft instead of sending, and always ask before anything is sent, posted, paid, signed or deleted.
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/duet-flow.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/duet-flow-light.svg"><img src="docs/readme-assets/duet-flow.svg" width="100%" alt="How PM Skills works inside Claude Duet: your apps are checked every few hours, a Duet-ready skill turns what it finds into a short cited brief and drafts, and anything outward waits at an approval gate for your yes." /></picture></p>
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/duet-setup.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/duet-setup-light.svg"><img src="docs/readme-assets/duet-setup.svg" width="100%" alt="Set up your always-on agent in five steps: audit, standing orders, approval policy, brief and alerts, kill switch; then install with Add to Claude, a starter pack or the whole bundle." /></picture></p>
+
+<sub>The five skills: [prepare-for-duet](skills/prepare-for-duet/SKILL.md) · [standing-orders](skills/standing-orders/SKILL.md) · [approval-policy-designer](skills/approval-policy-designer/SKILL.md) · [morning-brief-designer](skills/morning-brief-designer/SKILL.md) and [interrupt-rules](skills/interrupt-rules/SKILL.md) · [agent-kill-switch-plan](skills/agent-kill-switch-plan/SKILL.md)</sub>
+
+**Watchers for a small business**: [cash-watch](skills/cash-watch/SKILL.md), [payroll-eve-check](skills/payroll-eve-check/SKILL.md), [signature-pipeline-watch](skills/signature-pipeline-watch/SKILL.md), [crm-hygiene-sweep](skills/crm-hygiene-sweep/SKILL.md) and [store-watch](skills/store-watch/SKILL.md). They cover Stripe, Xero, QuickBooks, Gusto, DocuSign, HubSpot and Shopify. **For teams**: [shared-agent-charter](skills/shared-agent-charter/SKILL.md), for a Dot or a shared agent in Slack or Teams.
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/duet-brief.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/duet-brief-light.svg"><img src="docs/readme-assets/duet-brief.svg" width="100%" alt="Illustration with invented data: the morning brief the five watchers would give a small candle shop, with what needs you, what waits on others, what to watch, and two planted scams reported rather than obeyed." /></picture></p>
+
+**Get started**
+- **Into Claude and Duet:** press **⬇ Add to Claude** on any skill's page, then upload the ZIP in claude.ai (Settings, Skills, Upload skill).
+- **A starter pack** of 3 or 4 skills (founder, freelancer, shop owner, team lead, business ops) on the [Duet page](https://mohitagw15856.github.io/pm-claude-skills/duet.html), or `npx pm-claude-skills add --agent claude --skills standing-orders,cash-watch,store-watch`.
+- **The whole bundle:** `npx pm-claude-skills add --bundle pm-duet`.
+
+**Test it safely**: the [injection drill](docs/duet/injection-drill.md) has 12 planted instructions to check whether your agent reports or obeys them. The [fake-apps sandbox](integrations/fake-apps-mcp/) gives invented Gmail, Stripe and Shopify data where every send or payment is refused and logged.
+
+**Honest status:** every one of these skills is *designed for Duet*. None has been tested on Duet yet, because it's a waitlisted research preview. [File a Tested on Duet report](.github/ISSUE_TEMPLATE/tested-on-duet.yml) and a skill moves up a tier, with your name on it. They're written to work with Dots and Muse too: see [how the three compare](docs/duet/proactive-agents.md).
 
 ## 🥊 The demo
 
@@ -67,6 +134,16 @@ Then just say what you need: *"Decode this job ad and tell me where I am weak."*
 </p>
 
 More to see: the **[Showcase gallery](docs/SHOWCASE.md)** has the Playground, the tech tree, Galaxy 3D and Skill City.
+
+## 🧭 How it works
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/skill-flow.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/skill-flow-light.svg"><img src="docs/readme-assets/skill-flow.svg" width="100%" alt="How a skill turns a request into a finished document: you ask in plain words, your AI picks the matching skill by its description, follows the skill file (framework, template, quality checks) and returns the finished document. Skills reach your AI through the installer, the MCP server or the REST API." /></picture></p>
+
+<details><summary>More detail: the installer, the MCP server and the REST API</summary>
+
+A skill is one plain-markdown SKILL.md file: a description that tells your assistant when to load it, plus the working framework, output template and quality checks it follows. The installer (`npx pm-claude-skills add`) copies the skills you choose into the config folder of the tool you use, so they load only when a request matches. The [MCP server](mcp-remote/) serves skills on demand to any MCP client instead, and the same package exposes a read-only [REST API](mcp-remote/#rest-api-for-n8n-lovable-make-any-http-tool) for n8n, Make and other automations. No runtime, no account, nothing resident: uninstalling deletes text files.
+
+</details>
 
 ## 🧑‍🤝‍🧑 Pick your path
 
@@ -89,48 +166,93 @@ More to see: the **[Showcase gallery](docs/SHOWCASE.md)** has the Playground, th
 
 <p align="center"><sub>None of these you? <a href="docs/start/README.md">docs/start</a> has all six paths, a map of every bundle by what you want to do, a four-question quiz and a five-level quest log. Mid-something big? <a href="PACKS.md">Skill Packs</a> start from your moment: a new baby, a layoff, a move, a loss.</sub></p>
 
-## ⭐ Featured bundles
+## 🗺 What you can do
 
-| Bundle | What it does | Try saying |
-|---|---|---|
-| [**pm-essentials**](plugins/pm-essentials/) | The product toolkit: PRDs, updates, meeting notes | *"Write the PRD for this feature brief."* |
-| [**pm-decoders**](plugins/pm-decoders/) | Read the document before you sign it, with the money maths | *"Decode this lease before I sign tomorrow."* |
-| [**pm-thinking**](plugins/pm-thinking/) | For when the model gives you the average answer | *"Red-team my launch plan."* |
-| [**pm-focus**](plugins/pm-focus/) | Get unstuck; ADHD-friendly, useful for every brain | *"I don't know where to start today."* |
-| [**pm-jobsearch**](plugins/pm-jobsearch/) | Applying, outreach and interviews, end to end | *"Decode this job ad and tell me where I am weak."* |
-| [**pm-money**](plugins/pm-money/) | Educational money maths, assumptions labelled | *"Rent or buy, with my real numbers?"* |
-| [**pm-china-work**](plugins/pm-china-work/) | 周报、述职、复盘，中国职场的写法 | *"帮我把这些笔记整理成周报。"* |
-| [**pm-oss-launch**](plugins/pm-oss-launch/) | Ship a side project strangers trust | *"Make my app self-hostable."* |
+The product-management core first, then the bundles everyone borrows. Each one is a real bundle in [`plugins/`](plugins/).
 
-Install any of them: `/plugin install pm-decoders@pm-claude-skills`, or `npx pm-claude-skills add --bundle pm-decoders`. All 152 bundles: [`plugins/`](plugins/) · every skill: **[SKILLS.md](SKILLS.md)** · chain them: [WORKFLOWS.md](WORKFLOWS.md)
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/bundles.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/bundles-light.svg"><img src="docs/readme-assets/bundles.svg" width="100%" alt="Pick the job you have this week: thirteen bundles, from turning research into decisions and writing the PRD to reading before you sign and landing the next job, each with its number of skills." /></picture></p>
+
+<details><summary>The table: what each bundle gives you, what you bring, and links</summary>
+
+<!-- WHAT-YOU-CAN-DO:START -->
+| Your job this week | Bundle | What you get | What you bring |
+|---|---|---|---|
+| Turn research into decisions | [pm-discovery](plugins/pm-discovery/) | Interview guides, job stories, synthesis with quotes and prevalence | Transcripts or raw notes |
+| Write the PRD and the updates | [pm-essentials](plugins/pm-essentials/) | PRD, meeting notes, stakeholder updates, competitive analysis | A feature brief; your goals |
+| Plan the quarter | [pm-planning](plugins/pm-planning/) | OKRs, RICE/MoSCoW/Kano prioritisation, roadmap narrative | A backlog and a company goal |
+| Ship the sprint and the launch | [pm-delivery](plugins/pm-delivery/) | Sprint plans, tech specs, A/B test plans, launch checklists | Stories, capacity, dates |
+| Read the numbers | [pm-data](plugins/pm-data/) | Metrics frameworks, cohort and churn analysis, dashboard briefs | Your metrics or a CSV |
+| Watch the market | [pm-strategy](plugins/pm-strategy/) | Competitor teardowns, signal tracking, stakeholder influence maps | Competitor names and sources |
+| Launch and sell it | [pm-gtm](plugins/pm-gtm/) | GTM plans, content calendars, email campaigns | A product and an audience |
+| Keep the customers | [pm-cs](plugins/pm-cs/) | Health scorecards, QBR decks, churn analysis, renewal playbooks | Account data, close notes |
+| Make the hard call | [pm-decisions](plugins/pm-decisions/) | Typed ship-or-slip, renew-or-churn, hire-or-pass calls with probabilities | The decision's real state |
+| Escape the average answer | [pm-thinking](plugins/pm-thinking/) | Red-teaming, five clashing minds, decision panels | A plan or question worth attacking |
+| Read before you sign | [pm-decoders](plugins/pm-decoders/) | Leases, bills, benefits and contracts decoded with the money maths | The document itself |
+| Land the next job | [pm-jobsearch](plugins/pm-jobsearch/) | JD decoding, outreach, interview prep, follow-up sequences | The JD and your CV |
+| 用中文工作 | [pm-china-work](plugins/pm-china-work/) | 周报、述职、复盘，中国职场的写法 | 你的工作记录 |
+<!-- WHAT-YOU-CAN-DO:END -->
+
+</details>
+
+Install any bundle: `/plugin install pm-decoders@pm-claude-skills`, or `npx pm-claude-skills add --bundle pm-decoders`. All 167 bundles with every skill and install command: **[docs/catalogue.md](docs/catalogue.md)** · every skill in one page: [SKILLS.md](SKILLS.md) · chain them: [WORKFLOWS.md](WORKFLOWS.md)
 
 ## 🇨🇳 中文用户
 
-**用中文提问即可。** 十三个面向中文用户的技能包：周报述职（[pm-china-work](plugins/pm-china-work/)）、考公考研（[pm-china-exams](plugins/pm-china-exams/)）、劳动合同与补偿（[pm-china-life](plugins/pm-china-life/)）、外贸、制造业、合规、出海等，73 个技能有简体中文版、27 个有繁体中文版。
+**用中文提问即可。** 十六个面向中文用户的技能包：周报述职（[pm-china-work](plugins/pm-china-work/)）、考公考研（[pm-china-exams](plugins/pm-china-exams/)）、劳动合同与补偿（[pm-china-life](plugins/pm-china-life/)）、外贸、制造业、合规、出海等，73 个技能有简体中文版、27 个有繁体中文版。
 国内安装：`npx --registry=https://registry.npmmirror.com pm-claude-skills add`，镜像与离线包见 [docs/CHINA.md](docs/CHINA.md)。
+新增：电商运营（[pm-china-ecommerce](plugins/pm-china-ecommerce/)）、创业与政策申报（[pm-china-startup](plugins/pm-china-startup/)）、留学与海归（[pm-china-study-abroad](plugins/pm-china-study-abroad/)）；[微信小程序技能查找器](integrations/wechat-miniprogram/README.md)、[uTools](integrations/utools/README.md) 与 [Quicker](integrations/quicker/README.md) 插件；结果一键写回[飞书文档、语雀、钉钉文档](integrations/writeback-cn/README.md)；Qwen Code、iFlow、Kimi 可直接安装：`npx pm-claude-skills add --agent qwen`。
 试着说："帮我写周报" · "公司要裁我，能拿多少补偿？" · "下个月公务员面试，帮我模拟一轮。"
 完整中文说明（技能包全表、常见问题、国内工具与本地模型、海报与分享卡）：**[简体中文 README](README.zh-CN.md)** · 港台用户：[繁體中文 README](README.zh-TW.md)
 
 ## 🆕 What's new
 
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/releases.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/releases-light.svg"><img src="docs/readme-assets/releases.svg" width="100%" alt="What's new, release by release: v83.0.0 For everyone, everywhere, v83.1.0 Duet-ready, v83.2.0 Duet support and v84.0.0 Regions and new models, the latest." /></picture></p>
+
+<details><summary>What each release adds, and what to try saying</summary>
+
 | Release | What it adds | Try saying |
 |---|---|---|
-| **[v82.0.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** China for everyone, Korea and Southeast Asia | Teachers, parents, trade and manufacturing packs, 适老化, Korean, Japanese and Southeast Asian packs, lite skills for local models, Word and WPS add-ins, team sync | *"帮我写一份新课标教案"* · *"연말정산 어떻게 해요?"* |
-| **[v81.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v81.2.0)** China compliance, Hong Kong and Taiwan | Data compliance for China (等保, 数据出境, PIPL, 大模型备案), Hong Kong and Taiwan in Traditional Chinese, a Dify plugin and 12 Dify apps, every Chinese skill on ModelScope | *"帮我写个人信息保护影响评估"* · *"被資遣可以拿多少？"* |
+| **[v84.0.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** Regions and new models | Regional packs for the Gulf, Brazil and Mexico, Germany, and Nigeria, Kenya and South Africa; packs for nurses, farmers, shop-floor retail, sports coaches, procurement and PhD students; three more China packs with a WeChat Mini Program finder, uTools and Quicker plugins, write-back to 飞书, 语雀 and 钉钉, and installs for Qwen Code, iFlow and Kimi; one model registry on the current Claude line-up, per-skill model and effort guidance, and missions that chain typed pipelines with checkpoints and resume | *"I worked in Dubai for seven years on a basic of 8,000. What is my gratuity?"* · *"Was bedeutet mein Arbeitszeugnis?"* · *"帮我写双11活动方案"* |
+| **[v83.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v83.2.0)** Duet support | 21 Duet-ready skills for Claude Duet and other proactive agents: standing orders, approval policies, a kill switch, small-business watchers (cash, payroll, signatures, CRM, store), team charters, an injection drill, a fake-apps sandbox, starter packs and an Add to Claude ZIP for every skill | *"Write standing orders for my Duet"* · *"Watch my Stripe and Xero every morning"* |
+| **[v83.0.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v83.0.0)** For everyone, everywhere | Easy Read, Teach me, voice and mixed-language questions, local rules for your place, a skill for every form, newcomer, informal-economy, disability and after-a-disaster skills, the library offline on a Raspberry Pi, a USSD menu for any phone, right-click any file, skill apps, partner checks and an expert-graded jobs exam | *"Explain this P60 to me"* · *"मेरा landlord deposit नहीं दे रहा"* |
+
+**New in v84:** local rules for [the Gulf](plugins/pm-mena/), [Brazil and Mexico](plugins/pm-latam/), [Germany](plugins/pm-dach/) and [Nigeria, Kenya and South Africa](plugins/pm-africa/) (with a [USSD menu](integrations/ussd/README.md#the-africa-menu) for any phone); bundles for [nursing](plugins/pm-nursing/), [farming](plugins/pm-agriculture/), [shop-floor retail](plugins/pm-retail-shopfloor/), [sports coaching](plugins/pm-sports-coaching/), [procurement](plugins/pm-procurement/) and [PhD work](plugins/pm-phd/); Arabic, German and French translations in the [side-by-side reader](https://mohitagw15856.github.io/pm-claude-skills/compare-lang.html), right-to-left where the language is; [one model registry](docs/MODELS.md) with [per-skill model and effort guidance](docs/MODEL-GUIDANCE.md) (`run <skill> --auto-model`); and [missions](docs/MISSIONS.md), which chain typed pipelines into one resumable run.
+
+**Reaching everyone (v83):** read any skill in [Easy Read](https://mohitagw15856.github.io/pm-claude-skills/index.html?easy=1), have it [teach you](https://mohitagw15856.github.io/pm-claude-skills/index.html?teach=1) instead of doing it, [ask by voice](https://mohitagw15856.github.io/pm-claude-skills/how.html) in your own language (Hinglish and Taglish included), look up [any form](https://mohitagw15856.github.io/pm-claude-skills/forms.html), open a skill [as an app](https://mohitagw15856.github.io/pm-claude-skills/use.html), or use it with no internet: [on a Raspberry Pi](box/README.md), over [USSD on a basic phone](integrations/ussd/README.md), or [from the right-click menu](integrations/right-click/README.md) with a free local model.
+
+</details>
 
 Everything older: **[CHANGELOG.md](CHANGELOG.md)** · the write-ups: [docs/WHATS-NEW.md](docs/WHATS-NEW.md) · most-wanted skills and votes: the [tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/)
 
 ## ✅ Trust and quality
 
-An honest summary of what is checked, measured and still unreviewed, as of 2026-10-06:
+An honest summary of what is checked, measured and still unreviewed, computed from the repo on every change:
 
-- **Checked on every change, in CI:** structure ([SkillCheck](SKILLSPEC.md), all 1285 skills at the L3 gate), a security audit, a near-duplicate check, a count-drift check, translation parity across 108 locales, and a prompt-injection suite. A change that fails any of them does not merge.
-- **Eval cases:** 389 of the 1285 skills carry eval cases ([`evals/cases.json`](evals/cases.json)); coverage grows with each release.
-- **Measured scores:** 28 skills have blind-judged scores on the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html) (average 4.8/5); the [benchmark report](skillbench/REPORT.md) publishes the negative findings too. Everything unscored is unscored, not assumed good.
-- **Human review:** of the 155 skills rated high-stakes in [risk tiers](docs/RISK-TIERS.md), **0 have been reviewed by a licensed professional so far**. The [expert-review programme](docs/EXPERT-REVIEW-PROGRAM.md) and its [ranked queue](docs/HUMAN-REVIEW-QUEUE.md) exist precisely for this; if you hold a relevant credential, reviewing one skill is the single most valuable contribution available.
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/trust.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/trust-light.svg"><img src="docs/readme-assets/trust.svg" width="100%" alt="Trust and quality in numbers: skills that pass SkillCheck on every change, skills with eval cases, measured skills and their average score, hostile documents in the injection suite, translations, and how many high-stakes skills have an expert review." /></picture></p>
+
+<details><summary>The numbers in full, with links, and how the library checks itself</summary>
+
+<!-- TRUST-NUMBERS:START (generated by scripts/build-trust-numbers.mjs; do not edit by hand) -->
+- **Checked on every change, in CI:** structure ([SkillCheck](SKILLSPEC.md), all 1,374 skills at the L3 gate), a security audit, a near-duplicate check, a count-drift check, translation parity (201 translations in 11 languages), and a prompt-injection suite of 15 hostile documents. A change that fails any of them does not merge.
+- **Eval cases:** 478 of the 1,374 skills carry eval cases ([`evals/cases.json`](evals/cases.json)), and 163 have a worked example in [`examples/`](examples/).
+- **Measured scores:** 399 skills have blind-judged scores on the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html) (average 4.6/5 across the models tested); the [benchmark report](skillbench/REPORT.md) publishes the negative findings too. Everything unscored is unscored, not assumed good.
+- **Human review:** of the 183 skills rated high-stakes in [risk tiers](docs/RISK-TIERS.md), **0 have a current review by a qualified professional**. The [expert-review programme](docs/EXPERT-REVIEW-PROGRAM.md) and its [ranked queue](docs/HUMAN-REVIEW-QUEUE.md) exist for exactly this; if you hold a relevant credential, reviewing one skill is the most valuable contribution available, and it earns [co-authorship, a signed certificate and the badge](docs/EXPERT-REVIEW-PROGRAM.md#what-reviewers-get).
+- **Reported savings:** none recorded yet. [Tell us what a skill saved you](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=roi-story.yml): hours and money only, added up in public on the [Wall of Wins](https://mohitagw15856.github.io/pm-claude-skills/wins.html).
+<!-- TRUST-NUMBERS:END -->
+- **Checked by people who do the job:** organisations can vouch for skills as [partners](https://mohitagw15856.github.io/pm-claude-skills/partners.html), and the [jobs exam](https://mohitagw15856.github.io/pm-claude-skills/jobs-exam.html) has AI answers marked blind by working professionals on their own marking schemes. Both start empty and fill only with real participants.
+- **It rewrites itself, in public:** the weakest skills are periodically rewritten by a model and kept only if a judge scores the rewrite higher; every attempt, including the losses, is in the [evolution log](EVOLUTION.md).
 - **Honesty rules baked in:** decoders end with a not-advice line ([the severity scale](docs/severity-scale.md)), calculators name what they do not model, simulators debrief out of character. PM Skills is not a substitute for a professional.
 
-Privacy: off by default; skills, the CLI and exports send nothing ([docs/TELEMETRY.md](docs/TELEMETRY.md) · [SECURITY.md](SECURITY.md)). Verify a release: `npx pm-claude-skills verify --release` (signed SBOM, Sigstore provenance).
+</details>
+
+**Privacy, stated plainly:** everything installable runs locally. Skills are inert markdown on your machine; the CLI, the exports and the local MCP server send nothing anywhere, and telemetry is off unless you set `PM_SKILLS_TELEMETRY=1` (skill name only, never content). The two things that do leave your machine are your prompts to whichever model provider you chose, and requests to the hosted playground or hosted MCP if you opt to use them. Full statements: [docs/TELEMETRY.md](docs/TELEMETRY.md) · report a vulnerability: [SECURITY.md](SECURITY.md) · licence: [MIT](LICENSE). Verify a release: `npx pm-claude-skills verify --release` (signed SBOM, Sigstore provenance). Verify one skill: its SHA-256 is published in [`/.well-known/agent-skills.json`](https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json), so running `shasum -a 256` on your copy of the file should match; every exported file carries the same hash in a provenance footer. Agent-native skills are red-teamed on every change ([evals/adversarial](evals/adversarial/cases.json)).
+
+## 🙌 Community
+
+- **Show and Tell:** share what a skill produced, including what it got wrong: [open a Show and Tell](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=show-and-tell.yml). The best entries become [showcases](docs/showcases/).
+- **Vote on what gets built next:** the [tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/) ranks open [skill requests](https://github.com/mohitagw15856/pm-claude-skills/issues/new?labels=skill-request&title=Skill:%20) by 👍; the top three are in research.
+- **Roadmap:** confirmed direction in [ROADMAP.md](ROADMAP.md), the live signals behind it in [docs/roadmap.md](docs/roadmap.md).
+- **Chat:** TODO, a Discord or GitHub Discussions link goes here once the maintainer enables one; until then, issues are the front door.
 
 ## 🤝 Contributing
 
@@ -195,4 +317,4 @@ If a skill saved you real money or a real mistake, **[star the repo](https://git
 
 ---
 
-*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1285 skills · 152 bundles · 35 professions · every commit gated. The long version lives in the **[Showcase](docs/SHOWCASE.md)**.*
+*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1374 skills · 167 bundles · 35 professions · every commit gated. The long version lives in the **[Showcase](docs/SHOWCASE.md)**.*

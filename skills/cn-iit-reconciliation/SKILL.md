@@ -81,3 +81,5 @@ End verbatim: *"以上为估算，不构成税务意见。请以个人所得税 
 - "年终奖单独计税还是并入综合所得更划算？"
 - "专项附加扣除我漏了哪些？"
 - "Explain China's annual tax reconciliation for me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-iit-reconciliation.html

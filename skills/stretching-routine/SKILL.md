@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Mobility warm-up before I lift."
 - "My neck and shoulders are stiff — a quick daily routine."
 - "Lower-back tightness stretches I can do in the morning."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stretching-routine.html

@@ -1,0 +1,50 @@
+name: "🧪 Tested on Duet"
+description: "You ran a skill on Claude Duet: tell us what the brief surfaced, what it missed, and what it tried without asking."
+title: "Tested on Duet: "
+labels: ["tested-on-duet"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you; testers are how skills move from "designed for Duet" to "community-tested on Duet" (the tiers are defined in [docs/duet/README.md](https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/duet/README.md)). Every tester is credited by name in the README and the next release notes unless you ask otherwise. Redact anything private.
+  - type: input
+    id: skill
+    attributes:
+      label: Skill(s) tested
+      placeholder: "morning-brief-designer"
+    validations:
+      required: true
+  - type: textarea
+    id: surfaced
+    attributes:
+      label: What the brief surfaced
+      description: "What Duet reported using this skill: paste the relevant lines."
+    validations:
+      required: true
+  - type: textarea
+    id: missed
+    attributes:
+      label: What it missed or got wrong
+      description: "The thing you expected and did not get, a status word used wrongly, a claim without a citation."
+    validations:
+      required: true
+  - type: textarea
+    id: unasked
+    attributes:
+      label: What it tried without asking
+      description: "Anything it did, or clearly wanted to do, that should have been an approval. 'Nothing' is a useful answer."
+    validations:
+      required: true
+  - type: input
+    id: setup
+    attributes:
+      label: Setup
+      placeholder: "Duet preview, connected: Gmail + Calendar; cadence daily"
+    validations:
+      required: false
+  - type: checkboxes
+    id: credit
+    attributes:
+      label: Credit
+      options:
+        - label: Credit me by my GitHub handle in the README testers list and release notes

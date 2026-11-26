@@ -3,130 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
-<title>Skill City — your practice as a skyline at dusk</title>
-<meta name="description" content="1285 skills as buildings in 72 districts. Height is craft tier; the windows only light up in buildings you've actually used — a city that illuminates as you practice. Slow fly-over at dusk, click a building for the skill. All local." />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  html, body { height: 100%; margin: 0; overflow: hidden; }
-  #scene3d { position: fixed; inset: 0; }
-  #back { position: fixed; top: 10px; left: 12px; z-index: 6; font-size: 12.5px; color: var(--muted); text-decoration: none; background: rgba(16,19,26,.85); border: 1px solid var(--border); border-radius: 999px; padding: 8px 13px; }
-  #tip { position: fixed; z-index: 6; pointer-events: none; font-size: 12.5px; color: #fff; background: rgba(10,12,16,.92); border: 1px solid var(--border); border-radius: 9px; padding: 7px 11px; display: none; }
-  .hint { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); z-index: 5; font-size: 11.5px; color: rgba(255,255,255,.5); text-align: center; }
-  #stats { position: fixed; top: 10px; right: 12px; z-index: 6; font-size: 12px; color: var(--muted); background: rgba(16,19,26,.85); border: 1px solid var(--border); border-radius: 999px; padding: 8px 14px; }
-</style>
+<title>Moved to the Skill Galaxy | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/galaxy.html" />
+<meta http-equiv="refresh" content="0; url=galaxy.html" />
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}@media (prefers-color-scheme:light){body{background:#fff;color:#1f2328}a{color:#0969da}}</style>
 </head>
 <body>
-<canvas id="scene3d"></canvas>
-<a id="back" href="galaxy3d.html">🌌 Galaxy</a>
-<div id="stats"></div>
-<div id="tip"></div>
-<div class="hint">drag to orbit · scroll to zoom · click a building · <b>windows light up in skills you've used</b></div>
-
-<script type="importmap">
-{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
-               "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
-</script>
-<script type="module">
-import * as THREE from 'three';
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-
-const ls=(k,d)=>{ try{ return JSON.parse(localStorage.getItem(k)) ?? d; }catch(_){ return d; } };
-const catalog=await fetch('skills.json').then(r=>r.json()).catch(()=>({skills:[]}));
-const SKILLS=catalog.skills||[];
-const runsBy={}; for(const r of ls('pm_workspace',[])||[]) runsBy[r.name]=(runsBy[r.name]||0)+1;
-const litCount=SKILLS.filter(s=>runsBy[s.name]).length;
-document.getElementById('stats').textContent='🏙 '+SKILLS.length+' buildings · '+litCount+' lit by your practice';
-
-const canvas=document.getElementById('scene3d');
-const renderer=new THREE.WebGLRenderer({canvas, antialias:true});
-const scene=new THREE.Scene();
-// Dusk: gradient sky via fog + big colored hemisphere light.
-scene.background=new THREE.Color(0x1a1430);
-scene.fog=new THREE.Fog(0x241a38, 120, 420);
-const camera=new THREE.PerspectiveCamera(52, 1, 0.1, 1000);
-camera.position.set(90, 70, 130);
-const controls=new OrbitControls(camera, canvas);
-controls.enableDamping=true; controls.maxPolarAngle=Math.PI*0.49; controls.maxDistance=380; controls.minDistance=18;
-controls.target.set(0,6,0);
-scene.add(new THREE.HemisphereLight(0x7b5ea8, 0x1c1426, 0.9));
-const sun=new THREE.DirectionalLight(0xff9a5c, 1.1); sun.position.set(-80,26,40); scene.add(sun);   // low dusk sun
-function resize(){ renderer.setSize(innerWidth,innerHeight); renderer.setPixelRatio(Math.min(devicePixelRatio,2)); camera.aspect=innerWidth/innerHeight; camera.updateProjectionMatrix(); }
-resize(); addEventListener('resize',resize);
-
-// Ground.
-const ground=new THREE.Mesh(new THREE.PlaneGeometry(900,900), new THREE.MeshStandardMaterial({color:0x14101e, roughness:0.95}));
-ground.rotation.x=-Math.PI/2; scene.add(ground);
-
-// Window texture: lit vs dark buildings.
-function windowsTexture(lit, hue){
-  const c=document.createElement('canvas'); c.width=64; c.height=128;
-  const x=c.getContext('2d');
-  x.fillStyle='#0d0d16'; x.fillRect(0,0,64,128);
-  for(let r=6;r<128;r+=10) for(let col=6;col<64;col+=12){
-    const on=lit? Math.random()<0.72 : Math.random()<0.05;
-    x.fillStyle=on? 'hsl('+Math.round(hue*360)+',85%,'+(58+Math.random()*18)+'%)' : '#181826';
-    x.fillRect(col,r,6,5);
-  }
-  const t=new THREE.CanvasTexture(c); t.wrapS=t.wrapT=THREE.RepeatWrapping;
-  return t;
-}
-
-// Districts: bundles laid out on a spiral of city blocks; buildings inside each.
-const bundles=[...new Set(SKILLS.map(s=>s.plugin||'other'))];
-const districtPos={}, hues={};
-bundles.forEach((b,i)=>{
-  const a=i*2.39996, r=10+Math.sqrt(i)*17;          // sunflower spiral = organic city sprawl
-  districtPos[b]=new THREE.Vector2(Math.cos(a)*r, Math.sin(a)*r);
-  hues[b]=(i*0.618034)%1;
-});
-const meshes=[], meta=[];
-SKILLS.forEach((s,i)=>{
-  const d=districtPos[s.plugin||'other'];
-  const runs=runsBy[s.name]||0, lit=runs>0;
-  const h=(s.tier==='production'?16:s.tier==='experimental'?4:8)+Math.random()*5+runs*2.5;
-  const w=2.1+Math.random()*1.4;
-  const geo=new THREE.BoxGeometry(w,h,w);
-  const tex=windowsTexture(lit,hues[s.plugin||'other']);
-  tex.repeat.set(1,Math.max(1,Math.round(h/8)));
-  const mat=new THREE.MeshStandardMaterial({map:tex, roughness:0.7, emissiveMap:tex, emissive:lit?0xffffff:0x1b1b2a, emissiveIntensity:lit?0.5:0.18});
-  const m=new THREE.Mesh(geo,mat);
-  m.position.set(d.x+(Math.random()-.5)*13, h/2, d.y+(Math.random()-.5)*13);
-  scene.add(m); meshes.push(m); meta.push({...s, runs, mesh:m});
-});
-// A beacon on your most-used skill: the tallest lit spire gets a light cone.
-const top=meta.filter(m=>m.runs).sort((a,b)=>b.runs-a.runs)[0];
-if(top){
-  const beam=new THREE.Mesh(new THREE.CylinderGeometry(0.3,1.6,40,16,1,true), new THREE.MeshBasicMaterial({color:0xffd58a, transparent:true, opacity:0.16, side:THREE.DoubleSide}));
-  beam.position.copy(top.mesh.position).setY(top.mesh.geometry.parameters.height+20);
-  scene.add(beam);
-}
-
-// Picking.
-const ray=new THREE.Raycaster(), mouse=new THREE.Vector2(); let hover=null;
-canvas.addEventListener('pointermove',e=>{
-  mouse.x=(e.clientX/innerWidth)*2-1; mouse.y=-(e.clientY/innerHeight)*2+1;
-  ray.setFromCamera(mouse,camera);
-  const hit=ray.intersectObjects(meshes)[0];
-  const tip=document.getElementById('tip');
-  hover=hit? meta[meshes.indexOf(hit.object)] : null;
-  if(hover){ tip.style.display='block'; tip.style.left=(e.clientX+12)+'px'; tip.style.top=(e.clientY-8)+'px';
-    tip.innerHTML='<b>'+hover.name+'</b> · '+(hover.plugin||'')+(hover.runs?(' · ✦ '+hover.runs+' run'+(hover.runs===1?'':'s')):' · dark — run it to light it'); canvas.style.cursor='pointer'; }
-  else { tip.style.display='none'; canvas.style.cursor='grab'; }
-});
-canvas.addEventListener('click',()=>{ if(hover) location.href='index.html?skill='+hover.name; });
-
-// Slow cinematic fly-over when idle.
-let lastInteract=0;
-canvas.addEventListener('pointerdown',()=>lastInteract=performance.now());
-renderer.setAnimationLoop(()=>{
-  const t=performance.now();
-  if(t-lastInteract>4000){ const a=t*0.0085*0.01; camera.position.x=Math.cos(a)*150; camera.position.z=Math.sin(a)*150; camera.position.y=68+Math.sin(a*2)*12; camera.lookAt(0,8,0); }
-  controls.update();
-  renderer.render(scene,camera);
-});
-window.__cityReady={buildings:SKILLS.length, lit:litCount};
-if(window.pmTrack) pmTrack('city/open');
-</script>
+<main><p>This page has been retired to keep the site focused. Continue to <a href="galaxy.html">the Skill Galaxy</a>.</p></main>
+<script>location.replace('galaxy.html' + location.search + location.hash);</script>
 </body>
 </html>

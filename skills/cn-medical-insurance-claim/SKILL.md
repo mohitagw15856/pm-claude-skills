@@ -64,3 +64,5 @@ When the person asks for it, or is helping a parent, add a version the older per
 - "住院花了 5 万，医保大概能报多少？"
 - "手工报销需要哪些材料？"
 - "How much will China's medical insurance cover for my surgery?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-medical-insurance-claim.html

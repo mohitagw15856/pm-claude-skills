@@ -71,6 +71,8 @@ Confidence: 0.xx · Source: [model name / assistant estimate]
 **Flip fact:** [the one unknown; who can answer it by when]
 **Record line:** `[date] [release] → [option] (p=0.xx, conf=0.xx) · overruled by: [none / name, reason]`
 
+End every output with a short **Assumptions and gaps** block: two to four bullets naming what was assumed because the input did not say, and what missing information would most change this output. If nothing was assumed and nothing was missing, say so in one line instead.
+
 ## Quality Checks
 - [ ] Every state field is filled from evidence or marked `unknown` — no invented test numbers
 - [ ] The three options are used exactly as defined; no fourth option invented mid-meeting
@@ -90,3 +92,8 @@ Confidence: 0.xx · Source: [model name / assistant estimate]
 - "Should we ship on Friday or slip a week?"
 - "Go/no-go for the 3.2 release — here's the state."
 - "Two blockers open, rollback untested — call it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ship-or-slip.html
+
+<!-- pm-claude-skills v84.0.0 | skill: ship-or-slip | source: skills/ship-or-slip/SKILL.md | sha256: 9dba40c758796194316b259a23fbc6f2241f3c24a8e20644102aa5d2660aa6de | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

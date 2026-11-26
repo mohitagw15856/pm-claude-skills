@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "How much should I ask for in this new role?"
 - "Build me a defensible salary range for a mid-level [role] in [city]."
 - "Is this job offer's salary fair for my experience?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/salary-benchmarking.html

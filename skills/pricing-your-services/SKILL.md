@@ -73,3 +73,5 @@ Earns a discount: [list with exchange rates] · Floor: $[N] ([why]) · Below flo
 - "Build my pricing packages."
 - "Hourly, day rate or retainer?"
 - "Help me quote without flinching."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-your-services.html

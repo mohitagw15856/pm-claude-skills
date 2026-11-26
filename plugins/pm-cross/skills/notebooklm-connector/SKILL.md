@@ -181,3 +181,5 @@ If any step fails, do the following:
 - "What notebooks do I have in NotebookLM?"
 - "Add this article to NotebookLM: [URL]"
 - "Generate a briefing doc from my NotebookLM sources on [topic]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/notebooklm-connector.html

@@ -196,3 +196,5 @@ This skill works from the Claude mobile app (Dispatch). On mobile, the output re
 - "Triage my inbox — ignore anything from Jira and the marketing domain"
 - "Check emails from the last 24 hours, flag anything from [client name]"
 - "What do I need to reply to today?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/email-triage.html

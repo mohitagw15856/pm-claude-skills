@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-procurement",
+  "version": "1.0.0",
+  "description": "Buy well: write the RFP, score tenders on a weighted matrix, answer an RFP, score suppliers each quarter, track renewal notice dates, and write the renew, renegotiate or exit brief",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "procurement",
+    "tender",
+    "rfp",
+    "supplier",
+    "sourcing",
+    "contract-renewal"
+  ]
+}

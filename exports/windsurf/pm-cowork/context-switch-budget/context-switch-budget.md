@@ -72,3 +72,8 @@ Ask for these if not provided:
 - "Count my context switches."
 - "Batch my meetings and reviews."
 - "Defend against calendar Swiss cheese."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-switch-budget.html
+
+<!-- pm-claude-skills v84.0.0 | skill: context-switch-budget | source: skills/context-switch-budget/SKILL.md | sha256: 506d8f33b88626c955bc40037f2f6b6badf02571d618eba66d59e3d0febeb05e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

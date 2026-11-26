@@ -127,3 +127,8 @@ feeds this dossier.
 - "Doctors keep saying it's just anxiety."
 - "Help me track my symptoms across specialists."
 - "Prepare my case for the next specialist."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/diagnosis-limbo-kit.html
+
+<!-- pm-claude-skills v84.0.0 | skill: diagnosis-limbo-kit | source: skills/diagnosis-limbo-kit/SKILL.md | sha256: 44588cba3b36571924a8c04a3f534711d3951b6b3407941b40dc7dcb978c06f9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

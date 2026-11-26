@@ -3,9 +3,11 @@ name: Season rollover
 # Monthly ritual automation: when a season passes its close date, freeze the
 # podium into the Hall and open an issue with the next-season checklist.
 # Free (no API); scenario authorship stays human — that's the craft.
+#
+# Archived in October 2026: the monthly competition is now the Skill Cup
+# (skill-cup.yml), which needs no hand-written scenario. Kept for manual use if a
+# season is ever run again.
 on:
-  schedule:
-    - cron: '0 8 * * *'    # daily check; acts only when a season has closed
   workflow_dispatch:
 
 concurrency:

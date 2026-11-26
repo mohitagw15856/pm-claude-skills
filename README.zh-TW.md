@@ -1,4 +1,8 @@
-# PM Skills：1,285 個專業 Agent Skills，用中文提問就能用
+<sub>[English](README.md) · [简体中文](README.zh-CN.md) · **繁體中文** · [한국어](README.ko.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Português (BR)](README.pt-BR.md)</sub>
+
+# PM Skills：1,374 個專業 Agent Skills，用中文提問就能用
+
+> 本翻譯以機器輔助維護，歡迎母語者透過 PR 修正；方法見 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/live/season-tw.html">
@@ -25,7 +29,7 @@
 </p>
 
 > **公司說要資遣你，你不確定資遣費該拿多少；轉工之後，舊公司的強積金不知道該怎麼處理；每個月加班，卻從沒算清楚加班費。**
-> 通用 AI 像一個很有自信的實習生。**PM Skills** 是資深同事的筆記：1,285 份，每份一個 Markdown 檔案。（PM 指 Professional，各行各業的專業人士，不只是產品經理。）
+> 通用 AI 像一個很有自信的實習生。**PM Skills** 是資深同事的筆記：1,374 份，每份一個 Markdown 檔案。（PM 指 Professional，各行各業的專業人士，不只是產品經理。）
 
 MIT 開源授權，永久免費。沒有執行環境，沒有遙測，不需要帳號。
 
@@ -93,6 +97,20 @@ npx pm-claude-skills add --agent cursor --bundle pm-hk-tw,pm-cv
 | 下載原始碼 | `git clone https://github.com/mohitagw15856/pm-claude-skills.git` |
 | 在 Python 智能體裡用 | `pip install pm-skills` |
 | 在 Cherry Studio、Dify 等應用裡用 | 本機 MCP 服務：`npx -y -p pm-claude-skills pm-claude-skills-mcp`，詳見 [docs/CHINA.md](docs/CHINA.md) 第五節 |
+
+## 🔄 保持更新
+
+技能每週都在改進。無論用哪種方式安裝，更新只需一步。
+
+| 安裝方式 | 更新方式 |
+|---|---|
+| `npx pm-claude-skills add`（任何工具） | 再執行一次同樣的指令。`npx pm-claude-skills doctor` 會列出已安裝和已過時的技能。 |
+| Claude Code 外掛市集 | 開啟 `/plugin`，選擇 pm-claude-skills 市集，按 Update。 |
+| Python 套件 | `pip install -U pm-skills` |
+| MCP 伺服器 | MCP 設定裡用 `npx -y -p pm-claude-skills@latest pm-claude-skills-mcp`，每次啟動都是最新版。 |
+| 自己的 Fork | 倉庫自帶的 `sync-fork.yml` 工作流程每週把你的 `main` 快轉到上游，見 [docs/fork-sync.md](docs/fork-sync.md)。 |
+
+更多問題見 **[常見問題（繁體中文）](docs/faq/zh-TW.md)**。
 
 ## 用繁體中文版的技能
 

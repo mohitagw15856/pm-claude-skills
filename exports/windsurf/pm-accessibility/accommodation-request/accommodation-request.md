@@ -122,3 +122,8 @@ communication layer.
 - "I need a workplace accommodation."
 - "Request reasonable adjustments."
 - "How do I ask for accommodations for my disability/condition?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/accommodation-request.html
+
+<!-- pm-claude-skills v84.0.0 | skill: accommodation-request | source: skills/accommodation-request/SKILL.md | sha256: cda8da0a9abce339378990df77e90281cca6113d9a11098525b8bd04d40ee5c2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

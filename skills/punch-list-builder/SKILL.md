@@ -81,3 +81,5 @@ Never let a Tier A hide inside a room's list of C's — pull Tier A items to the
 - "Organise a deficiency list."
 - "Prep for substantial completion."
 - "Track punch items to closeout."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/punch-list-builder.html

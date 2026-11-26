@@ -75,3 +75,8 @@ UML sequence diagramming (lifelines, sync/async messages, alt fragments), expres
 - "Draw the auth handshake."
 - "What calls what in what order?"
 - "Diagram this integration."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sequence-diagram.html
+
+<!-- pm-claude-skills v84.0.0 | skill: sequence-diagram | source: skills/sequence-diagram/SKILL.md | sha256: 155feceaf9dbe9bffae8282816fb24128e3fbd0a94d42003f3170e85d896c9a7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

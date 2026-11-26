@@ -76,3 +76,5 @@ Consumer-side repair-order review practice — symptom-to-line reconciliation, u
 - "Decode my mechanic's estimate."
 - "Do I really need all this?"
 - "Is the shop ripping me off?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/auto-repair-estimate-decoder.html

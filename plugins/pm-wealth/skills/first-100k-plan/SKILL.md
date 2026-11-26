@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "How do I actually get ahead financially, not just tread water?"
 - "What's the fastest realistic path to my savings goal?"
 - "I keep not making progress on savings — what should I focus on?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-100k-plan.html

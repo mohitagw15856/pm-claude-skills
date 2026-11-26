@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "Write my weekly update."
 - "Format our team's status posts."
 - "What goes in a good async check-in?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/async-update-format.html

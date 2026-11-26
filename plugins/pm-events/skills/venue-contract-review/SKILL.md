@@ -93,3 +93,5 @@ Ask for these if not provided:
 - "What is not included in this venue hire fee?"
 - "How do I negotiate better cancellation terms?"
 - "Is this minimum spend reasonable for 200 guests?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/venue-contract-review.html

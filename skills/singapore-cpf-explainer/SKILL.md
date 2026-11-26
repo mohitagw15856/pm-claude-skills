@@ -62,3 +62,5 @@ Three concrete actions in order, each with where to do it (the CPF website or ap
 - "I'm turning 55 next year. What happens to my CPF?"
 - "Should I use CPF or cash for my HDB down payment?"
 - "新加坡公积金怎么算？我每个月应该存多少？"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/singapore-cpf-explainer.html

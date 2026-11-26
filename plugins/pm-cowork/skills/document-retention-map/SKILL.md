@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Can I shred this?"
 - "Set up a document retention system."
 - "What papers does my small business need to keep?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/document-retention-map.html

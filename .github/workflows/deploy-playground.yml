@@ -23,10 +23,15 @@ on:
       - 'scripts/build-leaderboard.mjs'
       - 'scripts/build-coverage.mjs'
       - 'scripts/build-skill-pages.mjs'
+      - 'config/partners.json'
+      - 'scripts/build-skill-changes.mjs'
       - 'scripts/build-skill-changelog.mjs'
+      - 'schemas/**'
       - 'scripts/build-community.mjs'
+      - 'community/registry.json'
       - 'scripts/build-samples.mjs'
       - 'examples/samples/**'
+      - 'examples/**'
       - 'site/tech-tree/**'
       - 'scripts/build-tech-tree.mjs'
       - 'integrations/dify-plugin/**'
@@ -41,6 +46,17 @@ on:
       - 'scripts/build-release-bundle.mjs'
       - 'scripts/push-search-engines.mjs'
       - 'data/cn-city-data.json'
+      - 'data/evolution-log.json'
+      - 'data/savings.json'
+      - 'data/firm-ledger.json'
+      - 'data/skill-cup.json'
+      - 'data/skill-hack.json'
+      - 'config/cup-prizes.json'
+      - 'data/ab-tests.json'
+      - 'overlays/**'
+      - 'data/outcomes.json'
+      - 'proposals/ab/**'
+      - 'i18n/**'
       - 'CHANGELOG.md'
       - 'data/solar-terms.json'
       - 'data/cn-exam-dates.json'
@@ -91,13 +107,15 @@ jobs:
       - name: Build per-skill SEO pages + sitemap (web/skill/*.html)
         run: node scripts/build-skill-pages.mjs
 
+      - name: One ZIP per skill for claude.ai and Claude Duet (web/skill-zip/)
+        run: node scripts/build-skill-zips.mjs
+      - name: Small-model badges from recorded local runs (web/badge/small-model/)
+        run: node scripts/build-small-model-badges.mjs
+
       # Chinese pages for Baidu, Bing China and 360: /zh/<skill>.html and a hub,
       # appended to the sitemap built above.
       - name: Build the Chinese landing pages (web/zh/)
         run: node scripts/build-zh-landing.mjs
-
-      - name: Build per-skill change history (web/skill-changelog.json)
-        run: node scripts/build-skill-changelog.mjs
 
       - name: Build the community hub (web/community.html)
         env:
@@ -156,10 +174,16 @@ jobs:
       #   gh attestation verify pm-skills-<version>.tar.gz -R mohitagw15856/pm-claude-skills
       - name: Build the release bundle and SBOM (web/releases/)
         run: node scripts/build-release-bundle.mjs
-      - name: Sign the release bundle (build provenance)
-        uses: actions/attest-build-provenance@v2
+      - name: Build the signed community registry (web/registry/registry.json)
+        run: node scripts/build-registry-bundle.mjs
+      - name: Build the skill discovery file (web/.well-known/agent-skills.json)
+        run: |
+          node scripts/build-well-known.mjs
+          node scripts/check-well-known.mjs web/.well-known/agent-skills.json --verify 50 --root .
+      - name: Sign the release bundle and the registry (build provenance)
+        uses: actions/attest-build-provenance@v4
         with:
-          subject-path: 'web/releases/*.tar.gz, web/releases/*.sbom.cdx.json'
+          subject-path: 'web/releases/*.tar.gz, web/releases/*.sbom.cdx.json, web/registry/registry.json'
 
       # Search-engine ownership checks: Baidu reads a meta tag, IndexNow a key file.
       - name: Add search-engine verification
@@ -210,8 +234,63 @@ jobs:
       - name: Build the offline pack (published at /offline/pm-skills-offline.zip)
         run: |
           set -euo pipefail
+          node scripts/build-exports.mjs >/dev/null
           node scripts/build-offline-pack.mjs --out web/offline --max-mb 40
           (cd web/offline && sha256sum -c pm-skills-offline.zip.sha256)
+
+      - name: Build the worked-examples gallery data (web/worked-examples.json)
+        run: node scripts/build-worked-examples.mjs
+
+      - name: Build the "Which AI is best at your job?" data (web/ai-at-work.json)
+        run: node scripts/build-ai-at-work-report.mjs
+
+      - name: Build the evolution log data (web/evolution-log.json)
+        run: node scripts/build-evolution-log.mjs
+
+      - name: Refresh the Wall of Wins and its savings counter (web/wins.html)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/build-wins.mjs
+
+      - name: Copy the live Firm ledger (web/firm-ledger.json)
+        run: cp data/firm-ledger.json web/firm-ledger.json
+
+      - name: Publish the translated descriptions for search (web/i18n-desc/)
+        run: node scripts/build-i18n-desc.mjs
+
+      - name: Build the skill change history (web/skill-changes.json)
+        run: |
+          git fetch --unshallow --filter=blob:none --quiet origin || git fetch --unshallow --quiet origin || true
+          node scripts/build-skill-changes.mjs
+          node scripts/build-skill-changelog.mjs
+      - name: Build the year-in-review pages (web/report/)
+        run: node scripts/build-year-in-review.mjs
+
+      - name: Publish the jurisdiction overlays (web/overlays.json)
+        run: node scripts/build-overlays.mjs
+
+      - name: Publish current partner verifications (web/partners.json)
+        run: node scripts/check-partners.mjs --write
+
+      - name: Build what actually worked, per skill (web/proven.json)
+        run: node scripts/build-proven.mjs
+
+      - name: Publish the live A/B test versions (web/ab/)
+        run: |
+          mkdir -p web/ab
+          cp data/ab-tests.json web/ab/tests.json
+          for f in proposals/ab/*.md; do [ -f "$f" ] && cp "$f" web/ab/; done; true
+
+      - name: Copy the Skill Cup and Skill Hack data (web/skill-cup.json, web/skill-hack.json)
+        run: |
+          cp data/skill-cup.json web/skill-cup.json
+          cp config/cup-prizes.json web/cup-prizes.json
+          cp data/skill-hack.json web/skill-hack.json
+
+      - name: Publish the typed skill contracts (web/schemas/)
+        run: |
+          mkdir -p web/schemas
+          cp -R schemas/. web/schemas/
 
       - name: Build the side-by-side translations (web/i18n/, for compare-lang.html)
         run: node scripts/build-i18n-web.mjs
@@ -232,6 +311,8 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: web
+          # For web/.well-known/ (the agent-skills.json discovery file); web/ has no other dotfiles.
+          include-hidden-files: true
 
   deploy:
     needs: build

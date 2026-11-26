@@ -120,3 +120,8 @@ for the workplace side; [[spoon-planner]] for surviving the process.
 - "My disability benefit was denied."
 - "Appeal my PIP/SSDI decision."
 - "How do I challenge a benefits decision?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/disability-benefit-appeal.html
+
+<!-- pm-claude-skills v84.0.0 | skill: disability-benefit-appeal | source: skills/disability-benefit-appeal/SKILL.md | sha256: f2d4f747ad71aadc8021b207fbad9a32c4e9c5b27047d7b4bafdb1d030772354 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

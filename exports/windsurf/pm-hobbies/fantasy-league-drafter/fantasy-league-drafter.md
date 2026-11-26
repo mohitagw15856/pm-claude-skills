@@ -69,3 +69,8 @@ Ask for these if not provided:
 - "Set my lineup this week — start/sit logic."
 - "What's my waiver-wire strategy this season?"
 - "Explain how to draft by tiers for my league settings."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fantasy-league-drafter.html
+
+<!-- pm-claude-skills v84.0.0 | skill: fantasy-league-drafter | source: skills/fantasy-league-drafter/SKILL.md | sha256: 8e428d7b65436f53b6bcc39a5a151ffb9603ecf04a3c0654ca4541b341b8121c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

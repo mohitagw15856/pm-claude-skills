@@ -146,7 +146,7 @@ Before building, flag if any of these apply:
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Feature or product description** (what the AI is intended to do)
 - **User problem** (what problem the AI is solving for users)
 - **Available data** (what training/inference data exists)
@@ -174,3 +174,8 @@ Ask the user for these if not provided:
 - "Evaluate LLM integrations."
 - "Design AI products."
 - "Assess AI readiness."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-product-canvas.html
+
+<!-- pm-claude-skills v84.0.0 | skill: ai-product-canvas | source: skills/ai-product-canvas/SKILL.md | sha256: 733bc97266826517b362faae04dff82063b9601f47493ad2094ff5175c60ae10 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -11,7 +11,7 @@ This skill provides structured, actionable design feedback using established UX 
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **What is being reviewed** (screen, flow, component, full product)
 - **Design description or attached image** (describe it if no image — the skill will still work)
 - **User goal** (what is the user trying to accomplish with this design?)
@@ -138,3 +138,8 @@ Prioritised list of the 3 most impactful changes. Each should be actionable in t
 - "Review this Figma screen for usability issues"
 - "What's wrong with this user flow?"
 - "Do a heuristic evaluation of [screen/product]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/design-critique.html
+
+<!-- pm-claude-skills v84.0.0 | skill: design-critique | source: skills/design-critique/SKILL.md | sha256: 126331ed26464995f75e85af49f55795f0c247fb42caa1b1e2aab0fe4a69b4c0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

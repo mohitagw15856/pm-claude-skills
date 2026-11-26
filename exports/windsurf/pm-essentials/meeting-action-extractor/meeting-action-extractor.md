@@ -67,3 +67,8 @@ Ask for these if not provided:
 - "Turn this transcript into tickets — who owns what by when?"
 - "Pull the decisions and to-dos out of our sync."
 - "What did we commit to in this meeting, and who's on the hook?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meeting-action-extractor.html
+
+<!-- pm-claude-skills v84.0.0 | skill: meeting-action-extractor | source: skills/meeting-action-extractor/SKILL.md | sha256: 470c10e4b8eec8564ca4dcca13adaacdfebc7ece56df1f4352b267683ee43e67 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

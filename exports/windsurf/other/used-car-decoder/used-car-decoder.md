@@ -139,3 +139,8 @@ year; [[franklin-decision-ledger]] when it's down to two cars.
 - "Is this car listing legit?"
 - "What should I check on a used car?"
 - "Decode this ad."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/used-car-decoder.html
+
+<!-- pm-claude-skills v84.0.0 | skill: used-car-decoder | source: skills/used-car-decoder/SKILL.md | sha256: a71dba70b476497f621f0a77788de5d9ea4d940db7195b54e82062c37a188ce5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

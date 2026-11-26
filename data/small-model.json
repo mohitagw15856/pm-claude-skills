@@ -1,0 +1,4 @@
+{
+  "$comment": "Scores from scripts/local-eval.mjs --record: each skill run on a small open model on local hardware, judged by a local model. Written only by real runs; never edit scores by hand.",
+  "runs": []
+}

@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "What do I write in a condolence card?"
 - "A friend had a miscarriage — what can I say that helps?"
 - "Help me message someone whose pet just died."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/condolence-message-helper.html

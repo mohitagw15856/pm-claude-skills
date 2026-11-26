@@ -88,3 +88,8 @@ Ask for these if not provided:
 - "Turn these client notes into a project brief"
 - "Does this budget work for the accommodation they are asking for?"
 - "Write a brief for a house extension"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/architectural-programme-brief.html
+
+<!-- pm-claude-skills v84.0.0 | skill: architectural-programme-brief | source: skills/architectural-programme-brief/SKILL.md | sha256: 9a00fa791e3e59aae4b8c599e01be7fdb3408ca9ab9bccd1271b9073b594861b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

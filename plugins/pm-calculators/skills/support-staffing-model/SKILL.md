@@ -51,3 +51,5 @@ Prints the base case (`base 15 on-queue / 22 rostered · SL 81% · ASA 38s · oc
 - "Staffing a support/CS team."
 - "Defend headcount."
 - "Check whether an SLA is mathematically possible with the current roster."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/support-staffing-model.html

@@ -1,0 +1,8 @@
+{
+  "_comment": "Exceptions to the rules in scripts/build-model-guidance.mjs. Each entry: role (fast, default, deep, frontier), effort, and why. Rerun the generator after editing.",
+  "skills": {
+    "chart-data-extractor": { "role": "deep", "effort": "high", "why": "Reads values off chart pixels; the skill's own requirements section asks for the strongest vision model available." },
+    "pptx-slide-auditor": { "role": "deep", "effort": "medium", "why": "Audits rendered slides as images; small text and alignment need the stronger vision model." },
+    "docx-tracked-changes": { "role": "default", "effort": "high", "why": "Edits a contract-style document change by change; a dropped change is hard to see afterwards." }
+  }
+}

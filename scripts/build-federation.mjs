@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Federation crawler — reads web/federation-registry.json, fetches each
 // member's federation.json + skills index, and aggregates web/federated.json
-// (the file federation.html and cross-library search consume). Network at
+// (the file cross-library search consumes). Network at
 // build time by design: run manually or on the weekly cron, commit the output.
 // Degrades per-member: a dead library is marked unreachable, never dropped.
 import { readFileSync, writeFileSync } from 'node:fs';

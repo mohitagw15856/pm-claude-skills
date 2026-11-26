@@ -61,3 +61,5 @@ For every question: the correct answer **and a one-line explanation** (for MCQs,
 - "Write a test."
 - "Make practice questions."
 - "Build an assessment."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/quiz-generator.html

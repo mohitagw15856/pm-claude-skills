@@ -16,7 +16,7 @@ If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, g
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Product update or notes** (raw input to transform — even bullet points work)
 - **Audience** (CEO, board, specific exec, or general leadership)
 - **Period** (this week / sprint / month / quarter)
@@ -80,3 +80,5 @@ Ask the user for these if not provided:
 - "Write a leadership update."
 - "Write a product update for the exec team."
 - "Brief the C-suite on the product."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/executive-update.html

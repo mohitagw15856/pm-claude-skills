@@ -80,3 +80,5 @@ Ask for these if not provided; if the brief is thin, infer sensible values and l
 - "Spec a new device."
 - "Define requirements for a physical product."
 - "Kick off an NPI program."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hardware-prd.html

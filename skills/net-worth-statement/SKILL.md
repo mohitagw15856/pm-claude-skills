@@ -74,3 +74,5 @@ Personal-finance net-worth accounting (assets − liabilities, liquidity & debt 
 - "Calculate net worth."
 - "Summarize finances."
 - "Set up net-worth tracking."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/net-worth-statement.html

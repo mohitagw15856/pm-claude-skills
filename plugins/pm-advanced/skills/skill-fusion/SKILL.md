@@ -51,3 +51,5 @@ Real tasks ignore taxonomy: the investor update that's half postmortem, the laun
 - "Combine two skills for this task."
 - "My postmortem has to double as a board update."
 - "Fuse these two skills into one brief."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/skill-fusion.html

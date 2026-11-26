@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-latam",
+  "version": "1.0.0",
+  "description": "Working life in Brazil and Mexico: CLT termination pay, the Brazilian annual income tax return, Mexican finiquito and liquidación, and the Mexican annual tax return",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "latam",
+    "brazil",
+    "mexico",
+    "clt",
+    "rescisao",
+    "finiquito",
+    "irpf",
+    "sat"
+  ]
+}

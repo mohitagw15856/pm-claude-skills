@@ -81,3 +81,5 @@ Policyholder appeal practice — denial-reason triage, evidence matching, point-
 - "Decode this denial letter."
 - "Can I appeal this denial?"
 - "Write my insurance appeal."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/claim-denial-decoder.html

@@ -63,3 +63,5 @@ Source: Free Dictionary API · rerun: `[exact curl]`
 - "Define a word."
 - "How do you pronounce this?"
 - "What's the origin of a word?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dictionary-lookup.html

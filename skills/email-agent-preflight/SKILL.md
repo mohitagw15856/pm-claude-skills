@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Set up guardrails before the agent touches my inbox."
 - "Is it safe to give the agent email access?"
 - "Review my email agent's permissions."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/email-agent-preflight.html

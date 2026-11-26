@@ -94,6 +94,16 @@ A skill is ready to merge when:
 - [ ] The output format is concrete enough that two runs look like the same product.
 - [ ] It includes **Quality Checks** and **Anti-Patterns** — these are what make a skill
       trustworthy, not just a prompt.
+- [ ] Its output template ends with a short **Assumptions and gaps** block: two to four
+      bullets naming what was assumed because the input did not say, and what missing
+      information would most change the output (one line saying "none" when nothing was
+      assumed). This keeps finished-looking output honest about what it is standing on.
+      Optional for existing skills; expected for new ones. Flagship examples:
+      `prd-template`, `lease-decoder`, `stakeholder-update`, `ship-or-slip`,
+      `cn-weekly-report`.
+- [ ] Optionally, it ships deterministic pass criteria a PR can check offline: an
+      `evals.json` next to the SKILL.md (or `evals/checks/<name>.json`), format in
+      [evals/README.md](evals/README.md). CI runs them for changed skills.
 - [ ] It works with no setup beyond reading the file (scripts excepted, and those are
       stdlib-only).
 - [ ] It passes **SkillCheck**: `node scripts/skillcheck.mjs` reports no errors (warnings

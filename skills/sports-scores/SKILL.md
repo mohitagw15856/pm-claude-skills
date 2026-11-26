@@ -63,3 +63,5 @@ Source: ESPN public feed (unofficial) · as of [fetch time] · rerun: `[exact cu
 - "Did my team win?"
 - "What games are on today?"
 - "Show me the league standings right now."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sports-scores.html

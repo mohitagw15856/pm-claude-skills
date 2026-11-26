@@ -9,7 +9,7 @@ Build roadmaps that tell a strategy story — not just a list of features with d
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Audience** (executive/board, cross-functional, engineering, customers — changes format significantly)
 - **Prioritised initiative list** with rough timelines or quarters
 - **Company OKRs or strategic goals** (to anchor the narrative)
@@ -142,3 +142,5 @@ Every roadmap needs a narrative, not just a timeline. Structure it as:
 - "Build a product roadmap."
 - "Create a roadmap slide."
 - "Communicate quarterly plans to execs."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/roadmap-presentation.html

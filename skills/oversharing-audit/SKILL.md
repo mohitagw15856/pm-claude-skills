@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Clean up what I'm oversharing online."
 - "Does my Instagram give away where I live?"
 - "I'm job-hunting — what should I lock down or remove?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/oversharing-audit.html

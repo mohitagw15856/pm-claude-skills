@@ -55,3 +55,8 @@ End with: **⚠️ Before sending** — items to verify (exact figures, the gove
 - "Write a demand letter."
 - "Send a formal demand for payment."
 - "Draft a cease-and-desist."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/demand-letter.html
+
+<!-- pm-claude-skills v84.0.0 | skill: demand-letter | source: skills/demand-letter/SKILL.md | sha256: 388d986d8c49036baf974ebddb154395e3e3067dd73935f7f1513e00f0f6c024 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

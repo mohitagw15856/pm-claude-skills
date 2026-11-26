@@ -240,6 +240,17 @@ Incluye solo problemas que importen a nivel ejecutivo.
 - Oportunidades de mercado
 - Implicaciones financieras
 
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| **BLUF y honestidad del estado** | El estado está enterrado o falta; la actualización se lee como un diario de actividades | Estado y conclusión al principio, pero el emoji halaga a las métricas (verde por fuera, rojo por dentro) | Las tres primeras líneas dan el estado, la conclusión en una frase y la petición; el 🟢/🟡/🔴 coincide con la peor métrica relevante y explica por qué |
+| **Contexto de las métricas** | Números en bruto sin objetivos, tendencias ni comparación entre periodos | Hay objetivos, pero las métricas son recuentos de actividad desconectados de los resultados de negocio | De 3 a 5 métricas, cada una con objetivo, tendencia y estado, y las que importan están ligadas a dinero, clientes o el objetivo en juego |
+| **Accionabilidad de los riesgos** | Los riesgos se enumeran como preocupaciones sin responsable, mitigación ni impacto | Se indican mitigaciones, pero el impacto no está cuantificado y no está claro si el lector debe hacer algo | Cada riesgo tiene impacto cuantificado, una mitigación con fecha o condición de éxito, y una "ayuda necesaria" explícita (o "ninguna") |
+| **Encuadre de las decisiones** | Preguntas abiertas lanzadas a la dirección, o ninguna decisión planteada | Se enumeran opciones, pero sin costes, disyuntivas ni recomendación | Cada decisión tiene 2 o 3 opciones con coste, una recomendación clara con su razonamiento y la fecha en que se necesita la decisión, con lo que fuerza esa fecha |
+
 ## Comprobaciones de Calidad
 
 - [ ] La actualización encabeza con BLUF — estado, punto clave y acción requerida antes de cualquier detalle
@@ -277,3 +288,12 @@ Para agentes que usan herramientas y pueden alcanzar canales de comunicación de
 ### Rollback
 - Si la plataforma lo permite, la eliminación de un mensaje recién publicado es permitida **solo** bajo instrucción explícita del humano — de lo contrario publica una respuesta de corrección.
 - Detente y pregunta a un humano si: el canal no se encuentra, el envío falla parcialmente, o el texto aprobado ya no coincide con lo que está a punto de ser enviado.
+
+## Frases de activación de ejemplo
+
+- "Escribe una actualización de estado."
+- "Escribe un informe de progreso para la dirección."
+- "Escribe la actualización del proyecto para los interesados."
+- "Escribe un briefing ejecutivo."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/stakeholder-update.html

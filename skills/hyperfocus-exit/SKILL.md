@@ -60,3 +60,5 @@ Ask for these if not provided:
 - "I lost track of time again. Help me wrap up."
 - "It's 2am and I'm still at this. I need to stop."
 - "Give me an off-ramp from this — I'm hyperfocused."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hyperfocus-exit.html

@@ -102,7 +102,7 @@ Output a cohort retention table and annotate:
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Metric or question** being investigated
 - **Time period** (what changed, from when to when)
 - **Data available** (which segments, sources, or queries you have access to)
@@ -157,3 +157,8 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Investigate a drop in conversion."
 - "Explain a data change to stakeholders."
 - "Find the root cause of a metric movement."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-analysis-standard.html
+
+<!-- pm-claude-skills v84.0.0 | skill: data-analysis-standard | source: skills/data-analysis-standard/SKILL.md | sha256: b17708b547643c69463dc7cb5e473a58a1d6e840342f159b10d57a6446b4c7b1 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

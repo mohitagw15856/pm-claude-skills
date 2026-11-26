@@ -9,7 +9,7 @@ Produce a prioritisation output that balances quantitative RICE scoring with qua
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **List of initiatives or features to prioritise** (names and brief descriptions)
 - **Current strategic priorities or OKRs** (needed to rate strategic alignment)
 - **Reach estimates** (users affected per quarter — even rough estimates work)
@@ -92,3 +92,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Prioritise features."
 - "Build a priority matrix."
 - "Decide what to build next with multiple competing initiatives."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rice-impact-matrix.html

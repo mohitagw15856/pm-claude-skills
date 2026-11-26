@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "When do I stop polishing this?"
 - "Am I done, or does this still need work?"
 - "Help me ship this — I think I'm just perfectionist-ing now."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/good-enough-detector.html

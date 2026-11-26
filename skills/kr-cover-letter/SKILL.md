@@ -20,6 +20,10 @@ Ask for these if not provided:
 - **Existing draft**, if the person wants 첨삭 rather than a new answer
 - **Blind hiring rules** in the posting, if any
 
+## Working from a brief
+
+Given the company, role, character limit and experience, **write the full essay anyway** at the stated length, built from the facts given, and mark any fact you would need to confirm with [ ]. Do not stop to ask for more experience before the first draft.
+
 ## Output Structure
 
 ### 1. Answer plan
@@ -59,3 +63,5 @@ Interviewers ask about what is written; every claim should survive a "구체적�
 - "제 자소서 첨삭해 주세요. 직무역량 항목이 너무 평범한 것 같아요."
 - "공기업 NCS 자기소개서인데 블라인드 채용이라 학교 이름을 빼야 해요."
 - "Help me write a Korean 자기소개서 for a marketing role at a Korean startup."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kr-cover-letter.html

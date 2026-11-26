@@ -58,3 +58,5 @@ The filing period (typically mid-February to mid-March; confirm the dates for th
 - "医療費が15万円かかった。医療費控除のやり方を教えて。"
 - "How do I file my Japanese tax return with e-Tax? I'm a freelancer."
 - "在日本做副业要报税吗？怎么用 e-Tax？"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jp-tax-return.html

@@ -1,0 +1,245 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/contract.schema.json",
+  "skill": "incident-postmortem",
+  "version": 1,
+  "inputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "incident-postmortem inputs",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "Incident title or ID"
+      },
+      "severity": {
+        "type": "string",
+        "description": "Severity",
+        "enum": [
+          "P1",
+          "P2",
+          "P3",
+          "SEV1",
+          "SEV2",
+          "SEV3"
+        ]
+      },
+      "started_at": {
+        "type": "string",
+        "description": "ISO 8601 start time"
+      },
+      "duration_minutes": {
+        "type": "integer",
+        "description": "Duration in minutes"
+      },
+      "narrative": {
+        "type": "string",
+        "description": "What happened; rough notes are fine"
+      },
+      "services_affected": {
+        "type": "array",
+        "description": "Services or systems affected",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "customer_impact": {
+        "type": "string",
+        "description": "How many users and what was degraded"
+      },
+      "detection": {
+        "type": "string",
+        "description": "How it was detected"
+      },
+      "resolution": {
+        "type": "string",
+        "description": "How it was resolved"
+      },
+      "root_cause_notes": {
+        "type": "string",
+        "description": "Initial thoughts on root cause"
+      },
+      "action_items": {
+        "type": "array",
+        "description": "Action items already identified",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "responders": {
+        "type": "array",
+        "description": "Who responded; used for the timeline, not blame",
+        "items": {
+          "type": "string",
+          "description": "Name or role"
+        }
+      },
+      "communications": {
+        "type": "array",
+        "description": "External communications sent",
+        "items": {
+          "type": "object",
+          "properties": {
+            "at": {
+              "type": "string",
+              "description": "Timestamp"
+            },
+            "channel": {
+              "type": "string",
+              "description": ""
+            },
+            "text": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "required": [
+            "text"
+          ],
+          "additionalProperties": true
+        }
+      }
+    },
+    "required": [
+      "title",
+      "severity",
+      "narrative"
+    ],
+    "additionalProperties": true
+  },
+  "outputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "incident-postmortem outputs",
+    "type": "object",
+    "properties": {
+      "summary": {
+        "type": "string",
+        "description": "Two or three sentence blameless summary (Markdown)"
+      },
+      "impact": {
+        "type": "object",
+        "properties": {
+          "users_affected": {
+            "type": "string",
+            "description": ""
+          },
+          "duration_minutes": {
+            "type": "integer",
+            "description": ""
+          },
+          "revenue_or_sla": {
+            "type": "string",
+            "description": ""
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "timeline": {
+        "type": "array",
+        "description": "Ordered timeline",
+        "items": {
+          "type": "object",
+          "properties": {
+            "at": {
+              "type": "string",
+              "description": "Timestamp"
+            },
+            "event": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "required": [
+            "at",
+            "event"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "root_cause": {
+        "type": "string",
+        "description": "Five-whys or causal chain (Markdown)"
+      },
+      "contributing_factors": {
+        "type": "array",
+        "description": "",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "what_went_well": {
+        "type": "array",
+        "description": "",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "what_went_badly": {
+        "type": "array",
+        "description": "",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "action_items": {
+        "type": "array",
+        "description": "Tracked follow-ups",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": ""
+            },
+            "action": {
+              "type": "string",
+              "description": ""
+            },
+            "owner": {
+              "type": "string",
+              "description": "Role"
+            },
+            "due": {
+              "type": "string",
+              "description": ""
+            },
+            "priority": {
+              "type": "string",
+              "description": "",
+              "enum": [
+                "P0",
+                "P1",
+                "P2"
+              ]
+            }
+          },
+          "required": [
+            "action",
+            "owner"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "lessons": {
+        "type": "array",
+        "description": "",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "required": [
+      "summary",
+      "timeline",
+      "root_cause",
+      "action_items"
+    ],
+    "additionalProperties": true
+  }
+}

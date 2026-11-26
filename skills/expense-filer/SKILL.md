@@ -79,3 +79,5 @@ For agents with file/OCR access and expense-system access (API or UI). Without t
 - "Process these receipts."
 - "Build my expense report."
 - "Expense this trip."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/expense-filer.html

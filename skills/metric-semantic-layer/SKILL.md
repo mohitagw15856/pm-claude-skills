@@ -65,3 +65,5 @@ Semantic-layer / metrics-layer practice (dbt MetricFlow, Cube, LookML) — singl
 - "Build a semantic layer / metrics layer entry."
 - "Stop 'revenue means three things' problems."
 - "Write a metric definition for dbt MetricFlow / Cube / LookML."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/metric-semantic-layer.html

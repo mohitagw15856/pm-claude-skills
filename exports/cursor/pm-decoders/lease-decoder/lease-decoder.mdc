@@ -61,6 +61,8 @@ Walk the lease specifically for: **auto-renewal traps** (notice window; what sil
 
 End the artifact with, verbatim: *"This is a plain-language reading, not legal/financial advice — laws vary by jurisdiction; confirm anything load-bearing with a qualified professional."*
 
+End every output with a short **Assumptions and gaps** block: two to four bullets naming what was assumed because the input did not say, and what missing information would most change this output. If nothing was assumed and nothing was missing, say so in one line instead.
+
 ## Quality Checks
 
 - [ ] Every red flag quotes the actual lease language — section number or verbatim text
@@ -88,3 +90,8 @@ Tenant-side lease review practice — clause triage, exit-cost math, deposit-con
 - "Decode my lease."
 - "Is this rental agreement normal?"
 - "Can my landlord really do this?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lease-decoder.html
+
+<!-- pm-claude-skills v84.0.0 | skill: lease-decoder | source: skills/lease-decoder/SKILL.md | sha256: 1887a5deba11d4eb82e6e5578327dcbe3f5f4e4cb123b7375f20b081c4e88cc5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -8,12 +8,13 @@ by hand; edit the source skill and run:
 node scripts/build-exports.mjs
 ```
 
-Currently exporting **1285 skills** to:
+Currently exporting **1374 skills** to:
 
 - **ChatGPT — Custom GPT instructions** → `exports/chatgpt/`
 - **Google Gemini — Gem instructions** → `exports/gemini/`
 - **Cursor — project rule (.mdc)** → `exports/cursor/`
 - **Windsurf — workspace rule (.md)** → `exports/windsurf/`
+- **GitHub Copilot — custom instructions (.instructions.md)** → `exports/copilot/`
 - **Aider — conventions file (.md)** → `exports/aider/`
 - **Cline — .clinerules/ rule (.md)** → `exports/cline/`
 - **Continue.dev — rule (.md)** → `exports/continue/`
@@ -22,6 +23,8 @@ Currently exporting **1285 skills** to:
 - **Kilo Code — .kilocode/rules/ rule (.md)** → `exports/kilocode/`
 - **Obsidian — vault skill note (AI-plugin prompt)** → `exports/obsidian/`
 - **OpenClaw — native SKILL.md with metadata block** → `exports/openclaw/`
+- **Gemini CLI — agent skill (.gemini/skills/<name>/SKILL.md)** → `exports/gemini-cli/`
+- **OpenAI Agents SDK — agent definition (agent.json)** → `exports/openai-agents/`
 
 Retired skills are exported too, so an existing install never breaks — they are
 just not counted above. See `docs/DEPRECATION.md`.

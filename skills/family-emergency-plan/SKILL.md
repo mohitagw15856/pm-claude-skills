@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "I want to organize our important info in case something happens to me."
 - "What should be in our family go-bag?"
 - "Set up an emergency communication plan for our household."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/family-emergency-plan.html

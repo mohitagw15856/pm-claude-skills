@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Worked examples: see a skill's output before you run it | PM Skills</title>
+<meta name="description" content="Worked examples for the most-used PM Skills: the request someone made and what the skill produced, with a one-click try in the playground." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/worked-examples.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .we-wrap { max-width: 1180px; margin: 0 auto; padding: 16px 22px 70px; }
+  .we-wrap h1 { font-size: 26px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; max-width: 760px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 18px 0; }
+  .field { flex: 1 1 240px; min-width: 0; }
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .field input, .field select { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 10px; padding: 9px 12px; font-size: 15px; }
+  .count { color: var(--muted); font-size: 13px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+  .card { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; }
+  .card h2 { font-size: 16px; margin: 0; }
+  .card .bundle { font-size: 12px; color: var(--muted); }
+  .card .what { font-size: 14px; line-height: 1.5; margin: 0; }
+  .card blockquote { margin: 4px 0 0; padding: 8px 12px; border-left: 3px solid var(--accent); background: var(--bg); border-radius: 0 8px 8px 0; font-size: 13.5px; line-height: 1.5; }
+  .card .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 6px; }
+  .btn { display: inline-block; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 9px; padding: 7px 12px; cursor: pointer; font-size: 13.5px; text-decoration: none; }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  dialog { max-width: 860px; width: calc(100vw - 32px); border: 1px solid var(--border); border-radius: 16px; background: var(--panel); color: var(--text); padding: 0; }
+  dialog::backdrop { background: rgba(0, 0, 0, .5); }
+  .dlg-head { display: flex; justify-content: space-between; align-items: start; gap: 12px; padding: 18px 20px 0; }
+  .dlg-head h2 { margin: 0; font-size: 20px; }
+  .dlg-body { padding: 8px 20px 20px; max-height: 72vh; overflow: auto; line-height: 1.6; overflow-wrap: anywhere; }
+  .dlg-body table { border-collapse: collapse; font-size: 13px; display: block; overflow-x: auto; }
+  .dlg-body td, .dlg-body th { border: 1px solid var(--border); padding: 4px 8px; }
+  .dlg-body pre { white-space: pre-wrap; font-size: 13px; }
+  .scenario { border-top: 1px solid var(--border); margin-top: 14px; padding-top: 10px; }
+  .scenario h3 { font-size: 15px; margin: 6px 0; }
+  .empty { color: var(--muted); padding: 30px 0; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="we-wrap">
+  <h1>📘 Worked examples</h1>
+  <p class="lead">What people asked, and what the skill produced. Open one to read the full output, then try the same skill in the playground with your own material.</p>
+  <div class="controls">
+    <div class="field">
+      <label for="q">Search</label>
+      <input id="q" type="search" placeholder="lease, weekly report, 周报, OKR…" autocomplete="off" />
+    </div>
+    <div class="field">
+      <label for="bundle">Bundle</label>
+      <select id="bundle"><option value="">All bundles</option></select>
+    </div>
+    <span class="count" id="count" aria-live="polite"></span>
+  </div>
+  <div class="grid" id="grid"><p class="empty">Loading…</p></div>
+</main>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <div class="dlg-head">
+    <div><h2 id="dlgTitle"></h2><div class="count" id="dlgBundle"></div></div>
+    <button class="btn" type="button" id="dlgClose">Close</button>
+  </div>
+  <div class="dlg-body" id="dlgBody"></div>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var NAME = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+  var all = [];
+  var $ = function (id) { return document.getElementById(id); };
+  function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function md(s) {
+    var html = window.marked ? marked.parse(s || '') : '<pre>' + esc(s) + '</pre>';
+    return window.DOMPurify ? DOMPurify.sanitize(html) : html;
+  }
+  function tryUrl(ex) { return NAME.test(ex.skill) ? 'index.html?skill=' + encodeURIComponent(ex.skill) : 'index.html'; }
+  function copy(text, btn) {
+    var done = function () { var t = btn.textContent; btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = t; }, 1400); };
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {});
+  }
+
+  function render() {
+    var q = $('q').value.trim().toLowerCase(), b = $('bundle').value;
+    var list = all.filter(function (ex) {
+      if (b && ex.bundle !== b) return false;
+      if (!q) return true;
+      return (ex.skill + ' ' + ex.title + ' ' + ex.what + ' ' + ex.scenarios.map(function (s) { return s.say; }).join(' ')).toLowerCase().indexOf(q) !== -1;
+    });
+    $('count').textContent = list.length + ' of ' + all.length + ' examples';
+    if (!list.length) { $('grid').innerHTML = '<p class="empty">No example matches. Try another word.</p>'; return; }
+    $('grid').innerHTML = list.map(function (ex, i) {
+      var say = ex.scenarios[0] ? ex.scenarios[0].say : '';
+      return '<article class="card"><h2>' + esc(ex.title) + '</h2><div class="bundle">' + esc(ex.skill) + (ex.bundle ? ' · ' + esc(ex.bundle) : '') + '</div>' +
+        '<p class="what">' + esc(ex.what) + '</p>' + (say ? '<blockquote>“' + esc(say.length > 220 ? say.slice(0, 217) + '…' : say) + '”</blockquote>' : '') +
+        '<div class="actions"><button class="btn" type="button" data-open="' + esc(ex.skill) + '">See the output</button>' +
+        '<a class="btn primary" href="' + tryUrl(ex) + '">Try this</a></div></article>';
+    }).join('');
+  }
+
+  function open(name) {
+    var ex = all.find(function (e) { return e.skill === name; });
+    if (!ex) return;
+    $('dlgTitle').textContent = ex.title;
+    $('dlgBundle').textContent = ex.skill + (ex.bundle ? ' · ' + ex.bundle : '');
+    var html = '<p>' + esc(ex.what) + '</p>';
+    ex.scenarios.forEach(function (s, i) {
+      html += '<section class="scenario"><h3>' + esc(s.title || ('Example ' + (i + 1))) + '</h3>' +
+        '<p><strong>You say:</strong></p><blockquote>“' + esc(s.say) + '”</blockquote>' +
+        '<p><button class="btn" type="button" data-copy="' + i + '">Copy this request</button> <a class="btn primary" href="' + tryUrl(ex) + '">Try it in the playground</a></p>' +
+        '<p><strong>The skill produces (excerpt):</strong></p>' + md(s.excerpt) + '</section>';
+    });
+    if (ex.tips.length) html += '<section class="scenario"><h3>Tips for best results</h3>' + md(ex.tips.map(function (t) { return '- ' + t; }).join('\n')) + '</section>';
+    if (ex.related.length) html += '<section class="scenario"><h3>Related skills</h3>' + md(ex.related.map(function (t) { return '- ' + t; }).join('\n')) + '</section>';
+    $('dlgBody').innerHTML = html;
+    $('dlgBody').querySelectorAll('[data-copy]').forEach(function (btn) {
+      btn.addEventListener('click', function () { copy(ex.scenarios[+btn.getAttribute('data-copy')].say, btn); });
+    });
+    history.replaceState(null, '', '?skill=' + encodeURIComponent(ex.skill));
+    if ($('dlg').showModal) $('dlg').showModal(); else $('dlg').setAttribute('open', '');
+  }
+
+  $('grid').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-open]');
+    if (b) open(b.getAttribute('data-open'));
+  });
+  $('dlgClose').addEventListener('click', function () { $('dlg').close(); history.replaceState(null, '', location.pathname); });
+  $('q').addEventListener('input', render);
+  $('bundle').addEventListener('change', render);
+
+  fetch('worked-examples.json').then(function (r) { return r.json(); }).then(function (d) {
+    all = d.examples || [];
+    var bundles = Array.from(new Set(all.map(function (e) { return e.bundle; }).filter(Boolean))).sort();
+    $('bundle').insertAdjacentHTML('beforeend', bundles.map(function (b) { return '<option value="' + esc(b) + '">' + esc(b) + '</option>'; }).join(''));
+    render();
+    var want = new URLSearchParams(location.search).get('skill');
+    if (want && NAME.test(want)) open(want);
+  }).catch(function () { $('grid').innerHTML = '<p class="empty">The examples are built when the site deploys.</p>'; });
+})();
+</script>
+</body>
+</html>

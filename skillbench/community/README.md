@@ -1,9 +1,7 @@
-# Community SkillBench results — bring your model
+# Community SkillBench results (the Agent Arena)
 
-The benchmark isn't only ours to run. Any model with an OpenAI-compatible endpoint can be scored **by its own team, on their own key**, and published here:
+Each JSON file here is one community-run SkillBench result for a model or an agent, shown in the [Agent Arena](https://mohitagw15856.github.io/pm-claude-skills/modelbench.html#arena). The full protocol is in [docs/arena.md](../../docs/arena.md).
 
-1. **Fork** the repo. In your fork: Settings → Secrets → add `BYO_API_KEY` (your endpoint key), optionally `BYO_BASE_URL` (OpenAI-compatible base, default api.openai.com/v1), and `BYO_JUDGE_KEY` (an Anthropic key for the pinned judge — the judge model is fixed for comparability).
-2. **Run** the "SkillBench (bring your model)" workflow in your fork with your model id. (~$1–5 of your inference.)
-3. **PR** the produced `skillbench/community/<model>.json` here — the file embeds the public Actions run link, which is the provenance we review.
+In short: fork the repository, run the "SkillBench (bring your model)" workflow on your own key (or run the harness locally with `--save-outputs`), stage the file with `node scripts/stage-arena-submission.mjs`, and open a pull request that adds one file. `tests/checks/arena.mjs` validates every file here, including that the headline score matches the per-task scores.
 
-House rules: the task set and judge are pinned (that's what makes scores comparable) · results land labeled *community-submitted, self-run* · anything that games the judge gets removed with a public note. One PR = one model = one JSON file.
+The task set and the pinned judge are what make scores comparable. A different judge is allowed but is marked unpinned. Anything that games the judge is removed with a public note. One PR = one entrant = one JSON file.

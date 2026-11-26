@@ -76,3 +76,5 @@ Rules:
 - "下周要述职，帮我准备述职报告和 PPT 提纲。"
 - "写一份半年绩效自评。"
 - "Write my year-end review in Chinese."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-year-end-review.html

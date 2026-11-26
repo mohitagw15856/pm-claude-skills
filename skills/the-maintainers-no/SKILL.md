@@ -119,3 +119,5 @@ setting the boundaries early enough that nos stay rare.
 - "Say no to this feature request."
 - "A company wants free support from my project."
 - "Suggest a fork without burning the contributor."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-maintainers-no.html

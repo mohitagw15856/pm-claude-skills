@@ -159,3 +159,48 @@ $('lintCopy').addEventListener('click', () => {
 });
 function status(m, err) { const s = $('lintStatus'); s.textContent = m; s.className = 'status' + (err ? ' err' : ''); }
 function esc(t) { return String(t).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
+
+// ── Contextual discovery: a skill for the page you are on ───────────────────
+// On click, through activeTab: read the current tab's text in the page, match it
+// against context-rules.json here (context-match.js), and suggest skills. Nothing
+// about the page leaves the browser.
+const PLAYGROUND = 'https://mohitagw15856.github.io/pm-claude-skills/index.html?skill=';
+async function suggestForTab() {
+  try {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    if (!tab || !/^https?:/.test(tab.url || '')) return;
+    const [{ result } = {}] = await chrome.scripting.executeScript({ target: { tabId: tab.id }, func: () => ({ host: location.hostname, url: location.href, text: document.body ? document.body.innerText.slice(0, 50000) : '' }) });
+    const cfg = await (await fetch(chrome.runtime.getURL('context-rules.json'))).json();
+    const hit = result && pmContextMatch.matchPage({ rules: cfg.rules, never: cfg.never, ...result });
+    if (!hit) return;
+    const box = $('ctx');
+    const p = document.createElement('p');
+    p.textContent = hit.label;
+    box.appendChild(p);
+    for (const name of hit.suggest.slice(0, 3)) {
+      const a = document.createElement('a');
+      a.href = PLAYGROUND + encodeURIComponent(name);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = name;
+      box.appendChild(a);
+    }
+    box.hidden = false;
+  } catch { /* pages the extension cannot read (chrome://, the Web Store) */ }
+}
+suggestForTab();
+
+// Opt-in "as I browse": request the permission, then register context-nudge.js
+// for all pages; switching it off unregisters it and gives the permission back.
+const NUDGE_ID = 'pm-context-nudge';
+chrome.scripting.getRegisteredContentScripts({ ids: [NUDGE_ID] }).then((list) => { $('nudgeToggle').checked = list.length > 0; }).catch(() => {});
+$('nudgeToggle').addEventListener('change', async (e) => {
+  if (e.target.checked) {
+    const ok = await chrome.permissions.request({ origins: ['<all_urls>'] });
+    if (!ok) { e.target.checked = false; return; }
+    await chrome.scripting.registerContentScripts([{ id: NUDGE_ID, matches: ['<all_urls>'], js: ['context-match.js', 'context-nudge.js'], css: ['context-nudge.css'], runAt: 'document_idle', persistAcrossSessions: true }]).catch(() => {});
+  } else {
+    await chrome.scripting.unregisterContentScripts({ ids: [NUDGE_ID] }).catch(() => {});
+    await chrome.permissions.remove({ origins: ['<all_urls>'] }).catch(() => {});
+  }
+});

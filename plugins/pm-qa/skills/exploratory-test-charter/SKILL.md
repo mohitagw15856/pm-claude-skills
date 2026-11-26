@@ -70,3 +70,5 @@ Session-Based Test Management (exploratory testing) — chartered, risk-prioriti
 - "Write a test charter."
 - "Design a testing session."
 - "Do risk-based exploration of a feature."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exploratory-test-charter.html

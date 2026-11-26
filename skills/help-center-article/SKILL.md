@@ -63,3 +63,5 @@ Knowledge-base / technical-writing practice — task-based titles, answer-first,
 - "Write a knowledge-base article for this issue."
 - "Write a FAQ entry."
 - "Write support documentation that cuts tickets."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/help-center-article.html

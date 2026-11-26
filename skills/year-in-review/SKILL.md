@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "Help me reflect on this year and plan next year."
 - "I want a yearly reflection — not just resolutions."
 - "Do an energy audit of my year and give me one theme."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/year-in-review.html

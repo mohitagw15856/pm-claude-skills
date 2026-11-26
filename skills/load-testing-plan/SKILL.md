@@ -445,3 +445,5 @@ load-test:
 - "Write load testing documentation."
 - "Define stress."
 - "Set performance regression gates for CI."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/load-testing-plan.html

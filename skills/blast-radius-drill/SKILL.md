@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Run a blast-radius assessment."
 - "Prepare for an agent going rogue."
 - "Am I ready to let this run unattended?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/blast-radius-drill.html

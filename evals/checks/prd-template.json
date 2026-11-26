@@ -1,0 +1,25 @@
+{
+  "skill": "prd-template",
+  "cases": [
+    {
+      "name": "feature brief becomes a structured PRD",
+      "prompt": "Write the PRD for this brief: let account admins export an audit log of user actions as CSV, for compliance reviews. Target: mid-market customers. We know the top ask is date-range filtering.",
+      "pass": {
+        "must_include": [
+          "Problem",
+          "Success Metrics",
+          "User Stories"
+        ],
+        "must_match": [
+          "requirements|open question"
+        ],
+        "forbid": [
+          "[insert",
+          "[TODO",
+          "lorem ipsum"
+        ],
+        "min_lines": 25
+      }
+    }
+  ]
+}

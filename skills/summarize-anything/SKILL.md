@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "Give me the key takeaways from this transcript."
 - "What's the gist of this doc — is it worth reading fully?"
 - "Pull the decisions and action items out of these meeting notes."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/summarize-anything.html

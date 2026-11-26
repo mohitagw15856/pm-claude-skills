@@ -29,7 +29,7 @@ async function getSkills() {
   if (CACHE) return CACHE;
   const r = await fetch(SKILLS_URL, { cf: { cacheTtl: 3600, cacheEverything: true } });
   const j = await r.json();
-  CACHE = (j.skills || []).map((s) => ({ name: s.name, title: s.title, description: s.description, plugin: s.plugin, tier: s.tier || null, inputs: s.inputs || null, source: s.source || null, body: s.instructions || '' }));
+  CACHE = (j.skills || []).map((s) => ({ name: s.name, title: s.title, description: s.description, plugin: s.plugin, tier: s.tier || null, inputs: s.inputs || null, source: s.source || null, permissions: s.permissions || null, contract: s.contract || null, body: s.instructions || '' }));
   return CACHE;
 }
 
@@ -128,6 +128,14 @@ const TOOLS = [
     },
     annotations: { title: 'Get a skill', ...READONLY },
   },
+  {
+    name: 'get_skill_contract',
+    title: 'Get a skill\'s typed contract and permissions',
+    description: 'Get the permission manifest (allowed tools, approval rule) and the JSON Schema contract (inputs, outputs) a skill declares, for deterministic chaining and safe unattended use.',
+    inputSchema: { type: 'object', additionalProperties: false, properties: { name: { type: 'string', description: 'The exact skill id.' } }, required: ['name'] },
+    outputSchema: { type: 'object', properties: { name: { type: 'string' }, permissions: { type: 'object' }, contract: { type: 'object' } }, required: ['name'] },
+    annotations: { title: 'Get skill contract', ...READONLY },
+  },
 ];
 
 // Each tool returns { text, structured }: human-readable text + a structured object matching outputSchema.
@@ -151,7 +159,13 @@ async function runTool(name, args) {
   if (name === 'get_skill') {
     const s = skills.find((x) => x.name === args.name);
     if (!s) return { text: `No skill named "${args.name}". Use search_skills to find one.`, structured: { name: String(args.name || ''), title: '', instructions: '' } };
-    return { text: `# ${s.title}\n\n${s.body}`, structured: { name: s.name, title: s.title, instructions: s.body } };
+    return { text: `# ${s.title}\n\n${s.body}`, structured: { name: s.name, title: s.title, instructions: s.body, ...(s.permissions ? { permissions: s.permissions } : {}), ...(s.contract ? { contract: s.contract } : {}) } };
+  }
+  if (name === 'get_skill_contract') {
+    const s = skills.find((x) => x.name === args.name);
+    if (!s) return { text: `No skill named "${args.name}".`, structured: { name: String(args.name || '') } };
+    const text = `${s.name}: ` + (s.permissions ? `tools=[${s.permissions.tools.join(', ')}] approval=${s.permissions.approval}` : 'no permission manifest (drafting only)') + (s.contract ? '; typed contract declared' : '; no typed contract');
+    return { text, structured: { name: s.name, ...(s.permissions ? { permissions: s.permissions } : {}), ...(s.contract ? { contract: s.contract } : {}) } };
   }
   throw new Error('Unknown tool: ' + name);
 }
@@ -357,6 +371,14 @@ const AGENT_CARD = {
 const rpcError = (id, code, message) =>
   jsonResponse({ jsonrpc: '2.0', id: id === undefined ? null : id, error: { code, message } });
 
+const A2A_STOP = new Set('the and for with your you our how can could should make write create help need want get this that are its from about into have has please'.split(' '));
+let A2A_DF = null;
+function a2aDf(skills, toks) {
+  if (A2A_DF) return A2A_DF;
+  A2A_DF = {};
+  for (const s of skills) for (const w of new Set(toks(s.title + ' ' + s.name.replace(/-/g, ' ') + ' ' + s.description))) A2A_DF[w] = (A2A_DF[w] || 0) + 1;
+  return A2A_DF;
+}
 async function handleA2A(request) {
   let body;
   try { body = await request.json(); } catch { return rpcError(null, -32600, 'Invalid request: body is not JSON.'); }
@@ -372,16 +394,33 @@ async function handleA2A(request) {
   // Direct skill-name mention wins; otherwise rank by token overlap — A2A
   // queries are whole sentences, so whole-phrase substring search (fine for
   // the REST /v1/search keywords) would almost never match here.
-  const qTokens = new Set(query.toLowerCase().match(/[a-z]{4,}/g) || []);
+  // Three-letter words count (PRD, OKR, SLA, RFP: ignoring them sent "write a PRD"
+  // to a networking skill), and rare words outweigh common ones (IDF).
+  // Plurals fold to the singular (okrs → okr) and hyphenated words also count
+  // joined (post-mortem → postmortem), so phrasing differences still match.
+  const toks = (t) => {
+    const low = String(t).toLowerCase();
+    const words = [...(low.match(/[a-z0-9]{3,}/g) || []), ...(low.match(/[a-z0-9]+-[a-z0-9]+/g) || []).map((w) => w.replace('-', ''))];
+    // Chinese has no spaces: overlapping character pairs (周报, 补偿) stand in for words.
+    const han = (low.match(/[\u3400-\u9fff]+/g) || []).flatMap((r) => [...r].slice(0, -1).map((c, i) => c + r[i + 1])).filter((p) => !['帮我', '一下', '一份', '怎么', '我的', '我们'].includes(p));
+    return [...words.filter((w) => !A2A_STOP.has(w)).map((w) => (w.length > 3 && /[^s]s$/.test(w) ? w.slice(0, -1) : w)), ...han];
+  };
+  const df = a2aDf(skills, toks);
+  const idf = (w) => Math.log(1 + skills.length / (1 + (df[w] || 0)));
+  const qTokens = new Set(toks(query));
   const ranked = skills
     .map((s) => {
+      const title = new Set(toks(s.title + ' ' + s.name.replace(/-/g, ' '))), desc = new Set(toks(s.description));
       let score = 0;
-      for (const w of new Set((s.title + ' ' + s.description).toLowerCase().match(/[a-z]{4,}/g) || [])) if (qTokens.has(w)) score++;
-      for (const w of s.name.split('-')) if (w.length >= 4 && qTokens.has(w)) score += 2;
-      return { s, score };
+      for (const w of qTokens) score += ((title.has(w) ? 2 : 0) + (desc.has(w) ? 1 : 0)) * idf(w);
+      // Production-tier skills, the most reviewed, win close calls.
+      // China-specific skills (cn-*) fit Chinese questions; for others they come second.
+      const cnPenalty = s.name.startsWith('cn-') && !/[\u3400-\u9fff]/.test(query) ? 0.7 : 1;
+      return { s, score: score * (s.tier === 'production' ? 1.15 : 1) * cnPenalty };
     })
     .filter((x) => x.score > 0)
-    .sort((a, b) => b.score - a.score)
+    // Ties go to the shorter, more general skill (prd-template over hardware-prd).
+    .sort((a, b) => b.score - a.score || a.s.title.length - b.s.title.length)
     .map((x) => x.s);
   const named = skills.find((s) => query.toLowerCase().includes(s.name));
   const best = named || ranked[0];
@@ -427,7 +466,12 @@ async function geoJson(env) {
   do { const page = await env.TRY_KV.list({ prefix: 'geo:', cursor }); for (const k of page.keys) out[k.name.slice(4)] = +((await env.TRY_KV.get(k.name)) || 0); cursor = page.list_complete ? null : page.cursor; } while (cursor);
   return new Response(JSON.stringify({ countries: out, total: Object.values(out).reduce((a, b) => a + b, 0) }), { headers: { 'content-type': 'application/json', 'cache-control': 'public, s-maxage=600', ...CORS } });
 }   // adapter-backed /route only; Jev providers are uncapped
-function tryConfigured(env) { return !!(env && env.ANTHROPIC_API_KEY && env.TRY_KV && env.TRY_ENABLED !== 'false'); }
+// The free answers run on Cloudflare Workers AI (the AI binding; its free daily
+// allowance) unless ALLOW_API_SPEND is 'true' and a Claude key is set. That keeps
+// the sponsor's Anthropic credit untouched by default.
+const TRY_FREE_MODEL = '@cf/meta/llama-3.1-8b-instruct-fast';
+const tryUsesClaude = (env) => !!(env && env.ALLOW_API_SPEND === 'true' && env.ANTHROPIC_API_KEY);
+function tryConfigured(env) { return !!(env && env.TRY_KV && env.TRY_ENABLED !== 'false' && (tryUsesClaude(env) || (env.AI && typeof env.AI.run === 'function'))); }
 // GET /try/stats — public runs-served counter (counts only, never content).
 // Default: shields.io endpoint JSON for a README badge; ?format=json for raw.
 async function tryStats(url, env) {
@@ -439,10 +483,11 @@ async function tryStats(url, env) {
     { headers: { 'content-type': 'application/json', 'cache-control': 'public, s-maxage=300, max-age=300', ...CORS } });
 }
 function tryStatus(env) {
-  return jsonResponse({ enabled: tryConfigured(env), perIpPerDay: TRY.perIpPerDay, model: 'Claude Haiku', note: tryConfigured(env) ? 'A few free Claude runs per day, sponsor-funded. Bring your own key for more — or fund runs for everyone: https://github.com/sponsors/mohitagw15856' : 'Free Claude trial not configured on this deployment.' });
+  const claude = tryUsesClaude(env);
+  return jsonResponse({ enabled: tryConfigured(env), perIpPerDay: TRY.perIpPerDay, model: claude ? 'Claude Haiku' : 'Llama 3.1 8B (Cloudflare Workers AI)', provider: claude ? 'anthropic' : 'workers-ai', note: tryConfigured(env) ? 'A few free runs per day. Bring your own key for more, or fund runs for everyone: https://github.com/sponsors/mohitagw15856' : 'Free trial not configured on this deployment.' });
 }
 async function handleTry(request, env) {
-  if (!tryConfigured(env)) return jsonResponse({ error: 'disabled', message: 'Free Claude trial is not enabled here. Use the free Gemini key or your own key.' }, 503);
+  if (!tryConfigured(env)) return jsonResponse({ error: 'disabled', message: 'The free trial is not enabled here. Use the free Gemini key or your own key.' }, 503);
 
   const ip = request.headers.get('cf-connecting-ip') || 'anon';
   const day = new Date().toISOString().slice(0, 10);
@@ -470,15 +515,28 @@ async function handleTry(request, env) {
   ]);
 
   await bumpGeo(env, request);
+  const remaining = Math.max(0, TRY.perIpPerDay - (+(ipN || 0) + 1));
+  if (!tryUsesClaude(env)) {
+    try {
+      const out = await env.AI.run(TRY_FREE_MODEL, { messages: [...(system ? [{ role: 'system', content: system }] : []), { role: 'user', content: prompt }], max_tokens: TRY.maxTokens });
+      return jsonResponse({ text: (out && out.response) || '', model: 'llama-3.1-8b (Workers AI)', remaining });
+    } catch (e) {
+      return jsonResponse({ error: 'upstream', message: /neuron|limit|quota|4006/i.test(String(e && e.message)) ? 'Today\'s free answers are used up. Try tomorrow, or use your own key.' : 'The free model is busy. Try again in a minute, or use your own key.' }, 503);
+    }
+  }
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01' },
     body: JSON.stringify({ model: TRY.model, max_tokens: TRY.maxTokens, ...(system ? { system } : {}), messages: [{ role: 'user', content: prompt }] }),
   });
-  if (!res.ok) return jsonResponse({ error: 'upstream', message: 'Claude is busy — try again, or use your own key.' }, 502);
+  if (!res.ok) {
+    // Say what actually happened: an empty sponsor balance is not "busy".
+    const detail = await res.text().catch(() => '');
+    if (/credit balance|billing/i.test(detail)) return jsonResponse({ error: 'paused', message: 'The free answers are paused: the sponsor-funded credit has run out. Use your own key, or help restart them: https://github.com/sponsors/mohitagw15856' }, 503);
+    return jsonResponse({ error: 'upstream', message: 'Claude is busy. Try again in a minute, or use your own key.' }, 502);
+  }
   const data = await res.json();
   const text = (data.content || []).map((c) => c.text || '').join('');
-  const remaining = Math.max(0, TRY.perIpPerDay - (+(ipN || 0) + 1));
   return jsonResponse({ text, model: 'claude-haiku', remaining });
 }
 
@@ -506,28 +564,44 @@ async function handleBadge(url, env) {
     { headers: { 'content-type': 'application/json', 'cache-control': ok ? 'public, s-maxage=21600, max-age=3600' : 'no-store', 'x-badge-ok': ok ? '1' : '0', ...CORS } });
   if (!m) return shield('bad repo param', 'lightgrey');
   const [, owner, name] = m;
+  const ref = url.searchParams.get('ref') || 'HEAD';
+  const dir = (url.searchParams.get('path') || '').replace(/^\/+|\/+$/g, '');
+  if (!/^[\w./-]{1,100}$/.test(ref) || (dir && (!/^[\w./-]{1,200}$/.test(dir) || dir.includes('..')))) return shield('bad ref or path param', 'lightgrey');
   try {
     // A GITHUB_TOKEN secret (wrangler secret put GITHUB_TOKEN) lifts the shared-IP
     // rate limit from 60/h to 5000/h; the badge degrades gracefully without it.
+    // One API call per grade: the tree at HEAD (no repo lookup); files come from
+    // raw.githubusercontent.com, which the API rate limit does not count.
     const gh = { headers: { 'User-Agent': 'pm-skills-badge', Accept: 'application/vnd.github+json',
       ...(env && env.GITHUB_TOKEN ? { authorization: `Bearer ${env.GITHUB_TOKEN}` } : {}) } };
-    const repoRes = await fetch(`https://api.github.com/repos/${owner}/${name}`, gh);
-    if (repoRes.status === 403 || repoRes.status === 429) return shield('rate limited — retry soon', 'lightgrey');
-    if (!repoRes.ok) return shield('repo not found', 'lightgrey');
-    const ref = url.searchParams.get('ref') || (await repoRes.json()).default_branch;
     const treeRes = await fetch(`https://api.github.com/repos/${owner}/${name}/git/trees/${encodeURIComponent(ref)}?recursive=1`, gh);
     if (treeRes.status === 403 || treeRes.status === 429) return shield('rate limited — retry soon', 'lightgrey');
+    if (!treeRes.ok) return shield('repo not found', 'lightgrey');
     const tree = await treeRes.json();
-    const paths = (tree.tree || []).filter((e) => e.type === 'blob' && (e.path.endsWith('/SKILL.md') || e.path === 'SKILL.md')).map((e) => e.path).slice(0, 20);
+    let paths = (tree.tree || []).filter((e) => e.type === 'blob' && (e.path.endsWith('/SKILL.md') || e.path === 'SKILL.md')).map((e) => e.path);
+    // Grade the skills a repo ships, not its translations, fixtures or vendored copies:
+    // ?path= wins; otherwise a skills/ (or .claude/skills/) tree if there is one;
+    // otherwise everything outside the usual non-canonical folders.
+    if (dir) paths = paths.filter((p) => p.startsWith(dir + '/'));
+    else {
+      const NON_CANONICAL = /(^|\/)(i18n|skills-i18n|translations|locales?|examples?|fixtures?|tests?|node_modules|vendor|dist|build|exports)\//;
+      const canon = paths.filter((p) => /^(\.claude\/)?skills\/[^/]+\/SKILL\.md$/.test(p));
+      paths = canon.length ? canon : paths.filter((p) => !NON_CANONICAL.test(p));
+    }
     if (!paths.length) return shield('no skills found', 'lightgrey', true);
-    const levels = await Promise.all(paths.map(async (p) => {
-      try { const r = await fetch(`https://raw.githubusercontent.com/${owner}/${name}/${ref}/${p}`); return r.ok ? gradeSkill(await r.text()) : 0; }
+    // Workers allow ~50 subrequests: grade up to 40, spread evenly across the set.
+    const SAMPLE = 40;
+    const step = Math.max(1, paths.length / SAMPLE);
+    const sample = paths.length <= SAMPLE ? paths : Array.from({ length: SAMPLE }, (_, i) => paths[Math.floor(i * step)]);
+    const levels = await Promise.all(sample.map(async (p) => {
+      try { const r = await fetch(`https://raw.githubusercontent.com/${owner}/${name}/${encodeURIComponent(ref)}/${p.split('/').map(encodeURIComponent).join('/')}`); return r.ok ? gradeSkill(await r.text()) : 0; }
       catch { return 0; }
     }));
     const min = Math.min(...levels);
     const label = ['not loadable', 'L1 Loadable', 'L2 Structured', 'L3 Trustworthy'][min];
     const color = ['red', 'yellow', 'green', 'brightgreen'][min];
-    const suffix = paths.length >= 20 ? '20+ skills' : `${paths.length} skill${paths.length === 1 ? '' : 's'}`;
+    const n = paths.length;
+    const suffix = `${n.toLocaleString('en-US')} skill${n === 1 ? '' : 's'}${n > SAMPLE || tree.truncated ? ' (sampled)' : ''}`;
     return shield(`${label} \u00b7 ${suffix}`, color, true);
   } catch (e) {
     return shield('unavailable', 'lightgrey');

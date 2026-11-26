@@ -16,7 +16,7 @@ If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, g
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Your product or company** (what you're comparing against)
 - **Competitors to analyze** (or ask to identify the top 3-5)
 - **Analysis focus** (full landscape / feature comparison / pricing / positioning / win-loss)
@@ -131,3 +131,8 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Compare features with competitors."
 - "Build a competitive landscape."
 - "Track competitive positioning."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/competitive-analysis.html
+
+<!-- pm-claude-skills v84.0.0 | skill: competitive-analysis | source: skills/competitive-analysis/SKILL.md | sha256: b757491c774257682a702fff33e7e6a29166a939fad35a439db4b2a42899b8c8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

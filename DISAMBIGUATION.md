@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1285 live skills across 152 bundles, plus 12 retired names that still resolve.
+> 1374 live skills across 167 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -36,6 +36,7 @@ choosing between them.
 | Cold Email / Investor Cold Email | `cold-email` | `investor-cold-email` | Investor outreach is traction-forward with a different ask structure from B2B sales outreach. |
 | Context Budget / Context Switch Budget | `context-budget` | `context-switch-budget` | Name collision only: an LLM context window vs human attention fragmentation across a week. |
 | Contract Review / Venue Contract Review | `contract-review` | `venue-contract-review` | General contract review vs the venue-specific commercial exposure — minimum spend, attrition, cancellation ladder — that a general review does not look for. |
+| Crop Insurance Claim / Insurance Claim | `crop-insurance-claim` | `insurance-claim` | Crop and livestock policies work differently from household and personal claims: index or area-based payouts on weather or yield triggers, field evidence before replanting, and enrolment through banks or cooperatives. |
 | Design Critique / Figma Design Critique — PM Perspective | `design-critique` | `figma-design-critique-pm` | General UX critique frameworks vs a PM-lens critique run against a Figma file. |
 | Discharge Summary / Physiotherapy Discharge Summary | `discharge-summary` | `physio-discharge-summary` | A hospital inpatient discharge summary vs closing an outpatient physiotherapy episode against the goals set at assessment. |
 | Email Triage / Email Triage System | `email-triage` | `email-triage-system` | Triaging a live Gmail inbox down to what needs you vs installing a durable four-verb habit. |
@@ -124,6 +125,21 @@ assuming the skill you want is missing.
 - `the-worry-decompiler` · pm-focus — Turn an anxious spiral into a concrete list — separate the specific worries from the vague dread, sort what you can act on from what you can't, and get one action.
 - `the-year-of-firsts` · pm-grief — Get through the first year after losing someone — the birthdays, holidays, and ordinary triggers that ambush you — with a gentle plan for the hard days instead of being blindsided.
 
+**`agent-*`** (12)
+
+- `agent-design-review` · pm-ai — Review an LLM agent design and find where it will be unreliable, expensive, or unsafe.
+- `agent-era-pricing` · pm-agentnative — Redesign seat-based pricing for the agent era — when one human runs ten agents, per-seat models collapse.
+- `agent-hiring-panel` · pm-2027 — Hire an AI agent the way you'd hire an employee — a role spec with success criteria, a structured work-sample interview run on your real tasks, reference checks (what do actual users report), probation KPIs, and termination criteria written before day one.
+- `agent-incident-postmortem` · pm-agentops — Run a blameless postmortem for an incident caused by an AI agent or LLM feature — hallucinated facts shipped to users, runaway tool use, prompt injection, cost blowouts, or wrong actions taken autonomously.
+- `agent-kill-switch-plan` · pm-duet — Prepare, before you need it, the runbook for stopping a proactive agent that is misbehaving: how to pause it in seconds, which connections to revoke in what order, how to check what it did, who to tell, and how to restart safely.
+- `agent-negotiation-brief` · pm-agentnative — Brief an AI agent that will negotiate for you with another party's agent or a person (a refund, a price, a meeting time, a contract term): your goal, your opening, your limits, your walk-away point, what it must never reveal, and when it must come back to you.
+- `agent-observability-spec` · pm-agentops — Specify the tracing, metrics, and alerting for an AI agent or LLM feature in production.
+- `agent-project-file` · pm-agentnative — Set up the project file an AI agent keeps for work that runs over days or weeks: the goal, the definition of done, milestones, the current state, decisions made, open questions, and the exact point to resume from after an interruption.
+- `agent-readiness-audit` · pm-agentnative — Audit whether AI agents can actually use your product — docs, APIs, onboarding, errors, and discoverability, evaluated from a non-human user's perspective.
+- `agent-severance` · pm-2027 — Offboard an AI agent the way you'd offboard an employee — inventory what it knew and touched, export then purge its memory, revoke every credential and access grant, and write the handover for its successor (human or agent).
+- `agent-spec` · pm-ai — Specify an autonomous or tool-using AI agent before building it.
+- `agent-spending-mandate` · pm-agentnative — Write a spending mandate that lets an AI agent buy things for you within strict limits: what it may buy, from whom, up to how much per purchase and in total, until when, and what needs your yes.
+
 **`data-*`** (10)
 
 - `data-analysis-standard` · pm-analytics — Structure a product data analysis, metric deep-dive, funnel analysis, or cohort study.
@@ -162,17 +178,6 @@ assuming the skill you want is missing.
 - `figma-spacing-system` · pm-figma — Design a spacing and layout token system for a Figma design system.
 - `figma-user-flow-planner` · pm-figma — Plan user flows and screen states for a Figma design before any designing starts.
 - `figma-variant-matrix` · pm-figma — Define component variants and states systematically for Figma.
-
-**`agent-*`** (8)
-
-- `agent-design-review` · pm-ai — Review an LLM agent design and find where it will be unreliable, expensive, or unsafe.
-- `agent-era-pricing` · pm-agentnative — Redesign seat-based pricing for the agent era — when one human runs ten agents, per-seat models collapse.
-- `agent-hiring-panel` · pm-2027 — Hire an AI agent the way you'd hire an employee — a role spec with success criteria, a structured work-sample interview run on your real tasks, reference checks (what do actual users report), probation KPIs, and termination criteria written before day one.
-- `agent-incident-postmortem` · pm-agentops — Run a blameless postmortem for an incident caused by an AI agent or LLM feature — hallucinated facts shipped to users, runaway tool use, prompt injection, cost blowouts, or wrong actions taken autonomously.
-- `agent-observability-spec` · pm-agentops — Specify the tracing, metrics, and alerting for an AI agent or LLM feature in production.
-- `agent-readiness-audit` · pm-agentnative — Audit whether AI agents can actually use your product — docs, APIs, onboarding, errors, and discoverability, evaluated from a non-human user's perspective.
-- `agent-severance` · pm-2027 — Offboard an AI agent the way you'd offboard an employee — inventory what it knew and touched, export then purge its memory, revoke every credential and access grant, and write the handover for its successor (human or agent).
-- `agent-spec` · pm-ai — Specify an autonomous or tool-using AI agent before building it.
 
 **`context-*`** (7)
 
@@ -374,6 +379,13 @@ assuming the skill you want is missing.
 - `company-event-ops` · pm-cowork — Run a company event — the launch party, the customer day, the team celebration — as the operation it is: the goal that shapes every choice, the budget with its forgotten lines, the vendor and venue coordination, the run-of-show with owners, and the day-of roles that keep hosts hosting.
 - `company-tailored-cv` · pm-cv — Produce a CV shaped for one target company and role: its applicant tracking system, the country's conventions, the sector's norms, its published values and the job ad, with every choice explained.
 
+**`contract-*`** (4)
+
+- `contract-red-flags` · pm-legal — Scan a contract you're about to sign in plain language — surface the clauses that could bite you, what they mean, and what to question or renegotiate.
+- `contract-renewal-brief` · pm-procurement — Write the decision brief for one supplier contract coming up for renewal: what was bought and used, how the supplier performed, what the market now offers, the options to renew, renegotiate, re-tender or exit with the cost and risk of each, a recommendation and a negotiation position.
+- `contract-renewal-tracker` · pm-procurement — Never get auto-renewed into another year again — the contract inventory with the dates that matter (notice deadlines, not renewal dates), the calendar system with decision-time buffers, and the renewal-decision ritual that renegotiates instead of rubber-stamping.
+- `contract-review` · pm-legal — Review and summarise any contract or legal agreement.
+
 **`design-*`** (4)
 
 - `design-critique` · pm-design — Give structured, constructive feedback on any design using UX frameworks.
@@ -422,6 +434,13 @@ assuming the skill you want is missing.
 - `model-migration-plan` · pm-agentops — Plan the migration of an LLM feature from one model to another without breaking production.
 - `model-prompt-pack` · pm-3d-explorer — Use when asked to write prompts for image-to-3D or text-to-3D tools, generate 3D models of a topic's parts, plan the assets for a 3D explorer, or build a labelled parts list with sources.
 - `model-selection-advisor` · pm-ai — Choose the right LLM for a task by trading off quality, cost, latency, and constraints.
+
+**`nursing-*`** (4)
+
+- `nursing-care-plan` · pm-nursing — Draft a nursing care plan from an assessment: prioritised problems, a measurable goal for each, the nursing interventions with their rationale, and how and when each goal is evaluated.
+- `nursing-family-update` · pm-nursing — Prepare a plain-language update for a patient's family or carer: what has happened, how the patient is now, what happens next, and what the family can do, checked against consent and what the nurse is allowed to share.
+- `nursing-incident-report` · pm-nursing — Write a factual clinical incident report for a nurse: what happened in time order, what was observed, the immediate actions, who was told and when, with opinion and blame kept out.
+- `nursing-shift-handover` · pm-nursing — Write a nursing shift handover for a ward, unit or community caseload in ISBAR order, patient by patient, with the sickest first, outstanding tasks timed and owned, and the risks the next shift must watch.
 
 **`promoter-*`** (4)
 

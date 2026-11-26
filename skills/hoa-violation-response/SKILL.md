@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "They're fining me for something my neighbors do too."
 - "Help me write an appeal to my homeowners association."
 - "Can my condo association actually make me do this?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hoa-violation-response.html

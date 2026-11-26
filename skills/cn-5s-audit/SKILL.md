@@ -68,3 +68,5 @@ Rota of auditors (cross-department), frequency, and how to use the scores: trend
 - "下个月客户来审厂，帮我准备 5S 自查。"
 - "我们刚开始推行 5S，第一个月做什么？"
 - "Create a 5S audit checklist for a Chinese assembly line."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-5s-audit.html

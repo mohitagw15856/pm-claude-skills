@@ -60,3 +60,5 @@ Ask for these if not provided:
 - "Should I really do this, or is the excitement fooling me?"
 - "Give me the honest reason not to take this leap."
 - "I'm fired up about this idea — is it actually a mistake?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-strong-no.html

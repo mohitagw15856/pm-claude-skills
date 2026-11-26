@@ -3,7 +3,7 @@
 The library has only ever grown. That is fine while it is small and becomes a
 problem at four figures: duplicates accumulate, the catalogue gets harder to
 search, and nobody dares delete anything because a skill name is a public API —
-it is installed, exported to twelve platforms, pinned in `plugins/`, resolved by
+it is installed, exported to fifteen platforms, pinned in `plugins/`, resolved by
 the MCP server, and referenced from other skills.
 
 So skills are **retired, not deleted.** This is the contract.

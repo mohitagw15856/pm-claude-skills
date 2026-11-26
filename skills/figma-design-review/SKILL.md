@@ -76,3 +76,5 @@ Approved / Approved with changes (list) / Needs revision (focus area + next revi
 - "Check if this design meets the product spec"
 - "Is this design ready to hand off to engineering?"
 - "What is missing from this design before we can build it?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-design-review.html

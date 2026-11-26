@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Which AI is best at your job? The monthly report | PM Skills</title>
+<meta name="description" content="A monthly, open benchmark of AI models on real professional tasks, grouped by job: product managers, engineering leads, analysts, HR, customer success, founders and more." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/ai-at-work.html" />
+<meta property="og:title" content="Which AI is best at your job?" />
+<meta property="og:description" content="Open, monthly, by job. Every score links to the tasks and the raw results." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .aw-wrap { max-width: 1080px; margin: 0 auto; padding: 16px 22px 70px; }
+  .aw-wrap h1 { font-size: 28px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; max-width: 780px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 18px 0; }
+  .field { flex: 1 1 260px; min-width: 0; }
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .field select { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 10px; padding: 9px 12px; font-size: 15px; }
+  .note { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 16px; font-size: 14px; line-height: 1.55; margin: 12px 0; }
+  .jobs { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+  .job { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 16px 18px; min-width: 0; }
+  .job h2 { font-size: 17px; margin: 0 0 4px; }
+  .job .work { font-size: 13px; color: var(--muted); margin: 0 0 8px; }
+  .job .verdict { font-weight: 600; font-size: 14px; margin: 0 0 10px; }
+  .tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  .tbl th, .tbl td { text-align: left; padding: 5px 6px; border-top: 1px solid var(--border); overflow-wrap: anywhere; }
+  .tbl th { color: var(--muted); font-weight: 500; font-size: 12px; }
+  .bar { height: 6px; border-radius: 3px; background: var(--accent); margin-top: 3px; }
+  .stale { color: var(--muted); font-size: 12px; }
+  .up { color: #1a8f4c; } .down { color: #c2410c; }
+  .empty { color: var(--muted); font-size: 14px; }
+  .src { font-size: 13px; color: var(--muted); margin-top: 26px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="aw-wrap">
+  <h1>Which AI is best at your job?</h1>
+  <p class="lead">Every month, each model does the same professional tasks twice: on its own, and with the matching skill from this library. A pinned judge scores both on a fixed 1–5 rubric. Pick your job to see who does it best, and whether the skill helps. All of it is open: <a href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/skillbench">the tasks, the harness and the raw results</a>.</p>
+  <div class="controls">
+    <div class="field"><label for="job">Your job</label><select id="job"><option value="">All jobs</option></select></div>
+    <div class="field"><label for="edition">Edition</label><select id="edition"></select></div>
+  </div>
+  <div id="notes"></div>
+  <div class="jobs" id="jobs"><p class="empty">Loading…</p></div>
+  <p class="src">How to read it: differences under 0.25 are noise. The judge is a Claude model, which can favour Claude-style answers. A job with one tested model is not ranked. Models appear only once someone has run them; to add one, add its provider key to the <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/.github/workflows/ai-at-work-report.yml">monthly workflow</a>, or run <code>node skillbench/run-skillbench.mjs --models &lt;id&gt;</code> yourself and open a pull request. See also <a href="modelbench.html">SkillBench by domain</a>.</p>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var fmt = function (x) { return x == null ? 'n/a' : x.toFixed(2); };
+  var params = new URLSearchParams(location.search);
+  var jobSel = document.getElementById('job'), edSel = document.getElementById('edition');
+  fetch('ai-at-work.json').then(function (r) { return r.json(); }).then(function (data) {
+    data.jobs.forEach(function (j) { var o = document.createElement('option'); o.value = j.id; o.textContent = j.job; jobSel.appendChild(o); });
+    (data.editions.length ? data.editions : [data.generated.slice(0, 7)]).forEach(function (e, i) {
+      var o = document.createElement('option'); o.value = e; o.textContent = e + (i === 0 ? ' (latest)' : ''); edSel.appendChild(o);
+    });
+    jobSel.value = params.get('job') || '';
+    var notes = [];
+    notes.push('<strong>Models tested so far:</strong> ' + (data.modelsTested.length ? data.modelsTested.map(esc).join(', ') : 'none') + '.');
+    if (data.failedRuns.length) notes.push('Runs that returned no scores: ' + data.failedRuns.map(esc).join('; ') + '.');
+    if (data.missing.length) notes.push(data.missing.map(esc).join('; ') + '.');
+    document.getElementById('notes').innerHTML = '<div class="note">' + notes.join('<br>') + '</div>';
+    function render() {
+      var pick = jobSel.value;
+      var list = data.jobs.filter(function (j) { return !pick || j.id === pick; });
+      document.getElementById('jobs').innerHTML = list.map(function (j) {
+        var rows = j.models.map(function (m) {
+          var best = Math.max(m.skilled || 0, m.bare || 0);
+          var lift = m.lift == null ? 'n/a' : '<span class="' + (m.lift > 0 ? 'up' : m.lift < 0 ? 'down' : '') + '">' + (m.lift > 0 ? '+' : '') + m.lift.toFixed(2) + '</span>';
+          return '<tr><td>' + esc(m.model) + (m.stale ? ' <span class="stale">(stale, ' + esc(m.date) + ')</span>' : '') + '<div class="bar" style="width:' + (best / 5 * 100).toFixed(0) + '%"></div></td><td>' + fmt(m.skilled) + '</td><td>' + fmt(m.bare) + '</td><td>' + lift + '</td></tr>';
+        }).join('');
+        return '<section class="job" id="' + esc(j.id) + '"><h2>' + esc(j.job) + '</h2><p class="work">Tested on: ' + esc(j.work) + '</p>' +
+          (j.models.length ? '<p class="verdict">' + esc(j.verdict) + '</p><table class="tbl"><thead><tr><th>Model</th><th>With skill</th><th>Bare</th><th>Lift</th></tr></thead><tbody>' + rows + '</tbody></table>'
+            : '<p class="empty">No scored runs yet for this job.</p>') + '</section>';
+      }).join('');
+      var q = new URLSearchParams(location.search); if (pick) q.set('job', pick); else q.delete('job');
+      history.replaceState(null, '', location.pathname + (q.toString() ? '?' + q : ''));
+    }
+    jobSel.addEventListener('change', render);
+    // Past editions are the archived markdown on GitHub; the page shows the latest data.
+    edSel.addEventListener('change', function () {
+      if (edSel.selectedIndex > 0) location.href = 'https://github.com/mohitagw15856/pm-claude-skills/blob/main/skillbench/reports/ai-at-work/' + encodeURIComponent(edSel.value) + '.md';
+    });
+    render();
+  }).catch(function () { document.getElementById('jobs').innerHTML = '<p class="empty">Could not load the report data.</p>'; });
+})();
+</script>
+</body>
+</html>

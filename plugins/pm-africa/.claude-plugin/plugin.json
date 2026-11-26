@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-africa",
+  "version": "1.0.0",
+  "description": "Working life in Nigeria, Kenya and South Africa: payslips decoded, the Nigerian pension account, an M-Pesa reversal dispute, a retrenchment package checked and a UIF claim",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "africa",
+    "nigeria",
+    "kenya",
+    "south-africa",
+    "paye",
+    "pension",
+    "m-pesa",
+    "uif"
+  ]
+}

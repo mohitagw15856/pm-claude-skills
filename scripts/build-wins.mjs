@@ -11,6 +11,7 @@
 import { writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { savingsSummary, formatMoney } from './lib/savings.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const REPO = 'mohitagw15856/pm-claude-skills';
@@ -46,6 +47,16 @@ const empty = `
     <div class="w-story">No stories on the wall yet — the form below takes two minutes, and the first stories set the tone for everyone after.</div>
   </div>`;
 
+// The counter: accepted stories only (a maintainer labels them roi-accepted).
+const S = savingsSummary();
+const counter = `
+<div class="counter">
+  <div><b>${S.hours.toLocaleString('en-GB')}</b><span>hours saved, as reported</span></div>
+  <div><b>${S.money && Object.keys(S.money).length ? esc(formatMoney(S.money)) : '0'}</b><span>money not spent, as reported</span></div>
+  <div><b>${S.stories}</b><span>accepted stories</span></div>
+</div>
+<p class="c-note">The counter adds up only what users reported in accepted stories: hours per use times uses, and money they actually did not spend. Hours are never turned into money, and currencies are never converted. Data: <a href="https://github.com/${REPO}/blob/main/data/savings.json">data/savings.json</a>.</p>`;
+
 const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,6 +72,11 @@ const html = `<!DOCTYPE html>
   .w-story { font-size: 15px; line-height: 1.55; }
   .w-saved { color: #3fb950; font-weight: 600; margin-top: 8px; font-size: 14px; }
   .w-meta { color: var(--muted); font-size: 12px; margin-top: 10px; }
+  .counter { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 16px 0 6px; }
+  .counter div { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 14px; }
+  .counter b { display: block; font-size: 26px; color: #3fb950; overflow-wrap: anywhere; }
+  .counter span { color: var(--muted); font-size: 13px; }
+  .c-note { color: var(--muted); font-size: 13px; line-height: 1.5; }
   .cta { display: inline-block; background: var(--accent); color: #fff; border-radius: 10px; padding: 10px 16px; text-decoration: none; margin-top: 10px; }
 </style>
 </head>
@@ -69,6 +85,7 @@ const html = `<!DOCTYPE html>
 <div class="ww">
 <h1>📈 The Wall of Wins</h1>
 <p style="color:var(--muted)">Every card is a real user's filed story, linked to its source — ${stories.length} so far. Generated from <code>roi-story</code> issues; nothing here is invented.</p>
+${counter}
 ${stories.length ? cards : empty}
 <p><a class="cta" href="https://github.com/${REPO}/issues/new?template=roi-story.yml">➕ Add your win (2 minutes)</a></p>
 </div>

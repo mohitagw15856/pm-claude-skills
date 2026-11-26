@@ -9,7 +9,7 @@ This skill produces a complete RACI (Responsible, Accountable, Consulted, Inform
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Project or process name**
 - **Key activities or decisions** to map (or the user can describe the project and the skill will derive them)
 - **Teams or roles involved** (list team names and key individuals if helpful)
@@ -166,3 +166,5 @@ Please review the full matrix here: [Link]. Raise any concerns by [Date] — aft
 - "Who owns what on this initiative? Help me build a RACI"
 - "Map out decision rights for our engineering and product teams"
 - "Generate a RACI for a [migration / launch / process] involving [teams]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/raci-matrix.html

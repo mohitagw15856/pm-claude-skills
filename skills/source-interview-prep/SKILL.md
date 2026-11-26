@@ -59,3 +59,5 @@ Recording (and consent/legal note — recording-consent laws vary by jurisdictio
 - "Plan questions for a subject."
 - "Handle an on-the-record accountability interview."
 - "Get a reluctant person to talk."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/source-interview-prep.html

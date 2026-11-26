@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "We're having spicy Thai — what should we drink?"
 - "Bringing wine to a dinner party, they're serving lamb. Help."
 - "What pairs with a cheese board, and something non-alcoholic too?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wine-pairing.html

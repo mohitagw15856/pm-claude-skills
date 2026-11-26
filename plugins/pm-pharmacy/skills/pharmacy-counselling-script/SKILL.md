@@ -79,3 +79,5 @@ Ask for these if not provided:
 - "Patient is switching to a generic and is worried — what do I say?"
 - "Write a teach-back script for a new anticoagulant"
 - "How do I improve adherence for a patient who keeps stopping their statin?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pharmacy-counselling-script.html

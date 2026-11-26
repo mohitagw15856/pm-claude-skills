@@ -109,3 +109,5 @@ At end of [period]:
 - "Build a key account strategy for Acme."
 - "Run a strategic account review before renewal."
 - "Plan my territory for next year."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/account-plan.html

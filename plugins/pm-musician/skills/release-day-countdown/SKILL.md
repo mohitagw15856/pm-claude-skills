@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "I'm releasing a single/EP."
 - "Should I submit to playlists?"
 - "Plan my release."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/release-day-countdown.html

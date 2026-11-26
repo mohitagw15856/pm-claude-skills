@@ -38,3 +38,5 @@ Ask for (if not already provided):
 - "My project is caught in politics."
 - "Who holds the power here?"
 - "How would Machiavelli play this?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/machiavelli-counsel.html

@@ -104,3 +104,5 @@ Yours sincerely, [Name, Title, Department]
 - "Write a patient letter about [topic]"
 - "Create a patient information leaflet for [procedure]"
 - "Write a plain English results letter for [test]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/patient-communication.html

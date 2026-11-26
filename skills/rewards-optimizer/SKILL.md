@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Best card for groceries and dining from what I have?"
 - "Is this card's annual fee worth it for my spending?"
 - "Set me up a simple system for which card to use where."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rewards-optimizer.html

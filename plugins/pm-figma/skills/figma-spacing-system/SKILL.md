@@ -83,3 +83,5 @@ Desktop (1440px): 12 columns, margin [value], gutter [value], max content width 
 - "Set up a grid and spacing scale for [product]"
 - "What spacing values should we use in our design system?"
 - "Help me build the layout foundation for our Figma file"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-spacing-system.html

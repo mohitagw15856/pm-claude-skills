@@ -10,7 +10,8 @@
     anthropic: {
       name: 'Claude', keyStore: 'anthropic_api_key',
       placeholder: 'sk-ant-… (your Anthropic API key)', keyUrl: 'https://console.anthropic.com/settings/keys',
-      models: [['claude-fable-5', 'Fable 5 ✨ (newest)'], ['claude-opus-4-8', 'Opus 4.8'], ['claude-sonnet-4-6', 'Sonnet 4.6'], ['claude-haiku-4-5-20251001', 'Haiku 4.5']],
+      // Current line-up, kept in step with data/models.json by scripts/check-model-refs.mjs.
+      models: [['claude-fable-5-2', 'Fable 5.2 ✨ (newest)'], ['claude-opus-5-5', 'Opus 5.5'], ['claude-sonnet-5-5', 'Sonnet 5.5'], ['claude-haiku-5-5', 'Haiku 5.5']],
       buildReq: function (o) {
         // Vision: o.images = [{media_type, data(base64)}] → content blocks before the text.
         var content = (o.images && o.images.length)
@@ -182,9 +183,9 @@
   // has it enabled; the UI hides it otherwise. Non-streaming (the proxy returns full text).
   var TRY_ENDPOINT = 'https://pm-skills-mcp.pm-claude-skills.workers.dev/try';
   PROVIDERS.tryclaude = {
-    name: 'Claude (free trial)', keyStore: 'pm_try_noop', local: true, proxy: true, free: true,
-    placeholder: '(no key — a few free Claude runs, on the house)', keyUrl: 'https://mohitagw15856.github.io/pm-claude-skills/',
-    models: [['claude-haiku', 'Claude Haiku (free trial)']],
+    name: 'Free (no key)', keyStore: 'pm_try_noop', local: true, proxy: true, free: true,
+    placeholder: '(no key — a few free runs a day, on the house)', keyUrl: 'https://mohitagw15856.github.io/pm-claude-skills/',
+    models: [['free', 'Free model (a few runs a day)']],
   };
   async function streamTry(opts) {
     var res = await fetch(TRY_ENDPOINT, {
@@ -192,7 +193,7 @@
       body: JSON.stringify({ system: opts.system || '', prompt: opts.userMessage || '' }),
     });
     var data = await res.json().catch(function () { return {}; });
-    if (!res.ok) throw new Error(data.message || 'Free Claude trial unavailable — use a free Gemini key or your own key.');
+    if (!res.ok) throw new Error(data.message || 'The free trial is unavailable. Use a free Gemini key or your own key.');
     var text = data.text || '';
     if (opts.onDelta) opts.onDelta(text);
     return text;
@@ -206,6 +207,38 @@
     return _tryEnabled;
   }
 
+  // PM Skills in a box (box/setup.sh): served from the box's own address with a local
+  // model behind /ollama. Only checked on .local names and private addresses, so
+  // the public site makes no extra request. The box's model becomes the default.
+  (function () {
+    var h = location.hostname;
+    if (!/\.local$|^10\.|^192\.168\.|^172\.(1[6-9]|2\d|3[01])\./.test(h)) return;
+    fetch('box.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (c) {
+      if (!c || !c.box) return;
+      var base = location.origin + (c.ollama || '/ollama');
+      PROVIDERS.ollama.default = base;
+      if (c.model) PROVIDERS.ollama.models.unshift([c.model, c.model + ' (on this box, offline)']);
+      try {
+        if (!localStorage.getItem('ollama_base_url')) localStorage.setItem('ollama_base_url', base);
+        if (!localStorage.getItem(PROVIDER_STORE) || localStorage.getItem(PROVIDER_STORE) === 'tryclaude') localStorage.setItem(PROVIDER_STORE, 'ollama');
+      } catch (e) {}
+      var ps = document.getElementById('provider'); if (ps) { ps.value = 'ollama'; applyProvider(); }
+    }).catch(function () {});
+  })();
+
+  // PM-8B, the library's own model (training/), appears in the In-browser and
+  // Ollama lists once web/pm-8b.json says it is released. Until then, nothing.
+  var PM8B = null;
+  fetch('pm-8b.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (c) {
+    if (!c || !c.released) return;
+    PM8B = c;
+    if (c.webllm && c.webllm.model && c.webllm.model_lib) PROVIDERS.webllm.models.unshift([c.webllm.model_id, 'PM-8B · trained on this library (' + (c.webllm.size || 'large') + ')']);
+    if (c.ollama) PROVIDERS.ollama.models.unshift([c.ollama, 'PM-8B (after: ollama pull or create ' + c.ollama + ')']);
+    // The picker may already be drawn; redraw it if one of these providers is showing.
+    var pid = providerId();
+    if ((pid === 'webllm' || pid === 'ollama') && document.getElementById('model')) applyProvider();
+  }).catch(function () {});
+
   // Lazy WebLLM engine (loaded only when someone actually picks the in-browser provider).
   var _engine = null, _engineModel = null;
   async function getEngine(model, onProgress) {
@@ -213,7 +246,12 @@
     if (_engine && _engineModel === model) return _engine;
     var webllm = await import('https://esm.run/@mlc-ai/web-llm');
     if (_engine) { try { await _engine.unload(); } catch (_) {} }
-    _engine = await webllm.CreateMLCEngine(model, { initProgressCallback: onProgress });
+    var opts = { initProgressCallback: onProgress };
+    // A custom model (PM-8B) is added to WebLLM's built-in list for this engine.
+    if (PM8B && PM8B.webllm && model === PM8B.webllm.model_id) {
+      opts.appConfig = { model_list: webllm.prebuiltAppConfig.model_list.concat([{ model: PM8B.webllm.model, model_id: PM8B.webllm.model_id, model_lib: PM8B.webllm.model_lib }]) };
+    }
+    _engine = await webllm.CreateMLCEngine(model, opts);
     _engineModel = model;
     return _engine;
   }
@@ -348,7 +386,7 @@
         var opt = ps.querySelector('option[value="tryclaude"]');
         if (on && !opt) {
           opt = d.createElement('option');
-          opt.value = 'tryclaude'; opt.textContent = '✨ Claude — free, no key';
+          opt.value = 'tryclaude'; opt.textContent = '✨ Free, no key';
           ps.insertBefore(opt, ps.firstChild);
         }
         if (!on) {

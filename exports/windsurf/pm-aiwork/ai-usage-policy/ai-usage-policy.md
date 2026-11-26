@@ -78,3 +78,8 @@ Ask for (if not already provided):
 - "What are our rules for using ChatGPT and Claude at work?"
 - "Write acceptable-use rules for Copilot."
 - "Fix an AI policy nobody reads."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-usage-policy.html
+
+<!-- pm-claude-skills v84.0.0 | skill: ai-usage-policy | source: skills/ai-usage-policy/SKILL.md | sha256: 10d2b54a434201f1d07374b5940f1c6d796dfc1c9fe36cb2e61a12d9e942a4f5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

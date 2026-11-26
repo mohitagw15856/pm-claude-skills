@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "My mom almost sent money to someone."
 - "Set up scam protection for my dad."
 - "What scams target the elderly?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/elder-scam-briefing.html

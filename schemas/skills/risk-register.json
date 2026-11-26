@@ -1,0 +1,187 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/contract.schema.json",
+  "skill": "risk-register",
+  "version": 1,
+  "inputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "risk-register inputs",
+    "type": "object",
+    "properties": {
+      "project": {
+        "type": "string",
+        "description": "Project or product name"
+      },
+      "stage": {
+        "type": "string",
+        "description": "Project stage",
+        "enum": [
+          "discovery",
+          "delivery",
+          "launch",
+          "live",
+          "programme"
+        ]
+      },
+      "objectives": {
+        "type": "array",
+        "description": "What the project is trying to achieve",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "known_risks": {
+        "type": "array",
+        "description": "Anything already on the radar",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "dependencies": {
+        "type": "array",
+        "description": "External vendors, teams, systems or approvals",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "hard_dates": {
+        "type": "array",
+        "description": "Milestones that cannot move",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "audience": {
+        "type": "string",
+        "description": "Who reads the register",
+        "enum": [
+          "team",
+          "steering",
+          "board",
+          "regulator"
+        ]
+      }
+    },
+    "required": [
+      "project",
+      "objectives"
+    ],
+    "additionalProperties": true
+  },
+  "outputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "risk-register outputs",
+    "type": "object",
+    "properties": {
+      "project": {
+        "type": "string",
+        "description": ""
+      },
+      "risks": {
+        "type": "array",
+        "description": "Ordered by score, highest first",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "e.g. R-1"
+            },
+            "risk": {
+              "type": "string",
+              "description": "Cause, event and consequence"
+            },
+            "category": {
+              "type": "string",
+              "description": "",
+              "enum": [
+                "technical",
+                "delivery",
+                "commercial",
+                "people",
+                "legal",
+                "security",
+                "external"
+              ]
+            },
+            "likelihood": {
+              "type": "integer",
+              "description": "1 to 5",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "impact": {
+              "type": "integer",
+              "description": "1 to 5",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "score": {
+              "type": "integer",
+              "description": "likelihood x impact"
+            },
+            "mitigation": {
+              "type": "string",
+              "description": ""
+            },
+            "contingency": {
+              "type": "string",
+              "description": ""
+            },
+            "owner": {
+              "type": "string",
+              "description": "Role"
+            },
+            "trigger": {
+              "type": "string",
+              "description": "Early warning sign"
+            },
+            "status": {
+              "type": "string",
+              "description": "",
+              "enum": [
+                "open",
+                "mitigating",
+                "accepted",
+                "closed"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "risk",
+            "likelihood",
+            "impact",
+            "mitigation",
+            "owner"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "heatmap_summary": {
+        "type": "string",
+        "description": "Count of risks per likelihood and impact band (Markdown)"
+      },
+      "top_three": {
+        "type": "array",
+        "description": "The three to brief first",
+        "items": {
+          "type": "string",
+          "description": "Risk ID"
+        }
+      },
+      "review_cadence": {
+        "type": "string",
+        "description": ""
+      }
+    },
+    "required": [
+      "risks",
+      "top_three"
+    ],
+    "additionalProperties": true
+  }
+}

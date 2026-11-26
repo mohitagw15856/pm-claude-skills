@@ -76,3 +76,5 @@ ISO/IEC 27001 (ISMS clauses 4–10) and Annex A control set + the Statement of A
 - "Scope an ISMS."
 - "Build a Statement of Applicability."
 - "Prepare for ISO 27001 certification."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/iso-27001-isms.html

@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "I miss a friend I drifted from — what do I say?"
 - "Reach out to a former colleague I liked but lost contact with."
 - "Message to reconnect with someone after a long silence."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reconnect-with-someone.html

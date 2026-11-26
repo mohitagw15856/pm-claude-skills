@@ -5,3 +5,5 @@ Auto-generated launch-post drafts from the **Generate Launch Posts** workflow
 
 Each is model-generated from the latest merged PRs — **review and verify every number and
 link before posting.** The curated, hand-maintained kit lives in [`../launch-posts.md`](../launch-posts.md).
+
+**October 2026 bets:** a hand-written kit per bet, with status and a suggested order, is in [`2026-10-bets/`](2026-10-bets/README.md).

@@ -67,3 +67,5 @@ Source: [registry] APIs · as of [date] · rerun: `[the curls]`
 - "Check this PyPI library before we adopt it."
 - "Compare these two packages."
 - "Is this dependency abandoned?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/package-health.html

@@ -9,7 +9,7 @@ Produce a design brief that sets designers up for success — grounding them in 
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Feature brief or PRD** (even rough notes work)
 - **Designer's name or team** (for personalisation)
 - **Technical constraints** (any engineering limitations already known)
@@ -113,3 +113,8 @@ with the value.
 - "Create a design handoff."
 - "Brief a designer on a new feature."
 - "Translate a PRD into design requirements."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/design-handoff-brief.html
+
+<!-- pm-claude-skills v84.0.0 | skill: design-handoff-brief | source: skills/design-handoff-brief/SKILL.md | sha256: 133b4deed7476085f0a9cd4d8924af9592da4d7c403fb07039a6caed787e5d40 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

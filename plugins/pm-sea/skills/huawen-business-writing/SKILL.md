@@ -52,3 +52,5 @@ A short list of the choices made: terms kept in English because readers use them
 - "Write a notice in Chinese and English for our Kuala Lumpur shop about the Chinese New Year opening hours."
 - "把这份大陆风格的公司通知改成马来西亚华文的写法。"
 - "帮我写一封会馆活动的邀请信，要中英双语。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/huawen-business-writing.html

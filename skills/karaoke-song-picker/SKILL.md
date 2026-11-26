@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "A fun duet for me and my partner."
 - "Something everyone will sing along to."
 - "I always pick songs too high — give me safe options."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/karaoke-song-picker.html

@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Write funny-but-heartfelt vows, about two minutes."
 - "Help me turn these notes about my partner into vows."
 - "Vows that match my partner's in length and tone."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wedding-vows-writer.html

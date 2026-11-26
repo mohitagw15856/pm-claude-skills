@@ -79,3 +79,5 @@ Customer/user journey mapping (phases, actions, emotion curve, friction-to-oppor
 - "Map a user/customer journey."
 - "Show the experience end-to-end."
 - "Find friction and drop-off points."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/user-journey-map.html

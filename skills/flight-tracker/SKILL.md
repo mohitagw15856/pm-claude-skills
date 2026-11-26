@@ -66,3 +66,5 @@ Source: [adsb.lol / OpenSky] community ADS-B · as of [time] · rerun: `[exact c
 - "What planes are overhead?"
 - "Track a tail number."
 - "Is that flight in the air?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/flight-tracker.html

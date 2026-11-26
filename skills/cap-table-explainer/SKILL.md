@@ -69,3 +69,5 @@ The single dilution number that matters, and the one term quietly driving it.
 - "Size an option pool."
 - "Understand a term sheet's economics."
 - "Figure out who owns what after a raise."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cap-table-explainer.html

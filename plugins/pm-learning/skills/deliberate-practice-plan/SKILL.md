@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "Deliberate practice plan for improving my writing."
 - "I want to get better at public speaking — how should I practice?"
 - "Break down this skill so I can actually train the weak parts."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deliberate-practice-plan.html

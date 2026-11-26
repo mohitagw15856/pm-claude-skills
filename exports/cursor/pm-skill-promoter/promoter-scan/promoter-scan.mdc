@@ -86,3 +86,8 @@ Suggested skill name: `[kebab-name]`
 - "Scan my transcripts and tell me which prompts should be skills."
 - "Find my repeated prompts from the last month."
 - "Start the promote loop on my Claude Code sessions."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/promoter-scan.html
+
+<!-- pm-claude-skills v84.0.0 | skill: promoter-scan | source: skills/promoter-scan/SKILL.md | sha256: ec1f9457ffc8dfb201e9b00f6a9a43e206f9cb48517a941643c4c0164abfc727 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -67,3 +67,5 @@ E-commerce SEO & merchandising practice — intent-driven category pages, facete
 - "Write a brief for our collection page."
 - "Improve category SEO and merchandising."
 - "Plan a product listing page that ranks."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/category-page-brief.html

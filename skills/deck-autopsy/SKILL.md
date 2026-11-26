@@ -72,3 +72,5 @@ A deck is an argument wearing design. This skill reads slide images the way a sc
 - "Pick apart this competitor's pitch deck."
 - "Here are photos of their slides: what are they hiding?"
 - "Does my deck hold up before the big meeting?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deck-autopsy.html

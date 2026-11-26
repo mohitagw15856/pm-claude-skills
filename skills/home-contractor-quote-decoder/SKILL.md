@@ -79,3 +79,5 @@ Owner-side bid review practice — finished-job reconciliation, allowance auditi
 - "Decode this renovation bid."
 - "What should be in a contractor contract?"
 - "Why do these three bids differ so much?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/home-contractor-quote-decoder.html

@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "I just became a manager what do I do."
 - "Plan my first 90 days as a manager."
 - "Taking over an existing team."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/manager-first-90-days.html

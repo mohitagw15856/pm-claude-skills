@@ -76,3 +76,5 @@ End with: *"This memo is analytical support for internal escalation, not a compl
 - "Document an AML concern."
 - "Write up unusual-activity findings for compliance review."
 - "Prepare an enhanced due diligence referral."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kyc-escalation.html

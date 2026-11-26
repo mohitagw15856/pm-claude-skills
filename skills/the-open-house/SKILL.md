@@ -74,3 +74,5 @@ Ask for these if not provided:
 - "Practice viewing a house."
 - "What should I not say at an open house?"
 - "Simulate the offer pressure."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-open-house.html

@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "Make me something refreshing with tequila and soda."
 - "Round of drinks for 6 from what's in my cabinet."
 - "Something boozy and stirred, and a mocktail for my friend."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cocktail-from-what-i-have.html

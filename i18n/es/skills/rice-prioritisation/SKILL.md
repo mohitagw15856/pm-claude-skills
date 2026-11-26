@@ -56,6 +56,16 @@ Produce una tabla clasificada con puntuaciones RICE calculadas e indicadores aut
 - **`references/estimate-calibration.md`** — cómo anclar cada una de las cuatro estimaciones (fuentes de alcance, escala de impacto con ejemplos de reserva, confianza basada en evidencia, esfuerzo multifuncional) y las verificaciones cruzadas a ejecutar en la clasificación finalizada. Aplícalo cuando cuestiones los datos del usuario.
 - **`templates/scoring-worksheet.md`** — una hoja de trabajo rellenable cuyas columnas de evidencia fuerzan que cada puntuación nombre su fuente. Ofrécela cuando un equipo quiera puntuar junto en lugar de que la clasificación se genere.
 
+## Dónde encaja — puntuar en la columna vertebral
+
+Tercero en la columna vertebral de decisiones de producto: **`/assumption-mapper` → `/prd-template` →
+`rice-prioritisation` → `/roadmap-narrative`**. Recibe **la métrica de éxito** del PRD de
+cada iniciativa: el *Impact* de RICE es el movimiento estimado sobre *ese* número con línea base,
+no una conjetura nueva, y entrega a `/roadmap-narrative` **las iniciativas clasificadas con sus
+puntuaciones** para agruparlas en temas. Los cuatro términos de RICE se definen una sola vez en
+[`docs/craft/product-decisions.md`](../../docs/craft/product-decisions.md); allí la *Confidence*
+es la válvula de honestidad, y esta habilidad vive o muere según la use.
+
 ## Proceso
 1. Para cada iniciativa proporcionada, reúne o estima valores R, I, C, E
 2. Señala dónde las estimaciones son débiles y anota qué datos las mejorarían
@@ -81,6 +91,17 @@ Produce una tabla clasificada con puntuaciones RICE calculadas e indicadores aut
 #### Brechas de Datos a Abordar
 [Qué información mejoraría más la precisión de la puntuación]
 
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Credibilidad de las estimaciones | Conjeturas con números redondos al 100 % de confianza; el esfuerzo lo estima el PM a solas | Alcance basado en analítica, pero confianza uniforme en todos los elementos sin importar la evidencia | Cada estimación nombra su fuente; lo que no tiene datos queda al 50 % de confianza; el esfuerzo viene de ingeniería, y el documento lo dice |
+| Discriminación del impacto | Todo puntuado entre 2 y 3: la escala no produce señal | Algo de dispersión en la escala, pero sin anclas definidas, así que las puntuaciones no son comparables | Se usa toda la escala con un ancla declarada por nivel; "masivo" se reserva para elementos realmente raros |
+| Interrogación de la clasificación | La salida ordenada en bruto se acepta como veredicto | Se señalan victorias rápidas y apuestas lejanas, pero los puestos sorprendentes y las dependencias no se examinan | Los primeros puestos sorprendentes se investigan y la estimación inflada se encuentra o se defiende; las dependencias se anotan donde cambian la secuencia |
+| Secuenciación accionable | Una tabla puntuada sin recomendación | Tabla más una lista de los 5 primeros, pero sin razones ni seguimiento de las lagunas de datos | Secuencia recomendada con razón por elemento, victorias rápidas encajadas junto a apuestas mayores, y lagunas de datos con nombre que afinarían la siguiente pasada |
+
 ## Verificaciones de Calidad
 
 - [ ] Cada iniciativa tiene los cuatro componentes RICE estimados (aunque sea aproximadamente)
@@ -96,3 +117,12 @@ Produce una tabla clasificada con puntuaciones RICE calculadas e indicadores aut
 - [ ] No omitas estimaciones de esfuerzo de ingeniería — las estimaciones de esfuerzo solo de PM frecuentemente son optimistas y sesgan resultados
 - [ ] No olvides anotar dependencias que cambiarían el secuenciamiento incluso si las puntuaciones RICE sugieren lo contrario
 - [ ] No puntúes cada iniciativa al mismo nivel de impacto — si todo es "impacto alto," el marco no produce señal útil
+
+## Frases de activación de ejemplo
+
+- "Prioriza funcionalidades."
+- "Clasifica un backlog con RICE."
+- "Puntúa iniciativas para la planificación trimestral."
+- "Aplica un marco objetivo a una lista de ideas en competencia."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/rice-prioritisation.html

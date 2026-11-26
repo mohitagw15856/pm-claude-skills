@@ -58,3 +58,5 @@ The likely parent responses (defensiveness, blame, overwhelm, disengagement) and
 - "Prep for a parent conference."
 - "Plan what to say to a parent."
 - "Handle a difficult conversation about a student's behavior."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/parent-conference-prep.html

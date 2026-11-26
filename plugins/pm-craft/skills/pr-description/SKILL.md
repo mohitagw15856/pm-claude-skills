@@ -64,3 +64,5 @@ Code-review and PR best practices (explain intent, make review easy, surface ris
 - "Summarize a change for review."
 - "Document code changes."
 - "Write a PR/merge-request description."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pr-description.html

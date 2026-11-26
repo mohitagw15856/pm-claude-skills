@@ -93,3 +93,5 @@ Ask for these if not provided:
 - "How do I make my subjective examination more efficient?"
 - "What should I document at a first appointment?"
 - "How do I set goals with a patient?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/physio-initial-assessment.html

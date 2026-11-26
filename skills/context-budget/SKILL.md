@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Plan what to load into the session."
 - "Why is every turn so expensive?"
 - "Design the context for this workflow."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-budget.html

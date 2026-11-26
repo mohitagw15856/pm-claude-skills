@@ -70,3 +70,5 @@ Reads: […] · Writes: […] · Network: [every host, named] · Executes: […]
 - "Vet this SKILL.md."
 - "Review this skill from a marketplace."
 - "Check what this skill can do to my machine."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/skill-vetting.html

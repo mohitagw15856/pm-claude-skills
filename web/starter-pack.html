@@ -3,101 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
-<title>Your Skill Starter Pack — 60-second quiz | PM Skills</title>
-<meta name="description" content="Answer two questions, get your personal starter pack: the right skill bundle for your role and week, with a one-line install command. 1285 skills, free, MIT." />
-<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/starter-pack.html" />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  .q-wrap { max-width: 680px; margin: 0 auto; padding: 16px 22px 70px; }
-  .q-wrap h1 { font-size: 26px; }
-  .lead { color: var(--muted); }
-  .opts { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; margin: 16px 0; }
-  .opt { border: 1px solid var(--border); background: var(--panel); border-radius: 12px; padding: 14px; cursor: pointer; font-size: 14.5px; text-align: left; color: var(--text); }
-  .opt:hover { border-color: var(--accent); }
-  .card { border: 1px solid var(--accent); border-radius: 16px; background: var(--panel); padding: 22px; margin-top: 18px; }
-  .card h2 { margin: 0 0 4px; font-size: 21px; }
-  .card .why { color: var(--muted); font-size: 13.5px; }
-  .card ul { padding-left: 20px; } .card li { margin: 6px 0; font-size: 14.5px; }
-  pre.install { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; font-size: 13.5px; overflow-x: auto; user-select: all; }
-  .row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
-  .btn { border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 9px 14px; cursor: pointer; font-size: 13.5px; text-decoration: none; }
-  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .crumb { color: var(--muted); font-size: 12.5px; margin-top: 20px; }
-</style>
+<title>Moved to the Duet page | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/duet.html" />
+<meta http-equiv="refresh" content="0; url=duet.html" />
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}@media (prefers-color-scheme:light){body{background:#fff;color:#1f2328}a{color:#0969da}}</style>
 </head>
 <body>
-<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-<div class="q-wrap">
-  <h1>🎒 Your skill starter pack</h1>
-  <p class="lead">Two questions, no signup. Out the other end: the bundle that fits your actual week, three skills to run first, and the one-line install.</p>
-  <div id="app"></div>
-  <p class="crumb">Prefer to browse? <a href="catalog.html">The catalog</a> · <a href="find.html">describe your task</a> · <a href="index.html">the playground</a></p>
-</div>
-<script>
-// Answer → pack routing. Every bundle and skill named here exists in the repo —
-// keep this map honest when bundles change (drift is worse than absence).
-const ROLES = {
-  pm:        { label: '📋 Product manager', packs: {
-    ship:    { bundle: 'pm-essentials', why: 'The core product-craft set: specs, prioritisation, roadmaps.', first: ['prd-template', 'rice-prioritisation', 'roadmap-narrative'] },
-    stake:   { bundle: 'pm-essentials', why: 'Communication upward is the job — these make updates land.', first: ['executive-update', 'stakeholder-update', 'board-deck-narrative'] },
-    data:    { bundle: 'pm-data',       why: 'Metric questions deserve analysis structure, not vibes.', first: ['churn-analysis', 'ab-test-planner', 'cohort-analysis'] } } },
-  eng:       { label: '💻 Engineer / lead', packs: {
-    ops:     { bundle: 'pm-engineering', why: 'The rituals that keep systems honest: postmortems, ADRs, reviews.', first: ['incident-postmortem', 'architecture-decision-record', 'code-review-checklist'] },
-    docs:    { bundle: 'pm-engineering', why: 'Docs and specs are where engineering leverage compounds.', first: ['technical-spec-template', 'rfc-writer', 'developer-onboarding-doc'] },
-    career:  { bundle: 'pm-personal',    why: 'The interview-to-offer path, treated as an engineering problem.', first: ['system-design-interview', 'salary-negotiation', 'engineering-hiring-rubric'] } } },
-  founder:   { label: '🚀 Founder', packs: {
-    raise:   { bundle: 'pm-founders', why: 'Fundraise season: the deck, the update, the diligence prep.', first: ['investor-pitch-deck', 'investor-update', 'financial-due-diligence'] },
-    launch:  { bundle: 'pm-founders', why: 'Going to market with a checklist instead of adrenaline.', first: ['go-to-market', 'product-launch-checklist', 'pricing-strategy'] },
-    hire:    { bundle: 'pm-people',   why: 'The first hires set the culture — structure the calls.', first: ['hiring-rubric', 'job-description-writer', 'onboarding-plan'] } } },
-  cs:        { label: '🤝 Customer success', packs: {
-    save:    { bundle: 'pm-cs', why: 'At-risk accounts need a save play, not another check-in.', first: ['cs-health-scorecard', 'cs-escalation-brief', 'churn-analysis'] },
-    grow:    { bundle: 'pm-cs', why: 'Renewals and QBRs, prepared like they decide revenue — they do.', first: ['renewal-playbook', 'qbr-deck', 'customer-success-plan'] },
-    ops2:    { bundle: 'pm-cs', why: 'The account-management backbone: plans, maps, journeys.', first: ['account-plan', 'customer-journey-map', 'stakeholder-influence-mapper'] } } },
-  freelance: { label: '💼 Freelancer', packs: {
-    money:   { bundle: 'pm-freelance', why: 'Price it, invoice it, chase it — the unglamorous survival set.', first: ['pricing-your-services', 'invoice-generator', 'late-invoice-escalation'] },
-    win:     { bundle: 'pm-freelance', why: 'Winning work: proposals and pitches that read like a pro wrote them.', first: ['proposal-writer', 'partnership-proposal', 'media-pitch'] },
-    brand:   { bundle: 'pm-personal',  why: 'The public surface: bio, LinkedIn, portfolio, one-pager.', first: ['personal-bio', 'linkedin-profile', 'portfolio-page'] } } },
-  life:      { label: '🏠 Just… life', packs: {
-    sign:    { bundle: 'pm-decoders', why: 'Read the fine print before it costs you — leases, bills, offers.', first: ['lease-decoder', 'medical-bill-decoder', 'benefits-decoder'] },
-    moneyL:  { bundle: 'pm-decoders', why: 'The big-money decisions, with honest math and labeled assumptions.', first: ['rent-vs-buy', 'fire-number', 'debt-payoff'] },
-    job:     { bundle: 'pm-jobsearch', why: 'The interview gauntlet, from decoded posting to negotiated offer.', first: ['job-application', 'salary-negotiation', 'the-visa-interview'] } } },
-};
-const PAIN_LABELS = {
-  ship: '🚢 Shipping the next thing', stake: '🗣 Being heard by execs', data: '📉 A metric moved and nobody knows why',
-  ops: '🚨 Incidents & tech debt', docs: '📝 Specs & docs nobody reads', career: '🧗 My own next role',
-  raise: '💸 Raising money', launch: '🚀 Launching', hire: '🧑‍🤝‍🧑 First hires',
-  save: '🔥 An account is at risk', grow: '📈 Renewals & QBRs', ops2: '🗺 Getting organised',
-  money: '💰 Getting paid properly', win: '🏆 Winning more work', brand: '✨ My public profile',
-  sign: '✍️ Something scary to sign', moneyL: '🏡 A big money decision', job: '🎯 Landing a job',
-};
-const app = document.getElementById('app');
-function pickRole() {
-  app.innerHTML = '<h2 style="font-size:18px">1 · What are you?</h2><div class="opts">' +
-    Object.entries(ROLES).map(([k, r]) => '<button class="opt" onclick="pickPain(\'' + k + '\')">' + r.label + '</button>').join('') + '</div>';
-}
-function pickPain(roleKey) {
-  const r = ROLES[roleKey];
-  app.innerHTML = '<h2 style="font-size:18px">2 · What does this week actually look like?</h2><div class="opts">' +
-    Object.keys(r.packs).map((p) => '<button class="opt" onclick="result(\'' + roleKey + '\',\'' + p + '\')">' + PAIN_LABELS[p] + '</button>').join('') +
-    '</div><button class="btn" onclick="pickRole()">← back</button>';
-}
-function result(roleKey, painKey) {
-  const pack = ROLES[roleKey].packs[painKey];
-  const install = 'npx pm-claude-skills add --agent claude --bundle ' + pack.bundle;
-  const share = 'My AI starter pack: the ' + pack.bundle + ' bundle from PM Skills (1255 free professional skills) — first up: ' + pack.first.join(', ') + '. https://mohitagw15856.github.io/pm-claude-skills/starter-pack.html';
-  app.innerHTML = '<div class="card"><h2>🎒 The ' + pack.bundle + ' pack</h2>' +
-    '<div class="why">' + pack.why + '</div>' +
-    '<ul>' + pack.first.map((s) => '<li><a href="skill/' + s + '.html">' + s + '</a></li>').join('') + '</ul>' +
-    '<pre class="install">' + install + '</pre>' +
-    '<div class="row">' +
-    '<button class="btn primary" onclick="navigator.clipboard.writeText(this.parentElement.previousElementSibling.textContent).then(()=>this.textContent=\'✓ copied\')">Copy install</button>' +
-    '<a class="btn" href="index.html?skill=' + pack.first[0] + '">▶ Run ' + pack.first[0] + ' now</a>' +
-    '<button class="btn" onclick="navigator.clipboard.writeText(' + JSON.stringify(share).replace(/"/g, '&quot;') + ').then(()=>this.textContent=\'✓ copied — paste anywhere\')">Share my pack</button>' +
-    '</div></div><button class="btn" style="margin-top:12px" onclick="pickRole()">↻ start over</button>';
-}
-pickRole();
-</script>
-<script src="nav.js"></script>
+<main><p>This page has been retired to keep the site focused. Continue to <a href="duet.html">the Duet page</a>.</p></main>
+<script>location.replace('duet.html' + location.search + location.hash);</script>
 </body>
 </html>

@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Make the monthly town hall not boring."
 - "How do we share the numbers with everyone?"
 - "Announce this change at all-hands."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/all-hands-deck.html

@@ -80,3 +80,5 @@ Ask for these if not provided:
 - "What does this admission agreement mean?"
 - "Can they raise the fees?"
 - "Can they make my parent leave?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/care-home-contract-decoder.html

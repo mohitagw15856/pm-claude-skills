@@ -66,3 +66,5 @@ Consulting discovery / sales-qualification practice — root-cause questioning, 
 - "Qualify a consulting lead."
 - "Scope an engagement."
 - "Run a kickoff."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/client-discovery.html

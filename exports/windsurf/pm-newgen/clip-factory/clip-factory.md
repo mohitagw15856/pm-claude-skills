@@ -106,3 +106,8 @@ the hooks work.
 - "Clip this podcast."
 - "Make shorts from my video."
 - "What's clippable here?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/clip-factory.html
+
+<!-- pm-claude-skills v84.0.0 | skill: clip-factory | source: skills/clip-factory/SKILL.md | sha256: 65a782f6ed7e9770da6fd285914d65055035af67da85cfa77670c315af6c828b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

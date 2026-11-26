@@ -156,3 +156,5 @@ Before outputting the report, verify:
 - "Research [topic] from the last 30 days"
 - "Give me a signal report on [product]"
 - "What's the Reddit and Twitter take on [trend]?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/last-30-days-research.html

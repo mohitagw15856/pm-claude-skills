@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Interrogate my argument before I present it."
 - "Make me defend this — what would a skeptic ask?"
 - "Grill me on whether this is a good idea."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cross-examine-me.html

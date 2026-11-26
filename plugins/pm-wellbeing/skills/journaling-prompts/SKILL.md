@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Prompts for processing a breakup."
 - "Morning journaling prompts for motivation and goals."
 - "Help me reflect on a stressful week."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/journaling-prompts.html

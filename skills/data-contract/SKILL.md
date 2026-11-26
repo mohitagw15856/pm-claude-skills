@@ -65,3 +65,5 @@ Data-contract practice — schema + semantics + measurable quality SLAs, semanti
 - "Define a schema agreement."
 - "Set data SLAs."
 - "Stop a producer from silently breaking downstream consumers."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-contract.html

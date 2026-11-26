@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-retail-shopfloor",
+  "version": "1.0.0",
+  "description": "Run a shop floor: build the rota, plan and reconcile a stock take, write the shrink report, and hand a shift over so nothing is dropped",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "retail",
+    "shop-floor",
+    "rota",
+    "stock-take",
+    "shrink",
+    "handover"
+  ]
+}

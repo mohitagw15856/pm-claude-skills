@@ -79,3 +79,5 @@ For each paper: internal validity, external validity, bias types, effect size si
 - "Write a literature review on [topic]"
 - "Synthesise the evidence on [topic] from these papers: [paste]"
 - "Write the background section for my research proposal on [topic]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/literature-review.html

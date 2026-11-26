@@ -10,7 +10,7 @@ This skill produces a professional influencer campaign brief that a creator can 
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Brand / product name** — what is being promoted
 - **Campaign goal** — what you want the partnership to achieve (awareness / sales / sign-ups / content creation / event promotion)
 - **Influencer type / tier** — nano (1K–10K), micro (10K–100K), macro (100K–1M), mega/celebrity (1M+)
@@ -249,3 +249,8 @@ How we'll measure success:
 - "Draft a brief for a TikTok influencer collab"
 - "Build a paid partnership brief for [brand]"
 - "What should I include in an influencer campaign brief?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/influencer-brief.html
+
+<!-- pm-claude-skills v84.0.0 | skill: influencer-brief | source: skills/influencer-brief/SKILL.md | sha256: 5532bca87d824fd4759abae0b39cb0e76f9aa3bde518b1cd0d1077691e7cf8f7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -55,6 +55,10 @@ jobs:
         if: ${{ env.SKIP != '1' }}
         run: clawhub login --token "$CLAWHUB_TOKEN" --no-browser --label "github-action"
 
+      - name: Build the exports (not committed; generated from skills/)
+        if: ${{ env.SKIP != '1' }}
+        run: node scripts/build-exports.mjs
+
       - name: Sync (publish new/changed skills)
         if: ${{ env.SKIP != '1' }}
         # The CLI has no per-request timeout and retries against the 200/24h rate

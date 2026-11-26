@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "My custom instructions aren't working well anymore — fix them."
 - "Maintain my MEMORY.md with how I've been working lately."
 - "My AI keeps getting me wrong — check my context file."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/memory-file-maintenance.html

@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "My email is out of control."
 - "Build me an email triage system."
 - "Process this backlog."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/email-triage-system.html

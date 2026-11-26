@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "What would different kinds of people think about this plan?"
 - "I want a range of views on this, not one safe answer."
 - "Run this decision through several clashing viewpoints."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/five-minds.html

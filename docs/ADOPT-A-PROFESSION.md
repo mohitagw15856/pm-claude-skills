@@ -1,6 +1,6 @@
 # 🤝 Adopt a Profession — put your field's judgment in the library
 
-The library covers 31 professions; the working world has hundreds. Each unserved profession below is an open quest: **you bring the field's judgment, the infrastructure is already built** — scaffold, CI, playground, distribution to 12 platforms, and your name on the bundle.
+The library covers 31 professions; the working world has hundreds. Each unserved profession below is an open quest: **you bring the field's judgment, the infrastructure is already built** — scaffold, CI, playground, distribution to 15 platforms, and your name on the bundle.
 
 ## What adopting means
 

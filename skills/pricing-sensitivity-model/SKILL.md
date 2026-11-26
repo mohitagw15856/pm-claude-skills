@@ -54,3 +54,5 @@ It prints the points (`n=40 OPP=12.05 IPP=12.75 range=9.66–15.05 dropped=1`) a
 - "Find our acceptable price range."
 - "Analyse this pricing survey."
 - "Plan a four-question pricing survey."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-sensitivity-model.html

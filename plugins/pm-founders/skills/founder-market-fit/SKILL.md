@@ -57,3 +57,5 @@ Crisp answers to the classic prompts:
 - "Write the founder story."
 - "Draft YC / accelerator application answers."
 - "Explain founder-market fit."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/founder-market-fit.html

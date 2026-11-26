@@ -1,6 +1,6 @@
 ---
 trigger: model_decision
-description: "Work through who and what has to be notified after someone dies — the people, agencies, banks, and accounts — in a sane order, so nothing critical is missed while grieving. Use when asked who do I need to notify when someone dies, what to do after a death checklist, or how do I handle my parent's accounts after they died. Produces an ordered notification checklist (immediate people, then government/SSA, then financial, then subscriptions/digital), what each notification needs (death certificates, account numbers), how many death certificates to order, what to stop vs. transfer vs. close, and the scams that target the newly bereaved — so the administrative avalanche becomes a calm sequence. Not legal or financial advice; points to probate/estate resources."
+description: "Work through who and what has to be notified after someone dies — the people, agencies, banks, and accounts — in a sane order, so nothing critical is missed while grieving. Use when asked who do I need to notify when someone dies, what to do after a death checklist, or how do I handle my parent's accounts after they died. Produces an ordered notification checklist (immediate people, then government/SSA, then financial, then subscriptions/digital), what each notification needs (death certificates, account numbers), how many death certificates to order, what to stop vs. transfer vs. close, and the scams that target the newly bereaved. Not legal or financial advice."
 ---
 
 # Notify Everyone of a Death
@@ -68,3 +68,8 @@ Ask for these if not provided:
 - "How do I handle my mother's accounts and benefits after she passed?"
 - "How many death certificates should I order?"
 - "What has to happen this week vs. what can wait after a death?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/notify-everyone-of-a-death.html
+
+<!-- pm-claude-skills v84.0.0 | skill: notify-everyone-of-a-death | source: skills/notify-everyone-of-a-death/SKILL.md | sha256: bd8c836903c154aac897c58d9d60f8cb1af5e2da430d02e2bcf1f69846a62b82 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

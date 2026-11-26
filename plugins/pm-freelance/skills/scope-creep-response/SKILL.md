@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Is this scope creep?"
 - "How do I say that's out of scope nicely?"
 - "Write a change order email."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/scope-creep-response.html

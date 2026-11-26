@@ -3,76 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
-<title>Local Documents — run skills on files that never leave your machine</title>
-<meta name="description" content="A Cockpit-only superpower: point at a folder, pick a document, run any skill against it. With Ollama selected as the provider, the document never leaves your machine — decode a real lease fully offline." />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  .l-wrap { max-width: 760px; margin: 0 auto; padding: 16px 22px 70px; }
-  .row { display: flex; gap: 8px; margin: 12px 0; }
-  #folder { flex: 1; padding: 10px 13px; background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 10px; }
-  .file { border: 1px solid var(--border); border-radius: 10px; background: var(--panel); padding: 10px 14px; margin: 7px 0; display: flex; justify-content: space-between; align-items: center; font-size: 13.5px; }
-  .file button { white-space: nowrap; }
-  .mini { color: var(--muted); font-size: 12px; }
-  .gate { border: 1px dashed var(--border); border-radius: 13px; padding: 18px; color: #c7cfda; font-size: 14px; margin-top: 18px; }
-</style>
+<title>Moved to the playground | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/index.html" />
+<meta http-equiv="refresh" content="0; url=index.html" />
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}@media (prefers-color-scheme:light){body{background:#fff;color:#1f2328}a{color:#0969da}}</style>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand"><img src="assets/product-notes.jpg" alt="" class="brand-logo" />
-    <div class="brand-text"><h1>Local Documents</h1><p class="tagline">Your files. Your machine. Optionally, only your machine.</p></div></div>
-</header>
-<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-
-<div class="l-wrap">
-  <div id="gate" class="gate" hidden>
-    🖥 This page's powers live in the <strong>Cockpit desktop app</strong> — the browser can't read your folders (that's a feature). Get the installer from the <a href="https://github.com/mohitagw15856/pm-claude-skills/releases?q=cockpit">releases page</a>, or paste a document into <a href="fineprint.html">The Fine Print</a> instead.
-  </div>
-
-  <div id="app" hidden>
-    <p class="mini">Point at a folder; text documents (≤512KB) are listed. Pick one, pick a skill, and it opens pre-filled in the playground. <strong>Select Ollama as the provider and the document never leaves this machine.</strong></p>
-    <div class="row">
-      <input id="folder" placeholder="/Users/you/Documents/contracts" / aria-label="/Users/you/Documents/contracts">
-      <button id="scan" class="primary" type="button">📂 Scan</button>
-    </div>
-    <div class="row">
-      <label class="mini" style="align-self:center">Run with:</label>
-      <select id="skillPick" aria-label="Choose a skill"><option value="lease-decoder">lease-decoder</option></select>
-    </div>
-    <div id="files"></div>
-  </div>
-</div>
-
-<script>
-const el = (id) => document.getElementById(id);
-const inCockpit = !!(window.__TAURI__ && window.__TAURI__.core);
-el(inCockpit ? 'app' : 'gate').hidden = false;
-window.__localdocsReady = true;
-if (window.pmTrack) pmTrack('localdocs/open');
-
-if (inCockpit) {
-  const invoke = window.__TAURI__.core.invoke;
-  fetch('skills.json').then((r) => r.json()).then(({ skills }) => {
-    el('skillPick').innerHTML = skills.map((s) => '<option value="' + s.name + '"' + (s.name === 'lease-decoder' ? ' selected' : '') + '>' + s.title + '</option>').join('');
-  });
-  el('scan').onclick = async () => {
-    try {
-      const files = await invoke('read_local_folder', { path: el('folder').value.trim() });
-      el('files').innerHTML = files.map((f) =>
-        '<div class="file"><span>📄 ' + f.name + ' <span class="mini">(' + Math.round(f.size / 1024) + 'KB)</span></span>' +
-        '<button class="exp-btn" data-p="' + f.path.replace(/"/g, '&quot;') + '">▶ Run skill</button></div>'
-      ).join('') || '<div class="mini">No text documents in that folder.</div>';
-      el('files').querySelectorAll('button').forEach((b) => b.onclick = async () => {
-        const text = await invoke('read_local_file', { path: b.dataset.p });
-        const i = encodeURIComponent(btoa(unescape(encodeURIComponent(JSON.stringify([text])))));
-        location.href = 'index.html?skill=' + el('skillPick').value + '&i=' + i;
-      });
-      if (window.pmTrack) pmTrack('localdocs/scan');
-    } catch (e) { el('files').innerHTML = '<div class="mini">⚠ ' + e + '</div>'; }
-  };
-}
-</script>
-<script src="i18n.js"></script>
-<script src="nav.js"></script>
+<main><p>This page has been retired to keep the site focused. Continue to <a href="index.html">the playground</a>.</p></main>
+<script>location.replace('index.html' + location.search + location.hash);</script>
 </body>
 </html>

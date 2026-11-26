@@ -61,3 +61,5 @@ Ask for these if not provided:
 - "Fact-check this AI output — I'm about to publish it."
 - "Is this AI response reliable enough to act on?"
 - "What in this AI answer should I double-check?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-output-verifier.html

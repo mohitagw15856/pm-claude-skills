@@ -156,3 +156,8 @@ Before outputting the report, verify:
 - "Research [topic] from the last 30 days"
 - "Give me a signal report on [product]"
 - "What's the Reddit and Twitter take on [trend]?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/last-30-days-research.html
+
+<!-- pm-claude-skills v84.0.0 | skill: last-30-days-research | source: skills/last-30-days-research/SKILL.md | sha256: 1f5780d5675a8c41a11be6e46c428ea5e8ef75b91ea60814a37ea17f1fb89558 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -87,3 +87,5 @@ Ask for these if not provided:
 - "What should I check before designing on this site?"
 - "Write a feasibility appraisal for a backland site"
 - "What are the constraints on this site?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/site-analysis-report.html

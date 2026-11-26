@@ -91,3 +91,5 @@ CSRD/ESRS disclosure architecture (double materiality, policies–actions–metr
 - "Draft an ESRS or CSRD disclosure."
 - "Prepare an ESG section for an annual report."
 - "Turn raw sustainability data into disclosure text."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/esg-disclosure-draft.html

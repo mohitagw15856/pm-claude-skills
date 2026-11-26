@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "I say yes to everything and drown."
 - "Push back on my manager."
 - "Protect the roadmap from a pet feature."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/saying-no-kindly.html

@@ -86,3 +86,5 @@ Ask for these if not provided:
 - "Patient was told they have bone on bone — what do I say?"
 - "Write patient education about why movement helps"
 - "How do I reassure someone honestly when I am not certain?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/patient-education-explainer.html

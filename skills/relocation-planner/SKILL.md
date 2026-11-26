@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "Help me plan my move."
 - "I'm moving in six weeks what do I do."
 - "Move to another country logistics."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/relocation-planner.html

@@ -249,3 +249,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Build the business review deck for this customer."
 - "Prepare the executive review."
 - "Plan the quarterly check-in with this account."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/qbr-deck.html

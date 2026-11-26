@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Should I sign this severance agreement right away?"
 - "I was made redundant — what am I entitled to and what do I sort out?"
 - "How do I not panic after a layoff and do the right things?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/layoff-first-72-hours.html

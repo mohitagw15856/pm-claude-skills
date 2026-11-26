@@ -72,3 +72,8 @@ Ask for these if not provided:
 - "Plan what to load into the session."
 - "Why is every turn so expensive?"
 - "Design the context for this workflow."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-budget.html
+
+<!-- pm-claude-skills v84.0.0 | skill: context-budget | source: skills/context-budget/SKILL.md | sha256: 33f6ecf4d5edf186843c5d20342bb491b29cb8d77d27e80884815a5609a3c9a4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

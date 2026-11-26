@@ -370,3 +370,5 @@ If this schema is being introduced to an existing system, note the migration app
 - "Model entities and relationships."
 - "Define table structures."
 - "Plan an index strategy."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/database-schema-design.html

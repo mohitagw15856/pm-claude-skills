@@ -9,7 +9,7 @@ This skill creates a complete, ready-to-execute UX research plan. Output covers 
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Research question** (what decision will this research inform?)
 - **Product area or feature** being researched
 - **Research type** (Generative / Evaluative / Usability testing / Diary study / Survey)
@@ -166,3 +166,8 @@ For each insight: "This means we should [design/product implication]" or "This c
 - "Create a discussion guide for user interviews about [topic]"
 - "Plan a usability test for [prototype or feature]"
 - "Write screener questions for [target user type]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ux-research-plan.html
+
+<!-- pm-claude-skills v84.0.0 | skill: ux-research-plan | source: skills/ux-research-plan/SKILL.md | sha256: 161c35aab7635c1399fa063f81277d0f93f6b2e3a977c5fb0a5b8968faf63663 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

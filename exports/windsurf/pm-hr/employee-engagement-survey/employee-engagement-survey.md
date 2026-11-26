@@ -9,7 +9,7 @@ Designs complete employee engagement surveys and provides a framework for analys
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Mode** — designing a new survey or analysing existing results
 - **Survey type** (annual / quarterly pulse / post-onboarding / exit / specific topic)
 - **Company name** (for personalisation of question text)
@@ -117,3 +117,8 @@ eNPS: Below 0 = Concerning / 0-30 = Good / 30-70 = Great / 70+ = Excellent
 - "Create an employee engagement survey for our team"
 - "Design a pulse survey for [topic]"
 - "Analyse these engagement survey results: [paste]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/employee-engagement-survey.html
+
+<!-- pm-claude-skills v84.0.0 | skill: employee-engagement-survey | source: skills/employee-engagement-survey/SKILL.md | sha256: 42320e71f60b735e7f934ca234530fcdedec434cd9276af412d30c7a2b7316a5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

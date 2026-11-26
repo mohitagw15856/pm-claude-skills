@@ -67,3 +67,5 @@ Ask for these only if they aren't already provided:
 - "Build a 1:1 agenda."
 - "Prepare to talk to your manager."
 - "Raise something hard in a 1:1."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/one-on-one-prep.html

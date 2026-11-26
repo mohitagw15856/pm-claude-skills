@@ -75,3 +75,5 @@ The records to keep: the export declaration data, invoices, contract, logistics 
 - "这个产品的申报要素怎么填？HS 编码是 8516.79。"
 - "出口退税需要留存哪些单证？"
 - "List the customs documents for exporting furniture from China."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-customs-docs.html

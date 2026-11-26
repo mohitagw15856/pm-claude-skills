@@ -66,3 +66,5 @@ Source: [sunrise-sunset.org / Open-Meteo] · times local to [zone] · rerun: `[e
 - "When's golden hour for my shoot?"
 - "How long is the day?"
 - "What's the moon phase tonight?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sun-and-moon.html

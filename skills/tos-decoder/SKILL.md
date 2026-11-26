@@ -79,3 +79,5 @@ Consumer-contract review practice — impact-ranked clause triage, license-scope
 - "Decode this privacy policy."
 - "Is this ToS bad?"
 - "Should I click accept?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tos-decoder.html

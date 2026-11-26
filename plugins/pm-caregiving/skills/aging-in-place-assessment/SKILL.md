@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Is it still safe for my parent to live independently?"
 - "What do we need to set up so my grandma can stay in her home?"
 - "How do I bring up that home might not be safe anymore, respectfully?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/aging-in-place-assessment.html

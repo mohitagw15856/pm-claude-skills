@@ -66,3 +66,5 @@ End verbatim: *"This is a plain-language reading, not financial advice — lease
 - "Is this lease deal good?"
 - "What's a money factor?"
 - "Review this lease before I sign."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/car-lease-decoder.html

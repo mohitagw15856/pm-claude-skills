@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "We're moving floors/buildings in six weeks."
 - "Who owns what in the move?"
 - "Make day one at the new office not a disaster."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/office-move-runbook.html

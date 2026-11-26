@@ -8,9 +8,45 @@ version: 1.0.0
 
 This skill helps create professional Product Requirements Documents following industry best practices.
 
+## Where this sits — the middle of the spine
+
+Second in the product-decision spine: **`/assumption-mapper` → `prd-template` →
+`/rice-prioritisation` → `/roadmap-narrative`**. It receives **the riskiest assumption**
+from `/assumption-mapper` (if that ran, read its map instead of re-guessing the risks)
+and hands `/rice-prioritisation` **the PRD's success metric** — the one baselined number
+that becomes RICE's *Impact*. Shared terms (problem statement, hypothesis, success
+metric, provenance) live once in
+[`docs/craft/product-decisions.md`](../../docs/craft/product-decisions.md); use them
+exactly.
+
+## The loop
+
+A PRD is written outside-in — problem before solution, always — in four phases. Phase 1
+is load-bearing: a PRD built on a fuzzy problem is polished the whole way down and still
+wrong.
+
+1. **Lock the problem statement.** One sentence: who has what problem, when, and the
+   cost of leaving it. No solution language. Everything below must ladder to this.
+   **Done when:** the problem statement stands alone with no feature named in it, and a
+   stranger could tell what "solved" means.
+2. **Baseline the success metric.** The one number that proves the problem got solved —
+   with its *current baseline* and the move that counts as success. Carry any upstream
+   `/assumption-mapper` risk here as an Open Question, not a silent bet.
+   **Done when:** the metric has a baseline (or is explicitly flagged un-baselined),
+   and it measures the problem, not activity.
+3. **Draft the sections, each tracing up.** Fill the template (below) so every
+   requirement and story traces to the problem statement; drop anything that doesn't.
+   Tag facts with provenance — a guessed number is a [hunch], labeled.
+   **Done when:** every requirement traces to the problem statement, and every claimed
+   fact carries [data]/[hunch]/[assumption].
+4. **Hand off.** Surface the success metric and the initiative(s) so
+   `/rice-prioritisation` can score Impact from *this* metric, not a re-invented one.
+   **Done when:** the PRD names the metric and scope `/rice-prioritisation` would need
+   to score it without re-asking.
+
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Feature or product name**
 - **Problem being solved** (from the user's perspective)
 - **Target user** (role, context, what they're trying to accomplish)
@@ -91,6 +127,8 @@ Format: "As a [user type], I want to [action] so that [benefit]"
 - Research links
 - Related documents
 - Competitive analysis
+
+End every output with a short **Assumptions and gaps** block: two to four bullets naming what was assumed because the input did not say, and what missing information would most change this output. If nothing was assumed and nothing was missing, say so in one line instead.
 
 ## Writing Guidelines
 
@@ -207,3 +245,5 @@ Acceptance Criteria:
 - "Write a product spec for this feature."
 - "Write the feature specification."
 - "Write a requirements document for a new feature."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prd-template.html

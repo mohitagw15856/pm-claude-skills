@@ -671,3 +671,5 @@ This skill is designed for public posts only. It does not support login, session
 ---
 
 *Originally inspired by a skill from Frank and Diana Dovgopol (Write, Prompt, Scale) — adapted and extended for this library.*
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/instagram-post-downloader.html

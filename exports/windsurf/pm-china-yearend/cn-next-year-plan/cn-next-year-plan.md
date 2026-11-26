@@ -68,3 +68,8 @@ A short script: the proposed goals, the resources needed, what will be dropped t
 - "公司用 KPI 考核，帮我定明年 KPI 和权重。"
 - "年初目标沟通前，我该怎么跟老板谈？"
 - "Help me set next year's personal OKRs and a development plan for my Chinese employer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-next-year-plan.html
+
+<!-- pm-claude-skills v84.0.0 | skill: cn-next-year-plan | source: skills/cn-next-year-plan/SKILL.md | sha256: 947ea4d1303e1e164667fb906241b3df9def4ef370ce3decbc1bf9fd72c188de | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

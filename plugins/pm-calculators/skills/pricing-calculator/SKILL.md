@@ -76,3 +76,5 @@ Pricing & break-even analysis — contribution margin, break-even volume, price-
 - "Find break-even volume."
 - "Set tier prices to a margin target."
 - "Estimate the revenue effect of a pricing change."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-calculator.html

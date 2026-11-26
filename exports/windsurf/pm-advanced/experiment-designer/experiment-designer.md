@@ -9,7 +9,7 @@ Produce rigorous experiment designs from product hypotheses, and interpret resul
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 **For experiment design:**
 - Hypothesis (what change, what metric, what expected movement)
 - Current baseline metric value
@@ -83,3 +83,8 @@ Ask the user for these if not provided:
 - "Calculate sample size."
 - "Interpret test results."
 - "Assess whether an experiment was successful."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/experiment-designer.html
+
+<!-- pm-claude-skills v84.0.0 | skill: experiment-designer | source: skills/experiment-designer/SKILL.md | sha256: 63eff237a006279fae4e6a4859f538c42d648ee526baf81ef8615857feaf0d41 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

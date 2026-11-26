@@ -1,33 +1,33 @@
 ---
 # machine-translated to es from skills/feature-prioritisation/SKILL.md — review: pending. Native fixes welcome via PR.
 name: feature-prioritisation
-description: "Aplicar marcos de priorización (RICE, MoSCoW, Kano, ICE, Opportunity Scoring) para clasificar características y elementos de backlog. Usar cuando se solicite priorizar características, clasificar un backlog, decidir qué construir a continuación, o evaluar compensaciones entre ideas en competencia. Produce una lista de características clasificada y puntuada con tablas específicas del marco, orden de construcción recomendado, elementos depriorizados, y supuestos realizados."
+description: "Aplica marcos de priorización (RICE, MoSCoW, Kano, ICE, Opportunity Scoring) para clasificar características e items del backlog. Úsalo cuando se te pida priorizar características, clasificar un backlog, decidir qué construir a continuación, o evaluar compensaciones entre ideas competidoras. Produce una lista de características puntuada y clasificada con tablas específicas del marco, orden de construcción recomendado, items depriorizados, y supuestos realizados."
 ---
 
 # Skill de Priorización de Características
 
-Aplicar el marco de priorización correcto a cualquier backlog y producir una clasificación clara y defendible con justificación — no solo una lista ordenada.
+Aplica el marco de priorización correcto a cualquier backlog y produce una clasificación clara y defendible con justificación — no solo una lista ordenada.
 
-## Entradas Requeridas
+## Inputs Requeridos
 
-Solicitar al usuario estos datos si no se proporcionan:
+Trabaja con lo que se proporciona. Si falta alguno de estos, aun así produce el output completo: rellena cada vacío con un supuesto razonable marcado *(asumido, confirmar)* y lista esos supuestos al final. Solo haz una pregunta cuando el tema central en sí está ausente (no hay nada sobre lo que escribir).
 - **Lista de características o iniciativas a priorizar**
-- **Objetivo o métrica** siendo priorizada (OKR, lanzamiento, sprint)
-- **Marco preferido** (o recomendar basado en contexto más abajo)
+- **Objetivo o métrica** siendo priorizado (OKR, lanzamiento, sprint)
+- **Marco preferido** (o recomienda basándote en el contexto abajo)
 - **Datos del equipo**: estimaciones de alcance, estimaciones de esfuerzo, velocidad (para RICE)
 
 ## Guía de Selección de Marco
 
-Preguntar al usuario qué marco prefiere, o recomendar basado en contexto:
+Pregunta al usuario qué marco prefiere, o recomienda basándote en el contexto:
 
 | Situación | Marco Recomendado |
 |---|---|
-| Necesitar una puntuación rápida basada en datos | RICE |
+| Necesitas una puntuación rápida y basada en datos | RICE |
 | Reunión de alineación de stakeholders | MoSCoW |
-| Entender deleite del cliente vs expectativas | Kano |
-| Startup en fase temprana, decisiones rápidas | ICE |
-| Identificar necesidades de clientes infraservidas | Opportunity Scoring |
-| Decisiones estratégicas de cartera | Matriz de Valor vs Esfuerzo |
+| Entender la satisfacción del cliente vs expectativas | Kano |
+| Startup en etapa temprana, decisiones rápidas | ICE |
+| Identificar necesidades de clientes desatendidas | Opportunity Scoring |
+| Decisiones de portafolio estratégico | Value vs Effort Matrix |
 
 ---
 
@@ -39,10 +39,10 @@ Preguntar al usuario qué marco prefiere, o recomendar basado en contexto:
 |---|---|---|
 | Alcance | Usuarios impactados por trimestre | Número real |
 | Impacto | Efecto en el objetivo por usuario | 0.25 / 0.5 / 1 / 2 / 3 |
-| Confianza | Qué tan seguro estás? | 50% / 80% / 100% |
-| Esfuerzo | Personas-mes requeridos | Número real |
+| Confianza | ¿Cuán seguro estás? | 50% / 80% / 100% |
+| Esfuerzo | Personas-mes requeridas | Número real |
 
-Tabla de salida:
+Tabla de output:
 | Característica | Alcance | Impacto | Confianza | Esfuerzo | Puntuación RICE | Prioridad |
 |---|---|---|---|---|---|---|
 
@@ -50,19 +50,19 @@ Tabla de salida:
 
 ## Método MoSCoW
 
-Categorizar cada característica como:
-- **Must Have** — no negociable para lanzamiento/sprint; el producto falla sin ella
-- **Should Have** — importante pero no crítica; existen soluciones alternativas
+Clasifica cada característica como:
+- **Must Have** — innegociable para el lanzamiento/sprint; el producto falla sin ella
+- **Should Have** — importante pero no crítico; existen alternativas
 - **Could Have** — agradable de tener; incluir solo si hay tiempo
-- **Won't Have (this time)** — explícitamente fuera de alcance ahora; puede revisitarse
+- **Won't Have (esta vez)** — explícitamente fuera de alcance ahora; puede revisarse después
 
-Siempre preguntar: "Must have para *qué*?" — definir el alcance (lanzamiento, sprint, trimestre) antes de categorizar.
+Siempre pregunta: "Must have para *qué*?" — define el alcance (lanzamiento, sprint, trimestre) antes de clasificar.
 
 ---
 
 ## Puntuación ICE (Startup/modo rápido)
 
-**Fórmula:** Impacto + Confianza + Facilidad (cada una 1–10)
+**Fórmula:** Impacto + Confianza + Facilidad (cada 1–10)
 
 Rápido, subjetivo — bueno para decisiones tempranas antes de que existan datos.
 
@@ -70,20 +70,20 @@ Rápido, subjetivo — bueno para decisiones tempranas antes de que existan dato
 
 ## Modelo Kano
 
-Clasificar características en:
-- **Basic (Must-be):** Esperado; la ausencia causa insatisfacción
-- **Performance:** Más = mejor satisfacción; relación lineal
-- **Excitement (Delighters):** Inesperado; crea deleite; la ausencia es neutral
-- **Indifferent:** A los usuarios no les importa de una forma u otra
-- **Reverse:** Algunos usuarios lo quieren, otros no
+Clasifica características en:
+- **Básico (Must-be):** Esperado; la ausencia causa insatisfacción
+- **Desempeño:** Más = mejor satisfacción; relación lineal
+- **Emocionante (Delighters):** Inesperado; crea delight; la ausencia es neutral
+- **Indiferente:** A los usuarios no les importa de ninguna forma
+- **Inverso:** Algunos usuarios lo quieren, otros no
 
-Recomendar construir: todas las características Basic primero → características Performance para casos de uso clave → 1–2 características Excitement por release.
+Recomienda construir: todas las características Básicas primero → características de Desempeño para casos de uso clave → 1–2 características Emocionantes por release.
 
 ---
 
 ## Helper Programático
 
-Este skill incluye un script Python que solo usa stdlib y que calcula la clasificación para los marcos basados en matemáticas (RICE, ICE) para que la puntuación de características sea consistente entre sesiones.
+Este skill incluye un script Python que solo usa stdlib y que calcula clasificaciones para los marcos basados en matemáticas (RICE, ICE) para que la puntuación de características sea consistente entre sesiones.
 
 ```bash
 # RICE desde JSON
@@ -95,16 +95,16 @@ python3 scripts/feature_prioritisation.py initiatives.csv --framework rice --for
 # ICE desde JSON
 python3 scripts/feature_prioritisation.py features.json --framework ice
 
-# Pasar mediante pipe
+# Pipe hacia él
 printf '%s\n' '[{"name":"API refactor","impact":8,"confidence":80,"ease":5}]' \
   | python3 scripts/feature_prioritisation.py --framework ice -
 ```
 
-Usar `--json` para producir salida legible por máquina para herramientas posteriores.
+Usa `--json` para producir output legible por máquina para herramientas posteriores.
 
 ---
 
-## Formato de Salida
+## Formato de Output
 
 ### Priorización de Características — [Producto/Equipo] — [Fecha]
 
@@ -115,11 +115,11 @@ Usar `--json` para producir salida legible por máquina para herramientas poster
 [Tabla puntuada usando marco seleccionado]
 
 **Orden de Construcción Recomendado:**
-1. [Característica] — [justificación de 1 línea]
-2. [Característica] — [justificación de 1 línea]
+1. [Característica] — [Justificación de 1 línea]
+2. [Característica] — [Justificación de 1 línea]
 3. ...
 
-**Explícitamente Depriorizadas:**
+**Explícitamente Depriorizados:**
 - [Característica] — Razón: [breve]
 
 **Supuestos Realizados:**
@@ -127,26 +127,51 @@ Usar `--json` para producir salida legible por máquina para herramientas poster
 
 ---
 
-## Directrices
+## Pautas
 
-- Siempre anclar la priorización a un objetivo o métrica específica — nunca priorizar en el vacío
-- Señalar cuando dos características tienen puntuaciones similares pero perfiles de riesgo muy diferentes
-- Si la política de stakeholders está influenciando la priorización, nombrarla explícitamente y sugerir separar la puntuación del marco de la decisión final
-- Recomendar revisitar prioridades cada 2 semanas como mínimo
-- Nunca producir una lista clasificada de una sola columna sin justificación — explicar las 3 decisiones superiores e inferiores
+- Siempre ancla la priorización a una métrica u objetivo específico — nunca priorices en el vacío
+- Señala cuando dos características tienen puntuaciones similares pero perfiles de riesgo muy diferentes
+- Si la política de stakeholders está influyendo en la priorización, nómbralo explícitamente y sugiere separar la puntuación del marco de la decisión final
+- Recomienda revisitar prioridades cada 2 semanas como mínimo
+- Nunca produzcas una lista clasificada de una sola columna sin justificación — explica las 3 principales y 3 peores decisiones
+
+## Materiales Profundos
+
+Este skill incluye archivos de apoyo — úsalos cuando estén disponibles:
+
+- **`references/framework-selection.md`** — Elegir el Marco de Priorización (En Lugar de Defaultear a RICE). Aplícalo mientras produces el output; contiene la calibración y los juicios de valor que el resumen del método anterior comprime.
+- **`templates/prioritisation-session.md`** — una versión para rellenar del entregable con los quality gates incluidos. Ofrécelo cuando el usuario quiera trabajar el documento él mismo en lugar de que se genere.
+
+## Rúbrica de Puntuación (0–40)
+
+Puntúa cualquier output de este skill antes de entregarlo; 32+ es de calidad lista para enviar.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Anclaje al objetivo | Sin objetivo declarado, o items silenciosamente puntuados contra objetivos diferentes | Un objetivo es nombrado pero las puntuaciones individuales no lo referencian; items fuera de objetivo puntuados de todas formas | Una métrica y alcance explícitos; cada puntuación justificada contra ella; items sirviendo un objetivo diferente rechazados con instrucciones para reenviar |
+| Integridad de puntuación | Marcos mezclados en una sesión, aritmética errónea, o escalas inventadas a mitad de tabla | Un marco aplicado consistentemente, pero confianza por defecto alta y anclajes de escala indefinidos | Marco consistente, matemáticas verificables, anclajes de impacto definidos, confianza reflejando honestamente la evidencia detrás de cada estimación |
+| Transparencia de cortes y supuestos | Items cortados simplemente desaparecen; sin registro de estimaciones o sus fuentes | Items depriorizados listados pero sin razones; supuestos parciales o sin fuente | Cada corte lleva una razón y trigger de revisita; supuestos nombran sus fuentes (analytics, estimaciones de ingeniería) para que la clasificación sea re-ejecutable |
+| Juicio más allá del número | Una tabla ordenada presentada como la decisión | Los picks principales reciben justificación, pero near-ties, perfiles de riesgo, y política van sin mencionar | Near-ties rotas en riesgo con razonamiento mostrado; presión política nombrada con puntuación del marco separada de la decisión final; top y bottom de lista ambos explicados |
 
 ## Verificaciones de Calidad
 
-- [ ] Cada elemento se puntúa contra el mismo objetivo o métrica (no diferentes objetivos por elemento)
-- [ ] Los elementos depriorizados se enumeran explícitamente con razones (no solo ausentes de la lista clasificada)
-- [ ] Los supuestos usados en la puntuación están documentados
-- [ ] La política de stakeholders o preferencias personales se separan de la puntuación del marco
+- [ ] Cada item es puntuado contra la misma métrica u objetivo (no objetivos diferentes por item)
+- [ ] Items depriorizados están explícitamente listados con razones (no solo ausentes de la lista clasificada)
+- [ ] Supuestos usados en la puntuación están documentados
+- [ ] La política de stakeholders o preferencias personales están separadas de la puntuación del marco
 - [ ] La priorización está anclada a un alcance específico (sprint / trimestre / lanzamiento)
 
 ## Anti-Patrones
 
-- [ ] No puntuaizar elementos contra diferentes objetivos — cada elemento en una sesión de priorización debe puntuarse contra el mismo objetivo
-- [ ] No omitir elementos depriorizados — enumerar explícitamente qué se eliminó y por qué es tan importante como la lista clasificada
-- [ ] No dejar que la política de stakeholders anule las puntuaciones del marco sin documentar el override y la razón
-- [ ] No mezclar puntuaciones RICE, ICE, o MoSCoW entre marcos en una sola sesión — elegir un marco por ejercicio de priorización
-- [ ] No tratar la salida como final sin documentar los supuestos usados en la puntuación — los supuestos cambian, y la lista debe ser revisitable
+- [ ] No puntúes items contra objetivos diferentes — cada item en una sesión de priorización debe ser puntuado contra el mismo objetivo
+- [ ] No omitas items depriorizados — listar explícitamente qué fue cortado y por qué es tan importante como la lista clasificada
+- [ ] No dejes que la política de stakeholders anule puntuaciones del marco sin documentar la anulación y razón
+- [ ] No mezcles puntuaciones RICE, ICE, o MoSCoW entre frameworks en una sola sesión — elige un framework por ejercicio de priorización
+- [ ] No trates el output como final sin documentar los supuestos usados en la puntuación — los supuestos cambian, y la lista debe ser revisitable
+
+## Frases Trigger de Ejemplo
+
+- "Prioriza características."
+- "Clasifica un backlog."
+- "Decide qué construir a continuación."
+- "Evalúa compensaciones entre ideas competidoras."

@@ -66,3 +66,5 @@ Everything needed, ready to gather.
 - "Write a lesson plan."
 - "Align a lesson to a standard."
 - "Turn a topic into a class period."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lesson-plan-builder.html

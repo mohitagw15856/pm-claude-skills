@@ -59,3 +59,5 @@ The 1–2 things a lawyer should confirm against the full contract.
 - "Decode legal language."
 - "Explain a term in a contract."
 - "Assess whether a provision is standard."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/clause-explainer.html

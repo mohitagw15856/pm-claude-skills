@@ -77,3 +77,5 @@ Frequentist A/B analysis — two-proportion z-test, confidence intervals, guardr
 - "Analyse experiment results."
 - "Check if a result is statistically significant."
 - "Decide ship/no-ship from test data."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/experiment-readout.html

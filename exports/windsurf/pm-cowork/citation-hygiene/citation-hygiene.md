@@ -70,3 +70,8 @@ Ask for these if not provided:
 - "Does every claim in this memo have a source?"
 - "Do these links actually say what we claim?"
 - "Set citation norms for the team."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/citation-hygiene.html
+
+<!-- pm-claude-skills v84.0.0 | skill: citation-hygiene | source: skills/citation-hygiene/SKILL.md | sha256: 866b7f5ea5295b45558272da7f45092207aa9e4e3c5de2b74caf0e5c5ac2039e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

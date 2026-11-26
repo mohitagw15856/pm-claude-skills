@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Organize our customer day/holiday party/launch event."
 - "What am I forgetting for this event?"
 - "Be the run-of-show for Thursday."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/company-event-ops.html

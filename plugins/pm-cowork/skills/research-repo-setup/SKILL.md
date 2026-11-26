@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "We keep re-learning the same things."
 - "Where do our user insights live?"
 - "Make past research findable."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/research-repo-setup.html

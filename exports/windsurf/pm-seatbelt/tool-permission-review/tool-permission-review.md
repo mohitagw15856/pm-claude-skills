@@ -73,3 +73,8 @@ Ask for these if not provided:
 - "What can this agent actually do?"
 - "Lock down my agent's tools."
 - "Is this MCP/tool set safe to grant?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tool-permission-review.html
+
+<!-- pm-claude-skills v84.0.0 | skill: tool-permission-review | source: skills/tool-permission-review/SKILL.md | sha256: e40af84e2adeba66732b8600cb3847f87e228c2d1e45929abdd4fb1f5a67a4d4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

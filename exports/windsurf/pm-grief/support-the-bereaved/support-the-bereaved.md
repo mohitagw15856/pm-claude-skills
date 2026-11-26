@@ -65,3 +65,8 @@ Ask for these if not provided:
 - "What should I write in a condolence card?"
 - "I want to support her but I'm afraid I'll say the wrong thing."
 - "How do I keep showing up for him months later?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/support-the-bereaved.html
+
+<!-- pm-claude-skills v84.0.0 | skill: support-the-bereaved | source: skills/support-the-bereaved/SKILL.md | sha256: 0360795a18fa42587aec16f0c5f128aafb3244a37c6aabc2d1c3553894ba8069 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

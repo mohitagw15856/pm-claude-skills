@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "I have $12 left on a store card — can I cash it out?"
 - "Where can I sell gift cards I won't use?"
 - "Someone told me to pay a fee with gift cards — is that a scam?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/gift-card-recovery.html

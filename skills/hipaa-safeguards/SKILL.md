@@ -75,3 +75,5 @@ HIPAA Security Rule (45 CFR §164.308–312) — administrative, physical, and t
 - "Assess HIPAA safeguards."
 - "Prepare for handling PHI/ePHI."
 - "Scope a BAA."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hipaa-safeguards.html

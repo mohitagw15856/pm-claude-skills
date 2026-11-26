@@ -39,6 +39,10 @@ Ask for (if not already provided):
 - Fixed obligations that can't just vanish (a job, dependents) and what flexibility
   exists around them
 
+## Working from a brief
+
+Given the condition and the pattern described, **write the plan anyway**: early warning signs phrased so they can tick or change them, the reduced flare-mode day, ready-to-send cancellation messages, food that needs no effort, and how to come back afterwards.
+
 ## Framework
 
 1. **Catch the flare early — the warning list is the prize.** Most flares have a
@@ -117,3 +121,5 @@ neuro-crash cousin; [[diagnosis-limbo-kit]] if the flaring condition is unnamed;
 - "I fall apart when a bad day hits."
 - "Help me prepare for flare-ups."
 - "Has a relapsing condition."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/flare-day-planner.html

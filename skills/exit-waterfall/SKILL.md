@@ -79,3 +79,5 @@ Input shape and worked example are in the script docstring. It brute-forces the 
 - "What do I get if we sell for X?"
 - "Explain liquidation preferences on my cap table."
 - "Compare payouts across exit prices."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exit-waterfall.html

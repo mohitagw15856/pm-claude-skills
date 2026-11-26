@@ -9,7 +9,7 @@ Apply the right prioritisation framework to any backlog and produce a clear, def
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **List of features or initiatives to prioritise**
 - **Goal or metric** being prioritised against (OKR, launch, sprint)
 - **Preferred framework** (or recommend based on context below)
@@ -174,3 +174,8 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Rank a backlog."
 - "Decide what to build next."
 - "Evaluate tradeoffs between competing ideas."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/feature-prioritisation.html
+
+<!-- pm-claude-skills v84.0.0 | skill: feature-prioritisation | source: skills/feature-prioritisation/SKILL.md | sha256: 1306f59a0a738ba0d4be686f668a3747dbdedb2e64509ba559a81555db5680ac | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

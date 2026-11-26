@@ -1,64 +1,37 @@
 #!/usr/bin/env node
-// Generates web/skill-changelog.json — a per-skill history derived from git, so a
-// user can see WHAT changed in a skill and WHEN, not just a single "updated" date.
-// Shape: { generatedAt, skills: { <name>: [{ date, subject, sha }] } } (newest first,
-// capped per skill). Pure function of git history → a build artifact (gitignored),
-// regenerated at deploy alongside the sitemap. No dependencies, no network.
-import { execFileSync } from 'node:child_process';
-import { writeFileSync, readdirSync, existsSync, readFileSync } from 'node:fs';
+// Builds web/skill-changelog.json: per-skill git history ({date, sha, subject}),
+// newest first, for `pm-claude-skills changelog <skill>` and for doctor's
+// "N skills changed since you installed" line. Built at deploy and at prepack;
+// never committed. Every real skill gets a key, even with an empty history.
+import { readdirSync, existsSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const skillsDir = join(root, 'skills');
-const outFile = join(root, 'web', 'skill-changelog.json');
-const CAP = 12; // most-recent commits per skill — enough for a history panel
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const LIMIT = Number(process.env.SKILL_CHANGELOG_LIMIT || 20000);
+const skills = {};
+for (const n of readdirSync(join(ROOT, 'skills')).sort()) if (existsSync(join(ROOT, 'skills', n, 'SKILL.md'))) skills[n] = [];
 
-const names = existsSync(skillsDir)
-  ? readdirSync(skillsDir).filter((n) => existsSync(join(skillsDir, n, 'SKILL.md')))
-  : [];
+let log = '';
+try {
+  log = execFileSync('git', ['log', `-n${LIMIT}`, '--format=%x1e%h%x09%as%x09%s', '--name-only', '--', 'skills/*/SKILL.md'], { cwd: ROOT, encoding: 'utf8', maxBuffer: 256 * 1024 * 1024 });
+} catch (e) { console.warn(`git log failed (${e.message.split('\n')[0]}); writing an empty changelog.`); }
 
-const out = { generatedAt: new Date().toISOString().slice(0, 10), skills: {} };
-
-// Shallow CI checkouts have truncated history — reuse the committed artifact so the
-// panel doesn't go blank (mirrors web/build-skills.mjs's handling of `updated`).
-let shallow = false;
-try { shallow = execFileSync('git', ['rev-parse', '--is-shallow-repository'], { cwd: root, encoding: 'utf8' }).trim() === 'true'; } catch { /* not a git repo */ }
-if (shallow && existsSync(outFile)) {
-  try { out.skills = JSON.parse(readFileSync(outFile, 'utf8')).skills || {}; } catch { /* start fresh */ }
-  writeFileSync(outFile, JSON.stringify(out, null, 2) + '\n');
-  console.log(`skill-changelog: shallow clone — reused ${Object.keys(out.skills).length} committed histories`);
-} else {
-  // One git call for all skills: log with a unique record separator, then bucket by
-  // the paths each commit touched. Cheaper than a git call per skill (750 of them).
-  const SEP = '';
-  let entries = [];
-  try {
-    const log = execFileSync(
-      'git', ['log', `--pretty=format:%h${SEP}%as${SEP}%s`, '--name-only', '--', 'skills/*/SKILL.md'],
-      { cwd: root, encoding: 'utf8', maxBuffer: 128 * 1024 * 1024 },
-    );
-    let cur = null;
-    for (const line of log.split('\n')) {
-      if (line.includes(SEP)) {
-        const [sha, date, subject] = line.split(SEP);
-        cur = { sha, date, subject };
-      } else if (cur && line.startsWith('skills/')) {
-        const name = line.split('/')[1];
-        if (name) entries.push({ name, ...cur });
-      }
-    }
-  } catch (e) {
-    console.error(`skill-changelog: git log failed (${e.message}) — writing empty history`);
-  }
-  const current = new Set(names);
-  for (const name of names) out.skills[name] = [];
-  for (const e of entries) {
-    if (!current.has(e.name)) continue; // skip since-renamed/removed skills
-    const list = out.skills[e.name];
-    if (list.length < CAP && !list.some((x) => x.sha === e.sha)) list.push({ date: e.date, subject: e.subject, sha: e.sha });
-  }
-  writeFileSync(outFile, JSON.stringify(out, null, 2) + '\n');
-  const withHistory = Object.values(out.skills).filter((a) => a.length).length;
-  console.log(`skill-changelog: ${withHistory}/${names.length} skills with history → web/skill-changelog.json`);
+let commits = 0;
+for (const chunk of log.split('\x1e').filter(Boolean)) {
+  const [head, ...files] = chunk.trim().split('\n');
+  const [sha, date, subject] = head.split('\t');
+  if (!sha) continue;
+  commits++;
+  const touched = new Set(files.map((f) => (f.match(/^skills\/([^/]+)\/SKILL\.md$/) || [])[1]).filter(Boolean));
+  // Library-wide commits (a regen touching hundreds of skills) are noise in a per-skill history.
+  if (touched.size > 200) continue;
+  for (const n of touched) if (skills[n]) skills[n].push({ date, sha, subject });
 }
+
+const out = { generated: new Date().toISOString().slice(0, 10), commits, skills };
+mkdirSync(join(ROOT, 'web'), { recursive: true });
+writeFileSync(join(ROOT, 'web', 'skill-changelog.json'), JSON.stringify(out));
+const withHistory = Object.values(skills).filter((h) => h.length).length;
+console.log(`skill-changelog.json: ${Object.keys(skills).length} skills, ${withHistory} with history, from ${commits} commits.`);

@@ -80,3 +80,8 @@ Ask for these if not provided; if the brief is thin, infer sensible values and l
 - "Spec a new device."
 - "Define requirements for a physical product."
 - "Kick off an NPI program."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hardware-prd.html
+
+<!-- pm-claude-skills v84.0.0 | skill: hardware-prd | source: skills/hardware-prd/SKILL.md | sha256: 2fdbf58e3b84b802432b9cb2ec604572197189e0a1947418cdcb68b869eaf535 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

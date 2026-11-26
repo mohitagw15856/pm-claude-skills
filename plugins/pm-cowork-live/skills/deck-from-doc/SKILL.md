@@ -68,3 +68,5 @@ Guardrails: every slide claim traces to the doc — never invent data or a recom
 - "Turn my brief into slides for the leadership review."
 - "Deckify this doc — audience is the exec team, 10 slides."
 - "Build the presentation from my doc and save it to Drive."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deck-from-doc.html

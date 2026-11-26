@@ -78,3 +78,8 @@ Ask for these if not provided:
 - "What do I need to do to get my full deposit back when I move out?"
 - "Moving across the country with two kids and a dog — help me plan it."
 - "Everything's booked but I don't know what to pack when."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/moving-house-checklist.html
+
+<!-- pm-claude-skills v84.0.0 | skill: moving-house-checklist | source: skills/moving-house-checklist/SKILL.md | sha256: 7fde63c30c729f04a18d13356c016eb32d2b5d9992f79ab1caa5e33ba4a3bd9e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

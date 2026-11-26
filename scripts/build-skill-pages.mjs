@@ -35,6 +35,41 @@ function reviewedBadge(name) {
   return `<span class="tier rules-${state}" title="${esc(title)}">⚖️ rules checked ${r.reviewed}</span>`;
 }
 
+// Expert reviews (config/human-review.json, docs/EXPERT-REVIEW-PROGRAM.md): a current
+// review shows "Reviewed by <credential>"; an unreviewed high-stakes skill invites one.
+const humanReview = existsSync(join(root, 'config', 'human-review.json')) ? JSON.parse(readFileSync(join(root, 'config', 'human-review.json'), 'utf8')) : { reviews: [] };
+const riskTiers = existsSync(join(root, 'data', 'risk-tiers.json')) ? JSON.parse(readFileSync(join(root, 'data', 'risk-tiers.json'), 'utf8')).tiers || {} : {};
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function currentReview(name) {
+  const months = humanReview.review_validity_months || 12;
+  const now = new Date();
+  return (humanReview.reviews || []).filter((r) => r.skill === name && r.date).map((r) => {
+    const d = new Date(`${r.date}T00:00:00Z`);
+    const exp = r.expires ? new Date(`${r.expires}T00:00:00Z`) : new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + months, d.getUTCDate()));
+    return { ...r, d, exp };
+  }).filter((r) => r.exp >= now).sort((a, b) => b.d - a.d)[0] || null;
+}
+// Partner verifications (config/partners.json, docs/PARTNER-PROGRAM.md): an organisation
+// that checked this skill for the people it serves, within validity_months.
+const partnersCfg = existsSync(join(root, 'config', 'partners.json')) ? JSON.parse(readFileSync(join(root, 'config', 'partners.json'), 'utf8')) : { partners: [] };
+function partnerBadges(name) {
+  const months = partnersCfg.validity_months || 12, now = new Date();
+  return (partnersCfg.partners || []).flatMap((p) => (p.verified || []).filter((v) => v.skill === name && v.date).map((v) => ({ p, v, d: new Date(`${v.date}T00:00:00Z`) })))
+    .filter(({ d }) => new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + months, d.getUTCDate())) >= now)
+    .map(({ p, v, d }) => `<a class="tier expert-ok" href="${BASE}/partners.html?p=${encodeURIComponent(p.id)}" title="Checked by ${esc(v.checked_by)} at ${esc(p.name)} for ${esc(p.region)}">🤝 Checked by ${esc(p.name)}, ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}</a>`).join('');
+}
+function expertBadge(name) {
+  const r = currentReview(name);
+  if (r) {
+    const when = `${MONTHS[r.d.getUTCMonth()]} ${r.d.getUTCFullYear()}`;
+    const who = r.credential ? r.credential : 'a qualified professional';
+    return `<span class="tier expert-ok" title="Read end to end by ${esc(who)}${r.reviewer ? ` (${esc(r.reviewer)})` : ''}; valid until ${r.exp.toISOString().slice(0, 10)}">✔ Reviewed by ${esc(who)}, ${when}</span>`;
+  }
+  if ((riskTiers[name] || {}).tier !== 'high-stakes') return '';
+  const url = `${REPO}/issues/new?template=expert-review.yml&title=${encodeURIComponent(`[Expert review] ${name}`)}`;
+  return `<a class="tier expert-none" href="${url}" title="High-stakes skill with no current expert review. Hold a relevant credential? Review it.">Not yet expert-reviewed · review it</a>`;
+}
+
 const giscus = existsSync(join(root, 'giscus.json')) ? JSON.parse(readFileSync(join(root, 'giscus.json'), 'utf8')) : {};
 const giscusReady = giscus.repoId && giscus.categoryId && giscus.repo;
 function discussionBlock(s) {
@@ -148,6 +183,7 @@ main{max-width:780px;margin:0 auto;padding:0 22px 70px}
 .tier-production{color:#6ee7b7;border-color:rgba(16,185,129,.5)}
 .tier-stable{color:#93c5fd;border-color:rgba(59,130,246,.5)}
 .tier-experimental{color:#fcd34d;border-color:rgba(245,158,11,.5)}
+.expert-ok{color:#6ee7b7;border-color:rgba(16,185,129,.6)}.expert-none{color:#fca5a5;border-color:rgba(239,68,68,.45);text-decoration:none}
 .rules-fresh{color:#c4b5fd;border-color:rgba(139,92,246,.45)}.rules-amber{color:#fcd34d;border-color:rgba(245,158,11,.7)}.rules-red{color:#fca5a5;border-color:rgba(239,68,68,.7)}
 .badge-eval{color:#6ee7b7;border-color:rgba(16,185,129,.5)}
 .badge-l3{color:#c9a4ff;border-color:rgba(160,120,255,.5)}
@@ -251,6 +287,11 @@ function page(s) {
     headline: `${s.title} — AI Agent Skill`,
     description: s.description,
     url,
+    mainEntityOfPage: url,
+    sameAs: [`https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/${s.name}/SKILL.md`],
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    license: 'https://github.com/mohitagw15856/pm-claude-skills/blob/main/LICENSE',
     author: { '@type': 'Person', name: 'Mohit Aggarwal' },
     isPartOf: { '@type': 'WebSite', name: 'PM Claude Skills', url: BASE },
     keywords: ['Claude', 'AI agent skill', 'SKILL.md', s.title, s.plugin].join(', '),
@@ -289,7 +330,7 @@ ${existsSync(join(root, 'skills-i18n', 'zh', s.name, 'SKILL.md')) ? `<link rel="
     <div class="inner">
       <h1>${esc(s.title)}</h1>
       <div class="row">
-        <span class="tier tier-${s.tier}">${dot} ${label}</span>${s.updated ? `<span class="tier" title="last change to this skill">🕐 updated ${s.updated}</span>` : ''}${reviewedBadge(s.name)}
+        <span class="tier tier-${s.tier}">${dot} ${label}</span>${s.updated ? `<span class="tier" title="last change to this skill">🕐 updated ${s.updated}</span>` : ''}${reviewedBadge(s.name)}${expertBadge(s.name)}${partnerBadges(s.name)}
         ${evalBadge}
         <span class="badge badge-l3">🔷 SkillSpec L3</span>
         ${cf.hasScript ? '<span class="badge badge-script">⚙ ships an executable helper</span>' : ''}
@@ -304,7 +345,10 @@ ${existsSync(join(root, 'skills-i18n', 'zh', s.name, 'SKILL.md')) ? `<link rel="
   <div class="cta">
     <a class="btn btn-primary" href="${playUrl}">▶ Run it free — no key needed</a>
     <a class="btn btn-ghost" href="${BASE}/grade.html?skill=${s.name}">📝 Grade your existing draft</a>
+    <a class="btn btn-ghost" href="${BASE}/skill-zip/${s.name}.zip" download title="Upload in claude.ai: Settings, Skills, Upload skill. It then works in Claude and in Claude Duet.">⬇ Add to Claude (works in Duet)</a>
+    <a class="btn btn-ghost" href="${BASE}/use.html?skill=${s.name}">📱 Use as an app</a>
     <a class="btn btn-ghost" href="${REPO}/blob/main/skills/${s.name}/SKILL.md">View SKILL.md ↗</a>
+    <a class="btn btn-ghost" href="../changes.html?skill=${s.name}">What changed</a>
   </div>
 
   ${triggers}
@@ -348,9 +392,9 @@ for (const s of skills) writeFileSync(join(outDir, `${s.name}.html`), page(s));
 const today = new Date().toISOString().slice(0, 10);
 const urls = [
   `${BASE}/`, `${BASE}/find.html`, `${BASE}/catalog.html`, `${BASE}/examples.html`, `${BASE}/leaderboard.html`,
-  `${BASE}/coverage.html`, `${BASE}/canvas.html`, `${BASE}/firm.html`, `${BASE}/boardroom.html`, `${BASE}/defend.html`, `${BASE}/verify.html`, `${BASE}/gym.html`, `${BASE}/gauntlet.html`, `${BASE}/xray.html`, `${BASE}/grade.html`, `${BASE}/benchmark.html`, `${BASE}/hiring.html`, `${BASE}/wrapped.html`, `${BASE}/academy.html`, `${BASE}/campaign.html`, `${BASE}/reckoning.html`, `${BASE}/handbook.html`, `${BASE}/charter.html`, `${BASE}/tower.html`, `${BASE}/stage.html`, `${BASE}/galaxy3d.html`, `${BASE}/city.html`, `${BASE}/trophy.html`, `${BASE}/status.html`, `${BASE}/season.html`, `${BASE}/atlas.html`, `${BASE}/morningshow.html`, `${BASE}/institute.html`,
+  `${BASE}/coverage.html`, `${BASE}/firm.html`, `${BASE}/boardroom.html`, `${BASE}/verify.html`, `${BASE}/gym.html`, `${BASE}/gauntlet.html`, `${BASE}/xray.html`, `${BASE}/grade.html`, `${BASE}/hiring.html`, `${BASE}/academy.html`, `${BASE}/campaign.html`, `${BASE}/reckoning.html`, `${BASE}/handbook.html`, `${BASE}/status.html`,
   ...skills.map((s) => `${BASE}/skill/${s.name}.html`),
-  `${BASE}/museum.html`, `${BASE}/growth.html`,
+  `${BASE}/growth.html`,
   ...(existsSync(join(root, 'web', 'compare'))
     ? readdirSync(join(root, 'web', 'compare')).filter((f) => f.endsWith('.html')).map((f) => `${BASE}/compare/${f}`)
     : []),

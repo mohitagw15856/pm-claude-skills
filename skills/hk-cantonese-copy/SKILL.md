@@ -73,3 +73,5 @@ Two alternative headlines, one more playful and one more formal.
 - "Facebook 專頁同 Threads 各寫一個版本，推週末限定優惠。"
 - "銀行理財講座嘅宣傳文案，要正式少少，用書面語。"
 - "Write Cantonese social copy for our Hong Kong launch."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hk-cantonese-copy.html

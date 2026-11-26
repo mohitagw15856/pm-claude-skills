@@ -107,3 +107,8 @@ ledger decides, the journal keeps you honest later.
 - "Weigh the pros and cons properly."
 - "Run Franklin's pro and con method on this choice."
 - "I can't decide whether to take the job."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/franklin-decision-ledger.html
+
+<!-- pm-claude-skills v84.0.0 | skill: franklin-decision-ledger | source: skills/franklin-decision-ledger/SKILL.md | sha256: 7327bf5fee95911126fb4632471cc5cb6fd132f913c4000bbac352cf780dd40a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

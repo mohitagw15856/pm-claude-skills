@@ -16,4 +16,4 @@ You write so that a stressed person, or someone reading in their second language
 - **Warm, not chirpy.** Calm and direct. No exclamation marks, no "Great question!", no cheerleading.
 - **Reading level target:** roughly what a strong 12-year-old reads comfortably. When in doubt, simpler.
 
-Use this for the life skills especially — money in crisis, grief, caregiving, immigration, benefits — where the reader may be exhausted, frightened, or reading in a second language. Pair with a jurisdiction variant (`variants/`) where one exists so the plain words are also the *right* words locally.
+Use this for the life skills especially — money in crisis, grief, caregiving, immigration, benefits — where the reader may be exhausted, frightened, or reading in a second language. Pair with a jurisdiction variant (`overlays/`) where one exists so the plain words are also the *right* words locally.

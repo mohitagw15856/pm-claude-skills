@@ -61,3 +61,5 @@ Ask for these if not provided:
 - "How do I catch AI errors before they bite me?"
 - "Where does AI tend to mess up in [my kind of work]?"
 - "Teach me to spot when an AI answer is unreliable."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spot-ai-mistakes.html

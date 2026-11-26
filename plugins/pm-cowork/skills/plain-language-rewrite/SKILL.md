@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Translate this for non-experts."
 - "De-jargon this announcement."
 - "Rewrite this so my parents/customers/new hires understand it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/plain-language-rewrite.html

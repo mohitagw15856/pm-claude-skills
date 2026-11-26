@@ -66,3 +66,5 @@ Recommendation-writing practice — establishing credibility, evidence over adje
 - "Write a letter of recommendation."
 - "Write a character reference."
 - "Recommend someone for a job."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reference-letter.html

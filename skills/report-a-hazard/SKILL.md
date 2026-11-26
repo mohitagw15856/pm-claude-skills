@@ -110,3 +110,5 @@ report" message appears.
 - "Who do I call about a broken streetlight?"
 - "Report illegal dumping on our street."
 - "The council won't fix this: what now?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/report-a-hazard.html

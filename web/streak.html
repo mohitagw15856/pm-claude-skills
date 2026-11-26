@@ -3,104 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
-<title>Daily Practice — one skill a day | PM Skills</title>
-<meta name="description" content="A gentle daily practice: run the skill of the day on something real. Your practice count lives in your browser, missed days pause it and never reset it." />
-<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/streak.html" />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  .st-wrap { max-width: 620px; margin: 0 auto; padding: 16px 22px 70px; text-align: center; }
-  .st-wrap h1 { font-size: 26px; }
-  .lead { color: var(--muted); }
-  .today { border: 1px solid var(--border); border-radius: 16px; background: var(--panel); padding: 26px; margin: 22px 0; }
-  .today .name { font-size: 22px; font-weight: 700; margin: 6px 0; }
-  .today .desc { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
-  .counts { display: flex; gap: 14px; justify-content: center; margin: 20px 0; }
-  .count { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 14px 22px; min-width: 120px; }
-  .count b { font-size: 30px; display: block; }
-  .count span { color: var(--muted); font-size: 12px; }
-  .btn { display: inline-block; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 11px 18px; cursor: pointer; font-size: 14.5px; text-decoration: none; margin: 4px; }
-  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .btn.done { background: #2d9a5c; border-color: #2d9a5c; color: #fff; cursor: default; }
-  .gentle { color: var(--muted); font-size: 12.5px; max-width: 420px; margin: 18px auto 0; line-height: 1.5; }
-</style>
+<title>Moved to the Daily Challenge | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/daily.html" />
+<meta http-equiv="refresh" content="0; url=daily.html" />
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}@media (prefers-color-scheme:light){body{background:#fff;color:#1f2328}a{color:#0969da}}</style>
 </head>
 <body>
-<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-<div class="st-wrap">
-  <h1>🌱 Daily practice</h1>
-  <p class="lead">One skill a day, run on something real from your actual week. That's the whole practice.</p>
-
-  <div class="today" id="today">
-    <span style="color:var(--muted);font-size:12px;letter-spacing:.05em">TODAY'S SKILL</span>
-    <div class="name" id="skillName">…</div>
-    <div class="desc" id="skillDesc"></div>
-    <div style="margin-top:16px">
-      <a class="btn primary" id="runBtn" href="index.html">▶ Run it on something real</a>
-      <button class="btn" id="doneBtn" onclick="markDone()">I practiced today</button>
-    </div>
-  </div>
-
-  <div class="counts">
-    <div class="count"><b id="run">0</b><span>current run</span></div>
-    <div class="count"><b id="total">0</b><span>practice days, all time</span></div>
-  </div>
-
-  <p class="gentle" id="msg"></p>
-  <p class="gentle">House rules: a missed day <b>pauses</b> your run — it never resets your total, and nothing nags you.
-  Practice days count forever. This lives only in your browser.
-  (Our own <a href="skill/attention-reset.html">attention-reset</a> skill would side-eye us otherwise.)</p>
-</div>
-<script>
-const API = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
-const KEY = 'pm-skills-practice';
-const todayStr = () => new Date().toISOString().slice(0, 10);
-
-function load() { try { return JSON.parse(localStorage.getItem(KEY)) || { days: [], } ; } catch { return { days: [] }; } }
-function save(s) { localStorage.setItem(KEY, JSON.stringify(s)); }
-
-// current run = consecutive days ending today or yesterday (yesterday keeps
-// this morning's visit encouraging instead of punishing)
-function currentRun(days) {
-  const set = new Set(days);
-  let run = 0;
-  const d = new Date();
-  if (!set.has(d.toISOString().slice(0, 10))) d.setDate(d.getDate() - 1);
-  while (set.has(d.toISOString().slice(0, 10))) { run++; d.setDate(d.getDate() - 1); }
-  return run;
-}
-
-function render() {
-  const s = load();
-  document.getElementById('total').textContent = s.days.length;
-  document.getElementById('run').textContent = currentRun(s.days);
-  const done = s.days.includes(todayStr());
-  const btn = document.getElementById('doneBtn');
-  if (done) { btn.textContent = '✓ practiced today'; btn.className = 'btn done'; }
-  const msgs = [
-    [0, 'Day one is the whole trick. Run today\'s skill on anything real — an email, a decision, a listing.'],
-    [3, 'Three days. The habit is forming — keep the inputs real and small.'],
-    [7, 'A full week of practice. This is how judgment compounds.'],
-    [30, 'Thirty practice days. You have genuinely built something.'],
-  ];
-  const total = s.days.length;
-  document.getElementById('msg').textContent = (msgs.reverse().find(([n]) => total >= n) || msgs[0])[1];
-}
-
-function markDone() {
-  const s = load();
-  if (!s.days.includes(todayStr())) { s.days.push(todayStr()); save(s); }
-  render();
-}
-
-fetch(API + '/today.json').then((r) => r.json()).then((t) => {
-  document.getElementById('skillName').textContent = t.name;
-  document.getElementById('skillDesc').textContent = t.description || '';
-  document.getElementById('runBtn').href = t.run || ('index.html?skill=' + t.name);
-}).catch(() => { document.getElementById('skillName').textContent = 'the catalog'; });
-
-render();
-</script>
-<script src="nav.js"></script>
+<main><p>This page has been retired to keep the site focused. Continue to <a href="daily.html">the Daily Challenge</a>.</p></main>
+<script>location.replace('daily.html' + location.search + location.hash);</script>
 </body>
 </html>

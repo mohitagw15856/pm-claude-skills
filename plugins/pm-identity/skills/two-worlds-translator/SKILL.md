@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "I'm caught between two cultures."
 - "Help me explain this to my parents."
 - "Is a first/second-gen immigrant?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/two-worlds-translator.html

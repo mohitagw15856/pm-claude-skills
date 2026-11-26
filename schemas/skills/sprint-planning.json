@@ -1,0 +1,207 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/contract.schema.json",
+  "skill": "sprint-planning",
+  "version": 1,
+  "inputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "sprint-planning inputs",
+    "type": "object",
+    "properties": {
+      "sprint_length_weeks": {
+        "type": "integer",
+        "description": "1 or 2",
+        "minimum": 1,
+        "maximum": 4
+      },
+      "team_size": {
+        "type": "integer",
+        "description": ""
+      },
+      "velocity": {
+        "type": "number",
+        "description": "Average story points per sprint"
+      },
+      "backlog": {
+        "type": "array",
+        "description": "Top backlog items or epics to pull from",
+        "items": {
+          "type": "object",
+          "properties": {
+            "item": {
+              "type": "string",
+              "description": ""
+            },
+            "points": {
+              "type": "number",
+              "description": ""
+            },
+            "priority": {
+              "type": "integer",
+              "description": "1 is highest"
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "absences": {
+        "type": "array",
+        "description": "Known absences, holidays or events",
+        "items": {
+          "type": "object",
+          "properties": {
+            "who": {
+              "type": "string",
+              "description": "Role"
+            },
+            "days": {
+              "type": "number",
+              "description": ""
+            }
+          },
+          "required": [
+            "days"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "carry_overs": {
+        "type": "array",
+        "description": "Incomplete items from the previous sprint",
+        "items": {
+          "type": "object",
+          "properties": {
+            "item": {
+              "type": "string",
+              "description": ""
+            },
+            "points_remaining": {
+              "type": "number",
+              "description": ""
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "additionalProperties": true
+        }
+      }
+    },
+    "required": [
+      "sprint_length_weeks",
+      "team_size",
+      "backlog"
+    ],
+    "additionalProperties": true
+  },
+  "outputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "sprint-planning outputs",
+    "type": "object",
+    "properties": {
+      "capacity": {
+        "type": "object",
+        "properties": {
+          "available_days": {
+            "type": "number",
+            "description": ""
+          },
+          "adjusted_velocity": {
+            "type": "number",
+            "description": "Velocity after absences"
+          },
+          "buffer_pct": {
+            "type": "number",
+            "description": ""
+          }
+        },
+        "required": [
+          "adjusted_velocity"
+        ],
+        "additionalProperties": true
+      },
+      "sprint_goal": {
+        "type": "string",
+        "description": "One sentence"
+      },
+      "committed": {
+        "type": "array",
+        "description": "Items that fit the adjusted velocity",
+        "items": {
+          "type": "object",
+          "properties": {
+            "item": {
+              "type": "string",
+              "description": ""
+            },
+            "points": {
+              "type": "number",
+              "description": ""
+            },
+            "owner": {
+              "type": "string",
+              "description": "Role"
+            },
+            "carry_over": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "item",
+            "points"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "stretch": {
+        "type": "array",
+        "description": "Pull in only if committed work finishes early",
+        "items": {
+          "type": "object",
+          "properties": {
+            "item": {
+              "type": "string",
+              "description": ""
+            },
+            "points": {
+              "type": "number",
+              "description": ""
+            }
+          },
+          "required": [
+            "item"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "deferred": {
+        "type": "array",
+        "description": "Items left in the backlog",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "risks": {
+        "type": "array",
+        "description": "Dependencies and unknowns",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "total_committed_points": {
+        "type": "number",
+        "description": ""
+      }
+    },
+    "required": [
+      "capacity",
+      "sprint_goal",
+      "committed"
+    ],
+    "additionalProperties": true
+  }
+}

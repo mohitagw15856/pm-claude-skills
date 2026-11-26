@@ -1,6 +1,6 @@
 # skillspec-check — the eslint for SKILL.md
 
-Validate **any repo's** Agent Skills against [SkillSpec](https://github.com/mohitagw15856/pm-claude-skills/blob/main/SKILLSPEC.md) — the conformance standard behind the [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills) library (451 curated skills) and its community registry.
+Validate **any repo's** Agent Skills against [SkillSpec](https://github.com/mohitagw15856/pm-claude-skills/blob/main/SKILLSPEC.md) — the conformance standard behind the [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills) library and its community registry.
 
 ```bash
 npx skillspec-check                    # scan the current directory for SKILL.md files
@@ -27,7 +27,7 @@ Wear your conformance level — this renders a live-graded shield for any public
 ![SkillSpec](https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Fbadge%3Frepo%3DYOURUSER%2FYOURREPO)
 ```
 
-The badge service fetches your SKILL.md files, grades them, and reports the **minimum** level across the repo (a chain is as strong as…). Cached 6 hours.
+The badge service grades the skills your repo ships and reports the **minimum** level across them (a chain is as strong as its weakest link). It looks in `skills/` or `.claude/skills/` when you have one, and otherwise everywhere except translation, example, test and build folders. Add `%26path%3Dyour%2Fskills%2Fdir` to point it at a folder, or `%26ref%3Dv2` for a tag. Repos with more than 40 skills are graded on an even sample of 40 and say so. Results are cached for 6 hours.
 
 ## CI in one line
 

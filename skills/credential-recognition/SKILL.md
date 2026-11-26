@@ -120,3 +120,5 @@ present recognised credentials; [[two-worlds-translator]] for the cultural trans
 - "Get my degree recognised abroad."
 - "Is my foreign license valid here?"
 - "Can I work as a [nurse/engineer/teacher] in [country] with my qualifications?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/credential-recognition.html

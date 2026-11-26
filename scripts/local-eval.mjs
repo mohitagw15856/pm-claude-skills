@@ -6,15 +6,19 @@
 //
 //   node scripts/local-eval.mjs --model llama3.1:8b                    # Ollama default port
 //   node scripts/local-eval.mjs --model qwen2.5:14b --skills prd-template,okr-builder
-//   node scripts/local-eval.mjs --model mistral --judge anthropic:claude-sonnet-4-6
+//   node scripts/local-eval.mjs --model qwen3:8b --judge local:qwen3:32b --record   # small-model badge
 //
-//   --endpoint URL    OpenAI-compatible base (default http://localhost:11434/v1)
+//   --endpoint URL    OpenAI-compatible base (default $LOCAL_BASE_URL, else http://localhost:11434/v1)
 //   --model NAME      local model id as the server knows it (required)
-//   --judge WHO       "local" (default: the same local model judges — fully offline)
-//                     or "anthropic:<model>" (needs ANTHROPIC_API_KEY; leaves the machine)
+//   --judge WHO       "local" (default: the same local model judges, fully offline),
+//                     "local:<model>" (a different, usually larger, model on the same endpoint),
+//                     or "anthropic:<model>" (paid: needs ANTHROPIC_API_KEY and ALLOW_API_SPEND=true)
 //   --skills a,b,c    subset (default: the smoke set below)
 //   --all             every case in evals/cases.json (slow on laptop hardware)
 //   --out PATH        results file (default evals/local/results-<model>.json)
+//   --record          also merge the scores into data/small-model.json, the source of the
+//                     small-model badges (scripts/build-small-model-badges.mjs, docs/small-model-badge.md)
+//   --data PATH       where --record writes (default data/small-model.json)
 //
 // The rubric text and score parsing mirror evals/run-evals.mjs — keep them in sync.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -25,9 +29,13 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const arg = (n, d) => { const i = process.argv.indexOf(`--${n}`); return i !== -1 ? process.argv[i + 1] : d; };
 const has = (n) => process.argv.includes(`--${n}`);
 
-const ENDPOINT = (arg('endpoint', 'http://localhost:11434/v1')).replace(/\/$/, '');
+const ENDPOINT = (arg('endpoint', process.env.LOCAL_BASE_URL || 'http://localhost:11434/v1')).replace(/\/$/, '');
 const MODEL = arg('model', '');
 const JUDGE = arg('judge', 'local');
+if (JUDGE.startsWith('anthropic:') && process.env.ALLOW_API_SPEND !== 'true') {
+  console.error('--judge anthropic:* spends API credit. Set ALLOW_API_SPEND=true to allow it, or use --judge local:<model> (free).');
+  process.exit(1);
+}
 if (!MODEL) { console.error('Usage: node scripts/local-eval.mjs --model <local-model-id> [--endpoint URL] [--skills a,b] [--all]'); process.exit(1); }
 
 // Small, mixed-domain smoke set: short enough for laptop inference, varied enough
@@ -37,18 +45,24 @@ const only = arg('skills', '') ? arg('skills', '').split(',').map((s) => s.trim(
 
 const outPath = arg('out', join(root, 'evals', 'local', `results-${MODEL.replace(/[^a-zA-Z0-9._-]/g, '_')}.json`));
 
+const SMALL_MODEL_COMMENT = 'Scores from scripts/local-eval.mjs --record: each skill run on a small open model on local hardware, judged by a local model. Written only by real runs; never edit scores by hand.';
 const DIMENSIONS = ['structure', 'completeness', 'usefulness', 'grounding'];
 const runPrompt = (body) => body + '\n\n---\nExecute this skill now on the input. Output only the finished artifact.';
-const judgePrompt = (description, output) => `You are a strict evaluator of a professional work artifact.
+// Judge version 2, as in evals/run-evals.mjs: the judge sees the task it grades.
+const JUDGE_VERSION = 2;
+const judgePrompt = (description, task, output) => `You are a strict evaluator of a professional work artifact.
 
 The artifact was produced by a skill whose job is:
 "${description}"
 
+--- TASK (what the user asked, with any material they gave) ---
+${String(task).slice(0, 6000)}
+
 Score the artifact below from 1 (poor) to 5 (excellent) on each dimension:
 - structure: follows a clear, expected structure for this kind of output
-- completeness: covers what the task needs, nothing important missing
-- usefulness: actually useful to a professional, specific not generic
-- grounding: stays grounded in the given input, no invented facts/metrics
+- completeness: covers what THIS task asked for, nothing important missing (if the task asked for an interview or a first step, a strong first turn is complete)
+- usefulness: actually useful to the person who asked, specific not generic
+- grounding: uses the facts given in the task, labels assumptions, no invented facts or metrics
 
 Return ONLY a JSON object, no prose: {"structure":N,"completeness":N,"usefulness":N,"grounding":N}
 
@@ -73,17 +87,18 @@ function parseScores(text) {
   return s;
 }
 
-async function localComplete({ system, user, maxTokens = 3000 }) {
+async function localComplete({ system, user, maxTokens = 3000, model = MODEL }) {
   const messages = [];
   if (system) messages.push({ role: 'system', content: system });
   messages.push({ role: 'user', content: user });
   const res = await fetch(`${ENDPOINT}/chat/completions`, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({ model: MODEL, messages, max_tokens: maxTokens, temperature: 0.3 }),
+    // enable_thinking: false keeps Qwen3-style models from spending the budget on reasoning.
+    body: JSON.stringify({ model, messages, max_tokens: maxTokens, temperature: 0.3, chat_template_kwargs: { enable_thinking: false } }),
   });
   if (!res.ok) throw new Error(`local endpoint ${res.status}: ${(await res.text()).slice(0, 200)}`);
-  return (await res.json()).choices?.[0]?.message?.content || '';
+  return String((await res.json()).choices?.[0]?.message?.content || '').replace(/<think>[\s\S]*?<\/think>\s*/g, '');
 }
 
 async function anthropicComplete({ model, user, maxTokens = 300 }) {
@@ -100,7 +115,9 @@ async function anthropicComplete({ model, user, maxTokens = 300 }) {
 }
 
 const judgeOnce = (prompt) =>
-  JUDGE.startsWith('anthropic:') ? anthropicComplete({ model: JUDGE.slice('anthropic:'.length), user: prompt }) : localComplete({ user: prompt, maxTokens: 300 });
+  JUDGE.startsWith('anthropic:') ? anthropicComplete({ model: JUDGE.slice('anthropic:'.length), user: prompt })
+    : localComplete({ user: prompt, maxTokens: 300, model: JUDGE.startsWith('local:') ? JUDGE.slice('local:'.length) : MODEL });
+const selfJudged = JUDGE === 'local' || JUDGE === `local:${MODEL}`;
 
 // ── main ─────────────────────────────────────────────────────────────────────
 // Reachability first, with a clear message — most failures are "no server".
@@ -118,7 +135,7 @@ const { cases } = JSON.parse(readFileSync(join(root, 'evals', 'cases.json'), 'ut
 const picked = cases.filter((c) => !only || only.includes(c.skill));
 if (!picked.length) { console.error(`No cases matched: ${only?.join(', ')}`); process.exit(1); }
 console.log(`Local eval — model ${MODEL} @ ${ENDPOINT} · judge ${JUDGE} · ${picked.length} case(s)`);
-if (JUDGE === 'local') console.log('Note: the model is judging itself — fine for a smoke signal, not for tier verification (see docs/LOCAL-MODELS.md).');
+if (selfJudged) console.log('Note: the model is judging itself — fine for a smoke signal, not for tier verification (see docs/LOCAL-MODELS.md).');
 
 const results = [];
 for (const c of picked) {
@@ -130,7 +147,7 @@ for (const c of picked) {
   try {
     const output = await localComplete({ system: runPrompt(body), user: c.input });
     if (!output.trim()) throw new Error('empty output');
-    const scores = parseScores(await judgeOnce(judgePrompt(description, output)));
+    const scores = parseScores(await judgeOnce(judgePrompt(description, c.input, output)));
     const overall = Math.round((DIMENSIONS.reduce((a, d) => a + scores[d], 0) / DIMENSIONS.length) * 100) / 100;
     console.log(`✓ ${c.skill} — ${overall.toFixed(2)}/5`);
     results.push({ skill: c.skill, scores, overall, outputChars: output.length });
@@ -144,7 +161,25 @@ const scored = results.filter((r) => r.overall);
 const mean = scored.length ? Math.round((scored.reduce((a, r) => a + r.overall, 0) / scored.length) * 100) / 100 : null;
 mkdirSync(dirname(outPath), { recursive: true });
 writeFileSync(outPath, JSON.stringify({
-  model: MODEL, endpoint: ENDPOINT, judge: JUDGE, date: new Date().toISOString().slice(0, 10),
+  model: MODEL, endpoint: ENDPOINT, judge: JUDGE, judgeVersion: JUDGE_VERSION, date: new Date().toISOString().slice(0, 10),
   cases: results.length, scored: scored.length, failed: results.length - scored.length, mean, results,
 }, null, 2) + '\n');
 console.log(`\n${scored.length}/${results.length} scored · mean ${mean ?? 'n/a'} · wrote ${outPath.replace(root + '/', '')}`);
+
+// --record: merge into data/small-model.json, one row per (skill, model), averaged
+// over that skill's cases in this run. Rows from other models and skills are kept.
+if (has('record') && scored.length) {
+  const file = arg('data', join(root, 'data', 'small-model.json'));
+  let data = { runs: [] };
+  try { data = JSON.parse(readFileSync(file, 'utf8')); } catch { /* first run */ }
+  const date = new Date().toISOString().slice(0, 10);
+  const bySkill = {};
+  for (const r of scored) (bySkill[r.skill] ||= []).push(r.overall);
+  const keep = (data.runs || []).filter((r) => !(r.model === MODEL && bySkill[r.skill]));
+  for (const [skill, xs] of Object.entries(bySkill)) {
+    keep.push({ skill, model: MODEL, judge: JUDGE, selfJudged, judgeVersion: JUDGE_VERSION, score: Math.round((xs.reduce((a, b) => a + b, 0) / xs.length) * 100) / 100, cases: xs.length, date });
+  }
+  keep.sort((a, b) => a.skill.localeCompare(b.skill) || a.model.localeCompare(b.model));
+  writeFileSync(file, JSON.stringify({ $comment: data.$comment || SMALL_MODEL_COMMENT, runs: keep }, null, 2) + '\n');
+  console.log(`Recorded ${Object.keys(bySkill).length} skill(s) for ${MODEL} in data/small-model.json${selfJudged ? ' (self-judged: no badge until a different judge scores it)' : ''}.`);
+}

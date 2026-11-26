@@ -114,3 +114,5 @@ build-the-list-from-real-life method.
 - "I changed my name and don't know where to start."
 - "Update my name everywhere."
 - "Name change checklist."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/name-change-navigator.html

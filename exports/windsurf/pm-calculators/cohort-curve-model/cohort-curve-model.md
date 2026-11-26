@@ -54,3 +54,8 @@ It prints the fit (`a=0.619 b=0.371 R²=1.000 lifetime≈7.7 periods LTV≈308`)
 - "Fit a retention curve to these cohorts."
 - "How long do customers stay, based on this data?"
 - "Is our retention improving across cohorts?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cohort-curve-model.html
+
+<!-- pm-claude-skills v84.0.0 | skill: cohort-curve-model | source: skills/cohort-curve-model/SKILL.md | sha256: 499e2bbea6ac54ffc0de31437ccaa42765629315251249a9b90f4a4fcfa1c7b1 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

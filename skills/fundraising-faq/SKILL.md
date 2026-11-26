@@ -63,3 +63,5 @@ End with:
 - "Prep for investor Q&A."
 - "Handle pushback on a raise."
 - "Build a fundraising FAQ."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fundraising-faq.html

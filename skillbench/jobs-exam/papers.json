@@ -1,0 +1,24 @@
+{
+ "_comment": "The jobs exam: real tasks from working professionals, each with the marking scheme they would use on a junior colleague. Add a paper only from a jobs-exam-paper issue written by someone who does the job. Papers are graded by people in the same occupation, never by a model. See skillbench/jobs-exam/README.md. Checked by scripts/check-jobs-exam.mjs.",
+ "version": "jobs-0",
+ "papers": [],
+ "example": {
+  "id": "example-payslip-check",
+  "occupation": "Payroll administrator",
+  "isco": "4313",
+  "region": "United Kingdom",
+  "example_only": true,
+  "author": { "role": "Format example written by the maintainers, not a practitioner. Never scored.", "issue": "" },
+  "time_minutes": 15,
+  "task": "An employee says their March payslip is wrong. Gross pay is 2,400.00, tax 278.00, employee National Insurance 118.00, pension 120.00, net pay 1,904.00. Their contract says 2,500.00 a month and they had one day of unpaid leave in March (21 working days). Write the reply to the employee: is the payslip right, and what happens next?",
+  "marking": [
+   { "point": "Works out the unpaid-leave deduction as about 119.05 (2,500 / 21) and the expected gross as about 2,380.95, not 2,400", "marks": 3 },
+   { "point": "Checks that net pay equals gross minus tax, NI and pension (2,400 - 516 = 1,884, not 1,904) and spots the 20.00 gap", "marks": 3 },
+   { "point": "Says plainly what is wrong, by how much, and that it will be corrected in the next pay run or by an off-cycle payment", "marks": 2 },
+   { "point": "Asks for nothing the employer already has, and keeps a professional, non-defensive tone", "marks": 1 },
+   { "point": "Says who to contact and by when", "marks": 1 }
+  ],
+  "fatal": ["Tells the employee the payslip is correct", "Shares another employee's pay details"],
+  "pass_mark": 7
+ }
+}

@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "There's a really bright thing in the west after sunset — what is it?"
 - "Help me find Orion and anything else easy tonight."
 - "Best things to look at with a small telescope this evening?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stargazing-tonight.html

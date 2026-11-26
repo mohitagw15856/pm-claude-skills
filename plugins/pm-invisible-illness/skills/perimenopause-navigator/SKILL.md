@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "Is this perimenopause?"
 - "My doctor won't take my symptoms seriously."
 - "Help me prepare for a menopause appointment."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/perimenopause-navigator.html

@@ -22,6 +22,7 @@ const head =
   `## Use\n` +
   `- [Playground](${BASE}/): run any skill in your browser with your own Claude/OpenAI/Gemini/Ollama key\n` +
   `- [MCP server](https://github.com/mohitagw15856/pm-claude-skills/tree/main/mcp): \`npx -y -p pm-claude-skills pm-claude-skills-mcp\` — search & fetch skills on demand\n` +
+  `- [Skill index for agents](${BASE}/.well-known/agent-skills.json): every skill with its SKILL.md URL and SHA-256 (format: docs/spec/well-known-agent-skills.md)\n` +
   `- [Catalog](${BASE}/catalog.html) · [Leaderboard](${BASE}/leaderboard.html) · [GitHub](https://github.com/mohitagw15856/pm-claude-skills)\n`;
 
 const index = [head];

@@ -9,7 +9,7 @@ Reconcile user signals from multiple sources — interviews, support tickets, NP
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Signal sources** (interviews, support tickets, NPS verbatims, app reviews, sales calls, analytics — any combination)
 - **Time period** covered by the data
 - **Product area or feature** the signals relate to (if scoped)
@@ -75,3 +75,8 @@ Ask the user for these if not provided:
 - "Reconcile what users say across these sources."
 - "Synthesise these app reviews and sales calls."
 - "Surface the underlying need behind these requests."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/multi-source-signal-synthesiser.html
+
+<!-- pm-claude-skills v84.0.0 | skill: multi-source-signal-synthesiser | source: skills/multi-source-signal-synthesiser/SKILL.md | sha256: b7a7196d448c7239ebd19bad8090da3f274c4175aee094f1edc8765048a6fac5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

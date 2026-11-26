@@ -63,3 +63,5 @@ Transcreation / creative-localization practice — intent-led recreation, multip
 - "Transcreate our campaign for the German market."
 - "This translation is correct but flat."
 - "Localise this slogan, not just translate it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/transcreation.html

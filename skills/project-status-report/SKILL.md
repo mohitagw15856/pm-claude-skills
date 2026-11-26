@@ -123,3 +123,5 @@ RAG definitions:
 - "Write a project status report for [project]"
 - "Generate a RAG status update for [project]"
 - "Write the steering committee report for [project]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/project-status-report.html

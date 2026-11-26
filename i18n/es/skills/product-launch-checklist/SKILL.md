@@ -130,6 +130,24 @@ El skill genera una lista de verificación escalonada. Los lanzamientos Tier 3 u
 
 ---
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/launch-tiering.md`** — Niveles de lanzamiento: ajustar la ceremonia a lo que está en juego. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/launch-plan.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Calibración del nivel | No se indica nivel, o la profundidad de la lista es claramente desproporcionada (ceremonia completa de nivel 1 para un cambio de texto, o una lista escueta para una nueva línea de ingresos) | Nivel indicado pero sin justificar; algunas secciones se incluyen o se quitan de forma incoherente con el nivel | Nivel indicado con su razonamiento (precios, legal, radio de impacto, no esfuerzo de ingeniería), secciones acordes al nivel, y cualquier desacuerdo sobre el nivel resuelto y registrado |
+| Responsables y tiempos | Elementos y puertas a cargo de "el equipo" o de nadie; sin fechas | La mayoría de los elementos tienen responsable, pero las puertas clave (Go/No-Go, expansiones, retro) carecen de una persona con nombre o de una hora concreta | Cada elemento, puerta y decisión tiene una única persona con nombre y una fecha/hora, incluida la hora de la decisión Go/No-Go fijada unas 24 h antes del lanzamiento |
+| Reversión y despliegue escalonado | Sin plan de reversión, o el flag pasa al 100 % el primer día | Reversión documentada pero sin probar; hay escalonamiento, pero los pasos de expansión no tienen criterios de aprobación | Reversión probada con tiempo de vuelta atrás conocido ("X minutos, probado el [fecha]"), flag escalonado 5–10 % → 50 % → 100 %, y cada expansión condicionada a comprobaciones concretas con nombre |
+| Integridad del Go/No-Go | Sin puerta, o una puerta de teatro: todo en verde por defecto, trabajo bloqueado marcado como hecho | Hay puerta con criterios, pero los elementos bloqueados se suavizan, los estados son aspiracionales, o un NO-GO no tiene plan revisado | Estados honestos (rojos visibles con bloqueo y responsable), la decisión sigue la tabla aunque implique retrasar, y un NO-GO produce una nueva puerta con fecha, más la retro agendada en el momento del lanzamiento |
+
 ## Chequeos de Calidad
 
 - [ ] Tier del lanzamiento confirmado antes de generar la lista (el alcance determina la profundidad)
@@ -152,3 +170,12 @@ El skill genera una lista de verificación escalonada. Los lanzamientos Tier 3 u
 - Nunca lances un viernes a menos que tengas cobertura de ingeniería durante el fin de semana
 - Recomienda comenzar todos los lanzamientos con <10% de tráfico — incluso para funcionalidades simples
 - Documenta el tiempo de reversión: "Podemos revertir esto en X minutos" debe ser conocido antes de lanzar
+
+## Frases de activación de ejemplo
+
+- "Prepara un lanzamiento de producto."
+- "Dame una lista de verificación para el día del lanzamiento."
+- "Planifica la salida de la funcionalidad."
+- "¿Qué necesitamos antes de que salga esta gran actualización?"
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/product-launch-checklist.html

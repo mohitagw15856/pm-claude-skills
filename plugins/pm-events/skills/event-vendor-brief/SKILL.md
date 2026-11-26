@@ -88,3 +88,5 @@ Ask for these if not provided:
 - "Write an RFP for event production"
 - "How do I brief a supplier when I do not know the technical details?"
 - "What should I ask suppliers to include in their quote?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/event-vendor-brief.html

@@ -49,7 +49,7 @@
 <div class="key-note">🔒 Your key stays in this browser. The counterparty's bottom line is generated fresh each session and hidden until the debrief.</div>
 
 <div class="gym-wrap">
-  <p class="lead">The <a href="defend.html">Defense</a> asks you questions. The Gym plays against you <strong>with secrets</strong>: your counterparty has a hidden bottom line, hidden pressures, and a concession style you'll have to read from behaviour. Close the deal (or walk), and only then does the debrief reveal what was actually achievable — and score you against it.</p>
+  <p class="lead">The <a href="boardroom.html">Boardroom</a> questions your document. The Gym plays against you <strong>with secrets</strong>: your counterparty has a hidden bottom line, hidden pressures, and a concession style you'll have to read from behaviour. Close the deal (or walk), and only then does the debrief reveal what was actually achievable — and score you against it.</p>
 
   <div class="setup" id="setup">
     <select id="scenario" aria-label="Scenario">
@@ -142,7 +142,7 @@ if(/#season=/.test(location.hash)){
     el('scenario').disabled=true; el('difficulty').disabled=true; el('ctx').disabled=true;
     const b=el('duelBanner'); b.hidden=false;
     b.style.cssText='border:1.5px solid #c9a227;border-radius:13px;background:linear-gradient(90deg,rgba(201,170,39,.12),transparent 70%),var(--panel);padding:13px 16px;margin:12px 0;font-size:13.8px;line-height:1.5;';
-    b.innerHTML='<b>🏆 Season '+s.season+' — '+s.title+'</b> · closes '+s.closes+'. Everyone on Earth faces this exact counterparty and hidden state. Best score to the <a href="season.html">global leaderboard</a>. '+
+    b.innerHTML='<b>🏆 Season '+s.season+' — '+s.title+'</b> · closes '+s.closes+'. Everyone on Earth faces this exact counterparty and hidden state. '+
       '<div style="font-size:11.5px;color:var(--muted);margin-top:5px">'+s.rules.honor+'</div>';
   }).catch(()=>{});
 }

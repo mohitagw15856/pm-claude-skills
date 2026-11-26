@@ -72,3 +72,8 @@ Ask for these if not provided:
 - "Help me organise the paperwork for a green card."
 - "What do I need to gather for this residency application, and in what order?"
 - "Prepare my immigration documents and flag the common rejection mistakes."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/immigration-document-checklist.html
+
+<!-- pm-claude-skills v84.0.0 | skill: immigration-document-checklist | source: skills/immigration-document-checklist/SKILL.md | sha256: f9811e8eb3e025881322ca35fae644ddabb0323887437c03b7a59f45f68a5a12 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

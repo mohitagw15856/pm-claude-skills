@@ -68,3 +68,5 @@ Rerun: `[the curl(s)]`
 - "Why can't I reach this site?"
 - "Check if my site is up."
 - "Is the SSL certificate expired?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/site-check.html

@@ -97,3 +97,5 @@ End verbatim: *"Educational, not financial advice. Decisions with real money bel
 ## Related Skills in This Bundle
 
 `annual-report-tutor` (learn one report first), `audited-boundary-check` (inside/outside for one report in depth), `profit-to-cash-walk` (the FCF definition used here), `investing-vocabulary-explainer`.
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/company-compare-same-definitions.html

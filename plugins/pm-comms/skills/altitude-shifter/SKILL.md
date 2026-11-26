@@ -74,3 +74,5 @@ Ask for these if not provided:
 - "Explain this to the team."
 - "Make this customer-facing."
 - "Say this four ways."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/altitude-shifter.html

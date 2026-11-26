@@ -6,12 +6,13 @@
 //
 //   pm-claude-skills migrate ./prompts --dry-run     # plan + cost preview, no API calls
 //   pm-claude-skills migrate ./prompts               # convert (1 call per file, your key)
-//   pm-claude-skills migrate ./prompts --out ./my-skills --model claude-haiku-4-5-20251001
+//   pm-claude-skills migrate ./prompts --out ./my-skills --model claude-haiku-5-5
 //
 // Output: <out>/<skill-name>/SKILL.md per source file. Nothing is overwritten.
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, statSync } from 'node:fs';
 import { join, basename, extname } from 'node:path';
 import { complete } from './lib/anthropic.mjs';
+import { modelFor } from './lib/models.mjs';
 
 const getArg = (argv, n, d) => { const i = argv.indexOf('--' + n); return i >= 0 && argv[i + 1] ? argv[i + 1] : d; };
 const slug = (s) => s.toLowerCase().replace(/\.(md|txt|prompt)$/i, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48) || 'untitled-skill';
@@ -43,7 +44,7 @@ One API call per file (your ANTHROPIC_API_KEY). --dry-run previews the plan for 
   if (!files.length) { console.error(`No convertible files in ${dir} (.md/.txt/.prompt, 100 B – 64 KB).`); return 1; }
 
   const outDir = getArg(argv, 'out', './migrated-skills');
-  const model = getArg(argv, 'model', 'claude-sonnet-4-6');
+  const model = getArg(argv, 'model', modelFor('default'));
   const dryRun = argv.includes('--dry-run');
 
   console.error(`📥 migrate — ${files.length} file(s) from ${dir} → ${outDir}${dryRun ? '  [DRY RUN]' : ''}`);

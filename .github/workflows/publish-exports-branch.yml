@@ -1,0 +1,53 @@
+name: Publish exports branch
+
+# exports/ (every skill rendered for ChatGPT, Gemini, Cursor, Windsurf, Aider, Cline,
+# Continue, Zed, Roo, Kilo Code, Obsidian and OpenClaw) is generated from skills/
+# and no longer committed to main: 15,000+ generated files made every skill PR touch
+# thousands of files and slip past CI path filters. This keeps them browsable on
+# GitHub instead, at /tree/exports/<tool>, as one fresh commit on an orphan
+# branch, so the branch never accumulates history.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - 'plugins/**'
+      - '.claude-plugin/**'
+      - 'scripts/build-exports.mjs'
+      - '.github/workflows/publish-exports-branch.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-exports-branch
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Build and lint the exports
+        run: |
+          node scripts/build-exports.mjs
+          node tests/exports-lint.mjs
+      - name: Push them as a single commit to the exports branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SHA: ${{ github.sha }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          cd exports
+          git init -q -b exports
+          git config user.name "exports-bot"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -q -m "Exports generated from ${REPO}@${SHA:0:12}"
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${REPO}.git" exports:exports
+          echo "Published $(git ls-files | wc -l) files to the exports branch."

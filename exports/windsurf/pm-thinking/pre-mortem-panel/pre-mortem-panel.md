@@ -60,3 +60,8 @@ Ask for these if not provided:
 - "What are the ways this could fail before I commit?"
 - "Run a pre-mortem on my career move."
 - "Five reasons this plan might die, and how to prevent them."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pre-mortem-panel.html
+
+<!-- pm-claude-skills v84.0.0 | skill: pre-mortem-panel | source: skills/pre-mortem-panel/SKILL.md | sha256: 062a2dadc77b18567e276ab028cfb1f395956103a0e9bd596e764d117dfc108a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

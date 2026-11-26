@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "What should I check before buying an index fund?"
 - "Set up simple automatic index investing for me."
 - "Why do people say index funds beat active investing?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/index-fund-starter.html

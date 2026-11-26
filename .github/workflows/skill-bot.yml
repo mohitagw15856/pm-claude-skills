@@ -22,9 +22,11 @@ permissions:
 jobs:
   run-skill:
     # Only on comments starting with "/skill" from trusted authors.
+    # Spends Anthropic credit per comment: off unless ALLOW_API_SPEND is true.
     if: >
-      startsWith(github.event.comment.body, '/skill') &&
-      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)
+      vars.ALLOW_API_SPEND == 'true' &&
+      (startsWith(github.event.comment.body, '/skill') &&
+      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

@@ -18,6 +18,7 @@ import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete } from '../bin/lib/anthropic.mjs';
+import { modelFor } from '../bin/lib/models.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const arg = (n, d) => { const i = process.argv.indexOf('--' + n); return i >= 0 && process.argv[i + 1] && !process.argv[i + 1].startsWith('--') ? process.argv[i + 1] : d; };
@@ -55,7 +56,7 @@ async function grade(entry) {
   const key = process.env.ANTHROPIC_API_KEY;
   if (!key) { console.error('ANTHROPIC_API_KEY not set (use --dry-run to preview).'); process.exit(1); }
   const output = await complete({ apiKey: key, system: body, messages: [{ role: 'user', content: entry.input }], maxTokens: 2000 });
-  const raw = await complete({ apiKey: key, model: 'claude-sonnet-4-6', system: 'You are a strict, fair evaluator. Output only the requested JSON.', messages: [{ role: 'user', content: JUDGE(entry, output.trim ? output.trim() : output) }], maxTokens: 700 });
+  const raw = await complete({ apiKey: key, model: modelFor('judge'), system: 'You are a strict, fair evaluator. Output only the requested JSON.', messages: [{ role: 'user', content: JUDGE(entry, output.trim ? output.trim() : output) }], maxTokens: 700 });
   let verdict;
   try { verdict = JSON.parse(String(raw).match(/\{[\s\S]*\}/)[0]); }
   catch { return { skill: entry.skill, error: 'judge returned non-JSON' }; }

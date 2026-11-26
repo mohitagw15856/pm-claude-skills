@@ -82,3 +82,5 @@ Achievement shape:
 - "I never know what to put on my CV. Interview me."
 - "Build my master CV from my old one and LinkedIn."
 - "I am changing careers. What have I actually achieved?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/career-inventory.html

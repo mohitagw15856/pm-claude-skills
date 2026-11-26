@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Which version of this doc is current?"
 - "Our wiki is full of stale pages."
 - "Set up doc lifecycle rules."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/doc-versioning-discipline.html

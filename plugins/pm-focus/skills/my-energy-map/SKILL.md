@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "Why am I useless at certain times of day?"
 - "I keep doing email during my best hours — help me fix that."
 - "Help me plan my day around my focus, not the clock."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/my-energy-map.html

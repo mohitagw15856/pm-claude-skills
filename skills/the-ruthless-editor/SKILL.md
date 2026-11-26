@@ -78,3 +78,5 @@ Ask for these if not provided:
 - "Why is this piece flabby?"
 - "Tighten this up."
 - "As the second half of a drafting duet: run any writing skill."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-ruthless-editor.html

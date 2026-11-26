@@ -132,3 +132,5 @@ Before delivering output, verify:
 - "Give me key pillars for [product name]"
 - "Build a feature and use case list for [product]"
 - "We're launching [X] — help me with the messaging"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/go-to-market.html

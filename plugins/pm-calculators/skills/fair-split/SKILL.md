@@ -77,3 +77,5 @@ Ask for these if not provided:
 - "Split an estate fairly."
 - "Who gets the house and what do they owe the others?"
 - "Handle unequal shares."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fair-split.html

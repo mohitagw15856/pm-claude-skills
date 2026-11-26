@@ -58,3 +58,5 @@ A checklist of documents and a month-by-month timeline to the application window
 - "北京积分落户我大概多少分，还差多少？"
 - "应届生落户深圳需要什么材料？"
 - "Can I get a Shanghai hukou, and how long would it take?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-hukou-points.html

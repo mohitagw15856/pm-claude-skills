@@ -101,3 +101,5 @@ Ask for these if not provided:
 - "Design a closed-loop feedback process across support, sales, and surveys"
 - "Consolidate our feedback sources into one prioritized signal"
 - "Build a VoC taxonomy and monthly readout"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/voice-of-customer-program.html

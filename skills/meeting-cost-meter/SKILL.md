@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Price our meeting culture."
 - "Is this recurring meeting worth it?"
 - "Make the case for fewer attendees."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meeting-cost-meter.html

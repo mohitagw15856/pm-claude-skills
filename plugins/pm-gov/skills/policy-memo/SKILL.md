@@ -67,3 +67,5 @@ Government & executive decision-memo practice (BLUF, options analysis, evidence-
 - "Write an options paper."
 - "Write a decision memo for the minister."
 - "Brief a decision-maker on a policy choice."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/policy-memo.html

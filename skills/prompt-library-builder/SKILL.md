@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Organize my prompts so I can actually find and reuse them."
 - "Templatize this prompt I use all the time."
 - "Set up a personal prompt toolkit."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prompt-library-builder.html

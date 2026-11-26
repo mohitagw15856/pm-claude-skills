@@ -70,3 +70,8 @@ Immediate steps: call 110, call the bank to freeze the card, keep the call recor
 - "我妈接到电话说她社保卡涉嫌洗钱，让她转钱，怎么办？"
 - "帮我写一份给爸妈看的、用医保电子凭证看病的步骤，要特别简单。"
 - "Help me handle my parents' pension and medical insurance admin in China from another city."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-help-parents-admin.html
+
+<!-- pm-claude-skills v84.0.0 | skill: cn-help-parents-admin | source: skills/cn-help-parents-admin/SKILL.md | sha256: 9af243c0b2b60054bdfe94800abf7dde9a2fbd0772fb0be49ef84eea5c4224ac | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

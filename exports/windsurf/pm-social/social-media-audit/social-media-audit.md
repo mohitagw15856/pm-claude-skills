@@ -9,7 +9,7 @@ This skill produces a comprehensive social media audit covering profile complete
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Brand / handle name** — which account(s) to audit
 - **Active platforms** — which social channels to include (LinkedIn, Instagram, X/Twitter, TikTok, YouTube, Facebook, etc.)
 - **Audit timeframe** — what period to review (e.g. last 90 days, last 6 months)
@@ -233,3 +233,8 @@ The fastest way to improve the score by 10+ points:
 - [ ] Do not use competitor benchmarks that are not based on real data — fabricated benchmarks invalidate the competitive gap analysis
 - [ ] Do not audit content mix based on what should have been posted — analyse what was actually posted during the audit period
 - [ ] Do not sequence the action plan by effort alone — sequence by impact × effort so the highest-value actions come first
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/social-media-audit.html
+
+<!-- pm-claude-skills v84.0.0 | skill: social-media-audit | source: skills/social-media-audit/SKILL.md | sha256: 55b7eaa54c44fa53f390b875dc5675008fbbce4c7f57f55b5daaf539892b3f2d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

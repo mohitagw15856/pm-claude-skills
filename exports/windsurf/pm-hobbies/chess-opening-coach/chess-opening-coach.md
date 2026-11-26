@@ -63,3 +63,8 @@ Ask for these if not provided:
 - "I keep losing against 1.e4 — what should I play?"
 - "Give me a solid, low-theory opening system."
 - "Explain the plan behind the London System."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/chess-opening-coach.html
+
+<!-- pm-claude-skills v84.0.0 | skill: chess-opening-coach | source: skills/chess-opening-coach/SKILL.md | sha256: 8b944e10c6dbc50994cba3383d193d3be50509847f5b656b7d70f33993d0b00b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

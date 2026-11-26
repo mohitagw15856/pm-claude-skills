@@ -64,3 +64,5 @@ Tenant-application practice — signalling reliability (stable income, good hist
 - "Write a letter to the landlord."
 - "Write a renter cover letter."
 - "Strengthen my application for a competitive rental."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rental-application.html

@@ -96,3 +96,5 @@ Feed it the direction from stage 1 and ask it to generate and persist the design
 ---
 
 Part of the pm-design-taste bundle in the library at https://github.com/mohitagw15856/pm-claude-skills.
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ui-ux-pro-max-pointer.html

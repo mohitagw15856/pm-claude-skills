@@ -65,3 +65,5 @@ Ordered by impact-on-the-decision: what to fix first, how (drop / impute / dedup
 - "Audit a dataset."
 - "Check data before analysis."
 - "Explain why numbers look off."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-quality-audit.html

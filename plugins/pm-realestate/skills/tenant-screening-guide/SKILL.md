@@ -79,3 +79,5 @@ Fair-housing & tenant-screening practice — written objective criteria applied 
 - "Set rental criteria."
 - "Evaluate rental applicants."
 - "Build a tenant screening process."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tenant-screening-guide.html

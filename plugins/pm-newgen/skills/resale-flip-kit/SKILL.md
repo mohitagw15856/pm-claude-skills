@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "Help me sell this."
 - "Price my old jacket."
 - "Write my Depop listing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/resale-flip-kit.html

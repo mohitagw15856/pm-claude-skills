@@ -74,3 +74,5 @@ Third-party / vendor risk management practice — data-and-access-driven tiering
 - "Run a third-party risk assessment."
 - "Complete a security questionnaire about a vendor."
 - "Decide what due diligence a new tool needs."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vendor-security-review.html

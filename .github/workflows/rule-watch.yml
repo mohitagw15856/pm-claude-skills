@@ -1,0 +1,60 @@
+name: Rule-change watch
+
+# Weekly: read the official pages in data/rule-sources.json and, when one's text
+# changes, comment on the open issue labelled rule-change with the skills to
+# recheck. The last hashes live in a hidden block in that issue's body, so nothing
+# is committed to main and no secret beyond GITHUB_TOKEN is needed.
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: rule-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Validate the sources
+        run: node scripts/watch-rule-sources.mjs --check
+
+      - name: Load the last state from the tracking issue
+        id: issue
+        run: |
+          set -euo pipefail
+          number=$(gh issue list --label rule-change --state open --limit 1 --json number --jq '.[0].number // empty')
+          echo "number=${number}" >> "$GITHUB_OUTPUT"
+          if [ -n "$number" ]; then gh issue view "$number" --json body --jq .body > "$RUNNER_TEMP/state.md"; fi
+
+      - name: Read every source
+        id: watch
+        run: node scripts/watch-rule-sources.mjs --state "$RUNNER_TEMP/state.md" --summary "$RUNNER_TEMP/summary.md" --issue-body "$RUNNER_TEMP/body.md"
+
+      - name: Update the tracking issue
+        env:
+          NUMBER: ${{ steps.issue.outputs.number }}
+          CHANGED: ${{ steps.watch.outputs.changed }}
+        run: |
+          set -euo pipefail
+          if [ -z "$NUMBER" ]; then
+            gh label create rule-change --color D93F0B --description "An official page a skill depends on has changed" --force
+            gh issue create --title "Rule-change watch" --label rule-change --body-file "$RUNNER_TEMP/body.md"
+            exit 0
+          fi
+          gh issue edit "$NUMBER" --body-file "$RUNNER_TEMP/body.md"
+          if [ "${CHANGED:-0}" != "0" ]; then gh issue comment "$NUMBER" --body-file "$RUNNER_TEMP/summary.md"; fi

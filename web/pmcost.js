@@ -7,11 +7,14 @@
   'use strict';
   // [inputPer1M, outputPer1M] USD. Approximate public list prices.
   var PRICES = {
-    'claude-opus-4-8': [15, 75], 'claude-sonnet-4-6': [3, 15], 'claude-haiku-4-5-20251001': [0.8, 4],
+    // Claude prices mirror data/models.json; scripts/check-model-refs.mjs fails if they drift.
+    'claude-fable-5-2': [8, 40], 'claude-opus-5-5': [4, 20], 'claude-sonnet-5-5': [2, 10], 'claude-haiku-5-5': [0.1, 0.5],
+    'claude-fable-5-1': [10, 50], 'claude-fable-5': [10, 50], 'claude-opus-5': [5, 25], 'claude-opus-4-8': [5, 25],
+    'claude-sonnet-5': [2, 10], 'claude-sonnet-4-6': [3, 15], 'claude-haiku-4-5': [1, 5],
     'gpt-4o': [2.5, 10], 'gpt-4o-mini': [0.15, 0.6], 'o4-mini': [1.1, 4.4],
     'gemini-2.0-flash': [0.1, 0.4], 'gemini-1.5-pro': [1.25, 5], 'gemini-1.5-flash': [0.075, 0.3],
   };
-  var DEFAULT = [3, 15];
+  var DEFAULT = [4, 20];
   var KEY = 'pm_cost_total_v1';
   // ~4 chars/token is the standard rough heuristic for English.
   function tokens(str) { return Math.max(1, Math.ceil((str || '').length / 4)); }

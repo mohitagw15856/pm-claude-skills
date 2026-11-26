@@ -1,5 +1,5 @@
 ---
-description: "Understand which type of investment/savings account to use for your goal — the tax-advantaged vs taxable question, and which wrapper fits which money — so you don't leave free tax benefits on the table. Use when asked which account should I invest in, what's the difference between these account types, where should I put my savings, or tax-advantaged accounts explained. Produces a plain-language explainer of the common account categories (retirement/tax-advantaged, general/taxable, education, short-term), a match of your goals to the right account type, the order to prioritize them, and what to verify locally — because using the wrong wrapper can cost you real money. Not financial advice; account types are jurisdiction-specific."
+description: "Understand which type of investment/savings account to use for your goal — the tax-advantaged vs taxable question, and which wrapper fits which money. Use when asked which account should I invest in, what's the difference between these account types, where should I put my savings, or tax-advantaged accounts explained. Produces a plain-language explainer of the common account categories (retirement/tax-advantaged, general/taxable, education, short-term), a match of your goals to the right account type, the order to prioritize them, and what to verify locally — because using the wrong wrapper can cost you real money. Not financial advice; account types are jurisdiction-specific."
 globs:
 alwaysApply: false
 ---
@@ -72,3 +72,8 @@ Ask for these if not provided:
 - "Where should I put money for retirement vs. a house deposit?"
 - "Explain tax-advantaged accounts — am I missing free benefits?"
 - "I have savings to invest — which account is right?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investment-account-picker.html
+
+<!-- pm-claude-skills v84.0.0 | skill: investment-account-picker | source: skills/investment-account-picker/SKILL.md | sha256: 9257548fee72cc76ace17429e3cd296c01a278b044a63303578d2b34692f4d5d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

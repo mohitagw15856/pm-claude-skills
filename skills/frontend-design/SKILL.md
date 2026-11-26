@@ -66,3 +66,5 @@ Ask for (if not already provided):
 - "Restyle this UI."
 - "Make this dashboard look less generic."
 - "Establish the visual system for a new app."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/frontend-design.html

@@ -74,3 +74,8 @@ WARNING: This analysis is for informational purposes only and is not legal advic
 - "Review this confidentiality agreement"
 - "Is this NDA standard or unusual?"
 - "What should I negotiate in this mutual NDA?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/nda-analyser.html
+
+<!-- pm-claude-skills v84.0.0 | skill: nda-analyser | source: skills/nda-analyser/SKILL.md | sha256: 2c897c6c5e4ff097a8fb530dde998b862c95edee278839937b4af72ccb9e7169 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

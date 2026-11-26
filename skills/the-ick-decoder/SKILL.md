@@ -122,3 +122,5 @@ on a relationship fork.
 - "Is this a red flag?"
 - "Am I just scared?"
 - "I always find a reason to end things."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-ick-decoder.html

@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-zh-content",
-  "version": "1.0.0",
-  "description": "Chinese content platforms: 小红书 notes, 公众号 articles, 抖音 short-video scripts and live-commerce (直播带货) scripts, each with a compliance check against restricted advertising claims and undisclosed sponsorship",
+  "version": "1.1.0",
+  "description": "Chinese content platforms: 小红书 notes, 公众号 articles, 抖音 and 视频号 short-video scripts, B站 video scripts, 知乎 answers, 小宇宙 podcast outlines and live-commerce (直播带货) scripts, each with a compliance check against restricted advertising claims and undisclosed sponsorship",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -15,6 +15,10 @@
     "douyin",
     "livestream",
     "content",
-    "chinese"
+    "chinese",
+    "bilibili",
+    "zhihu",
+    "wechat-channels",
+    "podcast"
   ]
 }

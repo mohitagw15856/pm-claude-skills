@@ -1,0 +1,16 @@
+{
+  "id": "living-with-a-disability",
+  "name": "Living with a disability or long-term illness",
+  "emoji": "♿",
+  "triggers": ["I have a disability and need help with benefits and work", "my condition got worse and I can't work like before", "I have a benefit assessment coming up"],
+  "boundary": "Not legal or medical advice. Benefit rules and assessments differ by country; a welfare rights adviser or disability advice service can help for free.",
+  "ask_first": "Is there a deadline coming, such as an assessment date or a decision to challenge? That goes first.",
+  "steps": [
+    { "skill": "functional-assessment-prep", "why": "Benefit decisions often turn on one assessment; describe bad days honestly and bring the evidence.", "carry": ["day-in-my-life description", "evidence list", "assessment date"] },
+    { "skill": "disability-benefit-appeal", "why": "If the decision is wrong, challenge it before the deadline.", "carry": ["decision date", "points disputed"] },
+    { "skill": "disability-disclosure-decision", "why": "Decide what to tell an employer, and when, on your terms.", "carry": ["disclosure decision"] },
+    { "skill": "accommodation-request", "why": "Ask for the adjustments that let you work well.", "carry": ["adjustments requested"] },
+    { "skill": "accessible-travel-planner", "why": "Plan travel and outings without the usual barriers.", "carry": ["trip plan"] }
+  ],
+  "done_when": "Assessment prepared or decision challenged, a disclosure decision made, adjustments requested, and travel planned."
+}

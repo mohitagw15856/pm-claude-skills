@@ -63,3 +63,5 @@ For each slide:
 - "Build a pitch deck structure for [company]"
 - "Help me structure my Series A deck"
 - "What slides should my investor pitch have?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investor-pitch-deck.html

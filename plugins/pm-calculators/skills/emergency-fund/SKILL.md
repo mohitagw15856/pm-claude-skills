@@ -84,3 +84,5 @@ Deterministic: base 3 months + 1 (single income) + 2 (variable income) + 1 (depe
 - "How big should my emergency fund be?"
 - "Do I have enough saved?"
 - "How many months of expenses do I need?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/emergency-fund.html

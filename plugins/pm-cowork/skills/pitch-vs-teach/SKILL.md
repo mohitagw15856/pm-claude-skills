@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "My informative deck didn't land the ask."
 - "My pitch felt like a lecture."
 - "Structure this talk for the right job."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pitch-vs-teach.html

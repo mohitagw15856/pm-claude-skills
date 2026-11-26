@@ -63,3 +63,8 @@ Ask for these if not provided:
 - "We're in different time zones and it's getting hard. What do we do?"
 - "Ideas for feeling connected to my partner far away?"
 - "How do we handle the jealousy and loneliness of being apart?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/long-distance-relationship-plan.html
+
+<!-- pm-claude-skills v84.0.0 | skill: long-distance-relationship-plan | source: skills/long-distance-relationship-plan/SKILL.md | sha256: ca69932b5c7d9ba700f448214e27698a0df00c8f148d616bf972455780a70dec | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

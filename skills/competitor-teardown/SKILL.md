@@ -9,7 +9,7 @@ This skill produces a complete competitive analysis document — structured for 
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Your product** (name + one-line description)
 - **Competitors to analyse** (list 2–5 names; if not provided, ask)
 - **Analysis depth** (quick overview / detailed teardown)
@@ -99,3 +99,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Tear down [Competitor]'s positioning"
 - "Give me a competitive landscape for [market]"
 - "Build a SWOT for our product against [competitor]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/competitor-teardown.html

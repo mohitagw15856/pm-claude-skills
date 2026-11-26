@@ -66,3 +66,5 @@ Support-operations practice — issue triage, decision-tree diagnosis, time-boxe
 - "Write a troubleshooting playbook for agents."
 - "Write a handling guide for this common issue."
 - "Write the tier-1 response procedure."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/support-runbook.html

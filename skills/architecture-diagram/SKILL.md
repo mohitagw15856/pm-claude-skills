@@ -84,3 +84,5 @@ Architecture diagramming (C4-style grouping, logical layers, sync/async edges), 
 - "Show how components fit together."
 - "Map a system/data flow."
 - "Visualize services and dependencies."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/architecture-diagram.html

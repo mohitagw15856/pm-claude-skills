@@ -80,3 +80,5 @@ Agent name · date · promised price · how long it lasts · confirmation # · p
 - "Write me a script to lower my insurance renewal."
 - "The gym keeps raising prices — what do I actually say to get a discount?"
 - "My cable promo ended and the bill doubled. Can you help me call and fix it?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lower-my-bill.html

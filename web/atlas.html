@@ -3,85 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
-<title>The Atlas — a map of the public agent-skill ecosystem</title>
-<meta name="description" content="Every public SKILL.md we could sample, mapped by lexical similarity into one navigable universe — this library's skills glowing among the wider ecosystem. See the clusters of duplicated effort and the empty continents nobody has built. Regenerated with the census." />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  html, body { height: 100%; margin: 0; overflow: hidden; }
-  #map { position: fixed; inset: 0; cursor: grab; }
-  #back { position: fixed; top: 10px; left: 12px; z-index: 6; font-size: 12.5px; color: var(--muted); text-decoration: none; background: rgba(16,19,26,.85); border: 1px solid var(--border); border-radius: 999px; padding: 8px 13px; }
-  #hud { position: fixed; top: 10px; left: 50%; transform: translateX(-50%); z-index: 6; text-align: center; }
-  #hud .stats { font-size: 12px; color: var(--muted); background: rgba(16,19,26,.85); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; }
-  #tip { position: fixed; z-index: 7; pointer-events: none; font-size: 12.5px; color: #fff; background: rgba(10,12,16,.94); border: 1px solid var(--border); border-radius: 9px; padding: 8px 12px; display: none; max-width: 300px; }
-  .legend { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); z-index: 6; font-size: 11.5px; color: rgba(255,255,255,.55); background: rgba(16,19,26,.7); border-radius: 999px; padding: 7px 14px; }
-  .legend b { color: #ffb454; }
-</style>
+<title>Moved to the Skill Galaxy | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/galaxy.html" />
+<meta http-equiv="refresh" content="0; url=galaxy.html" />
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}@media (prefers-color-scheme:light){body{background:#fff;color:#1f2328}a{color:#0969da}}</style>
 </head>
 <body>
-<canvas id="map"></canvas>
-<a id="back" href="galaxy3d.html">🌌 Galaxy</a>
-<div id="hud"><span class="stats" id="stats">loading the ecosystem…</span></div>
-<div id="tip"></div>
-<div class="legend"><b>● amber</b> = this library · <span style="color:#7fa8d9">● blue</span> = the wider ecosystem · lexical map — clusters share vocabulary · scroll to zoom, drag to pan, click to open</div>
-
-<script>
-const cv=document.getElementById('map'), x=cv.getContext('2d');
-const tip=document.getElementById('tip');
-let DATA=null, cam={x:0,y:0,k:0.55}, drag=null, hover=null;
-function resize(){ cv.width=innerWidth*devicePixelRatio; cv.height=innerHeight*devicePixelRatio; }
-resize(); addEventListener('resize',()=>{resize();draw();});
-const W2S=(px,py)=>[(px-cam.x)*cam.k*devicePixelRatio+cv.width/2,(py-cam.y)*cam.k*devicePixelRatio+cv.height/2];
-const S2W=(sx,sy)=>[(sx*devicePixelRatio-cv.width/2)/(cam.k*devicePixelRatio)+cam.x,(sy*devicePixelRatio-cv.height/2)/(cam.k*devicePixelRatio)+cam.y];
-
-function draw(){
-  if(!DATA) return;
-  x.fillStyle='#07080d'; x.fillRect(0,0,cv.width,cv.height);
-  x.strokeStyle='rgba(110,130,170,0.10)'; x.lineWidth=1;
-  for(const [i,j] of DATA.edges){
-    const a=W2S(DATA.nodes[i].x,DATA.nodes[i].y), b=W2S(DATA.nodes[j].x,DATA.nodes[j].y);
-    x.beginPath(); x.moveTo(a[0],a[1]); x.lineTo(b[0],b[1]); x.stroke();
-  }
-  for(const n of DATA.nodes){
-    const [sx,sy]=W2S(n.x,n.y);
-    if(sx<-20||sy<-20||sx>cv.width+20||sy>cv.height+20) continue;
-    const r=(n.o?3.4:2.6)*devicePixelRatio*Math.min(1.6,Math.max(0.7,cam.k));
-    const g=x.createRadialGradient(sx,sy,0,sx,sy,r*2.6);
-    const col=n.o?'255,180,84':'127,168,217';
-    g.addColorStop(0,'rgba('+col+',0.95)'); g.addColorStop(1,'rgba('+col+',0)');
-    x.fillStyle=g; x.beginPath(); x.arc(sx,sy,r*2.6,0,7); x.fill();
-  }
-  if(hover){
-    const [sx,sy]=W2S(hover.x,hover.y);
-    x.strokeStyle='#fff'; x.lineWidth=1.5*devicePixelRatio;
-    x.beginPath(); x.arc(sx,sy,7*devicePixelRatio,0,7); x.stroke();
-  }
-}
-fetch('atlas.json').then(r=>r.json()).then(d=>{
-  DATA=d;
-  document.getElementById('stats').textContent='🗺 '+d.stats.ours+' skills of this library · '+d.stats.external+' external from '+d.stats.repos+' repos · '+d.note.split('—')[0].trim()+' · built '+d.built;
-  draw();
-  window.__atlasReady=d.stats;
-  if(window.pmTrack) pmTrack('atlas/open');
-});
-cv.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,cx:cam.x,cy:cam.y};cv.style.cursor='grabbing';});
-addEventListener('pointerup',()=>{drag=null;cv.style.cursor='grab';});
-addEventListener('pointermove',e=>{
-  if(drag){ cam.x=drag.cx-(e.clientX-drag.x)/cam.k; cam.y=drag.cy-(e.clientY-drag.y)/cam.k; draw(); return; }
-  if(!DATA) return;
-  const [wx,wy]=S2W(e.clientX,e.clientY);
-  let best=null,bd=22/cam.k;
-  for(const n of DATA.nodes){ const d=Math.hypot(n.x-wx,n.y-wy); if(d<bd){bd=d;best=n;} }
-  hover=best;
-  if(best){ tip.style.display='block'; tip.style.left=(e.clientX+14)+'px'; tip.style.top=(e.clientY-8)+'px';
-    tip.innerHTML='<b>'+best.n+'</b>'+(best.o?' <span style="color:#ffb454">· this library</span>':'')+'<br><span style="color:#95a0b0;font-size:11px">'+best.r+'</span>'; cv.style.cursor='pointer'; }
-  else { tip.style.display='none'; cv.style.cursor=drag?'grabbing':'grab'; }
-  draw();
-});
-cv.addEventListener('wheel',e=>{ e.preventDefault(); const f=e.deltaY<0?1.12:0.89; cam.k=Math.min(6,Math.max(0.12,cam.k*f)); draw(); },{passive:false});
-cv.addEventListener('click',()=>{ if(!hover) return;
-  location.href = hover.o ? 'skill/'+hover.n+'.html' : 'https://github.com/'+hover.r;
-});
-</script>
+<main><p>This page has been retired to keep the site focused. Continue to <a href="galaxy.html">the Skill Galaxy</a>.</p></main>
+<script>location.replace('galaxy.html' + location.search + location.hash);</script>
 </body>
 </html>

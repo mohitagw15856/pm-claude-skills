@@ -72,3 +72,5 @@ End with: *"This review is analytical support, not a coverage or placement deter
 - "Review cover before renewal."
 - "Check if limits are still adequate."
 - "Build renewal negotiation points."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/policy-renewal-review.html

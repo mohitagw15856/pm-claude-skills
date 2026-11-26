@@ -67,3 +67,5 @@ E-commerce copywriting practice — benefit-led, scannable listings with feature
 - "Write e-commerce listing copy."
 - "Write a product page."
 - "Rewrite this flat product blurb."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-description.html

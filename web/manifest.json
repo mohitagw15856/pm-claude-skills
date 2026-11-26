@@ -1,7 +1,7 @@
 {
-  "name": "PM Skills — 454 professional AI skills",
+  "name": "PM Skills: professional AI skills",
   "short_name": "PM Skills",
-  "description": "454 professional Agent Skills, arenas, and the Handbook — free, local-first, and largely offline-capable.",
+  "description": "Professional Agent Skills, arenas and the Handbook. Point your camera at a lease, a bill or a whiteboard and get it read with the right skill. Free, local-first, and largely offline-capable.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -22,12 +22,48 @@
     }
   ],
   "share_target": {
-    "action": "index.html",
-    "method": "GET",
+    "action": "share-target",
+    "method": "POST",
+    "enctype": "multipart/form-data",
     "params": {
       "title": "title",
-      "text": "q",
-      "url": "url"
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "file",
+          "accept": [
+            "image/*"
+          ]
+        }
+      ]
     }
-  }
+  },
+  "shortcuts": [
+    {
+      "name": "Scan a document",
+      "short_name": "Scan",
+      "description": "Photograph a document and read it with the right skill",
+      "url": "./capture.html?mode=skill",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Find a skill",
+      "short_name": "Find",
+      "url": "./find.html",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
 }

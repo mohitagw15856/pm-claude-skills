@@ -1,0 +1,17 @@
+{
+  "name": "pm-claude-skills",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.12" },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "postCreateCommand": "npm ci && cp -n .env.example .env || true",
+  "customizations": {
+    "vscode": {
+      "extensions": ["anthropic.claude-code", "yzhang.markdown-all-in-one"],
+      "settings": { "files.eol": "\n" }
+    }
+  },
+  "forwardPorts": [8080],
+  "hostRequirements": { "cpus": 2, "memory": "4gb" }
+}

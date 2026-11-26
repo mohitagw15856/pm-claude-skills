@@ -87,3 +87,5 @@ estimating them. A night runs long because the teach ran long.
 - "We've got non-gamers coming — pick something everyone can enjoy."
 - "Plan an order of games for a 6-person party night."
 - "Something co-op so my competitive friend doesn't rage-quit."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/board-game-night-planner.html

@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Why do our docs all sound different?"
 - "Build a style guide from our best docs."
 - "Check this draft against house style."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/house-style-enforcer.html

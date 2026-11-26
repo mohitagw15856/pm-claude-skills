@@ -17,6 +17,10 @@ Ask for these if not provided:
 - **Language and storage**: where the seed files will be loaded (JSON, CSV, SQL inserts)
 - **Locale**: names, currency, date and phone formats
 
+## Working from a brief
+
+Given the tables and the setting, **generate the data anyway**: state the assumed columns in one line per table, then give complete seed data (CSV or SQL) for every table named, consistent across tables, with realistic but clearly fake names, dates and amounts.
+
 ## Output Structure
 
 ### 1. Schema summary
@@ -71,3 +75,5 @@ A short excerpt of each generated file (three records each) and the command that
 - "Create realistic seed data for screenshots, no real people."
 - "Write a seeded script that fills my sandbox with consistent fake data."
 - "I need a no-signup demo. Make the data tell a story."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/demo-data-generator.html

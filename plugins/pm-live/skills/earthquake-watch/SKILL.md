@@ -65,3 +65,5 @@ Source: USGS real-time feeds · rerun: `[exact curl]`
 - "Any recent quakes near Tokyo?"
 - "Were there any big earthquakes today?"
 - "Monitor seismic activity near me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/earthquake-watch.html

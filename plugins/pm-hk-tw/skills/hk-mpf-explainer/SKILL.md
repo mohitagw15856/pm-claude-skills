@@ -72,3 +72,5 @@ Mandatory contributions for both sides and the yearly tax-deductible amount. Sta
 - "我移民離開香港，強積金點樣提早攞？"
 - "舊公司嘅強積金戶口點整合？"
 - "Explain my Hong Kong MPF and how to save tax with voluntary contributions."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hk-mpf-explainer.html

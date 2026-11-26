@@ -66,3 +66,8 @@ Ask for these if not provided:
 - "I got a collections letter for an old debt — should I pay it?"
 - "Can debt collectors call me at work / threaten me?"
 - "Write me a debt validation letter."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/debt-collector-response.html
+
+<!-- pm-claude-skills v84.0.0 | skill: debt-collector-response | source: skills/debt-collector-response/SKILL.md | sha256: ba980abceb8118690f587f8100795c6b72554c7ed897c36847e3d95d07f1cc67 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

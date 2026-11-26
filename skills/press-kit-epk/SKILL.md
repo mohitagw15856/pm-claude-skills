@@ -45,6 +45,10 @@ Ask for (if not already provided):
 - What exists already: photos, live footage, past press quotes
 - The current target: who is this EPK trying to convince first?
 
+## Working from a brief
+
+Given where the act is now, **write the EPK and the booking emails anyway**: the three-sentence bio, the one-page layout in order, and two booking email versions (cold venue, warm referral). Use placeholders for links, numbers and quotes that were not given, and say which of them matter most.
+
 ## Framework
 
 1. **Lead with sounds-like.** Sentence one of everything: "[Artist] makes
@@ -130,3 +134,5 @@ the general-press cousin; [[personal-bio]] for the human behind the act.
 - "I need an EPK."
 - "Write my band bio."
 - "What do I send festivals?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/press-kit-epk.html

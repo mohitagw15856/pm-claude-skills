@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>国内使用情况 · Mainland usage</title>
+<meta name="description" content="Usage signals that are visible from mainland China: npmmirror downloads, Gitee stars and ModelScope downloads, next to npmjs.org for scale. Counts only." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .cu-wrap { max-width: 860px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { font-size: 15.5px; line-height: 1.7; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 18px 0; }
+  .vcard { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 16px; }
+  .vcard b { display: block; font-size: 28px; }
+  .vcard span { font-size: 12.5px; color: var(--muted); }
+  h2 { font-size: 17px; margin: 26px 0 8px; }
+  .chart { width: 100%; height: auto; border: 1px solid var(--border); border-radius: 13px; background: var(--panel); }
+  .hint { font-size: 12.5px; color: var(--muted); margin-top: 6px; line-height: 1.6; }
+  table { border-collapse: collapse; font-size: 13.5px; margin: 8px 0; width: 100%; }
+  td, th { border: 1px solid var(--border); padding: 7px 12px; text-align: left; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  .warn { border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; font-size: 13.5px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>国内使用情况</h1><p class="tagline">Mainland usage: the counters that can be seen from inside China</p></div></div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<main class="cu-wrap">
+  <p class="lead">本项目的其他统计（网站访问、GitHub 流量）在中国大陆要么打不开，要么统计不到。这里只放大陆能访问的三个来源：<strong>npmmirror</strong> 的下载量、<strong>Gitee</strong> 镜像仓库的 Star，以及<strong>魔搭 ModelScope</strong> 上数据集和路由模型的下载量。只有数字，不涉及任何个人信息。</p>
+  <p class="hint" lang="en">The project's other counters are blind in mainland China. This page shows only sources reachable there. Mirror downloads include bots and CI, so read them as an upper bound on people.</p>
+
+  <div class="cards" id="cards" aria-live="polite"><p class="hint">加载中…</p></div>
+  <div id="errors"></div>
+
+  <h2>npm 下载量：国内镜像与 npmjs.org（每日）</h2>
+  <svg id="chart" class="chart" viewBox="0 0 820 240" role="img" aria-labelledby="chartTitle chartDesc">
+    <title id="chartTitle">每日下载量</title>
+    <desc id="chartDesc">每天通过 npmmirror 的下载量。完整数据见下方表格。</desc>
+  </svg>
+  <p class="hint">柱形是 npmmirror 每日下载量。npmjs.org 的数字大得多，放在下面的表格里对比，不画在同一张图上，以免把镜像的柱子压扁。</p>
+
+  <h2>对比</h2>
+  <table>
+    <caption class="hint" style="text-align:left">最近 7、30、90 天的下载量</caption>
+    <thead><tr><th scope="col">来源</th><th scope="col" class="n">7 天</th><th scope="col" class="n">30 天</th><th scope="col" class="n">90 天</th></tr></thead>
+    <tbody id="compare"></tbody>
+  </table>
+
+  <h2>累计数字的变化</h2>
+  <table>
+    <caption class="hint" style="text-align:left">Star 和魔搭下载量是累计值，每次更新记一行，才能看出变化</caption>
+    <thead><tr><th scope="col">日期</th><th scope="col" class="n">npmmirror 30 天</th><th scope="col" class="n">Gitee Star</th><th scope="col" class="n">魔搭数据集</th><th scope="col" class="n">魔搭模型</th></tr></thead>
+    <tbody id="history"></tbody>
+  </table>
+
+  <p class="hint">数据由 <code>scripts/build-china-usage.mjs</code> 生成，随每周的 trending 更新一起刷新。<span id="updated"></span></p>
+</main>
+
+<script>
+(function () {
+  var el = function (tag, text, cls) { var e = document.createElement(tag); if (text !== undefined) e.textContent = text; if (cls) e.className = cls; return e; };
+  var fmt = function (n) { return (typeof n === 'number' && isFinite(n)) ? n.toLocaleString('zh-CN') : '—'; };
+  var SVG = 'http://www.w3.org/2000/svg';
+
+  function card(parent, value, label) {
+    var c = el('div', undefined, 'vcard');
+    c.appendChild(el('b', value));
+    c.appendChild(el('span', label));
+    parent.appendChild(c);
+  }
+
+  function row(tbody, cells) {
+    var tr = document.createElement('tr');
+    cells.forEach(function (c, i) {
+      var cell = el(i === 0 ? 'th' : 'td', c);
+      if (i === 0) cell.setAttribute('scope', 'row'); else cell.className = 'n';
+      tr.appendChild(cell);
+    });
+    tbody.appendChild(tr);
+  }
+
+  function chart(svg, daily) {
+    if (!daily || !daily.length) return;
+    var W = 820, H = 240, L = 44, R = 12, T = 14, B = 30;
+    var max = Math.max.apply(null, daily.map(function (d) { return d.downloads; })) || 1;
+    var step = (W - L - R) / daily.length, bw = Math.max(1, step - 2);
+    var add = function (name, attrs, text) {
+      var n = document.createElementNS(SVG, name);
+      Object.keys(attrs).forEach(function (k) { n.setAttribute(k, attrs[k]); });
+      if (text !== undefined) n.textContent = text;
+      svg.appendChild(n); return n;
+    };
+    [0, 0.5, 1].forEach(function (f) {
+      var y = T + (H - T - B) * (1 - f);
+      add('line', { x1: L, x2: W - R, y1: y, y2: y, stroke: 'currentColor', 'stroke-opacity': 0.15 });
+      add('text', { x: L - 6, y: y + 4, 'text-anchor': 'end', 'font-size': 11, fill: 'currentColor', 'fill-opacity': 0.7 }, String(Math.round(max * f)));
+    });
+    daily.forEach(function (d, i) {
+      var h = (H - T - B) * (d.downloads / max);
+      var r = add('rect', { x: L + i * step + 1, y: H - B - h, width: bw, height: Math.max(h, 0.5), fill: '#3b82f6', rx: 1 });
+      var t = document.createElementNS(SVG, 'title'); t.textContent = d.day + '：' + d.downloads; r.appendChild(t);
+    });
+    [0, Math.floor(daily.length / 2), daily.length - 1].forEach(function (i) {
+      add('text', { x: L + i * step + bw / 2, y: H - 10, 'text-anchor': i === 0 ? 'start' : (i === daily.length - 1 ? 'end' : 'middle'), 'font-size': 11, fill: 'currentColor', 'fill-opacity': 0.7 }, daily[i].day);
+    });
+  }
+
+  fetch('china-usage.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
+    var s = d.sources || {}, cards = document.getElementById('cards');
+    cards.textContent = '';
+    card(cards, fmt(s.npmmirror && s.npmmirror.last30), 'npmmirror 下载量（30 天）');
+    card(cards, d.mirror_share_30d_percent === null || d.mirror_share_30d_percent === undefined ? '—' : d.mirror_share_30d_percent + '%', '国内镜像占全部 npm 下载的比例（30 天）');
+    card(cards, fmt(s.gitee && s.gitee.stars), 'Gitee Star');
+    if (s.gitee && typeof s.gitee.clones30 === 'number') card(cards, fmt(s.gitee.clones30), 'Gitee 克隆（30 天）');
+    card(cards, fmt(s.modelscope && s.modelscope.dataset_downloads), '魔搭数据集下载（累计）');
+    card(cards, fmt(s.modelscope && s.modelscope.model_downloads), '魔搭路由模型下载（累计）');
+
+    var cmp = document.getElementById('compare');
+    [['npmmirror（国内镜像）', s.npmmirror], ['npmjs.org（全球）', s.npm]].forEach(function (p) {
+      row(cmp, [p[0], fmt(p[1] && p[1].last7), fmt(p[1] && p[1].last30), fmt(p[1] && p[1].last90)]);
+    });
+
+    var hist = document.getElementById('history');
+    (d.history || []).slice(-30).reverse().forEach(function (h) {
+      row(hist, [h.date, fmt(h.npmmirror_30d), fmt(h.gitee_stars), fmt(h.ms_dataset), fmt(h.ms_model)]);
+    });
+
+    chart(document.getElementById('chart'), s.npmmirror && s.npmmirror.daily);
+
+    if (d.updated) document.getElementById('updated').textContent = ' 更新于 ' + String(d.updated).slice(0, 10) + '。';
+    if (d.errors && d.errors.length) {
+      var box = el('p', '本次有来源没有取到数据，显示的是上一次的数字：' + d.errors.map(function (e) { return e.source; }).join('、'), 'warn');
+      document.getElementById('errors').appendChild(box);
+    }
+  }).catch(function () {
+    document.getElementById('cards').textContent = '数据暂时加载不出来。';
+  });
+})();
+</script>
+<script src="i18n.js"></script>
+<script src="a11y.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

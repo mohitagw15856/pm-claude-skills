@@ -71,3 +71,5 @@ Personal budgeting practice (zero-based budgeting + the 50/30/20 needs/wants/sav
 - "Make a budget."
 - "Plan monthly spending."
 - "Get finances under control."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/budget-builder.html

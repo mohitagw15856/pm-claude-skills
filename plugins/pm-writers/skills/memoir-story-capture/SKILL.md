@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "What questions should I ask my dad about his life?"
 - "How do I turn my parent's memories into a keepsake?"
 - "Help me record and organize my family's history."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/memoir-story-capture.html

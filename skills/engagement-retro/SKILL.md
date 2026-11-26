@@ -61,3 +61,5 @@ Consulting close-out / retrospective practice — outcome review, profitability 
 - "Run an engagement retro."
 - "Write a project close-out."
 - "Plan the follow-on."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/engagement-retro.html

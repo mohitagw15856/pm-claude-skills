@@ -17,6 +17,7 @@ import { readFileSync, writeFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { complete, parseSkill } from './lib/anthropic.mjs';
+import { modelFor } from './lib/models.mjs';
 
 const BASE_SYSTEM = 'You are a capable professional assistant. Complete the task well.';
 
@@ -53,7 +54,7 @@ export async function run(argv) {
 Paired A/B verification: the same tasks run with and without the skill,
 token counts taken from the API's real usage fields. Options:
   --runs N       repeats per task per arm (default 1; 2+ recommended)
-  --model m      model id (default claude-sonnet-4-6 — same for both arms, always)
+  --model m      model id (default: the "default" role in data/models.json; same for both arms, always)
   --judge        add a blind judge pass per task pair (extra calls, extra cost)
   --max-tokens N per-response cap (default 2048, same both arms)
   --out FILE     receipt JSON path (default prove-receipt.json)
@@ -71,7 +72,7 @@ The receipt pins the skill's sha256 — publish it with your claim.`);
   const sha = createHash('sha256').update(skillText).digest('hex').slice(0, 16);
   const tasks = loadTasks(tasksPath);
   const runs = Math.max(1, parseInt(getArg(argv, 'runs') || '1', 10) || 1);
-  const model = getArg(argv, 'model') || 'claude-sonnet-4-6';
+  const model = getArg(argv, 'model') || modelFor('default');
   const maxTokens = Math.max(256, parseInt(getArg(argv, 'max-tokens') || '2048', 10) || 2048);
   const judge = argv.includes('--judge');
   const outPath = getArg(argv, 'out') || 'prove-receipt.json';

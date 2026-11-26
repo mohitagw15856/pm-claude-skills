@@ -64,3 +64,5 @@ Data-quality practice — the six DQ dimensions, dbt tests / Great Expectations 
 - "Define DQ checks."
 - "Catch bad data before it hits dashboards."
 - "Set up monitoring for a dataset."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-quality-checks.html

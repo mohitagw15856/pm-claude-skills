@@ -22,6 +22,10 @@ Ask for these if not provided:
 - **The CV**
 - **The person's own notes** on any claim they are unsure of (for example which numbers are estimates)
 
+## Working from a brief
+
+Given only a few claims instead of a whole CV, **check those claims anyway**: for each, say how it would be probed in an interview, a reference or a background check, and give a safer wording that is still strong. Then list the other claim types to check once the full CV is shared.
+
 ## Framework
 
 For every factual claim, check:
@@ -61,3 +65,5 @@ Risk levels:
 - "Is it OK to say I led this project? I was second in charge."
 - "Which lines on my CV would an interviewer challenge?"
 - "帮我检查简历里有没有夸大的地方。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cv-honesty-check.html

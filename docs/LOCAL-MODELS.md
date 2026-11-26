@@ -28,11 +28,13 @@ judges of their own work. A run only counts toward the *verified-local* badge wh
 judged by the pinned cloud judge:
 
 ```bash
-ANTHROPIC_API_KEY=… node scripts/local-eval.mjs --model llama3.1:8b --all \
+ALLOW_API_SPEND=true ANTHROPIC_API_KEY=… node scripts/local-eval.mjs --model llama3.1:8b --all \
   --judge anthropic:claude-sonnet-4-6
 ```
 
 (Only the generated artifacts go to the judge — your inputs stay in the eval fixtures.)
+
+A paid judge spends API credit, so it refuses to run unless `ALLOW_API_SPEND=true` is set. The free alternative is a larger local model as the judge (`--judge local:qwen3:32b`), which is what the [small-model badge](small-model-badge.md) uses.
 
 ## The badge (proposal)
 

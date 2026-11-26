@@ -81,3 +81,5 @@ Ask for these if not provided:
 - "What would a lawyer versus an accountant say?"
 - "I keep getting one-sided advice."
 - "Pressure-test this from multiple angles."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/disagreeing-experts.html

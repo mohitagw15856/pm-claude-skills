@@ -81,3 +81,5 @@ Ask for these if not provided:
 - "What does the insurer need to approve this implant?"
 - "Write a predetermination for periodontal surgery"
 - "Why do our crown claims keep getting denied?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dental-insurance-preauth.html

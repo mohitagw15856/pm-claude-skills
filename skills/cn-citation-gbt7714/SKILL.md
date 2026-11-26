@@ -57,3 +57,5 @@ For long lists, run `python3 scripts/gbt7714.py references.json` with one JSON o
 - "学位论文和会议论文的文献类型标识是什么？"
 - "顺序编码制和著者-出版年制有什么区别？我该用哪个？"
 - "Format my references to GB/T 7714 for my thesis."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-citation-gbt7714.html

@@ -1,21 +1,37 @@
 {
-  "generatedAt": "2026-09-28T15:37:55.532Z",
+  "generatedAt": "2026-11-23T19:21:38.839Z",
   "window": "7d",
   "skills": [
     {
-      "name": "meeting-notes",
+      "name": "youtube-script-writer",
+      "count": 6
+    },
+    {
+      "name": "system-design-interview",
       "count": 3
     },
     {
-      "name": "brief-builder",
+      "name": "short-form-script",
+      "count": 2
+    },
+    {
+      "name": "meeting-notes",
+      "count": 2
+    },
+    {
+      "name": "hook-writer",
       "count": 1
     },
     {
-      "name": "disaster-recovery-plan",
+      "name": "ab-test-planner",
       "count": 1
     },
     {
-      "name": "content-repurposer",
+      "name": "dental-clinical-note",
+      "count": 1
+    },
+    {
+      "name": "resignation-letter",
       "count": 1
     }
   ]

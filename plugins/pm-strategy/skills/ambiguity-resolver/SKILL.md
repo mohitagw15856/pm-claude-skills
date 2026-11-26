@@ -9,7 +9,7 @@ Turn vague briefs and half-formed opportunities into structured, actionable prob
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **The vague brief or opportunity description** (even a single sentence is enough)
 - **Who asked for this** (stakeholder context shapes the framing)
 - **Known constraints** (timeline, budget, team size — if any are known)
@@ -93,3 +93,5 @@ Input: *"We need to figure out what to do about our enterprise customers."*
 - "Make sense of an unclear opportunity."
 - "We need to figure out what to do about X."
 - "I've been asked to look into Y."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ambiguity-resolver.html

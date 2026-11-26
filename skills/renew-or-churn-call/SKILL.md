@@ -83,3 +83,5 @@ Expected level: x.x · Confidence: 0.xx · Source: [model / estimate]
 - "Will Acme renew in November? Give me a real read."
 - "Churn risk on this account — save play or not?"
 - "Score this renewal and tell me the next move."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/renew-or-churn-call.html

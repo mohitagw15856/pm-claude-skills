@@ -413,3 +413,5 @@ ANYTHING ELSE:
 - "Create alert runbooks."
 - "Document escalation procedures."
 - "Prepare an on-call handoff document."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/oncall-runbook.html

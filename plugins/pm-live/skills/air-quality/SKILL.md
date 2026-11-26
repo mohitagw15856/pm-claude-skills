@@ -66,3 +66,5 @@ Source: Open-Meteo air-quality API (modeled/CAMS) · rerun: `[exact curl]`
 - "Is it safe to run outside?"
 - "What's the AQI in my city?"
 - "How bad is the pollution right now?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/air-quality.html

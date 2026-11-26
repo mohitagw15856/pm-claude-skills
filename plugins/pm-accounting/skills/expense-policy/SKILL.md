@@ -78,3 +78,5 @@ Finance-operations practice — clear, category-based expense policies with limi
 - "Write a reimbursement policy."
 - "Write our travel and expense policy."
 - "Set spending guidelines for the team."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/expense-policy.html

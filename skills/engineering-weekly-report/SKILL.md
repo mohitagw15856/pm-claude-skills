@@ -177,3 +177,5 @@ If no decisions are pending: *No decisions pending.*
 - "Write the weekly engineering report."
 - "Write our sprint status email."
 - "Update stakeholders on the team's week."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/engineering-weekly-report.html

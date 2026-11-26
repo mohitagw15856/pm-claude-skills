@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "I want to come out to my parents/boss/friend."
 - "Help me tell them I'm [gay/trans/bi/etc.]."
 - "Rehearse this conversation with me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/coming-out-rehearsal.html

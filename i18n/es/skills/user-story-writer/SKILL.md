@@ -201,6 +201,24 @@ Then la exportación contiene solo facturas de enero 2026 — no todas las factu
 
 ---
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/acceptance-criteria-craft.md`** — Criterios de aceptación que de verdad hacen de puerta. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/story-card.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| **Voz del usuario y valor** | Historias escritas desde la perspectiva del sistema o del desarrollador; el "para" falta o es circular ("para que sea más fácil") | Las personas son concretas, pero algunas cláusulas "para" describen la funcionalidad en lugar del resultado que obtiene el usuario | Cada historia nombra un tipo de usuario concreto y un "para" que enuncia el resultado concreto que consigue; un interesado podría leerla y saber por qué merece construirse |
+| **Comprobabilidad y granularidad de los CA** | Faltan los CA, o son descripciones en prosa sin condición de aprobado/suspenso | Se usa el formato Dado-Cuando-Entonces, pero los criterios agrupan varios comportamientos o prueban la solución de interfaz en lugar del resultado observable | Un Dado-Cuando-Entonces por comportamiento observable, cada uno con una condición inequívoca de aprobado/suspenso, probando resultados y no implementación |
+| **Cobertura de los caminos infelices** | Solo el camino feliz: sin estados vacíos, de error ni de permisos en ningún sitio | Se enumeran algunos casos límite, pero los modos de fallo clave (estado vacío, fallo a mitad del flujo, límites de permisos) faltan o son vagos | Estados vacíos, estados de error, límites de permisos y restricciones técnicas conocidas aparecen todos como CA explícitos o casos límite con comportamiento definido |
+| **Disciplina de alcance y tamaño** | Las historias tienen tamaño de épica, son interdependientes y no hay sección de fuera de alcance | Hay fuera de alcance, pero genérico; algunas historias son demasiado grandes para estimarlas o entregarlas de forma independiente en un sprint | Cada historia cabe en un sprint y se entrega de forma independiente, las divisiones se registran con su motivo, y Fuera de alcance indica dónde empieza la siguiente historia |
+
 ## Verificaciones de Calidad
 
 - [ ] Cada historia tiene un tipo de usuario específico — no "un usuario" o "el sistema"

@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "Prepare for a power outage."
 - "What if the power goes out for days?"
 - "I rely on a medical device that needs electricity."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/power-outage-plan.html

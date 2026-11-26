@@ -53,3 +53,5 @@ For a sensitive issue, also give:
 - "Write home about a student."
 - "Raise a concern with a guardian."
 - "Share an update."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/parent-communication.html

@@ -60,6 +60,25 @@ if (existsSync(pluginsDir)) {
 }
 
 // --- Parse YAML-ish frontmatter (name + description only) ---
+// Permission manifest (SkillSpec §9.1): metadata.permissions { tools: [...], approval }.
+// Parsed from the raw frontmatter block, like the duet block below.
+function parsePermissions(text) {
+  const fm = (text.match(/^---\r?\n([\s\S]*?)\r?\n---/) || [])[1] || '';
+  const meta = (fm.match(/^metadata:\r?\n((?:[ \t]+.*\r?\n?)*)/m) || [])[1] || '';
+  const block = (meta.match(/^[ \t]+permissions:\r?\n((?:[ \t]{4}.*\r?\n?)*)/m) || [])[1] || '';
+  if (!block) return null;
+  const get = (k) => (block.match(new RegExp(`^[ \\t]+${k}:[ \\t]*(.*?)[ \\t]*$`, 'm')) || [])[1];
+  const toolsRaw = get('tools') || '[]';
+  const tools = toolsRaw.replace(/^\[|\]$/g, '').split(',').map((t) => t.trim()).filter(Boolean);
+  return { tools, approval: get('approval') || 'never' };
+}
+// Typed contract (SkillSpec §9.2): schemas/skills/<name>.json with inputs + outputs JSON Schema.
+function loadContract(name) {
+  const f = join(__dirname, '..', 'schemas', 'skills', `${name}.json`);
+  if (!existsSync(f)) return null;
+  try { const c = JSON.parse(readFileSync(f, 'utf8')); return { inputs: c.inputs, outputs: c.outputs }; } catch { return null; }
+}
+
 function parseFrontmatter(text) {
   const m = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
   if (!m) return { meta: {}, body: text };
@@ -190,6 +209,17 @@ try {
     if (/^\d{4}-\d{2}-\d{2}$/.test(line)) cur = line;
     else if (line.startsWith('skills/')) { const n = line.split('/')[1]; if (n && !updatedMap[n]) updatedMap[n] = cur; }
   }
+  // Edited but not yet committed, or committed only on this branch: the date it
+  // will carry once merged is today. Without this, every PR that edits skills
+  // regenerated with the old dates and main drifted the moment it merged.
+  const today = new Date().toISOString().slice(0, 10);
+  const pending = execSync('git status --porcelain -- skills', { cwd: join(__dirname, '..'), encoding: 'utf8' });
+  let branchOnly = '';
+  try { branchOnly = execSync('git diff --name-only origin/main...HEAD -- skills', { cwd: join(__dirname, '..'), encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }); } catch { /* no origin/main locally */ }
+  for (const line of (pending + '\n' + branchOnly).split('\n')) {
+    const m = line.match(/skills\/([^/]+)\/SKILL\.md$/);
+    if (m) updatedMap[m[1]] = today;
+  }
 } catch { /* shallow clone etc. — field just stays absent */ }
 
 const skills = [];
@@ -222,6 +252,8 @@ for (const name of readdirSync(skillsDir)) {
     eval: evalScores[meta.name || name] || null,
     source: SOURCES[meta.name || name] || null,
     inputs: parseInputs(body),
+    ...(parsePermissions(text) ? { permissions: parsePermissions(text) } : {}),
+    ...(loadContract(meta.name || name) ? { contract: loadContract(meta.name || name) } : {}),
     instructions: body.trim(),
   });
 }
@@ -308,6 +340,22 @@ const byBundle = {};
 for (const s of skills) (byBundle[s.plugin || 'other'] ||= {})[s.name] = s.instructions || '';
 for (const [plugin, bodies] of Object.entries(byBundle)) writeFileSync(join(bodiesDir, `${plugin}.json`), JSON.stringify(bodies));
 writeFileSync(join(__dirname, 'skills-index.json'), JSON.stringify({ count: live, total: slim.length, skills: slim }));
+// The Duet-ready skills (data/duet-ready.json) with each one's duet block, for
+// duet.html: small enough to load on its own instead of the full index.
+{
+  const reg = existsSync(join(root, 'data', 'duet-ready.json')) ? JSON.parse(readFileSync(join(root, 'data', 'duet-ready.json'), 'utf8')).skills || {} : {};
+  const byName = new Map(skills.map((s) => [s.name, s]));
+  const duet = Object.entries(reg).filter(([n]) => byName.has(n)).map(([n, r]) => {
+    const s = byName.get(n);
+    const fm = (readFileSync(join(skillsDir, n, 'SKILL.md'), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/) || [])[1] || '';
+    const block = (fm.match(/^duet:\r?\n((?:[ \t]+.*\r?\n?)*)/m) || [])[1] || '';
+    const settings = Object.fromEntries([...block.matchAll(/^[ \t]+([a-z_]+):[ \t]*(.*?)[ \t]*(?:#.*)?$/gm)].map((m) => [m[1], m[2]]));
+    return { name: n, title: s.title, summary: s.summary, plugin: s.plugin, tier: r.tier, since: r.since, settings };
+  }).sort((a, b) => a.name.localeCompare(b.name));
+  const packsFile = join(root, 'data', 'duet-packs.json');
+  const packs = existsSync(packsFile) ? (JSON.parse(readFileSync(packsFile, 'utf8')).packs || []) : [];
+  writeFileSync(join(__dirname, 'duet.json'), JSON.stringify({ count: duet.length, skills: duet, packs }, null, 1) + '\n');
+}
 const tierCounts = skills.reduce((a, s) => ((a[s.tier] = (a[s.tier] || 0) + 1), a), {});
 console.log(
   `Wrote web/skills.json + skills-index.json — ${skills.length} skills, ${new Set(skills.map((s) => s.plugin)).size} bundles ` +

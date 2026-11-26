@@ -24,6 +24,10 @@
   .pair td, .pair th { border: 1px solid var(--border); padding: 4px 8px; }
   .pair pre { white-space: pre-wrap; font-size: 13px; overflow-x: auto; }
   .pair img { max-width: 100%; }
+  .pair [dir="rtl"] { text-align: right; }
+  .pair [dir="rtl"] pre, .pair [dir="rtl"] code, .pair [dir="rtl"] a[href^="http"] { direction: ltr; unicode-bidi: isolate; }
+  .pair [dir="rtl"] pre { text-align: left; }
+  .pair [dir="rtl"] blockquote { border-right: 3px solid var(--border); border-left: 0; padding-right: 12px; margin-right: 0; }
   .colhead { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; position: sticky; top: 0; background: var(--bg); padding: 8px 0; font-weight: 700; z-index: 2; }
   .empty { color: var(--muted); padding: 30px 0; }
   @media (max-width: 760px) { .pair, .colhead { grid-template-columns: 1fr; } .pair > div + div { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); } .colhead { display: none; } }
@@ -54,6 +58,7 @@
 (function () {
   var NAME = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
   var LANG = /^[a-z]{2}(-[A-Z]{2})?$/;
+  var RTL = /^(ar|he|fa|ur)$/;
   var langSel = document.getElementById('lang'), skillSel = document.getElementById('skill');
   var view = document.getElementById('view'), count = document.getElementById('count');
   var index = null;
@@ -93,9 +98,11 @@
     Promise.all([fetchText('i18n/en/' + skill + '.md'), fetchText('i18n/' + lang + '/' + skill + '.md')]).then(function (pair) {
       var a = sections(pair[0]), b = sections(pair[1]);
       var rows = Math.max(a.length, b.length), html = '';
-      html += '<div class="colhead"><div>English</div><div lang="' + lang + '">' + index.langs[lang].label + '</div></div>';
+      // Right-to-left languages: the translation column flows from the right; code and links stay left-to-right (CSS).
+      var dir = RTL.test(lang) ? 'rtl' : 'ltr';
+      html += '<div class="colhead"><div>English</div><div lang="' + lang + '" dir="' + dir + '">' + index.langs[lang].label + '</div></div>';
       for (var i = 0; i < rows; i++) {
-        html += '<section class="pair"><div lang="en">' + render(a[i] || '') + '</div><div lang="' + lang + '">' + render(b[i] || '') + '</div></section>';
+        html += '<section class="pair"><div lang="en" dir="ltr">' + render(a[i] || '') + '</div><div lang="' + lang + '" dir="' + dir + '">' + render(b[i] || '') + '</div></section>';
       }
       view.innerHTML = html;
     }).catch(function () {

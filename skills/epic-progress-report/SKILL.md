@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Where are we really on this initiative, and can we cut to hit the date?"
 - "Break down this epic's status by child work and flag the risky bits."
 - "Is this epic going to make the deadline? What would we have to drop?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/epic-progress-report.html

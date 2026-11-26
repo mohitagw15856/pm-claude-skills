@@ -1,0 +1,16 @@
+{
+  "_comment": "Append-only. Every machine rewrite of a skill, kept or not. Written by scripts/lib/evolution-log.mjs; rendered by scripts/build-evolution-log.mjs.",
+  "entries": [
+    {
+      "date": "2026-07-13",
+      "skill": "cohort-analysis",
+      "loop": "self-improve",
+      "model": "claude-sonnet-4-6",
+      "before": 3.25,
+      "after": 3.5,
+      "kept": true,
+      "pr": 130,
+      "note": "Backfilled from the merged pull request."
+    }
+  ]
+}

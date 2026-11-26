@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Clean up my downloads folder."
 - "What's safe to delete here?"
 - "Stop my downloads from piling up."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/downloads-triage.html

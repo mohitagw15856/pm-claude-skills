@@ -100,3 +100,5 @@ GHG Protocol Corporate Standard and Scope 2/Scope 3 guidance practice (boundarie
 - "Validate scope 1/2/3 numbers."
 - "Explain a year-over-year emissions change."
 - "Prepare emissions data for assurance."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/carbon-accounting-check.html

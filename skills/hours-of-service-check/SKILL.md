@@ -96,3 +96,5 @@ Ask for these if not provided:
 - "Prepare for an hours of service compliance review"
 - "What falsification patterns should I look for in ELD data?"
 - "Are our scheduled runs actually legal?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hours-of-service-check.html

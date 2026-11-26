@@ -80,3 +80,5 @@ End with: *"This memo is analytical support, not a credit decision. Approval aut
 - "Write up this loan for credit committee."
 - "Prepare a deal for credit committee."
 - "Spread these financials and check covenant headroom."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/credit-memo.html

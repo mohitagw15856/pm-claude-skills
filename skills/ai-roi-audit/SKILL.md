@@ -75,3 +75,5 @@ Ask for (if not already provided):
 - "Should we renew these AI contracts?"
 - "We pay for three overlapping AI subscriptions: which do we keep?"
 - "Build the measurement plan before the next AI spend."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-roi-audit.html

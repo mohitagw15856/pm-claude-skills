@@ -350,3 +350,5 @@ Brief every interviewer on these before they conduct their first interview for t
 - "Create an interview rubric."
 - "Design a hiring process."
 - "Build a technical scorecard."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/engineering-hiring-rubric.html

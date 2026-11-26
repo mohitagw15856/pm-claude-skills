@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Our shared drive is a disaster."
 - "Clean up the team drive."
 - "Who owns all these folders?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/shared-drive-cleanup.html

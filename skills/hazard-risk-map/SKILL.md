@@ -117,3 +117,5 @@ neighbors for protecting against the risks found.
 - "Am I in a flood/wildfire/quake zone?"
 - "What emergencies are likely where I live?"
 - "Where do I start with preparedness?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hazard-risk-map.html

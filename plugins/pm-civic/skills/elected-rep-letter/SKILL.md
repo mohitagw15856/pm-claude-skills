@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Contact my representative about X."
 - "How do I get my rep to act?"
 - "My letter to the council got ignored."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/elected-rep-letter.html

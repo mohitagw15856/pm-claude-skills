@@ -450,3 +450,5 @@ Honest assessment of what is missing today and what the priority to add it is:
 - "Write an observability plan."
 - "Create a dashboard specification."
 - "Document logging standards for a team."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/monitoring-setup-guide.html

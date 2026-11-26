@@ -9,7 +9,7 @@ Transform raw metrics data into a clear health narrative — what's working, wha
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Metrics data** (current values for key metrics — even rough numbers work)
 - **Targets or benchmarks** (OKR targets, historical baselines, or industry benchmarks)
 - **Period** (week / month / quarter being analysed)
@@ -91,3 +91,8 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Investigate a performance issue."
 - "Produce a health report."
 - "Assess product-market fit signals."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-health-analysis.html
+
+<!-- pm-claude-skills v84.0.0 | skill: product-health-analysis | source: skills/product-health-analysis/SKILL.md | sha256: 3e46b298f5ef29dcbadde1c4ecf28774f234f64f5d599671e5dc0361154e5db7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

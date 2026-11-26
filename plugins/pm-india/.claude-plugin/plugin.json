@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-india",
+  "version": "1.0.0",
+  "description": "Working life in India: file the right GST returns on time, withdraw EPF, calculate gratuity, choose between the old and new income tax regimes, decode the four labour codes, and settle a notice period and full and final payment",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "india",
+    "gst",
+    "epf",
+    "gratuity",
+    "income-tax",
+    "labour-codes",
+    "fnf"
+  ]
+}

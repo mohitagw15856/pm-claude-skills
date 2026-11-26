@@ -80,3 +80,5 @@ Match captured first: [yes/no — fix first if no] · Temperament: [their words,
 - "Pay loans."
 - "Is my forgiveness track worth it?"
 - "Model my student debt."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/student-loan-strategy.html

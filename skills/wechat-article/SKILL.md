@@ -78,3 +78,5 @@ Ask for these if not provided:
 - "给这篇推文起几个标题，再写个摘要。"
 - "把这些笔记改成一篇 3000 字的公众号长文。"
 - "Write a WeChat Official Account article about our product launch."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wechat-article.html

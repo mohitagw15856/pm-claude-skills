@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "Is now a good time to buy a mattress, or is a sale coming?"
 - "When do appliances usually go on sale?"
 - "New phone's rumored soon — should I wait or buy the current one cheap?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/big-purchase-timing.html

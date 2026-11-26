@@ -1,0 +1,189 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/contract.schema.json",
+  "skill": "competitor-teardown",
+  "version": 1,
+  "inputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "competitor-teardown inputs",
+    "type": "object",
+    "properties": {
+      "product": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": ""
+          },
+          "description": {
+            "type": "string",
+            "description": "One line"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": true
+      },
+      "competitors": {
+        "type": "array",
+        "description": "Two to five competitor names",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "depth": {
+        "type": "string",
+        "description": "Analysis depth",
+        "enum": [
+          "quick",
+          "detailed"
+        ]
+      },
+      "use_case": {
+        "type": "string",
+        "description": "Primary use of the analysis",
+        "enum": [
+          "sales_enablement",
+          "investor_deck",
+          "internal_strategy",
+          "product_planning"
+        ]
+      }
+    },
+    "required": [
+      "product",
+      "competitors"
+    ],
+    "additionalProperties": true
+  },
+  "outputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "competitor-teardown outputs",
+    "type": "object",
+    "properties": {
+      "summary": {
+        "type": "string",
+        "description": "Executive summary (Markdown)"
+      },
+      "competitors": {
+        "type": "array",
+        "description": "One entry per competitor",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": ""
+            },
+            "positioning": {
+              "type": "string",
+              "description": ""
+            },
+            "pricing": {
+              "type": "string",
+              "description": ""
+            },
+            "target_segment": {
+              "type": "string",
+              "description": ""
+            },
+            "strengths": {
+              "type": "array",
+              "description": "",
+              "items": {
+                "type": "string",
+                "description": ""
+              }
+            },
+            "weaknesses": {
+              "type": "array",
+              "description": "",
+              "items": {
+                "type": "string",
+                "description": ""
+              }
+            },
+            "recent_moves": {
+              "type": "array",
+              "description": "Dated where known",
+              "items": {
+                "type": "string",
+                "description": ""
+              }
+            },
+            "confidence": {
+              "type": "string",
+              "description": "How verified the facts are",
+              "enum": [
+                "verified",
+                "likely",
+                "inferred"
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "strengths",
+            "weaknesses"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "comparison_matrix": {
+        "type": "array",
+        "description": "Feature or capability matrix",
+        "items": {
+          "type": "object",
+          "properties": {
+            "dimension": {
+              "type": "string",
+              "description": ""
+            },
+            "scores": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "description": "Score or note per product"
+              }
+            }
+          },
+          "required": [
+            "dimension"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "opportunities": {
+        "type": "array",
+        "description": "Gaps to exploit",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "threats": {
+        "type": "array",
+        "description": "Where competitors are ahead",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "recommendations": {
+        "type": "array",
+        "description": "Ordered by impact",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "required": [
+      "summary",
+      "competitors",
+      "recommendations"
+    ],
+    "additionalProperties": true
+  }
+}

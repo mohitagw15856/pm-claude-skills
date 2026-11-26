@@ -76,3 +76,5 @@ Clinical research practice — objective-endpoint-analysis alignment, explicit e
 - "Draft a study protocol synopsis."
 - "Design the trial."
 - "Structure endpoints, eligibility and statistics for an interventional study."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/clinical-trial-protocol.html

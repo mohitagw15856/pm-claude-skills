@@ -78,3 +78,5 @@ If a briefing's controls are all level 4–5, flag it: the task plan itself may 
 - "Prepare a pre-task plan or JHA/JSA briefing."
 - "Brief a crew on today's hazards."
 - "Plan safety for a specific task like a crane pick."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/site-safety-briefing.html

@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Train me for a 10K in 12 weeks."
 - "Beginner running plan, 3 days a week, bad knees."
 - "I want to run a nonstop mile — where do I start?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/couch-to-goal-runner.html

@@ -131,6 +131,24 @@ Después de completar el runbook:
 
 ---
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/3am-usability.md`** — La prueba de las 3 de la mañana: runbooks para humanos agotados. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/runbook.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| **Exactitud de los comandos** | Los pasos son acciones vagas ("ejecuta el script de despliegue") sin comandos | La mayoría de los pasos tienen comandos, pero algunos parafrasean nombres de herramientas u omiten flags | Cada paso tiene un comando exacto para copiar y pegar, con los flags correctos y los marcadores claramente señalados |
+| **Señales de éxito y fallo** | Sin salidas esperadas; el lector no sabe si un paso funcionó | Salida esperada solo en el camino feliz; los caminos de fallo dicen "investigar" | Cada paso indica la salida esperada y un camino de fallo con nombre o un enlace de resolución de problemas |
+| **Completitud de la reversión** | La reversión falta o queda como marcador | Hay comandos de reversión, pero son parciales y no tienen verificación | La reversión es completa, comprobable de forma independiente, y cada paso de reversión tiene su propio comando de verificación |
+| **Usabilidad para un lector nuevo** | Asume conocimiento del sistema; jerga sin explicar; celdas de escalado como "[Nombre del equipo]" | Puede seguirlo alguien del equipo, pero las lagunas de conocimiento tribal detendrían a alguien de fuera | Un ingeniero que nunca ha tocado el sistema puede ejecutarlo bajo presión; cada fila de escalado tiene un contacto real o una marca explícita de [RELLENAR] |
+
 ## Verificaciones de Calidad
 - [ ] Cada paso tiene un comando exacto (no "ejecuta el script de despliegue")
 - [ ] La salida esperada se especifica para cada paso para que el ingeniero sepa si funcionó
@@ -154,3 +172,12 @@ Después de completar el runbook:
 - [ ] No omitas la salida esperada para cada paso — sin ella, el ingeniero on-call no puede saber si el paso fue exitoso
 - [ ] No escribas contactos de escalada como "[Nombre del equipo]" — cada fila de escalada debe tener un contacto real o una marca explícita para completar
 - [ ] No asumas que el lector conoce el sistema — escribe para alguien que nunca lo ha tocado antes
+
+## Frases de activación de ejemplo
+
+- "Escribe un runbook."
+- "Crea una guía de operaciones."
+- "Documenta un procedimiento operativo."
+- "Prepara un playbook de respuesta a incidentes."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/runbook-writer.html

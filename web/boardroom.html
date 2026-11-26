@@ -65,7 +65,7 @@
   </div>
 </header>
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-<div class="key-note">🔒 Your key stays in this browser. The whole meeting runs client-side — your document is sent only to the model provider you choose. · 🔏 Verdicts export as <a href="verify.html">verifiable attestations</a> · 🛡️ Ready to be questioned yourself? <a href="defend.html">Defend it live</a></div>
+<div class="key-note">🔒 Your key stays in this browser. The whole meeting runs client-side — your document is sent only to the model provider you choose. · 🔏 Verdicts export as <a href="verify.html">verifiable attestations</a></div>
 
 <div class="board-wrap">
   <p class="lead">Every tool here helps you <em>write</em> the document. This is where you find out if it <strong>survives contact with a leadership team</strong> — before the real one sees it. Paste a PRD, launch plan, pitch, or strategy memo; the bench debates it in rounds, then the Chair issues a verdict memo with the changes that would survive the room.</p>
@@ -386,7 +386,7 @@ async function shareReplay(){
   if(url.length>28000) return setStatus('Session too large to fit in a link — download the transcript instead.',true);
   try{ await navigator.clipboard.writeText(url); setStatus('Replay link copied ('+Math.round(url.length/1024)+' KB) — anyone can watch, no key needed.');
     const st=document.getElementById('status');
-    if(st&&!st.querySelector('a')){ const a=document.createElement('a'); a.href='stage.html'+location.hash.replace(/^#?/,'#'); a.textContent=' 🎬 Watch it on the 3D Stage →'; a.style.color='var(--accent)'; a.href='stage.html#replay='+frag; st.appendChild(a); } }
+    /* The 3D Stage replay was retired (2026-10-24). */ }
   catch(_){ setStatus(url.slice(0,80)+'…',false); }
   if(window.pmTrack) pmTrack('boardroom/share-replay');
 }

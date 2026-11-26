@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "How do I tell a crow from a raven?"
 - "Set me up a birding life-list."
 - "Best time and gear to start birding near the coast?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/birdwatching-log.html

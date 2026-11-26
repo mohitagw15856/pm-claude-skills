@@ -60,3 +60,8 @@ Ask for these if not provided:
 - "What matters most for me to do today?"
 - "If I could only do one thing this week, what should it be?"
 - "Cut through my list — what's the highest-leverage move?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-one-thing.html
+
+<!-- pm-claude-skills v84.0.0 | skill: the-one-thing | source: skills/the-one-thing/SKILL.md | sha256: 869874c93375cbdebe3b7c2231db47e34ee4c309b4fd1f183ed48454450124eb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

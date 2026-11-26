@@ -123,3 +123,8 @@ networks fail; [[after-the-disaster]] for the aftermath.
 - "Prepare for a power outage."
 - "What if the power goes out for days?"
 - "I rely on a medical device that needs electricity."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/power-outage-plan.html
+
+<!-- pm-claude-skills v84.0.0 | skill: power-outage-plan | source: skills/power-outage-plan/SKILL.md | sha256: 13ca027b69e71c03520e4bf016d97ee47f615fdb9d6b7a498bef5852f793c4e6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

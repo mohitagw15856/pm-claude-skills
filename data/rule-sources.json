@@ -1,0 +1,107 @@
+{
+  "$comment": "Official pages that rule-based skills depend on. scripts/watch-rule-sources.mjs fetches each one weekly (.github/workflows/rule-watch.yml) and opens an alert when its text changes, naming the skills to recheck. After checking a skill, stamp it: node scripts/rules-reviewed.mjs --review <skill> --by <handle>. Only list pages that answer a plain scripted request; the watcher never pretends to be a browser.",
+  "sources": [
+    {
+      "id": "eu-ai-act-framework",
+      "title": "AI Act: regulatory framework for AI (European Commission)",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+      "skills": ["ai-disclosure-policy", "ai-ethics-review", "compliance-checklist"]
+    },
+    {
+      "id": "eu-ai-act-service-desk",
+      "title": "AI Act Service Desk: timeline, guidance and FAQs (European Commission)",
+      "url": "https://ai-act-service-desk.ec.europa.eu/en",
+      "skills": ["ai-disclosure-policy", "ai-ethics-review", "compliance-checklist"]
+    },
+    {
+      "id": "eu-edpb-guidelines",
+      "title": "GDPR guidelines, recommendations and best practices (European Data Protection Board)",
+      "url": "https://www.edpb.europa.eu/our-work-tools/general-guidance/guidelines-recommendations-best-practices_en",
+      "skills": ["gdpr-compliance", "privacy-policy-drafter", "pipl-gdpr-crosswalk", "data-breach-response"]
+    },
+    {
+      "id": "uk-gdpr",
+      "title": "UK GDPR, as retained in UK law (legislation.gov.uk)",
+      "url": "https://www.legislation.gov.uk/eur/2016/679/contents",
+      "skills": ["gdpr-compliance", "privacy-policy-drafter", "data-breach-response"]
+    },
+    {
+      "id": "uk-data-protection-act-2018",
+      "title": "Data Protection Act 2018 (legislation.gov.uk)",
+      "url": "https://www.legislation.gov.uk/ukpga/2018/12/contents",
+      "skills": ["gdpr-compliance", "privacy-policy-drafter"]
+    },
+    {
+      "id": "uk-income-tax-rates",
+      "title": "Income Tax rates and Personal Allowances (GOV.UK)",
+      "url": "https://www.gov.uk/income-tax-rates",
+      "skills": ["tax-planning-checklist", "quarterly-tax-rhythm", "tax-deduction-finder"]
+    },
+    {
+      "id": "uk-vat-rates",
+      "title": "VAT rates (GOV.UK)",
+      "url": "https://www.gov.uk/vat-rates",
+      "skills": ["tax-planning-checklist", "quarterly-tax-rhythm"]
+    },
+    {
+      "id": "uk-minimum-wage",
+      "title": "National Minimum Wage and National Living Wage rates (GOV.UK)",
+      "url": "https://www.gov.uk/national-minimum-wage-rates",
+      "skills": ["payroll-eve-check", "first-hire-plan"]
+    },
+    {
+      "id": "us-estimated-taxes",
+      "title": "Estimated taxes (IRS)",
+      "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+      "skills": ["quarterly-tax-rhythm", "freelance-rate", "tax-planning-checklist"]
+    },
+    {
+      "id": "us-401k-limits",
+      "title": "401(k) and profit-sharing plan contribution limits (IRS)",
+      "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits",
+      "skills": ["401k-plan-decoder"]
+    },
+    {
+      "id": "us-standard-deduction",
+      "title": "Topic no. 551, Standard deduction (IRS)",
+      "url": "https://www.irs.gov/taxtopics/tc551",
+      "skills": ["tax-deduction-finder", "tax-planning-checklist"]
+    },
+    {
+      "id": "us-hipaa-security",
+      "title": "HIPAA Security Rule, 45 CFR Part 164 Subpart C (eCFR)",
+      "url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-45?part=164&subpart=C",
+      "skills": ["hipaa-safeguards"]
+    },
+    {
+      "id": "us-wage-garnishment",
+      "title": "Fact Sheet 30: federal wage garnishment law (US Department of Labor)",
+      "url": "https://www.dol.gov/agencies/whd/fact-sheets/30-cppa",
+      "skills": ["wage-garnishment-response"]
+    },
+    {
+      "id": "us-student-loan-repayment",
+      "title": "Direct Loan repayment plans, 34 CFR 685.209 (eCFR)",
+      "url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-34?part=685&section=685.209",
+      "skills": ["student-loan-strategy"]
+    },
+    {
+      "id": "us-disability-evaluation",
+      "title": "Disability evaluation process, 20 CFR 404.1520 (eCFR)",
+      "url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-20?part=404&section=404.1520",
+      "skills": ["disability-benefit-appeal"]
+    },
+    {
+      "id": "us-customer-due-diligence",
+      "title": "Customer due diligence for legal entities, 31 CFR 1010.230 (eCFR)",
+      "url": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-31?part=1010&section=1010.230",
+      "skills": ["kyc-escalation"]
+    },
+    {
+      "id": "w3c-wcag22",
+      "title": "Web Content Accessibility Guidelines 2.2 (W3C)",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "skills": ["accessibility-audit"]
+    }
+  ]
+}

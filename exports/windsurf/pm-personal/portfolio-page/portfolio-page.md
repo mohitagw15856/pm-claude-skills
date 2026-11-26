@@ -63,3 +63,8 @@ Case-study portfolio practice (context · role · action · outcome) used across
 - "Write a project case study for my portfolio."
 - "Build a work showcase."
 - "Prove I'm good at this with one page."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/portfolio-page.html
+
+<!-- pm-claude-skills v84.0.0 | skill: portfolio-page | source: skills/portfolio-page/SKILL.md | sha256: 5732834833367baa3a5b52c95213e4b641f0aa4b14619bc343f5923d56bc0040 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

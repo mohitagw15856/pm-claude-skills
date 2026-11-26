@@ -79,3 +79,5 @@ Ask for these if not provided:
 - "How do I write up a near-miss?"
 - "Script for calling a prescriber about a warfarin interaction"
 - "The prescriber decided to continue anyway — how do I document that?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/drug-interaction-intervention.html

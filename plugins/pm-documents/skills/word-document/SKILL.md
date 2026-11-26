@@ -82,3 +82,5 @@ Write the document first (per this skill), then `create` it as a real file. Hone
 - "Make this report a .docx."
 - "Build a formatted contract in Word."
 - "Turn this into a proper Word document."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/word-document.html

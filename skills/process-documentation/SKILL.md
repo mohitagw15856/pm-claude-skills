@@ -95,3 +95,5 @@ Next review due: [Date]
 - "Document this process: [description]"
 - "Write a process guide for [workflow]"
 - "Map out how [process] works"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/process-documentation.html

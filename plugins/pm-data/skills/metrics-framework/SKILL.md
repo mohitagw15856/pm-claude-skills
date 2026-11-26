@@ -9,7 +9,7 @@ This skill builds a complete metrics framework tailored to a product or business
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Product or business description** (one paragraph is enough)
 - **Business model** (SaaS / Marketplace / E-commerce / Consumer app / B2B / Other)
 - **Stage** (Pre-PMF / Growth / Scale / Mature)
@@ -134,3 +134,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Create a KPI tree for [business]"
 - "Give me an AARRR breakdown for [product]"
 - "What metrics should our [team type] team track?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/metrics-framework.html

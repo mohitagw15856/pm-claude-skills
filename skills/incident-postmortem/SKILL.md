@@ -53,7 +53,7 @@ future incident is under-reported. Phase 1 sets that frame; everything depends o
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Incident title / ID**
 - **Severity** (P1 / P2 / P3 or SEV1 / SEV2 / SEV3)
 - **Date and duration** of the incident
@@ -242,3 +242,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Write the incident report."
 - "Write the P1 review."
 - "Do a root cause analysis of the outage."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/incident-postmortem.html

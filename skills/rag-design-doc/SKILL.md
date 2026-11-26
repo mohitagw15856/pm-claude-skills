@@ -75,3 +75,5 @@ Retrieval-Augmented Generation practice — hybrid retrieval, reranking, grounde
 - "Build a chat-with-your-docs feature."
 - "Design a knowledge assistant."
 - "Why does our RAG system give wrong answers?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rag-design-doc.html

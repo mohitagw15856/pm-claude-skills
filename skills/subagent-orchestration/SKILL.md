@@ -57,3 +57,5 @@ Parallel agents multiply speed exactly when the decomposition is right — and m
 - "Work can genuinely parallelise."
 - "Decide whether to delegate."
 - "Do it yourself?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/subagent-orchestration.html

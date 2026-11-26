@@ -120,3 +120,8 @@ the same discipline pointed at an inbox.
 - "My issues are out of control."
 - "Triage my backlog."
 - "Set up labels for my repo."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/maintainer-triage.html
+
+<!-- pm-claude-skills v84.0.0 | skill: maintainer-triage | source: skills/maintainer-triage/SKILL.md | sha256: 093f3c9627f608ef04a6234b2e66a8c9b0f878106bf0e7892ddee5b47813e362 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

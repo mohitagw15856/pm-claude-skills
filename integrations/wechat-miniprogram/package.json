@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "type": "commonjs",
+  "description": "Marks the Mini Program sources as CommonJS, which is what the WeChat runtime loads. Not published."
+}

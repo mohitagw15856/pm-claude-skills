@@ -113,3 +113,5 @@ sending it into; [[the-understudy]] for the deeper version of "represent me."
 - "Brief someone to negotiate for me."
 - "What would you need from me to represent me?"
 - "Write my red lines and fallbacks for the meeting."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/clone-brief.html

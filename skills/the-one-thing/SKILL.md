@@ -59,3 +59,5 @@ Ask for these if not provided:
 - "What matters most for me to do today?"
 - "If I could only do one thing this week, what should it be?"
 - "Cut through my list — what's the highest-leverage move?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-one-thing.html

@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "Message a recruiter on LinkedIn without sounding desperate."
 - "Ask a contact for a referral, politely."
 - "Cold-email someone whose work I admire for advice."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/networking-outreach.html

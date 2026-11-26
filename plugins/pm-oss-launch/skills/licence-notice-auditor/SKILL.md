@@ -82,3 +82,5 @@ A short checklist of facts only the author can supply (the origin of a font, who
 - "Draft a NOTICE file for this app."
 - "Can I ship these fonts and icons in a commercial product?"
 - "Check my dependencies for GPL conflicts, we distribute a desktop app."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/licence-notice-auditor.html

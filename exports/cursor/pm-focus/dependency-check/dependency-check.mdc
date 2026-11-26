@@ -61,3 +61,8 @@ Ask for these if not provided:
 - "I feel like I can't make a decision without asking someone. Help."
 - "Check how reliant I've gotten on this app."
 - "Help me measure — and reduce — my dependence on X."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dependency-check.html
+
+<!-- pm-claude-skills v84.0.0 | skill: dependency-check | source: skills/dependency-check/SKILL.md | sha256: 3927ee7f940b72bf37df0947210b4fe2a8292ca5e38bcaf2530af1bfd141c738 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

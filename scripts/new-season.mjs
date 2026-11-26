@@ -36,5 +36,5 @@ writeFileSync(target, JSON.stringify({
 writeFileSync(join(root, 'seasons', `leaderboard-${next}.json`), JSON.stringify({ season: next, entries: [] }, null, 2) + '\n');
 
 console.log(`Scaffolded seasons/season-${next}.json (${opens} → ${closes}) + empty leaderboard.`);
-console.log(`Tease it now:  cp seasons/season-${next}.json web/season-next.json   (casting.html shows the reveal)`);
+console.log(`Tease it now:  cp seasons/season-${next}.json web/season-next.json`);
 console.log(`Go-live (after ${prev.closes}): fill the TODOs, then cp seasons/season-${next}.json web/season-current.json`);

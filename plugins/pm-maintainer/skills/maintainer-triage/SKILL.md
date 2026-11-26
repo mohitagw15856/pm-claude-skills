@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "My issues are out of control."
 - "Triage my backlog."
 - "Set up labels for my repo."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/maintainer-triage.html

@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Set up an onboarding buddy program."
 - "I'm buddying the new hire what do I do."
 - "Our onboarding is docs with no humans."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/onboarding-buddy-plan.html

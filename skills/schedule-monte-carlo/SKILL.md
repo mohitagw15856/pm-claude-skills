@@ -52,3 +52,5 @@ Prints `deterministic=21.0 P10=22.3 P50=27.0 P90=32.3 · top critical: design, i
 - "Leadership needs a commit date."
 - "Simulate our schedule instead of summing estimates."
 - "Which tasks actually drive the end date?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/schedule-monte-carlo.html

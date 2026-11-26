@@ -65,3 +65,5 @@ Does the full-year forecast need updating? State revised expectation and key ass
 - "Explain why we are over budget on [cost line]"
 - "Write the variance commentary for our finance review"
 - "Produce a budget vs actual analysis for Q[N]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/budget-variance-analysis.html

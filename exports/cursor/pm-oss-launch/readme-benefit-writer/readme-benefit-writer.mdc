@@ -17,6 +17,10 @@ Ask for these if not provided:
 - **Where data goes**: what is stored, where, and whether anything leaves the user's machine
 - **How to contribute**: CONTRIBUTING file, issue labels, or "not accepting PRs yet"
 
+## Working from a brief
+
+Given a feature list and an audience, **write the full README anyway**: the one-line promise, who it is for, three benefits each tied to a feature, a quick start and how to contribute. Use placeholders for install commands, links or screenshots you do not have. Do not ask for the current README before drafting.
+
 ## Output Structure
 
 Return the rewritten README in Markdown, in this order.
@@ -68,3 +72,8 @@ After the README, a table of what changed and why:
 - "Turn this feature list into benefits for the README."
 - "My side project's README is all tech stack. Fix it."
 - "Make this README convincing for someone who has never heard of the project."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/readme-benefit-writer.html
+
+<!-- pm-claude-skills v84.0.0 | skill: readme-benefit-writer | source: skills/readme-benefit-writer/SKILL.md | sha256: e150344e1adc8fe87293940409af0e816063f29edeb5d274b3e46147c73cedd6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

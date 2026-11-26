@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Structure my dissertation."
 - "Plan my capstone."
 - "Organize my research into chapters."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thesis-outline.html

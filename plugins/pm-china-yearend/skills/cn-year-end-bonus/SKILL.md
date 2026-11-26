@@ -86,3 +86,5 @@ Compares separate taxation with combining, using only the person's figures, and 
 - "年终奖 3.7 万和 3.6 万哪个税后更多？"
 - "12 月干满了，1 月离职，公司说发放日不在职不发年终奖，合法吗？"
 - "Explain how my year-end bonus in China is taxed."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-year-end-bonus.html

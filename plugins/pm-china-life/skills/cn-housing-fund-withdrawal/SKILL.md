@@ -55,3 +55,5 @@ What happens to the balance if they change cities: 转移接续 between cities t
 - "离职回老家了，上海的公积金怎么办？"
 - "准备两年后买房，现在要不要把公积金提出来？"
 - "How do I withdraw my Chinese housing fund after leaving the city?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-housing-fund-withdrawal.html

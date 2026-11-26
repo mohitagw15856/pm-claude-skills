@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "What should I hire for first in my small business?"
 - "How do I hire someone when I've never done it before?"
 - "What obligations do I take on when I hire my first employee?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-hire-plan.html

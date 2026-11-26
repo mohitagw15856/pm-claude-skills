@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "I need ideas for content to post this month."
 - "Help me come up with ways to use this spare room."
 - "Idea-storm solutions to my team's meeting overload."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/idea-storm.html

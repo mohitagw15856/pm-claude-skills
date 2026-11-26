@@ -1,6 +1,6 @@
 ---
 trigger: model_decision
-description: "Extract every hidden assumption from a plan or document and put a price on each one — what it costs if wrong, what it costs to test. Use before committing to anything whose author says 'obviously' or whose spreadsheet has hardcoded cells: the bounty hunt makes the invisible load-bearing beliefs explicit and tells you which three to test this week. Produces the assumption ledger (priced and ranked), the cheapest test for each dangerous one, and the document's honest confidence statement."
+description: "Extract every hidden assumption from a plan or document and put a price on each one — what it costs if wrong, what it costs to test. Use when about to commit to anything whose author says 'obviously' or whose spreadsheet has hardcoded cells: the bounty hunt makes the invisible load-bearing beliefs explicit and tells you which three to test this week. Produces the assumption ledger (priced and ranked), the cheapest test for each dangerous one, and the document's honest confidence statement."
 ---
 
 # Assumption Bounty
@@ -50,3 +50,8 @@ Every plan is a stack of beliefs wearing a costume of facts. Most die from an as
 - "Find the hidden assumptions in this plan."
 - "Price the assumptions in this spreadsheet."
 - "Which assumption should we test first?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/assumption-bounty.html
+
+<!-- pm-claude-skills v84.0.0 | skill: assumption-bounty | source: skills/assumption-bounty/SKILL.md | sha256: 31eb0a34cb349d83d5b2e1f5e495b214589108e724f8c16df6e848b988c8f60f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

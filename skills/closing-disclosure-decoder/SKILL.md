@@ -66,3 +66,5 @@ End verbatim: *"This is a plain-language reading, not legal or lending advice â€
 - "Review my closing costs."
 - "Why did my costs go up?"
 - "Which fees can I negotiate?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/closing-disclosure-decoder.html

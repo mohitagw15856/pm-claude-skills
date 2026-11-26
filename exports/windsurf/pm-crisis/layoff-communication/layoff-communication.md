@@ -80,3 +80,8 @@ Workforce-change communication practice — dignity-first sequencing, honest rat
 - "Write a RIF/redundancy announcement."
 - "Prepare manager talking points for letting people go."
 - "Plan workforce-reduction comms."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/layoff-communication.html
+
+<!-- pm-claude-skills v84.0.0 | skill: layoff-communication | source: skills/layoff-communication/SKILL.md | sha256: 25fa3407e36be2e28bc7203f09141967304193218aa916a931fbb6042227009f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

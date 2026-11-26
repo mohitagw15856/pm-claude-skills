@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "Prep for a loan application meeting."
 - "Why might the bank decline us?"
 - "What will the underwriter ask?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-loan-officer.html

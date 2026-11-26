@@ -1,0 +1,206 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/contract.schema.json",
+  "skill": "prd-template",
+  "version": 1,
+  "inputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "prd-template inputs",
+    "type": "object",
+    "properties": {
+      "feature_name": {
+        "type": "string",
+        "description": "Feature or product name"
+      },
+      "problem": {
+        "type": "string",
+        "description": "Problem being solved, from the user's perspective"
+      },
+      "target_user": {
+        "type": "string",
+        "description": "Role, context and what the user is trying to accomplish"
+      },
+      "success_metrics": {
+        "type": "array",
+        "description": "How you will know it worked",
+        "items": {
+          "type": "string",
+          "description": "One measurable success metric"
+        }
+      },
+      "scope": {
+        "type": "object",
+        "properties": {
+          "in_scope": {
+            "type": "array",
+            "description": "What ships in the MVP",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "out_of_scope": {
+            "type": "array",
+            "description": "What is explicitly excluded",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "stakeholders": {
+        "type": "array",
+        "description": "Who reviews and approves",
+        "items": {
+          "type": "string",
+          "description": "Name or role"
+        }
+      }
+    },
+    "required": [
+      "feature_name",
+      "problem",
+      "target_user"
+    ],
+    "additionalProperties": true
+  },
+  "outputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "prd-template outputs",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "Document title"
+      },
+      "status": {
+        "type": "string",
+        "description": "Document status",
+        "enum": [
+          "Draft",
+          "In review",
+          "Approved"
+        ]
+      },
+      "sections": {
+        "type": "object",
+        "properties": {
+          "overview": {
+            "type": "string",
+            "description": "Problem statement, target user and why now (Markdown)"
+          },
+          "goals": {
+            "type": "array",
+            "description": "Success metrics with targets",
+            "items": {
+              "type": "object",
+              "properties": {
+                "metric": {
+                  "type": "string",
+                  "description": ""
+                },
+                "target": {
+                  "type": "string",
+                  "description": ""
+                },
+                "baseline": {
+                  "type": "string",
+                  "description": ""
+                }
+              },
+              "required": [
+                "metric"
+              ],
+              "additionalProperties": true
+            }
+          },
+          "non_goals": {
+            "type": "array",
+            "description": "Explicit non-goals",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "requirements": {
+            "type": "array",
+            "description": "Functional requirements",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "e.g. REQ-1"
+                },
+                "priority": {
+                  "type": "string",
+                  "description": "",
+                  "enum": [
+                    "P0",
+                    "P1",
+                    "P2"
+                  ]
+                },
+                "text": {
+                  "type": "string",
+                  "description": ""
+                }
+              },
+              "required": [
+                "id",
+                "priority",
+                "text"
+              ],
+              "additionalProperties": true
+            }
+          },
+          "user_stories": {
+            "type": "array",
+            "description": "As a / I want / so that",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "open_questions": {
+            "type": "array",
+            "description": "Unresolved questions",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "risks": {
+            "type": "array",
+            "description": "Risks and mitigations",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          }
+        },
+        "required": [
+          "overview",
+          "goals",
+          "requirements"
+        ],
+        "additionalProperties": true
+      },
+      "assumptions": {
+        "type": "array",
+        "description": "Inputs the skill inferred because they were not provided",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "required": [
+      "title",
+      "sections"
+    ],
+    "additionalProperties": true
+  }
+}

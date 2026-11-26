@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "What are legitimate reasons to be excused from jury service?"
 - "What happens on the day of jury duty?"
 - "Does my employer have to pay me / hold my job during jury service?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jury-duty-guide.html

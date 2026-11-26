@@ -173,6 +173,24 @@ Prepárate para las objeciones más probables:
 
 ---
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/risk-timeline.md`** — El reloj de la renovación: qué ocurre a T-menos-cuánto. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/renewal-plan.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Honestidad sobre la salud | ARR objetivo afirmado sin evaluación de salud, o una cuenta en rojo/ámbar con un plan de renovación plana basado en la esperanza | Hay instantánea de salud con evidencia, pero la tesis de renovación y el ARR objetivo no se derivan del todo de ella (p. ej. se reconoce software sin uso y el objetivo sigue plano) | Cada puntuación cita evidencia, la tesis de renovación se deriva del cuadro de salud y el ARR objetivo refleja la realidad, incluso recomendando contracción o redimensionamiento cuando esa es la jugada honesta |
+| Cobertura de stakeholders y riesgos | Visión limitada al champion; comprador económico sin mapear; los riesgos son etiquetas genéricas sin mitigaciones | Comprador económico mapeado, pero las brechas de relación no se abordan; riesgos A/A enumerados, aunque algunas mitigaciones son vagas o sin responsable | Comprador económico, detractores y riesgo del champion evaluados con un plan concreto de múltiples hilos; cada riesgo A/A tiene una mitigación preventiva con fecha y responsable que reaparece en la cronología |
+| Rigor comercial | Sin planificación de escenarios; el descuento es la primera y única palanca; sin suelo ni puerta de aprobación | Hay escenarios, pero las probabilidades no suman 100 % o las cifras de ARR no cuadran con los componentes del contrato; hay suelo, pero sin marco de contrapartidas | Las probabilidades de los escenarios suman 100 %, cada cifra de ARR se descompone en partidas reales del contrato, el suelo de descuento y la puerta de escalado son explícitos, y cada concesión nombra qué obtenemos a cambio |
+| Especificidad de cronología y objeciones | Sin cronología, o una que empieza a menos de 90 días sin reconocerlo; las respuestas a objeciones son de plantilla | La cronología cubre 90 días o más con responsables, pero las objeciones valdrían para cualquier cuenta; la insatisfacción genuina y las tácticas de negociación se tratan igual | La cronología empieza con 90 días o más (o señala explícitamente el retraso y se comprime) con responsables por paso, y cada respuesta a objeciones usa las cifras reales de esta cuenta, distinguiendo la insatisfacción real que hay que resolver de las tácticas que hay que negociar |
+
 ## Controles de Calidad
 
 - [ ] Mapa de stakeholders incluye el comprador económico — no solo el champion

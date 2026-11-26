@@ -65,3 +65,5 @@ Feeds: `[curl per feed]` · window: [the since-filter applied]
 - "What's new on this blog?"
 - "Digest these RSS feeds."
 - "Build me a morning briefing from these sources."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rss-digest.html

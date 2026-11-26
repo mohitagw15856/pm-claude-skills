@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "Do a proper divergent brainstorm, then tear it apart."
 - "Generate a ton of options for this, then judge them."
 - "Give me quantity first, quality second."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/generate-then-execute.html

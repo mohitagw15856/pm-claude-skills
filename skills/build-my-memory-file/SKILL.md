@@ -76,3 +76,5 @@ Ask for these if not provided:
 - "I'm tired of re-explaining myself to AI — set up my memory."
 - "Create a file of my decision rules and preferences."
 - "Help my AI remember my patterns and past mistakes."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/build-my-memory-file.html

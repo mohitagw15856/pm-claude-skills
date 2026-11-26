@@ -63,3 +63,8 @@ Ask for these if not provided:
 - "Give me the key takeaways from this transcript."
 - "What's the gist of this doc — is it worth reading fully?"
 - "Pull the decisions and action items out of these meeting notes."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/summarize-anything.html
+
+<!-- pm-claude-skills v84.0.0 | skill: summarize-anything | source: skills/summarize-anything/SKILL.md | sha256: fc1687b6b191a50f2c942e9622f59660539b04184cb05821f4de7a145da874de | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -67,3 +67,8 @@ Ask for these if not provided:
 - "Should I buy from this site? They only take bank transfer."
 - "How do I check an online seller before I pay?"
 - "I paid a site that now looks fake — can I get my money back?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/safe-online-shopping.html
+
+<!-- pm-claude-skills v84.0.0 | skill: safe-online-shopping | source: skills/safe-online-shopping/SKILL.md | sha256: be8927adf9c7f328cdb4b8908c059b8f3eb0768345b1d1199360a8c4fa9e96d4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

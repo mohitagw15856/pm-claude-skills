@@ -62,3 +62,5 @@ Competency-based performance-review practice — evidence-mapped accomplishments
 - "Write my self-assessment for this cycle."
 - "Help me write my self-evaluation."
 - "Turn my year into a performance self-review."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/self-review.html

@@ -79,3 +79,5 @@ Creative/agency briefing practice and structured-elicitation interviewing (decis
 - "Ask me questions until the brief is clear."
 - "Turn my vague idea into a proper brief."
 - "Interview me before you write anything."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/brief-builder.html

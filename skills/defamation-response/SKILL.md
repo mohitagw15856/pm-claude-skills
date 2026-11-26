@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "How do I get a defamatory post taken down?"
 - "Someone's spreading false statements about me online."
 - "Should I sue for defamation or is there a better first step?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/defamation-response.html

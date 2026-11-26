@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "Can I get a refund or replacement for a defective car?"
 - "How does lemon law work and do I qualify?"
 - "What records do I need to make a lemon-law claim?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lemon-law-check.html

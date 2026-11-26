@@ -84,3 +84,5 @@ Verification anchors customers can check (verified handles list on your domain, 
 - "Customers are reporting a fake version of our app."
 - "Someone cloned our support line."
 - "Prepare an impersonation playbook before it happens."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/brand-impersonation-response.html

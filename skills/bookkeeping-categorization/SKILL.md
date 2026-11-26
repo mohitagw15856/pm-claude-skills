@@ -73,3 +73,5 @@ Bookkeeping practice — fit-for-purpose charts of accounts, consistent categori
 - "Set up a chart of accounts."
 - "Organize bookkeeping."
 - "Sort bank transactions into the right buckets."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bookkeeping-categorization.html

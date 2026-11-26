@@ -68,3 +68,8 @@ Ask for these if not provided:
 - "Does this store do price adjustments, and am I still in the window?"
 - "The price fell right after I ordered — what do I say to get it refunded?"
 - "They won't match a marketplace seller — what are my options?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/price-match-request.html
+
+<!-- pm-claude-skills v84.0.0 | skill: price-match-request | source: skills/price-match-request/SKILL.md | sha256: 70307eb1a717685f57b101a06c672976614ea0798424cf28130dd4ad74c24a7d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -38,6 +38,10 @@ Ask for (if not already provided):
   gets the photos? anything to be closed privately without others seeing?
 - Whether there's a will/executor already, so this plugs into it rather than floating
 
+## Working from a brief
+
+Given the person's situation, **write the plan anyway**: the inventory with categories filled in from what they said and space for the rest, how their chosen person gets access to each, the legal and platform steps, and a one-page instruction sheet written for someone who is not technical.
+
 ## Framework
 
 1. **Email is the master key — start there.** Whoever controls the primary email can
@@ -123,3 +127,8 @@ for the will this plugs into; [[password]] hygiene now makes all of this easier.
 - "Help my family access my stuff if something happens."
 - "Plan my digital legacy."
 - "Who gets my photos and passwords?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/digital-death-plan.html
+
+<!-- pm-claude-skills v84.0.0 | skill: digital-death-plan | source: skills/digital-death-plan/SKILL.md | sha256: f9e5296a3478061257f35be7450453bfa781b23429db4b8ee6e638b5daab1981 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -81,3 +81,5 @@ Then **群消息版本**, **置顶版本** and, where there is an action, **提�
 - "写企业微信公告：周六晚上 OA 系统维护。"
 - "Write a staff announcement in Chinese about the office move."
 - "部门架构调整，帮我写一则内部公告，语气要稳。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wecom-announcement.html

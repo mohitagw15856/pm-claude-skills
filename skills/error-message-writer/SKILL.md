@@ -63,3 +63,5 @@ UX writing practice — plain-language, blame-free error messages with clear rec
 - "Write validation text for this form."
 - "Rewrite this cryptic system error."
 - "Make our error messages less blaming."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/error-message-writer.html

@@ -74,3 +74,5 @@ Marketplace SEO & CRO practice — relevance-and-performance ranking, field-appr
 - "Improve marketplace SEO."
 - "Fix a product listing that isn't selling."
 - "Write keyword-rich titles and bullets."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/marketplace-listing-optimizer.html

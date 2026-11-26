@@ -25,6 +25,10 @@ Ask for these if not provided:
 - **Board and governance experience**: committees, non-executive roles, trustee posts
 - **The target**: executive role, non-executive role, or both, and the sector
 
+## Working from a brief
+
+Given the role, scope and headline results, **write the executive CV and the board biography anyway**, with scope and results first and [bracketed] placeholders for company names, dates and figures not given. Never invent numbers.
+
 ## Framework
 
 1. **Profile**: four lines. Who they are, the scale they operate at, the two or three results that define them, what they seek.
@@ -61,3 +65,5 @@ Confidential figures: if a number is confidential, use a range or a ratio the pe
 - "I need a board bio for a non-executive director application."
 - "Turn my CFO resume into something search firms will read."
 - "Help me with a C-suite CV."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/executive-cv.html

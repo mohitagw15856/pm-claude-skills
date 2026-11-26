@@ -69,3 +69,8 @@ Ask for these if not provided:
 - "We have 90 channels and nothing is findable."
 - "Set channel norms."
 - "Where should things get posted?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/channel-hygiene.html
+
+<!-- pm-claude-skills v84.0.0 | skill: channel-hygiene | source: skills/channel-hygiene/SKILL.md | sha256: aee9149a584f4180f37b0a282c18990b9517d63582a373549be1ca10f7e1d522 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -74,3 +74,5 @@ A **Spreadsheet Audit** artifact:
 - "Check this spreadsheet — why don't the totals add up?"
 - "Is this sheet safe to build on? Open it and trace it."
 - "Someone left me this model; hunt it for hardcodes in Cowork."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spreadsheet-audit-live.html

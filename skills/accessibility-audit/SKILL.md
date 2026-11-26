@@ -9,7 +9,7 @@ This skill produces a structured accessibility audit based on WCAG 2.2 guideline
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **What is being audited** (screen, component, full product, design spec)
 - **Description or image** of the UI
 - **Target WCAG level** (A / AA / AAA — default to AA, which is the legal standard in most jurisdictions)
@@ -206,3 +206,5 @@ an inferred ratio is not an audit finding.
 - "Check WCAG compliance for [screen/component]"
 - "Give me an a11y audit of [UI description]"
 - "What accessibility issues does this design have?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/accessibility-audit.html

@@ -20,6 +20,10 @@ Ask for these if not provided:
 - **Approval route** (決裁ルート) and the decision deadline
 - **Company template**, if there is one
 
+## Working from a brief
+
+Given the cost, purpose and current problem, **write the full 稟議書 anyway**: every section in order, with the cost-effectiveness worked out from the numbers given. Mark unknowns such as 申請日 or the approvers with 【 】 instead of asking first.
+
 ## Output Structure
 
 ### 1. The 稟議書
@@ -54,3 +58,8 @@ Finance on cost and budget, legal on contract terms, the department head on prio
 - "外部デザイナーへの発注、稟議を通したい。比較検討も入れて。"
 - "Write a ringi-sho in Japanese to approve buying 20 laptops."
 - "帮我写一份日本公司的稟議書，申请参加一个展会。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jp-ringisho.html
+
+<!-- pm-claude-skills v84.0.0 | skill: jp-ringisho | source: skills/jp-ringisho/SKILL.md | sha256: 72d89ffbc26f42a30fa3ad3015656e448f802e6b42cd6c7b65add220b761414e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

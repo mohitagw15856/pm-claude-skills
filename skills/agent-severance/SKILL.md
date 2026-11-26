@@ -116,3 +116,5 @@ Duties: [scheduled + reactive + undocumented] · Dependents: [who/what calls it]
 - "Decommissioning an agent."
 - "Switch agent vendors."
 - "Ending an AI pilot."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-severance.html

@@ -62,3 +62,5 @@ Format rule: one page, no exceptions; consistent dates on the right; a plain ser
 - "Make my resume fit the banking one-page format."
 - "Turn my experience into a McKinsey-style CV."
 - "I need a PE CV on one page."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/consulting-banking-cv.html

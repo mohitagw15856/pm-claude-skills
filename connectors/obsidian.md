@@ -16,7 +16,7 @@ Three ways in, from drop-in to native.
 ## Tier 0 — drop the skills into your vault (no build)
 
 Every skill is exported as a vault-ready note under
-[`exports/obsidian/`](../exports/obsidian/) — frontmatter as Obsidian properties, the skill
+[`exports/obsidian/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/obsidian) — frontmatter as Obsidian properties, the skill
 body, and a footer that applies it to your current selection.
 
 ```bash

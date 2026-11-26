@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "How do I make working out a real habit?"
 - "I keep failing to meditate. Design it so it sticks."
 - "Help me break the habit of checking my phone first thing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/habit-builder.html

@@ -93,3 +93,5 @@ crew meals ☐ · overtime past curfew ☐ · corkage ☐ · extra rigging hours
 - "How much contingency should an outdoor event carry?"
 - "Why did our event go over budget?"
 - "What is our cost per head if only 150 people come?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/event-budget-plan.html

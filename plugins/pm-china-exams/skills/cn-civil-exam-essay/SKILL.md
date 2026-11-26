@@ -77,3 +77,5 @@ Ask for these if not provided:
 - "申论大作文怎么搭框架？用这份资料练一篇。"
 - "这道贯彻执行题要写倡议书，格式是什么？"
 - "Help me practise the shenlun paper for the national civil service exam."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-civil-exam-essay.html

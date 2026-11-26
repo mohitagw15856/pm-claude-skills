@@ -225,6 +225,11 @@
       "a": "cn-sop-writer",
       "b": "sop-writer",
       "reason": "A one-station shop-floor work instruction (作业指导书) for a Chinese factory, with key points and reasons, control-plan checks and photo placeholders, vs a formal business or office SOP."
+    },
+    {
+      "a": "crop-insurance-claim",
+      "b": "insurance-claim",
+      "reason": "Crop and livestock policies work differently from household and personal claims: index or area-based payouts on weather or yield triggers, field evidence before replanting, and enrolment through banks or cooperatives."
     }
   ]
 }

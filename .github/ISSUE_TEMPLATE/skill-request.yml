@@ -1,0 +1,78 @@
+name: "💡 Skill request"
+description: Suggest a new skill you would like to see in the library.
+title: "[Skill request] <short name>"
+labels: ["skill-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before you file: search [SKILLS.md](../blob/main/SKILLS.md) and the [open requests](../issues?q=is%3Aissue+label%3Askill-request). If a close match exists, add a 👍 there instead. Requests with the most 👍 get built first.
+  - type: input
+    id: name
+    attributes:
+      label: Skill name
+      placeholder: e.g. Legal Contract Review, Sales Battlecard Builder
+    validations:
+      required: true
+  - type: dropdown
+    id: profession
+    attributes:
+      label: Who is it for?
+      multiple: true
+      options:
+        - Product management
+        - Marketing and GTM
+        - Engineering and tech
+        - Data and analytics
+        - Leadership and people
+        - Design and UX
+        - Business and strategy
+        - Legal
+        - Finance
+        - HR
+        - Sales
+        - Customer success
+        - Healthcare, education or public sector
+        - Agent builders and AI engineers
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: What workflow does it solve?
+      description: The task or document it should produce. What do you do today that takes too long?
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: What should the output look like?
+      placeholder: e.g. A structured contract review with flagged clauses, a risk rating and a plain English summary.
+    validations:
+      required: true
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Example trigger phrases
+      description: How would you naturally ask Claude for this?
+      value: |
+        -
+        -
+    validations:
+      required: true
+  - type: dropdown
+    id: build
+    attributes:
+      label: Will you build it?
+      options:
+        - Yes, I will open a PR with the SKILL.md
+        - Maybe, I would like guidance first
+        - No, I am suggesting it for someone else to build
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: Links, examples, or anything that would help the builder.

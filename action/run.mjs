@@ -6,6 +6,7 @@ import { readFileSync, existsSync, writeFileSync, appendFileSync } from 'node:fs
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { complete, parseSkill } from '../bin/lib/anthropic.mjs';
+import { modelFor } from '../bin/lib/models.mjs';
 
 const ACTION_DIR = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(ACTION_DIR, '..');
@@ -25,7 +26,7 @@ async function main() {
   const skill = inp('skill');
   if (!skill) throw new Error('Input `skill` is required.');
   const apiKey = inp('api_key') || process.env.ANTHROPIC_API_KEY || '';
-  const model = inp('model', 'claude-sonnet-4-6');
+  const model = inp('model') || modelFor('default');
   const maxTokens = parseInt(inp('max_tokens', '4096'), 10) || 4096;
 
   let input = inp('input');

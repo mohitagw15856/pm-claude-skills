@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Write a scholarship letter."
 - "Ask for more aid after circumstances changed."
 - "Respond to an aid decision."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/financial-aid-appeal.html

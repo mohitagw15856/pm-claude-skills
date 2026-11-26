@@ -1,0 +1,163 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/contract.schema.json",
+  "skill": "changelog-generator",
+  "version": 1,
+  "inputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "changelog-generator inputs",
+    "type": "object",
+    "properties": {
+      "changes": {
+        "type": "string",
+        "description": "git log --oneline, raw commit messages or a description of what changed"
+      },
+      "version": {
+        "type": "string",
+        "description": "Semantic version, e.g. 2.4.0"
+      },
+      "date": {
+        "type": "string",
+        "description": "ISO date or \"today\""
+      },
+      "audience": {
+        "type": "string",
+        "description": "",
+        "enum": [
+          "developers",
+          "end_users",
+          "internal"
+        ]
+      },
+      "breaking_changes": {
+        "type": "array",
+        "description": "Known breaking changes",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "previous_behaviour": {
+        "type": "string",
+        "description": "Previous changelog entry or what is changing"
+      },
+      "scope": {
+        "type": "string",
+        "description": "Whole product or a specific package or module"
+      }
+    },
+    "required": [
+      "changes",
+      "version"
+    ],
+    "additionalProperties": true
+  },
+  "outputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "changelog-generator outputs",
+    "type": "object",
+    "properties": {
+      "version": {
+        "type": "string",
+        "description": ""
+      },
+      "date": {
+        "type": "string",
+        "description": ""
+      },
+      "sections": {
+        "type": "object",
+        "properties": {
+          "added": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "changed": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "deprecated": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "removed": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "fixed": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "security": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "breaking": {
+        "type": "array",
+        "description": "Breaking changes with migration notes",
+        "items": {
+          "type": "object",
+          "properties": {
+            "change": {
+              "type": "string",
+              "description": ""
+            },
+            "migration": {
+              "type": "string",
+              "description": "What the reader must do"
+            }
+          },
+          "required": [
+            "change"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "markdown": {
+        "type": "string",
+        "description": "Keep a Changelog formatted entry (Markdown)"
+      },
+      "dropped": {
+        "type": "array",
+        "description": "Commits that were noise and were left out",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "required": [
+      "version",
+      "sections",
+      "markdown"
+    ],
+    "additionalProperties": true
+  }
+}

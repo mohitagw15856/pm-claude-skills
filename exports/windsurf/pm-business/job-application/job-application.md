@@ -9,7 +9,7 @@ This skill tailors a CV and cover letter to a specific job description — optim
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Job description** (paste in full)
 - **Current CV / resume** (paste or describe key experience, roles, and skills)
 - **The specific thing that excites them about this role** (used in the cover letter — must be genuine)
@@ -138,3 +138,8 @@ Before submitting:
 - "Tailor my CV for this role: [paste JD + CV]"
 - "Write a cover letter for [role] at [company]"
 - "Optimise my application for ATS for this job description"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/job-application.html
+
+<!-- pm-claude-skills v84.0.0 | skill: job-application | source: skills/job-application/SKILL.md | sha256: f8e0a262fe9bedb8e141737069a461feb35937c2b47b06b7fec52db9879cacec | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Which version is the real one?"
 - "Merge these document copies."
 - "Stop the version chaos on this doc."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/version-chaos-untangler.html

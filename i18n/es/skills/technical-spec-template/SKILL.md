@@ -141,6 +141,24 @@ Códigos de error: [lista]
 - Recomenda revisión asincrónica: los ingenieros leen primero, luego una sincronización de 30 minutos para resolver preguntas
 - Mantén la especificación actualizada según avanza la implementación — las especificaciones obsoletas son peores que ninguna especificación
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/spec-decisions.md`** — Para qué sirve una especificación: decisiones, alternativas y el radio de impacto. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/spec-skeleton.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Encuadre del problema | La declaración del problema es la solución reformulada ("necesitamos una cola"), o falta; sin no-objetivos | Problema enunciado, pero con lenguaje de solución filtrándose; no-objetivos presentes pero genéricos ("fuera de alcance: todo lo demás") | Problema descrito en términos de usuario o negocio con cifras, independiente de cualquier solución; objetivos medibles; dos o más no-objetivos que cierran suposiciones reales de alcance |
+| Documentación de la decisión | Un único enfoque, sin alternativas: una descripción de diseño, no un registro de decisión | Hay tabla de alternativas, pero son espantapájaros (opciones solo con contras que nadie defendió); las razones de rechazo son gusto, no evidencia | Dos o más alternativas genuinas con pros honestos, razones de rechazo basadas en evidencia, disenso registrado donde exista, y desencadenantes de revisión para las decisiones disputadas |
+| Profundidad en seguridad y privacidad | Sección omitida o "N/A" en una funcionalidad que toca datos de usuario | Respuestas de plantilla (cifrar en reposo y en tránsito) sin análisis de la exposición de datos concreta de esta funcionalidad | Se enumeran los datos tocados, se nombra el mayor riesgo de privacidad del diseño, se abordan autenticación, autorización y cumplimiento de forma concreta, y los riesgos sin resolver condicionan visiblemente la aprobación |
+| Preparación operativa | Sin plan de pruebas, plan de despliegue ni desencadenante de reversión; preguntas abiertas ausentes o todas "por definir" | Pruebas y despliegue esbozados, pero la reversión es una intención sin probar; algunas preguntas abiertas sin responsable ni fecha | Las pruebas cubren los casos límite difíciles, el despliegue es escalonado con criterios de avance, el desencadenante de reversión es concreto (y no deja datos colgados), y cada pregunta abierta tiene responsable y fecha |
+
 ## Verificaciones de Calidad
 
 - [ ] La declaración del problema no contiene lenguaje de solución
@@ -156,3 +174,12 @@ Códigos de error: [lista]
 - [ ] No dejes preguntas abiertas como "Por Definir" sin un propietario designado y fecha de vencimiento — las preguntas sin resolver son bloqueadores
 - [ ] No saltes las secciones de seguridad y privacidad para ninguna funcionalidad que toque datos de usuario
 - [ ] No escribas una sección de no-objetivos que esté vacía — siempre enumera al menos dos cosas que podrían asumirse dentro del alcance
+
+## Frases de activación de ejemplo
+
+- "Escribe una especificación técnica."
+- "Escribe la especificación de ingeniería de esta funcionalidad."
+- "Escribe un documento de diseño de sistema."
+- "Escribe una especificación de API."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/technical-spec-template.html

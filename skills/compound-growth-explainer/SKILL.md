@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "Why does everyone say to start investing young?"
 - "How does compounding actually work with real numbers?"
 - "Show me why starting now matters."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/compound-growth-explainer.html

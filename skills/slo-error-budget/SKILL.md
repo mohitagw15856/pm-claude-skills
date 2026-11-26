@@ -280,3 +280,5 @@ This policy defines what to do with the error budget — both when it's healthy 
 - "Calculate an error budget."
 - "Set reliability targets."
 - "Create an error budget policy."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/slo-error-budget.html

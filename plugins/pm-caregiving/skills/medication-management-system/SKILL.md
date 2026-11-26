@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "My dad's on eight pills and I'm scared of a mistake. Organize it."
 - "How do I track refills so nothing runs out?"
 - "Set up a safe medication system for someone with memory issues."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/medication-management-system.html

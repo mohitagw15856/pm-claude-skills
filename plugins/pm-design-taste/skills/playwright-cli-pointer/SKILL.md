@@ -112,3 +112,5 @@ It is optional and it comes last. It reviews code, so it complements the browser
 ---
 
 Part of the pm-design-taste bundle in the library at https://github.com/mohitagw15856/pm-claude-skills.
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/playwright-cli-pointer.html

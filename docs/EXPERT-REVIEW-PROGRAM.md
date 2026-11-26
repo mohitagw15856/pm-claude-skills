@@ -2,6 +2,8 @@
 
 The most valuable thing the library can add now isn't skill #1,175 — it's a **real lawyer, nurse, financial counselor, or social worker having read the skills where being wrong hurts someone.** This program recruits them, records their reviews, and surfaces a badge users can trust.
 
+Organisations can check skills too (an advice service, a clinic, a union): see the [partner programme](PARTNER-PROGRAM.md).
+
 ## What a review is
 
 A domain expert reads a **high-stakes** skill (see [RISK-TIERS.md](RISK-TIERS.md)) end to end and confirms:
@@ -18,9 +20,33 @@ They may request edits before signing off. The review is recorded in `config/hum
 
 `scripts/check-human-review.mjs` then counts it toward coverage; reviews expire after 12 months so the badge never goes stale.
 
+## Write a new skill from what you know
+
+If the skill you'd review doesn't exist yet, the [expert-to-skill compiler](https://mohitagw15856.github.io/pm-claude-skills/compile.html) interviews you: who it's for, what you need to know, your steps, rules of thumb, red flags, common mistakes, how you judge a good answer, when to send someone to a professional, and one anonymised real case. It compiles your answers, not a model's, into a SkillSpec L3 skill with an eval case and your credit line, ready for a pull request.
+
+## How to take part
+
+1. Pick a skill from [the queue](HUMAN-REVIEW-QUEUE.md) that matches your credential.
+2. Read its `SKILL.md` end to end.
+3. Open an **[Expert review issue](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=expert-review.yml)**: your role and credential (as it should read on the badge), your verdict, the edits needed, and any conflicts of interest. A public register link is optional and only used to verify.
+4. A maintainer makes the edits, then records the review with `node scripts/record-review.mjs --skill <name> --credential "<credential>" --issue <number>`.
+
+Every high-stakes skill page without a current review links straight to that form ("Not yet expert-reviewed · review it").
+
 ## The badge
 
-A reviewed skill can show **"✔ Reviewed by [credential], [month year]"** on its page and in the Playground, sourced from the registry — never hand-typed. Reviewers are credited by name/credential (or "a licensed X" if they prefer anonymity) on a Reviewers section of the README.
+A reviewed skill shows **"✔ Reviewed by [credential], [month year]"** on its page and in the Playground, sourced from the registry — never hand-typed. Reviewers are credited by name/credential (or "a licensed X" if they prefer anonymity) on a Reviewers section of the README.
+
+## What reviewers get
+
+Reviewing is unpaid work by people whose time is expensive, so the credit is explicit and durable:
+
+- **Co-authorship.** A reviewed skill lists the reviewer in `config/human-review.json`, and the skill's page, its catalogue entry and the Reviewers section of the README name them (or "a licensed X" on request). That credit stays in the git history even after the 12-month badge expires.
+- **A signed certificate.** Every recorded review can be issued as a signed credential from the [credentials page](https://mohitagw15856.github.io/pm-claude-skills/credential.html): a verifiable record that a named professional reviewed a named skill on a date, suitable for a CV or a professional-development log. Verification needs nothing but the public key the site publishes.
+- **The badge.** "✔ Reviewed by [credential], [month year]" on the skill's page and in the Playground, for 12 months, sourced from the registry and never hand-typed.
+- **A say in the skill.** Review edits are applied as a pull request with the reviewer as co-author, and the reviewer is asked first when the skill is next rewritten.
+
+The count that matters is public: the README's trust section shows how many high-stakes skills have a current review, and it is 0 until the first one lands.
 
 ## Where to start
 [HUMAN-REVIEW-QUEUE.md](HUMAN-REVIEW-QUEUE.md) ranks the unreviewed high-stakes skills by realistic harm if the output is wrong (regenerate with `node scripts/human-review-queue.mjs --write`). Reviewers take the top of the list first.

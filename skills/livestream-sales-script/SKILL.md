@@ -85,3 +85,5 @@ Ask for these if not provided:
 - "直播间话术怎么写才能留住人？"
 - "帮我排品，有 8 个产品。"
 - "Write a livestream sales script for our skincare launch."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/livestream-sales-script.html

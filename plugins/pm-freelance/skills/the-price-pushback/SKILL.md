@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Simulate a client negotiating my rate."
 - "Practice price pushback."
 - "Stress-test my pricing conversation."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-price-pushback.html

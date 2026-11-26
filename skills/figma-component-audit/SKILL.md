@@ -80,3 +80,5 @@ Naming convention to enforce:
 - "What components are we missing in our Figma library?"
 - "Our component naming is a mess — help me fix it"
 - "Do a health check on our Figma components"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-component-audit.html

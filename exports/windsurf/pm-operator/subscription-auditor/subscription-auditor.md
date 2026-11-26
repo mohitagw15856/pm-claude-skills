@@ -81,3 +81,8 @@ For tool-using agents with statement/inbox read access and (optionally) browser 
 - "Find recurring charges."
 - "What am I paying for?"
 - "Help me cancel unused services."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/subscription-auditor.html
+
+<!-- pm-claude-skills v84.0.0 | skill: subscription-auditor | source: skills/subscription-auditor/SKILL.md | sha256: d897e036b4b68624fc287ee30d867a0809c9206552938b32c10521b4d96a5644 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

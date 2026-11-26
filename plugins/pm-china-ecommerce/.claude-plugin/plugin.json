@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-china-ecommerce",
+  "version": "1.0.0",
+  "description": "国内电商运营：淘宝、天猫、拼多多、京东商品详情，1688 批发 listing，双 11 大促方案，客服话术。Chinese marketplace operations: listings for Taobao, Tmall, Pinduoduo and JD, 1688 wholesale listings, a Double 11 promotion plan and customer service scripts",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "china",
+    "ecommerce",
+    "taobao",
+    "pinduoduo",
+    "jd",
+    "1688",
+    "double-11"
+  ]
+}

@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Is this data processing agreement safe to sign?"
 - "What am I agreeing to on data in this DPA?"
 - "Check this DPA — we're the controller, it's a GDPR deal."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dpa-review.html

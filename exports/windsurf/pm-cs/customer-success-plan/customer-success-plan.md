@@ -9,7 +9,7 @@ This skill produces a joint customer success plan — a living document shared b
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Account name** and industry
 - **Product / plan purchased**
 - **Key stakeholders** — customer champion and economic buyer
@@ -216,3 +216,8 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Write a 6-month customer success roadmap for [Company]"
 - "I need a mutual action plan for our QBR with [Account]"
 - "Generate a customer success plan for an at-risk account"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/customer-success-plan.html
+
+<!-- pm-claude-skills v84.0.0 | skill: customer-success-plan | source: skills/customer-success-plan/SKILL.md | sha256: a67be4ddc0a1d6566decdeccbe58bbb266a08d7bb34a0d7b8a491fb045b56b53 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

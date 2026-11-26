@@ -94,3 +94,5 @@ Walk the layers in order; the root cause is usually the *earliest* layer that co
 - "Write up an AI incident."
 - "Analyse why an agent did something wrong."
 - "Produce corrective actions after an LLM failure."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-incident-postmortem.html

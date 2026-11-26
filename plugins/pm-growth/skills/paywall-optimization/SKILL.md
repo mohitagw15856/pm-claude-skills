@@ -63,3 +63,5 @@ Freemium / subscription conversion practice (value-based gating, trigger-at-inte
 - "Write a better upgrade prompt."
 - "Improve free-to-paid conversion."
 - "Decide what to gate."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/paywall-optimization.html

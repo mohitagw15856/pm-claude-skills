@@ -1,6 +1,6 @@
 ---
 trigger: model_decision
-description: "Build a concrete plan for the first 90 days after release from incarceration — the ID, benefits, housing, check-ins, and money moves that have to happen in order, before they cascade into a crisis. Use when asked I'm getting out of prison what do I do first, reentry plan, just got released and I'm overwhelmed, or first steps after incarceration. Produces a sequenced week-by-week plan for the highest-priority setup (ID and documents, parole/probation compliance, benefits, housing, phone, bank, health/meds), the deadlines that carry real consequences, a triage of what's urgent vs. what can wait, and where to get reentry support — so the first months build stability instead of spiraling. Not legal advice; centers parole/probation compliance and points to reentry services."
+description: "Build a concrete plan for the first 90 days after release from incarceration — the ID, benefits, housing, check-ins, and money moves that have to happen in order, before they cascade into a crisis. Use when asked I'm getting out of prison what do I do first, reentry plan, just got released and I'm overwhelmed, or first steps after incarceration. Produces a sequenced week-by-week plan for the highest-priority setup (ID and documents, parole/probation compliance, benefits, housing, phone, bank, health/meds), the deadlines that carry real consequences, a triage of what's urgent vs. what can wait, and where to get reentry support. Not legal advice; points to reentry services."
 ---
 
 # First 90 Days Out
@@ -67,3 +67,8 @@ Ask for these if not provided:
 - "I just got out and I'm completely overwhelmed."
 - "What are the first steps after prison — ID, benefits, all of it?"
 - "Sequence the things I have to set up after incarceration."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-90-days-out.html
+
+<!-- pm-claude-skills v84.0.0 | skill: first-90-days-out | source: skills/first-90-days-out/SKILL.md | sha256: cd3dabc7fbbc3c7276ab5fa5d960780344d475a13e90f453f7826fe618afb74a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

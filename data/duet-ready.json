@@ -1,0 +1,26 @@
+{
+  "$comment": "The Duet-ready registry (docs/duet/README.md). Tiers: designed-for-duet (follows the conventions, untested), community-tested-on-duet (a linked tested-on-duet issue exists), maintainer-tested-on-duet (a dated maintainer run). Never promote a skill without the evidence the tier names.",
+  "skills": {
+    "morning-brief-designer": { "tier": "designed-for-duet", "since": "2026-10-22" },
+    "interrupt-rules": { "tier": "designed-for-duet", "since": "2026-10-22" },
+    "end-of-day-report": { "tier": "designed-for-duet", "since": "2026-10-22" },
+    "weekly-rollup": { "tier": "designed-for-duet", "since": "2026-10-22" },
+    "send-approval-check": { "tier": "designed-for-duet", "since": "2026-10-22" },
+    "prepare-for-duet": { "tier": "designed-for-duet", "since": "2026-10-22" },
+    "stakeholder-update": { "tier": "designed-for-duet", "since": "2026-10-22" },
+    "standing-orders": { "tier": "designed-for-duet", "since": "2026-10-22" },
+    "approval-policy-designer": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "shared-agent-charter": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "agent-kill-switch-plan": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "cash-watch": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "payroll-eve-check": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "signature-pipeline-watch": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "crm-hygiene-sweep": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "store-watch": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "inbox-triage-live": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "followup-sweep": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "delta-briefing": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "competitive-intelligence-monitor": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "late-invoice-chaser": { "tier": "designed-for-duet", "since": "2026-10-23" }
+  }
+}

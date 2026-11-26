@@ -155,3 +155,5 @@ Each rung is headed `## Rung N — [title]` and contains only the tables and fix
 ## Related Skills in This Bundle
 
 `profit-to-cash-walk` (Rung 3 standalone), `audited-boundary-check` (Rung 5 deep dive), `company-compare-same-definitions` (two reports), `investing-vocabulary-explainer` (any term, in context).
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/annual-report-tutor.html

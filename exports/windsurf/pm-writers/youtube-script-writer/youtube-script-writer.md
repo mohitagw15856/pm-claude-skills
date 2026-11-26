@@ -16,7 +16,7 @@ This skill helps creators write highly engaging, structured, and visually-dynami
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Topic/Concept** — What is the video about? (e.g., "How I built a SaaS in 30 days")
 - **Target Audience** — Who is watching? (e.g., beginner developers, student designers)
 - **Target Duration** — Approximate length in minutes (e.g., 5-7 minutes, 10-15 minutes)
@@ -113,3 +113,8 @@ Every YouTube script must follow this structure to prevent early drop-off:
 - "Help me script a 10-minute video explaining inflation to college students."
 - "I need a YouTube outline and script for a tutorial on clean code in Python."
 - "Draft a retention-optimized YouTube script on how to build a SaaS in 2026."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/youtube-script-writer.html
+
+<!-- pm-claude-skills v84.0.0 | skill: youtube-script-writer | source: skills/youtube-script-writer/SKILL.md | sha256: c71770796f0d28d15e5c514a770cd10f32fab324a8adff1ce14a72b40b531d20 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

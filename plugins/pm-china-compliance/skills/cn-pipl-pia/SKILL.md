@@ -57,3 +57,5 @@ Proceed, proceed with conditions, or do not proceed; the conditions; reviewers; 
 - "用算法给用户定价，需要做 PIA 吗？怎么写？"
 - "把用户数据委托给外包客服，影响评估要写哪些内容？"
 - "Write a PIPL impact assessment for our recommendation engine."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-pipl-pia.html

@@ -1,0 +1,69 @@
+name: Translate descriptions (20 languages)
+
+# The discovery layer: every skill's one-line description in 20 languages
+# (scripts/translate-skills.mjs --descriptions), so a question typed in Polish,
+# Thai or Urdu finds the right skill on the site's search pages. About 65 Haiku
+# calls per language for the whole library; resumable, so a rerun only fills
+# gaps (new skills, failed batches). Manual: it costs tokens. Results are
+# machine translations marked review: pending, landed through a self-merging
+# data-only pull request.
+on:
+  workflow_dispatch:
+    inputs:
+      langs:
+        description: 'Space-separated language codes (blank = all 20)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: translate-descriptions
+  cancel-in-progress: false
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Translate the descriptions
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LANGS: ${{ inputs.langs || 'es pt fr de it pl ru uk tr ar hi bn ur id vi th ja ko zh zh-TW' }}
+        run: |
+          set -euo pipefail
+          printf '%s' "$LANGS" | grep -Eq '^[a-zA-Z -]+$' || { echo "::error::langs must be language codes"; exit 1; }
+          for l in $LANGS; do
+            node scripts/translate-skills.mjs --lang "$l" --descriptions --all || echo "::warning::$l had failures; rerun to fill the gaps"
+          done
+          node scripts/translate-skills.mjs --check
+      - name: Open the pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: i18n/*/descriptions.json
+          branch: translate-descriptions
+          delete-branch: true
+          commit-message: "i18n: skill descriptions in more languages"
+          title: "i18n: skill descriptions in more languages"
+          body: Machine-translated descriptions (review pending) from the **Translate descriptions** workflow.
+      - name: Merge the data-only PR
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          set -euo pipefail
+          files=$(gh pr diff "$PR" --name-only --repo "$GITHUB_REPOSITORY")
+          echo "$files"
+          if [ -z "$files" ] || echo "$files" | grep -qvE '^i18n/[a-zA-Z-]+/descriptions\.json$'; then
+            echo "::warning::PR #$PR changes unexpected files; leaving it for review."
+            exit 0
+          fi
+          gh pr merge "$PR" --squash --delete-branch --repo "$GITHUB_REPOSITORY"

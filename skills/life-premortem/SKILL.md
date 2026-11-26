@@ -116,3 +116,5 @@ and [[regret-minimizer]] for the decide-or-not layer.
 - "I'm about to make a big life change."
 - "What could go wrong with this?"
 - "De-risk my year."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/life-premortem.html

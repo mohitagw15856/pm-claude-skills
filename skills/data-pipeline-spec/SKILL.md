@@ -9,7 +9,7 @@ This skill produces a complete data pipeline specification covering sources, tra
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Pipeline purpose** — what business question or workflow does this pipeline serve?
 - **Source systems** — where does data come from? (databases, APIs, files, event streams)
 - **Destination** — where does data land? (data warehouse, data lake, downstream DB, reporting tool)
@@ -227,3 +227,5 @@ List each transformation in execution order. For ELT pipelines, this is the dbt 
 - "Build an ETL spec for our user activity data"
 - "Document our dbt pipeline from raw events to the analytics mart"
 - "Spec out the pipeline that feeds the executive dashboard"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-pipeline-spec.html

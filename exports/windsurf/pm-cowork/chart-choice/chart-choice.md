@@ -67,3 +67,8 @@ Ask for these if not provided:
 - "Make this data visual."
 - "Why does this chart feel misleading?"
 - "Fix this graph for the deck."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/chart-choice.html
+
+<!-- pm-claude-skills v84.0.0 | skill: chart-choice | source: skills/chart-choice/SKILL.md | sha256: 621daf3bd24f815a9cb924099fbd22ce1eab8212d4d671f32ec11deada094319 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

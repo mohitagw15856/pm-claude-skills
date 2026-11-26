@@ -62,3 +62,5 @@ Source: [Frankfurter (ECB) / open.er-api.com] · rerun: `[exact curl]`
 - "Convert 500 dollars to euros."
 - "What's the USD-INR rate?"
 - "How much is this in my currency?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/currency-rates.html

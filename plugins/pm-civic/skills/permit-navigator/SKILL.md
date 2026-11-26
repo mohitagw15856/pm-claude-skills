@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "Do I need a permit for this?"
 - "What permits for my renovation/business/event?"
 - "Help me apply for a permit."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/permit-navigator.html

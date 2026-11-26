@@ -75,3 +75,5 @@ Standard SaaS metrics definitions (Bessemer / a16z / KeyBanc) — NRR/GRR, quick
 - "Work out MRR and ARR."
 - "What's our net revenue retention?"
 - "Build a SaaS metrics snapshot for the board."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/saas-metrics.html

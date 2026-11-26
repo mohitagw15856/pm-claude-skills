@@ -72,3 +72,5 @@ Mon: … Tue: … (file unemployment day 1–2, always)
 - "Build my layoff budget."
 - "How long can I last?"
 - "What needs to happen this week?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/layoff-financial-triage.html

@@ -106,3 +106,5 @@ Writes commercial proposals that win business — structured around the prospect
 - "Write a proposal for [prospect] to [solve their problem]"
 - "Draft a statement of work for [project]"
 - "Turn my discovery notes into a proposal"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/proposal-writer.html

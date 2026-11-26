@@ -75,3 +75,5 @@ Startup cash-management practice — net burn, runway, and "Default Alive or Dea
 - "What's our monthly burn?"
 - "When does the money run out?"
 - "How much do we need to raise or cut?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/runway-calculator.html

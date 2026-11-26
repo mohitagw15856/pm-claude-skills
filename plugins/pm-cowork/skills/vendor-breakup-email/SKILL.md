@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "We're not renewing how do I tell them."
 - "End this contractor relationship professionally."
 - "Switch providers without drama."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vendor-breakup-email.html

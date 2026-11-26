@@ -75,3 +75,5 @@ Prompt-engineering practice — explicit output contracts, grounding/uncertainty
 - "Fix a prompt that gives inconsistent."
 - "Reduce hallucination/refusals."
 - "Make output follow a format."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prompt-optimizer.html

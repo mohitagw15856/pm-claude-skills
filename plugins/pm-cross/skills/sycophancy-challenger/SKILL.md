@@ -162,3 +162,5 @@ These prohibitions do more work than the rules above. Follow them absolutely:
 - "Stress-test this strategy: [describe it]"
 - "What's the strongest argument against doing this: [decision]"
 - "I think I'm right about X — what am I missing?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sycophancy-challenger.html

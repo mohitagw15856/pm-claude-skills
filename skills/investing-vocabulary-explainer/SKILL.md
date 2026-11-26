@@ -94,3 +94,5 @@ Use these when the term matches; otherwise write the misread from the report's c
 ## Related Skills in This Bundle
 
 `annual-report-tutor`, `audited-boundary-check`, `profit-to-cash-walk`, `company-compare-same-definitions`.
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investing-vocabulary-explainer.html

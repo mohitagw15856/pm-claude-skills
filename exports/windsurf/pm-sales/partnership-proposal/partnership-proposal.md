@@ -9,7 +9,7 @@ This skill produces a complete B2B partnership proposal covering the partnership
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Your company** — name, what you do, and the audience you serve
 - **Prospective partner** — name, what they do, and their audience
 - **Partnership type** — technology integration / co-marketing / reseller / referral / strategic alliance / OEM
@@ -234,3 +234,8 @@ How we'll know the partnership is working:
 - [ ] Do not omit the "What we're not proposing" section — leaving unstated assumptions creates misaligned expectations that derail negotiations later
 - [ ] Do not set success metrics unilaterally — metrics that only your company controls or cares about will not earn partner commitment
 - [ ] Do not write a go-to-market plan with "TBD" owners — every activity must have a named owner on at least one side before the proposal goes out
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/partnership-proposal.html
+
+<!-- pm-claude-skills v84.0.0 | skill: partnership-proposal | source: skills/partnership-proposal/SKILL.md | sha256: 6c7217fe59992e9e4c82b9e66d6b426e7642056156987f0159450d2be86fd4d6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

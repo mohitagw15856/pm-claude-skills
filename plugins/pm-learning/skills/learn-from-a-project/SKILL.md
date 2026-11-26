@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "I want to learn by doing, not watching. Design a project."
 - "What should I build to practice my design skills?"
 - "A real project to learn Python, scoped to a beginner."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/learn-from-a-project.html

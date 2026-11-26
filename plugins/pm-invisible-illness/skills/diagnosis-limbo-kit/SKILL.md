@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Doctors keep saying it's just anxiety."
 - "Help me track my symptoms across specialists."
 - "Prepare my case for the next specialist."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/diagnosis-limbo-kit.html

@@ -70,3 +70,8 @@ Severance under the new pension system, old-system years and pay in lieu of noti
 - "平日加班 3 小時，加班費怎麼算？"
 - "老闆說特休不能排，合法嗎？"
 - "Check my Taiwan job terms against the Labor Standards Act."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tw-labour-standards.html
+
+<!-- pm-claude-skills v84.0.0 | skill: tw-labour-standards | source: skills/tw-labour-standards/SKILL.md | sha256: 5bf90237fe8668fae1e689c398f851ee2c1902f1139ae98eddbf03bfcc85057e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

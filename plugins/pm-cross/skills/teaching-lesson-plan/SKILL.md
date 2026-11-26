@@ -9,7 +9,7 @@ Produces a complete, structured lesson plan for any subject, age group, or setti
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Subject or topic**
 - **Audience** (age group, experience level, group size)
 - **Session length** (30 / 45 / 60 / 90 / 120 minutes)
@@ -124,3 +124,5 @@ By the end of this session, participants will be able to:
 - "Design a 60-minute session on [subject]"
 - "Create a training module on [skill]"
 - "Plan a workshop on [topic] for [group]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/teaching-lesson-plan.html

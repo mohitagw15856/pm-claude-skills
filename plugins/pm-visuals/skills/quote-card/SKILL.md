@@ -61,3 +61,5 @@ Testimonial/pull-quote editing for marketing (find the strongest line, faithful 
 - "Turn this review into a testimonial graphic."
 - "Make a quote card for social."
 - "Pull the best quote from this interview."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/quote-card.html

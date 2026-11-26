@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "Do we have to label AI content?"
 - "Write our AI disclosure policy."
 - "Are we covered for the AI Act?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-disclosure-policy.html

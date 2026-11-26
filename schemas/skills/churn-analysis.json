@@ -1,0 +1,238 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/contract.schema.json",
+  "skill": "churn-analysis",
+  "version": 1,
+  "inputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "churn-analysis inputs",
+    "type": "object",
+    "properties": {
+      "period": {
+        "type": "string",
+        "description": "Time period analysed"
+      },
+      "customers_start": {
+        "type": "integer",
+        "description": "Customers at the start of the period"
+      },
+      "customers_churned": {
+        "type": "integer",
+        "description": "Customers lost in the period"
+      },
+      "arr_lost": {
+        "type": "number",
+        "description": "ARR or revenue lost"
+      },
+      "currency": {
+        "type": "string",
+        "description": "ISO 4217 code"
+      },
+      "churn_reasons": {
+        "type": "array",
+        "description": "Reason data",
+        "items": {
+          "type": "object",
+          "properties": {
+            "reason": {
+              "type": "string",
+              "description": ""
+            },
+            "count": {
+              "type": "integer",
+              "description": ""
+            },
+            "source": {
+              "type": "string",
+              "description": "Exit survey, CSM notes, support, sales"
+            }
+          },
+          "required": [
+            "reason"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "segments": {
+        "type": "array",
+        "description": "By tier, industry, cohort or product line",
+        "items": {
+          "type": "object",
+          "properties": {
+            "segment": {
+              "type": "string",
+              "description": ""
+            },
+            "customers_start": {
+              "type": "integer",
+              "description": ""
+            },
+            "churned": {
+              "type": "integer",
+              "description": ""
+            }
+          },
+          "required": [
+            "segment"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "retention_rate": {
+        "type": "number",
+        "description": "Current retention rate as a percentage"
+      },
+      "recent_changes": {
+        "type": "array",
+        "description": "Pricing, product or support changes that may have affected churn",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "required": [
+      "period",
+      "customers_start",
+      "customers_churned"
+    ],
+    "additionalProperties": true
+  },
+  "outputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "churn-analysis outputs",
+    "type": "object",
+    "properties": {
+      "period": {
+        "type": "string",
+        "description": ""
+      },
+      "headline": {
+        "type": "object",
+        "properties": {
+          "logo_churn_pct": {
+            "type": "number",
+            "description": ""
+          },
+          "revenue_churn_pct": {
+            "type": "number",
+            "description": ""
+          },
+          "customers_churned": {
+            "type": "integer",
+            "description": ""
+          },
+          "arr_lost": {
+            "type": "number",
+            "description": ""
+          }
+        },
+        "required": [
+          "logo_churn_pct"
+        ],
+        "additionalProperties": true
+      },
+      "by_segment": {
+        "type": "array",
+        "description": "Segments ordered by churn",
+        "items": {
+          "type": "object",
+          "properties": {
+            "segment": {
+              "type": "string",
+              "description": ""
+            },
+            "churn_pct": {
+              "type": "number",
+              "description": ""
+            },
+            "vs_average": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "required": [
+            "segment",
+            "churn_pct"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "reasons": {
+        "type": "array",
+        "description": "Reasons ordered by share",
+        "items": {
+          "type": "object",
+          "properties": {
+            "reason": {
+              "type": "string",
+              "description": ""
+            },
+            "share_pct": {
+              "type": "number",
+              "description": ""
+            },
+            "addressable": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "reason"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "root_causes": {
+        "type": "string",
+        "description": "Reasons grouped into causes (Markdown)"
+      },
+      "recommendations": {
+        "type": "array",
+        "description": "Ordered by expected effect",
+        "items": {
+          "type": "object",
+          "properties": {
+            "action": {
+              "type": "string",
+              "description": ""
+            },
+            "expected_effect": {
+              "type": "string",
+              "description": ""
+            },
+            "owner": {
+              "type": "string",
+              "description": "Role"
+            },
+            "horizon": {
+              "type": "string",
+              "description": "",
+              "enum": [
+                "30d",
+                "90d",
+                "180d"
+              ]
+            }
+          },
+          "required": [
+            "action"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "data_gaps": {
+        "type": "array",
+        "description": "What would sharpen the analysis",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "required": [
+      "headline",
+      "reasons",
+      "recommendations"
+    ],
+    "additionalProperties": true
+  }
+}

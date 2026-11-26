@@ -63,3 +63,5 @@ Source: [canonical article URL] · fetched [date] · rerun: `[exact curl]`
 - "Get me the current summary of a topic."
 - "Check a fact against Wikipedia."
 - "Has this article changed."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wiki-summary.html

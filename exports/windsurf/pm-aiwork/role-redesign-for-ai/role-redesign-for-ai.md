@@ -74,3 +74,8 @@ Ask for (if not already provided):
 - "Write a revised role charter."
 - "What is my job now?"
 - "Plan capacity after AI adoption."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/role-redesign-for-ai.html
+
+<!-- pm-claude-skills v84.0.0 | skill: role-redesign-for-ai | source: skills/role-redesign-for-ai/SKILL.md | sha256: e92cf64f831ff86a7aa7ce4e3399cb413fc719f238d99f05a5c4ade128a6f610 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

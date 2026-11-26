@@ -69,3 +69,5 @@ Structured-interview practice — competency-based, behaviorally-anchored questi
 - "Write an interview guide."
 - "Build a structured interview kit."
 - "Write competency-based questions for a product manager."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/interview-question-bank.html

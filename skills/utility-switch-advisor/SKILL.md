@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Is this mobile plan actually cheaper than what I have?"
 - "Help me switch and save on my utilities."
 - "My intro internet rate is about to jump — what are my options?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/utility-switch-advisor.html

@@ -1,0 +1,45 @@
+name: "🎪 Show and Tell"
+description: "Share something a skill produced: the task, the output, and what you would improve."
+title: "Show and Tell: "
+labels: ["show-and-tell"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for showing your work. Real examples, including imperfect ones, teach more than any docs. Redact anything private before pasting. The best entries become [showcases](https://github.com/mohitagw15856/pm-claude-skills/tree/main/docs/showcases).
+  - type: input
+    id: task
+    attributes:
+      label: The task
+      description: "What did you need, in one sentence?"
+      placeholder: "Turn six discovery calls into a PRD my team could review on Monday"
+    validations:
+      required: true
+  - type: input
+    id: skill
+    attributes:
+      label: Skill(s) used
+      placeholder: "user-interview-synthesis, prd-template"
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What you got (excerpt)
+      description: "Paste 10 to 20 representative lines of the output."
+    validations:
+      required: true
+  - type: textarea
+    id: improve
+    attributes:
+      label: What you would improve
+      description: "Where the output needed fixing, what it missed, or what surprised you. Honest beats polished."
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Tool and model
+      placeholder: "Claude Code / Cursor / playground; which model"
+    validations:
+      required: false

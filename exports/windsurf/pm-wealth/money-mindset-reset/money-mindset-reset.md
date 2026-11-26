@@ -66,3 +66,8 @@ Ask for these if not provided:
 - "Money stresses me out and I avoid dealing with it."
 - "I earn fine but always feel broke and anxious about money."
 - "Help me fix my money mindset — I feel guilt around spending."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/money-mindset-reset.html
+
+<!-- pm-claude-skills v84.0.0 | skill: money-mindset-reset | source: skills/money-mindset-reset/SKILL.md | sha256: 66d55f657445308b742ca84a8390c284ad3104bf71b7d958a9a77331ebf9e2d8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

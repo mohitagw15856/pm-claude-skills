@@ -80,3 +80,5 @@ Ask for these if not provided:
 - "这三个学校怎么选？帮我列个择校对比。"
 - "在职考研，每天只有三个小时，计划怎么排？"
 - "Plan my kaoyan preparation for an economics master's."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-kaoyan-planner.html

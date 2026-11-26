@@ -10,8 +10,9 @@
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
 <script src="providers.js"></script>
+<script src="result-card.js"></script>
 <style>
-  .grade-wrap { max-width: 820px; margin: 0 auto; padding: 18px 22px 70px; }
+  .grade-wrap { max-width: 820px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 18px 22px 70px; }
   .grade-pick { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 10px 0 14px; }
   .grade-pick select { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; max-width: 100%; }
   .grade-draft { width: 100%; box-sizing: border-box; min-height: 240px; padding: 13px 15px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-family: inherit; font-size: 14px; line-height: 1.5; }
@@ -21,6 +22,7 @@
   .grade-mode { display: flex; gap: 18px; flex-wrap: wrap; margin: 4px 0 10px; font-size: 14px; }
   .grade-mode label { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; color: var(--muted); }
   .grade-mode input { accent-color: var(--accent); }
+  .shared-result { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 14px; margin: 4px 0 14px; font-size: 14px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
 </style>
 </head>
 <body>
@@ -39,6 +41,7 @@
 <div class="key-note">🔒 Your key + draft stay in your browser and go only to your chosen provider (Claude, OpenAI, or Gemini) — never to us.</div>
 
 <div class="grade-wrap">
+  <div class="shared-result" id="sharedResult" hidden><span id="sharedText"></span><button id="sharedCard" class="ghost" type="button">View the card</button></div>
   <div class="grade-mode">
     <label><input type="radio" name="mode" value="skill" checked> 📝 Grade vs. a skill framework</label>
     <label><input type="radio" name="mode" value="viral"> 🔥 Viral Score — score a post/hook for social reach</label>
@@ -69,7 +72,7 @@
     <span id="status" class="status"></span>
   </div>
   <div class="output-wrap" id="outWrap" hidden>
-    <div class="output-toolbar"><span>Your grade</span><div><button id="copyBtn" class="ghost" type="button">Copy</button> <button id="shareHubBtn" class="ghost" type="button" title="Share your before→after on the community Hub">💬 Share to Hub</button></div></div>
+    <div class="output-toolbar"><span>Your grade</span><div><button id="copyBtn" class="ghost" type="button">Copy</button> <button id="resultBtn" class="ghost" type="button" title="A 1200 x 630 image of your score, drawn in your browser">🏅 Share result</button> <button id="shareHubBtn" class="ghost" type="button" title="Share your before→after on the community Hub">💬 Share to Hub</button></div></div>
     <article id="out" class="output markdown"></article>
   </div>
 </div>
@@ -87,6 +90,7 @@ async function init(){
   el('copyBtn').addEventListener('click',()=>navigator.clipboard.writeText(el('out').dataset.raw||''));
   el('shareHubBtn').addEventListener('click',()=>{const s=current();const raw=(el('out').dataset.raw||'').trim();if(!raw)return setStatus('Grade something first.',true);const title='[Show & Tell] Graded my '+s.title;const body='**Skill:** `'+s.name+'` · graded with [PM Skills](https://mohitagw15856.github.io/pm-claude-skills/grade.html?skill='+s.name+')\n\n**The grade:**\n\n'+raw.slice(0,5000)+(raw.length>5000?'\n\n…(truncated)':'');window.open('https://github.com/mohitagw15856/pm-claude-skills/discussions/new?category=show-and-tell&title='+encodeURIComponent(title)+'&body='+encodeURIComponent(body),'_blank','noopener');});
   el('shareBtn').addEventListener('click',()=>{const u=new URL(location.href.split('?')[0]);u.searchParams.set('skill',el('skillSelect').value);navigator.clipboard.writeText(u.toString()).then(()=>setStatus('Link copied.'),()=>{});});
+  el('resultBtn').addEventListener('click',shareResult);
   el('skillSelect').addEventListener('change',renderBased);
   document.querySelectorAll('input[name="mode"]').forEach(r=>r.addEventListener('change',applyMode));
   try{ SKILLS=(await (await fetch('skills.json')).json()).skills; }catch(e){ setStatus('Could not load skills.',true); return; }
@@ -95,6 +99,27 @@ async function init(){
   const want=new URLSearchParams(location.search).get('skill');
   if(want&&SKILLS.some(s=>s.name===want)) el('skillSelect').value=want;
   renderBased();
+  showShared();
+}
+// The pseudo-skill for Viral Score results, so one card format covers both modes.
+const VIRAL={name:'viral-score',title:'Viral Score'};
+const skillByName=(n)=>n===VIRAL.name?VIRAL:SKILLS.find(s=>s.name===n);
+function shareResult(){
+  const viral=mode()==='viral', of=viral?100:5;
+  const score=PMResultCard.parseScore(el('out').dataset.raw,of);
+  if(score==null) return setStatus(el('out').dataset.raw?'Could not find a score in this grade to put on a card.':'Grade something first.',true);
+  const s=viral?VIRAL:current();
+  PMResultCard.open({skill:s.name,title:s.title,score,of,date:new Date().toISOString().slice(0,10)});
+}
+// A shared link (grade.html?skill=…&score=…&of=…&date=…) shows that result and its card.
+function showShared(){
+  const p=new URLSearchParams(location.search); if(!p.has('score')) return;
+  const r=PMResultCard.fromParams(p,(n)=>!!skillByName(n)); if(!r) return;
+  r.title=skillByName(r.skill).title;
+  el('sharedText').textContent=`Someone shared a result: ${r.title}, ${r.of===100?Math.round(r.score):r.score} out of ${r.of}, on ${r.date}. Grade your own draft below.`;
+  el('sharedResult').hidden=false;
+  el('sharedCard').addEventListener('click',()=>PMResultCard.open(r));
+  if(r.of===100){ const v=document.querySelector('input[name="mode"][value="viral"]'); v.checked=true; applyMode(); }
 }
 function current(){ return SKILLS.find(s=>s.name===el('skillSelect').value); }
 function mode(){ return document.querySelector('input[name="mode"]:checked').value; }

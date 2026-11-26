@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Are we going to blow the budget?"
 - "Why did finance's number surprise us?"
 - "Set up budget visibility for the team."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/team-budget-tracker.html

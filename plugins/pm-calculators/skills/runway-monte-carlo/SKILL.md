@@ -54,3 +54,5 @@ It prints the percentiles (`naive=16.0mo P10=19 P50=>36 P90=>36 survive(36mo)=56
 - "When should we start fundraising?"
 - "Simulate our runway with volatile revenue."
 - "Give me runway as a range, not one number."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/runway-monte-carlo.html

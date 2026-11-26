@@ -1,8 +1,8 @@
 name: Publish pm-skills-tools to npm
 
-# Publishes the agent-tools subpackage (tools-pkg/). Manual dispatch only —
-# regenerate first (node scripts/build-tools-exports.mjs) and bump
-# tools-pkg/package.json. Reuses the NPM_TOKEN secret.
+# Publishes the agent-tools subpackage (tools-pkg/). Its generated files are not
+# committed: prepack builds them from skills/. The version tracks the library
+# (tools-pkg/package.json). Manual dispatch, or npm publish from tools-pkg/ at release.
 on:
   workflow_dispatch:
 
@@ -22,7 +22,6 @@ jobs:
       - name: Freshness + self-test
         run: |
           node scripts/build-tools-exports.mjs
-          git diff --exit-code -- tools-pkg/ || (echo "::error::tools-pkg is stale — regenerate and commit before publishing." && exit 1)
           node --input-type=module -e "import { pick, toOpenAI } from './tools-pkg/tools.mjs'; if (toOpenAI(pick(['prd_template'])).length !== 1) process.exit(1); console.log('self-test ok');"
       - name: Publish (public, with provenance)
         working-directory: tools-pkg

@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "My task list is overwhelming."
 - "Triage my todos."
 - "What should I actually work on?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/task-triage-matrix.html

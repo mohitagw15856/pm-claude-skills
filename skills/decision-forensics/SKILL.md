@@ -77,3 +77,5 @@ Ask for these if not provided:
 - "What did we actually decide?"
 - "Turn this thread into a decision record."
 - "Reconstruct this discussion."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-forensics.html

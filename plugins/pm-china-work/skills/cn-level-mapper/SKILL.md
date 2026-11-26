@@ -74,3 +74,5 @@ For each level: 一句话定位, 典型职责, 晋升到下一级的关键门槛
 - "这个 offer 给了 2-1，我现在是 P6，合理吗？"
 - "Compare my Tencent level with Google's ladder for a move to Singapore."
 - "帮我对标一下职级，下周要谈 offer。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-level-mapper.html

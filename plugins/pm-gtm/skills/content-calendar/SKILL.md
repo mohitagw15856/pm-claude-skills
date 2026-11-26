@@ -9,7 +9,7 @@ This skill generates a structured content calendar from brand inputs. It produce
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Brand or product name**
 - **Target audience** (who are you trying to reach?)
 - **Primary content goal** (awareness / lead gen / retention / thought leadership)
@@ -64,3 +64,5 @@ For each "High Priority" post, add one repurposing suggestion — e.g. "Turn thi
 - "Create a social media plan for [product launch]"
 - "Give me a monthly editorial calendar for my newsletter"
 - "Plan my LinkedIn content for the next month"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/content-calendar.html

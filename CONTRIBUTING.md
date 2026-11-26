@@ -202,9 +202,15 @@ target is only complete when all four of these land together — use this as the
    `node bin/cli.mjs add --agent <tool> --dry-run`.
 
 Then update the target list/count in the README and `docs/`. See
-[Kilo Code](exports/kilocode/) as a complete worked example.
+[Kilo Code](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/kilocode) as a complete worked example.
 
 ---
+
+## Improving a skill you already use (fork, then suggest back)
+
+You don't need git to improve a skill. Open it in [Skill Remix](https://mohitagw15856.github.io/pm-claude-skills/remix.html) and edit it for your own work; your fork is saved in your browser. When the original changes, Remix shows you what changed. If your version works better, press **📤 Suggest back**: it opens an issue (label `skill-remix`) with just your changed lines and a line on why. Maintainers fold good suggestions into the skill and credit you in the commit.
+
+If you keep a long-lived fork, `.github/workflows/sync-fork.yml` keeps its `main` in step with upstream every week. See [docs/fork-sync.md](docs/fork-sync.md).
 
 ## Listing a community skill (keep it in your own repo)
 
@@ -244,3 +250,15 @@ Open a [Discussion](../../discussions) or raise an [Issue](../../issues). Happy 
 ---
 
 *Thank you for contributing. Every skill added here saves someone an hour they'd rather spend on something else.*
+
+## Evidence conventions
+
+Two light conventions keep skill output honest and checkable; both are documented in [SKILL-AUTHORING-STANDARD.md](SKILL-AUTHORING-STANDARD.md):
+
+- **Assumptions and gaps**: a skill's output template should end with two to four bullets naming what was assumed because the input did not say, and what missing information would most change the output. Expected for new skills; see `prd-template` or `lease-decoder` for the wording.
+- **Contract checks**: a skill can ship deterministic pass criteria (`evals.json` next to the SKILL.md, or `evals/checks/<name>.json`) that CI runs offline for changed skills; format in [evals/README.md](evals/README.md). A live mode exists for authors with an API key.
+
+## Keeping the translated READMEs in sync
+
+`README.md` is the source of truth. `README.zh-CN.md`, `README.zh-TW.md`, `README.ko.md`, `README.ja.md`, `README.es.md` and `README.pt-BR.md` are translations of the short front page only (never of the full docs), each opening with the same language-switcher line and a machine-assisted note. When you change the English README in a way that changes meaning (new sections, changed claims or numbers), update the translations in the same PR or open a follow-up issue naming the files; cosmetic English edits do not need a sync. The drift check keeps counts honest in every variant, so never hand-edit a skill or bundle count in one file only. Native-speaker corrections are always welcome as standalone PRs.
+

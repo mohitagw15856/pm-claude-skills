@@ -60,3 +60,8 @@ Ask for these if not provided:
 - "Soften this message to my landlord but keep it firm."
 - "This came out rude — fix the tone: [paste]"
 - "Make this shorter and warmer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tone-fixer.html
+
+<!-- pm-claude-skills v84.0.0 | skill: tone-fixer | source: skills/tone-fixer/SKILL.md | sha256: 9502c4bda7a8a2fc20ae63f29e838f2a4f0d8effc3950d6f8b79fe98cbdeee1f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

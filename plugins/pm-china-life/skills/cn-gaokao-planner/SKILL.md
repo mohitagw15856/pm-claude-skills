@@ -74,3 +74,5 @@ End verbatim: *"以上为基于历史数据的规划建议，不保证录取。�
 - "冲稳保怎么排比较合理？"
 - "想学计算机，选好学校还是好专业？"
 - "Help us plan gaokao university applications."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-gaokao-planner.html

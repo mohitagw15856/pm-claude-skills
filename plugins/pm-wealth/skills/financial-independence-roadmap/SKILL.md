@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Explain FIRE and whether it's realistic for me."
 - "Plan a roadmap to financial freedom."
 - "Is early retirement actually achievable on my income?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/financial-independence-roadmap.html

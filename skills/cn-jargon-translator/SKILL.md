@@ -113,3 +113,5 @@ Show the terms used in the text, or the full list below when asked.
 - "把'我们下周开会讨论一下'改写成满分大厂味，发群里玩。"
 - "给我一份互联网黑话词典，附白话解释。"
 - "Translate this Chinese corporate jargon into plain words."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-jargon-translator.html

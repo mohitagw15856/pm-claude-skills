@@ -79,3 +79,5 @@ For 周报 and 月报, use the matching field names listed above, with 工作总
 - "钉钉周报怎么写？帮我把这周的事整理一下。"
 - "Fill in my DingTalk daily log from these notes."
 - "写月报，下个月的计划要具体一点。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dingtalk-work-log.html

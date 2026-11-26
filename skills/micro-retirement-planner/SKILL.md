@@ -134,3 +134,5 @@ for the leaving itself.
 - "I want to take 6 months off."
 - "Quit and travel."
 - "Can I afford a break?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/micro-retirement-planner.html

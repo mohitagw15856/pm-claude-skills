@@ -71,3 +71,8 @@ Ask for these if not provided:
 - "My phone number and relatives are showing up online — help."
 - "I want to shrink my digital footprint for safety reasons."
 - "Are data-removal services worth it, or can I do it myself?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-broker-removal.html
+
+<!-- pm-claude-skills v84.0.0 | skill: data-broker-removal | source: skills/data-broker-removal/SKILL.md | sha256: 5e7e5acf587664962682122b6ffaf01f309f1478327ebbd4fdfd6afb613519c9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -78,3 +78,5 @@ Six to eight binary steps for shipping a release in under 30 minutes (tag, notes
 - "Write a ROADMAP.md for my side project."
 - "Help me ship smaller releases more often."
 - "Plan the next few releases of my open-source library with themes."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fortnightly-release-planner.html

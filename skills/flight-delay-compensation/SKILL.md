@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "I got bumped off an overbooked flight — write me the claim."
 - "Missed my connection because the first leg was delayed. Am I entitled to anything?"
 - "They blamed 'operational reasons' for a 5-hour delay — does that count?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/flight-delay-compensation.html

@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "What should I ask this advisor/analyst/practitioner?"
 - "We get an hour with X."
 - "Our expert calls are pleasant but shallow."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/expert-interview-prep.html

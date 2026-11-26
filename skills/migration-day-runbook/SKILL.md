@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "Migrate our files to SharePoint."
 - "Plan the file migration day."
 - "How do we switch platforms safely?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/migration-day-runbook.html

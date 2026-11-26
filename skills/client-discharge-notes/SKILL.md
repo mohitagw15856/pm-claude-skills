@@ -65,3 +65,5 @@ When to come back (suture removal, recheck), the clinic number and hours, and th
 - "Write go-home notes after the spay."
 - "Explain post-op care to the owner."
 - "Write the medication instructions for the cat's owner."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/client-discharge-notes.html

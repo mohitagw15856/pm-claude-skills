@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "Break down what this medical term means for me."
 - "ELI5 how a Roth IRA works."
 - "What is this news story actually about?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/explain-simply.html

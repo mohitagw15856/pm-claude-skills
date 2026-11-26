@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Our spreadsheet is breaking."
 - "Is it time to move off sheets?"
 - "What should replace this monster workbook?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spreadsheet-or-database.html

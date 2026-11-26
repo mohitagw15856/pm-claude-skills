@@ -76,3 +76,5 @@ It checks the skill has the required sections and no em dashes, then prints the 
 - "Release v80 with the promoted skill."
 - "Add release-notes-from-git-log to the marketplace and ship it."
 - "Run the last step of the promote loop."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/promoter-publish.html

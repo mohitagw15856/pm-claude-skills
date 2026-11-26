@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "I need a workplace accommodation."
 - "Request reasonable adjustments."
 - "How do I ask for accommodations for my disability/condition?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/accommodation-request.html

@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "What's a good note system for studying?"
 - "I take notes but never look at them again. Fix that."
 - "Set me up a simple notes system, not an elaborate one."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/note-taking-system.html

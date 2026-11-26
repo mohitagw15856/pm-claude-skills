@@ -59,3 +59,5 @@ Three concrete actions in order, each with where to do it (KWSP app, website or 
 - "What can I use Akaun Sejahtera for?"
 - "I'm moving to Australia for good. Can I take out my EPF?"
 - "马来西亚公积金怎么算？我可以提出来买房吗？"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/malaysia-epf-explainer.html

@@ -46,7 +46,7 @@ wrong.
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Feature or product name**
 - **Problem being solved** (from the user's perspective)
 - **Target user** (role, context, what they're trying to accomplish)
@@ -127,6 +127,8 @@ Format: "As a [user type], I want to [action] so that [benefit]"
 - Research links
 - Related documents
 - Competitive analysis
+
+End every output with a short **Assumptions and gaps** block: two to four bullets naming what was assumed because the input did not say, and what missing information would most change this output. If nothing was assumed and nothing was missing, say so in one line instead.
 
 ## Writing Guidelines
 
@@ -243,3 +245,8 @@ Acceptance Criteria:
 - "Write a product spec for this feature."
 - "Write the feature specification."
 - "Write a requirements document for a new feature."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prd-template.html
+
+<!-- pm-claude-skills v84.0.0 | skill: prd-template | source: skills/prd-template/SKILL.md | sha256: 66a4761f5472ac5748383379d5a4db7d37bfffea3684c213813a23066badcf63 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

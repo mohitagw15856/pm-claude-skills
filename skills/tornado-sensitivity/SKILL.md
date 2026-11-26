@@ -50,3 +50,5 @@ Prints `base=1.371 · top driver: lifetime (swing 1.097, 33% of total)` and writ
 - "Build a tornado chart for this model."
 - "Run a sensitivity analysis on our LTV."
 - "We keep arguing about drivers: which ones matter?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tornado-sensitivity.html

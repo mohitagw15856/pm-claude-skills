@@ -77,3 +77,8 @@ Process mapping / flowcharting practice (ANSI flowchart conventions), expressed 
 - "Map a workflow."
 - "Visualize steps/branches."
 - "Show 'how this works' as a chart."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/flowchart.html
+
+<!-- pm-claude-skills v84.0.0 | skill: flowchart | source: skills/flowchart/SKILL.md | sha256: 25d4e4984c53212e46de476c89902c18e0d16098f0a3f6a1a22d6dd2dc243b6a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

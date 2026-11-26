@@ -104,3 +104,5 @@ Qualitative: [Framework — e.g. Braun & Clarke], [quality assurance]
 - "Write a research protocol for [study]"
 - "Help me design a study to investigate [question]"
 - "Write the methodology for my research proposal"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/research-protocol.html

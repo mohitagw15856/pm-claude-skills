@@ -488,7 +488,7 @@ A typical unoptimized article scores 2-4. A well-structured but unoptimized thou
 
 Understanding how each engine works helps explain the rules behind the skill.
 
-### ChatGPT (GPT-4 and later) / Bing
+### ChatGPT / Bing
 
 Retrieval-augmented generation with Bing Search integration. When a user asks a question, Bing retrieves pages, then GPT extracts passages. It tends to extract the first plausible answer-shaped block it finds in the page — meaning the capsule directly under the H2 is almost always what gets quoted. It prefers prose over lists for citations (though it reads lists fine).
 
@@ -537,3 +537,5 @@ Not all content benefits equally. Use this to set expectations with the user abo
 ---
 
 *Originally created by Gencay (LearnAIwithMe) — adapted and extended for this library.*
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/aeo-optimizer.html

@@ -70,3 +70,5 @@ The specific, prioritised changes that would most reduce risk — what to add, c
 - "Stress-test our strategy."
 - "Pressure-test this PRD."
 - "Find the blind spots in this plan before we commit."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/red-team-review.html

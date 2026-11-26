@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "How do I save on my meds?"
 - "Is there a cheaper version of this drug?"
 - "I can't afford my medication."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prescription-cost-navigator.html

@@ -9,7 +9,7 @@ This skill writes a complete investor update — structured for clarity, honest 
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Company name and stage** (Seed / Series A / Series B / etc.)
 - **Period covered** (month or quarter)
 - **Key metrics this period** (revenue, MRR, users, churn, burn, runway — whatever's relevant)
@@ -133,3 +133,5 @@ Hi [Investor names or "all"],
 - "Draft a monthly update for our investors based on these notes: [paste notes]"
 - "Help me write a board update for Q[N]"
 - "Write our Series A investor newsletter"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investor-update.html

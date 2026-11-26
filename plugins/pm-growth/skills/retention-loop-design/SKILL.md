@@ -65,3 +65,5 @@ The Hook Model (Nir Eyal) and cohort-retention analysis practice (flattening cur
 - "Design an engagement/habit loop."
 - "Fix a leaky retention curve."
 - "Build a re-engagement system."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/retention-loop-design.html

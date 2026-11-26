@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mohitagw15856.github.io/pm-claude-skills/schemas/mission.schema.json",
+  "title": "PM Skills mission",
+  "description": "Typed pipelines (pipelines/<id>.json) chained into one long, resumable run with human checkpoints. Validated by scripts/check-missions.mjs and run by the mission CLI command.",
+  "type": "object",
+  "required": ["id", "name", "summary", "stages"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "name": { "type": "string" },
+    "summary": { "type": "string" },
+    "model_role": { "type": "string", "description": "A role in data/models.json. Long missions suit the frontier role; default is the default role." },
+    "effort": { "enum": ["low", "medium", "high", "xhigh", "max"] },
+    "inputs": {
+      "description": "JSON Schema (object) of what the person running the mission supplies; stages refer to it as $.input.<field>",
+      "type": "object",
+      "required": ["type", "properties"],
+      "properties": { "type": { "const": "object" }, "properties": { "type": "object" }, "required": { "type": "array", "items": { "type": "string" } } }
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "pipeline", "inputs"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "description": "Later stages refer to a step of this stage as $.<stage>.<step>.<field>" },
+          "pipeline": { "type": "string", "description": "A pipeline id in pipelines/" },
+          "inputs": { "type": "object", "description": "Pipeline input name to a binding: a $. reference, a from/pick/map object, or a literal" },
+          "checkpoint": { "type": "string", "description": "What a person should review before the next stage. The run stops here until resumed." }
+        }
+      }
+    }
+  }
+}

@@ -13,7 +13,7 @@ Once the checklist is approved, it can be *executed*: hand the items to [`action
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Launch name** and planned launch date
 - **Launch tier** (1 = major product launch, 2 = significant feature release, 3 = incremental update)
 - **Team members and their roles** (engineering lead, PM, marketing, support, etc.)
@@ -176,3 +176,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Give me a launch-day checklist."
 - "Plan the feature release."
 - "What do we need before this major update ships?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-launch-checklist.html

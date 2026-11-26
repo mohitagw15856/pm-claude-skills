@@ -83,3 +83,5 @@ Ask for these if not provided:
 - "How do I answer an RFI that is really a variation?"
 - "Write an RFI response with the cost implication"
 - "Our RFIs keep coming back — what are we doing wrong?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/construction-rfi-response.html

@@ -64,3 +64,5 @@ UX writing & onboarding practice — empty states as activation moments, differe
 - "What should this screen say before there's any data?"
 - "Write the no-results state."
 - "Write first-run placeholder content."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/empty-state-writer.html

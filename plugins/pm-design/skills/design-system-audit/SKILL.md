@@ -9,7 +9,7 @@ This skill produces a structured audit of a design system — covering component
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Design system name** and what product(s) it serves
 - **Audit scope** — component library / design tokens / documentation / contribution process / all of the above
 - **Current tooling** — Figma / Storybook / Zeroheight / custom / combination?
@@ -257,3 +257,5 @@ For each component, assess against these quality criteria:
 - "Assess the health of our shared design system"
 - "Run a design system audit before we do a rebrand"
 - "What's wrong with our design system and what should we fix first?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/design-system-audit.html

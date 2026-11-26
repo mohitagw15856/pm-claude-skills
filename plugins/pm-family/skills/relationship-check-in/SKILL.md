@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Set up a regular way to check in on our relationship."
 - "Questions to ask my partner about how we're doing."
 - "Something feels off with us — how do I bring it up calmly?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/relationship-check-in.html

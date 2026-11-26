@@ -1,0 +1,4 @@
+# PM Skills installs are reproducible from .pm-skills.json; install folders are not committed.
+.claude/skills/
+.cursor/rules/
+node_modules/

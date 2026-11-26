@@ -60,3 +60,8 @@ Ask for these if not provided:
 - "I keep avoiding the gym. Get me moving now."
 - "Help me finally start writing this thing."
 - "2-minute launch for cleaning my room."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-2-minute-launch.html
+
+<!-- pm-claude-skills v84.0.0 | skill: the-2-minute-launch | source: skills/the-2-minute-launch/SKILL.md | sha256: 17ce98613c8d21632086b28652bb2dacf1cad8ff25d69e22b02b47da3715dcea | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

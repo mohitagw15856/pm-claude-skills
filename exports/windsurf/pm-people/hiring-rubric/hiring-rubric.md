@@ -11,7 +11,7 @@ This skill generates a complete structured interview scorecard and guide for any
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Role title and level** (e.g. Senior Product Manager, Junior Data Analyst)
 - **Team or function** (e.g. Growth, Platform, Customer Success)
 - **Top 3–5 things this person needs to do well** (the actual job requirements, not just the JD)
@@ -135,3 +135,8 @@ Suggest how to divide competencies across interview rounds to avoid repetition:
 - "Build an interview scorecard for [job title]"
 - "Give me structured interview questions for a [level] [role]"
 - "We're hiring a [role] — help me build an assessment framework"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hiring-rubric.html
+
+<!-- pm-claude-skills v84.0.0 | skill: hiring-rubric | source: skills/hiring-rubric/SKILL.md | sha256: cd3c7d737877ccaf458520654aa7d47c51bf4b31b6dac431b79d8e66caa8eb8c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

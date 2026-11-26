@@ -73,3 +73,5 @@ An **Issue Triage Report**:
 - "Label and prioritise the backlog, and cluster the duplicates."
 - "Sort my Linear issues — types, severity, priority."
 - "Clean up the issue tracker and flag what needs me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/issue-triage-live.html

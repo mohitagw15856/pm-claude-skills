@@ -9,7 +9,7 @@ This skill transforms raw API specs, endpoint descriptions, or Postman collectio
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **API or endpoint details** (raw spec, Postman export, or verbal description)
 - **Auth method** (API key / Bearer token / OAuth 2.0 / None)
 - **Base URL**
@@ -179,3 +179,8 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Write API reference docs."
 - "Create a developer guide."
 - "Turn a raw spec/Postman collection into documentation."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/api-docs-writer.html
+
+<!-- pm-claude-skills v84.0.0 | skill: api-docs-writer | source: skills/api-docs-writer/SKILL.md | sha256: 8e96e869e9ee986d07a7781bf43289c558fc37d38fee9cb8522f9216c9640784 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -65,3 +65,5 @@ End verbatim: *"This is a plain-language reading, not legal advice — release l
 - "Is this severance offer normal?"
 - "Review my separation agreement."
 - "Should I sign this release?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/severance-agreement-decoder.html

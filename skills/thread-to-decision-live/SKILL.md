@@ -78,3 +78,5 @@ A **Decision Record**:
 - "Turn this discussion into a decision record."
 - "What did we actually agree here? Write it to the decision log."
 - "Close this thread out with owners and next steps in Cowork."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thread-to-decision-live.html

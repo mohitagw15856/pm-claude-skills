@@ -61,6 +61,8 @@ Style:
 
 **一句话版本**（用于群聊）：[...]
 
+End every output with a short **Assumptions and gaps** block: two to four bullets naming what was assumed because the input did not say, and what missing information would most change this output. If nothing was assumed and nothing was missing, say so in one line instead.
+
 ## Quality Checks
 - [ ] Every 本周完成 item states a result, and a number where the person gave one
 - [ ] Every risk has an impact, a proposal and a named decision-maker
@@ -79,3 +81,8 @@ Style:
 - "写一份给老板的月报，突出数据。"
 - "本周工作有点乱，帮我写周报，下周有个风险要提。"
 - "Write my weekly report in Chinese for my manager."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-weekly-report.html
+
+<!-- pm-claude-skills v84.0.0 | skill: cn-weekly-report | source: skills/cn-weekly-report/SKILL.md | sha256: 9af8c42f23ed6779ecfae0c84cd3fe10ca52fb9e79d6f00cd3b066ef9c131856 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

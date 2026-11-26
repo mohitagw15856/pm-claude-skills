@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Someone took my Android, help me secure everything."
 - "Should I wipe my lost phone or try to find it?"
 - "My phone's gone and it had my authenticator app on it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/secure-a-lost-phone.html

@@ -67,3 +67,8 @@ Ask for these if not provided:
 - "Is this claim actually true?"
 - "Verify this stat before the deck."
 - "How solid is this source?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/source-triangulation.html
+
+<!-- pm-claude-skills v84.0.0 | skill: source-triangulation | source: skills/source-triangulation/SKILL.md | sha256: bbcbab9b2f6442317ea1cb231280c2ae0422f825416fd7c740c262ef283e95cb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

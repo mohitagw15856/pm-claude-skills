@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Combine my notes."
 - "Prep me for the exam."
 - "Organize this course material."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/study-notes-synthesizer.html

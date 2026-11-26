@@ -131,6 +131,24 @@ Brechas de investigación identificadas:
 - Cuantifica cuando sea posible ("7 de 10 usuarios...")
 - Conecta temas con objetivos empresariales
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/theme-validity.md`** — ¿Cuándo es real un tema? Reglas de validez para la síntesis. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/synthesis-report.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Disciplina de la evidencia | Las afirmaciones flotan sueltas: sin recuentos de participantes, sin citas, o citas sin atribuir | La mayoría de los temas están cuantificados, pero algunas citas no tienen atribución o la prevalencia es vaga ("muchos usuarios") | Cada tema indica su prevalencia a partir de los datos ("8 de 12") y lleva 2 o 3 citas atribuidas que ilustran el patrón |
+| Altitud de la síntesis | Una lista de comentarios individuales disfrazada de hallazgos | Temas reales entre participantes, pero uno o dos son anécdotas de un solo participante ascendidas a tema | De 4 a 8 patrones genuinos entre participantes; los atípicos etiquetados como atípicos; las brechas entre lo que dicen y lo que hacen detectadas, no solo opiniones declaradas |
+| Conexión con decisiones | Observaciones sin implicaciones: una visita guiada por los datos | Hay implicaciones, pero genéricas ("mejorar el onboarding") sin prioridad ni impacto esperado | Cada tema nombra la decisión de producto a la que afecta; las recomendaciones están priorizadas con evidencia, impacto esperado y esfuerzo |
+| Honestidad sobre conflictos y lagunas | Camino feliz saneado: contradicciones e incertidumbre invisibles | Los datos contradictorios se reconocen, pero no se exploran; las interpretaciones se confunden con las observaciones | Los hallazgos contradictorios se muestran con un camino de resolución; observación e interpretación explícitamente separadas; las preguntas abiertas tienen seguimientos con nombre |
+
 ## Verificaciones de Calidad
 
 - [ ] Los temas identifican patrones entre múltiples participantes, no respuestas individuales
@@ -243,3 +261,12 @@ Al sintetizar investigación, usa esta estructura:
 - Datos completos de participantes
 - Notas brutas/transcripciones (enlace)
 ```
+
+## Frases de activación de ejemplo
+
+- "Sintetiza estas transcripciones de entrevistas."
+- "Analiza los resultados de nuestra encuesta."
+- "Encuentra temas en este feedback de usuarios."
+- "Resume esta investigación de usuarios."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/user-research-synthesis.html

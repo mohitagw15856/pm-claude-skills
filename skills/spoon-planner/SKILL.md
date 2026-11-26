@@ -112,3 +112,5 @@ are the infinite-spoon cousins — useful, but read them through this lens.
 - "I only have so much energy."
 - "Help me pace with my chronic illness."
 - "I keep crashing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spoon-planner.html

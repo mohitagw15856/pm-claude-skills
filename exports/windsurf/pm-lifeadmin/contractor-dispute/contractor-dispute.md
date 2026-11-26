@@ -68,3 +68,8 @@ Ask for these if not provided:
 - "I think my builder overcharged me. How do I dispute it?"
 - "Write a firm message demanding my contractor fix their work."
 - "Contractor's threatening a lien — what are my options?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/contractor-dispute.html
+
+<!-- pm-claude-skills v84.0.0 | skill: contractor-dispute | source: skills/contractor-dispute/SKILL.md | sha256: 013cb00ce26ced5519446e65a35206e3cebeeada66ff435c6e7707c68843e75d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

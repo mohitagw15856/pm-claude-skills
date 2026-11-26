@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Help me ask my ill partner what they'd want."
 - "How do I bring up final wishes without it being morbid?"
 - "My parent won't talk about this — how do I ease into it?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/end-of-life-wishes-conversation.html

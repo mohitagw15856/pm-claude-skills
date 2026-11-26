@@ -75,3 +75,8 @@ The codebase-as-index pattern — local knowledge graphs for agent navigation (a
 - "Stop re-reading the whole codebase."
 - "Make a map of this project."
 - "Which files should the agent actually open?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/repo-map.html
+
+<!-- pm-claude-skills v84.0.0 | skill: repo-map | source: skills/repo-map/SKILL.md | sha256: a05ca98d0746e33cbbe27eaf33959fdf5a37b402ab06380f04a8157f962fff9b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

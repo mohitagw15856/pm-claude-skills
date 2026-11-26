@@ -24,6 +24,10 @@ Ask for these if not provided:
 - **Anything during or since**: study, volunteering, freelance, caring responsibilities that built skills, if the person wants them mentioned
 - **The target role and country**
 
+## Working from a brief
+
+Given the break and the target field, **write the CV anyway**: a profile, one honest line for the gap, experience, and skills kept up or gained during the break, with placeholders for employers and dates. Add the answer about the gap for interviews, in the person's voice, at under 60 seconds spoken.
+
 ## Framework
 
 1. **The person decides how much to say.** A reason is never required. "Career break, 2022 to 2024" is enough. "Career break for family caring responsibilities" is fine if they choose it.
@@ -59,3 +63,8 @@ Protected information: health, pregnancy, disability and similar details are the
 - "Help me write my CV after maternity leave."
 - "My CV has a gap since my redundancy. What do I say?"
 - "Write my CV for a returnship programme."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/returner-cv.html
+
+<!-- pm-claude-skills v84.0.0 | skill: returner-cv | source: skills/returner-cv/SKILL.md | sha256: 373631e36808412197815bb56353251c15b6fa1a7e27101bcda2271c387c464a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

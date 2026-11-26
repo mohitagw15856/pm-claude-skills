@@ -8,7 +8,7 @@ Legend: ✅ built · 🟡 built as mechanism/asset, needs a human step · 🧑 h
 | # | Move | Status | What landed |
 |---|---|---|---|
 | 1 | Expert-verified badge program | 🟡 | `config/human-review.json` registry (starts empty on purpose) + `docs/EXPERT-REVIEW-PROGRAM.md` (who to recruit per bundle, the pitch, the badge). Recruiting is the human step. |
-| 2 | Jurisdiction variants | ✅ | `docs/JURISDICTION-VARIANTS.md` (overlay convention `variants/<skill>/<code>.md`) + real **US** and **UK** overlays for `security-deposit-recovery`. Priority list of the next 9 skills inside. |
+| 2 | Jurisdiction variants | ✅ | `docs/JURISDICTION-VARIANTS.md` (overlay convention `overlays/<skill>/<code>.md`) + real **US** and **UK** overlays for `security-deposit-recovery`. Priority list of the next 9 skills inside. |
 | 3 | Structured risk tier per skill | ✅ | `config/risk-tiers.json` + `scripts/check-risk-tiers.mjs` → `data/risk-tiers.json`. **143 high-stakes · 185 consequential · 846 informational.** Validates names; fails on typos. |
 | 4 | Last-human-reviewed + SLA | ✅ | `scripts/check-human-review.mjs` — coverage of high-stakes skills (**0/143 today, honestly**), 12-month expiry, `--strict` for CI once real. `docs/RISK-TIERS.md`. |
 
@@ -40,7 +40,7 @@ Legend: ✅ built · 🟡 built as mechanism/asset, needs a human step · 🧑 h
 ## E. Product depth
 | # | Move | Status | What landed |
 |---|---|---|---|
-| 18 | Offline / air-gapped bundle | ✅ | `scripts/build-offline-bundle.mjs` → `dist/pm-skills-offline-<v>.tar.gz` (27.9 MB; `tar` via arg array, no shell) + `OFFLINE-README.md` (local-model how-to). `dist/` gitignored. |
+| 18 | Offline / air-gapped bundle | ✅ | `scripts/build-offline-bundle.mjs --zstd` → `dist/pm-skills-offline-<v>.tar.zst` (about 33 MB with the playground and the Org server; attached to every GitHub release by `release-assets.yml`; `pm-claude-skills serve --bundle <file>` hosts it offline; docs/OFFLINE-BUNDLE.md). `dist/` gitignored. |
 | 19 | Deprecation & retirement policy | ♻️ | **Already existed and is better than what I'd have added** — `docs/DEPRECATION.md` uses `deprecated:`/`supersededBy:` frontmatter. I drafted a config-registry version, saw the conflict, and removed mine. No change. |
 | 20 | Hands-free voice pack | ✅ | `output-styles/hands-free-voice.md` (+ README row) + the `hands-free-caregiver` journey (`"voice": true`). |
 

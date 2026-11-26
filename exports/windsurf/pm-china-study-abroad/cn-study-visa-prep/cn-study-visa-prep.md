@@ -1,0 +1,113 @@
+---
+trigger: model_decision
+description: "Prepare a student visa application for a Chinese student going abroad: the document checklist by country, proof of funds, the application sequence and timing, the interview or genuine-student questions, and the common reasons for refusal. Use when asked 留学签证怎么办, F-1 签证材料, 英国学生签证存款证明, 澳洲 500 签证, 加拿大学签, 签证面试会问什么, 被拒签了怎么办, or help me prepare my student visa. Produces a country-specific checklist, a funds plan, a timeline working back from the course start date, interview preparation with honest answer outlines, a risk check and what to do after a refusal. Distinct from the-visa-interview, which simulates the interview. Not immigration advice."
+---
+
+# 留学签证准备
+
+Student visas are refused for avoidable reasons: funds held for too few days, a document that contradicts the form, an answer at interview that does not match the application. Requirements differ by country and change often. This skill builds the checklist and the timeline for the destination, prepares honest answers, and marks every amount and period for confirmation on the official government site. It is not immigration advice.
+
+Write in Simplified Chinese.
+
+## What This Skill Produces
+
+- A document checklist for the destination country
+- A funds plan: how much, in whose name, held for how long, and the evidence
+- A timeline working back from the course start date
+- Interview or written-statement preparation
+- A risk check against the common refusal reasons
+- Next steps after a refusal
+
+## Required Inputs
+
+Ask for these if not provided:
+
+- Destination country, institution, course, level, start date
+- Admission status and the document issued (for example the certificate of eligibility, confirmation of acceptance or letter of acceptance)
+- Who pays: parents, self, scholarship, loan, and where the money is held
+- Academic and work history, including any gaps
+- Previous visas, refusals or immigration problems in any country
+- Family ties and plans after graduation
+- Current city, for the visa centre or consulate
+
+## Framework
+
+1. **By country, the usual core (verify each on the official site).**
+   - **美国 F-1:** school's certificate of eligibility, payment of the student system fee, the online non-immigrant application, appointment and interview at the consulate, evidence of funds for the first year, academic records. The officer assesses study purpose, funding and intent to return.
+   - **英国 Student:** confirmation of acceptance for studies from the sponsor, funds for tuition and living costs held for a continuous qualifying period, tuberculosis test certificate, health surcharge payment, biometrics, digital immigration status.
+   - **澳大利亚 500:** confirmation of enrolment, the genuine student requirement answered in the application, financial capacity, health insurance for the stay, health examination, English evidence.
+   - **加拿大 study permit:** letter of acceptance from a designated institution, a provincial attestation where required, proof of funds, study plan, medical examination and biometrics. Processing streams have changed; check the current ones.
+2. **Funds.** The amount is set by a formula per country. Money must be in an acceptable account and holder's name, held for the required period, with the source explainable. Large recent deposits need an explanation and evidence. Parents' income proof should match the savings.
+3. **Timeline.** Work back from the start date: admission and deposit, eligibility document, funds maturity date, medical tests, application, biometrics or interview, decision, travel. Apply as early as the rules permit.
+4. **Consistency.** Every form, document and answer must tell the same story: dates, schools, employers, funding.
+5. **Interview and statements.** Why this course, why this institution, why this country, how it fits past study, who pays and how, plans after graduation. Short, direct, true. Know the course content and the costs.
+6. **Refusal reasons.** Insufficient or unexplained funds, weak or inconsistent study rationale, doubts about return or about being a genuine student, missing documents, previous immigration history not declared, false documents.
+7. **After a refusal.** Read the stated reason, fix that issue with new evidence, and reapply or seek review where available. Declare the refusal in every later application.
+8. **Never.** Use false bank statements, false employment letters or agency-fabricated materials. The consequence can be a multi-year ban.
+
+## Output Format
+
+### 签证准备：[国家]，[学校与课程]，开学 [日期]
+
+**材料清单**
+| 材料 | 要求 | 负责人 | 状态 |
+|---|---|---|---|
+
+**资金方案**
+| 项目 | 内容 |
+|---|---|
+| 所需金额（按官方公式计算） | |
+| 存款人和账户 | |
+| 存期要求与到期日 | |
+| 资金来源说明与证明 | |
+
+**时间表**
+| 日期 | 事项 |
+|---|---|
+
+**面签或陈述准备**
+| 问题 | 回答要点（如实） |
+|---|---|
+
+**风险自查**
+| 风险点 | 你的情况 | 应对 |
+|---|---|---|
+
+**如被拒签**：[步骤]
+
+**请在官方网站核实**：[费用、金额、存期、处理时间、体检要求]
+
+**Assumptions and gaps**
+- [假设的要求]
+- [最可能出问题的材料]
+
+*准备参考，不构成移民意见。要求经常调整，以目的地国政府官网和签证中心为准。*
+
+## Quality Checks
+
+- [ ] The checklist is for one named country and visa type
+- [ ] The funds plan covers amount, holder, period and source
+- [ ] No fee, amount or holding period is stated without a verify note
+- [ ] The timeline works back from the start date
+- [ ] Answer outlines match the application facts
+- [ ] The warning against false documents is present
+
+## Anti-Patterns
+
+- **Do not state financial requirements from memory as current.**
+- **Do not coach answers that are untrue.**
+- **Do not suggest borrowing money briefly to pass the funds check** without explaining the source-of-funds risk.
+- **Do not hide a previous refusal.**
+- **Do not rely on an agent's checklist** over the official one.
+
+## Example Trigger Phrases
+
+- "我 9 月去英国读硕士，签证材料和存款要怎么准备？"
+- "F-1 面签会问什么？我本科和硕士专业不一样。"
+- "澳洲 500 签证的 GS 陈述怎么写？"
+- "加拿大学签被拒了，理由是学习计划不可信，怎么办？"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-study-visa-prep.html
+
+<!-- pm-claude-skills v84.0.0 | skill: cn-study-visa-prep | source: skills/cn-study-visa-prep/SKILL.md | sha256: 3856a0edf05156d184026dab15c62857ec8cff93fd7299ba026c463ce0cb5a2b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

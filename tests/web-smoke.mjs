@@ -68,40 +68,11 @@ const PAGES = [
       });
       if (!ok) throw new Error('PMArtifacts renderer failed');
     } },
-  { url: 'spend.html', async check(p) {
-      await p.click('#sample'); await p.waitForTimeout(150);
-      const total = await p.locator('#mTotal').textContent();
-      if (!/\$\d/.test(total || '')) throw new Error('spend meter produced no total');
-      const rows = await p.locator('#tbody tr').count();
-      if (rows < 3) throw new Error('spend sample produced ' + rows + ' rows');
-    } },
-  { url: 'cowork.html', async check(p) {
-      const cards = await p.locator('.card').count();
-      if (cards < 10) throw new Error('cowork page has ' + cards + ' cards');
-    } },
-  { url: 'tokens.html', async check(p) {
-      // the sample session must produce a breakdown with computed crusher savings
-      await p.click('#sampleBtn'); await p.waitForTimeout(200);
-      const rows = await p.locator('#tbody tr').count();
-      if (rows < 5) throw new Error('sample produced ' + rows + ' rows');
-      const rec = await p.locator('#tbody').textContent();
-      if (!/context-crusher/.test(rec) || !/−\d+%/.test(rec)) throw new Error('no computed crusher recommendation');
-      const verdict = await p.locator('#verdict').textContent();
-      if (!/per 1,000 turns/.test(verdict || '')) throw new Error('verdict missing');
-      // cache-leak warning: sample includes a volatile piece above stable ones
-      if (!(await p.locator('.cachewarn').count())) throw new Error('cache warning missing');
-    } },
   { url: 'boardroom.html', async check(p) {
       await p.fill('#doc', 'x'.repeat(120));
       await p.click('#runBtn'); await p.waitForTimeout(300);
       const s = await p.locator('#status').textContent();
       if (!/key/i.test(s || '')) throw new Error('keyless guard missing: ' + s);
-    } },
-  { url: 'defend.html', async check(p) {
-      await p.fill('#doc', 'x'.repeat(120));
-      await p.locator('#runBtn, button.primary').first().click(); await p.waitForTimeout(300);
-      const s = await p.locator('.status').first().textContent();
-      if (!/key/i.test(s || '')) throw new Error('keyless guard missing');
     } },
   { url: 'gym.html', async check(p) {
       await p.click('#startBtn'); await p.waitForTimeout(300);
@@ -163,11 +134,6 @@ const PAGES = [
       await p.click('.opt[data-d="0"][data-o="1"]'); await p.waitForTimeout(200);
       if ((await p.locator('.why').count()) !== 1) throw new Error('drill feedback missing');
     } },
-  { url: 'wrapped.html', async check(p) {
-      // Fresh browser context = empty state: one card with the arena CTAs.
-      if ((await p.locator('.card').count()) < 1) throw new Error('no cards rendered');
-      if (!(await p.locator('.card.on').textContent()).includes('Nothing here yet')) throw new Error('empty state missing');
-    } },
   { url: 'campaign.html', async check(p) {
       if ((await p.locator('.day').count()) !== 8) throw new Error('expected 8 chapters');
       // false-completion guard: check-progress with no arena data must not advance
@@ -183,42 +149,8 @@ const PAGES = [
       if ((await p.locator('h3.skill-h').count()) < 40) throw new Error('craft chapters did not render');
       if ((await p.locator('.alm-skill').count()) < 400) throw new Error('almanac did not render');
     } },
-  { url: 'charter.html', async check(p) {
-      if ((await p.locator('.req').count()) !== 4) throw new Error('expected 4 requirements');
-      if (!(await p.locator('#progressLine').textContent()).includes('0/4')) throw new Error('should start locked');
-    } },
-  { url: 'tower.html', settle: 3000, async check(p) {
-      await p.waitForFunction(() => window.__towerReady, null, { timeout: 20000 });
-      await p.click('#demo'); await p.waitForTimeout(1200);
-      if (!/9 blocks/.test(await p.locator('#status').textContent())) throw new Error('demo tower did not build');
-    } },
-  { url: 'stage.html', async check(p) {
-      if (!(await p.locator('#enter').isVisible())) throw new Error('entry card missing');
-    } },
-  { url: 'galaxy3d.html', settle: 3000, async check(p) {
-      await p.waitForFunction(() => window.__galaxyReady, null, { timeout: 25000 });
-      const r = await p.evaluate(() => window.__galaxyReady);
-      if (r.stars < 400) throw new Error('starfield incomplete: ' + r.stars);
-    } },
-  { url: 'city.html', settle: 3000, async check(p) {
-      await p.waitForFunction(() => window.__cityReady, null, { timeout: 25000 });
-    } },
-  { url: 'trophy.html', settle: 2000, async check(p) {
-      await p.waitForFunction(() => window.__trophyReady, null, { timeout: 20000 });
-    } },
   { url: 'status.html', settle: 2500, async check(p) {
       if ((await p.locator('.vcard').count()) !== 4) throw new Error('vitals cards missing');
-    } },
-  { url: 'season.html', async check(p) {
-      await p.waitForTimeout(800);
-      if (!(await p.locator('#hero').textContent()).includes('Season')) throw new Error('season hero missing');
-    } },
-  { url: 'fineprint.html', async check(p) {
-      await p.waitForFunction(() => window.__fineprintReady === 6, null, { timeout: 15000 });
-      await p.fill('#doc', 'THIS LEASE AGREEMENT between Landlord and Tenant: monthly rent, security deposit, premises, sublet prohibited.');
-      await p.waitForTimeout(300);
-      const v = await p.textContent('#verdict');
-      if (!/Lease/.test(v)) throw new Error('lease auto-detect failed: ' + v);
     } },
   { url: 'semantic.html', async check(p) {
       await p.waitForFunction(() => window.__semanticReady > 500, null, { timeout: 15000 });
@@ -226,43 +158,12 @@ const PAGES = [
       await p.waitForTimeout(400);
       if ((await p.locator('.hit').count()) < 1) throw new Error('keyword fallback returned no hits');
     } },
-  { url: 'skillify.html', async check(p) {
-      await p.waitForFunction(() => window.__skillifyReady === true, null, { timeout: 15000 });
-    } },
-  { url: 'conformant.html', async check(p) {
-      await p.waitForFunction(() => window.__conformantReady >= 2, null, { timeout: 15000 });
-    } },
-  { url: 'casting.html', async check(p) {
-      await p.waitForFunction(() => window.__castingReady === true, null, { timeout: 15000 });
-      const t = await p.textContent('#title');
-      if (!/Season \d/.test(t)) throw new Error('season title missing: ' + t);
-    } },
-  { url: 'federation.html', async check(p) {
-      await p.waitForFunction(() => window.__federationReady >= 1, null, { timeout: 15000 });
-      await p.fill('#q', 'churn');
-      await p.waitForTimeout(300);
-      if ((await p.locator('.hit').count()) < 1) throw new Error('federated search returned nothing');
-    } },
   { url: 'credential.html', async check(p) {
       await p.waitForFunction(() => window.__credentialReady === true, null, { timeout: 15000 });
-    } },
-  { url: 'authors.html', async check(p) {
-      await p.waitForFunction(() => window.__authorsReady > 500, null, { timeout: 15000 });
-    } },
-  { url: 'localdocs.html', async check(p) {
-      await p.waitForFunction(() => window.__localdocsReady === true, null, { timeout: 15000 });
-      // in a browser the cockpit gate must show, not the app
-      if (await p.locator('#app').isVisible()) throw new Error('cockpit-only UI leaked into the browser');
     } },
   { url: 'for/construction-managers.html', async check(p) {
       const n = await p.locator('.sk').count();
       if (n < 4) throw new Error('profession page rendered ' + n + ' skills');
-    } },
-  { url: 'museum.html', async check(p) {
-      await p.waitForFunction(() => window.__museumReady > 2000, null, { timeout: 15000 });
-      await p.fill('#q', 'average');
-      await p.waitForTimeout(300);
-      if ((await p.locator('.exhibit').count()) < 1) throw new Error('museum search returned nothing');
     } },
   { url: 'growth.html', async check(p) {
       await p.waitForFunction(() => window.__growthReady === true, null, { timeout: 15000 });
@@ -270,19 +171,9 @@ const PAGES = [
   { url: 'compare/vs-diy.html', async check(p) {
       if ((await p.locator('table tr').count()) < 4) throw new Error('comparison table missing');
     } },
-  { url: 'atlas.html', settle: 2000, async check(p) {
-      await p.waitForFunction(() => window.__atlasReady, null, { timeout: 20000 });
-    } },
-  { url: 'morningshow.html', async check(p) {
-      const s = await p.evaluate(() => writeScript(news()).length);
-      if (s < 6) throw new Error('show script too short: ' + s);
-    } },
-  { url: 'institute.html', async check(p) {
-      if ((await p.locator('.organ').count()) !== 6) throw new Error('expected 6 organs');
-    } },
-  { url: 'canvas.html' }, { url: 'agent.html' }, { url: 'studio.html' },
-  { url: 'brain.html' }, { url: 'ask.html' }, { url: 'daily.html' },
-  { url: 'jobs.html' }, { url: 'hub.html' }, { url: 'grade.html' },
+  
+  { url: 'brain.html' }, { url: 'daily.html' },
+  { url: 'grade.html' },
   { url: 'learn.html' }, { url: 'examples.html' },
   // NOTE: catalog/leaderboard/community/coverage are GENERATED pages
   // (gitignored) — they don't exist in a fresh checkout, so CI can't load
@@ -308,7 +199,7 @@ await ctx.route(/pm-skills-mcp.*workers\.dev/, (route) => {
   if (u.endsWith('/ping') && route.request().method() === 'POST') return route.fulfill({ json: { ok: true } });
   return route.fulfill({ status: 503, json: { error: 'blocked-in-ci' } });
 });
-// Badge images: stub with a tiny SVG — conformant.html embeds live-graded
+// Badge images: stub with a tiny SVG — some pages embed live-graded
 // shields; CI must not depend on shields.io or the worker.
 await ctx.route(/img\.shields\.io/, (route) =>
   route.fulfill({ status: 200, contentType: 'image/svg+xml', body: '<svg xmlns="http://www.w3.org/2000/svg" width="80" height="20"/>' }));

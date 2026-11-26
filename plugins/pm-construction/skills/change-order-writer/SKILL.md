@@ -79,3 +79,5 @@ Never assert entitlement without naming the clause and the triggering document b
 - "Draft a CO or COR/PCO."
 - "Respond to a directive for changed work."
 - "Paper a field change."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/change-order-writer.html

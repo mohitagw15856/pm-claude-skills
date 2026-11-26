@@ -68,3 +68,8 @@ Ask for these if not provided:
 - "A friend is really struggling and I don't know how to be there."
 - "What do I say to someone with a serious illness?"
 - "My friend is in crisis — how can I actually help?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/support-a-friend-in-crisis.html
+
+<!-- pm-claude-skills v84.0.0 | skill: support-a-friend-in-crisis | source: skills/support-a-friend-in-crisis/SKILL.md | sha256: c3e63c4c35081069e08ab87172e6de389344fc53b7498916bed756eba2b817a2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

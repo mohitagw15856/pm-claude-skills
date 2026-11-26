@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Teach my family a game tonight."
 - "My rules explanations kill the mood."
 - "Make a teach script."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/teach-the-game.html

@@ -110,3 +110,5 @@ digital-sensory layer.
 - "I'm overstimulated all the time."
 - "Make my home autism and ADHD friendly."
 - "Audit my commute for sensory overload."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sensory-audit.html

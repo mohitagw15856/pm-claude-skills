@@ -68,3 +68,8 @@ Ask for these if not provided:
 - "Someone messaged me a link about a package fee. Legit?"
 - "I think I just got phished — I clicked the link and logged in."
 - "Did I just get scammed? They asked for a one-time code."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/phishing-triage.html
+
+<!-- pm-claude-skills v84.0.0 | skill: phishing-triage | source: skills/phishing-triage/SKILL.md | sha256: 9736845e9f3cf6cf9ed0a6c61f5a5d66a479cf41011286073ea9e2fa9240b388 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -11,7 +11,7 @@ Produces a tailored code review checklist for a specific pull request — scaled
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Language and framework** (e.g. TypeScript + React / Python + FastAPI / Go)
 - **Type of change** (feature / bug fix / refactor / dependency upgrade / security patch / performance)
 - **Risk level** (low / medium / high / critical)
@@ -147,3 +147,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Check a PR."
 - "Review a pull request."
 - "Generate a code review checklist."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/code-review-checklist.html

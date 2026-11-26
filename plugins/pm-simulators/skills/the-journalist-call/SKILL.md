@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Simulate a press interview."
 - "Prep me for a journalist call."
 - "How will this announcement be covered?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-journalist-call.html

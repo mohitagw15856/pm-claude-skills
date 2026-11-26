@@ -80,3 +80,8 @@ Tone: discuss decisions and systems, not people. "评审环节缺少数据验证
 - "项目延期了，帮我写复盘报告。"
 - "复盘会怎么开？给我一个议程。"
 - "Run a fupan on our product launch, in Chinese."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-fupan.html
+
+<!-- pm-claude-skills v84.0.0 | skill: cn-fupan | source: skills/cn-fupan/SKILL.md | sha256: 6e8a546241840a12c1314317bd54537e6eae1f7b4656317b4bd013cbc1d315d9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

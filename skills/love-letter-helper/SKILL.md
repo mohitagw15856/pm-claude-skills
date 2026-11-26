@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Write a heartfelt note for my wife's birthday."
 - "My partner's going through a hard time — help me write something reassuring."
 - "Turn these messy notes about why I love him into a letter."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/love-letter-helper.html

@@ -68,3 +68,5 @@ Release-management & QA practice — evidence-based go/no-go sign-offs with cove
 - "Give me a go or no-go QA report."
 - "Are we release ready?"
 - "Summarise testing before we ship."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/qa-release-signoff.html

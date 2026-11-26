@@ -113,3 +113,8 @@ Day 1: … · Day 7: … · Day 14: …
 - "Set up stage payments for this kitchen job."
 - "Write the payment terms for my quotes."
 - "The customer won't pay the next stage: what do I say?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stage-payment-shield.html
+
+<!-- pm-claude-skills v84.0.0 | skill: stage-payment-shield | source: skills/stage-payment-shield/SKILL.md | sha256: 0b1fdbf81b6833016882eefe2f633f33003270766ecb31b51cab4367269fae86 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

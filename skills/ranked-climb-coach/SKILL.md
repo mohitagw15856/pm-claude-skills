@@ -123,3 +123,5 @@ kind of ranked.
 - "Review my gameplay approach."
 - "I keep tilting."
 - "How do I actually improve at ranked?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ranked-climb-coach.html

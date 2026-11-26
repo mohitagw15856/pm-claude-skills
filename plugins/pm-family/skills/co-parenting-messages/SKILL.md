@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "My ex sent a nasty text about pickup — help me respond neutrally."
 - "How do I tell my co-parent no to a schedule change, politely but firmly?"
 - "Rewrite this message so it's child-focused and not combative."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/co-parenting-messages.html

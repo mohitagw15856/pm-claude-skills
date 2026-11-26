@@ -68,3 +68,5 @@ Talent-sourcing practice — synonym-rich boolean construction, X-ray search, pr
 - "Build a boolean search."
 - "Write an X-ray search."
 - "Find people with specific skills."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/boolean-search-builder.html

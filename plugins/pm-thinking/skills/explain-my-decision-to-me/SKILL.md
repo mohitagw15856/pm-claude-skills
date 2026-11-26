@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "I don't know what I actually think about this offer."
 - "Rubber-duck this decision with me."
 - "Just reflect my reasoning back so I can hear it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/explain-my-decision-to-me.html

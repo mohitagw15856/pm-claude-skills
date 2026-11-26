@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Set norms for our new team."
 - "We keep clashing over how we work."
 - "Onboard people into how this team operates."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/working-agreements.html

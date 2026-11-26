@@ -71,3 +71,5 @@ Support & incident-management practice — severity matrices, tiered ownership, 
 - "Design an escalation path."
 - "Support tiers."
 - "Fix tickets bounce around / nothing gets escalated in time."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/escalation-tree.html

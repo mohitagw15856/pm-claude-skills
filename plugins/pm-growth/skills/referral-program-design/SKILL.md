@@ -61,3 +61,5 @@ Viral-loop / referral practice — k-factor and cycle-time math, activation-gate
 - "Set referral incentives."
 - "Turn happy users into a growth channel."
 - "Improve word-of-mouth growth."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/referral-program-design.html

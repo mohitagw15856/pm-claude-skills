@@ -73,3 +73,8 @@ Ask for these if not provided:
 - "Make me an estate-planning checklist — I have two young kids."
 - "Prepare the document my family needs if something happens to me."
 - "Where do I start with a will and directives?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/estate-planning-kit.html
+
+<!-- pm-claude-skills v84.0.0 | skill: estate-planning-kit | source: skills/estate-planning-kit/SKILL.md | sha256: bef56ad413d86a4451ab7c22eceae154bcc6251b46d815fc81b466b44e2ab5c9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

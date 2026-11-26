@@ -497,3 +497,5 @@ Before opening your first pull request, verify:
 - "Create onboarding documentation for engineers."
 - "Document local environment setup."
 - "Write a getting-started guide for a codebase."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/local-dev-setup.html

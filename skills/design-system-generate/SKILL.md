@@ -160,3 +160,5 @@ direction, motion beyond the presets, iconography.]
 - "Generate design tokens for the new app"
 - "Give me a Tailwind config that passes accessibility"
 - "Make a deck theme that matches our product"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/design-system-generate.html

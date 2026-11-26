@@ -9,7 +9,7 @@ Write technical specifications that engineers actually read — clear problem fr
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Feature or system description** (what needs to be specced)
 - **Related PRD or product brief** (if available)
 - **Engineering reviewers** (whose sign-off is needed)
@@ -180,3 +180,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Write the engineering spec for this feature."
 - "Write a system design doc."
 - "Write an API specification."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/technical-spec-template.html

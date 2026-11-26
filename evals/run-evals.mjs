@@ -16,13 +16,15 @@
 //   --bundles a,b,c      only score skills in these bundles (needs web/skills.json)
 //   --skills x,y         only score these specific skills
 //   --unevaluated        only score skills that have no score yet in --out (add new ones)
+//   --save-outputs <dir> keep each skill's input, output and scores in <dir>/<skill>.md
+//   --judge2 <local:model|cf:model>  a free second judge from another model family
 //
 // Usage:
 //   ANTHROPIC_API_KEY=sk-ant-... node evals/run-evals.mjs               # cheap full run
 //   node evals/run-evals.mjs --dry-run                                  # estimate only
 //   node evals/run-evals.mjs --changed                                  # only changed skills
 //   node evals/run-evals.mjs --models claude-sonnet-4-6,claude-haiku-4-5-20251001 --judge claude-opus-4-8  # official run
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -43,6 +45,11 @@ const apiKey = process.env.ANTHROPIC_API_KEY || '';
 // for a 1–5 rubric it doesn't need). Override with --models / --judge for an "official" run.
 const models = arg('models', 'claude-sonnet-4-6').split(',').map((s) => s.trim());
 const judge = arg('judge', 'claude-sonnet-4-6');
+// --judge2 local:<model> or cf:<model>: a second judge from another model family, free
+// (a local OpenAI-compatible server such as Ollama at LOCAL_BASE_URL, or Cloudflare
+// Workers AI with CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN). Its scores are kept
+// beside the main judge's, and the run reports how far the two disagree.
+const judge2 = arg('judge2', '');
 const casesPath = arg('cases', join(__dirname, 'cases.json'));
 const outPath = arg('out', join(__dirname, 'results.json'));
 const maxSkills = parseInt(arg('max-skills', '0'), 10) || 0; // 0 = no cap
@@ -50,6 +57,9 @@ const onlyChanged = has('changed');   // only skills whose SKILL.md changed vs t
 const force = has('force');           // re-score even if unchanged since last run
 const dryRun = has('dry-run');        // print the plan + cost estimate, make no API calls
 const baseRef = arg('base', 'origin/main');
+// --save-outputs <dir>: write each skill's input, output and scores to <dir>/<skill>.md,
+// so a low score can be read and diagnosed instead of guessed at.
+const saveDir = arg('save-outputs', '');
 
 // Targeted scoring (used by the "Evaluate selected bundles" workflow): score only the
 // skills in chosen bundles / an explicit skill list, optionally only the not-yet-scored
@@ -83,22 +93,44 @@ function runPrompt(skillBody) {
   return skillBody + '\n\n---\nExecute this skill now on the input. Output only the finished artifact.';
 }
 
-function judgePrompt(description, output) {
+// Judge version 2 (2026-10-24): the judge now sees the task it is grading. Version 1
+// saw only the skill description and the artifact, so it could not judge whether the
+// output used the given facts or answered what was asked. The version is part of each
+// score's hash, so scores from version 1 are re-scored on the next run.
+const JUDGE_VERSION = 2;
+
+function judgePrompt(description, task, output) {
   return `You are a strict evaluator of a professional work artifact.
 
 The artifact was produced by a skill whose job is:
 "${description}"
 
+--- TASK (what the user asked, with any material they gave) ---
+${String(task).slice(0, 6000)}
+
 Score the artifact below from 1 (poor) to 5 (excellent) on each dimension:
 - structure: follows a clear, expected structure for this kind of output
-- completeness: covers what the task needs, nothing important missing
-- usefulness: actually useful to a professional, specific not generic
-- grounding: stays grounded in the given input, no invented facts/metrics
+- completeness: covers what THIS task asked for, nothing important missing (if the task asked for an interview or a first step, a strong first turn is complete)
+- usefulness: actually useful to the person who asked, specific not generic
+- grounding: uses the facts given in the task, labels assumptions, no invented facts or metrics
 
 Return ONLY a JSON object, no prose: {"structure":N,"completeness":N,"usefulness":N,"grounding":N}
 
 --- ARTIFACT ---
 ${output}`;
+}
+
+async function completeCompat(model, prompt) {
+  const cf = model.startsWith('cf:');
+  const base = cf ? `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/ai/v1` : (process.env.LOCAL_BASE_URL || 'http://localhost:11434/v1');
+  const key = cf ? process.env.CLOUDFLARE_API_TOKEN : (process.env.LOCAL_API_KEY || 'local');
+  const r = await fetch(base.replace(/\/$/, '') + '/chat/completions', {
+    method: 'POST', headers: { 'content-type': 'application/json', authorization: 'Bearer ' + key },
+    body: JSON.stringify({ model: model.replace(/^(local|cf):/, ''), max_tokens: 300, chat_template_kwargs: { enable_thinking: false }, messages: [{ role: 'user', content: prompt }] }),
+  });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(`${model}: ${r.status}`);
+  return String(j.choices?.[0]?.message?.content || '').replace(/<think>[\s\S]*?<\/think>\s*/g, '');
 }
 
 function parseScores(text) {
@@ -140,15 +172,26 @@ async function scoreTask({ c, body, description, model, hash }) {
     if (!output || !output.trim()) throw new Error('skill produced no output');
     let scores;
     try {
-      scores = parseScores(await complete({ apiKey, model: judge, messages: [{ role: 'user', content: judgePrompt(description, output) }], maxTokens: 300 }));
+      scores = parseScores(await complete({ apiKey, model: judge, messages: [{ role: 'user', content: judgePrompt(description, c.input, output) }], maxTokens: 300 }));
     } catch (_) {
       // One stricter retry — the judge occasionally wraps or malforms the JSON.
-      const retry = await complete({ apiKey, model: judge, maxTokens: 300, messages: [{ role: 'user', content: judgePrompt(description, output) + '\n\nReturn ONLY this JSON on one line, nothing else: {"structure":N,"completeness":N,"usefulness":N,"grounding":N}' }] });
+      const retry = await complete({ apiKey, model: judge, maxTokens: 300, messages: [{ role: 'user', content: judgePrompt(description, c.input, output) + '\n\nReturn ONLY this JSON on one line, nothing else: {"structure":N,"completeness":N,"usefulness":N,"grounding":N}' }] });
       scores = parseScores(retry);
     }
     const overall = DIMENSIONS.reduce((a, d) => a + scores[d], 0) / DIMENSIONS.length;
+    let second = null;
+    if (judge2) {
+      try {
+        const s2 = parseScores(await completeCompat(judge2, judgePrompt(description, c.input, output)));
+        second = { judge: judge2, scores: s2, overall: Math.round((DIMENSIONS.reduce((a, d) => a + s2[d], 0) / DIMENSIONS.length) * 100) / 100 };
+      } catch (e) { process.stderr.write(`  second judge failed on ${c.skill}: ${e.message}\n`); }
+    }
     process.stderr.write(`✓ ${c.skill} on ${model} — ${overall.toFixed(2)}/5\n`);
-    return { skill: c.skill, model, scores, overall: Math.round(overall * 100) / 100, hash };
+    if (saveDir) {
+      mkdirSync(saveDir, { recursive: true });
+      writeFileSync(join(saveDir, `${c.skill}.md`), `# ${c.skill} (${model}): ${overall.toFixed(2)}/5\n\nScores: ${JSON.stringify(scores)}\nOutput length: ${output.length} characters\n\n## Input\n\n${c.input}\n\n## Output\n\n${output}\n`);
+    }
+    return { skill: c.skill, model, scores, overall: Math.round(overall * 100) / 100, hash, judgeVersion: JUDGE_VERSION, ...(second ? { second } : {}) };
   } catch (e) {
     process.stderr.write(`✗ ${c.skill} on ${model} — FAILED (${e.message})\n`);
     return null;
@@ -197,7 +240,7 @@ async function main() {
       continue;
     }
     const { meta, body } = parseSkill(readFileSync(skillFile, 'utf8'));
-    const hash = sha(body + ' ' + c.input);
+    const hash = sha(body + ' ' + c.input + ' judge-v' + JUDGE_VERSION);
     for (const model of models) {
       const p = priorByKey.get(`${c.skill}|${model}`);
       // Reuse a prior score when it's unchanged — OR when it predates hashing (no hash
@@ -219,11 +262,21 @@ async function main() {
   if (toRun.length && !apiKey) { console.error('Set ANTHROPIC_API_KEY to run evals.'); process.exit(1); }
 
   const fresh = (await pool(toRun, concurrency, scoreTask)).filter(Boolean);
+  // A run where every call failed (a bad key, no credit) must not touch the results file.
+  if (toRun.length && !fresh.length) { console.error(`\nAll ${toRun.length} run(s) failed; ${outPath} left unchanged.`); process.exit(1); }
 
-  // Merge fresh + reused, keeping the freshest per (skill, model).
-  const merged = new Map(reused.map((r) => [`${r.skill}|${r.model}`, r]));
+  // Merge: every prior score is kept unless this run re-scored it. Building only from
+  // this run's tasks used to drop scores it did not touch (capped runs, other models).
+  const merged = new Map(prior.map((r) => [`${r.skill}|${r.model}`, r]));
+  for (const r of reused) merged.set(`${r.skill}|${r.model}`, r);
   for (const r of fresh) merged.set(`${r.skill}|${r.model}`, r);
   const results = [...merged.values()].sort((a, b) => a.skill.localeCompare(b.skill));
+  const pairs = fresh.filter((r) => r.second);
+  if (pairs.length) {
+    const gap = pairs.reduce((a, r) => a + Math.abs(r.overall - r.second.overall), 0) / pairs.length;
+    const apart = pairs.filter((r) => Math.abs(r.overall - r.second.overall) >= 1).map((r) => `${r.skill} (${r.overall} vs ${r.second.overall})`);
+    console.log(`\nSecond judge ${judge2}: mean gap ${gap.toFixed(2)} over ${pairs.length} skill(s); a point or more apart: ${apart.length ? apart.join(', ') : 'none'}.`);
+  }
 
   const out = { generatedAt: new Date().toISOString(), judge, models, dimensions: DIMENSIONS, results };
   writeFileSync(outPath, JSON.stringify(out, null, 2));

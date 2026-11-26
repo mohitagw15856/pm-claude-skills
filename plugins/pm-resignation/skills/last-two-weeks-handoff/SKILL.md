@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Write my transition document."
 - "Plan my last two weeks."
 - "What do I do before I leave my job?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/last-two-weeks-handoff.html

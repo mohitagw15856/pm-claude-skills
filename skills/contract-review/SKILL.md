@@ -82,3 +82,5 @@ WARNING: This review is for informational purposes only and does not constitute 
 - "Flag the key risks in this agreement"
 - "Summarise this SaaS contract in plain English"
 - "What should I watch out for in this supplier agreement?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/contract-review.html

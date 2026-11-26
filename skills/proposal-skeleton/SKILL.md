@@ -76,3 +76,5 @@ Ask for these if not provided:
 - "How do I pitch this internally?"
 - "Structure my case for the change."
 - "My proposals keep dying in review."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/proposal-skeleton.html

@@ -14,6 +14,7 @@ import { readFileSync, existsSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete } from '../bin/lib/anthropic.mjs';
+import { modelFor } from '../bin/lib/models.mjs';
 
 const getArg = (n, d) => { const i = process.argv.indexOf('--' + n); return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : d; };
 const has = (n) => process.argv.includes('--' + n);
@@ -45,13 +46,13 @@ async function main() {
 
   if (has('dry-run')) {
     console.log(`[dry-run] would review ${files.length} file(s): ${files.join(', ')}`);
-    console.log(`[dry-run] system prompt ${system.length} chars, input ${input.length} chars, model ${getArg('model', 'claude-sonnet-4-6')} — no API call made.`);
+    console.log(`[dry-run] system prompt ${system.length} chars, input ${input.length} chars, model ${getArg('model', modelFor('default'))} — no API call made.`);
     return 0;
   }
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) { console.error('ANTHROPIC_API_KEY not set (use --dry-run to preview without spending).'); return 1; }
 
-  const out = await complete({ apiKey, model: getArg('model', 'claude-sonnet-4-6'), system, messages: [{ role: 'user', content: input }], maxTokens: 3000 });
+  const out = await complete({ apiKey, model: getArg('model', modelFor('default')), system, messages: [{ role: 'user', content: input }], maxTokens: 3000 });
   const dest = getArg('out', 'boardroom-review.md');
   writeFileSync(dest, out + '\n');
   console.error(`✅ Review written to ${dest}`);

@@ -82,3 +82,5 @@ Ask for these if not provided:
 - "Our referral was returned asking for more information — what was missing?"
 - "How urgent should I mark this referral?"
 - "Write a perio referral with the charting attached"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dental-referral-letter.html

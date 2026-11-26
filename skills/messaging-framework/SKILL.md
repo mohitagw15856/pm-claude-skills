@@ -67,3 +67,5 @@ Message-house / value-proposition practice (incl. April Dunford-style positionin
 - "Write our value proposition."
 - "Build a message house."
 - "Make marketing, sales and product say the same thing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/messaging-framework.html

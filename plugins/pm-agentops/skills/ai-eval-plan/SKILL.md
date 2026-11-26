@@ -69,3 +69,5 @@ LLM evaluation practice — task-grounded rubrics, LLM-as-judge with human calib
 - "Set up an eval harness."
 - "Define quality metrics for an AI feature."
 - "Build a regression gate."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-eval-plan.html

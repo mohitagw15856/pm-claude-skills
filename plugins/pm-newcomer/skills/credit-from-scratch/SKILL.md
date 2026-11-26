@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Build credit as a newcomer/immigrant."
 - "Why was I rejected with a great score back home?"
 - "How do I get a credit card/loan as a new arrival?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/credit-from-scratch.html

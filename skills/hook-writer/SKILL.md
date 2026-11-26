@@ -57,3 +57,5 @@ Keep each hook in the platform's natural length (a YouTube title ≤60 chars; an
 - "Write the first line of this post."
 - "Write a cold open for this video."
 - "Make this thread starter more clickable."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hook-writer.html

@@ -11,6 +11,7 @@
   .fn-lead { color: var(--muted); font-size: 15px; }
   .fn-box { position: sticky; top: 8px; z-index: 5; background: var(--bg, #0d1117); padding: 10px 0 6px; }
   .fn-box input { width: 100%; box-sizing: border-box; padding: 13px 15px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-size: 16px; }
+  .smart { display: block; font-size: 13px; color: var(--muted); margin-top: 10px; }
   .fn-ex { margin: 8px 0 2px; display: flex; gap: 6px; flex-wrap: wrap; }
   .fn-ex button { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 14px; padding: 4px 11px; font-size: 12px; cursor: pointer; }
   .fn-ex button:hover { color: var(--text); border-color: var(--accent, #d97757); }
@@ -47,6 +48,8 @@
   <div class="fn-box">
     <input id="q" type="search" placeholder="e.g. prep a QBR for an at-risk account" autofocus autocomplete="off" / aria-label="e.g. prep a QBR for an at-risk account">
     <div class="fn-ex" id="examples"></div>
+    <label class="smart"><input type="checkbox" id="smart"> 🧠 Smart search: match by meaning, in your language (downloads a <span id="smartSize">23 MB</span> model once, then works offline; nothing is sent anywhere)</label>
+    <span class="count" id="smartStatus"></span>
   </div>
 
   <div class="count" id="count"></div>
@@ -58,16 +61,25 @@
 </div>
 
 <script src="nav.js"></script>
+<script src="i18n-desc.js"></script>
+<script src="semantic.js"></script>
+<script src="code-switch.js"></script>
 <script>
 const STOP = new Set(('a an the of to in on or and for with your you i we my our need want help me please how do can could make write create build draft produce prepare prep get set run use using when asked into that this from each will able about more also not no is are be as at any one it its their them they then over same first start new mine give').split(/\s+/));
 // Chinese has no spaces, so Han runs are matched as overlapping two-character pairs (周报, 补偿),
 // minus the request filler (帮我, 一下) that would otherwise match every Chinese skill.
 const CJK_STOP = new Set(['帮我', '我写', '我把', '请帮', '一下', '一份', '一个', '怎么', '如何', '我的', '我们', '这个', '这些', '给我', '我想', '需要', '可以', '写一', '我做', '做一']);
 const cjk = (s) => (String(s || '').match(/[\u3400-\u9fff]+/g) || []).flatMap((run) => [...run].slice(0, -1).map((ch, i) => ch + run[i + 1])).filter((b) => !CJK_STOP.has(b));
-const tok = (s) => [...(String(s || '').toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length > 2 && !STOP.has(w)), ...cjk(s)];
+// Words in any script (PMi18nDesc.tokens), with Han pairs from cjk() so the Chinese stop list applies.
+const tok = (s) => [...PMi18nDesc.tokens(s, STOP).filter((t) => !/[\u3400-\u9fff]/.test(t)), ...cjk(s)];
 const TIER_BOOST = { production: 1.15, stable: 1, experimental: 0.9 };
 const EXAMPLES = ['prep a QBR for an at-risk account', 'write a product launch announcement', 'plan an A/B test', 'turn messy notes into a PRD', 'draft a difficult performance review', 'decode a SAFE note', '帮我写周报', 'zhoubao'];
 let SKILLS = [];
+// Real-use evidence (web/proven.json): ratings, ledger outcomes, ROI stories.
+let PROVEN = {};
+fetch('proven.json').then((r) => r.json()).then((j) => { PROVEN = j.skills || {}; }).catch(() => {});
+// A nudge, not a takeover: needs 3+ signals, full strength at 20, at most ±15%.
+const provenBoost = (name) => { const p = PROVEN[name]; return p && p.n >= 3 ? 1 + 0.3 * (p.rate - 0.5) * Math.min(1, p.n / 20) : 1; };
 // Pinyin search: "zb" or "zhoubao" finds 中文周报 (index: zh-pinyin.json, built by scripts/build-zh-pinyin.mjs).
 let PINYIN = {};
 fetch('zh-pinyin.json').then((r) => r.json()).then((j) => { PINYIN = j.skills || {}; }).catch(() => {});
@@ -89,14 +101,16 @@ function badge(ev) {
   return `<span class="badge-none">· unmeasured (no claim)</span>`;
 }
 
+let SEM = null; // {skill: similarity} for the current query, when smart search is on
 function rank(query) {
   const qset = new Set(tok(query));
+  if (SEM && !qset.size) qset.add('\u0000'); // a question in a script with no shared words still ranks by meaning
   const pyQuery = !/[\u3400-\u9fff]/.test(query) && /^[a-z\s']{2,}$/i.test(query.trim());
   if (!qset.size && !pyQuery) return [];
   const ql = query.toLowerCase();
   return SKILLS.map((s) => {
     const titleSet = new Set(tok(`${s.title || s.name} ${s.name}`));
-    const hset = new Set([...titleSet, ...tok(`${s.description || ''} ${s.descriptionZh || ''}`)]);
+    const hset = new Set([...titleSet, ...tok(`${s.description || ''} ${s.descriptionZh || ''} ${s.descriptionL10n || ''}`)]);
     let overlap = 0, titleHits = 0;
     for (const t of qset) { if (hset.has(t)) overlap++; if (titleSet.has(t)) titleHits++; }
     const phrase = (s.description || '').toLowerCase().includes(ql) ? 2 : 0;
@@ -104,7 +118,11 @@ function rank(query) {
     if (py) overlap++;
     let score = (overlap + titleHits * 1.5 + phrase + py) * (TIER_BOOST[s.tier] || 1);
     if (s.eval && typeof s.eval.score === 'number') score += (s.eval.score - 4) * 0.15;
-    return { s, score, overlap };
+    score *= provenBoost(s.name);
+    // Smart search: meaning counts alongside shared words (cosine above a noise floor).
+    const sem = SEM ? Math.max(0, (SEM[s.name] || 0) - 0.25) : 0;
+    score += sem * 14;
+    return { s, score, overlap: overlap + (sem > 0.08 ? 1 : 0) };
   }).filter((r) => r.overlap > 0).sort((a, b) => b.score - a.score || a.s.name.localeCompare(b.s.name)).slice(0, 12);
 }
 
@@ -112,14 +130,15 @@ function render(query) {
   const box = document.getElementById('results');
   const cnt = document.getElementById('count');
   if (!query.trim()) { box.innerHTML = ''; cnt.textContent = ''; return; }
-  const hits = rank(query);
-  if (!hits.length) { box.innerHTML = `<div class="empty">No skill matched “${query}”. Try fewer or different words.</div>`; cnt.textContent = ''; return; }
+  // Mixed-language questions also search the English equivalents (code-switch.js).
+  const hits = rank(window.PMCodeSwitch ? PMCodeSwitch.expand(query) : query);
+  if (!hits.length) { box.innerHTML = '<div class="empty"></div>'; box.firstChild.textContent = `No skill matched “${query}”. Try fewer or different words.`; cnt.textContent = ''; return; }
   cnt.textContent = `${hits.length} match${hits.length > 1 ? 'es' : ''}, best first`;
   box.innerHTML = hits.map(({ s }) => {
     const tierPill = s.tier && s.tier !== 'stable' ? `<span class="pill ${s.tier}">${s.tier}</span>` : `<span class="pill">stable</span>`;
     const plug = s.plugin && s.plugin !== 'other' ? `<span class="pill plugin">${s.plugin}</span>` : '';
     return `<div class="hit">
-      <h3><a href="index.html?skill=${encodeURIComponent(s.name)}">${s.title || s.name}</a></h3>
+      <h3><a href="index.html?skill=${encodeURIComponent(s.name)}">${s.title || s.name}</a>${PROVEN[s.name] && PROVEN[s.name].worked >= 3 ? ` <span class="badge-measured">✓ worked for ${PROVEN[s.name].worked} people</span>` : ''}</h3>
       <p>${(s.summary || s.description || '').slice(0, 180)}</p>
       <div class="meta">${tierPill}${plug}${badge(s.eval)}<span class="run">npx pm-claude-skills run ${s.name}</span></div>
     </div>`;
@@ -133,10 +152,37 @@ fetch('skills.json').then((r) => r.json()).then((j) => {
   const ex = document.getElementById('examples');
   ex.innerHTML = EXAMPLES.map((e) => `<button>${e}</button>`).join('');
   ex.querySelectorAll('button').forEach((b) => b.onclick = () => { inp.value = b.textContent; render(inp.value); inp.focus(); });
-  inp.addEventListener('input', () => render(inp.value));
+  // Smart search: embed the question (debounced), then rank by words and meaning.
+  let semTimer = null;
+  const update = () => {
+    if (!(PMSemantic.isOn() && PMSemantic.ready())) { SEM = null; return render(inp.value); }
+    render(inp.value);
+    clearTimeout(semTimer);
+    const q = inp.value;
+    semTimer = setTimeout(() => { if (!q.trim()) return; PMSemantic.scores(q).then((sc) => { if (inp.value === q) { SEM = sc; render(q); } }); }, 250);
+  };
+  const smart = document.getElementById('smart'), st = document.getElementById('smartStatus');
+  document.getElementById('smartSize').textContent = PMSemantic.sizeLabel();
+  const turnOn = () => {
+    st.textContent = 'Loading the model…';
+    PMSemantic.load((p) => { if (p && p.status === 'progress' && p.total) st.textContent = `Downloading the model… ${Math.round((p.loaded / p.total) * 100)}%`; })
+      .then(() => { st.textContent = 'Smart search on.'; update(); })
+      .catch(() => { st.textContent = 'Could not load the model; using word search.'; smart.checked = false; PMSemantic.setOn(false); });
+  };
+  smart.checked = PMSemantic.isOn();
+  smart.addEventListener('change', () => { PMSemantic.setOn(smart.checked); if (smart.checked) turnOn(); else { SEM = null; st.textContent = ''; render(inp.value); } });
+  if (smart.checked) turnOn();
+  inp.addEventListener('input', update);
   // Deep-link support: /find.html?q=...
   const q0 = new URLSearchParams(location.search).get('q');
   if (q0) { inp.value = q0; render(q0); }
+  // Search in the visitor's language too, when its descriptions are published.
+  PMCodeSwitch.ready.then(() => { if (inp.value.trim()) render(inp.value); });
+  PMi18nDesc.load().then((r) => {
+    if (!r.lang) return;
+    SKILLS.forEach((s) => { s.descriptionL10n = r.descriptions[s.name] || ''; });
+    if (inp.value.trim()) render(inp.value);
+  });
 }).catch(() => { document.getElementById('results').innerHTML = '<div class="empty">Could not load the catalog.</div>'; });
 </script>
 </body>

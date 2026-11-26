@@ -199,6 +199,12 @@ async function main() {
   const onNpm = await waitFor(npmUrl, args.wait);
   record(`npm has ${NPM_PACKAGE}@${version}`, { ok: onNpm, detail: onNpm ? 'found' : 'not found. Publish with: npm publish' });
 
+  // The agent-tools subpackage is versioned with the library and published at release
+  // (cd tools-pkg && npm publish); it went stale for months when it was not checked.
+  const toolsVersion = JSON.parse(readFileSync(join(ROOT, 'tools-pkg', 'package.json'), 'utf8')).version;
+  const onTools = await waitFor(`https://registry.npmjs.org/pm-skills-tools/${toolsVersion}`, args.wait);
+  record(`npm has pm-skills-tools@${toolsVersion}`, { ok: onTools, detail: onTools ? 'found' : 'not found. Publish with: cd tools-pkg && npm publish' });
+
   if (pyVersion && isVersion(pyVersion)) {
     const onPypi = await waitFor(`https://pypi.org/pypi/${PYPI_PACKAGE}/${pyVersion}/json`, args.wait);
     record(`PyPI has ${PYPI_PACKAGE}@${pyVersion}`, { ok: onPypi, detail: onPypi ? 'found' : 'not found' });

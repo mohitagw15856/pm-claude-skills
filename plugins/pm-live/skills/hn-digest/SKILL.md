@@ -65,3 +65,5 @@ Source: [HN Firebase API / Algolia HN search] · rerun: `[exact curls]`
 - "What's on Hacker News?"
 - "Summarize HN today."
 - "What's the discussion on this story?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hn-digest.html

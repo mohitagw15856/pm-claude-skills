@@ -77,3 +77,5 @@ Client-side veterinary cost-conversation practice — line triage, staged-diagno
 - "Decode my vet's treatment plan."
 - "Do we need all these tests?"
 - "I can't afford this vet bill what are my options."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vet-estimate-decoder.html

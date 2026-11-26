@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Plan my basement finishing project before I get quotes."
 - "What order does renovation work happen in?"
 - "Where do renovation budgets usually blow up?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/renovation-scope-and-budget.html

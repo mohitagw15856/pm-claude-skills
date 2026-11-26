@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "We write this same thing every week."
 - "Standardize our status updates."
 - "Why does nobody use our templates?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/template-designer.html

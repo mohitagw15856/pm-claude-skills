@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "Help me make connections without the small-talk gauntlet."
 - "I have a big conference coming up and I dread it. Plan it for me."
 - "Introvert-friendly way to build professional connections."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/networking-for-introverts.html

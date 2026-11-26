@@ -58,3 +58,8 @@ Subtitling standards — reading-speed (CPS) limits, ~42-char lines, 2-line max,
 - "Make captions as an SRT file."
 - "Translate these subtitles."
 - "Fix the reading speed of these captions."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/subtitle-caption.html
+
+<!-- pm-claude-skills v84.0.0 | skill: subtitle-caption | source: skills/subtitle-caption/SKILL.md | sha256: b03d08035dbfb07373777d42008508f8fef5fc8a2caea56373759783d0258911 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

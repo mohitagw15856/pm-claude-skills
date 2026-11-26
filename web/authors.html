@@ -3,66 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
-<title>Author Dashboard — see your skill being used</title>
-<meta name="description" content="Per-skill playground run counts for every skill in the library — counts only, never content. Contributors can watch their skill get used in the wild. Sortable, honest about coverage and collection start dates." />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  .a-wrap { max-width: 820px; margin: 0 auto; padding: 16px 22px 70px; }
-  .lead { color: #c7cfda; font-size: 14.5px; }
-  #f { width: 100%; padding: 10px 14px; background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 10px; box-sizing: border-box; margin: 12px 0; }
-  table { width: 100%; border-collapse: collapse; }
-  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); font-size: 13.5px; }
-  th { color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; cursor: pointer; }
-  td a { color: var(--accent); text-decoration: none; font-weight: 600; }
-  .bar { height: 6px; background: var(--accent); border-radius: 3px; display: inline-block; vertical-align: middle; opacity: .7; }
-  .empty { border: 1px dashed var(--border); border-radius: 13px; padding: 18px; color: var(--muted); font-size: 13.5px; margin-top: 14px; }
-</style>
+<title>Moved to Vitals page | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/status.html" />
+<meta http-equiv="refresh" content="0; url=status.html" />
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}@media (prefers-color-scheme:light){body{background:#fff;color:#1f2328}a{color:#0969da}}</style>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand"><img src="assets/product-notes.jpg" alt="" class="brand-logo" />
-    <div class="brand-text"><h1>Author Dashboard</h1><p class="tagline">Watch your skill get used.</p></div></div>
-</header>
-<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-
-<div class="a-wrap">
-  <p class="lead">Playground runs per skill — <strong>counts only, never content</strong> (an event name is the entire payload). If you contributed a skill, this is where you watch it work. <span id="asof"></span></p>
-  <input id="f" type="search" placeholder="Filter skills…" / aria-label="Filter skills">
-  <div id="tablebox"></div>
-</div>
-
-<script>
-let ROWS = [], sortBy = 'runs';
-async function init() {
-  const { skills } = await (await fetch('skills.json')).json();
-  let stats = { runs: {}, picks: {}, built: null };
-  try { stats = await (await fetch('skill-stats.json')).json(); } catch (_) { /* not built yet */ }
-  ROWS = skills.map((s) => ({ name: s.name, title: s.title, plugin: s.plugin, runs: stats.runs[s.name] || 0, picks: (stats.picks || {})[s.name] || 0 }));
-  document.getElementById('asof').textContent = stats.built ? 'As of ' + stats.built + '.' : '';
-  render();
-  window.__authorsReady = ROWS.length;
-  if (window.pmTrack) pmTrack('authors/open');
-}
-function render() {
-  const q = document.getElementById('f').value.toLowerCase();
-  const rows = ROWS.filter((r) => !q || r.name.includes(q) || r.plugin.includes(q))
-    .sort((a, b) => sortBy === 'name' ? a.name.localeCompare(b.name) : b[sortBy] - a[sortBy]);
-  const max = Math.max(1, ...rows.map((r) => r.runs));
-  const any = ROWS.some((r) => r.runs > 0);
-  document.getElementById('tablebox').innerHTML = any || !ROWS.length ? (
-    '<table><thead><tr><th data-s="name">Skill</th><th data-s="runs">Runs ▾</th><th data-s="picks">Command-bar picks</th></tr></thead><tbody>' +
-    rows.slice(0, 200).map((r) =>
-      '<tr><td><a href="skill/' + r.name + '.html">' + r.name + '</a> <span style="color:var(--muted);font-size:11px">[' + r.plugin + ']</span></td>' +
-      '<td>' + r.runs + ' <span class="bar" style="width:' + Math.round(60 * r.runs / max) + 'px"></span></td>' +
-      '<td>' + r.picks + '</td></tr>').join('') + '</tbody></table>'
-  ) : '<div class="empty">No stats file published yet — the weekly stats build needs the analytics API token (owner setup: repo secret <code>GOATCOUNTER_TOKEN</code>). Every run since launch is already recorded as a count; this page lights up the first time the build runs.</div>';
-  document.querySelectorAll('th').forEach((th) => th.onclick = () => { sortBy = th.dataset.s; render(); });
-}
-document.getElementById('f').addEventListener('input', render);
-init();
-</script>
-<script src="i18n.js"></script>
-<script src="nav.js"></script>
+<main><p>This page has been retired to keep the site focused. Continue to <a href="status.html">the Vitals page</a>.</p></main>
+<script>location.replace('status.html' + location.search + location.hash);</script>
 </body>
 </html>

@@ -69,3 +69,5 @@ One-pager / one-sheet practice (problem · solution · why-now · ask) used for 
 - "Write a one-page summary of the startup."
 - "Write a leave-behind for the meeting."
 - "Give me a tl;dr brief of this product."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/one-pager.html

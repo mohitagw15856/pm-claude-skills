@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "Help me find a lost pension from an old job."
 - "My late parent may have had unclaimed funds — how do I search?"
 - "Is there really free money owed to me, or is that a scam?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/unclaimed-money-tracer.html

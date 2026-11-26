@@ -9,6 +9,95 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [84.0.0] - Regions and new models - 2026-11-11
+
+**1374 skills · 167 bundles** (from 1310 · 153 at v83.2.0). 54 new skills and 13 new bundles in this release, on top of the work merged since v83.2.0.
+
+### Added
+- **Six profession bundles**: `pm-nursing` (shift handover, care plan, incident report, family update), `pm-agriculture` (season plan, subsidy application, records book, buyer contract check), `pm-retail-shopfloor` (stock take, shrink report, shift handover), `pm-sports-coaching` (season and session plans, parent communication, match review), `pm-procurement` (contract renewal brief, with the RFP and supplier skills) and `pm-phd` (supervisor update, chapter plan, reviewer rebuttal, viva prep).
+- **Four regional bundles**, each marked high-stakes and stamped for rule review: `pm-mena` (UAE gratuity, Gulf residence visas, Saudi contracts, Gulf job offers), `pm-latam` (Brazilian rescisão CLT and IRPF, Mexican finiquito and declaración anual), `pm-dach` (Arbeitszeugnis, Kündigungsfrist, Steuererklärung) and `pm-africa` (payslips and pensions in Nigeria, payslips and M-Pesa reversals in Kenya, retrenchment and UIF in South Africa).
+- **Three China bundles**: `pm-china-ecommerce` (淘宝 and 拼多多 listings, 1688 wholesale, 双11 plans, customer-service scripts), `pm-china-startup` (company registration, equity split, 高新技术企业, 专精特新, subsidies, financing plan) and `pm-china-study-abroad` (essays, visa preparation, returnee job search). `pm-zh-content` gains Bilibili, 知乎, 视频号 and 小宇宙 skills.
+- **China tools**: a WeChat Mini Program skill finder that works offline; uTools and Quicker plugins; `--agent qwen`, `--agent iflow` and `--agent kimi` installs for the domestic coding CLIs; write-back of a skill's output to 飞书文档, 语雀 and 钉钉文档; a weekly page of mainland usage from public counters (npmmirror, Gitee, ModelScope).
+- **Translations**: the four Gulf skills in Arabic, ten skills in German and nine more in French, all machine-translated and labelled as awaiting native review. The side-by-side reader lays right-to-left languages out from the right.
+- **USSD**: a second menu for Nigeria, Kenya and South Africa (`USSD_MENU = "africa"`).
+- **Model registry**: `data/models.json` names the model for each of five roles (default, fast, deep, frontier, judge) on the current Claude line-up, and code asks for a role. `scripts/check-model-refs.mjs` fails on an unlisted model id and on any new reference to a legacy model. See `docs/MODELS.md`.
+- **Per-skill model and effort guidance**: `data/model-guidance.json`, derived from each skill's risk tier and length, and `pm-claude-skills run <skill> --auto-model`. Derived, not measured; `docs/MODEL-GUIDANCE.md` says so.
+- **Missions**: `missions/<id>.json` chains typed pipelines into one run with human checkpoints and `--resume`, validated link by link against the contracts. Two ship: `retention-quarter` and `bad-quarter-reset`. See `docs/MISSIONS.md`.
+- **Prompt audit**: `scripts/prompt-audit.mjs` scans every skill for text written for older models. `docs/PROMPT-AUDIT.md` has the result; naming a model version in a skill now fails `npm run check`.
+- **Since v83.2.0, already merged**: typed skill contracts and pipelines, a hosted broker document, the lockfile and memory commands, an India pack, Copilot, Gemini CLI and OpenAI Agents exports, provenance footers on every export, a red-team corpus, starters, an offline bundle, a setup wizard, a git hook, the year in review, Hindi and Spanish translations (#502, #503); the Agent Arena, result cards and the Skill Hack (#485); the small-model badge and rule-change watchers (#484); LTS skills and a course pack (#483); launch-day verdicts (#482); `/.well-known/agent-skills.json` (#481); and four agent skills (#473, #474, #477, #479).
+
+### Changed
+- The shared Claude client adds room for thinking to `max_tokens` on current models, joins the text blocks of a reply, and raises an error on an empty answer.
+- SkillBench takes `--lineup current` and `--effort`, and reads replies that begin with a thinking block.
+- The translation check has a `--strict` mode, now in `npm run check`: a translation whose English source gained or lost a section fails.
+- `rfp-writer`, `rfp-response`, `contract-renewal-tracker` and `shift-schedule-builder` now list a new bundle as their home (they remain in their earlier bundles too), so their export paths moved.
+- The Python package needs Python 3.10 or later.
+
+### Fixed
+- The mainland agent tool and the chat bots fetched a skills index that stopped being committed in #502; they now read the committed `data/skills-index.min.json`.
+- A pipeline with an optional input that was not supplied stopped at the first step; the input is now left out.
+- SkillBench read only the first content block of a reply, which is empty when the model thinks first.
+
+### Not done
+- 164 references in 77 files still name a legacy model (Workers, browser pages, workflows). Each needs one live call to verify, so they wait; the baseline can only shrink.
+- SkillBench has not been run on the current line-up. It costs API credit and waits for approval.
+- The Mini Program has not been previewed in WeChat DevTools or submitted for review, the Quicker script has not been run on Windows, and the write-back script has not called the real platforms.
+
+
+## [83.2.0] - Duet support - 2026-10-23
+
+**1310 skills · 153 bundles** (from 1301 · 153 at v83.1.0). 21 Duet-ready skills are now designed for Claude Duet and other proactive agents.
+
+### Added
+- **Setting up an agent** (pm-duet): `standing-orders`, the one-page manual an agent keeps between your messages (#453); `approval-policy-designer`, per app, what it may do alone, must ask about or must never do (#454); `agent-kill-switch-plan`, how to stop a misbehaving agent in under a minute (#458).
+- **Teams**: `shared-agent-charter`, for an agent a whole team shares in Slack or Teams (#456).
+- **Small-business watch pack** (#462): `cash-watch`, `payroll-eve-check`, `signature-pipeline-watch`, `crm-hygiene-sweep` and `store-watch`, for Stripe, Xero, QuickBooks, Gusto, DocuSign, HubSpot and Shopify. Each one drafts only; none refunds, pays, signs or edits records.
+- **The duet block on five more skills** (#466): `inbox-triage-live`, `followup-sweep`, `delta-briefing`, `competitive-intelligence-monitor` and `late-invoice-chaser`.
+- **Injection drill** (#463): twelve planted instructions to send to your own account, scored on whether the agent reports or obeys them. Every planted address is on the reserved .invalid domain.
+- **Fake-apps sandbox** (#465): a dependency-free MCP server with invented data for one shop. Sends, payments and deletions are refused and logged.
+- **Duet page** (#467): `duet.html`, with the setup order, every Duet-ready skill and its settings, and the safety kit.
+- **Starter packs** (#468): five packs of three or four Duet-ready skills, and `npx pm-claude-skills add --skills a,b,c` to install exactly those skills.
+- **Add to Claude** (#469): an upload-ready ZIP for every skill, with the skill folder at its root as claude.ai requires, and a button on every skill page and Duet card. Uploaded skills work in Claude and in Claude Duet.
+
+### Fixed
+- `docs/installation.md` said to zip a skill's files without their folder, a layout claude.ai rejects; it now gives the folder-at-root layout (#469).
+
+## [83.1.0] - Duet-ready - 2026-10-22
+
+**1301 skills · 153 bundles** (from 1295 · 152 at v83.0.0).
+
+### Added
+- **The Duet-ready convention** (#446): an optional `duet` frontmatter block (brief length, cited sources, draft-by-default, approval verbs, a cadence with its plan-limits cost) and a shared [status vocabulary](docs/duet/status-vocabulary.md) that bans "done": terminal states are shipped (verified) or approved (a named yes). Three honesty tiers; everything ships at "designed for Duet" because nobody here has access yet, and that is stated rather than hidden.
+- **pm-duet** (6, #447): `morning-brief-designer`, `interrupt-rules`, `end-of-day-report`, `weekly-rollup`, `send-approval-check` (recipient, account, subject, attachments and the committing sentence quoted; approving wording is not approving the send) and `prepare-for-duet` (a readiness audit worth doing on the waitlist). Each with a curated eval case.
+- **Connected-source variants** (#447): `stakeholder-update`, `changelog-generator` and `discovery-interview-guide` can read connected threads, events and repos and cite each claim, with sending always a separate approval.
+- **Surfacing** (#450): `data/duet-ready.json` (the tier registry), ⚡ flags and a `duet_ready` field in the catalogue, and a waitlist-first Duet section in the README.
+- **Community kit** (#448): a "Tested on Duet" issue form with named credit, the [7-day Duet challenge](docs/duet/7-day-challenge.md), the brief gallery with a monthly pick, a 30-second demo storyboard, a sourced [comparison of Claude Duet, OpenAI Dots and Meta Muse](docs/duet/proactive-agents.md), and a before-and-after morning-brief mock labelled as mock data.
+
+## [83.0.0] - For everyone, everywhere - 2026-10-17
+
+**1295 skills · 152 bundles** (from 1285 · 152 at v82.0.0). No Anthropic credit is spent by default from this release on.
+
+### Added
+- **Access for everyone**: an Easy Read switch for every skill (#410), Teach me mode so a skill coaches you through doing it yourself (#417), questions by voice with spoken answers in the browser's language (#412), and search that understands Hinglish, Taglish and Spanglish (#411).
+- **Local rules and terms**: jurisdiction overlays add the rules where you are to a skill, with sources and a last-checked date (#409, #420), and glossary packs make output use each place's official terms (#413).
+- **New skills and journeys**: newcomer and informal-economy skills (#414), disability and after-a-disaster skills (#416), each with two journeys, and `form-explainer` with a forms lookup page covering UK, US and Indian forms (#419).
+- **Offline and low-tech**: PM Skills in a box, the website and a local model on a Raspberry Pi over its own Wi-Fi (`box/`, #421); a USSD menu for any phone with no data, with the link by SMS (`integrations/ussd/`, #422); right-click any file in Finder, Explorer or Linux file managers (`integrations/right-click/`, #426); `pm-claude-skills run --local` for a free local model (#426).
+- **Skills as apps**: `use.html` opens any skill as a one-page app you can download as a single HTML file (#423).
+- **Personal forks**: Skill Remix saves your forks, shows what changed upstream, and "Suggest back" sends only your changed lines (#424).
+- **Paid expert skills**: registry rules for paid listings with a checkable credential and a free preview, an experts page and a guide (#425).
+- **Partner checks**: organisations that help people can vouch for skills, with a badge and a page to send their users to (#427).
+- **The jobs exam**: tasks and marking schemes from working professionals, AI answers graded blind by people in the same occupation (#428).
+- **Learning from outcomes**: opt-in, your Outcome Ledger notes on what worked feed the next run of that skill (#429).
+- **Earlier in this cycle**: the October bets (#350 to #368: AI at work report, PM-8B pipeline, evolution log, the live Firm, signed community registry, phone line, Skill Cup, "How do I…?", 20 languages for search), live A/B tests of skill versions, smart search by meaning, what-changed pages, daily caps for public bots, README front page, trigger phrases and worked examples for every skill.
+
+### Changed
+- **No API spending by default** (#408): automated workflows and the hosted free trial no longer spend Anthropic credit unless `ALLOW_API_SPEND` is set; free answers come from Workers AI.
+- **PM-8B trains without API credit** on one rented GPU (`training/run-on-gpu.sh`), hardened for a fresh server (#430).
+- New checks live in `tests/checks/`, run by `tests/run-checks.mjs`, so parallel pull requests no longer collide on the check script.
+
+### Fixed
+- Stored XSS in credential claims (#365), the homepage card layout (#395), A2A routing (#388), and catalogue dates and counts.
+
 ## [82.0.0] - China for everyone, Korea and Southeast Asia, lite skills, teams - 2026-10-06
 
 **1285 skills · 152 bundles** (from 1250 · 144 at v81.2.0).

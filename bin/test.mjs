@@ -13,6 +13,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete } from './lib/anthropic.mjs';
+import { modelFor } from './lib/models.mjs';
 
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 
@@ -93,7 +94,7 @@ export async function run(argv) {
   const scores = [];
   for (let i = 0; i < runs; i++) {
     const output = await complete({ apiKey: key, model: o.model, system: skill.body, messages: [{ role: 'user', content: input }], maxTokens: 2000 });
-    const raw = await complete({ apiKey: key, model: 'claude-sonnet-4-6', system: 'You are a strict, fair evaluator. Output only the requested JSON.', messages: [{ role: 'user', content: judgePrompt(skill.title, input, output) }], maxTokens: 400 });
+    const raw = await complete({ apiKey: key, model: modelFor('judge'), system: 'You are a strict, fair evaluator. Output only the requested JSON.', messages: [{ role: 'user', content: judgePrompt(skill.title, input, output) }], maxTokens: 400 });
     let v; try { v = JSON.parse(String(raw).match(/\{[\s\S]*\}/)[0]); } catch { v = null; }
     if (v) { scores.push(v); if (!o.json) console.log(`run ${i + 1}: ${v.overall}/5  (S${v.structure} C${v.completeness} U${v.usefulness} G${v.grounding})  — ${v.fix}`); }
   }

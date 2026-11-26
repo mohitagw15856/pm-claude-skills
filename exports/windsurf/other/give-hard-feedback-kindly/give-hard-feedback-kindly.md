@@ -67,3 +67,8 @@ Ask for these if not provided:
 - "Help me address a problem with a coworker's behavior."
 - "I have to have a tough conversation about someone's work. What do I say?"
 - "How do I give critical feedback that actually lands?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/give-hard-feedback-kindly.html
+
+<!-- pm-claude-skills v84.0.0 | skill: give-hard-feedback-kindly | source: skills/give-hard-feedback-kindly/SKILL.md | sha256: a935b2943caae19fc76d38155a1265b79480dc4952c9d066468d87849937824e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

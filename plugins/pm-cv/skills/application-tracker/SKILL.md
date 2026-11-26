@@ -24,6 +24,10 @@ Ask for these if not provided:
 - **Where the tracker should live**: a markdown file, a CSV for a spreadsheet, or in the conversation
 - **The master CV file name**, so versions can be named after it
 
+## Working from a brief
+
+Given a rough picture of the search, **build the tracker anyway**: the full table with its columns and six example rows using placeholders, the naming convention for CV versions, the follow-up rules and the weekly review checklist, ready to paste into a spreadsheet.
+
 ## Framework
 
 Tracker columns:
@@ -62,3 +66,5 @@ Rules:
 - "Which CV did I send to which company? Help me organise this."
 - "What should I follow up on this week?"
 - "帮我整理一下我投过的简历和进度。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/application-tracker.html

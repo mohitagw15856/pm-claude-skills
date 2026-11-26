@@ -67,3 +67,5 @@ Job-description analysis practice — requirement triage, signal-reading, ATS ke
 - "Decode a JD."
 - "Assess fit for a role."
 - "Figure out what a posting really means before applying."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jd-decoder.html

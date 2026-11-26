@@ -261,3 +261,5 @@ Accepted risks are threats the team has decided not to mitigate right now. Every
 - [ ] Do not accept risks without a named owner and a review date — unowned accepted risks are not managed risks
 - [ ] Do not write a threat model that covers only theoretical threats — prioritise by likelihood and impact using the risk register
 - [ ] Do not omit the asset register — without knowing what is being protected, the STRIDE analysis has no anchor
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/security-threat-model.html

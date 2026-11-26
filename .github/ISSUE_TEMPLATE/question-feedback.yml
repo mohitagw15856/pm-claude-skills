@@ -1,0 +1,34 @@
+name: "💬 Question or feedback"
+description: Ask how to use the skills, or share feedback on the library.
+title: "[Question] "
+labels: ["question"]
+body:
+  - type: dropdown
+    id: topic
+    attributes:
+      label: What is it about?
+      options:
+        - Installing or updating
+        - Using a specific skill
+        - The playground website
+        - MCP, npm, Python or another integration
+        - Translations
+        - Feedback on the library as a whole
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question or feedback
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Which skill or bundle, and anything relevant about your setup.
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you already tried?

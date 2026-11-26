@@ -63,6 +63,9 @@ GitHub 打不开时，单个技能可以从 jsDelivr 的 npm 镜像下载：`htt
 | Qoder | `npx pm-claude-skills add --agent qoder` | `.qoder/rules/` |
 | 通义灵码 Lingma | `npx pm-claude-skills add --agent lingma` | `.lingma/rules/` |
 | CodeBuddy | `npx pm-claude-skills add --agent codebuddy` | `.codebuddy/rules/` |
+| 通义 Qwen Code | `npx pm-claude-skills add --agent qwen` | `~/.qwen/skills/`（原生 SKILL.md） |
+| 心流 iFlow CLI | `npx pm-claude-skills add --agent iflow` | `~/.iflow/skills/`（原生 SKILL.md） |
+| Kimi Code CLI | `npx pm-claude-skills add --agent kimi` | `~/.kimi-code/skills/`（设置了 `KIMI_CODE_HOME` 则用它；旧版在 `~/.kimi/skills/`） |
 | Claude Code | `npx pm-claude-skills add --agent claude` | `~/.claude/skills/` |
 | Cursor | `npx pm-claude-skills add --agent cursor` | `.cursor/rules/` |
 
@@ -75,6 +78,7 @@ npx pm-claude-skills add --agent trae --bundle pm-china-work,pm-cv
 说明：
 - 规则按描述"智能生效"，不会每次对话都全部加载。
 - 通义灵码单个规则文件上限 10,000 字符，超长的技能会被截断，安装时会列出。
+- Qwen Code、iFlow、Kimi 这三个命令行工具直接读取 SKILL.md，装进去的是完整技能，不转换、不截断。
 
 ## 三、适合中国用户的技能包
 
@@ -87,7 +91,10 @@ npx pm-claude-skills add --agent trae --bundle pm-china-work,pm-cv
 | **pm-china-parents** 家长 | 幼升小与小升初规划、家校沟通、兴趣班与双减、辅导作业不代写 |
 | **pm-china-trade** 外贸 | 询盘回复（中英文）、信用证审单（UCP 600）、报价单与 Incoterms 2020、报关单证 |
 | **pm-china-manufacturing** 制造业 | 8D 报告、5S / 6S 检查表、质量追溯、作业指导书（SOP） |
-| **pm-zh-content** 内容平台 | 小红书笔记、公众号文章、抖音脚本、直播带货脚本 |
+| **pm-zh-content** 内容平台 | 小红书笔记、公众号文章、抖音脚本、直播带货脚本、B 站视频脚本、知乎回答、视频号口播、小宇宙播客大纲 |
+| **pm-china-ecommerce** 电商运营 | 淘宝 / 拼多多商品详情、1688 批发详情、双 11 活动方案、客服话术 |
+| **pm-china-startup** 创业 | 公司注册、股权分配、高新技术企业认定、专精特新申报、补贴申报、融资商业计划书 |
+| **pm-china-study-abroad** 留学与海归 | 留学文书、签证材料与面签准备、海归求职与落户 |
 | **pm-chuhai** 出海 | 出海市场进入计划、跨境电商 listing、PIPL 与 GDPR 对照 |
 | **pm-cv** 简历 | 按目标公司定制简历、中英文简历、ATS 检查、导出 Word |
 
@@ -165,7 +172,15 @@ Router.load(f"{path}/router.json").route("帮我写周报", k=3)
 - **小红书分享卡**：选一个技能，生成 3:4 的封面图（1080×1440），有大字标题、清单、便利贴三种模板，带二维码，见 [分享卡生成器](https://mohitagw15856.github.io/pm-claude-skills/card.html)。
 - **群聊机器人**：在飞书、钉钉群里 @ 机器人，或在企业微信里给应用发消息，它会挑一个技能，用你配置的模型（DeepSeek、通义千问、智谱、魔搭免费推理或本地 Ollama）回答。Python 标准库实现，签名校验和消息解密齐全，见 [群聊机器人](../integrations/chat-bots/README.md)。
 
-## 八、反馈
+## 八、不开终端也能用：小程序、启动器、写回文档
+
+- **微信小程序技能查找**：离线小程序，输入一句话找到技能，点一下复制提示词，粘贴到通义、Kimi、豆包、DeepSeek。源码和上线步骤见 [integrations/wechat-miniprogram](../integrations/wechat-miniprogram/README.md)。需要你自己注册小程序账号并提交审核，本项目没有代为上线。
+- **uTools 插件**：在 uTools 里输入 `pm` 或"找技能"，离线查找，回车复制提示词，见 [integrations/utools](../integrations/utools/README.md)。
+- **Quicker 动作**（Windows）：选中文字，一键找技能并复制提示词，见 [integrations/quicker](../integrations/quicker/README.md)。脚本没有在 Windows 上实测过，欢迎反馈。
+- **写回文档**：把技能的输出写成一篇飞书文档、语雀文档或钉钉文档，见 [integrations/writeback-cn](../integrations/writeback-cn/README.md)。只用 Python 标准库；没有对真实平台调用过，第一次请先 `--dry-run`。腾讯文档暂不支持，原因写在该说明里。
+- **国内使用情况**：npmmirror 下载量、Gitee 星标和魔搭下载量每周更新一次，见[国内使用情况](https://mohitagw15856.github.io/pm-claude-skills/china-usage.html)。数字都来自公开接口，不含任何用户数据。
+
+## 九、反馈
 
 欢迎用中文提 Issue，GitHub 和 [Gitee](https://gitee.com/mohitagw/pm-claude-skills/issues) 都可以。想学习怎么写自己的技能并贡献回来，见[开源小课](learn-zh/README.md)。如果某个技能在中国的场景下不准确，或者你希望增加哪些技能，请告诉我们。
 

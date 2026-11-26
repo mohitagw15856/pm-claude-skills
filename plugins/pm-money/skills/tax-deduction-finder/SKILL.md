@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Help me find deductions I can claim before I file."
 - "What credits might I qualify for with two kids and student loans?"
 - "Questions to ask my accountant so I don't overpay tax."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tax-deduction-finder.html

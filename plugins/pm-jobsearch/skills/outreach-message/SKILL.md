@@ -63,3 +63,5 @@ Cold-outreach / networking practice — specificity, brevity, a single low-frict
 - "Write a LinkedIn connection note."
 - "Ask for a referral."
 - "Ask for a coffee chat during my job search."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/outreach-message.html

@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "Help me respond to a performance improvement plan."
 - "Is my PIP survivable?"
 - "Write my PIP check-in updates."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pip-responder.html

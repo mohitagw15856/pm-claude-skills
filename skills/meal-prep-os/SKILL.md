@@ -124,3 +124,5 @@ scheduled easy night]
 - "What do I cook with what I have?"
 - "We spend too much on takeaway."
 - "I'm sick of eating the same thing four days."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meal-prep-os.html

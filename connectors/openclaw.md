@@ -17,7 +17,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skil
 
 ## The dressed export
 
-[`exports/openclaw/`](../exports/openclaw/) carries all 515 skills as flat `<skill>/SKILL.md` folders with OpenClaw-native dressing on top of the canonical body: a top-level `homepage` (shown in the macOS Skills UI) and a `metadata.openclaw` block with a per-bundle emoji. Regenerated from `skills/` on every release — never hand-edited. Helper scripts stay in the source repo; per the [authoring standard](../SKILL-AUTHORING-STANDARD.md), every skill is useful with `SKILL.md` alone.
+[`exports/openclaw/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/openclaw) carries all 515 skills as flat `<skill>/SKILL.md` folders with OpenClaw-native dressing on top of the canonical body: a top-level `homepage` (shown in the macOS Skills UI) and a `metadata.openclaw` block with a per-bundle emoji. Regenerated from `skills/` on every release — never hand-edited. Helper scripts stay in the source repo; per the [authoring standard](../SKILL-AUTHORING-STANDARD.md), every skill is useful with `SKILL.md` alone.
 
 ## Publishing to ClawHub (owner runbook, ~15 min)
 

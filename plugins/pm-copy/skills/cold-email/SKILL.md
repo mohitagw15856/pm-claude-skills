@@ -69,3 +69,5 @@ B2B cold-email practice — relevance/trigger-led openers, one-outcome value, si
 - "Write a sales outreach email to this prospect."
 - "Write a prospecting email."
 - "Draft a cold email sequence for a business prospect."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cold-email.html

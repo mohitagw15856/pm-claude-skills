@@ -254,3 +254,5 @@ Tell the user: "Add this to your CLAUDE.md and Context Mode will be active perma
 - "Keep track of what you've done so you can resume after a reset"
 - "Enable output filtering to save context"
 - "Set up auto-resume so we don't lose our place"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-mode.html

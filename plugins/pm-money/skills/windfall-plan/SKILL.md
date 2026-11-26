@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Smart things to do with a tax refund?"
 - "I'm coming into a settlement — how should I plan for it?"
 - "Sold my car/house and have a lump sum — where should it go?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/windfall-plan.html

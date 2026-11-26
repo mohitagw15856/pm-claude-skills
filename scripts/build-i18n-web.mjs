@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(root, 'web', 'i18n');
-const LABELS = { zh: '简体中文', 'zh-TW': '繁體中文', ja: '日本語', ko: '한국어', es: 'Español', fr: 'Français', pt: 'Português', hi: 'हिन्दी', ar: 'العربية', vi: 'Tiếng Việt', id: 'Bahasa Indonesia' };
+const LABELS = { zh: '简体中文', 'zh-TW': '繁體中文', ja: '日本語', ko: '한국어', es: 'Español', fr: 'Français', de: 'Deutsch', pt: 'Português', hi: 'हिन्दी', ar: 'العربية', vi: 'Tiếng Việt', id: 'Bahasa Indonesia' };
 const NAME = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 const REPO = 'https://github.com/mohitagw15856/pm-claude-skills/blob/main/';

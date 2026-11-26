@@ -76,3 +76,5 @@ Real-estate marketing practice — multi-channel open-house promotion, staging, 
 - "Plan an open house."
 - "Market an open house."
 - "Create an open-house checklist."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/open-house-plan.html

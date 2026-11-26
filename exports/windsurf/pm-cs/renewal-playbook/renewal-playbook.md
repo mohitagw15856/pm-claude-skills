@@ -9,7 +9,7 @@ This skill produces a complete renewal playbook for a specific customer account,
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Account name**
 - **Renewal date**
 - **Current ARR** and proposed renewal ARR (if different)
@@ -214,3 +214,8 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Prepare a renewal brief for my QBR with [Company]"
 - "What's my renewal strategy for a Red account coming up in 60 days?"
 - "Create a renewal and expansion plan for [Account]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/renewal-playbook.html
+
+<!-- pm-claude-skills v84.0.0 | skill: renewal-playbook | source: skills/renewal-playbook/SKILL.md | sha256: cc2eba7a1c3e804a2ead6cc4839ab73c31bd7d336a7f2f8b521359ef505156a9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

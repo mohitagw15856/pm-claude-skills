@@ -63,3 +63,8 @@ Lifecycle marketing / behavioural CRM practice — trigger-based journeys, segme
 - "Plan our lifecycle campaigns."
 - "Design drip and winback flows."
 - "Build a CRM messaging calendar."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lifecycle-crm-plan.html
+
+<!-- pm-claude-skills v84.0.0 | skill: lifecycle-crm-plan | source: skills/lifecycle-crm-plan/SKILL.md | sha256: 0b51d34305b663ab7459cb6a3ffa2c2c908aa7b2aeac5ca8393e8e927403d563 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

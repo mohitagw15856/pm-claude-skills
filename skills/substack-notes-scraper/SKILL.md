@@ -182,3 +182,5 @@ After generating the file, report:
 - "Pull my notes engagement data into a spreadsheet"
 - "Export my Substack Notes stats with likes and restacks — author: Jane Smith, Jan–Mar 2026"
 - "Run the Substack scraper on my notes page and show me which posts performed best"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/substack-notes-scraper.html

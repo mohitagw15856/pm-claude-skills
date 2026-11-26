@@ -74,3 +74,5 @@ Open-source contribution best practices (clear setup, defined workflow, good-fir
 - "Write a CONTRIBUTING.md."
 - "Set up contribution guidelines."
 - "Make a repo welcoming to contributors."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/contributor-guide.html

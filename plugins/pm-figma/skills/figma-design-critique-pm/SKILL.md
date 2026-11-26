@@ -84,3 +84,5 @@ Approve / Approve with changes (list) / Revise and re-review (one focus area onl
 - "What product feedback do I have on this Figma design?"
 - "Critique this design without being a designer"
 - "Does this design achieve the user goal?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-design-critique-pm.html

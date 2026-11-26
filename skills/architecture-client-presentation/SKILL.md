@@ -91,3 +91,5 @@ Ask for these if not provided:
 - "How do I present three concept options?"
 - "Prepare a design review meeting agenda"
 - "How do I tell a client their request is not possible?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/architecture-client-presentation.html

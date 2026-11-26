@@ -92,3 +92,5 @@ Ask for these if not provided:
 - "How do I write a performance specification for windows?"
 - "What should 'or equal approved' actually say?"
 - "Write the execution and tolerance clauses for this finish"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/architectural-specification.html

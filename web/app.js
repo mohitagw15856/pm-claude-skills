@@ -156,6 +156,9 @@ async function init() {
   el('fbDown').addEventListener('click', () => sendFeedback('down'));
   // Output language — restore the saved choice, persist + track changes.
   try { const sl = localStorage.getItem('pm_outputLang'); if (sl && el('outputLang')) el('outputLang').value = sl; } catch (e) {}
+  if (window.PMEasyRead) PMEasyRead.bind(el('easyRead'));
+  if (window.PMTeachMode) PMTeachMode.bind(el('teachMode'));
+  if (window.PMOutcomeMemory) PMOutcomeMemory.bind(el('learnOutcomes'));
   if (el('outputLang')) el('outputLang').addEventListener('change', function () {
     try { localStorage.setItem('pm_outputLang', this.value); } catch (e) {}
     if (window.pmTrack && this.value) pmTrack('lang/' + this.value);
@@ -289,9 +292,9 @@ function showHero(show) { const h = el('hero'); if (h) h.hidden = !show; }
 
 // ---------- ⌘K command palette ----------
 const CMDK_TOOLS = [
-  ['canvas.html', '🧩 Workflow Canvas'], ['agent.html', '✨ Auto-Agent'], ['studio.html', '🏗️ Create a skill'],
-  ['grade.html', '📝 Grade your work'], ['benchmark.html', '🏆 Benchmark'], ['community.html', '💬 Community'],
-  ['leaderboard.html', '📊 Leaderboard'], ['catalog.html', '📚 Catalog'], ['pro.html', '⭐ Pro'],
+  ['make.html', '🏭 Make it real'], ['find.html', '🔎 Find a skill'], ['grade.html', '📝 Grade your work'],
+  ['modelbench.html', '🤖 Model rankings'], ['community.html', '💬 Community'],
+  ['leaderboard.html', '📊 Leaderboard'], ['catalog.html', '📚 Catalog'], ['galaxy.html', '🗺 Galaxy'],
 ];
 let cmdkResults = [], cmdkSel = 0;
 function openCmdk() { el('cmdkOverlay').hidden = false; el('cmdkInput').value = ''; el('cmdkInput').focus(); renderCmdk(); }
@@ -857,6 +860,9 @@ function renderLanding() {
   // curation. Appears only once there is genuine signal, so an empty counter
   // never renders an empty section. Loads after first paint; failure is silent.
   const mostRunSlot = document.createElement('div');
+  // The slot must not be a grid cell itself: as one, it held the whole strip and
+  // stretched the cards beside it to its height. Its heading and cards join the grid.
+  mostRunSlot.style.display = 'contents';
   frag.appendChild(mostRunSlot);
   fetch('https://pm-skills-mcp.pm-claude-skills.workers.dev/stats/skills')
     .then((r) => r.json())
@@ -1207,6 +1213,7 @@ function selectSkill(s) {
     fbTag.hidden = !badge;
   }
   el('skillTitle').textContent = s.title;
+  showOverlayNote(s);
   el('skillDesc').textContent = s.description;
   renderDeprecation(s);
   const srcEl = el('skillSource');
@@ -1392,6 +1399,10 @@ async function run() {
   const localModel = !!P().local; // in-browser model needs no key
   if (!key && !localModel) { flagMissingKey(); return setStatus(`👆 Paste your ${P().name} API key (top-right) to run — or pick "In-browser (no key)".`, true); }
   if (!current) return;
+  const ab = await abInstructions(current);
+  const ov = overlayFor(current.name);
+  const instr = ab.text + (ov ? `\n\n## Local rules: ${ov.place}\nThe user is in ${ov.place}. Apply these local rules over general statements in the skill; they are a ${ov.status} summary last checked ${ov.checked}, so tell the user to confirm anything decisive with the sources: ${ov.sources.join(', ')}.\n\n${ov.body}` : '');
+  CURRENT_ARM = ab.arm;
   if (window.pmTrack) pmTrack('run/' + current.name);
   if (window.pmUsage) pmUsage(current.name);
 
@@ -1417,13 +1428,13 @@ Return, in this order:
 3. **Redline** — concrete edits and additions to fix the biggest gaps (quote what to change).
 
 Use the following skill as the rubric for what "good" looks like:
-${current.instructions}${ctxBlock}`;
+${instr}${ctxBlock}`;
   } else {
     const fields = [...el('inputForm').querySelectorAll('input, textarea')];
     const missing = fields.filter((f) => !f.dataset.optional && !f.value.trim());
     if (missing.length) return setStatus(`Fill in: ${missing.map((f) => f.dataset.label).join(', ')}`, true);
     userMessage = buildUserMessage(fields);
-    system = current.instructions + SKILL_SUFFIX + ctxBlock;
+    system = instr + SKILL_SUFFIX + ctxBlock;
     if (window.PMArtifacts) system += PMArtifacts.promptFor(current.name); // living artifact block, where the skill has a renderer
     plainSystem = ctx ? ctxBlock.trim() : '';
     compareModels = el('modelsToggle').checked;
@@ -1434,10 +1445,16 @@ ${current.instructions}${ctxBlock}`;
   // localize the whole response. Applied to the plain side too, for a fair compare.
   const outLang = el('outputLang') ? el('outputLang').value : '';
   if (outLang) {
-    const langInstr = `\n\n## Output language\nWrite your ENTIRE response in ${outLang}. Translate all headings, labels, and prose. Keep code, identifiers, URLs, and proper nouns unchanged. Use natural, professional ${outLang}.`;
+    const langInstr = `\n\n## Output language\nWrite your ENTIRE response in ${outLang}. Translate all headings, labels, and prose. Keep code, identifiers, URLs, and proper nouns unchanged. Use natural, professional ${outLang}.` + await glossaryBlock(outLang);
     system += langInstr;
     plainSystem = plainSystem ? plainSystem + langInstr : langInstr.trim();
   }
+  // Easy Read: plain language, same facts (web/easy-read.js).
+  if (window.PMEasyRead && PMEasyRead.on()) { const er = PMEasyRead.instruction(); system += er; plainSystem = plainSystem ? plainSystem + er : er.trim(); }
+  // Teach mode: coach the user through the method instead of writing it (web/teach-mode.js).
+  if (window.PMTeachMode && PMTeachMode.on()) system += PMTeachMode.instruction();
+  // Learn from outcomes: this user's own ledger results for this skill (web/outcome-memory.js).
+  if (window.PMOutcomeMemory) system += PMOutcomeMemory.instruction(current.name);
   // Remix: layer the user's custom instructions on top of the skill (and the plain side).
   const remix = el('remixInput') ? el('remixInput').value.trim() : '';
   if (remix) {
@@ -1521,6 +1538,73 @@ ${current.instructions}${ctxBlock}`;
   }
 }
 
+// ── Glossary packs (web/glossaries/): official terms for the output language ──
+let GLOSS_INDEX = null;
+const GLOSS_CACHE = {};
+async function glossaryBlock(language) {
+  if (!language) return '';
+  if (!GLOSS_INDEX) GLOSS_INDEX = await fetch('glossaries/index.json').then((r) => (r.ok ? r.json() : { glossaries: {} })).then((j) => j.glossaries || {}).catch(() => ({}));
+  const meta = GLOSS_INDEX[language]; if (!meta) return '';
+  const g = GLOSS_CACHE[meta.code] || (GLOSS_CACHE[meta.code] = await fetch('glossaries/' + meta.code + '.json').then((r) => r.json()).catch(() => null));
+  if (!g) return '';
+  let place = ''; try { place = (localStorage.getItem(PLACE_KEY) || '').split('-')[0]; } catch (e) {}
+  const regions = Object.keys(g.regions || {}).filter((r) => !place || !g.regions[place] || r === place);
+  const lines = g.terms.slice(0, 200).map((t) => `- ${t.en}: ${regions.filter((r) => t[r]).map((r) => (regions.length > 1 ? `${t[r]} (${g.regions[r]})` : t[r])).join(' / ')}`);
+  return `\n\n## Official terms (${language}${regions.length === 1 ? `, ${g.regions[regions[0]]}` : ''})\nWhere these concepts come up, use these terms, the ones local offices and forms use${regions.length > 1 ? ' (pick the region that fits the user)' : ''}:\n${lines.join('\n')}`;
+}
+
+// ── Jurisdiction overlays (overlays/, web/overlays.json) ─────────────────────
+// "Where are you?": when the skill has an overlay for that place, its local rules
+// (laws, deadlines, agencies) are added to the skill when it runs, and the page
+// says so, including whether a local reviewer has checked it.
+let OVERLAYS = {};
+const PLACE_KEY = 'pm-place';
+const overlayFor = (name) => { let p = ''; try { p = localStorage.getItem(PLACE_KEY) || ''; } catch (e) {} return (p && OVERLAYS[name] && OVERLAYS[name][p]) || null; };
+function showOverlayNote(s) {
+  const note = el('overlayNote'); if (!note || !s) return;
+  const o = overlayFor(s.name), all = OVERLAYS[s.name] ? Object.values(OVERLAYS[s.name]).map((x) => x.place) : [];
+  note.hidden = !o && !all.length;
+  note.textContent = o ? `📍 Local rules for ${o.place} are included (${o.status === 'reviewed' ? 'checked by a local reviewer' : 'draft, not yet checked by a local reviewer'}; last checked ${o.checked}${o.stale ? ', may be out of date' : ''}).`
+    : all.length ? `📍 Local rules available for: ${all.join(', ')}. Pick your place with 📍 below.` : '';
+}
+fetch('overlays.json').then((r) => (r.ok ? r.json() : { overlays: {} })).then((j) => {
+  OVERLAYS = j.overlays || {};
+  const sel = el('place'); if (!sel) return;
+  const places = {};
+  for (const o of Object.values(OVERLAYS)) for (const [code, v] of Object.entries(o)) places[code] = v.place;
+  Object.entries(places).sort((a, b) => a[1].localeCompare(b[1])).forEach(([code, place]) => { const opt = document.createElement('option'); opt.value = code; opt.textContent = place; sel.appendChild(opt); });
+  try { sel.value = localStorage.getItem(PLACE_KEY) || ''; } catch (e) {}
+  sel.addEventListener('change', () => { try { localStorage.setItem(PLACE_KEY, sel.value); } catch (e) {} showOverlayNote(current); });
+  showOverlayNote(current);
+}).catch(() => {});
+
+// ── Live A/B tests of skill versions (data/ab-tests.json, scripts/ab-decide.mjs) ──
+// A tested skill is served as version A (the current skill) or B (a challenger)
+// to each browser, at random and then sticky; its 👍/👎 is tagged @a or @b so
+// the two versions are compared on real ratings. No test → no change.
+let AB_TESTS = null;
+const AB_CACHE = {};
+function abTests() {
+  if (!AB_TESTS) AB_TESTS = fetch('ab/tests.json').then((r) => (r.ok ? r.json() : { tests: [] })).then((j) => new Set((j.tests || []).map((t) => t.skill))).catch(() => new Set());
+  return AB_TESTS;
+}
+function abArm(name) {
+  const k = 'pm-ab-' + name;
+  try { let a = localStorage.getItem(k); if (a !== 'a' && a !== 'b') { a = Math.random() < 0.5 ? 'a' : 'b'; localStorage.setItem(k, a); } return a; }
+  catch (e) { return 'a'; }
+}
+// The instructions this browser runs for the skill, and its arm when tested.
+async function abInstructions(skill) {
+  const tests = await abTests();
+  if (!tests.has(skill.name)) return { text: skill.instructions, arm: null };
+  const arm = abArm(skill.name);
+  if (arm === 'a') return { text: skill.instructions, arm };
+  if (!AB_CACHE[skill.name]) AB_CACHE[skill.name] = fetch('ab/' + encodeURIComponent(skill.name) + '.md').then((r) => (r.ok ? r.text() : null)).catch(() => null);
+  const md = await AB_CACHE[skill.name];
+  return md ? { text: md.replace(/^---[\s\S]*?---\r?\n/, ''), arm } : { text: skill.instructions, arm: null };
+}
+let CURRENT_ARM = null;
+
 // ── Opt-in feedback (anonymous) ─────────────────────────────────────────────
 // Reveal a 👍/👎 bar after a successful run. A click sends an anonymous
 // GoatCounter event (counts only — never the inputs/outputs/key) and opens a
@@ -1535,7 +1619,7 @@ function showFeedback() {
   el('fbDown').hidden = false;
 }
 function sendFeedback(kind) {
-  const name = (current && current.name) || 'unknown';
+  const name = ((current && current.name) || 'unknown') + (CURRENT_ARM ? '@' + CURRENT_ARM : '');
   try { if (window.pmTrack) pmTrack('feedback/' + name + '/' + kind); } catch (e) {}
   el('fbUp').hidden = true;
   el('fbDown').hidden = true;

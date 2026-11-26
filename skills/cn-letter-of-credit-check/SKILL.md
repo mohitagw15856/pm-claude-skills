@@ -70,3 +70,5 @@ Options: correct and re-present within the time limit, ask the buyer to accept t
 - "信用证要求客户签字的检验证书，能接受吗？"
 - "提单日期 3 月 5 日，信用证没写交单期，最晚哪天交单？"
 - "Check these export documents against the letter of credit for discrepancies."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-letter-of-credit-check.html

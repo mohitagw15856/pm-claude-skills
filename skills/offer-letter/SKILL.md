@@ -75,3 +75,5 @@ Recruiting & offer practice — candidate-warm, complete offers (verbal then wri
 - "Write a job offer for this candidate."
 - "Write the employment offer."
 - "Prepare a script for the verbal offer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/offer-letter.html

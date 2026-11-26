@@ -78,3 +78,5 @@ Drag it into Slack. Want it calmer (sparkle) or bigger (--scale 4)?
 - "Make a pixel-art banner for this PR comment."
 - "Make a team win feel like one."
 - "Make a scrolling marquee GIF."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pixel-gif-maker.html

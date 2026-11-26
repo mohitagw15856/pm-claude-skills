@@ -73,3 +73,5 @@ Cash management practice — short-horizon (13-week) cash flow forecasting on pa
 - "Make me a 13-week cash flow."
 - "Can we cover payroll next month?"
 - "Plan around a cash crunch."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cash-flow-forecast.html

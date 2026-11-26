@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "They keep parking across my driveway. What do I do first?"
 - "Shared hedge, and they won't split the cost — how should I approach it?"
 - "I've asked nicely twice about the barking. What's the next step?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/neighbor-dispute-resolver.html

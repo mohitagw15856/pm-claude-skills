@@ -108,7 +108,7 @@ Always confirm tier with the user before proceeding.
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Product or feature name**
 - **Target launch date**
 - **Launch tier** (Tier 1 / 2 / 3 — or describe scope and the skill will classify)
@@ -145,3 +145,5 @@ Ask the user for these if not provided:
 - "Plan a product launch."
 - "Write a GTM strategy."
 - "Define launch tiers."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/go-to-market-planner.html

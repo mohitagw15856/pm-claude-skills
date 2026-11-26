@@ -60,3 +60,5 @@ Ask for these if not provided:
 - "What are the ways this could fail before I commit?"
 - "Run a pre-mortem on my career move."
 - "Five reasons this plan might die, and how to prevent them."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pre-mortem-panel.html

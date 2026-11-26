@@ -84,3 +84,8 @@ End with **▶ Automate:** a one-line note that [ContentGoldMine](https://github
 - "Write a long-form."
 - "Outline a video essay."
 - "Turn a blog post/talk into a video."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/youtube-script.html
+
+<!-- pm-claude-skills v84.0.0 | skill: youtube-script | source: skills/youtube-script/SKILL.md | sha256: fd0e09cb0ac2ebb93f58b1052584acd168f6f50d8f5438abcbdd01ed76899032 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

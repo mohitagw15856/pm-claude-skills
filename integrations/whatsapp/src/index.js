@@ -6,6 +6,17 @@
 // Commands mirror integrations/telegram: "find <task>", "skill <name>",
 // "run <name or task> <input>" (run only if ANTHROPIC_API_KEY is set), and
 // plain text auto-routes. Stateless; nothing stored.
+//
+// Forward it: a photo or PDF of a document is read with the matching skill
+// (integrations/shared/forward-doc.js). That takes longer than Twilio's 15-second
+// webhook window, so the bot answers "Reading it…" at once and sends the result
+// through Twilio's API: it needs TWILIO_ACCOUNT_SID and TWILIO_AUTH_TOKEN.
+// With TWILIO_AUTH_TOKEN set, every webhook's X-Twilio-Signature is verified, so
+// nobody else can make the bot spend your Anthropic key.
+
+import { documentBlock, readDocument, PRIVACY_NOTE } from '../../shared/forward-doc.js';
+import { validTwilioSignature } from '../../shared/twilio-signature.js';
+import { allow } from '../../shared/caps.js';
 
 const API = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
 const REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
@@ -24,7 +35,7 @@ async function runSkill(instructions, userText, key) {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-6', max_tokens: 1500,
+      model: 'claude-sonnet-5', max_tokens: 1500,
       system: instructions + '\n\nYou are replying in WhatsApp. Produce the deliverable directly, plain text, compact. If required inputs are missing, ask briefly.',
       messages: [{ role: 'user', content: userText.slice(0, 20000) }],
     }),
@@ -34,11 +45,41 @@ async function runSkill(instructions, userText, key) {
   return (j.content || []).map((c) => c.text).join('').trim();
 }
 
-const HELP = `PM Skills bot — 771 professional skills.
+const HELP = `PM Skills bot: over a thousand professional skills.
 find <task> - search the library
 skill <name> - full instructions
 run <name or task> - draft it here
+📄 Send a photo or PDF of a document (a lease, a bill, a contract) to have it read with the right skill. Add a caption to say what you want.
 Library: ${REPO}`;
+
+// Outbound WhatsApp messages through Twilio's API (1,600 characters each).
+async function sendWhatsApp(env, from, to, text) {
+  const auth = 'Basic ' + btoa(`${env.TWILIO_ACCOUNT_SID}:${env.TWILIO_AUTH_TOKEN}`);
+  const parts = [];
+  for (let i = 0; i < text.length && parts.length < 4; i += 1500) parts.push(text.slice(i, i + 1500));
+  for (const body of parts) {
+    await fetch(`https://api.twilio.com/2010-04-01/Accounts/${env.TWILIO_ACCOUNT_SID}/Messages.json`, {
+      method: 'POST',
+      headers: { authorization: auth, 'content-type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ From: from, To: to, Body: body }),
+    });
+  }
+}
+
+async function readAndReply(env, form) {
+  const from = form.get('To'), to = form.get('From');
+  try {
+    // Twilio media URLs need the account's credentials.
+    const auth = 'Basic ' + btoa(`${env.TWILIO_ACCOUNT_SID}:${env.TWILIO_AUTH_TOKEN}`);
+    const res = await fetch(form.get('MediaUrl0'), { headers: { authorization: auth } });
+    const block = res.ok ? documentBlock(await res.arrayBuffer(), form.get('MediaContentType0') || res.headers.get('content-type')) : null;
+    if (!block) return sendWhatsApp(env, from, to, 'I can read photos (JPEG, PNG, WebP) and PDFs up to 8 MB.');
+    const { skill, text } = await readDocument({ block, note: (form.get('Body') || '').trim(), key: env.ANTHROPIC_API_KEY, channel: 'WhatsApp' });
+    return sendWhatsApp(env, from, to, (skill ? `(${skill})\n\n` : '') + (text || 'The model returned nothing. Try a clearer photo.'));
+  } catch {
+    return sendWhatsApp(env, from, to, 'Reading that failed. Try again in a minute.');
+  }
+}
 
 async function reply(text) {
   const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -48,14 +89,24 @@ async function reply(text) {
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     if (request.method !== 'POST') {
       return new Response(JSON.stringify({ bot: 'pm-skills-whatsapp', hint: 'Twilio WhatsApp webhook endpoint — see integrations/whatsapp/README.md', library: REPO }), { headers: { 'content-type': 'application/json' } });
     }
     const form = await request.formData().catch(() => null);
+    if (form && env.TWILIO_AUTH_TOKEN && !(await validTwilioSignature(request, form, env.TWILIO_AUTH_TOKEN))) {
+      return new Response('forbidden', { status: 403 });
+    }
     const text = ((form && form.get('Body')) || '').trim();
-    if (!text) return reply(HELP);
     const canRun = !!env.ANTHROPIC_API_KEY;
+    if (form && Number(form.get('NumMedia') || 0) > 0) {
+      if (!canRun || !env.TWILIO_ACCOUNT_SID || !env.TWILIO_AUTH_TOKEN) return reply('Reading documents is not enabled on this deployment.');
+      const capD = await allow(env, form.get('From'), 'whatsapp');
+      if (!capD.ok) return reply(capD.message);
+      ctx.waitUntil(readAndReply(env, form));
+      return reply(`Reading it… ${PRIVACY_NOTE}`);
+    }
+    if (!text) return reply(HELP);
     const [, cmd, rest = ''] = text.match(/^(find|skill|run|help|start)\b\s*([\s\S]*)$/i) || [null, null, text];
     const c = (cmd || '').toLowerCase();
 
@@ -81,6 +132,8 @@ export default {
       s = await getSkill(hits[0].name);
     }
     if (!canRun) return reply(`Best match: ${s.name}. Running is not enabled on this deployment — get the instructions with: skill ${s.name}`);
+    const cap = await allow(env, form.get('From'), 'whatsapp');
+    if (!cap.ok) return reply(cap.message);
     try { return reply(await runSkill(s.instructions, userText, env.ANTHROPIC_API_KEY) || 'The model returned nothing — try rephrasing.'); }
     catch { return reply('The model call failed — try again in a minute.'); }
   },

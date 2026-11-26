@@ -73,3 +73,5 @@ An **Async Standup Digest**:
 - "Pull the team's updates into one post and surface the blockers."
 - "What did the team ship today? Cross-check against Linear."
 - "Run async standup in Cowork and give me a post-ready digest."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/async-standup-compiler.html

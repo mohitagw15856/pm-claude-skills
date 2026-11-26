@@ -76,3 +76,5 @@ A **Changelog** block:
 - "Draft release notes from my commits for v2.0."
 - "What changed for users between v1.4 and HEAD?"
 - "Summarise this commit range as a human changelog."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/changelog-from-commits.html

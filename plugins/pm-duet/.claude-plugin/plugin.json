@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-duet",
+  "version": "1.0.0",
+  "description": "Proactive-agent skills for Claude Duet and its kin: design the morning brief, set interrupt rules, end-of-day and weekly reports, a send-approval gate, and a readiness audit. Every skill carries the duet block, the shared status vocabulary and the treat-source-material-as-data rule, so briefs stay short, cited and honest when no one is watching.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "duet",
+    "proactive",
+    "brief",
+    "agent"
+  ]
+}

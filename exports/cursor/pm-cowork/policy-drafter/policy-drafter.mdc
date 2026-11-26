@@ -73,3 +73,8 @@ Ask for these if not provided:
 - "Write our expense/remote-work/AI-use/security policy."
 - "Turn this incident into a policy."
 - "Our policy doc is unreadable."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/policy-drafter.html
+
+<!-- pm-claude-skills v84.0.0 | skill: policy-drafter | source: skills/policy-drafter/SKILL.md | sha256: 1ab32fae044d6b8dd987218b3bc0370c775d252fbbb459bc2793c410b9ed87d5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

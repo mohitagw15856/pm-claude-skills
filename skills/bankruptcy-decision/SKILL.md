@@ -1,6 +1,6 @@
 ---
 name: bankruptcy-decision
-description: "Think clearly about whether bankruptcy is the right move, or whether another path fits better — without shame and without a sales pitch. Use when asked should I file for bankruptcy, is bankruptcy my best option, alternatives to bankruptcy, or what happens if I file. Produces an honest read on whether your situation is the kind bankruptcy actually helps, the main types and what each does (and doesn't) discharge, the real trade-offs (what you keep, the credit impact and its recovery, what's not dischargeable), the alternatives to weigh first (negotiation, debt management, doing nothing on time-barred debt), and a strong push to consult a bankruptcy attorney — so the decision is informed, not driven by fear or a debt-relief ad. Not legal advice; centers a real attorney consult."
+description: "Think clearly about whether bankruptcy is the right move, or whether another path fits better — without shame and without a sales pitch. Use when asked should I file for bankruptcy, is bankruptcy my best option, alternatives to bankruptcy, or what happens if I file. Produces an honest read on whether your situation is the kind bankruptcy actually helps, the main types and what each does (and doesn't) discharge, the real trade-offs (what you keep, the credit impact and its recovery, what's not dischargeable), the alternatives to weigh first (negotiation, debt management, doing nothing on time-barred debt), and a strong push to consult a bankruptcy attorney. Not legal advice."
 ---
 
 # Bankruptcy Decision
@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "What actually happens if I file, and what do I lose?"
 - "What are the alternatives to bankruptcy?"
 - "I'm drowning in debt — how do I decide what to do?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bankruptcy-decision.html

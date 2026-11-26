@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Plan our planning session."
 - "Facilitate a half-day working session."
 - "Our workshops are fun but nothing comes out."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/workshop-designer.html

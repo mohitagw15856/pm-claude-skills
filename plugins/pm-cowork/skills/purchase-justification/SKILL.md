@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Write the budget request."
 - "My requests keep getting deferred."
 - "Make the business case for this spend."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/purchase-justification.html

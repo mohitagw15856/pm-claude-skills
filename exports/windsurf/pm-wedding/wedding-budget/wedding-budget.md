@@ -82,3 +82,8 @@ Deterministic. Default shares are planning conventions (venue+catering ~42%, pho
 - "How do people split X across a wedding?"
 - "We have N dollars and M guests."
 - "Why is our wedding over budget?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wedding-budget.html
+
+<!-- pm-claude-skills v84.0.0 | skill: wedding-budget | source: skills/wedding-budget/SKILL.md | sha256: a7bba0de4de39a13f995989ce87840cec0fd7249dff9a303545c58612938a11c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

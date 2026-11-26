@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "My weekly check-in — I feel scattered."
 - "Get me unstuck for the week ahead."
 - "Do my Sunday reset with me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/weekly-unstuck.html

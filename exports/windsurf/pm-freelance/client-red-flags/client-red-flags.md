@@ -64,3 +64,8 @@ Ask for these if not provided:
 - "How do I screen out bad clients?"
 - "This prospect can't tell me what they want — should I be worried?"
 - "Help me decline a client politely."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/client-red-flags.html
+
+<!-- pm-claude-skills v84.0.0 | skill: client-red-flags | source: skills/client-red-flags/SKILL.md | sha256: 8094ffdda55ba4a28945c0960c211f39d0b7659cdfcf88484ddf571362c1d6fb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

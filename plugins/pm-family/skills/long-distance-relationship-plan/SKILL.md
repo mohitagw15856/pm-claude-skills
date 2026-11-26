@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "We're in different time zones and it's getting hard. What do we do?"
 - "Ideas for feeling connected to my partner far away?"
 - "How do we handle the jealousy and loneliness of being apart?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/long-distance-relationship-plan.html

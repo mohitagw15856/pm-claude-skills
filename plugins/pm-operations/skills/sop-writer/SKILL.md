@@ -102,3 +102,5 @@ NOTE: Steps must be written in imperative form. Each step must have one action o
 - [ ] Do not skip the non-conformance section — an SOP without a deviation process cannot meet audit or regulatory requirements
 - [ ] Do not produce an SOP without a review date and version history — undated documents cannot be relied upon for compliance
 - [ ] Do not use passive voice in procedure steps — write "Open the system" not "The system should be opened"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sop-writer.html

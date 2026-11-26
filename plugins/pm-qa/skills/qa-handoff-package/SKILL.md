@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "What should QA test here, including edge cases and setup?"
 - "Write test scenarios mapped to these acceptance criteria."
 - "Make this ready for QA — what's in and out of scope?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/qa-handoff-package.html

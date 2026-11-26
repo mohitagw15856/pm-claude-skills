@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Set up a decision log."
 - "We keep re-deciding the same things."
 - "Where do decisions get recorded?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-log-setup.html

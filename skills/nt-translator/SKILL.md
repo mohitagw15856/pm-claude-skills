@@ -110,3 +110,5 @@ not neurological.
 - "What did my manager actually mean?"
 - "My message came across wrong again."
 - "Why do people think I'm blunt?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/nt-translator.html

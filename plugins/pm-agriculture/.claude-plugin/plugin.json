@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-agriculture",
+  "version": "1.0.0",
+  "description": "Run a small or family farm on paper: a season crop plan, a subsidy or grant application, farm records that survive an inspection, a buyer contract check, and a crop insurance claim",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "agriculture",
+    "farming",
+    "crop-plan",
+    "subsidy",
+    "farm-records"
+  ]
+}

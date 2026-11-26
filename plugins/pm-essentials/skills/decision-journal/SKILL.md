@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Start a decision journal."
 - "Review my past decision."
 - "Why do I keep making the same mistake?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-journal.html

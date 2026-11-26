@@ -67,3 +67,8 @@ Ask for these if not provided:
 - "Clean this export."
 - "Why is my pivot double-counting?"
 - "Prep this data for analysis."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-cleaning-pass.html
+
+<!-- pm-claude-skills v84.0.0 | skill: data-cleaning-pass | source: skills/data-cleaning-pass/SKILL.md | sha256: 0657449c375e5142beebdefa83a2c87a5f3e28d5b0978e44b0269b96692f66c6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -161,8 +161,11 @@ function triggerOf(s, z) {
   const d = s.description || '';
   const q = d.match(/[“"']([^“”"']{6,60})[”"']/);
   if (q) return q[1];
-  const m = d.match(/Use when (?:asked to |the user asks to |someone asks to )?([^,.;]+)/i);
-  return m ? `Help me ${m[1].replace(/^(you|they) /i, '').trim()}` : `Use ${s.title || s.name}`;
+  const m = d.match(/Use when (?:asked(?: to)? |the user asks(?: to)? |someone asks(?: to)? )?([^,.;，；]+)/i);
+  if (!m) return `Use ${s.title || s.name}`;
+  const ask = m[1].replace(/^(you|they) /i, '').trim();
+  // A Chinese trigger phrase ("Use when asked 帮我写周报") is already what a person would say.
+  return /[\u3400-\u9fff]/.test(ask) ? ask : `Help me ${ask}`;
 }
 
 // ── Search ─────────────────────────────────────────────────────────────────
@@ -231,9 +234,14 @@ function wrap(g, text, maxW, max = 99) {
   return lines;
 }
 function para(g, text, x, y, maxW, lh, max) { for (const l of wrap(g, text, maxW, max)) { g.fillText(l, x, y); y += lh; } return y; }
-// Largest font size (step 4px) that fits the text into maxLines.
+// Largest font size (step 4px) that fits the text into maxLines, with every
+// line inside maxW (wrap() hangs closing punctuation, which can overshoot).
 function fitTitle(g, text, weight, start, min, maxW, maxLines, fam = SANS) {
-  for (let px = start; px >= min; px -= 4) { g.font = font(weight, px, fam); if (wrap(g, text, maxW).length <= maxLines) return px; }
+  for (let px = start; px >= min; px -= 4) {
+    g.font = font(weight, px, fam);
+    const lines = wrap(g, text, maxW);
+    if (lines.length <= maxLines && lines.every((l) => g.measureText(l).width <= maxW)) return px;
+  }
   g.font = font(weight, min, fam); return min;
 }
 function rrect(g, x, y, w, h, r) { g.beginPath(); g.roundRect(x, y, w, h, r); }
@@ -265,11 +273,14 @@ const TEMPLATES = {
     g.fillStyle = '#d9473f'; g.fillRect(0, 0, W, H);
     g.fillStyle = '#fff4e6'; g.font = font(600, 34); g.fillText(L('PM Skills · 技能卡', 'PM Skills · skill card'), 80, 120);
     g.fillStyle = '#fff4e6'; g.fillRect(80, 150, 120, 10);
-    const px = fitTitle(g, v.title, 900, 168, 84, W - 160, 3);
+    // The bottom panel has a fixed place; the title and description share the space above it.
+    const py = H - 560, ph = H - 140 - py;
+    let px = fitTitle(g, v.title, 900, 168, 84, W - 160, 3);
+    // Shrink the title until at least two lines of description fit above the panel.
+    while (px > 84 && 200 + px + wrap(g, v.title, W - 160, 3).length * px * 1.12 + 10 + 64 > py - 30) { px -= 4; g.font = font(900, px); }
     let y = 200 + px; for (const l of wrap(g, v.title, W - 160, 3)) { g.fillText(l, 80, y); y += px * 1.12; }
     g.fillStyle = 'rgba(255,244,230,0.9)'; g.font = font(400, 42);
-    y = para(g, v.description, 80, y + 10, W - 160, 64, 5);
-    const py = Math.max(y + 30, H - 560), ph = H - 140 - py;
+    para(g, v.description, 80, y + 10, W - 160, 64, Math.max(1, Math.min(5, Math.floor((py - 40 - y) / 64) + 1)));
     g.fillStyle = '#fff4e6'; rrect(g, 60, py, W - 120, ph, 36); g.fill();
     const qs = 260, qx = W - 100 - qs, qy = py + (ph - qs) / 2;
     g.fillStyle = '#9b2d27'; g.font = font(700, 30); g.fillText(L('试着说', 'Try saying'), 100, py + 70);
@@ -288,13 +299,15 @@ const TEMPLATES = {
     let y = 150 + px; for (const l of wrap(g, v.title, W - 160, 2)) { g.fillText(l, 80, y); y += px * 1.1; }
     g.fillStyle = '#2f5d50'; g.font = font(700, 38); g.fillText(L('用它你能得到：', 'What you get:'), 80, 510);
     y = 590;
+    const by = H - 470, qs = 240;
     for (const p of v.points.slice(0, 4)) {
+      const room = Math.floor((by - 40 - y) / 58) + 1; // lines that still fit above the panel
+      if (room < 1) break;
       g.strokeStyle = '#2f5d50'; g.lineWidth = 5; rrect(g, 80, y - 40, 50, 50, 10); g.stroke();
       g.beginPath(); g.moveTo(92, y - 15); g.lineTo(103, y - 3); g.lineTo(122, y - 30); g.stroke();
       g.fillStyle = '#1f2a26'; g.font = font(500, 42);
-      y = para(g, p, 160, y, W - 240, 58, 2) + 34;
+      y = para(g, p, 160, y, W - 240, 58, Math.min(2, room)) + 34;
     }
-    const by = Math.max(y + 10, H - 470), qs = 240;
     g.fillStyle = '#e6efe9'; rrect(g, 60, by, W - 120, H - 130 - by, 30); g.fill();
     const qx = W - 100 - qs, qy = by + (H - 130 - by - qs) / 2;
     g.fillStyle = '#2f5d50'; g.font = font(700, 30); g.fillText(L('复制这句给 AI：', 'Paste this to your AI:'), 100, by + 70);
@@ -325,7 +338,7 @@ const TEMPLATES = {
     g.fillStyle = '#5b4a1e'; g.font = font(400, 26, HAND); g.textAlign = 'center'; g.fillText(L('扫码看全文', 'Scan to read'), 0, 160); g.textAlign = 'left';
     g.restore();
     g.fillStyle = '#2b2414'; g.font = font(700, 40, HAND); g.fillText('PM Skills', 80, H - 190);
-    g.fillStyle = '#5b4a1e'; g.font = font(400, 28); g.fillText(L('1,255 个免费开源技能', '1,255 free, open-source skills'), 80, H - 140);
+    g.fillStyle = '#5b4a1e'; g.font = font(400, 28); const n = SKILLS.length.toLocaleString('en'); g.fillText(L(`${n} 个免费开源技能`, `${n} free, open-source skills`), 80, H - 140);
     footer(g, '#6f6247', state.lang === 'zh');
   },
 };

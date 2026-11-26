@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "PM Skills — Skill Picker for ChatGPT, Claude & Gemini",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Insert professional Agent Skills into ChatGPT, Claude.ai or Gemini — and lint your own writing against a skill's quality bar, anywhere.",
   "icons": {
     "16": "icons/icon16.png",
@@ -25,23 +25,47 @@
         "https://claude.ai/*",
         "https://gemini.google.com/*"
       ],
-      "js": ["content.js"],
-      "css": ["content.css"],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
       "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["skills.json"],
+      "resources": [
+        "skills.json"
+      ],
       "matches": [
         "https://chatgpt.com/*",
         "https://chat.openai.com/*",
         "https://claude.ai/*",
         "https://gemini.google.com/*"
       ]
+    },
+    {
+      "resources": [
+        "context-rules.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "use_dynamic_url": true
     }
   ],
-  "permissions": ["storage", "activeTab", "scripting"],
-  "host_permissions": ["https://api.anthropic.com/*"],
-  "homepage_url": "https://github.com/mohitagw15856/pm-claude-skills"
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://api.anthropic.com/*"
+  ],
+  "homepage_url": "https://github.com/mohitagw15856/pm-claude-skills",
+  "optional_host_permissions": [
+    "<all_urls>"
+  ]
 }

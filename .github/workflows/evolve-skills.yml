@@ -1,9 +1,14 @@
 name: Evolve skills
 
 # The evolution loop: challenger rewrites of the lowest-scoring skills, blind-judged
-# against the champions; winners land on a branch for human review. MANUAL DISPATCH
-# ONLY — this spends API credits, so it never runs automatically.
+# against the champions; winners land on a branch for human review. It spends API
+# credits, so it runs on manual dispatch, plus once a month (the 15th) ONLY if the
+# owner opts in by setting the repository variable EVOLVE_MONTHLY to true. Every
+# attempt, won or lost, is appended to data/evolution-log.json and published in
+# EVOLUTION.md and on the site's evolution page.
 on:
+  schedule:
+    - cron: '0 5 15 * *'
   workflow_dispatch:
     inputs:
       count:
@@ -20,6 +25,7 @@ permissions:
 
 jobs:
   evolve:
+    if: github.event_name != 'schedule' || vars.EVOLVE_MONTHLY == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -28,10 +34,18 @@ jobs:
       - name: Evolve
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          COUNT: ${{ inputs.count || '3' }}
+          SKILLS: ${{ inputs.skills }}
         run: |
-          EXTRA=""
-          [ -n "${{ inputs.skills }}" ] && EXTRA="--skills ${{ inputs.skills }}"
-          node scripts/evolve-skills.mjs --count "${{ inputs.count }}" $EXTRA
+          set -euo pipefail
+          printf '%s' "$COUNT" | grep -Eq '^[0-9]+$' || { echo "::error::count must be a number"; exit 1; }
+          if [ -n "$SKILLS" ]; then
+            printf '%s' "$SKILLS" | grep -Eq '^[a-z0-9,-]+$' || { echo "::error::skills must be comma-separated skill names"; exit 1; }
+            node scripts/evolve-skills.mjs --count "$COUNT" --skills "$SKILLS"
+          else
+            node scripts/evolve-skills.mjs --count "$COUNT"
+          fi
+          node scripts/build-evolution-log.mjs
       # Insurance: paid API output must survive even if the push is rejected.
       - name: Upload evolved skills as artifact
         uses: actions/upload-artifact@v7
@@ -50,7 +64,7 @@ jobs:
           git config user.name "evolve-bot"
           git config user.email "actions@github.com"
           git checkout -B "evolve-${{ github.run_number }}"
-          git add skills/
+          git add skills/ data/evolution-log.json EVOLUTION.md
           git diff --cached --quiet || git commit -m "evolve: challenger rewrites that beat their champions (run ${{ github.run_number }})"
           git push -f origin "evolve-${{ github.run_number }}"
           echo "Review branch: evolve-${{ github.run_number }} — evolve-summary.json in the artifact has the blind-judge scores."

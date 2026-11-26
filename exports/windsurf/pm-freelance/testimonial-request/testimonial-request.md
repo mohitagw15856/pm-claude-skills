@@ -69,3 +69,8 @@ Ask for these if not provided:
 - "Get me a specific testimonial, not just 'they were great'."
 - "Should I ask for a written or video testimonial, and how?"
 - "How do I request a case-study quote after finishing a project?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/testimonial-request.html
+
+<!-- pm-claude-skills v84.0.0 | skill: testimonial-request | source: skills/testimonial-request/SKILL.md | sha256: 30aee8bd8b075256f3eb43d9e00d091d44e11ca5de2e440de3ced3060a775493 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

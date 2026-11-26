@@ -59,3 +59,5 @@ Gaps ordered by assessment risk and effort, with owners and dates that finish be
 - "等保定级怎么写理由？二级还是三级？"
 - "等保备案和测评的流程是什么？"
 - "Prepare our system for China's MLPS 2.0 assessment."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-mlps-checklist.html

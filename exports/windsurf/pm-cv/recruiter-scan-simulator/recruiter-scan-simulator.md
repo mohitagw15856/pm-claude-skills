@@ -67,3 +67,8 @@ Out of character:
 - "Why am I not getting interviews? Screen my CV."
 - "What does a recruiter see in the first few seconds of my CV?"
 - "扮演招聘官看看我的简历能不能过初筛。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/recruiter-scan-simulator.html
+
+<!-- pm-claude-skills v84.0.0 | skill: recruiter-scan-simulator | source: skills/recruiter-scan-simulator/SKILL.md | sha256: af5818f2f389404f5b5c23db71c540d5dadc7454117f2d4650282f9d232d524e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

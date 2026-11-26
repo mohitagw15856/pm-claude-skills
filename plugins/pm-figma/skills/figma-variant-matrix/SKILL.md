@@ -84,3 +84,5 @@ For each state, list only what changes from Default:
 - "Help me plan the variant matrix for [component]"
 - "Set up the Figma properties for a [button/card/input]"
 - "What are all the combinations I need for my [component]?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-variant-matrix.html

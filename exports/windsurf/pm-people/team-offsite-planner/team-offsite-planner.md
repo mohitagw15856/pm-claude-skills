@@ -9,7 +9,7 @@ This skill designs a complete team offsite — from goals to minute-by-minute ag
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Team size** (number of people)
 - **Duration** (half day / full day / 1.5 days / 2 days)
 - **Primary goal** (e.g. Q3 planning / team bonding / strategy alignment / retrospective / all of the above)
@@ -150,3 +150,8 @@ Template for the summary document to send within 48 hours:
 - "Design a 2-day team retreat for [goal]"
 - "Build an agenda for our Q[N] team planning day"
 - "Help me plan a hybrid offsite for [team size] people"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/team-offsite-planner.html
+
+<!-- pm-claude-skills v84.0.0 | skill: team-offsite-planner | source: skills/team-offsite-planner/SKILL.md | sha256: d1efa4b1eb363a83280d4d5a96e1404cce22b427ce897d6a05db1b1dabf86f0c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

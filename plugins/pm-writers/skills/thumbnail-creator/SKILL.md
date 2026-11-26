@@ -631,3 +631,5 @@ Before marking the task complete, verify each item:
 ---
 
 *Originally created by Karen Spinner (Wondering About AI) — adapted and extended for this library.*
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thumbnail-creator.html

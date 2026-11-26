@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "My inbox is all newsletters."
 - "Cut my email volume."
 - "Set up filters for the noise."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inbox-unsubscribe-purge.html

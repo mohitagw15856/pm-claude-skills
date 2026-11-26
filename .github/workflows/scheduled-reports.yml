@@ -24,6 +24,8 @@ permissions:
 
 jobs:
   reports:
+    # Spends API credit: scheduled runs need ALLOW_API_SPEND=true; manual dispatch is your choice.
+    if: github.event_name == 'workflow_dispatch' || vars.ALLOW_API_SPEND == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

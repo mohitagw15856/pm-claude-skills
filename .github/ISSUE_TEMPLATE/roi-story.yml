@@ -36,6 +36,27 @@ body:
       placeholder: e.g. ~25 minutes
     validations:
       required: true
+  - type: input
+    id: hours_saved
+    attributes:
+      label: Hours saved per use (a number)
+      description: Your honest estimate for one use, before minus after. This feeds the public hours-saved counter once a maintainer accepts the story.
+      placeholder: e.g. 6
+    validations:
+      required: true
+  - type: input
+    id: uses
+    attributes:
+      label: Times you have used it so far (a number)
+      placeholder: e.g. 4
+    validations:
+      required: true
+  - type: input
+    id: money
+    attributes:
+      label: Money saved, if any (optional, a number with its currency code)
+      description: Only money that actually did not get spent, such as a fee you avoided or a contractor you did not hire. Leave blank if you are converting time into money.
+      placeholder: e.g. 450 USD
   - type: textarea
     id: what_changed
     attributes:

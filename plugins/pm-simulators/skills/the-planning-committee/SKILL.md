@@ -76,3 +76,5 @@ Ask for these if not provided:
 - "My application goes to committee."
 - "Rehearse my three minutes."
 - "How do I answer the objectors?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-planning-committee.html

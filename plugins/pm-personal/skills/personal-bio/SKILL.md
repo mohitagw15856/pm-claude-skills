@@ -60,3 +60,5 @@ Professional bio practice — the one-liner / short / long convention, specifici
 - "Write my about me."
 - "Write a speaker bio."
 - "Write a short profile blurb."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/personal-bio.html

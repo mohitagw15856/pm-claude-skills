@@ -78,3 +78,8 @@ WARNING: This draft requires review by a qualified legal professional. It does n
 - "Write a legal brief arguing [position]"
 - "Summarise the legal position on [topic]"
 - "Write a letter before action for [situation]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/legal-brief.html
+
+<!-- pm-claude-skills v84.0.0 | skill: legal-brief | source: skills/legal-brief/SKILL.md | sha256: 27f33ed0c2569b6cefdd613f116370f4fc8fff523fc72793757f1320024bfcbb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

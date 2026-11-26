@@ -32,14 +32,18 @@ jobs:
       - name: Improve skills
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          INPUT: ${{ github.event.inputs.skills || 'all' }}
         run: |
+          set -eu
           if [ -z "$ANTHROPIC_API_KEY" ]; then echo "::error::ANTHROPIC_API_KEY secret is not set."; exit 1; fi
-          INPUT="${{ github.event.inputs.skills || 'all' }}"
+          printf '%s' "$INPUT" | grep -Eq '^[a-z0-9 -]+$' || { echo "::error::skills must be space-separated skill names"; exit 1; }
           if [ "$INPUT" = "all" ]; then
             node scripts/improve-skill.mjs --all
           else
+            # Word-splitting is intended: one argument per skill name (validated above).
             node scripts/improve-skill.mjs $INPUT
           fi
+          node scripts/build-evolution-log.mjs
 
       - name: Open a PR with improvements
         uses: peter-evans/create-pull-request@v8
@@ -47,6 +51,8 @@ jobs:
           add-paths: |
             skills
             SKILL-IMPROVEMENTS.md
+            data/evolution-log.json
+            EVOLUTION.md
           branch: skill-improvements
           delete-branch: true
           commit-message: "chore(skills): eval-driven improvements"

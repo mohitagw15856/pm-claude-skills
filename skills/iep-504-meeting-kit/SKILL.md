@@ -75,3 +75,5 @@ Clarify: "How will we measure that, and from what baseline?" · Implementation: 
 - "What's the difference between an IEP and a 504?"
 - "How do I disagree with the school's plan?"
 - "Make sure the accommodations actually happen."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/iep-504-meeting-kit.html

@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Train my team on communication hygiene."
 - "Review this thread like a plaintiff's lawyer."
 - "What shouldn't we put in writing?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/discovery-eyes.html

@@ -204,3 +204,5 @@ UPDATING YOUR BRIEF
 - "Help me set up a daily AI news brief"
 - "Create a scheduled morning news prompt for me"
 - "Build me a prompt for my daily briefing routine"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/morning-intelligence.html

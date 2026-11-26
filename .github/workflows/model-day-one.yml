@@ -1,49 +1,60 @@
-# Model Day-One — run SkillBench the day a new model ships and publish the
-# first credible professional-work numbers. MANUAL ONLY (costs ~$2-5 of the
-# owner's API credit per run) — never scheduled, never auto-triggered.
+# Model Day-One: run SkillBench the day a new model ships, then publish a
+# launch-day verdict saying, skill by skill, whether each one still helps that
+# model (scripts/launch-verdict.mjs). MANUAL ONLY: a run spends the owner's API
+# credit (about $2 to $5), so it is never scheduled or triggered automatically.
+# The report arrives as a pull request, because main is protected.
 name: Model Day-One report
 on:
   workflow_dispatch:
     inputs:
       model:
-        description: 'The new model id (e.g. claude-fable-5, gpt-5.2)'
+        description: 'The new model id (e.g. claude-fable-5, gpt-5.2, or a free route such as modelscope:Qwen/Qwen3-32B)'
         required: true
+      baseline:
+        description: 'Model to compare with (default: the most recent other run)'
+        required: false
+concurrency: { group: model-day-one, cancel-in-progress: false }
 jobs:
   bench:
     runs-on: ubuntu-latest
-    permissions: { contents: write }
+    permissions: { contents: write, pull-requests: write }
+    env:
+      # Inputs reach the shell only through the environment, never interpolated into scripts.
+      MODEL: ${{ inputs.model }}
+      BASELINE: ${{ inputs.baseline }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
         with: { node-version: '24' }
+      - name: Check the model id
+        run: |
+          printf '%s' "$MODEL" | grep -Eq '^[A-Za-z0-9._:/-]{2,100}$' || { echo "::error::model ids are letters, digits and . _ : / - only"; exit 1; }
+          [ -z "${BASELINE:-}" ] || printf '%s' "$BASELINE" | grep -Eq '^[A-Za-z0-9._:/-]{2,100}$' || { echo "::error::baseline has the same rules"; exit 1; }
       - name: Run SkillBench on the new model
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node skillbench/run-skillbench.mjs --models "${{ inputs.model }}"
-      - name: Publish the day-one report
+          MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: node skillbench/run-skillbench.mjs --models "$MODEL"
+      - name: Write the launch-day verdict
         run: |
-          node - <<'JS'
-          const fs = require('fs');
-          const r = JSON.parse(fs.readFileSync('skillbench/results.json', 'utf8'));
-          const m = '${{ inputs.model }}';
-          const today = new Date().toISOString().slice(0, 10);
-          const rows = (r.results || []).filter((x) => x.model === m);
-          const skilled = rows.filter((x) => x.mode === 'skilled'), bare = rows.filter((x) => x.mode === 'bare');
-          const avg = (a) => a.length ? (a.reduce((n, x) => n + x.overall, 0) / a.length) : null;
-          const s = avg(skilled), b = avg(bare);
-          const md = `# Day-One Report: ${m} — ${today}\n\n` +
-            `Run within hours of release on [SkillBench](../README.md)'s frozen v1 task set (12 professional tasks, pinned judge).\n\n` +
-            `| Metric | Score |\n|---|---|\n` +
-            `| SkillBench (skilled) | **${s ? s.toFixed(2) : 'n/a'}/5** |\n` +
-            `| Bare | ${b ? b.toFixed(2) : 'n/a'}/5 |\n` +
-            `| Skill lift | ${s && b ? (s - b >= 0 ? '+' : '') + (s - b).toFixed(2) : 'n/a'} |\n\n` +
-            `Caveats, honestly: single run, one judge, n=12 tasks — a day-one signal, not a verdict. Full per-task data in [results.json](../results.json).\n`;
-          fs.mkdirSync('skillbench/reports', { recursive: true });
-          fs.writeFileSync(`skillbench/reports/day-one-${m.replace(/[^a-zA-Z0-9.-]/g, '_')}-${today}.md`, md);
-          JS
+          set -euo pipefail
+          if [ -n "${BASELINE:-}" ]; then node scripts/launch-verdict.mjs --model "$MODEL" --baseline "$BASELINE"
+          else node scripts/launch-verdict.mjs --model "$MODEL"; fi
+      - name: Open a pull request with the results
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          safe=$(printf '%s' "$MODEL" | tr -c 'A-Za-z0-9.-' '_')
+          branch="bench/day-one-$safe-$(date -u +%Y%m%d%H%M)"
           git config user.name 'day-one-bot'; git config user.email 'actions@github.com'
+          git switch -c "$branch"
           git add skillbench
-          git commit -m "bench: day-one report for ${{ inputs.model }}"
-          git push
+          printf 'bench: launch-day verdict for %s\n' "$MODEL" > /tmp/msg
+          git commit -q -F /tmp/msg
+          git push -q -u origin "$branch"
+          report=$(ls -t skillbench/reports/verdict-*.md | head -1)
+          gh pr create --base main --head "$branch" --title "bench: launch-day verdict for $MODEL" --body-file "$report"

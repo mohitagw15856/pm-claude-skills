@@ -61,6 +61,14 @@
       "reviewed": "2026-07-14",
       "by": "seed"
     },
+    "br-irpf-prep": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "br-rescisao-clt": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
     "brand-impersonation-response": {
       "reviewed": "2026-07-02",
       "by": "seed"
@@ -109,6 +117,10 @@
       "reviewed": "2026-07-17",
       "by": "seed"
     },
+    "cn-company-registration": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
     "cn-customs-docs": {
       "reviewed": "2026-10-05",
       "by": "seed"
@@ -117,8 +129,16 @@
       "reviewed": "2026-10-04",
       "by": "seed"
     },
+    "cn-equity-split": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
     "cn-extracurricular-plan": {
       "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-financing-bp": {
+      "reviewed": "2026-11-11",
       "by": "seed"
     },
     "cn-fupan": {
@@ -135,6 +155,10 @@
     },
     "cn-help-parents-admin": {
       "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-high-tech-enterprise-application": {
+      "reviewed": "2026-11-11",
       "by": "seed"
     },
     "cn-home-school-comms": {
@@ -201,6 +225,10 @@
       "reviewed": "2026-10-04",
       "by": "seed"
     },
+    "cn-returnee-job-search": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
     "cn-school-entry": {
       "reviewed": "2026-10-05",
       "by": "seed"
@@ -221,6 +249,18 @@
       "reviewed": "2026-10-05",
       "by": "seed"
     },
+    "cn-study-abroad-essay": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "cn-study-visa-prep": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "cn-subsidy-filing": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
     "cn-trade-quotation": {
       "reviewed": "2026-10-05",
       "by": "seed"
@@ -235,6 +275,10 @@
     },
     "cn-year-end-review": {
       "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-zhuanjingtexin-application": {
+      "reviewed": "2026-11-11",
       "by": "seed"
     },
     "college-app-parent-guide": {
@@ -273,6 +317,10 @@
       "reviewed": "2026-07-14",
       "by": "seed"
     },
+    "crop-insurance-claim": {
+      "reviewed": "2026-10-16",
+      "by": "seed"
+    },
     "customer-incident-update": {
       "reviewed": "2026-08-03",
       "by": "seed"
@@ -287,6 +335,18 @@
     },
     "data-broker-removal": {
       "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "de-arbeitszeugnis-decoder": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "de-kuendigungsfrist-check": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "de-steuererklaerung-prep": {
+      "reviewed": "2026-11-11",
       "by": "seed"
     },
     "debt-collector-scripts": {
@@ -341,6 +401,10 @@
       "reviewed": "2026-08-10",
       "by": "seed"
     },
+    "emergency-grant-application": {
+      "reviewed": "2026-10-16",
+      "by": "seed"
+    },
     "end-of-life-wishes-conversation": {
       "reviewed": "2026-08-06",
       "by": "seed"
@@ -369,8 +433,16 @@
       "reviewed": "2026-08-07",
       "by": "seed"
     },
+    "form-explainer": {
+      "reviewed": "2026-10-16",
+      "by": "seed"
+    },
     "franchise-decoder": {
       "reviewed": "2026-09-04",
+      "by": "seed"
+    },
+    "functional-assessment-prep": {
+      "reviewed": "2026-10-16",
       "by": "seed"
     },
     "funeral-pricing-decoder": {
@@ -383,6 +455,14 @@
     },
     "grieving-at-work": {
       "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "gulf-job-offer-check": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "gulf-residence-visa-admin": {
+      "reviewed": "2026-11-11",
       "by": "seed"
     },
     "hazard-risk-map": {
@@ -449,6 +529,14 @@
       "reviewed": "2026-08-21",
       "by": "seed"
     },
+    "ke-mpesa-reversal-dispute": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "ke-payslip-decoder": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
     "kids-online-safety-plan": {
       "reviewed": "2026-08-05",
       "by": "seed"
@@ -467,6 +555,10 @@
     },
     "kr-year-end-tax-settlement": {
       "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "ksa-labour-contract-decoder": {
+      "reviewed": "2026-11-11",
       "by": "seed"
     },
     "kyc-escalation": {
@@ -505,6 +597,10 @@
       "reviewed": "2026-08-06",
       "by": "seed"
     },
+    "lost-documents-replacement": {
+      "reviewed": "2026-10-16",
+      "by": "seed"
+    },
     "medical-appointment-advocate": {
       "reviewed": "2026-08-06",
       "by": "seed"
@@ -521,6 +617,14 @@
       "reviewed": "2026-07-18",
       "by": "seed"
     },
+    "mx-declaracion-anual-prep": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "mx-finiquito-liquidacion": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
     "name-change-navigator": {
       "reviewed": "2026-08-07",
       "by": "seed"
@@ -529,8 +633,36 @@
       "reviewed": "2026-06-08",
       "by": "seed"
     },
+    "newcomer-school-enrolment": {
+      "reviewed": "2026-10-16",
+      "by": "seed"
+    },
+    "ng-payslip-decoder": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "ng-pension-rsa-guide": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
     "notify-everyone-of-a-death": {
       "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "nursing-care-plan": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "nursing-family-update": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "nursing-incident-report": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "nursing-shift-handover": {
+      "reviewed": "2026-11-11",
       "by": "seed"
     },
     "oversharing-audit": {
@@ -599,6 +731,10 @@
     },
     "rent-increase-response": {
       "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "renting-after-disaster-damage": {
+      "reviewed": "2026-10-16",
       "by": "seed"
     },
     "repair-request-escalation": {
@@ -693,6 +829,10 @@
       "reviewed": "2026-08-07",
       "by": "seed"
     },
+    "uae-gratuity-calculator": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
     "underwriting-narrative": {
       "reviewed": "2026-07-14",
       "by": "seed"
@@ -723,6 +863,14 @@
     },
     "witness-statement-writer": {
       "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "za-retrenchment-package-check": {
+      "reviewed": "2026-11-11",
+      "by": "seed"
+    },
+    "za-uif-claim-guide": {
+      "reviewed": "2026-11-11",
       "by": "seed"
     }
   }

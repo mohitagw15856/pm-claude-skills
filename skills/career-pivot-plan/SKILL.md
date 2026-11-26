@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "I'm burnt out in my field and want something new but don't know how."
 - "What's a realistic path to switch careers without going broke?"
 - "How do I make my background make sense for a new industry?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/career-pivot-plan.html

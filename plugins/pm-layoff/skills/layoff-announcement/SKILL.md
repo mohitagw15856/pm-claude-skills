@@ -74,3 +74,5 @@ Ask for these if not provided:
 - "Communicate a RIF."
 - "Tell the team about job cuts."
 - "Draft the difficult all-hands."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/layoff-announcement.html

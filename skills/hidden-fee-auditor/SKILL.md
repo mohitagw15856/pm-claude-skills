@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Review this car-purchase quote for junk fees before I sign."
 - "What are all these fees on my bill actually for?"
 - "My internet bill has charges I don't recognize — what can I dispute?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hidden-fee-auditor.html

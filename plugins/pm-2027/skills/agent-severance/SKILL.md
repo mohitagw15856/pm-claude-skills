@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "Decommissioning an agent."
 - "Switch agent vendors."
 - "Ending an AI pilot."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-severance.html

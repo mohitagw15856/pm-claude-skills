@@ -133,6 +133,6 @@ Scaffolded with [pm-claude-skills init-library](https://github.com/mohitagw15856
   .github/workflows/       SkillSpec CI gate (green from commit one)
   federation.json          discoverable by the federation crawler
 Next: git init && git add -A && git commit -m "skills library" && gh repo create ${repo} --public --source ${dirArg} --push
-Then: PR your repo into the federation registry — see federation.html.`);
+Then: PR your repo into the federation registry (federation/ in pm-claude-skills).`);
   return 0;
 }

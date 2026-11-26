@@ -249,6 +249,24 @@ Elementos donde el costo de remediación actualmente supera el valor empresarial
 
 ---
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/debt-pricing.md`** — Poner precio a la deuda: convertir "está mal" en un número que alguien pueda clasificar. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/debt-entry.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Traducción a impacto de negocio | Elementos descritos solo en términos de ingeniería | Impacto indicado pero sin cuantificar | Cada elemento valorado en términos de negocio (riesgo, freno a la velocidad, coste) que alguien no ingeniero podría clasificar |
+| Disciplina de puntuación | Prioridades asignadas por intuición | Se usa la fórmula, pero los elementos de seguridad y dependencias siguen infravalorados | Fórmula aplicada de forma consistente, con el sesgo de "parece técnico" corregido explícitamente |
+| Calidad del plan de resolución | Los elementos principales tienen intenciones vagas | Hay planes, pero no se pueden convertir en tickets | Los planes de los 5 principales son pasos concretos y convertibles en tickets, con secuencia y definición de hecho |
+| Realismo de la capacidad | El roadmap ignora el presupuesto del sprint | La asignación se indica, pero supera la capacidad real | La asignación trimestral cabe en la capacidad real, y los elementos aceptados o aplazados tienen responsables y fechas de revisión |
+
 ## Verificaciones de Calidad
 
 - [ ] Cada elemento tiene un propietario designado — sin deuda sin propietario
@@ -267,3 +285,13 @@ Elementos donde el costo de remediación actualmente supera el valor empresarial
 - [ ] No subestimes elementos de seguridad y dependencias porque parecen abstractos — califica en función del impacto empresarial real
 - [ ] No crees elementos "permanentemente diferidos" — cada elemento aceptado debe tener una fecha de revisión y propietario designado
 - [ ] No incluyas planes de resolución que sean descripciones vagas — cada plan debe tener pasos específicos y asignables
+
+## Frases de activación de ejemplo
+
+- "Audita la deuda técnica."
+- "Crea un registro de deuda."
+- "Prioriza la deuda técnica para un trimestre."
+- "Documenta los atajos de arquitectura."
+- "Construye un roadmap de reducción de deuda."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/technical-debt-register.html

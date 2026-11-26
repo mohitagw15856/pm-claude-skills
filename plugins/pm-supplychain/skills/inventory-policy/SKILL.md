@@ -80,3 +80,5 @@ From a thin brief, place the item in the grid using stated context, label placem
 - "Choose reorder points vs min-max."
 - "Define stocking policy."
 - "Review excess and obsolete inventory."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inventory-policy.html

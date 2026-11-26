@@ -50,3 +50,5 @@ Every bad wedding speech fails the same three ways: too long, too inside, or sec
 - "Write a maid of honour toast."
 - "Write a father of the bride speech."
 - "Fix my wedding speech draft."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wedding-speech.html

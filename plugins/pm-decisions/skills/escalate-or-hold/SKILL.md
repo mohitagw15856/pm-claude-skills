@@ -87,3 +87,5 @@ Confidence: 0.xx · Source: [model / estimate]
 - "Should I escalate this or wait for the owner's fix?"
 - "Is this a page-someone situation?"
 - "Third ticket on this today — hold or escalate?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/escalate-or-hold.html

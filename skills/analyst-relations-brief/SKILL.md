@@ -101,3 +101,5 @@ Never fabricate metrics, customers, or roadmap dates — mark `[to confirm]` and
 - "Write an analyst briefing document for our platform"
 - "Build talking points and anticipated questions for a Forrester Wave call"
 - "Prepare our narrative for a Magic Quadrant submission"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/analyst-relations-brief.html

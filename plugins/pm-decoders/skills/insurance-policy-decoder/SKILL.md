@@ -77,3 +77,5 @@ Policyholder-side coverage review practice — declarations/exclusions reconcili
 - "What does my insurance actually cover?"
 - "Decode my policy."
 - "Is this deductible normal?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/insurance-policy-decoder.html

@@ -88,3 +88,5 @@ Persistent over-forecast bias means excess inventory is being manufactured upstr
 - "Challenge a forecast."
 - "Check forecast accuracy."
 - "Find hockey sticks in the numbers."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/demand-forecast-review.html

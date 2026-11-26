@@ -71,3 +71,5 @@ The output-compression register pattern — telegraphic prompting for output-tok
 - "Cut our output token costs."
 - "Switch to a compact output mode for this pipeline."
 - "Strip the filler from agent-to-agent messages."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/token-diet.html

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" font-family="ui-sans-serif,system-ui,sans-serif">
+  <title>Illustrative mock-up: the same morning, as a raw agent brief and as a brief shaped by pm-duet skills. Mock data, no real account.</title>
+  <rect width="920" height="560" fill="#0d1117"/>
+  <text x="460" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#e6edf3">The same morning, twice</text>
+  <text x="460" y="58" text-anchor="middle" font-size="12" fill="#8b949e">Illustrative mock-up with invented data. TODO: replace with a real tester's brief (redacted). docs/duet</text>
+
+  <rect x="30" y="80" width="420" height="440" rx="12" fill="#161b22" stroke="#30363d"/>
+  <text x="50" y="112" font-size="14" font-weight="700" fill="#f85149">Raw brief, no skills</text>
+  <text x="50" y="146" font-size="13" fill="#e6edf3">Good morning! Here is a comprehensive</text>
+  <text x="50" y="166" font-size="13" fill="#e6edf3">summary of overnight activity across</text>
+  <text x="50" y="186" font-size="13" fill="#e6edf3">your accounts. You received 14 emails,</text>
+  <text x="50" y="206" font-size="13" fill="#e6edf3">various updates in Slack, and several</text>
+  <text x="50" y="226" font-size="13" fill="#e6edf3">calendar changes. The Acme matter is</text>
+  <text x="50" y="246" font-size="13" font-weight="600" fill="#f85149">done.</text>
+  <text x="50" y="276" font-size="13" fill="#e6edf3">I also went ahead and replied to Dana</text>
+  <text x="50" y="296" font-size="13" fill="#e6edf3">confirming the March date…</text>
+  <text x="50" y="336" font-size="12" fill="#8b949e">✗ "various updates": nothing cited</text>
+  <text x="50" y="358" font-size="12" fill="#8b949e">✗ "done": drafted? sent? verified?</text>
+  <text x="50" y="380" font-size="12" fill="#8b949e">✗ replied without a send approval</text>
+  <text x="50" y="402" font-size="12" fill="#8b949e">✗ 14 emails counted, none triaged</text>
+
+  <rect x="470" y="80" width="420" height="440" rx="12" fill="#161b22" stroke="#d2a8ff"/>
+  <text x="490" y="112" font-size="14" font-weight="700" fill="#3fb950">With pm-duet skills</text>
+  <text x="490" y="146" font-size="13" font-weight="600" fill="#e6edf3">Needs you today (2)</text>
+  <text x="490" y="168" font-size="13" fill="#e6edf3">1. Dana (BigCo) asks for the March date;</text>
+  <text x="490" y="186" font-size="13" fill="#e6edf3">    reply drafted, awaiting your send approval</text>
+  <text x="490" y="204" font-size="12" fill="#8b949e">    source: thread "Q2 rollout", 06:41</text>
+  <text x="490" y="226" font-size="13" fill="#e6edf3">2. Thursday demo moved to 14:00</text>
+  <text x="490" y="244" font-size="12" fill="#8b949e">    source: calendar invite, updated 05:15</text>
+  <text x="490" y="274" font-size="13" font-weight="600" fill="#e6edf3">Moved since yesterday</text>
+  <text x="490" y="296" font-size="13" fill="#e6edf3">Acme contract: drafted → approved</text>
+  <text x="490" y="314" font-size="12" fill="#8b949e">    by Priya, 18:22; sending is a separate yes</text>
+  <text x="490" y="344" font-size="13" font-weight="600" fill="#e6edf3">Waiting on others</text>
+  <text x="490" y="366" font-size="13" fill="#e6edf3">API answer: with Jordan since Tuesday</text>
+  <text x="490" y="396" font-size="13" fill="#8b949e">Nothing else qualified.</text>
+  <text x="490" y="436" font-size="12" fill="#3fb950">✓ 8 lines, every claim cited</text>
+  <text x="490" y="458" font-size="12" fill="#3fb950">✓ status words with exact meanings</text>
+  <text x="490" y="480" font-size="12" fill="#3fb950">✓ drafts wait for the send approval</text>
+</svg>

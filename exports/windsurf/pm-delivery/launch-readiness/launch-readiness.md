@@ -9,7 +9,7 @@ Ensure nothing falls through the cracks before launch by systematically checking
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Launch name and target date**
 - **Launch tier** (Tier 1 = major launch / Tier 2 = significant feature / Tier 3 = incremental update)
 - **Completed checklist items or self-assessment** (even partial is fine — we'll surface gaps)
@@ -95,3 +95,8 @@ Ask the user for these if not provided:
 - "Run a pre-launch review."
 - "Give me a go or no-go for this release."
 - "Is this release safe to ship?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/launch-readiness.html
+
+<!-- pm-claude-skills v84.0.0 | skill: launch-readiness | source: skills/launch-readiness/SKILL.md | sha256: ad332c50728df171ab1191591224bbbc4d735a10a673d9b5f303bf437f4b8ce6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

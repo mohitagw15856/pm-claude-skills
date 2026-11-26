@@ -48,3 +48,5 @@ Critique finds weaknesses in your argument. The twin does something scarier: it 
 - "Write the opposition's best memo."
 - "Everyone agrees with this doc: what's the strongest case against it?"
 - "Make the case that we should not do this."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/devils-twin.html

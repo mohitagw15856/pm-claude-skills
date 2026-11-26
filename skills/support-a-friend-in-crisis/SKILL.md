@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "A friend is really struggling and I don't know how to be there."
 - "What do I say to someone with a serious illness?"
 - "My friend is in crisis — how can I actually help?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/support-a-friend-in-crisis.html

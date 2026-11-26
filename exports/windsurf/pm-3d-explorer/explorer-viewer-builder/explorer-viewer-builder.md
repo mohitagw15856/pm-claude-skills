@@ -16,6 +16,10 @@ Ask for these if not provided:
 - **Title** and the illustrative statement
 - **Hosting**: GitHub Pages, a static host, or opening the file locally (GLB files need a local server; browsers block `file://` loading)
 
+## Working from a brief
+
+Given the model file and the list of parts, **write the complete single-file viewer anyway**. Assume the GLB's node names match the parts listed, say so at the top, and wire the labels, the exploded view and the quiz to those names so a mismatch is a one-line fix.
+
 ## Output Structure
 
 ### 1. The viewer file
@@ -61,3 +65,8 @@ Binary checks to run in a browser: the model appears; each part in the list high
 - "Turn this parts list into a single-file Three.js explorer."
 - "Add an exploded view and quiz mode to my 3D model page."
 - "Make a GLB viewer that works on phones, no build step."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/explorer-viewer-builder.html
+
+<!-- pm-claude-skills v84.0.0 | skill: explorer-viewer-builder | source: skills/explorer-viewer-builder/SKILL.md | sha256: 170450b12852512e55eef171de81b41cf77ca28e671b30d048bbf3071f4c9ea5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

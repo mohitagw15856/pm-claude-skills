@@ -64,3 +64,8 @@ Systematic debugging method (reproduce → isolate → hypothesize → verify) �
 - "Why is this happening?"
 - "This test fails intermittently."
 - "Find the root cause of this defect."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bug-diagnosis.html
+
+<!-- pm-claude-skills v84.0.0 | skill: bug-diagnosis | source: skills/bug-diagnosis/SKILL.md | sha256: a6a8bfac16eface3a0481861600db291086ac6f1fa1fcc1526af93f604cbce22 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -24,6 +24,10 @@ Ask for these if not provided:
 - **The person's experience**, ideally a `career-inventory` file
 - **Anything already done towards the move**: courses, projects, side work
 
+## Working from a brief
+
+Given a current role, years in it and a target field, **write the complete CV anyway**: a targeted profile, a transferable-evidence section that maps the real work of the old job to the new field, and experience written in the new field's language. Put [bracketed] placeholders where a number, project or name is needed, and never invent results. End with the three evidence gaps worth closing.
+
 ## Framework
 
 1. **Find the overlap.** Read the target ads. List the five capabilities they ask for most. For each, find real evidence in the person's history.
@@ -60,3 +64,8 @@ Ask for these if not provided:
 - "My job titles don't match the jobs I want. How do I present myself?"
 - "Help me write a CV for a career change into data analysis."
 - "转行做产品经理，简历怎么写？"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/career-changer-cv.html
+
+<!-- pm-claude-skills v84.0.0 | skill: career-changer-cv | source: skills/career-changer-cv/SKILL.md | sha256: 0d20257eb0dffcdbe154ec5b3d3259c17267518a701d8f973330bb9ca15b9e4b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

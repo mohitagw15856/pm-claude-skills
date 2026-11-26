@@ -74,3 +74,5 @@ The context-compression layer pattern — structural compression of tool outputs
 - "My context is full of JSON."
 - "Compress these logs before analysis."
 - "Stop wasting tokens on raw data."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-crusher.html

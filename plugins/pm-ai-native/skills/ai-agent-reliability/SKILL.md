@@ -1,6 +1,6 @@
 ---
 name: ai-agent-reliability
-description: "Make an AI agent or automation reliable enough to trust — the tests, checks, and guardrails that catch its failures before they reach anything real. Use when asked how do I test my AI agent, make my automation reliable, my agent works sometimes, or how do I trust an AI workflow in production. Produces a map of where the agent can fail (bad input, hallucination, wrong tool call, edge cases, silent errors), the checks that catch each (validation, evals on real cases, human-in-the-loop gates, monitoring), a right-sized reliability plan scaled to the stakes, and a rollout that earns trust incrementally — so an agent that works in a demo becomes one that works in reality. For builders putting AI agents into real workflows."
+description: "Make an AI agent or automation reliable enough to trust — the tests, checks, and guardrails that catch its failures before they reach anything real. Use when asked how do I test my AI agent, make my automation reliable, my agent works sometimes, or how do I trust an AI workflow in production. Produces a map of where the agent can fail (bad input, hallucination, wrong tool call, edge cases, silent errors), the checks that catch each (validation, evals on real cases, human-in-the-loop gates, monitoring), a right-sized reliability plan scaled to the stakes, and a rollout that earns trust incrementally."
 ---
 
 # AI-Agent Reliability
@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "How do I put an AI workflow into production safely?"
 - "What checks does my agent need before I let it run on real data?"
 - "How do I know my agent won't do something dumb and irreversible?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-agent-reliability.html

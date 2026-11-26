@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Prepare me for the parent teacher conference."
 - "What should I ask my kid's teacher?"
 - "How do I raise a concern without making it adversarial?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/parent-teacher-conference-prep.html

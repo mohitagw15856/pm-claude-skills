@@ -9,7 +9,7 @@ Turn a product initiative into a structured influence plan — who needs to be a
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Initiative description** (what you want to do and why)
 - **List of key stakeholders** (name, role, relationship to initiative)
 - **Timeline pressure** (when do you need a decision?)
@@ -73,3 +73,5 @@ Ask the user for these if not provided:
 - "Build consensus."
 - "Get buy-in from engineering."
 - "Plan stakeholder conversations for a major initiative."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stakeholder-influence-mapper.html

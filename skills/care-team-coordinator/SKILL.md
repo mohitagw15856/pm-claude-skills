@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Set up a system so caregiving doesn't all fall on me."
 - "How do I keep everyone on the same page about my parent's care?"
 - "Organize the medical, daily, and financial sides of caring for someone."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/care-team-coordinator.html

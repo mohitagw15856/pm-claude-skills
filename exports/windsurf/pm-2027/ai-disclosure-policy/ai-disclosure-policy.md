@@ -110,3 +110,8 @@ Ask for (if not already provided):
 - "Do we have to label AI content?"
 - "Write our AI disclosure policy."
 - "Are we covered for the AI Act?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-disclosure-policy.html
+
+<!-- pm-claude-skills v84.0.0 | skill: ai-disclosure-policy | source: skills/ai-disclosure-policy/SKILL.md | sha256: 4f317ebc3f7cbdd0aef5bc9e09597f6edd13d018168334202b3d5bc591d61cdd | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

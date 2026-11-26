@@ -76,3 +76,5 @@ Open-source README best practices (one-line pitch, time-to-first-success quickst
 - "Improve a README."
 - "Document a project."
 - "Make a repo approachable."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/readme-writer.html

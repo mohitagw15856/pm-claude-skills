@@ -66,3 +66,5 @@ End verbatim: *"This is a plain-language reading, not a professional inspection,
 - "Is this inspection bad?"
 - "What should I ask the seller to fix?"
 - "Should I walk after inspection?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inspection-report-decoder.html

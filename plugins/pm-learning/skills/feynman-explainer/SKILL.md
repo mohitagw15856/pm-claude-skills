@@ -60,3 +60,5 @@ Ask for these if not provided:
 - "Let me explain this back — do I actually get it?"
 - "I think I understand recursion but I'm not sure. Test me."
 - "Check my understanding of this by making me explain it simply."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/feynman-explainer.html

@@ -82,3 +82,5 @@ Sequence-of-returns risk (largest near the target date) · taxes · spending dri
 - "Can I retire early?"
 - "How much do I need to be financially independent?"
 - "Model my savings trajectory."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fire-number.html

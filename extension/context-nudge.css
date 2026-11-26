@@ -1,0 +1,5 @@
+/* Contextual nudge (context-nudge.js, opt-in). */
+.pm-nudge { position: fixed; right: 16px; bottom: 16px; z-index: 2147483646; max-width: 300px; background: #1f1f23; color: #ececf1; border: 1px solid #d97757; border-radius: 12px; padding: 12px 34px 12px 14px; font: 13px/1.45 system-ui, sans-serif; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+.pm-nudge p { margin: 0 0 8px; }
+.pm-nudge a { display: inline-block; margin: 0 6px 6px 0; padding: 3px 8px; border-radius: 8px; background: #d97757; color: #fff; text-decoration: none; }
+.pm-nudge button { position: absolute; top: 6px; right: 8px; border: 0; background: none; color: #aaa; font-size: 18px; cursor: pointer; }

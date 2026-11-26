@@ -1,0 +1,15 @@
+{
+  "id": "informal-trader",
+  "name": "Small trader, stall or home business",
+  "emoji": "🧺",
+  "triggers": ["I sell at the market and never know if I make money", "I run a small shop or stall", "I sell from home or on WhatsApp"],
+  "boundary": "Not financial or legal advice. For loans you are struggling to repay, speak to a free debt or financial counselling service where you live.",
+  "ask_first": "What do you sell, and are you about to borrow money or buy a lot of stock? That decides where to start.",
+  "steps": [
+    { "skill": "daily-cash-book", "why": "Two minutes a day shows whether the business makes money and separates it from household spending.", "carry": ["daily sales", "daily costs", "weekly profit"] },
+    { "skill": "market-stall-pricing", "why": "Prices that ignore transport, stall fees and spoiled stock lose money on every sale.", "carry": ["floor price", "target price"] },
+    { "skill": "microloan-comparison", "why": "If you borrow for stock, compare offers by what they really cost, not the headline rate.", "carry": ["loan chosen", "repayment the business can afford"] },
+    { "skill": "crop-insurance-claim", "why": "For growers: if a harvest fails, a claim reported on time can save the season.", "carry": ["claim reported", "evidence gathered"] }
+  ],
+  "done_when": "Daily records kept, prices that cover every cost, any loan compared and affordable, and a plan if a harvest fails."
+}

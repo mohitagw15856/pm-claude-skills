@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "My calendar is 80% recurring."
 - "Which meetings can I stop attending?"
 - "Leave a meeting politely."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/recurring-meeting-pruner.html

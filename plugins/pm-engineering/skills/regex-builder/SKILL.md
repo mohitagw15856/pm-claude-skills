@@ -61,3 +61,5 @@ Edge cases, catastrophic-backtracking risks, anchoring, Unicode, and a simpler a
 - "Write a regex."
 - "Match/validate/extract a pattern."
 - "Understand what a regex does."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/regex-builder.html

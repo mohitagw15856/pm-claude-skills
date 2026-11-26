@@ -3,65 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
-<title>The Federation — every library that speaks SKILL.md, searchable as one</title>
-<meta name="description" content="Independent skills libraries publish a federation.json; the crawler aggregates them into one searchable index with live SkillSpec grades. No accounts, no platform — git, JSON, and a convention. Add your library by PR." />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  .f-wrap { max-width: 860px; margin: 0 auto; padding: 16px 22px 70px; }
-  .lead { color: #c7cfda; font-size: 15px; }
-  #q { width: 100%; padding: 12px 15px; font-size: 15px; background: var(--panel-2); color: var(--text); border: 1px solid var(--border); border-radius: 12px; box-sizing: border-box; margin: 14px 0; }
-  .lib { border: 1px solid var(--border); border-radius: 13px; background: var(--panel); padding: 14px 18px; margin: 10px 0; }
-  .lib h3 { margin: 0 0 4px; font-size: 16px; } .lib h3 a { color: var(--accent); text-decoration: none; }
-  .lib .meta { color: var(--muted); font-size: 12px; } .lib img { vertical-align: middle; margin-left: 8px; }
-  .hit { padding: 8px 12px; border-bottom: 1px solid var(--border); font-size: 13px; }
-  .hit b { color: var(--accent); } .hit .from { color: var(--muted); font-size: 11px; }
-  .join { border: 1px dashed var(--border); border-radius: 13px; padding: 14px 18px; margin-top: 20px; font-size: 13.5px; }
-</style>
+<title>Moved to skill search | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/find.html" />
+<meta http-equiv="refresh" content="0; url=find.html" />
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}@media (prefers-color-scheme:light){body{background:#fff;color:#1f2328}a{color:#0969da}}</style>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand"><img src="assets/product-notes.jpg" alt="" class="brand-logo" />
-    <div class="brand-text"><h1>The Federation</h1><p class="tagline">Many libraries. One search. No platform.</p></div></div>
-</header>
-<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-
-<div class="f-wrap">
-  <p class="lead">Skills libraries stay independent — their repos, their names, their licenses — and publish a tiny <code>federation.json</code>. The crawler folds them into one index with <strong>live SkillSpec grades</strong>. Search across everyone:</p>
-  <input id="q" type="search" placeholder="Search every federated library…" / aria-label="Search every federated library">
-  <div id="hits"></div>
-  <div id="libs"></div>
-  <div class="join">
-    <strong>Federate your library</strong> — ship a <code>federation.json</code> (the <a href="https://github.com/mohitagw15856/pm-claude-skills#-cli">init-library scaffold</a> includes one), then PR one line into <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/web/federation-registry.json">federation-registry.json</a>. The weekly crawl does the rest.
-  </div>
-</div>
-
-<script>
-let DATA = null;
-fetch('federated.json').then(r => r.json()).then(d => {
-  DATA = d;
-  document.getElementById('libs').innerHTML = d.members.map(m => m.ok
-    ? '<div class="lib"><h3><a href="' + m.homepage + '">' + m.name + '</a>' + (m.badge ? '<img src="' + m.badge + '" alt="grade" loading="lazy"/>' : '') + '</h3>' +
-      '<div class="meta">' + m.repo + ' · ' + m.count + ' skills · ' + m.license + '</div></div>'
-    : '<div class="lib"><h3>' + m.repo + '</h3><div class="meta">unreachable at last crawl — ' + m.error + '</div></div>'
-  ).join('');
-  window.__federationReady = d.members.length;
-  if (window.pmTrack) pmTrack('federation/open');
-});
-document.getElementById('q').addEventListener('input', (e) => {
-  const q = e.target.value.toLowerCase().trim();
-  const box = document.getElementById('hits');
-  if (!q || !DATA) { box.innerHTML = ''; return; }
-  const hits = [];
-  for (const m of DATA.members) if (m.ok)
-    for (const s of m.skills)
-      if (s.name.includes(q) || s.description.toLowerCase().includes(q)) hits.push({ s, m });
-  box.innerHTML = hits.slice(0, 12).map(({ s, m }) =>
-    '<div class="hit"><b>' + s.name + '</b> <span class="from">from ' + m.name + '</span><br>' + s.description.slice(0, 160) + '</div>'
-  ).join('') || '<div class="hit">no matches across ' + DATA.libraries + ' libraries</div>';
-});
-</script>
-<script src="i18n.js"></script>
-<script src="nav.js"></script>
+<main><p>This page has been retired to keep the site focused. Continue to <a href="find.html">skill search</a>.</p></main>
+<script>location.replace('find.html' + location.search + location.hash);</script>
 </body>
 </html>

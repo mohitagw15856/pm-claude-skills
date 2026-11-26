@@ -1,0 +1,95 @@
+---
+name: stock-take-plan
+description: "Plan and reconcile a shop stock take: the count method, zones and teams, the cut-off for deliveries and sales, count sheets, recount rules, and the variance report afterwards. Use when asked to plan a stock take, organise a stock count, we have a stocktake on Sunday, reconcile count against the system, or why is my stock count off. Produces a count plan with roles and timings, a pre-count checklist, count sheets, recount thresholds, and a variance summary with likely causes. Distinct from inventory-policy, which sets reorder points and safety stock."
+version: 1.0.0
+---
+
+# Stock Take Plan
+
+A stock take goes wrong before anyone counts: deliveries arrive mid-count, the stockroom is not tidied, two people count the same bay, and the result cannot be trusted. This skill plans the count so the number means something, then turns the variances into a short list of causes to investigate.
+
+## What This Skill Produces
+
+- A count plan: full or cycle count, date, zones, teams, timings
+- A pre-count checklist and a cut-off rule for deliveries, transfers and sales
+- Count sheets by zone, with blind-count columns
+- Recount thresholds and who signs off
+- A variance summary by value and by cause, once counts are supplied
+
+## Required Inputs
+
+Ask for these if not provided:
+
+- Type of shop, floor and stockroom layout, approximate number of lines
+- Full count or cycle count, and the reason (year end, audit, shrink concern)
+- Date and time available, and whether the shop trades during the count
+- People available and their experience
+- How stock is recorded: till system, spreadsheet, paper
+- High-value, high-theft or hard-to-count lines
+- After the count: the system quantity and the counted quantity per line, with unit cost
+
+## Framework
+
+1. **Tidy before you count.** Face up shelves, consolidate part cases, label unlabelled stock, clear returns and damages into a marked area.
+2. **Freeze movement.** Set a cut-off time. Deliveries after it are held unopened and labelled "after count". Sales during the count are logged separately.
+3. **Zone the shop.** Each bay, fixture and stockroom shelf belongs to one zone with one owner. Mark zones as counted.
+4. **Count blind.** Counters do not see the system quantity. Count in pairs: one counts, one records.
+5. **Recount by rule.** Recount any line whose variance exceeds a set value or percentage, using a different person.
+6. **Investigate before adjusting.** Check for unbooked deliveries, mis-scanned sales, wrong unit of measure, stock in the wrong location and unrecorded damages.
+7. **Report variance by value**, not line count, and group by likely cause.
+
+## Output Format
+
+### Stock take plan: [shop], [date]
+
+**Method:** [full / cycle], shop [closed / trading]. **Cut-off:** [time].
+
+| Zone | Area | Counter and recorder | Start | Finish |
+|---|---|---|---|---|
+
+**Before the count**
+- [ ] Shelves faced and part cases consolidated
+- [ ] Returns, damages and reserved stock separated and labelled
+- [ ] Deliveries after cut-off held aside
+- [ ] Count sheets printed, pens, labels, zone markers
+
+**Count sheet (per zone)**
+| Location | Product code | Description | Unit | Count 1 | Count 2 | Counter |
+|---|---|---|---|---|---|---|
+
+**Recount rule:** recount if variance exceeds [value] or [percent], by a different counter. Sign-off: [role].
+
+**Variance summary (after the count)**
+| Product | System | Counted | Variance units | Variance value | Likely cause | Action |
+|---|---|---|---|---|---|---|
+
+**Totals:** stock value counted [x], net variance [x], gross variance [x], as a share of sales [x].
+
+**Assumptions and gaps**
+- [Assumed thresholds or layout]
+- [Data needed to complete the variance summary]
+
+## Quality Checks
+
+- [ ] Every area of the shop and stockroom sits in exactly one zone
+- [ ] A cut-off time and a rule for post-cut-off deliveries are stated
+- [ ] Counts are blind and done in pairs
+- [ ] Recount thresholds are set before counting starts
+- [ ] Variance is reported by value with gross and net shown
+
+## Anti-Patterns
+
+- **Do not give counters the system quantity.**
+- **Do not adjust the system before investigating large variances.**
+- **Do not report only net variance.** Overs hide unders.
+- **Do not count while deliveries are being put away.**
+- **Do not blame theft first.** Process errors are usually the larger share.
+
+## Example Trigger Phrases
+
+- "Plan Sunday's stock take for a convenience store with four staff."
+- "Make count sheets for the stockroom and the shop floor."
+- "Here is system versus counted. What should I look into?"
+- "How do we handle deliveries that arrive during the count?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stock-take-plan.html

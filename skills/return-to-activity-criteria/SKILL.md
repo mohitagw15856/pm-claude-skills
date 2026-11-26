@@ -97,3 +97,5 @@ Ask for these if not provided:
 - "The coach wants them back this week — how do I handle that?"
 - "Design a graded return to running programme"
 - "What should I test before clearing someone to return?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/return-to-activity-criteria.html

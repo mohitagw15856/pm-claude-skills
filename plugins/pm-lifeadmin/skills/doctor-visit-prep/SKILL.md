@@ -74,3 +74,5 @@ Dismissed: "[the chart-documentation line]" · Alternatives: "What else could th
 - "What should I tell my doctor?"
 - "Organize my symptoms."
 - "I always forget what to ask."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/doctor-visit-prep.html

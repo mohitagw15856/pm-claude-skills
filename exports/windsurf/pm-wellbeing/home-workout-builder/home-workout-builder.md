@@ -68,3 +68,8 @@ Ask for these if not provided:
 - "Make me a beginner exercise routine, no equipment."
 - "Upper/lower split I can do at home with bands and a bench."
 - "Full-body workout plan, 20 minutes, bad knees."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/home-workout-builder.html
+
+<!-- pm-claude-skills v84.0.0 | skill: home-workout-builder | source: skills/home-workout-builder/SKILL.md | sha256: 9d987083868b70a4dda8ca083d538294a4630f6092cfa3e0a6da5fce40d6404b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

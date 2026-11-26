@@ -92,3 +92,5 @@ Ask for these if not provided:
 - "We keep failing roadside inspections — what should we change?"
 - "Our drivers report nil defects every day — is that a problem?"
 - "Build a defect reporting process for our fleet"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fleet-maintenance-programme.html

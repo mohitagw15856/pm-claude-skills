@@ -27,7 +27,7 @@ Rules: **real, abridged, honest** — the actual shape the skill produces, trimm
 4. **Eventually:** required for new skills via the PR template checklist; existing skills back-filled by contributors (a perfect "good first skill" task — see `ROADMAP-REQUESTS.md` and the good-first-issues section of `ROADMAP.md`).
 
 ## Why it belongs in the skill, not a gallery
-A gallery page is one more thing to maintain and one more place to be stale. An example *inside* the skill is versioned with it, exported with it to all 12 platforms, shown on its page automatically, and — crucially — is the thing a contributor checks their edit against.
+A gallery page is one more thing to maintain and one more place to be stale. An example *inside* the skill is versioned with it, exported with it to all 15 platforms, shown on its page automatically, and — crucially — is the thing a contributor checks their edit against.
 
 ```
 node scripts/check-example-coverage.mjs --list

@@ -120,3 +120,5 @@ don't need the box.
 - "I have to run the AGM."
 - "What goes in the agenda?"
 - "Our elections are a mess."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agm-in-a-box.html

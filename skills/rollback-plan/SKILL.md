@@ -108,3 +108,5 @@ Also roll back on any P1/P2 incident opened against <service> during the window.
 - "Rollback plan for the users-table migration"
 - "What's our revert plan if the pricing change goes sideways?"
 - "Rollout is staged 5/25/100 — I need a rollback per stage"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rollback-plan.html

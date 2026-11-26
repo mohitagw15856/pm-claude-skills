@@ -11,7 +11,7 @@ WARNING: Tax law changes frequently and varies by jurisdiction. This checklist p
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Entity type** (individual / sole trader / limited company / partnership / trust)
 - **Jurisdiction** (UK / US / EU / Other — defaults to UK if unspecified)
 - **Approximate income or revenue** (to identify relevant thresholds)
@@ -134,3 +134,8 @@ Based on the above, prioritise these before year-end:
 - "What tax reliefs should I consider as a [sole trader / limited company / individual]?"
 - "Review my tax efficiency before the end of the tax year"
 - "What should I check for my year-end tax planning?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tax-planning-checklist.html
+
+<!-- pm-claude-skills v84.0.0 | skill: tax-planning-checklist | source: skills/tax-planning-checklist/SKILL.md | sha256: fe90fe2073a83a522cc4f7a48758d7972d764d1b76c484b5174ce743e9f76374 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

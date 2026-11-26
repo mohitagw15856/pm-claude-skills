@@ -75,7 +75,7 @@
     <input id="galaxySearch" type="search" placeholder="Find a skill… (Enter flies you there)" / aria-label="Find a skill… (Enter flies you there)">
     <button id="tourBtn" class="gbtn" type="button" title="Sit back — a guided flight across the professions and one Journey constellation">▶ Sky tour</button>
     <button id="forYouBtn" class="gbtn" type="button" title="Highlights high-scoring skills next to the ones you've already run">🧭 For you</button>
-    <button id="warpBtn3d-anchor" style="display:none"></button><a href="galaxy3d.html" class="ghost" style="text-decoration:none" title="The galaxy in real 3D — fly through it">🌌 3D</a><button id="warpBtn" class="gbtn" type="button" title="Hyperspace jump to a random top-rated skill — serendipity mode">🎲 Warp</button>
+    <button id="warpBtn3d-anchor" style="display:none"></button><button id="warpBtn" class="gbtn" type="button" title="Hyperspace jump to a random top-rated skill — serendipity mode">🎲 Warp</button>
   </div>
   <div class="legend" id="legend"></div>
   <div class="galaxy-hint">drag to pan · scroll to zoom · click a star for details · Enter in search flies to it · brightness = eval score</div>
@@ -119,7 +119,8 @@ const label = (p) => p.replace(/^pm-/, '').replace(/(^|-)(\w)/g, (_, d, c) => (d
       color: s.eval ? m.color : '#5b6472',
       bright: s.eval ? Math.max(0.55, Math.min(1, (score - 3) / 2)) : 0.26,
       ax: m.ax, ay: m.ay, seed: i * 1.7,
-      r: 4 + (score ? (score - 3.5) * 4 : 1.5), trend: !!trending[s.name] };
+      // Clamped: low scores (down to 1) must not give a negative radius.
+      r: Math.max(2.5, 4 + (score ? (score - 3.5) * 4 : 1.5)), trend: !!trending[s.name] };
   });
   const idset = new Set(nodes.map((n) => n.id));
   const seen = new Set(), links = [];
@@ -420,7 +421,7 @@ const label = (p) => p.replace(/^pm-/, '').replace(/(^|-)(\w)/g, (_, d, c) => (d
     }
     tourTimers.push(setTimeout(() => {
       graph.flyTo(cx, cy, 0.9, 1500);
-      caption('🌌 1285 skills · one map', 'click any star · Enter in search flies to it');
+      caption('🌌 1374 skills · one map', 'click any star · Enter in search flies to it');
       tourTimers.push(setTimeout(stopTour, 2600));
     }, t));
   }

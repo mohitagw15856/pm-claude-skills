@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "Help me create a template skill for organizing my tasks."
 - "I keep re-explaining this to AI — capture it as a skill."
 - "Make a 'do this' skill out of my monthly report process."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/make-me-a-skill.html

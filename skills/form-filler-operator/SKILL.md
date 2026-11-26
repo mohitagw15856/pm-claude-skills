@@ -78,3 +78,5 @@ For computer-use agents with browser control. Without tools, the fact sheet + ma
 - "Fill this application for me."
 - "Complete this government/vendor/insurance form."
 - "Do this registration?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/form-filler-operator.html

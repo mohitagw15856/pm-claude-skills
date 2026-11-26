@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "This renewal is slipping — help me save it."
 - "Re-engage a customer who left for a competitor."
 - "Give me a save play and tell me when to walk away."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/winback-playbook.html

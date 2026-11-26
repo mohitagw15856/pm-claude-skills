@@ -90,3 +90,5 @@ Ask for these if not provided:
 - "What emergency procedures do we need for a 500-person conference?"
 - "How do I work out how much medical cover we need?"
 - "Write an evacuation procedure for our event"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/event-safety-plan.html

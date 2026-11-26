@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "Who haven't I considered here?"
 - "Is there something about this I'm too close to see?"
 - "What haven't I thought about with this move?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/what-am-i-not-seeing.html

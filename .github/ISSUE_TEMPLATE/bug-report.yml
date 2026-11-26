@@ -1,0 +1,97 @@
+name: "🐛 Bug report"
+description: A skill is not triggering, gives the wrong output, or something else is broken.
+title: "[Bug] <skill or page>: <what went wrong>"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. The more exact the trigger phrase and the version, the faster it gets fixed.
+  - type: input
+    id: skill
+    attributes:
+      label: Which skill or page?
+      description: The skill folder name, or the playground page URL.
+      placeholder: e.g. go-to-market, or https://mohitagw15856.github.io/pm-claude-skills/grade.html
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where were you using it?
+      multiple: true
+      options:
+        - Claude Code (plugin marketplace)
+        - Claude Code (manual install or symlink)
+        - Claude Desktop or Cowork
+        - Claude.ai web (Add-to-Claude ZIP)
+        - MCP server (npx pm-claude-skills)
+        - Python package (pm-skills)
+        - VS Code or Raycast extension
+        - Playground website
+        - Another AI tool via an export
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What kind of problem?
+      multiple: true
+      options:
+        - Skill does not trigger when it should
+        - Skill triggers when it should not
+        - Output is missing a section
+        - Output format is wrong
+        - Description is incorrect or misleading
+        - Plugin is not showing in the marketplace
+        - Installation or update problem
+        - Playground page error
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Claude Code version, or the pm-claude-skills release, npm or PyPI version.
+      placeholder: e.g. Claude Code 2.1.x, pm-claude-skills 83.2.0
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      multiple: true
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - iOS or Android
+        - Browser only
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened?
+      description: Paste the output, error text or a screenshot.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      value: |
+        1. Trigger phrase used: "..."
+        2.
+        3.
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: Logs, links, or related issues.

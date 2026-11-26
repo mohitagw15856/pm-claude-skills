@@ -56,3 +56,5 @@ End with: **⚠️ Review checklist** — the specific items counsel must confir
 - "Write a privacy policy."
 - "Draft a data-protection notice."
 - "Create a GDPR/CCPA-aware privacy statement."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/privacy-policy-drafter.html

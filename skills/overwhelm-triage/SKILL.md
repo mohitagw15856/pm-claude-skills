@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "Sort my to-do list, I can't tell what matters."
 - "I'm overwhelmed — what can I actually drop?"
 - "Help me figure out what actually needs to happen today."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/overwhelm-triage.html

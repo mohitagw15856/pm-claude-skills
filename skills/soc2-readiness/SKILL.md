@@ -76,3 +76,5 @@ AICPA SOC 2 Trust Services Criteria (Security, Availability, Confidentiality, Pr
 - "Run a SOC 2 readiness/gap assessment."
 - "Scope controls."
 - "Get audit-ready."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/soc2-readiness.html

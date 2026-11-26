@@ -75,3 +75,5 @@ Ask for these if not provided:
 - "How do we decide who gets the emergency slot today?"
 - "What can reception safely tell a patient who has knocked out a tooth?"
 - "Triage script for dental emergency calls"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dental-emergency-triage.html

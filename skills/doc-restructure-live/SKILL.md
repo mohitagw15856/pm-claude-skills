@@ -74,3 +74,5 @@ Guardrails: never overwrite the source — always a new copy; preserve facts and
 - "Make this doc readable — point first — in Cowork."
 - "Tighten this for exec review and give me a new copy."
 - "Reorganise my proposal doc around what the reader has to decide."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/doc-restructure-live.html

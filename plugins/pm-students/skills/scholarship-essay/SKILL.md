@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "I don't know what angle to take for this scholarship — help."
 - "Why-I-deserve-this-scholarship essay, but not cheesy."
 - "Strengthen my draft scholarship essay."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/scholarship-essay.html

@@ -68,3 +68,5 @@ Stalled: "[small scope + company]" · List fight: "[input once + money veto + th
 - "How involved should I be?"
 - "My teenager won't start their essays."
 - "We disagree about the college list."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/college-app-parent-guide.html

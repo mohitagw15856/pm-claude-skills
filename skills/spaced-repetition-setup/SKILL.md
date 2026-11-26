@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "How do I remember what I study instead of forgetting it?"
 - "I keep cramming and forgetting — set me up a real system."
 - "What should I make flashcards for vs. not?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spaced-repetition-setup.html

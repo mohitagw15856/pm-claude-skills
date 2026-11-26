@@ -1,5 +1,5 @@
 ---
-description: "Verify work actually meets its brief BEFORE declaring it done — a structured self-review pass that catches the gaps, unmet requirements, and untested claims that 'looks finished' hides. Use before handing over any deliverable (document, code, analysis, plan), when past work kept coming back with 'you missed…', or as the standing final step of any multi-step task. Produces the verified deliverable plus a short verification record: what was checked, what was found and fixed, what remains open."
+description: "Verify work actually meets its brief BEFORE declaring it done — a structured self-review pass that catches the gaps, unmet requirements, and untested claims that 'looks finished' hides. Use when about to hand over any deliverable (document, code, analysis, plan), when past work kept coming back with 'you missed…', or as the standing final step of any multi-step task. Produces the verified deliverable plus a short verification record: what was checked, what was found and fixed, what remains open."
 globs:
 alwaysApply: false
 ---
@@ -53,3 +53,8 @@ alwaysApply: false
 - "Verify this meets the brief before I send it."
 - "Review my deliverable against the requirements."
 - "What's missing before we call this finished?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/verification-before-completion.html
+
+<!-- pm-claude-skills v84.0.0 | skill: verification-before-completion | source: skills/verification-before-completion/SKILL.md | sha256: fdaa860c9f7101fedb0a26f643b3418e5d21f40245d7132b9916a00024530b87 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

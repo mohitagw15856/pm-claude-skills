@@ -1,0 +1,37 @@
+{
+  "_comment": "The quarterly Skill Hack (docs/skill-hack.md), shown on cup.html and in SKILL-CUP.md. Copied to web/skill-hack.json at deploy. Checked by tests/checks/skill-hack.mjs. A winner is { \"pr\": 123, \"authors\": [\"login\"], \"pack\": \"pack-name\", \"skills\": [\"skill-a\"], \"score\": 4.2 } or \"none\".",
+  "hacks": [
+    {
+      "quarter": "2026-Q4",
+      "opens": "2026-11-01",
+      "closes": "2026-12-31",
+      "theme": "Agents that act for you",
+      "brief": "A pack of skills an assistant runs on a schedule or a trigger for one kind of person: what it watches, what it may do alone, what it must ask about first, and how it reports back.",
+      "winner": null
+    },
+    {
+      "quarter": "2027-Q1",
+      "opens": "2027-01-01",
+      "closes": "2027-03-31",
+      "theme": "Rules that changed",
+      "brief": "A pack that helps a small team meet a rule that changed recently (an AI law duty, a tax change, an accessibility requirement), naming its sources and the dates they apply from.",
+      "winner": null
+    },
+    {
+      "quarter": "2027-Q2",
+      "opens": "2027-04-01",
+      "closes": "2027-06-30",
+      "theme": "Small models, real work",
+      "brief": "A pack that still does good work on a small open model (8B parameters or fewer) running on a laptop: short instructions, explicit structure, no reliance on a frontier model's guesswork.",
+      "winner": null
+    },
+    {
+      "quarter": "2027-Q3",
+      "opens": "2027-07-01",
+      "closes": "2027-09-30",
+      "theme": "Learning and teaching",
+      "brief": "A pack for a course, a bootcamp or self-study: from a syllabus to practice tasks to feedback on a learner's work, usable by a teacher with no budget.",
+      "winner": null
+    }
+  ]
+}

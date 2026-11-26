@@ -61,3 +61,5 @@ A simple, teacher-doable method (tally, rating, frequency) and a review point to
 - "Address a disruptive."
 - "Write a BIP."
 - "Set up positive behavior supports."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/behavior-intervention-plan.html

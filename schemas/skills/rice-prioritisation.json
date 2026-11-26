@@ -1,0 +1,141 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/contract.schema.json",
+  "skill": "rice-prioritisation",
+  "version": 1,
+  "inputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "rice-prioritisation inputs",
+    "type": "object",
+    "properties": {
+      "period": {
+        "type": "string",
+        "description": "Quarter or planning period, e.g. Q1 2027"
+      },
+      "initiatives": {
+        "type": "array",
+        "description": "Initiatives to score",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Initiative name"
+            },
+            "description": {
+              "type": "string",
+              "description": "One-line description"
+            },
+            "reach": {
+              "type": "number",
+              "description": "Users or accounts affected per period"
+            },
+            "impact": {
+              "type": "string",
+              "description": "Standard RICE impact scale",
+              "enum": [
+                "0.25",
+                "0.5",
+                "1",
+                "2",
+                "3"
+              ]
+            },
+            "confidence": {
+              "type": "number",
+              "description": "Confidence as a percentage",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "effort": {
+              "type": "number",
+              "description": "Person-months"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": true
+        }
+      }
+    },
+    "required": [
+      "initiatives"
+    ],
+    "additionalProperties": true
+  },
+  "outputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "rice-prioritisation outputs",
+    "type": "object",
+    "properties": {
+      "period": {
+        "type": "string",
+        "description": ""
+      },
+      "ranked": {
+        "type": "array",
+        "description": "Initiatives ordered by RICE score, highest first",
+        "items": {
+          "type": "object",
+          "properties": {
+            "rank": {
+              "type": "integer",
+              "description": ""
+            },
+            "name": {
+              "type": "string",
+              "description": ""
+            },
+            "reach": {
+              "type": "number",
+              "description": ""
+            },
+            "impact": {
+              "type": "number",
+              "description": ""
+            },
+            "confidence": {
+              "type": "number",
+              "description": ""
+            },
+            "effort": {
+              "type": "number",
+              "description": ""
+            },
+            "score": {
+              "type": "number",
+              "description": "(reach x impact x confidence) / effort"
+            },
+            "assumed": {
+              "type": "array",
+              "description": "Which inputs were estimated by the skill",
+              "items": {
+                "type": "string",
+                "description": ""
+              }
+            }
+          },
+          "required": [
+            "rank",
+            "name",
+            "score"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "recommendation": {
+        "type": "string",
+        "description": "What to do first and what to drop (Markdown)"
+      },
+      "sensitivity": {
+        "type": "string",
+        "description": "Which scores would change rank if an estimate moved (Markdown)"
+      }
+    },
+    "required": [
+      "ranked",
+      "recommendation"
+    ],
+    "additionalProperties": true
+  }
+}

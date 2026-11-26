@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Critique this pitch honestly, no praise."
 - "Where does my argument fall apart?"
 - "Rip into this draft so I can fix it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/poke-holes-in-this.html

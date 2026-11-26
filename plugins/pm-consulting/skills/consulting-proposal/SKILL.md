@@ -64,3 +64,5 @@ Value-based consulting-proposal practice (Alan Weiss-style outcomes-over-hours, 
 - "Write a project proposal for this client."
 - "Pitch this engagement."
 - "Respond to an RFP."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/consulting-proposal.html

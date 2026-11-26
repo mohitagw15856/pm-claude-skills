@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "I only have so much energy."
 - "Help me pace with my chronic illness."
 - "I keep crashing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spoon-planner.html

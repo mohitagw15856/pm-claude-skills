@@ -59,3 +59,5 @@ Ask for these if not provided:
 - "How do I politely decline a wedding I can't attend?"
 - "Write a short apology to a friend I stood up."
 - "Congratulate my teammate on the promotion without sounding fake."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/message-for-the-moment.html

@@ -100,3 +100,5 @@ Feature, PM, Designer, Platform, Design due, Dev handoff dates.
 - "Brief the designer on what to build for [requirement]"
 - "Create a design spec for [feature] for Figma"
 - "What does the designer need to know to design [feature]?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-design-brief.html

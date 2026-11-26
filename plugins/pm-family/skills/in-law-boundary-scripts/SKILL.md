@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "My partner's family gives nonstop unsolicited advice. How do we handle it?"
 - "How do my partner and I present a united front to their parents?"
 - "What do I say when they guilt-trip me for setting a boundary?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/in-law-boundary-scripts.html

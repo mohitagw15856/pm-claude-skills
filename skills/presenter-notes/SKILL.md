@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "I either script everything."
 - "What goes in the notes pane?"
 - "I keep running over time."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/presenter-notes.html

@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Give feedback on this presentation."
 - "Is this ready for the board?"
 - "Our deck reviews are just font opinions."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deck-review-rubric.html

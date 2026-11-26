@@ -78,3 +78,5 @@ Ask for (if not already provided):
 - "What are our rules for using ChatGPT and Claude at work?"
 - "Write acceptable-use rules for Copilot."
 - "Fix an AI policy nobody reads."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-usage-policy.html

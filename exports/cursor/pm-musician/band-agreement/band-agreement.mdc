@@ -47,6 +47,10 @@ Ask for (if not already provided):
   possessive of the name) — the agreement is written toward the real
   band, not the ideal one
 
+## Working from a brief
+
+Given how the band works today, **write the full draft agreement anyway**. Where the band must choose, show the options as decisions marked [A] or [B] with a sensible default suggested for each, and add the plan for the conversation before the studio session. Say plainly that this is a starting draft, not legal advice.
+
 ## Framework
 
 1. **Songs first — writing and recording are different rights.** The
@@ -140,3 +144,8 @@ solo artists dealing with venues.
 - "Who owns our songs?"
 - "Our drummer quit."
 - "What happens?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/band-agreement.html
+
+<!-- pm-claude-skills v84.0.0 | skill: band-agreement | source: skills/band-agreement/SKILL.md | sha256: 192f5917453a01ec359dce51f1d9f2d2d8849fff9642c55c0763e9b43fba01ea | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Our two teams keep colliding."
 - "Define how we'll work with the other team."
 - "Set up the partnership before we start."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/collaboration-contract.html

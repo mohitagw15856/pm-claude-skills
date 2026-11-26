@@ -1,0 +1,4 @@
+{
+  "_comment": "The live Firm's sessions and predictions. Appended by scripts/firm-session.mjs --live, scored by scripts/score-firm-predictions.mjs. Never edit a past entry.",
+  "sessions": []
+}

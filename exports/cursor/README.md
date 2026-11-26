@@ -3,7 +3,11 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1297 skills exported. Copy a `.mdc rule` into the tool to use it.
+1386 skills exported. Copy a `.mdc rule` into the tool to use it.
+
+Every file ends with a provenance comment: library version, source path, the SHA-256 of the source
+`SKILL.md` and the licence. The same hash is published at `https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json`,
+so a copy can be checked against the library with `shasum -a 256` on the source file.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -27,10 +31,14 @@
 | Agent Era Pricing | `pm-agentnative` | `pm-agentnative/agent-era-pricing/agent-era-pricing.mdc` |
 | Agent Hiring Panel | `pm-2027` | `pm-2027/agent-hiring-panel/agent-hiring-panel.mdc` |
 | Agent Incident Postmortem | `pm-agentops` | `pm-agentops/agent-incident-postmortem/agent-incident-postmortem.mdc` |
+| Agent Kill Switch Plan | `pm-duet` | `pm-duet/agent-kill-switch-plan/agent-kill-switch-plan.mdc` |
+| Agent Negotiation Brief | `pm-agentnative` | `pm-agentnative/agent-negotiation-brief/agent-negotiation-brief.mdc` |
 | Agent Observability Spec | `pm-agentops` | `pm-agentops/agent-observability-spec/agent-observability-spec.mdc` |
+| Agent Project File | `pm-agentnative` | `pm-agentnative/agent-project-file/agent-project-file.mdc` |
 | Agent Readiness Audit | `pm-agentnative` | `pm-agentnative/agent-readiness-audit/agent-readiness-audit.mdc` |
 | Agent Severance | `pm-2027` | `pm-2027/agent-severance/agent-severance.mdc` |
 | Agent Spec | `pm-ai` | `pm-ai/agent-spec/agent-spec.mdc` |
+| Agent Spending Mandate | `pm-agentnative` | `pm-agentnative/agent-spending-mandate/agent-spending-mandate.mdc` |
 | Aging-in-Place Assessment | `pm-caregiving` | `pm-caregiving/aging-in-place-assessment/aging-in-place-assessment.mdc` |
 | Aging Parent Talks | `pm-aging-parents` | `pm-aging-parents/aging-parent-talks/aging-parent-talks.mdc` |
 | AGM In A Box | `pm-committee` | `pm-committee/agm-in-a-box/agm-in-a-box.mdc` |
@@ -64,6 +72,7 @@
 | Appliance Buying Guide | `pm-lifeadmin` | `pm-lifeadmin/appliance-buying-guide/appliance-buying-guide.mdc` |
 | Application Tracker | `pm-cv` | `pm-cv/application-tracker/application-tracker.mdc` |
 | Apprentice First Week | `pm-trades` | `pm-trades/apprentice-first-week/apprentice-first-week.mdc` |
+| Approval Policy Designer | `pm-duet` | `pm-duet/approval-policy-designer/approval-policy-designer.mdc` |
 | Architectural Programme Brief | `pm-architecture` | `pm-architecture/architectural-programme-brief/architectural-programme-brief.mdc` |
 | Architectural Specification Section | `pm-architecture` | `pm-architecture/architectural-specification/architectural-specification.mdc` |
 | Architecture Client Presentation | `pm-architecture` | `pm-architecture/architecture-client-presentation/architecture-client-presentation.mdc` |
@@ -96,6 +105,7 @@
 | Bennett Time Audit | `pm-dead-mentors` | `pm-dead-mentors/bennett-time-audit/bennett-time-audit.mdc` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/bid-tender-review.mdc` |
 | Big-Purchase Timing | `pm-money` | `pm-money/big-purchase-timing/big-purchase-timing.mdc` |
+| B 站视频脚本 | `pm-zh-content` | `pm-zh-content/bilibili-video-script/bilibili-video-script.mdc` |
 | Bilingual CV, Chinese and English | `pm-cv` | `pm-cv/bilingual-cv-zh-en/bilingual-cv-zh-en.mdc` |
 | Birdwatching Log | `pm-hobbies` | `pm-hobbies/birdwatching-log/birdwatching-log.mdc` |
 | Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/blast-radius-drill.mdc` |
@@ -111,6 +121,8 @@
 | Bookkeeping Categorization | `pm-accounting` | `pm-accounting/bookkeeping-categorization/bookkeeping-categorization.mdc` |
 | Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/boolean-search-builder.mdc` |
 | Boundary-Setting Scripts | `other` | `other/boundary-setting-scripts/boundary-setting-scripts.mdc` |
+| IRPF Prep (Brazil) | `pm-latam` | `pm-latam/br-irpf-prep/br-irpf-prep.mdc` |
+| Rescisão CLT (Brazil) | `pm-latam` | `pm-latam/br-rescisao-clt/br-rescisao-clt.mdc` |
 | Brag Doc | `pm-career` | `pm-career/brag-doc/brag-doc.mdc` |
 | Brainstorming | `pm-method` | `pm-method/brainstorming/brainstorming.mdc` |
 | Brand Guidelines | `pm-design` | `pm-design/brand-guidelines/brand-guidelines.mdc` |
@@ -149,6 +161,7 @@
 | Case for Support | `pm-nonprofit` | `pm-nonprofit/case-for-support/case-for-support.mdc` |
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/case-study-writeup.mdc` |
 | Cash Flow Forecast | `pm-accounting` | `pm-accounting/cash-flow-forecast/cash-flow-forecast.mdc` |
+| Cash Watch | `pm-duet` | `pm-duet/cash-watch/cash-watch.mdc` |
 | Category Page Brief | `pm-ecommerce` | `pm-ecommerce/category-page-brief/category-page-brief.mdc` |
 | Cease-and-Desist Letter | `pm-legal` | `pm-legal/cease-and-desist-letter/cease-and-desist-letter.mdc` |
 | Change Management Plan | `pm-hr` | `pm-hr/change-management-plan/change-management-plan.mdc` |
@@ -186,6 +199,7 @@
 | Clip Factory | `pm-newgen` | `pm-newgen/clip-factory/clip-factory.mdc` |
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/clone-brief.mdc` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/closing-disclosure-decoder.mdc` |
+| 1688 批发 Listing | `pm-china-ecommerce` | `pm-china-ecommerce/cn-1688-wholesale-listing/cn-1688-wholesale-listing.mdc` |
 | 5S / 6S Audit (5S / 6S 检查表) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-5s-audit/cn-5s-audit.mdc` |
 | 8D Report (8D 报告) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-8d-report/cn-8d-report.mdc` |
 | Campus Recruitment (校招) | `pm-china-exams` | `pm-china-exams/cn-campus-recruitment/cn-campus-recruitment.mdc` |
@@ -193,13 +207,20 @@
 | Civil Service Essay (申论) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-essay/cn-civil-exam-essay.mdc` |
 | Civil Service Interview (结构化面试) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-interview/cn-civil-exam-interview.mdc` |
 | Class Meeting Plan (主题班会方案) | `pm-china-teachers` | `pm-china-teachers/cn-class-meeting/cn-class-meeting.mdc` |
+| 公司注册 | `pm-china-startup` | `pm-china-startup/cn-company-registration/cn-company-registration.mdc` |
+| 电商客服话术 | `pm-china-ecommerce` | `pm-china-ecommerce/cn-customer-service-scripts/cn-customer-service-scripts.mdc` |
 | Customs Documents (报关单证清单) | `pm-china-trade` | `pm-china-trade/cn-customs-docs/cn-customs-docs.mdc` |
 | Data Export Assessment (数据出境) | `pm-china-compliance` | `pm-china-compliance/cn-data-export-assessment/cn-data-export-assessment.mdc` |
+| 大促方案（双 11 / 618） | `pm-china-ecommerce` | `pm-china-ecommerce/cn-double11-promotion-plan/cn-double11-promotion-plan.mdc` |
+| 国内电商商品 Listing | `pm-china-ecommerce` | `pm-china-ecommerce/cn-ecommerce-listing/cn-ecommerce-listing.mdc` |
+| 创始人股权分配 | `pm-china-startup` | `pm-china-startup/cn-equity-split/cn-equity-split.mdc` |
 | Extracurricular Planner (兴趣班与课外安排) | `pm-china-parents` | `pm-china-parents/cn-extracurricular-plan/cn-extracurricular-plan.mdc` |
+| 融资商业计划书（BP） | `pm-china-startup` | `pm-china-startup/cn-financing-bp/cn-financing-bp.mdc` |
 | 复盘 (Fupan) | `pm-china-work` | `pm-china-work/cn-fupan/cn-fupan.mdc` |
 | Gaokao Application Planner (高考志愿) | `pm-china-life` | `pm-china-life/cn-gaokao-planner/cn-gaokao-planner.mdc` |
 | Generative AI Filing (生成式人工智能备案) | `pm-china-compliance` | `pm-china-compliance/cn-genai-filing/cn-genai-filing.mdc` |
 | Helping Parents With Admin (帮爸妈办事) | `pm-china-life` | `pm-china-life/cn-help-parents-admin/cn-help-parents-admin.mdc` |
+| 高新技术企业认定申报 | `pm-china-startup` | `pm-china-startup/cn-high-tech-enterprise-application/cn-high-tech-enterprise-application.mdc` |
 | Home-School Messages (家校沟通) | `pm-china-parents` | `pm-china-parents/cn-home-school-comms/cn-home-school-comms.mdc` |
 | Homework Guide for Parents (家长辅导作业) | `pm-china-parents` | `pm-china-parents/cn-homework-helper-parent/cn-homework-helper-parent.mdc` |
 | Housing Fund Withdrawal (公积金提取) | `pm-china-life` | `pm-china-life/cn-housing-fund-withdrawal/cn-housing-fund-withdrawal.mdc` |
@@ -222,6 +243,7 @@
 | PRD Review (需求评审) | `pm-china-work` | `pm-china-work/cn-prd-review/cn-prd-review.mdc` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/cn-promotion-defence.mdc` |
 | Quality Traceability Plan (质量追溯方案) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-quality-traceability/cn-quality-traceability.mdc` |
+| 海归求职 | `pm-china-study-abroad` | `pm-china-study-abroad/cn-returnee-job-search/cn-returnee-job-search.mdc` |
 | School Entry Planner (幼升小 / 小升初) | `pm-china-parents` | `pm-china-parents/cn-school-entry/cn-school-entry.mdc` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/cn-severance-calculator.mdc` |
 | 述职 PPT Builder (述职 PPT 大纲与讲稿) | `pm-china-yearend` | `pm-china-yearend/cn-shuzhi-deck/cn-shuzhi-deck.mdc` |
@@ -229,6 +251,9 @@
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/cn-social-insurance-explainer.mdc` |
 | State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `pm-china-exams/cn-soe-interview/cn-soe-interview.mdc` |
 | Work Instruction (作业指导书 / SOP) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-sop-writer/cn-sop-writer.mdc` |
+| 留学申请文书 | `pm-china-study-abroad` | `pm-china-study-abroad/cn-study-abroad-essay/cn-study-abroad-essay.mdc` |
+| 留学签证准备 | `pm-china-study-abroad` | `pm-china-study-abroad/cn-study-visa-prep/cn-study-visa-prep.mdc` |
+| 补贴与政策申报 | `pm-china-startup` | `pm-china-startup/cn-subsidy-filing/cn-subsidy-filing.mdc` |
 | Tech Interview Drill (大厂技术面试) | `pm-china-exams` | `pm-china-exams/cn-tech-interview-drill/cn-tech-interview-drill.mdc` |
 | End-of-Term Comments (期末评语) | `pm-china-teachers` | `pm-china-teachers/cn-term-comments/cn-term-comments.mdc` |
 | Thesis Proposal (开题报告) | `pm-china-exams` | `pm-china-exams/cn-thesis-proposal/cn-thesis-proposal.mdc` |
@@ -236,8 +261,11 @@
 | Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/cn-weekly-report.mdc` |
 | Year-End Bonus Clarifier (年终奖、13薪与个税) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-bonus/cn-year-end-bonus.mdc` |
 | Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-review/cn-year-end-review.mdc` |
+| 专精特新申报 | `pm-china-startup` | `pm-china-startup/cn-zhuanjingtexin-application/cn-zhuanjingtexin-application.mdc` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/co-marketing.mdc` |
 | Co-Parenting Messages | `pm-family` | `pm-family/co-parenting-messages/co-parenting-messages.mdc` |
+| Coaching Season Plan | `pm-sports-coaching` | `pm-sports-coaching/coaching-season-plan/coaching-season-plan.mdc` |
+| Coaching Session Plan | `pm-sports-coaching` | `pm-sports-coaching/coaching-session-plan/coaching-session-plan.mdc` |
 | Cocktail From What I Have | `pm-hobbies` | `pm-hobbies/cocktail-from-what-i-have/cocktail-from-what-i-have.mdc` |
 | Code Explainer | `pm-engineering` | `pm-engineering/code-explainer/code-explainer.mdc` |
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/code-review-checklist.mdc` |
@@ -269,6 +297,7 @@
 | Compliance Checklist | `pm-legal` | `pm-legal/compliance-checklist/compliance-checklist.mdc` |
 | Compound-Growth Explainer | `pm-wealth` | `pm-wealth/compound-growth-explainer/compound-growth-explainer.mdc` |
 | Compounding Record | `pm-pharmacy` | `pm-pharmacy/compounding-record/compounding-record.mdc` |
+| Computer-Use Runbook | `pm-agentnative` | `pm-agentnative/computer-use-runbook/computer-use-runbook.mdc` |
 | Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/condolence-message-helper.mdc` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/conference-talk-proposal.mdc` |
 | Conflict De-escalation | `other` | `other/conflict-deescalation/conflict-deescalation.mdc` |
@@ -286,7 +315,8 @@
 | Context Switch Budget | `pm-cowork` | `pm-cowork/context-switch-budget/context-switch-budget.mdc` |
 | Context-Switch Recovery | `pm-focus` | `pm-focus/context-switch-recovery/context-switch-recovery.mdc` |
 | Contract Red Flags | `pm-legal` | `pm-legal/contract-red-flags/contract-red-flags.mdc` |
-| Contract Renewal Tracker | `pm-cowork` | `pm-cowork/contract-renewal-tracker/contract-renewal-tracker.mdc` |
+| Contract Renewal Brief | `pm-procurement` | `pm-procurement/contract-renewal-brief/contract-renewal-brief.mdc` |
+| Contract Renewal Tracker | `pm-procurement` | `pm-procurement/contract-renewal-tracker/contract-renewal-tracker.mdc` |
 | Contract Review | `pm-legal` | `pm-legal/contract-review/contract-review.mdc` |
 | Contractor Dispute | `pm-lifeadmin` | `pm-lifeadmin/contractor-dispute/contractor-dispute.mdc` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/contributor-guide.mdc` |
@@ -303,6 +333,9 @@
 | Credential Recognition | `pm-newcomer` | `pm-newcomer/credential-recognition/credential-recognition.mdc` |
 | Credit From Scratch | `pm-newcomer` | `pm-newcomer/credit-from-scratch/credit-from-scratch.mdc` |
 | Credit Memo | `pm-banking` | `pm-banking/credit-memo/credit-memo.mdc` |
+| CRM Hygiene Sweep | `pm-duet` | `pm-duet/crm-hygiene-sweep/crm-hygiene-sweep.mdc` |
+| Crop Insurance Claim | `pm-insurance` | `pm-insurance/crop-insurance-claim/crop-insurance-claim.mdc` |
+| Crop Season Plan | `pm-agriculture` | `pm-agriculture/crop-season-plan/crop-season-plan.mdc` |
 | Cross-Border Listing | `pm-chuhai` | `pm-chuhai/cross-border-listing/cross-border-listing.mdc` |
 | Cross-Examine Me | `pm-thinking` | `pm-thinking/cross-examine-me/cross-examine-me.mdc` |
 | Cross-border Platform Playbook (跨境平台选择与入驻) | `pm-chuhai` | `pm-chuhai/crossborder-platform-playbook/crossborder-platform-playbook.mdc` |
@@ -318,6 +351,7 @@
 | Customer Success Plan | `pm-cs` | `pm-cs/customer-success-plan/customer-success-plan.mdc` |
 | CV Word Export | `pm-cv` | `pm-cv/cv-docx-export/cv-docx-export.mdc` |
 | CV Honesty Check | `pm-cv` | `pm-cv/cv-honesty-check/cv-honesty-check.mdc` |
+| Daily Cash Book | `pm-sidehustle` | `pm-sidehustle/daily-cash-book/daily-cash-book.mdc` |
 | Dashboard Brief | `pm-data` | `pm-data/dashboard-brief/dashboard-brief.mdc` |
 | Data Analysis Standard | `pm-analytics` | `pm-analytics/data-analysis-standard/data-analysis-standard.mdc` |
 | Data Breach Response | `pm-scam-defense` | `pm-scam-defense/data-breach-response/data-breach-response.mdc` |
@@ -335,6 +369,9 @@
 | Dating Profile Doctor | `pm-newgen` | `pm-newgen/dating-profile-doctor/dating-profile-doctor.mdc` |
 | Daycare vs Stay-Home | `pm-calculators` | `pm-calculators/daycare-vs-stay-home/daycare-vs-stay-home.mdc` |
 | dbt Model Spec | `pm-dataeng` | `pm-dataeng/dbt-model-spec/dbt-model-spec.mdc` |
+| Arbeitszeugnis Decoder (Germany) | `pm-dach` | `pm-dach/de-arbeitszeugnis-decoder/de-arbeitszeugnis-decoder.mdc` |
+| Kündigungsfrist Check (Germany) | `pm-dach` | `pm-dach/de-kuendigungsfrist-check/de-kuendigungsfrist-check.mdc` |
+| Steuererklärung Prep (Germany) | `pm-dach` | `pm-dach/de-steuererklaerung-prep/de-steuererklaerung-prep.mdc` |
 | Debt Collector Response | `pm-money` | `pm-money/debt-collector-response/debt-collector-response.mdc` |
 | Debt-Collector Scripts | `pm-hardship` | `pm-hardship/debt-collector-scripts/debt-collector-scripts.mdc` |
 | Debt Payoff | `pm-calculators` | `pm-calculators/debt-payoff/debt-payoff.mdc` |
@@ -432,9 +469,11 @@
 | Email Triage System | `pm-cowork` | `pm-cowork/email-triage-system/email-triage-system.mdc` |
 | Emergency Doc Kit | `pm-emergency` | `pm-emergency/emergency-doc-kit/emergency-doc-kit.mdc` |
 | Emergency Fund | `pm-calculators` | `pm-calculators/emergency-fund/emergency-fund.mdc` |
+| Emergency Grant Application | `pm-emergency` | `pm-emergency/emergency-grant-application/emergency-grant-application.mdc` |
 | Emil Design Eng (pointer) | `pm-design-taste` | `pm-design-taste/emil-design-eng-pointer/emil-design-eng-pointer.mdc` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/employee-engagement-survey.mdc` |
 | Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/empty-state-writer.mdc` |
+| End Of Day Report | `pm-duet` | `pm-duet/end-of-day-report/end-of-day-report.mdc` |
 | End-of-Life Wishes Conversation | `pm-caregiving` | `pm-caregiving/end-of-life-wishes-conversation/end-of-life-wishes-conversation.mdc` |
 | Energy Scheduling | `pm-cowork` | `pm-cowork/energy-scheduling/energy-scheduling.mdc` |
 | Engagement Retro | `pm-consulting` | `pm-consulting/engagement-retro/engagement-retro.mdc` |
@@ -496,6 +535,9 @@
 | Family Emergency Plan | `pm-family` | `pm-family/family-emergency-plan/family-emergency-plan.mdc` |
 | Fantasy League Drafter | `pm-hobbies` | `pm-hobbies/fantasy-league-drafter/fantasy-league-drafter.mdc` |
 | FAQ Builder | `pm-cowork` | `pm-cowork/faq-builder/faq-builder.mdc` |
+| Farm Buyer Contract Check | `pm-agriculture` | `pm-agriculture/farm-buyer-contract-check/farm-buyer-contract-check.mdc` |
+| Farm Records Book | `pm-agriculture` | `pm-agriculture/farm-records-book/farm-records-book.mdc` |
+| Farm Subsidy Application | `pm-agriculture` | `pm-agriculture/farm-subsidy-application/farm-subsidy-application.mdc` |
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/feature-flag-guide.mdc` |
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/feature-prioritisation.mdc` |
 | Feature Sunset Plan | `pm-planning` | `pm-planning/feature-sunset-plan/feature-sunset-plan.mdc` |
@@ -541,6 +583,7 @@
 | Follow-Up Chaser | `pm-cowork` | `pm-cowork/follow-up-chaser/follow-up-chaser.mdc` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/follow-up-sequence.mdc` |
 | Follow-up Sweep (Live) | `pm-cowork-live` | `pm-cowork-live/followup-sweep/followup-sweep.mdc` |
+| Form Explainer | `pm-decoders` | `pm-decoders/form-explainer/form-explainer.mdc` |
 | Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/form-filler-operator.mdc` |
 | Formula Detangler | `pm-cowork` | `pm-cowork/formula-detangler/formula-detangler.mdc` |
 | Fortnightly Release Planner | `pm-oss-launch` | `pm-oss-launch/fortnightly-release-planner/fortnightly-release-planner.mdc` |
@@ -552,6 +595,7 @@
 | From First Principles | `pm-thinking` | `pm-thinking/from-first-principles/from-first-principles.mdc` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/frontend-design.mdc` |
 | Frontend Design (pointer) | `pm-design-taste` | `pm-design-taste/frontend-design-pointer/frontend-design-pointer.mdc` |
+| Functional Assessment Prep | `pm-accessibility` | `pm-accessibility/functional-assessment-prep/functional-assessment-prep.mdc` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.mdc` |
 | Funeral Pricing Decoder | `pm-decoders` | `pm-decoders/funeral-pricing-decoder/funeral-pricing-decoder.mdc` |
 | Future Self Interview | `other` | `other/future-self-interview/future-self-interview.mdc` |
@@ -582,6 +626,8 @@
 | Group Trip Negotiator | `other` | `other/group-trip-negotiator/group-trip-negotiator.mdc` |
 | Growth Experiment Backlog | `pm-growth` | `pm-growth/growth-experiment-backlog/growth-experiment-backlog.mdc` |
 | Guest Incident Log | `pm-hospitality` | `pm-hospitality/guest-incident-log/guest-incident-log.mdc` |
+| Gulf Job Offer Check | `pm-mena` | `pm-mena/gulf-job-offer-check/gulf-job-offer-check.mdc` |
+| Gulf Residence Visa Admin | `pm-mena` | `pm-mena/gulf-residence-visa-admin/gulf-residence-visa-admin.mdc` |
 | Habit Builder | `pm-wellbeing` | `pm-wellbeing/habit-builder/habit-builder.mdc` |
 | Handbook Page | `pm-cowork` | `pm-cowork/handbook-page/handbook-page.mdc` |
 | Hardware PRD | `pm-hardware` | `pm-hardware/hardware-prd/hardware-prd.mdc` |
@@ -626,7 +672,13 @@
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/impact-report.mdc` |
 | Impeccable (pointer) | `pm-design-taste` | `pm-design-taste/impeccable-pointer/impeccable-pointer.mdc` |
 | Importer Scaffolder | `pm-oss-launch` | `pm-oss-launch/importer-scaffolder/importer-scaffolder.mdc` |
+| EPF Withdrawal Guide (India) | `pm-india` | `pm-india/in-epf-withdrawal-guide/in-epf-withdrawal-guide.mdc` |
+| Gratuity Calculator (India) | `pm-india` | `pm-india/in-gratuity-calculator/in-gratuity-calculator.mdc` |
+| GST Return Explainer (India) | `pm-india` | `pm-india/in-gst-return-explainer/in-gst-return-explainer.mdc` |
+| Income Tax Regime Chooser (India) | `pm-india` | `pm-india/in-income-tax-regime-chooser/in-income-tax-regime-chooser.mdc` |
+| Labour Codes Decoder (India) | `pm-india` | `pm-india/in-labour-codes-decoder/in-labour-codes-decoder.mdc` |
 | In-Law Boundary Scripts | `pm-family` | `pm-family/in-law-boundary-scripts/in-law-boundary-scripts.mdc` |
+| Notice Period and Full and Final Settlement (India) | `pm-india` | `pm-india/in-notice-period-fnf-settlement/in-notice-period-fnf-settlement.mdc` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/inbox-triage-live.mdc` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/inbox-unsubscribe-purge.mdc` |
 | Inbox Zero Operator | `pm-operator` | `pm-operator/inbox-zero-operator/inbox-zero-operator.mdc` |
@@ -643,6 +695,7 @@
 | Insurance Claim | `pm-lifeadmin` | `pm-lifeadmin/insurance-claim/insurance-claim.mdc` |
 | Insurance Claim Appeal | `pm-insurance` | `pm-insurance/insurance-claim-appeal/insurance-claim-appeal.mdc` |
 | Insurance Policy Decoder | `pm-decoders` | `pm-decoders/insurance-policy-decoder/insurance-policy-decoder.mdc` |
+| Interrupt Rules | `pm-duet` | `pm-duet/interrupt-rules/interrupt-rules.mdc` |
 | Interview Me | `pm-method` | `pm-method/interview-me/interview-me.mdc` |
 | Interview Prep | `pm-jobsearch` | `pm-jobsearch/interview-prep/interview-prep.mdc` |
 | Interview Question Bank | `pm-recruiting` | `pm-recruiting/interview-question-bank/interview-question-bank.mdc` |
@@ -677,6 +730,8 @@
 | Jury Duty Navigator | `pm-civic` | `pm-civic/jury-duty-navigator/jury-duty-navigator.mdc` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/karaoke-song-picker.mdc` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/kb-audit.mdc` |
+| M-Pesa Reversal and Dispute (Kenya) | `pm-africa` | `pm-africa/ke-mpesa-reversal-dispute/ke-mpesa-reversal-dispute.mdc` |
+| Kenyan Payslip Decoder | `pm-africa` | `pm-africa/ke-payslip-decoder/ke-payslip-decoder.mdc` |
 | Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/kids-online-safety-plan.mdc` |
 | Knowledge-Gap Map | `pm-learning` | `pm-learning/knowledge-gap-map/knowledge-gap-map.mdc` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.mdc` |
@@ -685,6 +740,7 @@
 | Korea Severance Pay (퇴직금) | `pm-korea` | `pm-korea/kr-severance-pay/kr-severance-pay.mdc` |
 | Korean Business Report (보고서 and 주간보고) | `pm-korea` | `pm-korea/kr-work-report/kr-work-report.mdc` |
 | Korea Year-End Tax Settlement (연말정산) | `pm-korea` | `pm-korea/kr-year-end-tax-settlement/kr-year-end-tax-settlement.mdc` |
+| KSA Labour Contract Decoder | `pm-mena` | `pm-mena/ksa-labour-contract-decoder/ksa-labour-contract-decoder.mdc` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/kyc-escalation.mdc` |
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/landing-page-copy.mdc` |
 | Language-Learning Plan | `pm-students` | `pm-students/language-learning-plan/language-learning-plan.mdc` |
@@ -725,6 +781,7 @@
 | Logistics Incident Report | `pm-supplychain` | `pm-supplychain/logistics-incident-report/logistics-incident-report.mdc` |
 | Long-Distance Relationship Plan | `pm-family` | `pm-family/long-distance-relationship-plan/long-distance-relationship-plan.mdc` |
 | Long-Term Care Options | `pm-caregiving` | `pm-caregiving/long-term-care-options/long-term-care-options.mdc` |
+| Lost Documents Replacement | `pm-emergency` | `pm-emergency/lost-documents-replacement/lost-documents-replacement.mdc` |
 | Love-Letter Helper | `pm-family` | `pm-family/love-letter-helper/love-letter-helper.mdc` |
 | Lower My Bill | `pm-money` | `pm-money/lower-my-bill/lower-my-bill.mdc` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/machiavelli-counsel.mdc` |
@@ -734,10 +791,12 @@
 | Malaysia EPF Explainer (KWSP) | `pm-sea` | `pm-sea/malaysia-epf-explainer/malaysia-epf-explainer.mdc` |
 | Manager First 90 Days | `pm-people` | `pm-people/manager-first-90-days/manager-first-90-days.mdc` |
 | Managing Up | `pm-comms` | `pm-comms/managing-up/managing-up.mdc` |
+| Market Stall Pricing | `pm-sidehustle` | `pm-sidehustle/market-stall-pricing/market-stall-pricing.mdc` |
 | Marketing Funnel Plan | `pm-growth` | `pm-growth/marketing-funnel-plan/marketing-funnel-plan.mdc` |
 | Marketing Psychology | `pm-growth` | `pm-growth/marketing-psychology/marketing-psychology.mdc` |
 | Marketplace Listing Optimizer | `pm-ecommerce` | `pm-ecommerce/marketplace-listing-optimizer/marketplace-listing-optimizer.mdc` |
 | Masking Budget | `pm-neurodivergent` | `pm-neurodivergent/masking-budget/masking-budget.mdc` |
+| Match Review | `pm-sports-coaching` | `pm-sports-coaching/match-review/match-review.mdc` |
 | MCP Server Spec | `pm-agentnative` | `pm-agentnative/mcp-server-spec/mcp-server-spec.mdc` |
 | Meal Prep OS | `pm-kitchen` | `pm-kitchen/meal-prep-os/meal-prep-os.mdc` |
 | Mechanic Quote Decoder | `other` | `other/mechanic-quote-decoder/mechanic-quote-decoder.mdc` |
@@ -765,6 +824,7 @@
 | Metrics Framework | `pm-data` | `pm-data/metrics-framework/metrics-framework.mdc` |
 | Micro Retirement Planner | `pm-newgen` | `pm-newgen/micro-retirement-planner/micro-retirement-planner.mdc` |
 | Microcopy Writer | `pm-uxwriting` | `pm-uxwriting/microcopy-writer/microcopy-writer.mdc` |
+| Microloan Comparison | `pm-money` | `pm-money/microloan-comparison/microloan-comparison.mdc` |
 | Microservices Decomposition | `pm-engineering` | `pm-engineering/microservices-decomposition/microservices-decomposition.mdc` |
 | Migration Day Runbook | `pm-cowork` | `pm-cowork/migration-day-runbook/migration-day-runbook.mdc` |
 | Mind Map | `pm-visuals` | `pm-visuals/mind-map/mind-map.mdc` |
@@ -776,11 +836,14 @@
 | Money Mindset Reset | `pm-wealth` | `pm-wealth/money-mindset-reset/money-mindset-reset.mdc` |
 | Money Priorities Order | `pm-money` | `pm-money/money-priorities-order/money-priorities-order.mdc` |
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/monitoring-setup-guide.mdc` |
+| Morning Brief Designer | `pm-duet` | `pm-duet/morning-brief-designer/morning-brief-designer.mdc` |
 | Morning Intelligence | `pm-operations` | `pm-operations/morning-intelligence/morning-intelligence.mdc` |
 | Moving Company Estimate Decoder | `pm-decoders` | `pm-decoders/moving-company-estimate-decoder/moving-company-estimate-decoder.mdc` |
 | Moving House Checklist | `pm-lifeadmin` | `pm-lifeadmin/moving-house-checklist/moving-house-checklist.mdc` |
 | Moving-Quote Decoder | `pm-lifeadmin` | `pm-lifeadmin/moving-quote-decoder/moving-quote-decoder.mdc` |
 | Multi-Source Signal Synthesiser | `pm-advanced` | `pm-advanced/multi-source-signal-synthesiser/multi-source-signal-synthesiser.mdc` |
+| Declaración Anual Prep (Mexico) | `pm-latam` | `pm-latam/mx-declaracion-anual-prep/mx-declaracion-anual-prep.mdc` |
+| Finiquito y Liquidación (Mexico) | `pm-latam` | `pm-latam/mx-finiquito-liquidacion/mx-finiquito-liquidacion.mdc` |
 | My Energy Map | `pm-focus` | `pm-focus/my-energy-map/my-energy-map.mdc` |
 | My Failure Museum | `pm-focus` | `pm-focus/my-failure-museum/my-failure-museum.mdc` |
 | Name Change Navigator | `pm-identity` | `pm-identity/name-change-navigator/name-change-navigator.mdc` |
@@ -793,14 +856,21 @@
 | New-Baby Logistics | `pm-family` | `pm-family/new-baby-logistics/new-baby-logistics.mdc` |
 | New Manager: First 90 Days | `pm-career` | `pm-career/new-manager-first-90-days/new-manager-first-90-days.mdc` |
 | New Parent Logistics | `pm-lifeadmin` | `pm-lifeadmin/new-parent-logistics/new-parent-logistics.mdc` |
+| Newcomer School Enrolment | `pm-newcomer` | `pm-newcomer/newcomer-school-enrolment/newcomer-school-enrolment.mdc` |
 | Newsletter Digest Brief | `pm-cowork` | `pm-cowork/newsletter-digest-brief/newsletter-digest-brief.mdc` |
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/newsletter-writer.mdc` |
+| Nigerian Payslip Decoder | `pm-africa` | `pm-africa/ng-payslip-decoder/ng-payslip-decoder.mdc` |
+| Nigerian Pension RSA Guide | `pm-africa` | `pm-africa/ng-pension-rsa-guide/ng-pension-rsa-guide.mdc` |
 | Note-Taking System | `pm-learning` | `pm-learning/note-taking-system/note-taking-system.mdc` |
 | NotebookLM Connector | `pm-cross` | `pm-cross/notebooklm-connector/notebooklm-connector.mdc` |
 | Notes Humanizer | `pm-writers` | `pm-writers/notes-humanizer/notes-humanizer.mdc` |
 | Notify Everyone of a Death | `pm-grief` | `pm-grief/notify-everyone-of-a-death/notify-everyone-of-a-death.mdc` |
 | Notion DB Hygiene (Live) | `pm-cowork-live` | `pm-cowork-live/notion-db-hygiene/notion-db-hygiene.mdc` |
 | NT Translator | `pm-neurodivergent` | `pm-neurodivergent/nt-translator/nt-translator.mdc` |
+| Nursing Care Plan | `pm-nursing` | `pm-nursing/nursing-care-plan/nursing-care-plan.mdc` |
+| Nursing Family Update | `pm-nursing` | `pm-nursing/nursing-family-update/nursing-family-update.mdc` |
+| Nursing Incident Report | `pm-nursing` | `pm-nursing/nursing-incident-report/nursing-incident-report.mdc` |
+| Nursing Shift Handover | `pm-nursing` | `pm-nursing/nursing-shift-handover/nursing-shift-handover.mdc` |
 | Offer Comparison | `pm-calculators` | `pm-calculators/offer-comparison/offer-comparison.mdc` |
 | Offer Letter | `pm-recruiting` | `pm-recruiting/offer-letter/offer-letter.mdc` |
 | Office Hours Design | `pm-cowork` | `pm-cowork/office-hours-design/office-hours-design.mdc` |
@@ -837,6 +907,7 @@
 | Patient Communication | `pm-research` | `pm-research/patient-communication/patient-communication.mdc` |
 | Patient Education Explainer | `pm-physio` | `pm-physio/patient-education-explainer/patient-education-explainer.mdc` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/pay-stub-decoder.mdc` |
+| Payroll Eve Check | `pm-duet` | `pm-duet/payroll-eve-check/payroll-eve-check.mdc` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/paywall-optimization.mdc` |
 | Penetration Test Report | `pm-security` | `pm-security/pentest-report/pentest-report.mdc` |
 | Performance Budget | `pm-engineering` | `pm-engineering/performance-budget/performance-budget.mdc` |
@@ -850,6 +921,7 @@
 | Personal WIP Limits | `pm-cowork` | `pm-cowork/personal-wip-limits/personal-wip-limits.mdc` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/persuasion-brief.mdc` |
 | Pharmacy Counselling Script | `pm-pharmacy` | `pm-pharmacy/pharmacy-counselling-script/pharmacy-counselling-script.mdc` |
+| PhD Supervisor Update | `pm-phd` | `pm-phd/phd-supervisor-update/phd-supervisor-update.mdc` |
 | Phishing Triage | `pm-digital-safety` | `pm-digital-safety/phishing-triage/phishing-triage.mdc` |
 | Photo Library Rescue | `pm-cowork` | `pm-cowork/photo-library-rescue/photo-library-rescue.mdc` |
 | Physiotherapy Discharge Summary | `pm-physio` | `pm-physio/physio-discharge-summary/physio-discharge-summary.mdc` |
@@ -883,6 +955,7 @@
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/prd-template.mdc` |
 | Pre-Mortem Panel | `pm-thinking` | `pm-thinking/pre-mortem-panel/pre-mortem-panel.mdc` |
 | Premortem Assassin | `pm-warroom` | `pm-warroom/premortem-assassin/premortem-assassin.mdc` |
+| Prepare For Duet | `pm-duet` | `pm-duet/prepare-for-duet/prepare-for-duet.mdc` |
 | Prescription Cost Navigator | `pm-lifeadmin` | `pm-lifeadmin/prescription-cost-navigator/prescription-cost-navigator.mdc` |
 | Declining to Dispense | `pm-pharmacy` | `pm-pharmacy/prescription-refusal-to-fill/prescription-refusal-to-fill.mdc` |
 | Presenter Notes | `pm-cowork` | `pm-cowork/presenter-notes/presenter-notes.mdc` |
@@ -983,6 +1056,7 @@
 | Rent Increase Response | `pm-renters` | `pm-renters/rent-increase-response/rent-increase-response.mdc` |
 | Rent vs Buy | `pm-calculators` | `pm-calculators/rent-vs-buy/rent-vs-buy.mdc` |
 | Rental Application | `pm-lifeadmin` | `pm-lifeadmin/rental-application/rental-application.mdc` |
+| Renting After Disaster Damage | `pm-renters` | `pm-renters/renting-after-disaster-damage/renting-after-disaster-damage.mdc` |
 | Repair After a Fight | `other` | `other/repair-after-a-fight/repair-after-a-fight.mdc` |
 | Repair Request Escalation | `pm-renters` | `pm-renters/repair-request-escalation/repair-request-escalation.mdc` |
 | Reply In Their Tone | `pm-cowork` | `pm-cowork/reply-in-their-tone/reply-in-their-tone.mdc` |
@@ -994,6 +1068,7 @@
 | Resignation Letter | `pm-resignation` | `pm-resignation/resignation-letter/resignation-letter.mdc` |
 | Respite-Care Plan | `pm-caregiving` | `pm-caregiving/respite-care-plan/respite-care-plan.mdc` |
 | Resume | `pm-personal` | `pm-personal/resume/resume.mdc` |
+| Retail Shift Handover | `pm-retail-shopfloor` | `pm-retail-shopfloor/retail-shift-handover/retail-shift-handover.mdc` |
 | Retention Analysis | `pm-analytics` | `pm-analytics/retention-analysis/retention-analysis.mdc` |
 | Retention Loop Design | `pm-growth` | `pm-growth/retention-loop-design/retention-loop-design.mdc` |
 | Retrospective Analysis | `pm-delivery` | `pm-delivery/retro-analysis/retro-analysis.mdc` |
@@ -1002,11 +1077,12 @@
 | Returner CV | `pm-cv` | `pm-cv/returner-cv/returner-cv.mdc` |
 | Review Comments Resolver | `pm-cowork` | `pm-cowork/review-comments-resolver/review-comments-resolver.mdc` |
 | Review Response | `pm-ecommerce` | `pm-ecommerce/review-response/review-response.mdc` |
+| Reviewer Rebuttal Letter | `pm-phd` | `pm-phd/reviewer-rebuttal-letter/reviewer-rebuttal-letter.mdc` |
 | Rewards Optimizer | `pm-money` | `pm-money/rewards-optimizer/rewards-optimizer.mdc` |
 | RFC Writer | `pm-engineering` | `pm-engineering/rfc-writer/rfc-writer.mdc` |
-| RFP Response | `pm-gov` | `pm-gov/rfp-response/rfp-response.mdc` |
+| RFP Response | `pm-procurement` | `pm-procurement/rfp-response/rfp-response.mdc` |
 | RFP Scoring Matrix | `pm-supplychain` | `pm-supplychain/rfp-scoring-matrix/rfp-scoring-matrix.mdc` |
-| RFP Writer | `pm-operations` | `pm-operations/rfp-writer/rfp-writer.mdc` |
+| RFP Writer | `pm-procurement` | `pm-procurement/rfp-writer/rfp-writer.mdc` |
 | RICE + Strategic Alignment | `pm-planning` | `pm-planning/rice-impact-matrix/rice-impact-matrix.mdc` |
 | RICE Prioritisation | `pm-planning` | `pm-planning/rice-prioritisation/rice-prioritisation.mdc` |
 | Risk Register | `pm-operations` | `pm-operations/risk-register/risk-register.mdc` |
@@ -1055,6 +1131,7 @@
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/security-threat-model.mdc` |
 | Self-Host Packager | `pm-oss-launch` | `pm-oss-launch/self-host-packager/self-host-packager.mdc` |
 | Self-Review | `pm-career` | `pm-career/self-review/self-review.mdc` |
+| Send Approval Check | `pm-duet` | `pm-duet/send-approval-check/send-approval-check.mdc` |
 | Sensory Audit | `pm-neurodivergent` | `pm-neurodivergent/sensory-audit/sensory-audit.mdc` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/seo-content-brief.mdc` |
 | Sequence Diagram | `pm-visuals` | `pm-visuals/sequence-diagram/sequence-diagram.mdc` |
@@ -1062,15 +1139,19 @@
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/service-catalog-entry.mdc` |
 | Session Handoff | `pm-tokens` | `pm-tokens/session-handoff/session-handoff.mdc` |
 | Severance Agreement Decoder | `pm-layoff` | `pm-layoff/severance-agreement-decoder/severance-agreement-decoder.mdc` |
+| Shared Agent Charter | `pm-duet` | `pm-duet/shared-agent-charter/shared-agent-charter.mdc` |
 | Shared Drive Cleanup | `pm-cowork` | `pm-cowork/shared-drive-cleanup/shared-drive-cleanup.mdc` |
-| Shift Schedule Builder | `pm-hospitality` | `pm-hospitality/shift-schedule-builder/shift-schedule-builder.mdc` |
+| Shift Schedule Builder | `pm-retail-shopfloor` | `pm-retail-shopfloor/shift-schedule-builder/shift-schedule-builder.mdc` |
 | Ship or Slip | `pm-decisions` | `pm-decisions/ship-or-slip/ship-or-slip.mdc` |
+| 视频号脚本 | `pm-zh-content` | `pm-zh-content/shipinhao-script/shipinhao-script.mdc` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/short-form-script.mdc` |
 | Should I Quit or Push | `pm-focus` | `pm-focus/should-i-quit-or-push/should-i-quit-or-push.mdc` |
 | Should I Send This | `pm-focus` | `pm-focus/should-i-send-this/should-i-send-this.mdc` |
+| Shrink Report | `pm-retail-shopfloor` | `pm-retail-shopfloor/shrink-report/shrink-report.mdc` |
 | Shutdown Ritual | `pm-cowork` | `pm-cowork/shutdown-ritual/shutdown-ritual.mdc` |
 | Sibling Care Summit | `pm-aging-parents` | `pm-aging-parents/sibling-care-summit/sibling-care-summit.mdc` |
 | Side Business Setup | `pm-sidehustle` | `pm-sidehustle/side-business-setup/side-business-setup.mdc` |
+| Signature Pipeline Watch | `pm-duet` | `pm-duet/signature-pipeline-watch/signature-pipeline-watch.mdc` |
 | Singapore CPF Explainer | `pm-sea` | `pm-sea/singapore-cpf-explainer/singapore-cpf-explainer.mdc` |
 | Singapore Employment Act Guide | `pm-sea` | `pm-sea/singapore-employment-act/singapore-employment-act.mdc` |
 | Site Analysis Report | `pm-architecture` | `pm-architecture/site-analysis-report/site-analysis-report.mdc` |
@@ -1102,6 +1183,7 @@
 | Spaced-Repetition Setup | `pm-learning` | `pm-learning/spaced-repetition-setup/spaced-repetition-setup.mdc` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/speak-at-the-council.mdc` |
 | Spoon Planner | `pm-invisible-illness` | `pm-invisible-illness/spoon-planner/spoon-planner.mdc` |
+| Sports Parent Comms | `pm-sports-coaching` | `pm-sports-coaching/sports-parent-comms/sports-parent-comms.mdc` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/sports-scores.mdc` |
 | Spot AI Mistakes | `pm-ai-native` | `pm-ai-native/spot-ai-mistakes/spot-ai-mistakes.mdc` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/spreadsheet-audit.mdc` |
@@ -1118,6 +1200,7 @@
 | Stakeholder Influence Mapper | `pm-strategy` | `pm-strategy/stakeholder-influence-mapper/stakeholder-influence-mapper.mdc` |
 | Stakeholder Update | `pm-essentials` | `pm-essentials/stakeholder-update/stakeholder-update.mdc` |
 | Standing Meeting Audit | `pm-cowork` | `pm-cowork/standing-meeting-audit/standing-meeting-audit.mdc` |
+| Standing Orders | `pm-duet` | `pm-duet/standing-orders/standing-orders.mdc` |
 | Stargazing Tonight | `pm-hobbies` | `pm-hobbies/stargazing-tonight/stargazing-tonight.mdc` |
 | Startup Idea Validator | `pm-founders` | `pm-founders/startup-idea-validator/startup-idea-validator.mdc` |
 | Statement Coach | `pm-students` | `pm-students/statement-coach/statement-coach.mdc` |
@@ -1125,9 +1208,11 @@
 | Status Report Pipeline | `pm-cowork` | `pm-cowork/status-report-pipeline/status-report-pipeline.mdc` |
 | Steelman the Weird Option | `pm-thinking` | `pm-thinking/steelman-the-weird-option/steelman-the-weird-option.mdc` |
 | Stock Snapshot | `pm-live` | `pm-live/stock-snapshot/stock-snapshot.mdc` |
+| Stock Take Plan | `pm-retail-shopfloor` | `pm-retail-shopfloor/stock-take-plan/stock-take-plan.mdc` |
 | Stoic Setback Debrief | `pm-dead-mentors` | `pm-dead-mentors/stoic-setback-debrief/stoic-setback-debrief.mdc` |
 | Stop Overthinking This | `pm-focus` | `pm-focus/stop-overthinking-this/stop-overthinking-this.mdc` |
 | Stop-the-Bleed Triage | `pm-hardship` | `pm-hardship/stop-the-bleed-triage/stop-the-bleed-triage.mdc` |
+| Store Watch | `pm-duet` | `pm-duet/store-watch/store-watch.mdc` |
 | Story Pitch | `pm-journalism` | `pm-journalism/story-pitch/story-pitch.mdc` |
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/strategic-narrative-generator.mdc` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/strategy-memo.mdc` |
@@ -1209,6 +1294,7 @@
 | The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/the-visa-interview.mdc` |
 | The Worry Decompiler | `pm-focus` | `pm-focus/the-worry-decompiler/the-worry-decompiler.mdc` |
 | The Year of Firsts | `pm-grief` | `pm-grief/the-year-of-firsts/the-year-of-firsts.mdc` |
+| Thesis Chapter Plan | `pm-phd` | `pm-phd/thesis-chapter-plan/thesis-chapter-plan.mdc` |
 | Thesis Outline | `pm-students` | `pm-students/thesis-outline/thesis-outline.mdc` |
 | Think From Another Angle | `pm-thinking` | `pm-thinking/think-from-another-angle/think-from-another-angle.mdc` |
 | Thread To Decision | `pm-cowork` | `pm-cowork/thread-to-decision/thread-to-decision.mdc` |
@@ -1233,6 +1319,7 @@
 | TTRPG Session Forge | `pm-newgen` | `pm-newgen/ttrpg-session-forge/ttrpg-session-forge.mdc` |
 | Taiwan Labour Standards (勞動基準法) | `pm-hk-tw` | `pm-hk-tw/tw-labour-standards/tw-labour-standards.mdc` |
 | Two Worlds Translator | `pm-identity` | `pm-identity/two-worlds-translator/two-worlds-translator.mdc` |
+| UAE Gratuity Calculator | `pm-mena` | `pm-mena/uae-gratuity-calculator/uae-gratuity-calculator.mdc` |
 | UI Design Pipeline | `pm-design-taste` | `pm-design-taste/ui-design-pipeline/ui-design-pipeline.mdc` |
 | UI UX Pro Max (pointer) | `pm-design-taste` | `pm-design-taste/ui-ux-pro-max-pointer/ui-ux-pro-max-pointer.mdc` |
 | Unblock Protocol | `pm-cowork` | `pm-cowork/unblock-protocol/unblock-protocol.mdc` |
@@ -1262,6 +1349,7 @@
 | Version Chaos Untangler | `pm-cowork` | `pm-cowork/version-chaos-untangler/version-chaos-untangler.mdc` |
 | Vet Estimate Decoder | `pm-decoders` | `pm-decoders/vet-estimate-decoder/vet-estimate-decoder.mdc` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/viral-content-framework.mdc` |
+| Viva Prep Pack | `pm-phd` | `pm-phd/viva-prep-pack/viva-prep-pack.mdc` |
 | Voice Agent Design | `pm-agentnative` | `pm-agentnative/voice-agent-design/voice-agent-design.mdc` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/voice-of-customer-program.mdc` |
 | Volunteer Treasurer Basics | `pm-committee` | `pm-committee/volunteer-treasurer-basics/volunteer-treasurer-basics.mdc` |
@@ -1278,6 +1366,7 @@
 | Wedding Vendor Contract Decoder | `pm-wedding` | `pm-wedding/wedding-vendor-contract-decoder/wedding-vendor-contract-decoder.mdc` |
 | Wedding Vows Writer | `pm-family` | `pm-family/wedding-vows-writer/wedding-vows-writer.mdc` |
 | Weekly Review Ritual | `pm-cowork` | `pm-cowork/weekly-review-ritual/weekly-review-ritual.mdc` |
+| Weekly Rollup | `pm-duet` | `pm-duet/weekly-rollup/weekly-rollup.mdc` |
 | Weekly Unstuck | `pm-focus` | `pm-focus/weekly-unstuck/weekly-unstuck.mdc` |
 | Wellness Plan | `pm-veterinary` | `pm-veterinary/wellness-plan/wellness-plan.mdc` |
 | What Am I Not Seeing | `pm-thinking` | `pm-thinking/what-am-i-not-seeing/what-am-i-not-seeing.mdc` |
@@ -1301,6 +1390,10 @@
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/writing-great-skills.mdc` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/writing-plans.mdc` |
 | 小红书 Note | `pm-zh-content` | `pm-zh-content/xiaohongshu-note/xiaohongshu-note.mdc` |
+| 小宇宙播客提纲 | `pm-zh-content` | `pm-zh-content/xiaoyuzhou-podcast-outline/xiaoyuzhou-podcast-outline.mdc` |
 | Year in Review | `pm-career` | `pm-career/year-in-review/year-in-review.mdc` |
 | YouTube Script | `pm-creator` | `pm-creator/youtube-script/youtube-script.mdc` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/youtube-script-writer.mdc` |
+| Retrenchment Package Check (South Africa) | `pm-africa` | `pm-africa/za-retrenchment-package-check/za-retrenchment-package-check.mdc` |
+| UIF Claim Guide (South Africa) | `pm-africa` | `pm-africa/za-uif-claim-guide/za-uif-claim-guide.mdc` |
+| 知乎回答 | `pm-zh-content` | `pm-zh-content/zhihu-answer/zhihu-answer.mdc` |

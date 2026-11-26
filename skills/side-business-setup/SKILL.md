@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "Do I need an LLC?"
 - "Set up my side hustle properly."
 - "What comes first legally and financially?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/side-business-setup.html

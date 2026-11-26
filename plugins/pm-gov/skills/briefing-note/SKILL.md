@@ -60,3 +60,5 @@ Government/executive briefing-note practice (purpose-led, one page, key consider
 - "Brief a minister/executive/official."
 - "Prepare a briefing note."
 - "Summarize an issue for a decision."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/briefing-note.html

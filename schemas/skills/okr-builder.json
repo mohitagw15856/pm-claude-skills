@@ -1,0 +1,125 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/contract.schema.json",
+  "skill": "okr-builder",
+  "version": 1,
+  "inputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "okr-builder inputs",
+    "type": "object",
+    "properties": {
+      "owner": {
+        "type": "string",
+        "description": "Team or individual the OKRs are for"
+      },
+      "period": {
+        "type": "string",
+        "description": "Quarter and year"
+      },
+      "north_star": {
+        "type": "string",
+        "description": "Company or product North Star metric"
+      },
+      "priorities": {
+        "type": "array",
+        "description": "Top 3 priorities or goals for the period",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "existing_okrs": {
+        "type": "string",
+        "description": "Existing OKRs to review or improve"
+      }
+    },
+    "required": [
+      "owner",
+      "period",
+      "priorities"
+    ],
+    "additionalProperties": true
+  },
+  "outputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "okr-builder outputs",
+    "type": "object",
+    "properties": {
+      "owner": {
+        "type": "string",
+        "description": ""
+      },
+      "period": {
+        "type": "string",
+        "description": ""
+      },
+      "objectives": {
+        "type": "array",
+        "description": "Two to four objectives",
+        "items": {
+          "type": "object",
+          "properties": {
+            "objective": {
+              "type": "string",
+              "description": "Qualitative, inspiring, time-bound"
+            },
+            "key_results": {
+              "type": "array",
+              "description": "Two to four measurable key results",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "kr": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "baseline": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "target": {
+                    "type": "string",
+                    "description": ""
+                  },
+                  "measure": {
+                    "type": "string",
+                    "description": "How it is measured"
+                  }
+                },
+                "required": [
+                  "kr",
+                  "target"
+                ],
+                "additionalProperties": true
+              }
+            },
+            "links_to_north_star": {
+              "type": "string",
+              "description": "How this objective moves the North Star"
+            }
+          },
+          "required": [
+            "objective",
+            "key_results"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "assumptions": {
+        "type": "array",
+        "description": "Inputs the skill inferred",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "review_cadence": {
+        "type": "string",
+        "description": "Suggested check-in rhythm"
+      }
+    },
+    "required": [
+      "objectives"
+    ],
+    "additionalProperties": true
+  }
+}

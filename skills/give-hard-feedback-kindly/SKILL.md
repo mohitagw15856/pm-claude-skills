@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Help me address a problem with a coworker's behavior."
 - "I have to have a tough conversation about someone's work. What do I say?"
 - "How do I give critical feedback that actually lands?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/give-hard-feedback-kindly.html

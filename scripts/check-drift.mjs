@@ -44,6 +44,12 @@ for (const f of ['package.json', 'server.json']) {
   }
 }
 
+// tools-pkg (npm: pm-skills-tools) is versioned with the library, so a release
+// cannot leave it behind.
+const toolsVer = JSON.parse(read('tools-pkg/package.json')).version;
+const rootVer = JSON.parse(read('package.json')).version;
+if (toolsVer !== rootVer) problems.push(`tools-pkg/package.json: version ${toolsVer} — expected ${rootVer} (bump it with the library)`);
+
 // ── Rule 2: no stale count claims in living docs ─────────────────────────────
 // Any "<number> skills"-ish claim in these files must use the current number
 // (small tolerance for subset claims like "50 production skills").
@@ -51,7 +57,7 @@ const LIVING = [
   'README.md', 'CHEATSHEET.md', 'PERSONAS.md', 'CONTRIBUTING.md', 'docs/SHOWCASE.md',
   'REPO-MAP.md', 'QUICKSTART.md', 'AGENTS.md', 'TIERS.md', 'PACKS.md', 'ROADMAP.md',
   'docs/FOUNDATION.md', 'docs/print/README.md', 'training/README.md', 'training/MODEL_CARD.md',
-  'README.zh-CN.md', 'README.zh-TW.md', 'README.ko.md', 'docs/CHINA.md',
+  'README.zh-CN.md', 'README.zh-TW.md', 'README.ko.md', 'README.ja.md', 'README.es.md', 'README.pt-BR.md', 'docs/CHINA.md',
   ...readdirSync(join(root, 'web')).filter((n) => n.endsWith('.html')).map((n) => `web/${n}`),
   // The animated README images carry the count in their text, so they drift too.
   ...readdirSync(join(root, 'docs', 'readme-assets')).filter((n) => n.endsWith('.svg')).map((n) => `docs/readme-assets/${n}`),
@@ -84,7 +90,9 @@ for (const f of LIVING) {
   if (!existsSync(join(root, f))) continue;
   // Strip thousands separators first: "1,117 skills" must read as 1117, not
   // as a stale claim of 117.
-  const text = read(f).replace(/(\d),(\d{3})\b/g, '$1$2');
+  // The TRUST-NUMBERS block is generated from the repo by build-trust-numbers.mjs
+  // (which has its own --check), and its numbers are subsets by design.
+  const text = read(f).replace(/<!-- TRUST-NUMBERS:START[\s\S]*?<!-- TRUST-NUMBERS:END -->/g, '').replace(/(\d),(\d{3})\b/g, '$1$2');
   for (const m of CLAIMS.flatMap((re) => [...text.matchAll(re)])) {
     const n = +m[1];
     if (ALLOWED.has(n)) continue;

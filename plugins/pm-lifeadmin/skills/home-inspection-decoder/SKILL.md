@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "What should I ask the seller to fix or credit after inspection?"
 - "Which of these inspection items need a specialist?"
 - "Should I still buy this house given the inspection?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/home-inspection-decoder.html

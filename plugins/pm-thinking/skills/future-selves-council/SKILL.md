@@ -61,3 +61,5 @@ Ask for these if not provided:
 - "Present me wants to quit — what do my future selves say?"
 - "Should I spend this or save it? Ask future me."
 - "Decide this for the long run, but keep it doable now."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/future-selves-council.html

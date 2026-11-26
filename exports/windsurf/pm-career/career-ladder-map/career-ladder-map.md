@@ -67,3 +67,8 @@ Career-ladder / competency-framework practice — gap analysis against the targe
 - "Find the gap to the next level."
 - "Build a development/growth plan."
 - "Figure out what to work on to get promoted."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/career-ladder-map.html
+
+<!-- pm-claude-skills v84.0.0 | skill: career-ladder-map | source: skills/career-ladder-map/SKILL.md | sha256: 59915323c870c00ce20de2daa3e21a7b3326b53d42b2db855bc02810e9796ed4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

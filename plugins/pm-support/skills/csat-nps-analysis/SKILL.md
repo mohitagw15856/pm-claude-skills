@@ -72,3 +72,5 @@ Voice-of-customer practice — correct NPS/CSAT/CES computation, verbatim themin
 - "Compute an NPS score."
 - "Interpret survey verbatims."
 - "Build a voice-of-customer readout."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/csat-nps-analysis.html

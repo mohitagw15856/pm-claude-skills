@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "How much should I set aside?"
 - "What are estimated quarterly payments?"
 - "Set up my freelance tax system."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/quarterly-tax-rhythm.html

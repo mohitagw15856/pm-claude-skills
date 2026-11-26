@@ -75,3 +75,5 @@ Talent-sourcing strategy practice — profile-first sourcing, channel prioritisa
 - "Where do we find candidates for this?"
 - "Build a candidate sourcing plan."
 - "Plan our hiring channels for a hard-to-fill role."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sourcing-strategy.html

@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Was I part of that data-breach settlement, and how do I claim?"
 - "How do I file a class-action claim before the deadline?"
 - "I heard about a refund program for a company I used — do I qualify?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/class-action-claim-finder.html

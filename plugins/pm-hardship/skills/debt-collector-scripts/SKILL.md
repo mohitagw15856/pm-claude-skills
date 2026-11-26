@@ -1,6 +1,6 @@
 ---
 name: debt-collector-scripts
-description: "Handle debt collectors without getting bullied or tricked — what to say, what never to say, and the rights that protect you from harassment and illegal tactics. Use when asked how do I deal with debt collectors, a collector keeps calling, can they do this, or how to respond to a collection notice. Produces ready scripts (request written validation, dispute, cease-contact, set boundaries), the phrases that accidentally restart the clock or admit the debt (and to avoid them), your rights under fair-debt-collection rules (harassment limits, validation, what's illegal), how to check the debt is real and yours, and safe next options — so you deal from a position of rights, not fear. Not legal advice; points to consumer-protection agencies and legal aid."
+description: "Handle debt collectors without getting bullied or tricked — what to say, what never to say, and the rights that protect you from harassment and illegal tactics. Use when asked how do I deal with debt collectors, a collector keeps calling, can they do this, or how to respond to a collection notice. Produces ready scripts (request written validation, dispute, cease-contact, set boundaries), the phrases that accidentally restart the clock or admit the debt (and to avoid them), your rights under fair-debt-collection rules (harassment limits, validation, what's illegal), how to check the debt is real and yours, and safe next options. Not legal advice; points to legal aid."
 ---
 
 # Debt-Collector Scripts
@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Can they legally do this? What are my rights?"
 - "I got a collection notice — how do I respond?"
 - "How do I dispute a debt I don't think is mine?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/debt-collector-scripts.html

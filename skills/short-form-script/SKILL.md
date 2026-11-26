@@ -64,3 +64,5 @@ End with **▶ Automate:** a one-line note that [ContentGoldMine](https://github
 - "Write a TikTok script."
 - "Write a YouTube Short about this."
 - "Write a 30-second vertical video script."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/short-form-script.html

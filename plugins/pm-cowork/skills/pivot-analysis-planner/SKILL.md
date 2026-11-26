@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "What's driving the total?"
 - "Break this down by category and month."
 - "My pivot shows nonsense."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pivot-analysis-planner.html

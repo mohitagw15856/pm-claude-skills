@@ -79,3 +79,8 @@ Three prompts: did students meet each objective and how do I know; where did tim
 - "大单元教学设计怎么写？我教小学四年级科学。"
 - "教案检查要用，帮我把这几行笔记整理成完整教案。"
 - "Write a Chinese-format lesson plan for grade 5 English."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-lesson-plan.html
+
+<!-- pm-claude-skills v84.0.0 | skill: cn-lesson-plan | source: skills/cn-lesson-plan/SKILL.md | sha256: e5eb87200a14512449d8e22838ddb84b2cb4bc91d960592ebad5b1569f4e9d56 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

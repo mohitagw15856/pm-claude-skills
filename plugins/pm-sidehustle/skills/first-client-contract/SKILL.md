@@ -74,3 +74,5 @@ Ask for these if not provided:
 - "What should a freelance agreement include?"
 - "My client wants to start without a contract."
 - "Review this simple services agreement."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-client-contract.html

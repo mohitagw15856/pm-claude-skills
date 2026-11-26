@@ -110,7 +110,7 @@ Users who [specific action] in first [N] days retain at [X%] vs [Y%] for those w
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Product and business model** (SaaS / consumer app / marketplace / other)
 - **Current retention metrics** (D1, D7, D30 if available)
 - **Segment to analyse** (all users / paid / free / a specific cohort)
@@ -164,3 +164,8 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Analyse user retention."
 - "Investigate churn."
 - "Build a retention improvement plan."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/retention-analysis.html
+
+<!-- pm-claude-skills v84.0.0 | skill: retention-analysis | source: skills/retention-analysis/SKILL.md | sha256: 6a685b9832777fa72df14d2d08fc1c1aa790c040d1f9f85a2d49aca0bd82eed2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

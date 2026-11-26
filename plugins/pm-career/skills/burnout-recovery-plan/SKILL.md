@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "How do I recover from burnout without quitting?"
 - "What do I even say to my manager about my workload?"
 - "I rested but the burnout came right back — what am I missing?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/burnout-recovery-plan.html

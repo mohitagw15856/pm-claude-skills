@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Organize my sources."
 - "Synthesize these papers."
 - "Find the gap for my thesis."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/literature-review-builder.html

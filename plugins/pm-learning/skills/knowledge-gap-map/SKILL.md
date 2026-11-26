@@ -61,3 +61,5 @@ Ask for these if not provided:
 - "What should I learn next in cooking — where are my holes?"
 - "I know some marketing but not sure what I'm missing."
 - "Find the gaps in my understanding of this subject."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/knowledge-gap-map.html

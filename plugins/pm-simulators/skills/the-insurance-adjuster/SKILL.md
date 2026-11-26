@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Practice the settlement call."
 - "Is this settlement offer low?"
 - "What will the insurance company try?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-insurance-adjuster.html

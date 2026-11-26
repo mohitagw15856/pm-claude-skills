@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Which car jobs can I do myself vs. take to a shop?"
 - "The mechanic recommended a bunch of services — am I being upsold?"
 - "How do I keep my car reliable and holding its value?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vehicle-maintenance-schedule.html

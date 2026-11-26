@@ -124,3 +124,5 @@ illness.
 - "My [person] died and I don't know where to start."
 - "What do I need to do after a death?"
 - "Help me handle the admin."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/grief-admin.html

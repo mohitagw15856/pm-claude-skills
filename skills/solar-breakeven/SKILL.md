@@ -83,3 +83,5 @@ Deterministic. Defaults: 85% offset, 3% electricity inflation, 0.5%/yr degradati
 - "Check this solar quote's payback claim."
 - "Model solar for my bill."
 - "When would solar break even?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/solar-breakeven.html

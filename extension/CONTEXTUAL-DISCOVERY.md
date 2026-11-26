@@ -2,6 +2,8 @@
 
 The extension already lets people **insert** a skill into ChatGPT/Claude/Gemini. This adds the other half: **suggesting** the right skill from the page they're already on — a lease PDF, a job posting, a medical bill, a benefits site, a collections notice. It's the everyone-else equivalent of the VS Code extension for developers.
 
+**Status: shipped in 1.2.0.** On click through the popup (`activeTab`), and opt-in as you browse (`context-nudge.js`, registered at run time after the user grants the optional host permission). Matching: `context-match.js`.
+
 ## How it works
 `context-rules.json` is a data file of rules. Each rule matches a page by **host fragment**, **URL regex**, or **on-page keywords** (a rule fires on any host/URL hit, or on **≥2 keyword** hits — the 2-keyword threshold is what keeps it from being noisy). A fired rule shows a small, dismissible nudge with one line and 1–3 suggested skills; clicking a skill opens the existing picker with it pre-selected.
 

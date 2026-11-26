@@ -45,6 +45,10 @@ Ask for (if not already provided):
 - What they dread most (drive-by demands? bad PRs? being ignored?) — the
   docs pre-answer the dread
 
+## Working from a brief
+
+Given the project's situation and the hours available, **write the setup anyway**: the README routing section, a CONTRIBUTING file with clear boundaries, issue templates, a pinned answer to the most-asked request, and a triage routine that fits the stated hours.
+
 ## Framework
 
 1. **README routes, not sells.** One-line what-it-is → 60-second quickstart
@@ -123,3 +127,8 @@ the moments docs can't pre-answer; [[changelog-generator]] and
 - "My repo is getting attention."
 - "I just open-sourced something."
 - "Set up my project properly."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-maintainer-month.html
+
+<!-- pm-claude-skills v84.0.0 | skill: first-maintainer-month | source: skills/first-maintainer-month/SKILL.md | sha256: c9480c36094b3e28c618ed94f9e9f960b8b228a9dc313808f720bd0c9d67720c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -1,6 +1,6 @@
 ---
 trigger: model_decision
-description: "When money is in free-fall, triage the crisis — what to pay first, what to let slide, and what to protect at all costs — so you cover the essentials and stop the worst damage. Use when asked I can't pay all my bills, which bills do I pay first, financial emergency, or I'm broke and panicking. Produces a priority order for scarce money (keep-the-lights-on essentials and things with severe consequences first, unsecured debt last), what to protect no matter what (housing, utilities, food, transport to work, essential insurance), which creditors to call and what to ask for (hardship programs, deferrals), the help to tap now (assistance programs, food banks), and a calm next-24-hours plan — so panic becomes a sequence. Not financial advice; points to nonprofit credit counseling and assistance programs."
+description: "When money is in free-fall, triage the crisis — what to pay first, what to let slide, and what to protect at all costs. Use when asked I can't pay all my bills, which bills do I pay first, financial emergency, or I'm broke and panicking. Produces a priority order for scarce money (keep-the-lights-on essentials and things with severe consequences first, unsecured debt last), what to protect no matter what (housing, utilities, food, transport to work, essential insurance), which creditors to call and what to ask for (hardship programs, deferrals), the help to tap now (assistance programs, food banks), and a calm next-24-hours plan. Not financial advice; points to nonprofit credit counseling."
 ---
 
 # Stop-the-Bleed Triage
@@ -66,3 +66,8 @@ Ask for these if not provided:
 - "What bills should I prioritize in a financial emergency?"
 - "Should I pay my credit card or my rent if I can't do both?"
 - "Who do I call when I can't cover everything?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stop-the-bleed-triage.html
+
+<!-- pm-claude-skills v84.0.0 | skill: stop-the-bleed-triage | source: skills/stop-the-bleed-triage/SKILL.md | sha256: ff9ccbf09ad05b2395f2e5203d329b3c004f79f52cfa4a8a7078668c2eb9e929 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

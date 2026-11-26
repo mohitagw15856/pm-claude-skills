@@ -292,3 +292,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Prioritize tech debt for a quarter."
 - "Document architectural shortcuts."
 - "Build a debt reduction roadmap."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/technical-debt-register.html

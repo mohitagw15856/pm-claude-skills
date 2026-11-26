@@ -26,6 +26,10 @@ Ask for these if not provided:
 - **The person's work** in the period: projects, role, results, technical or business depth
 - **Committee make-up**, if known: cross-team, senior technical, business leaders
 
+## Working from a brief
+
+Given the level move, the format and the headline achievements, **write the full defence pack anyway**: a slide-by-slide outline timed to the slot, the script for the key slides, and the likely panel questions with strong answers. Mark figures to confirm with [ ].
+
 ## Framework
 
 1. **Map to the criteria.** Typical dimensions: 专业能力 (depth), 业务影响 (impact), 复杂度 (scope and difficulty), 影响力 (influence beyond the team), 人才培养 (developing others). For each, place one or two pieces of evidence.
@@ -73,3 +77,5 @@ Ask for these if not provided:
 - "写晋升答辩 PPT 的大纲。"
 - "模拟一下晋升委员会会问我什么问题。"
 - "Help me prepare my promotion defence for a Chinese tech company."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-promotion-defence.html

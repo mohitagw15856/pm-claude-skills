@@ -61,3 +61,5 @@ Ask for these if not provided:
 - "This shouldn't be this hard. Help me stop spinning."
 - "I've spent an hour on a tiny decision. End it."
 - "Help me just pick and move on."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stop-overthinking-this.html

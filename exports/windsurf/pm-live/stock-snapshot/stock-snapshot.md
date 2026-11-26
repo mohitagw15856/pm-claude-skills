@@ -61,3 +61,8 @@ Source: Yahoo Finance public endpoint (unofficial; may be delayed) · rerun: `[e
 - "What's this stock at?"
 - "How did the market do today?"
 - "Get me a ticker's recent range."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stock-snapshot.html
+
+<!-- pm-claude-skills v84.0.0 | skill: stock-snapshot | source: skills/stock-snapshot/SKILL.md | sha256: 8672ab5433897e673a45e2f7146a220680423f1042efb9e8679691b644a0023f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

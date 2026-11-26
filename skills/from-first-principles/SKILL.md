@@ -61,3 +61,5 @@ Ask for these if not provided:
 - "Challenge the assumptions behind how I'm approaching this."
 - "Rebuild my morning routine from scratch, ignoring how I do it now."
 - "Strip this problem to basics and reason it back up."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/from-first-principles.html

@@ -1,0 +1,12 @@
+{
+  "pages": ["pages/index/index", "pages/skill/skill"],
+  "window": {
+    "navigationBarTitleText": "PM Skills 技能查找",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f6f7f9"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -9,7 +9,7 @@ This skill writes complete, sequenced email campaigns — from welcome flows to 
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Campaign goal** (onboard new users / launch a product / nurture leads / re-engage churned users / announce a feature)
 - **Audience** (who receives this? job title, lifecycle stage, what they know already)
 - **Product or offer** being promoted or introduced
@@ -84,3 +84,5 @@ For every email in the sequence, produce:
 - "Build an onboarding email flow for [SaaS tool]"
 - "Create a drip campaign to nurture leads for [offer]"
 - "Write a re-engagement campaign for churned users"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/email-campaign.html

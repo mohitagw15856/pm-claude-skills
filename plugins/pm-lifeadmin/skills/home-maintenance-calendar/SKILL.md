@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Home upkeep checklist for an older house in a cold climate."
 - "What maintenance can I do myself vs. hire out?"
 - "I never know what home tasks to do when — help me set a routine."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/home-maintenance-calendar.html

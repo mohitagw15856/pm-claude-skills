@@ -57,3 +57,5 @@ A 2-line nudge to send if there's no reply in ~5 business days — adds a *new* 
 - "Write a fundraising outreach."
 - "Request a warm intro."
 - "Craft a forwardable blurb."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investor-cold-email.html

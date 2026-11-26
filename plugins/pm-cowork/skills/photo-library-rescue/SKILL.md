@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "I have 40,000 unsorted photos: help."
 - "Delete duplicate photos safely."
 - "Set up a photo system that lasts."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/photo-library-rescue.html

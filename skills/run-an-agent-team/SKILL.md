@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Orchestrate several agents for this complex task."
 - "Should this be one agent or a team, and how do I structure it?"
 - "Design a parallel agent workflow for this."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/run-an-agent-team.html

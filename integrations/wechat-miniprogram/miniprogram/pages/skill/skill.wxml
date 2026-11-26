@@ -1,0 +1,22 @@
+<view class="wrap" wx:if="{{skill}}">
+  <view class="card">
+    <view class="title">{{skill.t || skill.n}}</view>
+    <view class="muted">{{skill.n}} · {{skill.p}}</view>
+    <view style="margin-top: 16rpx;">{{skill.z || skill.d}}</view>
+  </view>
+
+  <view class="card">
+    <view class="title">复制到任意 AI 助手</view>
+    <view class="muted">{{hasBody ? '已内置完整的中文技能说明，复制后粘贴到通义、Kimi、豆包、DeepSeek 等对话框，再写上你的任务。' : '这个技能只内置了简介。复制的提示词里带有技能要求和完整说明的链接。'}}</view>
+    <button class="btn" bindtap="copyPrompt">复制提示词</button>
+    <button class="btn secondary" bindtap="copyInstall">复制安装命令（编程工具用）</button>
+  </view>
+
+  <view class="card" wx:if="{{hasBody}}">
+    <view class="title">技能说明预览</view>
+    <text class="muted" user-select="{{true}}">{{preview}}</text>
+  </view>
+</view>
+<view class="wrap" wx:else>
+  <view class="card muted">没有找到这个技能。</view>
+</view>

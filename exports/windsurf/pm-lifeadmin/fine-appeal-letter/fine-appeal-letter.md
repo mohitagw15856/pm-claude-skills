@@ -49,3 +49,8 @@ Appeals officers read thousands of letters. Anger loses; length loses; the word 
 - "I got a penalty charge notice: can I challenge it?"
 - "Write an appeal for this fine."
 - "Is it worth appealing this ticket?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fine-appeal-letter.html
+
+<!-- pm-claude-skills v84.0.0 | skill: fine-appeal-letter | source: skills/fine-appeal-letter/SKILL.md | sha256: 907ff68f795078d6bd6526ef5e825edb53b00700f65374e7e6abf821e5c7ce32 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

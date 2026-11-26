@@ -73,3 +73,5 @@ End with: *"This analysis is analytical support, not a coverage determination or
 - "Review an insurance programme against a risk register."
 - "Check what risks aren't insured."
 - "Audit a policy portfolio."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/coverage-gap-analysis.html

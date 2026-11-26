@@ -68,3 +68,8 @@ Ask for these if not provided:
 - "Summarize what my subscriptions said this week."
 - "What did I miss that I actually care about?"
 - "Make my reading pile useful."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/newsletter-digest-brief.html
+
+<!-- pm-claude-skills v84.0.0 | skill: newsletter-digest-brief | source: skills/newsletter-digest-brief/SKILL.md | sha256: 601367843825812eec3b59c201e29b877e01b5574853c40fc213f095f8fe6f53 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

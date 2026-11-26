@@ -73,3 +73,5 @@ Common mistakes: buying a home for a 学位 without checking the district's 多�
 - "多校划片是什么意思？对我们有什么影响？"
 - "小升初民办摇号没摇中怎么办？"
 - "Explain primary school entry in Shenzhen for a non-local family."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-school-entry.html

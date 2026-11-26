@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Compare these vendors/tools."
 - "Build the selection matrix."
 - "Make this procurement decision defensible."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vendor-comparison-matrix.html

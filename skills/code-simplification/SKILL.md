@@ -1,6 +1,6 @@
 ---
 name: code-simplification
-description: "Simplify code that works — remove speculative abstraction, dead flexibility, and needless indirection while keeping behaviour identical and verified. Use after a feature lands ('now simplify it'), when AI-generated code arrives over-engineered, when a file has grown hard to follow, or as the cleanup pass before review. Produces a smaller, flatter version with identical behaviour, plus a ledger of what was removed and why it was safe. For finding bugs use code-review-checklist / ai-code-review — this skill assumes it works and makes it simple."
+description: "Simplify code that works — remove speculative abstraction, dead flexibility, and needless indirection while keeping behaviour identical and verified. Use when a feature has just landed ('now simplify it'), when AI-generated code arrives over-engineered, when a file has grown hard to follow, or as the cleanup pass before review. Produces a smaller, flatter version with identical behaviour, plus a ledger of what was removed and why it was safe. For finding bugs use code-review-checklist / ai-code-review — this skill assumes it works and makes it simple."
 ---
 
 # Code Simplification Skill
@@ -20,6 +20,10 @@ Ask for these if not provided:
 - **The pressure** — what made it feel complex: onboarding, a bug, a review comment
 - **What must not change** — the public API, behaviour, or performance envelope
 - **Test coverage** — whether there are tests to prove the simplification is safe
+
+## Working from a brief
+
+Given a description of the code instead of the code itself, **deliver the simplification anyway**: the target shape in code, each removal with the reason and the test that proves behaviour is unchanged, and the order to do them in. Say which steps need a look at the real code before they are applied.
 
 ## What to Hunt (in order of payoff)
 
@@ -71,3 +75,5 @@ Ask for these if not provided:
 - "This AI-generated code is over-engineered: simplify it."
 - "Remove the dead abstraction in this file."
 - "Make this simpler without changing behaviour."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/code-simplification.html

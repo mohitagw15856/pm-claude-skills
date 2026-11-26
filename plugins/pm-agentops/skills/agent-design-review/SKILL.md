@@ -80,3 +80,5 @@ LLM agent design practice — bounded control flow, least-privilege tool use, co
 - "Critique a multi-step/tool-using agent."
 - "Debug an agent that loops."
 - "Harden an agent before launch."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-design-review.html

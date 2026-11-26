@@ -69,3 +69,8 @@ Ask for these if not provided:
 - "Make this deck flow."
 - "My presentation feels like disconnected slides."
 - "Structure the story of this pitch/readout."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deck-narrative-arc.html
+
+<!-- pm-claude-skills v84.0.0 | skill: deck-narrative-arc | source: skills/deck-narrative-arc/SKILL.md | sha256: 32c60ef0ca8bb05aca09e288f88a3f15012f1ed856d56cbd24182a305546b732 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

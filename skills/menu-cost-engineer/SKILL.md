@@ -61,3 +61,5 @@ Given popularity (if provided) and margin, classify: **Star** (high both — fea
 - "Calculate food cost percentage."
 - "Price a menu item."
 - "Engineer a menu for profitability."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/menu-cost-engineer.html

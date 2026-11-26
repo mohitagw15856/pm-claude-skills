@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Write our expense/remote-work/AI-use/security policy."
 - "Turn this incident into a policy."
 - "Our policy doc is unreadable."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/policy-drafter.html

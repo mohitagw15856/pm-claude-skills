@@ -77,3 +77,5 @@ Policyholder-side disability review practice — definition-first reading, offse
 - "Decode my LTD policy."
 - "What does own-occupation mean?"
 - "How much would I actually get?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/disability-insurance-decoder.html

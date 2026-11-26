@@ -59,3 +59,8 @@ Ask for these if not provided:
 - "I can't think straight but I have to choose. Help me not mess it up."
 - "I'm fried — is this a decide-now or a decide-later?"
 - "Help me pick something safe, I'm too tired to think."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-when-tired.html
+
+<!-- pm-claude-skills v84.0.0 | skill: decision-when-tired | source: skills/decision-when-tired/SKILL.md | sha256: 90ade8810649ce89b8961b0054c8bc1636435292eebd147fa6c77c4f4d3c7d11 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -80,3 +80,5 @@ Ask for these if not provided:
 - "Build a decision tree."
 - "What probability makes this worth it?"
 - "Compare options under uncertainty."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-tree-solver.html

@@ -71,3 +71,5 @@ Mind-mapping practice (radial hierarchy, balanced branches, MECE-ish themes), ex
 - "Organize ideas."
 - "Break a topic into branches."
 - "Summarize something as a mind map."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/mind-map.html

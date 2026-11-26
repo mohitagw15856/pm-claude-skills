@@ -82,3 +82,5 @@ Achievement-led, ATS-aware resume practice (reverse-chronological, quantified-im
 - "Rewrite a resume or CV."
 - "Turn experience into a resume."
 - "Tailor a resume to a job."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/resume.html

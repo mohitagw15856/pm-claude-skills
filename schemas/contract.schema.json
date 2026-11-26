@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mohitagw15856.github.io/pm-claude-skills/schemas/contract.schema.json",
+  "title": "pm-claude-skills typed skill contract",
+  "description": "Shape of schemas/skills/<name>.json: a JSON Schema for the inputs a skill expects and for the structured output it produces (SkillSpec section 9.2).",
+  "type": "object",
+  "required": ["skill", "version", "inputs", "outputs"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "skill": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "Must match a folder under skills/" },
+    "version": { "type": "integer", "minimum": 1, "description": "Bump when the contract changes shape" },
+    "inputs": { "$ref": "#/$defs/objectSchema" },
+    "outputs": { "$ref": "#/$defs/objectSchema" }
+  },
+  "$defs": {
+    "objectSchema": {
+      "type": "object",
+      "required": ["type", "properties"],
+      "properties": {
+        "$schema": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "const": "object" },
+        "properties": { "type": "object", "minProperties": 1 },
+        "required": { "type": "array", "items": { "type": "string" } },
+        "additionalProperties": { "type": "boolean" }
+      }
+    }
+  }
+}

@@ -37,6 +37,10 @@ Ask for (if not already provided):
 - What has helped and what has made it worse (people often know the second better)
 - Who they'd want the one-pager for, and what those people currently get wrong
 
+## Working from a brief
+
+Given what the person has described, **build the map anyway**: the stages from early signs to recovery, likely signs and triggers phrased so they can tick or change them, what helps at each stage, and the one-page card to hand to their partner. Do not start with a questionnaire.
+
 ## Framework
 
 1. **Reconstruct the staircase from a real episode.** Take one recent meltdown and
@@ -113,3 +117,5 @@ Slow load (the base): … + Acute triggers (the top): … = over the edge
 - "Help me not shut down."
 - "I need a plan for when I'm overwhelmed."
 - "Shuts down."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meltdown-map.html

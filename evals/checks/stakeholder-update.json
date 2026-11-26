@@ -1,0 +1,15 @@
+{
+  "skill": "stakeholder-update",
+  "cases": [
+    {
+      "name": "BLUF update with an explicit ask",
+      "prompt": "Stakeholder update: data platform migration, month 3 of 5, on track overall, reporting module slipped 2 weeks (vendor API change), 14 of 22 pipelines migrated, 8% under budget. We need a decision on whether to migrate or retire the legacy finance pipeline.",
+      "pass": {
+        "must_include": ["Bottom line", "Decision needed"],
+        "must_match": ["risk"],
+        "forbid": ["[insert", "lorem ipsum"],
+        "min_lines": 12
+      }
+    }
+  ]
+}

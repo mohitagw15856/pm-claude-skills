@@ -3,72 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
-<title>Season Casting — enter the arena, get on the public leaderboard</title>
-<meta name="description" content="The Season is a public negotiation tournament played in the browser: one scenario, attested transcripts, a leaderboard anyone can verify, and a Hall that remembers champions forever. See the current season's countdown and what's coming next." />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  .k-wrap { max-width: 760px; margin: 0 auto; padding: 16px 22px 70px; }
-  .stage { border: 1px solid var(--border); border-radius: 18px; background: radial-gradient(ellipse at 30% 0%, #1a1430, #0d1018 70%); padding: 26px; margin: 18px 0; text-align: center; }
-  .stage h2 { margin: 0 0 6px; font-size: 26px; }
-  .count { font-size: 34px; font-weight: 800; color: var(--accent); margin: 8px 0; }
-  .muted { color: var(--muted); font-size: 13px; }
-  .steps { border: 1px solid var(--border); border-radius: 13px; background: var(--panel); padding: 16px 20px; font-size: 14px; }
-  .next { border: 1px dashed var(--border); border-radius: 13px; padding: 14px 20px; margin-top: 16px; font-size: 13.5px; color: #c7cfda; }
-</style>
+<title>Moved to the Skill Cup | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/cup.html" />
+<meta http-equiv="refresh" content="0; url=cup.html" />
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}@media (prefers-color-scheme:light){body{background:#fff;color:#1f2328}a{color:#0969da}}</style>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand"><img src="assets/product-notes.jpg" alt="" class="brand-logo" />
-    <div class="brand-text"><h1>Season Casting</h1><p class="tagline">One scenario. Public transcripts. A Hall that remembers.</p></div></div>
-</header>
-<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-
-<div class="k-wrap">
-  <div class="stage">
-    <h2 id="title">loading…</h2>
-    <div class="muted" id="dates"></div>
-    <div class="count" id="count"></div>
-    <a class="primary" style="display:inline-block;text-decoration:none;padding:10px 22px;border-radius:10px" id="playLink" href="gym.html">⚔️ Play the season scenario</a>
-    <div class="muted" style="margin-top:10px"><a href="season.html">standings</a> · <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/seasons/HALL.md">the Hall</a></div>
-  </div>
-
-  <div class="steps">
-    <strong>How casting works</strong> — no signup, no fee:
-    <ol>
-      <li><strong>Play</strong> the scenario in the arena (free sponsored runs or your key). Unlimited attempts; best score counts.</li>
-      <li><strong>Score</strong> — the arena's standard /40 debrief, with an attested submission block (transcript SHA-256 baked in).</li>
-      <li><strong>Submit</strong> — one PR onto the season leaderboard. CI validates shape, bounds, and that the name matches the PR author. Every replay is public; the Season runs on honor and receipts.</li>
-    </ol>
-    Champions get the podium frozen into the Hall permanently and first pick of the next season's theme.
-  </div>
-
-  <div class="next" id="next" hidden></div>
-</div>
-
-<script>
-async function init(){
-  const cur = await (await fetch('season-current.json')).json();
-  document.getElementById('title').textContent = 'Season ' + cur.season + ' — ' + cur.title;
-  document.getElementById('dates').textContent = cur.opens + ' → ' + cur.closes + ' · arena: ' + cur.arena;
-  document.getElementById('playLink').href = cur.arena + '.html#season=' + cur.season;
-  const end = new Date(cur.closes + 'T23:59:59Z') - Date.now();
-  document.getElementById('count').textContent = end > 0 ? Math.ceil(end / 86400e3) + ' days left' : 'season closed — rollover imminent';
-  try {
-    const nxt = await (await fetch('season-next.json')).json();
-    if (nxt && nxt.season > cur.season && !/TODO/.test(nxt.title)) {
-      const n = document.getElementById('next');
-      n.hidden = false;
-      n.innerHTML = '<strong>📣 Next up — Season ' + nxt.season + ': ' + nxt.title + '</strong> (opens ' + nxt.opens + '). ' +
-        (nxt.world && nxt.world.counterparty ? 'Across the table: <em>' + nxt.world.counterparty.name + ', ' + nxt.world.counterparty.role + '</em> — "' + nxt.world.counterparty.style + '"' : '');
-    }
-  } catch (_) { /* no next season staged yet */ }
-  window.__castingReady = true;
-  if (window.pmTrack) pmTrack('casting/open');
-}
-init();
-</script>
-<script src="i18n.js"></script>
-<script src="nav.js"></script>
+<main><p>This page has been retired to keep the site focused. Continue to <a href="cup.html">the Skill Cup</a>.</p></main>
+<script>location.replace('cup.html' + location.search + location.hash);</script>
 </body>
 </html>
