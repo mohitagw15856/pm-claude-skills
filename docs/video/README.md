@@ -70,6 +70,7 @@ Return the script as a table with the part, the seconds, and the line.
 
 ### 1. youtube-script-writer
 
+- **Live:** https://www.youtube.com/watch?v=2ewtEaM28AU (52 seconds, published 27 November 2026, made in Descript with a recreated interface labelled as illustrative)
 - **Problem scene:** a creator at a desk with a camera on a tripod behind them, staring at an empty document.
 - **Request to record:** the eval case for `youtube-script-writer` in `evals/cases.json`.
 - **Three callouts:** the title and thumbnail idea, the cold open, the section-by-section script.

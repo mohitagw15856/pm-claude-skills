@@ -137,6 +137,14 @@ Stuck? The **[FAQ](docs/faq/README.md)** answers the common questions in English
   </picture>
 </p>
 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=2ewtEaM28AU">
+    <img src="https://i.ytimg.com/vi/2ewtEaM28AU/maxresdefault.jpg" width="560" alt="Watch on YouTube: Write a YouTube script that holds attention, a 52-second demo of the youtube-script-writer skill">
+  </a>
+  <br>
+  <sub>▶ <a href="https://www.youtube.com/watch?v=2ewtEaM28AU">Watch the 52-second demo</a> of <a href="skills/youtube-script-writer/SKILL.md"><code>youtube-script-writer</code></a>: one request, three title and thumbnail concepts, three cold opens and a full script.</sub>
+</p>
+
 More to see: the **[Showcase gallery](docs/SHOWCASE.md)** has the Playground, the tech tree, Galaxy 3D and Skill City.
 
 ## 🧭 How it works
