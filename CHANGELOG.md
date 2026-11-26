@@ -19,6 +19,13 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 - **n8n workflow templates** in `integrations/n8n/`, the one-file rules in `templates/pm-rules/PM-RULES.md`, and the `annotate.html` page for commenting on a draft and sending the feedback back.
 - **`npm run regen`** (every generator plus bundle copies) and **`scripts/sync-bundles.mjs`** with a `--check` gate.
 
+- **Five more skills:** `current-practice-check`, `technical-seo-audit`, `keyword-cluster-map`, `earnings-call-summary` and `portfolio-review`, with new `pm-seo` and `pm-investor` bundles, a `seo-lead` subagent and the `/ship-with-director` command.
+- **`capture_log.py`** for `live-competitor-capture` and a rejection-pattern reference for `app-store-submission-guard`.
+- **Document lint GitHub Action** at `.github/actions/doclint`.
+- **Sponsorship:** a rate card in `SPONSORS.md`, a sponsor section in every README language, a sponsor page on the site, `scripts/sponsor-report.mjs` for the monthly report, and `new-skill.mjs --sponsor` for labelled sponsored skills.
+- **43 eval cases** for the most-viewed and production-tier skills that had none, and **`scripts/sync-counts.mjs`** to update skill and bundle counts in docs.
+- **Demo video prompts** in `docs/video/`, and the skills.sh install badge.
+
 ### Changed
 - **`npm run check` runs every gate and reports all failures** (`scripts/check-all.mjs`); it used to stop at the first. It now includes the skill audit, the bundle copy check and the Cursor manifest check.
 - **Bundle copies resynchronised:** 220 copies under `plugins/` had drifted from `skills/` (missing helper scripts and worked examples, and some unfilled stubs).
@@ -26,7 +33,12 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 - **Root tidied:** ten documents moved into `docs/` (BUILD_NOTES, CASE_STUDIES, DESIGN, MAINTAINERS, OPERATIONS, ORCHESTRATION, PERSONAS, RELEASE_NOTES, REPO-MAP, ROADMAP-REQUESTS), and changelog entries before 80.0.0 moved to `docs/changelog/CHANGELOG-pre-80.md`.
 - `site/tech-tree/data.json` keeps its timestamp when nothing else changed.
 
+- **Demo recordings moved to the `media` branch** (8.4 MB off every checkout); the deploy restores them into the site so their URLs still work.
+- The six most-viewed skills link to their related skills and show a one-skill install command.
+
 ### Fixed
+- Skill pages no longer point their share image at a file that does not exist; skills without their own image use the site card.
+- `new-bundle.mjs` copies the whole skill folder into a bundle, not only `SKILL.md`.
 - `check-model-refs` no longer fails on the legacy row in `docs/MODELS.md`.
 
 ### Removed

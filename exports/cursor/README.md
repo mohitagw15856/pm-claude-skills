@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1397 skills exported. Copy a `.mdc rule` into the tool to use it.
+1402 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 Every file ends with a provenance comment: library version, source path, the SHA-256 of the source
 `SKILL.md` and the licence. The same hash is published at `https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json`,
@@ -63,7 +63,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/ambiguity-resolver.mdc` |
 | Analyst Relations Brief | `pm-pmm` | `pm-pmm/analyst-relations-brief/analyst-relations-brief.mdc` |
 | Announcement Card | `pm-visuals` | `pm-visuals/announcement-card/announcement-card.mdc` |
-| Annual Report Tutor | `pm-investing-literacy` | `pm-investing-literacy/annual-report-tutor/annual-report-tutor.mdc` |
+| Annual Report Tutor | `pm-investor` | `pm-investor/annual-report-tutor/annual-report-tutor.mdc` |
 | API Docs Writer | `pm-engineering` | `pm-engineering/api-docs-writer/api-docs-writer.mdc` |
 | API For Yourself | `pm-2027` | `pm-2027/api-for-yourself/api-for-yourself.mdc` |
 | API Test Plan | `pm-qa` | `pm-qa/api-test-plan/api-test-plan.mdc` |
@@ -345,6 +345,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Customer Health Scorecard | `pm-daily-ten` | `pm-daily-ten/cs-health-scorecard/cs-health-scorecard.mdc` |
 | CSAT / NPS Analysis | `pm-support` | `pm-support/csat-nps-analysis/csat-nps-analysis.mdc` |
 | Currency Rates | `pm-live` | `pm-live/currency-rates/currency-rates.mdc` |
+| Current Practice Check | `pm-fieldwork` | `pm-fieldwork/current-practice-check/current-practice-check.mdc` |
 | Customer Advisory Board | `pm-pmm` | `pm-pmm/customer-advisory-board/customer-advisory-board.mdc` |
 | Customer Incident Update | `pm-crisis` | `pm-crisis/customer-incident-update/customer-incident-update.mdc` |
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/customer-journey-map.mdc` |
@@ -461,6 +462,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Driver Incident Investigation | `pm-fleet` | `pm-fleet/driver-incident-investigation/driver-incident-investigation.mdc` |
 | Driver Retention Plan | `pm-fleet` | `pm-fleet/driver-retention-plan/driver-retention-plan.mdc` |
 | Clinical Intervention Record | `pm-pharmacy` | `pm-pharmacy/drug-interaction-intervention/drug-interaction-intervention.mdc` |
+| Earnings Call Summary | `pm-investor` | `pm-investor/earnings-call-summary/earnings-call-summary.mdc` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/earthquake-watch.mdc` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/elder-scam-briefing.mdc` |
 | Elected Rep Letter | `pm-civic` | `pm-civic/elected-rep-letter/elected-rep-letter.mdc` |
@@ -484,7 +486,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Engineering Weekly Report | `pm-engineering` | `pm-engineering/engineering-weekly-report/engineering-weekly-report.mdc` |
 | Entity-Relationship Diagram | `pm-visuals` | `pm-visuals/entity-relationship-diagram/entity-relationship-diagram.mdc` |
 | Epic Progress Report | `pm-delivery` | `pm-delivery/epic-progress-report/epic-progress-report.mdc` |
-| Equity Research Note | `pm-fieldwork` | `pm-fieldwork/equity-research-note/equity-research-note.mdc` |
+| Equity Research Note | `pm-investor` | `pm-investor/equity-research-note/equity-research-note.mdc` |
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/error-decoder.mdc` |
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/error-message-writer.mdc` |
 | Escalate or Hold | `pm-decisions` | `pm-decisions/escalate-or-hold/escalate-or-hold.mdc` |
@@ -737,6 +739,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/kb-audit.mdc` |
 | M-Pesa Reversal and Dispute (Kenya) | `pm-africa` | `pm-africa/ke-mpesa-reversal-dispute/ke-mpesa-reversal-dispute.mdc` |
 | Kenyan Payslip Decoder | `pm-africa` | `pm-africa/ke-payslip-decoder/ke-payslip-decoder.mdc` |
+| Keyword Cluster Map | `pm-seo` | `pm-seo/keyword-cluster-map/keyword-cluster-map.mdc` |
 | Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/kids-online-safety-plan.mdc` |
 | Knowledge-Gap Map | `pm-learning` | `pm-learning/knowledge-gap-map/knowledge-gap-map.mdc` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.mdc` |
@@ -949,6 +952,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Policy Memo | `pm-gov` | `pm-gov/policy-memo/policy-memo.mdc` |
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/policy-renewal-review.mdc` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/portfolio-page.mdc` |
+| Portfolio Review | `pm-investor` | `pm-investor/portfolio-review/portfolio-review.mdc` |
 | Post-Event Debrief | `pm-events` | `pm-events/post-event-debrief/post-event-debrief.mdc` |
 | Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/posture-reset-plan.mdc` |
 | Power of Attorney Explainer | `pm-legal` | `pm-legal/power-of-attorney-explainer/power-of-attorney-explainer.mdc` |
@@ -987,7 +991,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Professional Brain | `pm-cross` | `pm-cross/professional-brain/professional-brain.mdc` |
 | Professional Translator | `pm-localization` | `pm-localization/professional-translator/professional-translator.mdc` |
 | Profit to Cash Walk | `pm-investing-literacy` | `pm-investing-literacy/profit-to-cash-walk/profit-to-cash-walk.mdc` |
-| Programmatic SEO | `pm-growth` | `pm-growth/programmatic-seo/programmatic-seo.mdc` |
+| Programmatic SEO | `pm-seo` | `pm-seo/programmatic-seo/programmatic-seo.mdc` |
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/project-status-report.mdc` |
 | Promoter Draft | `pm-skill-promoter` | `pm-skill-promoter/promoter-draft/promoter-draft.mdc` |
 | Promoter Publish | `pm-skill-promoter` | `pm-skill-promoter/promoter-publish/promoter-publish.mdc` |
@@ -1123,7 +1127,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Scam Message Decoder | `pm-scam-defense` | `pm-scam-defense/scam-message-decoder/scam-message-decoder.mdc` |
 | Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/schedule-monte-carlo.mdc` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/schedule-recipe.mdc` |
-| Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.mdc` |
+| Schema Markup | `pm-seo` | `pm-seo/schema-markup/schema-markup.mdc` |
 | Scholarship Essay | `pm-students` | `pm-students/scholarship-essay/scholarship-essay.mdc` |
 | School Choice Decision | `pm-family` | `pm-family/school-choice-decision/school-choice-decision.mdc` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/scope-creep-response.mdc` |
@@ -1141,7 +1145,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Self-Review | `pm-career` | `pm-career/self-review/self-review.mdc` |
 | Send Approval Check | `pm-duet` | `pm-duet/send-approval-check/send-approval-check.mdc` |
 | Sensory Audit | `pm-neurodivergent` | `pm-neurodivergent/sensory-audit/sensory-audit.mdc` |
-| SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/seo-content-brief.mdc` |
+| SEO Content Brief | `pm-seo` | `pm-seo/seo-content-brief/seo-content-brief.mdc` |
 | Sequence Diagram | `pm-visuals` | `pm-visuals/sequence-diagram/sequence-diagram.mdc` |
 | Server Training Guide | `pm-hospitality` | `pm-hospitality/server-training-guide/server-training-guide.mdc` |
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/service-catalog-entry.mdc` |
@@ -1265,6 +1269,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Team Offsite Planner | `pm-people` | `pm-people/team-offsite-planner/team-offsite-planner.mdc` |
 | Tech Radar | `pm-engineering` | `pm-engineering/tech-radar/tech-radar.mdc` |
 | Technical Debt Register | `pm-engineering` | `pm-engineering/technical-debt-register/technical-debt-register.mdc` |
+| Technical SEO Audit | `pm-seo` | `pm-seo/technical-seo-audit/technical-seo-audit.mdc` |
 | Technical Spec Template | `pm-delivery` | `pm-delivery/technical-spec-template/technical-spec-template.mdc` |
 | Template Designer | `pm-cowork` | `pm-cowork/template-designer/template-designer.mdc` |
 | Tenant Rights Explainer | `pm-legal` | `pm-legal/tenant-rights-explainer/tenant-rights-explainer.mdc` |

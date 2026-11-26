@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
-  "bundles": 169,
-  "skills": 1363,
+  "bundles": 171,
+  "skills": 1368,
   "items": [
     {
       "bundle": "pm-2027",
@@ -3664,6 +3664,10 @@
           "description": "Check a mobile app build against the common reasons app store reviewers reject submissions, before it is submitted."
         },
         {
+          "name": "current-practice-check",
+          "description": "Check advice about tools, prices, model names, regulations and best practice for staleness before it is given, by dating each claim, marking what the assistant only remembers, and saying what to look up."
+        },
+        {
           "name": "demo-video-kit",
           "description": "Produce a short product demo video from screen recordings: a shot list, narration, timed captions and the exact ffmpeg commands to cut, join and caption it, computed by the bundled script."
         },
@@ -4558,6 +4562,41 @@
         {
           "name": "profit-to-cash-walk",
           "description": "Use when asked to reconcile operating profit to free cash flow, walk from EBIT to FCF, explain why profit and cash differ in this report, or show a company's cash conversion from its own accounts."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-investor",
+      "description": "For the individual investor: equity research note, earnings call summary, portfolio review, stock snapshot, investing policy statement and annual report tutor. General information, not financial advice",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-investor@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-investor"
+      },
+      "skills": [
+        {
+          "name": "annual-report-tutor",
+          "description": "Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the financial statements in an uploaded report."
+        },
+        {
+          "name": "earnings-call-summary",
+          "description": "Summarise a company's earnings release and call transcript the user supplies: what was reported against what was guided, what changed in the outlook, what management emphasised and avoided, and the questions analysts pressed on."
+        },
+        {
+          "name": "equity-research-note",
+          "description": "Write a structured research note on a listed company from filings and figures the user supplies: the business in plain words, what drives revenue and margin, a bull, base and bear case with the assumptions behind each, valuation as a range, and what would change the view."
+        },
+        {
+          "name": "investing-policy-statement",
+          "description": "Draft a personal investing policy statement (IPS) — the rules someone sets for their own investing."
+        },
+        {
+          "name": "portfolio-review",
+          "description": "Review a personal investment portfolio against the owner's own goals and rules: how it is spread, where it is concentrated, what it costs, how far it has drifted from its targets, and which questions to take to an adviser."
+        },
+        {
+          "name": "stock-snapshot",
+          "description": "Fetch a stock quote snapshot with keyless curl — Yahoo Finance's public chart endpoint, read with the discipline unofficial market data demands: timestamped, delayed-flagged, and never advice."
         }
       ]
     },
@@ -6477,6 +6516,41 @@
         {
           "name": "vuln-triage",
           "description": "Triage a vulnerability or scanner finding — assess real severity, exploitability, and how urgently to fix."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-seo",
+      "description": "Search visibility: technical SEO audit, keyword cluster map, SEO content brief, schema markup, programmatic SEO and answer engine optimisation",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-seo@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-seo"
+      },
+      "skills": [
+        {
+          "name": "aeo-optimizer",
+          "description": "Optimize an article for Answer Engine Optimization (AEO) so AI engines like ChatGPT, Perplexity, and Claude can extract, quote, and cite it."
+        },
+        {
+          "name": "keyword-cluster-map",
+          "description": "Group a keyword list into topic clusters by search intent, assign one page to each cluster, and show where existing pages compete with each other."
+        },
+        {
+          "name": "programmatic-seo",
+          "description": "Plan a programmatic SEO strategy — generate many ranking pages from a data set and a template."
+        },
+        {
+          "name": "schema-markup",
+          "description": "Generate structured-data (Schema.org / JSON-LD) markup to win rich results in search."
+        },
+        {
+          "name": "seo-content-brief",
+          "description": "Create a structured SEO content brief for any target keyword or topic."
+        },
+        {
+          "name": "technical-seo-audit",
+          "description": "Audit a website's technical search health from evidence the user supplies (crawl exports, page source, server responses, sitemap, robots file, Search Console data) and rank the fixes by how much they block crawling, indexing or ranking."
         }
       ]
     },

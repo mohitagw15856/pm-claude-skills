@@ -37,6 +37,16 @@ skills.sh is a leaderboard, not a registry: there is nothing to submit. A reposi
 curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/templates/pm-rules/PM-RULES.md -o AGENTS.md
 ```
 
+**Lint documents in CI.** A GitHub Action runs the deterministic document linter on your own repository, with no model call:
+
+```yaml
+- uses: actions/checkout@v4
+- uses: mohitagw15856/pm-claude-skills/.github/actions/doclint@main
+  with:
+    files: 'docs/prd/*.md'
+    type: prd
+```
+
 **n8n.** Two workflow templates in [`integrations/n8n/`](../integrations/n8n/README.md).
 
 ## Prerequisites

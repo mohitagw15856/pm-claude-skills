@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-investor",
+  "version": "1.0.0",
+  "description": "For the individual investor: equity research note, earnings call summary, portfolio review, stock snapshot, investing policy statement and annual report tutor. General information, not financial advice",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "investing",
+    "equity",
+    "portfolio",
+    "earnings"
+  ]
+}

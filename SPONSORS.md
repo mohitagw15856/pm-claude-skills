@@ -61,6 +61,8 @@ Each placement is sold by the month, to one sponsor at a time. Pricing is on req
 | **Skill of the week** | "Supported by" line on the weekly featured-skill post | Up to 20 words and a link |
 | **Sponsored skill or bundle** | A skill about your own product, in a bundle labelled as sponsored. See the rules below. | Product documentation and a reviewer on your side |
 
+The same information as a printable media kit: **[sponsor page](https://mohitagw15856.github.io/pm-claude-skills/sponsor.html)**.
+
 Placements can be combined. A natural pairing is a banner with a sponsored skill: for example a screen recording tool beside [`demo-video-kit`](skills/demo-video-kit/SKILL.md), or a design tool beside [`stitch-design-handoff`](skills/stitch-design-handoff/SKILL.md).
 
 ## Terms

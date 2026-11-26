@@ -114,6 +114,13 @@ docs/print/*.pdf
 web/docs-assets/handbook.pdf
 web/docs-assets/PM-Skills-Guide.pdf
 web/docs-assets/cheatsheet.pdf
+# Demo recordings: on the 'media' branch, restored into web/docs-assets/ at deploy.
+web/docs-assets/boardroom-demo.webp
+web/docs-assets/canvas-demo.webp
+web/docs-assets/compare-demo.webp
+web/docs-assets/demo-galaxy.webp
+web/docs-assets/firm-demo.webp
+web/docs-assets/playground-demo.webp
 docs/readme-assets/video/*.mp4
 # tools-pkg generated output: built by scripts/build-tools-exports.mjs at prepack.
 tools-pkg/openai-tools.json

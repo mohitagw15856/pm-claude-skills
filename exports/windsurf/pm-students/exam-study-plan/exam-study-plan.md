@@ -7,6 +7,8 @@ description: "Build a backward-planned study schedule for an exam — using prov
 
 Most study plans fail two ways: they're a vague "revise everything" with no schedule, and they rely on re-reading and highlighting — which feel productive but barely work. This builds a backward-planned schedule from your exam date, focuses effort where it counts, and uses the methods that actually create retention (active recall, spaced repetition, practice testing) so you walk in prepared, not fried.
 
+> **Not quite this?** Use `study-notes-synthesizer` to turn your notes into revision material once the schedule is set.
+
 ## What This Skill Produces
 
 - **A backward-planned schedule** — week-by-week (and nearer the date, day-by-day) working back from the exam
@@ -70,7 +72,9 @@ Ask for these if not provided:
 - "How should I study for a multiple-choice licensing exam?"
 - "I've got 10 days and a lot to cover — plan my revision."
 
+Install only this skill: `npx pm-claude-skills add --skills exam-study-plan`
+
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exam-study-plan.html
 
-<!-- pm-claude-skills v84.0.0 | skill: exam-study-plan | source: skills/exam-study-plan/SKILL.md | sha256: c869286d4163e0443ade951904c19a1a7f23b10913c970c5e1e5ebb4d893ee1a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: exam-study-plan | source: skills/exam-study-plan/SKILL.md | sha256: 5ee1f360ee9c514a5762b1d875fc89f672da6ac902e540e052620028a9fc9077 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

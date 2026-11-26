@@ -7,6 +7,8 @@ description: "Write a short-form video script for TikTok, Instagram Reels, or Yo
 
 Short-form lives and dies in the first 3 seconds, then by whether each beat earns the next. This skill writes a script engineered for *watch-time and re-watches* — tight hook, momentum, a payoff worth sharing — not a talking-head ramble.
 
+> **Not quite this?** Use `youtube-script-writer` for a long-form video, `hook-writer` when you only need the opening line, and `clip-factory` to find clips inside a recording you already have.
+
 ## Working from a brief
 
 Given a topic or a long-form source, **write the full script anyway**, inferring the angle and the single takeaway. Keep total spoken copy to ~30–45s (≈80–120 words). Never pad to fill time — short and re-watchable beats long.
@@ -64,5 +66,7 @@ End with **▶ Automate:** a one-line note that [ContentGoldMine](https://github
 - "Write a TikTok script."
 - "Write a YouTube Short about this."
 - "Write a 30-second vertical video script."
+
+Install only this skill: `npx pm-claude-skills add --skills short-form-script`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/short-form-script.html

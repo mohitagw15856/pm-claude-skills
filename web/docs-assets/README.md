@@ -72,3 +72,5 @@ To replace the static screenshot with a short looping demo:
    `playground-demo.webp` (the `<!-- DEMO -->` comment in the README marks the spot).
 
 The PDFs (`cheatsheet.pdf`, `PM-Skills-Guide.pdf`, `handbook.pdf`) are built by `shoot.mjs` but not committed; the current copies are on the [`media` branch](https://github.com/mohitagw15856/pm-claude-skills/tree/media/docs-assets).
+
+The demo recordings (`boardroom-demo`, `canvas-demo`, `compare-demo`, `demo-galaxy`, `firm-demo` and `playground-demo`, all `.webp`) are also on the [`media` branch](https://github.com/mohitagw15856/pm-claude-skills/tree/media/docs-assets) and are not committed to main. The deploy workflow copies them back into `web/docs-assets/` so their site URLs keep working. After re-recording one, replace it on the `media` branch.

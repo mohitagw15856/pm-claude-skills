@@ -15,6 +15,8 @@ the cuts — and runs the gate clip farms skip: does this clip mean what the
 speaker meant? Out-of-context bait gets engagement and burns the channel that
 posted it.
 
+> **Not quite this?** Use `short-form-script` to write a new short from scratch, and `youtube-script-writer` for the long video itself.
+
 ## What This Skill Produces
 
 - A **ranked clip sheet**: 8–12 clips, best first, each with hook text (first
@@ -106,5 +108,7 @@ the hooks work.
 - "Clip this podcast."
 - "Make shorts from my video."
 - "What's clippable here?"
+
+Install only this skill: `npx pm-claude-skills add --skills clip-factory`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/clip-factory.html

@@ -14,8 +14,8 @@ real links filled in, lead assets ready. Post **mid-week (Tue–Thu), ~8–10am 
 - **Live Playground:** https://mohitagw15856.github.io/pm-claude-skills/
 - **Sample outputs:** https://mohitagw15856.github.io/pm-claude-skills/examples.html
 - **Example skill page (great for sharing):** https://mohitagw15856.github.io/pm-claude-skills/skill/prd-template.html
-- **Hero demo GIF:** `web/docs-assets/playground-demo.webp`
-- **Compare-mode GIF (the "proof" asset):** `web/docs-assets/compare-demo.webp`
+- **Hero demo GIF:** `https://github.com/mohitagw15856/pm-claude-skills/raw/media/docs-assets/playground-demo.webp`
+- **Compare-mode GIF (the "proof" asset):** `https://github.com/mohitagw15856/pm-claude-skills/raw/media/docs-assets/compare-demo.webp`
 
 ## The hooks that make this different (use these — competitors don't have them)
 1. **Eval-verified** — skills are scored against held-out cases, not just counted.

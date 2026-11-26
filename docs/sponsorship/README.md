@@ -12,6 +12,10 @@ Working notes for selling and running sponsor placements. The public offer is th
 | Two weeks before a term ends | Ask the current sponsor about renewal | They have first refusal until ten days before the end |
 | After that | If not renewed, offer the slot to the next sponsor | Templates in [pitch-templates.md](pitch-templates.md) |
 
+## Recording traffic automatically
+
+The weekly data workflow records repository traffic by itself once a secret named `TRAFFIC_TOKEN` exists: a fine-grained personal access token for this repository with **Administration: read**. Without it the step is skipped and you run the script by hand. The workflow records the daily figures only; refreshing the reach tables in the READMEs stays a manual `--update-docs` run, so those edits are reviewed.
+
 ## Changing the banner
 
 1. Ask for two PNGs at 1200 by 300 (light and dark), alt text and a link. Check the size: `sips -g pixelWidth -g pixelHeight file.png`.

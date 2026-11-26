@@ -8,6 +8,8 @@ alwaysApply: false
 
 Build pricing that reflects value delivered — not cost to build. Structure every pricing decision with customer segmentation, value metric identification, competitive context, and a packaging recommendation.
 
+> **Not quite this?** Use `pricing-sensitivity-model` to compute price points from survey responses, `pricing-page-copy` to write the pricing page, and `price-increase-announcement` to tell existing customers about a rise.
+
 ## Pricing Foundations
 
 Three questions to answer before any pricing decision:
@@ -156,7 +158,9 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Evaluate freemium vs paid."
 - "Prepare a pricing change."
 
+Install only this skill: `npx pm-claude-skills add --skills pricing-strategy`
+
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-strategy.html
 
-<!-- pm-claude-skills v84.0.0 | skill: pricing-strategy | source: skills/pricing-strategy/SKILL.md | sha256: 34c5018a2a2df8d274590484a6e5479cec9c73975195bc7c5e7a122ea6a7d163 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: pricing-strategy | source: skills/pricing-strategy/SKILL.md | sha256: 6d3b69c3dbbebf2ea53716c10f380d2452a1a86861f6a9c66fec34d74e82c59a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

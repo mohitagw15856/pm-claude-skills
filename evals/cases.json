@@ -1960,6 +1960,178 @@
     {
       "skill": "equity-research-note",
       "input": "Write a research note from these figures I copied from the FY2025 annual report (dated February 2026) of a listed software company: revenue 412m, up 18%; subscription revenue 371m; gross margin 74%; operating margin 6% reported, 15% adjusted (excludes share-based pay of 37m); net revenue retention 108%; customers over 100k: 420. I hold some shares and want to test my thesis over three years. No price or consensus numbers supplied."
+    },
+    {
+      "skill": "youtube-script-writer",
+      "input": "Write a script for an 8 minute explainer: Why most product roadmaps are fiction. Channel is for early-career product managers, talking head with some screen captures. My angle: a roadmap is a bet list, not a promise. I have one real story: we shipped 3 of 14 items from our 2024 roadmap."
+    },
+    {
+      "skill": "pricing-strategy",
+      "input": "We sell a B2B scheduling tool. Today: one plan at 12 per user per month, 800 customers, median 6 seats. Sales says enterprises want SSO and audit logs and would pay more; small teams churn at month 3. Should we add tiers, and what goes in each? No willingness-to-pay research done yet."
+    },
+    {
+      "skill": "short-form-script",
+      "input": "45 second vertical video for Instagram Reels. I run a small bakery account. Topic: why your sourdough is flat (it is usually under-proofing, not the starter). Audience: home bakers. I want them to save the video. Voiceover plus on-screen text."
+    },
+    {
+      "skill": "thumbnail-creator",
+      "input": "I need thumbnail candidates for a newsletter issue titled The meeting that should have been a decision. Article argues that most recurring meetings exist because nobody has authority to decide. Brand colours: off-white and deep blue. I have not set up an image API key yet, so tell me what you need and propose the concepts."
+    },
+    {
+      "skill": "exam-study-plan",
+      "input": "I sit a professional accounting exam on 14 March, two papers: Financial Reporting and Audit. Today is 20 January. I work full time, so about 10 hours a week, more at weekends. I failed Audit once on the written questions. I have the textbooks and two past-paper sets."
+    },
+    {
+      "skill": "api-docs-writer",
+      "input": "Document this endpoint: POST /v1/refunds. Body: payment_id (string, required), amount (integer, minor units, optional, defaults to full), reason (enum: duplicate, fraudulent, requested_by_customer). Returns 201 with refund object {id, status: pending|succeeded|failed, amount, created}. Errors: 400 amount_exceeds_payment, 404 payment_not_found, 409 already_refunded. Idempotency-Key header supported. Auth is a bearer token."
+    },
+    {
+      "skill": "architecture-decision-record",
+      "input": "Write an ADR. We decided to move background jobs from cron on a single VM to a managed queue with workers. Context: two missed billing runs last quarter when the VM was patched; jobs now take 40 minutes and overlap. Options considered: keep cron with a lock, self-hosted queue, managed queue. We chose managed. Team of five, no dedicated ops."
+    },
+    {
+      "skill": "changelog-generator",
+      "input": "Turn these commits into a user-facing changelog for version 3.2.0: feat: export reports as CSV; feat: saved filters on the dashboard; fix: timezone off by one day in weekly digest; fix: crash when uploading files over 50MB; chore: bump deps; refactor: split billing module; perf: dashboard loads faster for large workspaces; BREAKING: removed the legacy v1 webhooks."
+    },
+    {
+      "skill": "code-review-checklist",
+      "input": "Give me a review checklist for this PR: a Python Django change that adds a password reset endpoint, a new database migration adding a reset_tokens table, and an email template. About 300 lines. It touches authentication, so treat it as high risk."
+    },
+    {
+      "skill": "competitor-teardown",
+      "input": "Teardown of the note-taking app market for a new entrant aimed at research teams. Competitors I know: Notion, Obsidian, Roam. What I have: their public pricing pages as of this month (pasted below) and my own notes from trying each for a week. I have no usage or revenue data for any of them.\n\n[pricing notes pasted]"
+    },
+    {
+      "skill": "content-repurposer",
+      "input": "Repurpose this 1,200 word blog post, Stop writing status updates nobody reads, into a pack for X, LinkedIn, my newsletter and a short video script. Key points: lead with the decision needed, one risk, one ask; cut the activity list. My audience is engineering managers.\n\n[post pasted]"
+    },
+    {
+      "skill": "creator-brand-kit",
+      "input": "Build my brand kit. I am a physiotherapist starting to post about desk-worker back pain. I want to reach office workers aged 25 to 45. I am evidence-based and a bit dry-humoured. Platforms: Instagram and a newsletter. I do not want to sound like a wellness influencer."
+    },
+    {
+      "skill": "cs-escalation-brief",
+      "input": "Write an escalation brief. Account: a logistics company, 180k annual contract, renewal in 70 days. Their API integration has failed three times in two weeks, each for about two hours, and their operations director emailed our CEO saying they are evaluating alternatives. Root cause on our side is a rate limiter change. Engineering says a fix ships in 10 days."
+    },
+    {
+      "skill": "customer-journey-map",
+      "input": "Map the journey for a first-time customer of an online glasses retailer, from realising they need new glasses to their second purchase. What we know from support tickets: people worry about fit, returns are confusing, and prescription upload fails on phones. We have no interview data yet."
+    },
+    {
+      "skill": "customer-success-plan",
+      "input": "Create a joint success plan for a 60-person marketing agency that just bought our project management tool. Their stated goals: stop missing client deadlines and get one view of team capacity. Champion is the operations lead; the founders are sceptical. Go-live target is six weeks from now."
+    },
+    {
+      "skill": "data-analysis-standard",
+      "input": "Checkout conversion fell from 3.4% to 2.7% between the last two weeks. Structure the analysis. Known changes in that window: a new address form shipped on mobile, a paid campaign started sending more traffic from social, and one payment provider had an incident on Tuesday. I can pull data by device, channel and step."
+    },
+    {
+      "skill": "discovery-interview-guide",
+      "input": "I need an interview guide. We think freelance designers struggle to chase late invoices and might want automated reminders. I want to talk to 8 freelancers in 30 minute calls. I do not want to lead them towards our idea."
+    },
+    {
+      "skill": "feature-prioritisation",
+      "input": "Prioritise for next quarter, one team of four: bulk import from CSV, mobile push notifications, role-based permissions, a public API, dark mode, and fixing the slow search. Enterprise deals keep asking for permissions; support tickets are mostly about search. I have no reach numbers beyond that."
+    },
+    {
+      "skill": "job-story-mapper",
+      "input": "Write job stories for a household budgeting app. From five interviews: people open the app right after payday, they feel guilty when they see overspending, couples argue about who spent what, and several keep a separate spreadsheet anyway because they do not trust the categories."
+    },
+    {
+      "skill": "meeting-notes",
+      "input": "Turn these raw notes into proper meeting notes. Weekly product sync, Tuesday. Present: Ana, Ben, Chidi, Dev. checkout redesign slipping, design not final, ben says needs 1 more wk. ana wants to cut guest checkout from v1, chidi disagrees, legal needs it for EU? not decided. dev to check with legal. launch date was 3rd, now maybe 10th. also pricing page copy approved. ana to tell sales."
+    },
+    {
+      "skill": "pr-description-writer",
+      "input": "Write the PR description. Branch: fix/duplicate-webhook-delivery. Commits: add idempotency key to webhook deliveries; store delivery attempts in new table; retry with backoff instead of immediate; tests for duplicate suppression. Why: customers received the same order.created event up to four times when our worker restarted mid-send. Includes a migration."
+    },
+    {
+      "skill": "press-release",
+      "input": "Write a press release. Company: a 40-person fintech in Manchester. News: we received authorisation from the regulator to offer savings accounts, launching to the public on 3 March. Quote from the CEO welcome. I do not have the interest rate confirmed yet, so do not state one."
+    },
+    {
+      "skill": "product-health-analysis",
+      "input": "Read these numbers against our goals. Goal: weekly active teams 1,200 by end of quarter; now 1,050, flat for three weeks. Activation (team invites a second member in week one) 41%, target 50%. Week-4 retention 62%, was 66% last quarter. NPS 38. Support tickets up 20% since the new editor shipped."
+    },
+    {
+      "skill": "product-launch-checklist",
+      "input": "Checklist for launching a new mobile app version that adds in-app subscriptions, on iOS and Android, in two weeks. Small team: two engineers, one designer, me. We have never sold subscriptions before. Support is one part-time person."
+    },
+    {
+      "skill": "product-positioning-doc",
+      "input": "Positioning for a time-tracking tool built for architecture firms. Alternatives they use today: spreadsheets and generic time trackers. What is different: it maps time to project stages used in architecture contracts and flags when a stage is over its fee. Buyers are practice managers; users are architects who hate timesheets."
+    },
+    {
+      "skill": "qbr-deck",
+      "input": "Prepare a QBR for a retail customer in their second year. They pay 95k a year for our inventory analytics. Usage: 34 of 50 seats active, up from 22. They cut stockouts in pilot stores but have not rolled out to the other 120 stores. Renewal is in five months. I do not have their internal savings figure."
+    },
+    {
+      "skill": "renewal-playbook",
+      "input": "Renewal in 90 days for a 140k account. Health is mixed: usage is strong in one department, the executive sponsor left two months ago, and procurement has asked for a 15% discount. We want to renew flat and expand by 20 seats. Build the playbook."
+    },
+    {
+      "skill": "retention-analysis",
+      "input": "Structure a retention analysis for a language-learning app. Day-1 retention 48%, day-7 21%, day-30 9%. Users who complete the placement test retain better but I do not know if that is cause or selection. We changed onboarding in March. I can cut by acquisition channel, platform and first-week behaviour."
+    },
+    {
+      "skill": "retro-analysis",
+      "input": "Sprint 31 data: committed 42 points, completed 29. Two stories carried over for the third sprint running. Four unplanned bugs came in from the release. One engineer was out for three days. Cycle time rose from 4 to 6.5 days. Team sentiment in the survey: process 3 of 5, collaboration 4 of 5. Prepare the retro brief."
+    },
+    {
+      "skill": "rice-impact-matrix",
+      "input": "Score these with RICE and strategic fit. Strategy this year: move upmarket. Items: SSO (reach 60 accounts a quarter, effort 2 person-months), usage-based billing (reach 900 accounts, effort 5), template gallery (reach 3,000 users, effort 1), audit log (reach 45 accounts, effort 1.5). Confidence is high for SSO and audit log, medium for the others. I have not estimated impact."
+    },
+    {
+      "skill": "runbook-writer",
+      "input": "Write a runbook for: the nightly data export job fails. It runs at 02:00 UTC, writes to object storage, and three customers pull the file at 06:00. Common causes we have seen: expired storage credentials, the source database replica lagging, and disk full on the worker. On-call has read access to logs and can restart the job."
+    },
+    {
+      "skill": "skill-security-auditor",
+      "input": "Audit this skill before I install it. It is called quick-deploy. Its instructions tell the assistant to read the .env file, run a shell script downloaded from a URL with curl piped to bash, and post the deploy log to a webhook address written in the skill. The description says it only formats deployment notes."
+    },
+    {
+      "skill": "sprint-brief",
+      "input": "Sprint 12 brief. Goal: let customers pay by bank transfer. Dates: 2 to 13 June. Capacity 34 points, team of five, one on leave the second week. Stories: bank details form (5), payment reference generation (8), reconciliation job (13), confirmation email (3), admin view of pending transfers (5). Dependency: finance must confirm the reference format by 4 June."
+    },
+    {
+      "skill": "technical-debt-register",
+      "input": "Build a debt register from this list: the test suite takes 50 minutes; we are two major versions behind on the web framework; the billing module has no tests and only one person understands it; secrets are in a config file on the server; the mobile app still calls a v1 API we want to retire. Team of six. I do not have effort estimates."
+    },
+    {
+      "skill": "technical-spec-template",
+      "input": "Write a tech spec for adding saved searches with email alerts to a job board. Product wants: users save a search, get a daily email of new matches, can pause or delete. Current stack: Postgres, a Rails monolith, a background job runner, a transactional email provider. About 200k users; we do not know how many will use this."
+    },
+    {
+      "skill": "user-interview-synthesis",
+      "input": "Synthesise these notes from six interviews with clinic receptionists about appointment booking. P1: double-bookings happen when two of us are on the phone. P2: patients no-show and we cannot fill the slot. P3: I keep a paper list as backup. P4: the system is fine, the doctors change their hours without telling us. P5: reminders go out but patients say they never got them. P6: I spend the first hour rebooking yesterday's cancellations."
+    },
+    {
+      "skill": "user-research-synthesis",
+      "input": "Synthesise: a survey of 212 users of our recipe app plus eight interviews. Survey: 58% cook from the app weekly, 31% say search is the most frustrating part, 44% want a shopping list. Interviews: people screenshot recipes because the screen locks while cooking, several plan meals on Sunday, two said they stopped using it because of adverts. The survey went only to newsletter subscribers."
+    },
+    {
+      "skill": "writing-great-skills",
+      "input": "Help me write a skill. It should turn a messy customer complaint email into a calm reply plus an internal note on what went wrong. My team are support agents at a small online furniture shop. My draft description is just: helps with complaints."
+    },
+    {
+      "skill": "current-practice-check",
+      "input": "Check this paragraph from our onboarding doc before I send it to new engineers. Today is 27 November 2026 and I have no sources to hand: Use the newest and best AI model for code review, which costs 3 dollars per million tokens. The free tier of our CI provider gives 2,000 minutes a month. Under GDPR you must report a breach within 72 hours. For retros, use start, stop, continue."
+    },
+    {
+      "skill": "technical-seo-audit",
+      "input": "Organic traffic to our shop fell by roughly half the week after we moved from /products/item-name to /p/12345 URLs on 3 November. From the crawl export: 4,200 old URLs return 302 to the home page, the sitemap still lists the old URLs, and category pages now load their product grid only after scripts run. robots.txt has Disallow: /p/ left over from staging. I have not pulled Search Console data yet."
+    },
+    {
+      "skill": "keyword-cluster-map",
+      "input": "Cluster these for a shop selling standing desks, UK market. Export has volumes: standing desk 40k, best standing desk 9k, standing desk uk 6k, electric standing desk 12k, standing desk converter 5k, sit stand desk 8k, are standing desks worth it 2k, standing desk benefits 3k, how tall should a standing desk be 1.5k, standing desk height calculator 1k, cheap standing desk 4k. Existing pages: /standing-desks (category), /blog/standing-desk-benefits, /blog/are-standing-desks-good-for-you."
+    },
+    {
+      "skill": "earnings-call-summary",
+      "input": "Summarise from this release and transcript excerpt, Q3 FY2026, reported 12 November. Release: revenue 218m, up 11% year on year; adjusted operating margin 17.5% (reported 12.1%, difference is restructuring of 11.8m); free cash flow 31m. Guidance last quarter was revenue growth of 12 to 14% for the full year; now 10 to 12%. Transcript: CFO said enterprise deals are taking longer to close; three analysts asked about churn in the small business segment and the CEO said it is something we are watching closely without giving a number. Churn was disclosed last quarter at 2.1% monthly and is not in this release."
+    },
+    {
+      "skill": "portfolio-review",
+      "input": "Review this, valued 20 November 2026. ISA: global index fund 42,000 (fee 0.12%), UK index fund 9,000 (fee 0.06%), technology fund 14,000 (fee 0.75%). Workplace pension: default fund 61,000 (fee unknown). Shares in my employer from the share scheme: 38,000. Cash: 12,000. My targets: 70% shares, 20% bonds, 10% cash, and no single company above 10%. I am 41 and this is for retirement."
     }
   ]
 }

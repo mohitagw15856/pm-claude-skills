@@ -18,6 +18,7 @@ These run **several skills in sequence**, passing each output forward as context
 | Command | Chains | Lifecycle |
 |---|---|---|
 | `/ship-a-feature` | ambiguity-resolver → prd-template → rice-prioritisation → roadmap-narrative → go-to-market | Discover → Ship |
+| `/ship-with-director` | product-director assigns research-lead → data-analyst → pm-partner → sprint-master → launch-captain → cs-guardian | Evidence → After launch |
 | `/close-the-quarter` | metrics-framework → churn-analysis → executive-update → board-deck-narrative | Measure → Communicate |
 | `/launch-a-product` | competitor-teardown → product-positioning-doc → go-to-market → product-launch-checklist → press-release | Decide → Ship |
 | `/rescue-an-account` | cs-health-scorecard → churn-analysis → cs-escalation-brief → renewal-playbook | Measure → Communicate |

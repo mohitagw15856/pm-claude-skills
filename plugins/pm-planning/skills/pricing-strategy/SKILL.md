@@ -7,6 +7,8 @@ description: "Structure pricing strategy decisions, packaging options, and tier 
 
 Build pricing that reflects value delivered — not cost to build. Structure every pricing decision with customer segmentation, value metric identification, competitive context, and a packaging recommendation.
 
+> **Not quite this?** Use `pricing-sensitivity-model` to compute price points from survey responses, `pricing-page-copy` to write the pricing page, and `price-increase-announcement` to tell existing customers about a rise.
+
 ## Pricing Foundations
 
 Three questions to answer before any pricing decision:
@@ -154,5 +156,7 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Design pricing tiers."
 - "Evaluate freemium vs paid."
 - "Prepare a pricing change."
+
+Install only this skill: `npx pm-claude-skills add --skills pricing-strategy`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-strategy.html

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-seo",
+  "version": "1.0.0",
+  "description": "Search visibility: technical SEO audit, keyword cluster map, SEO content brief, schema markup, programmatic SEO and answer engine optimisation",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "seo",
+    "search",
+    "keywords",
+    "content"
+  ]
+}
