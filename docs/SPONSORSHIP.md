@@ -24,6 +24,8 @@ Raise the free-run cap math, stated plainly: every ~$3/month funds ~10 additiona
 
 ## House rules
 
-- Sponsorship never buys placement in the skill library, eval scores, benchmark results, or census findings — those stay evidence-only, which is exactly why the audience trusts the surfaces your name appears on.
+- Sponsorship never buys eval scores, benchmark results, census findings, leaderboard position, or a mention inside an unsponsored skill: those stay evidence-only, which is exactly why the audience trusts the surfaces your name appears on. A sponsor may fund a clearly labelled skill about its own product, under the rules in [SPONSORS.md](../SPONSORS.md#sponsored-skills-the-rules).
 - Marks are removed promptly when sponsorship ends; benches revert to their unsponsored names.
 - Anything crypto, gambling-adjacent, or in conflict with the trust model gets a polite no regardless of tier.
+
+Company placements (README banner, Chinese README, newsletter, skill of the week), reach figures and terms are in [SPONSORS.md](../SPONSORS.md).

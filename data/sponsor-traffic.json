@@ -1,0 +1,61 @@
+{
+  "_comment": "Daily repository views recorded by scripts/sponsor-report.mjs. GitHub keeps 14 days; this file keeps the rest.",
+  "days": {
+    "2026-11-12": {
+      "views": 1217,
+      "uniques": 640
+    },
+    "2026-11-13": {
+      "views": 855,
+      "uniques": 488
+    },
+    "2026-11-14": {
+      "views": 819,
+      "uniques": 449
+    },
+    "2026-11-15": {
+      "views": 883,
+      "uniques": 494
+    },
+    "2026-11-16": {
+      "views": 1300,
+      "uniques": 650
+    },
+    "2026-11-17": {
+      "views": 1309,
+      "uniques": 671
+    },
+    "2026-11-18": {
+      "views": 1115,
+      "uniques": 619
+    },
+    "2026-11-19": {
+      "views": 1066,
+      "uniques": 611
+    },
+    "2026-11-20": {
+      "views": 1001,
+      "uniques": 517
+    },
+    "2026-11-21": {
+      "views": 1011,
+      "uniques": 530
+    },
+    "2026-11-22": {
+      "views": 776,
+      "uniques": 468
+    },
+    "2026-11-23": {
+      "views": 976,
+      "uniques": 530
+    },
+    "2026-11-24": {
+      "views": 966,
+      "uniques": 535
+    },
+    "2026-11-25": {
+      "views": 1072,
+      "uniques": 556
+    }
+  }
+}

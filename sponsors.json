@@ -3,10 +3,97 @@
   "sponsorUrl": "https://github.com/sponsors/mohitagw15856",
   "coffeeUrl": "https://www.buymeacoffee.com/mohit15856",
   "tiers": [
-    { "name": "☕ Supporter", "price": "$5/mo", "perks": ["Your name in SPONSORS.md", "Sponsor badge on your GitHub", "Warm fuzzy feeling"] },
-    { "name": "🚀 Backer", "price": "$25/mo", "perks": ["Everything in Supporter", "Priority on your skill requests", "A vote on the roadmap"] },
-    { "name": "🏢 Sustaining", "price": "$100/mo", "perks": ["Everything in Backer", "Your logo + link in the README and on the site", "One custom skill built for you each quarter"] },
-    { "name": "💎 Partner", "price": "$500/mo", "perks": ["Everything in Sustaining", "Your logo on every skill page", "A private skill pack built for your team", "Priority support & a quarterly review call"] }
+    {
+      "name": "☕ Supporter",
+      "price": "$5/mo",
+      "perks": [
+        "Your name in SPONSORS.md",
+        "Sponsor badge on your GitHub",
+        "Warm fuzzy feeling"
+      ]
+    },
+    {
+      "name": "🚀 Backer",
+      "price": "$25/mo",
+      "perks": [
+        "Everything in Supporter",
+        "Priority on your skill requests",
+        "A vote on the roadmap"
+      ]
+    },
+    {
+      "name": "🏢 Sustaining",
+      "price": "$100/mo",
+      "perks": [
+        "Everything in Backer",
+        "Your logo + link in the README and on the site",
+        "One custom skill built for you each quarter"
+      ]
+    },
+    {
+      "name": "💎 Partner",
+      "price": "$500/mo",
+      "perks": [
+        "Everything in Sustaining",
+        "Your logo on every skill page",
+        "A private skill pack built for your team",
+        "Priority support & a quarterly review call"
+      ]
+    }
   ],
-  "sponsors": []
+  "sponsors": [
+    {
+      "name": "FocuSee",
+      "url": "https://focusee.ai/?utm_source=github&utm_medium=display&utm_campaign=pm_claude_skills_2611&utm_content=site_wall",
+      "logo": "https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/assets/sponsors/focusee-light.png",
+      "tier": "README banner",
+      "placement": "readme-banner",
+      "term": "2026-11"
+    }
+  ],
+  "contact": "mailto:mohit15856@gmail.com?subject=Sponsoring%20PM%20Skills",
+  "placements": [
+    {
+      "id": "readme-banner",
+      "name": "README banner",
+      "where": "Top of the English README, under the title",
+      "term": "calendar month",
+      "price": "on request"
+    },
+    {
+      "id": "readme-zh-banner",
+      "name": "Chinese README banner",
+      "where": "Top of README.zh-CN.md and the Gitee and GitCode mirrors",
+      "term": "calendar month",
+      "price": "on request"
+    },
+    {
+      "id": "site",
+      "name": "Playground and site",
+      "where": "Sponsor wall on the community page and the playground footer",
+      "term": "calendar month",
+      "price": "on request"
+    },
+    {
+      "id": "newsletter",
+      "name": "Release newsletter",
+      "where": "One labelled line in each release newsletter",
+      "term": "per issue",
+      "price": "on request"
+    },
+    {
+      "id": "skill-of-the-week",
+      "name": "Skill of the week",
+      "where": "Supported-by line on the weekly featured-skill post",
+      "term": "per post",
+      "price": "on request"
+    },
+    {
+      "id": "sponsored-skill",
+      "name": "Sponsored skill or bundle",
+      "where": "A labelled skill about the sponsor's own product",
+      "term": "calendar month",
+      "price": "on request"
+    }
+  ]
 }
