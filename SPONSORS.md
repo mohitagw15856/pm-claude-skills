@@ -16,12 +16,13 @@ This library is free and MIT-licensed. Sponsorship pays for the work that keeps 
   </a>
 </p>
 
-**FocuSee** holds the README banner for November 2026.
+**FocuSee** holds the README banner. It went live on 25 November 2026.
 
 ## Who you reach
 
 The audience is product managers, engineers, founders and operators who use AI assistants for professional work, plus a Chinese-speaking audience through the Chinese README and the Gitee and GitCode mirrors.
 
+<!-- sponsor-reach:start (written by scripts/sponsor-report.mjs --update-docs) -->
 Figures as of 26 November 2026:
 
 | Measure | Figure | Source |
@@ -34,7 +35,10 @@ Figures as of 26 November 2026:
 | npm downloads, last 7 days | 1,962 | npm |
 | npm downloads, last 30 days | 11,086 | npm |
 
-Most visitors arrive from search: Google sent 4,772 of the 14-day views. Stars and weekly npm downloads refresh daily in the image below. Playground visit counts are available on request.
+Top source of visitors in those 14 days: Google, 4,772 views.
+<!-- sponsor-reach:end -->
+
+Most visitors arrive from search. Stars and weekly npm downloads refresh daily in the image below. Playground visit counts are available on request.
 
 <p>
   <picture>
@@ -46,7 +50,7 @@ Most visitors arrive from search: Google sent 4,772 of the 14-day views. Stars a
 
 ## Placements for companies
 
-Each placement is sold by the calendar month, to one sponsor at a time. Pricing is on request: email [mohit15856@gmail.com](mailto:mohit15856@gmail.com?subject=Sponsoring%20PM%20Skills) with the placement and the months you want.
+Each placement is sold by the month, to one sponsor at a time. Pricing is on request: email [mohit15856@gmail.com](mailto:mohit15856@gmail.com?subject=Sponsoring%20PM%20Skills) with the placement and the months you want.
 
 | Placement | Where it appears | What you supply |
 |---|---|---|
@@ -61,16 +65,16 @@ Placements can be combined. A natural pairing is a banner with a sponsored skill
 
 ## Terms
 
-- **Fixed term.** A slot runs for whole calendar months and carries its month in the repository history, for example "Add FocuSee sponsor banner (Nov 2026)".
-- **One sponsor per slot.** No rotation inside a month and no second banner beside yours.
-- **Renewal.** The current sponsor has first refusal on the next month until the 20th. After that the slot is open to the next sponsor.
+- **Fixed term.** A slot runs for a term agreed up front, normally one month from the day it goes live, and carries its month in the repository history, for example "Add FocuSee sponsor banner (Nov 2026)".
+- **One sponsor per slot.** No rotation inside a term and no second banner beside yours.
+- **Renewal.** The current sponsor has first refusal on the next term until ten days before the current one ends. After that the slot is open to the next sponsor.
 - **Changeover.** The banner goes up on the first day of the term and comes down on the last. Marks are removed promptly when a term ends.
 - **Links.** UTM parameters are welcome. GitHub strips scripts and tracking pixels, so none are accepted.
 - **A polite no** to crypto, gambling and anything that conflicts with the project's trust model, whatever the budget.
 
 ## What you get back each month
 
-By the 5th of the following month you receive a short report: repository views and unique visitors, views of the page your placement sits on, top referrers and npm downloads for the term. Clicks are counted on your side under your UTM campaign, since GitHub does not report outbound clicks. The report is produced by [`scripts/sponsor-report.mjs`](scripts/sponsor-report.mjs), so every sponsor gets the same figures from the same sources.
+Within five days of the end of each term you receive a short report: repository views and unique visitors, views of the page your placement sits on, top referrers and npm downloads for the term. Clicks are counted on your side under your UTM campaign, since GitHub does not report outbound clicks. The report is produced by [`scripts/sponsor-report.mjs`](scripts/sponsor-report.mjs), so every sponsor gets the same figures from the same sources.
 
 ## Sponsored skills: the rules
 

@@ -1,16 +1,16 @@
 # Sponsorship playbook
 
-Working notes for selling and running sponsor placements. The public offer is [SPONSORS.md](../../SPONSORS.md); this folder is how to operate it.
+Working notes for selling and running sponsor placements. The public offer is the "Sponsor this project" section of the [README](../../README.md#-sponsor-this-project) and, in full, [SPONSORS.md](../../SPONSORS.md); this folder is how to operate it.
 
 ## The monthly cycle
 
 | When | What | How |
 |---|---|---|
-| Every week or two | Record traffic, because GitHub keeps only 14 days | `node scripts/sponsor-report.mjs` (updates `data/sponsor-traffic.json`; commit it) |
-| 1st of the month | Put the new sponsor's banner up, take the old one down | Replace the files in `assets/sponsors/`, update the block in `README.md`, add the sponsor to `sponsors.json` with its `term` |
-| By the 5th | Send last month's report | `node scripts/sponsor-report.mjs --month YYYY-MM --sponsor Name --out report.md`, then the cover note in [report-email.md](report-email.md) |
-| Around the 15th | Ask the current sponsor about renewal | They have first refusal until the 20th |
-| From the 21st | If not renewed, offer the slot to the next sponsor | Templates in [pitch-templates.md](pitch-templates.md) |
+| Every week or two | Record traffic, because GitHub keeps only 14 days, and refresh the reach table sponsors see | `node scripts/sponsor-report.mjs --update-docs` (updates `data/sponsor-traffic.json` and the table in `README.md` and `SPONSORS.md`; commit them) |
+| First day of a term | Put the new sponsor's banner up, take the old one down | Replace the files in `assets/sponsors/`, update the block in `README.md`, add the sponsor to `sponsors.json` with its `since` date |
+| Within five days of a term ending | Send the report for that term | `node scripts/sponsor-report.mjs --month YYYY-MM --sponsor Name --out report.md`, then the cover note in [report-email.md](report-email.md) |
+| Two weeks before a term ends | Ask the current sponsor about renewal | They have first refusal until ten days before the end |
+| After that | If not renewed, offer the slot to the next sponsor | Templates in [pitch-templates.md](pitch-templates.md) |
 
 ## Changing the banner
 
@@ -18,7 +18,7 @@ Working notes for selling and running sponsor placements. The public offer is [S
 2. Put them in `assets/sponsors/<name>-light.png` and `<name>-dark.png`.
 3. Replace the sponsor block under the README title. Keep the "Sponsored by" label.
 4. Commit as "Add <Name> sponsor banner (<Mon YYYY>)" so the term is in the history.
-5. Update the "Current sponsor" section of `SPONSORS.md` and the `sponsors` list in `sponsors.json`.
+5. Update the "Current sponsor" section of `SPONSORS.md`, the "Current sponsor" line in the README's sponsor section, and the `sponsors` list in `sponsors.json`.
 
 ## What a sponsor may and may not buy
 

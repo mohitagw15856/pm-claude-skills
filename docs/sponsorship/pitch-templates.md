@@ -22,10 +22,10 @@ Mohit
 
 ## If they ask what they get
 
-- One sponsor per slot for the whole calendar month, labelled "Sponsored by".
+- One sponsor per slot for the whole term, labelled "Sponsored by".
 - Light and dark banners at 1200 by 300, with your UTM link.
-- A report by the 5th of the next month: repository views, front-page views, referrers and npm downloads. Clicks show in your own analytics under your UTM campaign.
-- First refusal on the following month until the 20th.
+- A report within five days of the term ending: repository views, front-page views, referrers and npm downloads. Clicks show in your own analytics under your UTM campaign.
+- First refusal on the next term until ten days before yours ends.
 
 ## If they want a sponsored skill
 

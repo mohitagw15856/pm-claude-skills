@@ -21,13 +21,13 @@ GitHub does not record clicks on outbound links, so the click count is on your s
 
 The full report is attached.
 
-## Renewal ask (send around the 15th)
+## Renewal ask (send two weeks before the term ends)
 
 **Subject:** [Next month] on PM Skills
 
 Hi [name],
 
-Your [placement] runs to the end of [month]. You have first refusal on [next month] until the 20th, on the same terms.
+Your [placement] runs to the end of [month]. You have first refusal on the next term until [date ten days before the end], on the same terms.
 
 Two things that would help me:
 
