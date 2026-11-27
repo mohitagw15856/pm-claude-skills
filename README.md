@@ -307,6 +307,13 @@ Current sponsor: **[FocuSee](https://focusee.ai/?utm_source=github&utm_medium=di
 - **Roadmap:** confirmed direction in [ROADMAP.md](ROADMAP.md), the live signals behind it in [docs/roadmap.md](docs/roadmap.md).
 - **Chat:** TODO, a Discord or GitHub Discussions link goes here once the maintainer enables one; until then, issues are the front door.
 
+## Team Setup (gauging interest)
+
+This library is free and MIT-licensed, and it stays that way.
+I am exploring a done-for-you setup for product teams: skills tuned to your company context, with templates and tools.
+If that would be useful for your team, [register interest with this short form](https://docs.google.com/forms/d/e/1FAIpQLSclCgn6Qkro5lZEh_hTPgjIB-h_bVC00V0qbPsFKn6zzgoWvw/viewform). No commitment, and no mailing list spam.
+What it would include, and what it is not: [docs/team-setup.md](docs/team-setup.md).
+
 ## 🤝 Contributing
 
 <p align="center">
