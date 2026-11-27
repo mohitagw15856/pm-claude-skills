@@ -1,7 +1,7 @@
 ---
 name: technical-spec-template
 language: zh-TW
-description: "撰寫連線產品需求和工程實現的結構化技術規格文件。當撰寫技術規格、工程規格、系統設計文件或 API 規格時使用。產出完整的規格：問題陳述、建議方案、資料模型、API 設計、考慮過的備選方案、安全考量、測試計劃和上線策略。"
+description: "撰寫連結產品需求和工程實現的結構化技術規格文件。當撰寫技術規格、工程規格、系統設計文件或 API 規格時使用。產出完整的規格：問題陳述、建議方案、資料模型、API 設計、考慮過的備選方案、安全考量、測試計劃和上線策略。"
 ---
 
 > [technical-spec-template](../../../skills/technical-spec-template/SKILL.md) 的繁體中文翻譯，英文版本為規範版本。
