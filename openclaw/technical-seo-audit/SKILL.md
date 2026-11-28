@@ -1,0 +1,94 @@
+---
+name: technical-seo-audit
+description: "Audit a website's technical search health from evidence the user supplies (crawl exports, page source, server responses, sitemap, robots file, Search Console data) and rank the fixes by how much they block crawling, indexing or ranking. Use when asked for a technical SEO audit, why is this page not indexed, check my sitemap and robots file, why did organic traffic drop after the migration, or review this site for crawl problems. Produces a findings table with evidence, a prioritised fix list with owners, and a list of what could not be checked."
+homepage: https://mohitagw15856.github.io/pm-claude-skills/skill/technical-seo-audit.html
+metadata:
+  {
+    "openclaw": { "emoji": "🧠" }
+  }
+---
+
+# Technical SEO Audit Skill
+
+Technical SEO is plumbing: if search engines cannot reach, render and understand a page, the quality of its content does not matter. Audits go wrong by listing two hundred warnings from a crawler with equal weight. This skill sorts findings by which stage of the pipeline they break, crawl, render, index or rank, because a problem earlier in the pipeline makes everything after it irrelevant. It works from evidence the user supplies and says what it could not see. For the content brief of a single page, use `seo-content-brief`; for structured data markup, use `schema-markup`.
+
+## What This Skill Produces
+
+- **A pipeline view**: where pages are being lost (crawl, render, index, rank)
+- **A findings table**, each with the evidence, the pages affected and the stage it breaks
+- **A prioritised fix list** with an owner type and how to confirm the fix worked
+- **A not-checked list**: what needs a crawl, log access or a tool the user did not provide
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The site and the problem**: a general health check, an indexing problem, or a drop after a change
+- **Evidence**, whichever is available: a crawl export, the robots file, the sitemap, the HTML source or response headers of sample pages, Search Console coverage and performance exports
+- **Recent changes**: migrations, redesigns, new frameworks, domain or URL structure changes, with dates
+- **Scale**: roughly how many pages, and which templates matter most commercially
+
+Do not state that a page is or is not indexed, or quote a ranking, a traffic figure or a speed score, unless it is in the supplied data. Search engines change their systems; describe mechanisms and tell the user to confirm thresholds against the search engine's current documentation.
+
+## Framework: Follow the Pipeline
+
+1. **Crawl: can the page be reached?** Robots rules blocking wanted paths, broken internal links, redirect chains and loops, server errors, orphan pages with no internal links, a sitemap that lists redirected or blocked addresses.
+2. **Render: can the content be seen?** Main content or links that exist only after scripts run, blocked script or style files, content hidden behind interaction, different content served to crawlers.
+3. **Index: is the right version chosen?** Noindex in the page or headers, canonical tags pointing elsewhere or at each other, duplicate pages from parameters or trailing slashes, thin near-identical templates, missing or conflicting language annotations.
+4. **Rank: is the page understandable and usable?** Missing or duplicated titles and headings, no internal links to important pages, slow or unstable loading on mobile, invalid structured data.
+5. **Check the migration first when traffic fell after a change.** Compare old addresses to new: does every old address redirect once, with a permanent redirect, to its closest equivalent?
+6. **Rank the fixes.** Impact is pages affected times commercial value times how early in the pipeline the fault sits. A robots rule blocking a section outranks every title tag on the site.
+7. **Say how to verify.** Each fix names the check that proves it worked.
+
+## Output Format
+
+# Technical SEO Audit: [site] · [date]
+
+**Headline:** [the one finding that matters most, and the stage it breaks]
+
+## Where Pages Are Lost
+| Stage | Status | Evidence |
+|-------|--------|----------|
+| Crawl | | |
+| Render | | |
+| Index | | |
+| Rank | | |
+
+## Findings
+| # | Stage | Finding | Evidence | Pages affected | Severity |
+|---|-------|---------|----------|----------------|----------|
+
+## Fix List
+| Priority | Fix | Owner | How to confirm |
+|----------|-----|-------|----------------|
+
+## Not Checked
+[What needs a crawl, server logs or another export, and what it would show]
+
+## Quality Checks
+
+- [ ] Every finding cites the supplied evidence it rests on
+- [ ] Findings are grouped by pipeline stage, and earlier stages are fixed first
+- [ ] No indexing status, ranking, traffic or speed figure appears that the user did not supply
+- [ ] After a migration, redirects were examined before anything else
+- [ ] Each fix has a way to confirm it
+- [ ] Unchecked areas are listed
+
+## Anti-Patterns
+
+- [ ] Do not present crawler warnings as a flat list of equal weight
+- [ ] Do not recommend content changes for a page that is blocked from crawling
+- [ ] Do not quote ranking factors or thresholds as fixed facts
+- [ ] Do not guess at what a crawl would show; ask for the export
+- [ ] Do not suggest tactics meant to deceive search engines
+
+## Example Trigger Phrases
+
+- "Run a technical SEO audit on this crawl export."
+- "Why is this page not indexed?"
+- "Organic traffic dropped after our migration. What should I check?"
+- "Review my robots file and sitemap."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/technical-seo-audit.html
+
+<!-- pm-claude-skills v84.1.0 | skill: technical-seo-audit | source: skills/technical-seo-audit/SKILL.md | sha256: acfdb4f9c7afd5cd3523960f65314ef09ebcfcad09cb2b60d6d31b528eb85d5e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->
