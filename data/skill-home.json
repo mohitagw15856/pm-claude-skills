@@ -1,11 +1,17 @@
 {
   "_comment": "Pins a skill's home bundle when it ships in more than one. Without a pin, web/build-skills.mjs gives the skill to the alphabetically last bundle that contains it, so wiring an existing skill into a new bundle would move its catalogue home and its export path (exports/cursor/<bundle>/<skill>/, which search engines index). Add a line here when you wire an existing skill into a new bundle. A pin is ignored if the skill is no longer in that bundle.",
   "home": {
-    "cs-health-scorecard": "pm-cs",
-    "executive-summary": "pm-cross",
+    "ai-context-primer": "pm-ai-native",
     "annual-report-tutor": "pm-investing-literacy",
+    "build-my-memory-file": "pm-focus",
+    "clip-factory": "pm-newgen",
+    "cs-health-scorecard": "pm-cs",
+    "demo-video-kit": "pm-fieldwork",
+    "executive-summary": "pm-cross",
     "programmatic-seo": "pm-growth",
     "schema-markup": "pm-growth",
-    "seo-content-brief": "pm-gtm"
+    "seo-content-brief": "pm-gtm",
+    "short-form-script": "pm-creator",
+    "subtitle-caption": "pm-localization"
   }
 }

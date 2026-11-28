@@ -9,6 +9,16 @@
   },
   "plugins": [
     {
+      "name": "pm-team-setup",
+      "source": "plugins/pm-team-setup",
+      "description": "Getting a team onto shared AI skills: the interview that builds the shared context file, a 30-day rollout plan, a project context primer and a personal memory file"
+    },
+    {
+      "name": "pm-video",
+      "source": "plugins/pm-video",
+      "description": "Video and podcast production: YouTube scripts, short-form scripts, clip sheets, thumbnails, captions, titles and descriptions, show notes, sponsor reads, a release plan and demo video assembly"
+    },
+    {
       "name": "pm-investor",
       "source": "plugins/pm-investor",
       "description": "For the individual investor: equity research note, earnings call summary, portfolio review, stock snapshot, investing policy statement and annual report tutor. General information, not financial advice"

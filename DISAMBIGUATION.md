@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1390 live skills across 171 bundles, plus 12 retired names that still resolve.
+> 1399 live skills across 173 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -324,6 +324,14 @@ assuming the skill you want is missing.
 - `support-runbook` · pm-support — Write a support runbook for handling a recurring issue type consistently.
 - `support-staffing-model` · pm-calculators — How many support agents does the queue actually need — Erlang C, computed, not 'tickets per agent' folklore.
 - `support-the-bereaved` · pm-grief — Know what to actually say and do for someone who's grieving — the real help instead of the empty 'let me know if you need anything.' Use when asked what do I say to someone whose parent died, how do I support a grieving friend, what to write in a condolence, or how to help without making it worse.
+
+**`team-*`** (5)
+
+- `team-ai-rollout-plan` · pm-team-setup — Plan how a team adopts shared AI skills over 30 days: what to standardise first, who owns the shared context and skills, how people are onboarded, the rules for what the assistant may and may not do, and how to tell whether it is working.
+- `team-budget-tracker` · pm-cowork — Track a team's budget so surprises die young — the commitment-based view (spent + committed + planned, not just invoiced), the category grain that matches how the team actually spends, the monthly close with its one-sentence read, and the forecast honesty for the year-end question.
+- `team-context-interview` · pm-team-setup — Interview a team lead to build the shared context file that makes an AI assistant useful for the whole team: the product, customers, terminology, standards, templates and what the assistant must never do.
+- `team-health-check` · pm-people — Runs a structured team health assessment across key dimensions.
+- `team-offsite-planner` · pm-people — Plan a team offsite that earns its cost — the purpose split (connection vs decisions vs planning, weighted deliberately), an agenda that alternates work and air, the logistics runbook, and the follow-through that makes Monday different.
 
 **`vendor-*`** (5)
 

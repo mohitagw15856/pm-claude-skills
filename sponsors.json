@@ -1,5 +1,5 @@
 {
-  "_note": "Sponsor tiers + current sponsors — the single source for the README section, the Community page sponsor wall, and SPONSORS.md. Add a sponsor by appending to \"sponsors\" (name, url, logo, tier). Run: node scripts/build-community.mjs to refresh the wall.",
+  "_note": "Sponsor tiers + current sponsors — the single source for the README section, the Community page sponsor wall, and SPONSORS.md. Add a sponsor by appending to \"sponsors\" (name, url, logo, tier). Run: node scripts/build-community.mjs to refresh the wall. The README banner under the title is written from the sponsor whose placement is \"readme-banner\" by scripts/build-sponsor-block.mjs; set \"until\" (YYYY-MM-DD) to be warned when the term has ended.",
   "sponsorUrl": "https://github.com/sponsors/mohitagw15856",
   "coffeeUrl": "https://www.buymeacoffee.com/mohit15856",
   "tiers": [
@@ -48,7 +48,15 @@
       "logo": "https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/assets/sponsors/focusee-light.png",
       "tier": "README banner",
       "placement": "readme-banner",
-      "since": "2026-11-25"
+      "since": "2026-11-25",
+      "banner": {
+        "href": "https://focusee.ai/?utm_source=github&utm_medium=display&utm_campaign=pm_claude_skills_2611&utm_content=readme_banner",
+        "light": "assets/sponsors/focusee-light.png",
+        "dark": "assets/sponsors/focusee-dark.png",
+        "alt": "FocuSee: Record Better Software Demos and Tutorials with Auto-Editing",
+        "width": 830
+      },
+      "until": null
     }
   ],
   "contact": "mailto:mohit15856@gmail.com?subject=Sponsoring%20PM%20Skills",

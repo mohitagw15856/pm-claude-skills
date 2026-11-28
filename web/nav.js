@@ -99,6 +99,7 @@
       ['evolution.html', '🧬 Evolution log'],
       ['changes.html', '📝 What changed'],
       ['annotate.html', '✍️ Annotate a draft'],
+      ['demos.html', '▶️ Demo videos'],
       ['firm-live.html', '🏢 The live Firm'],
       ['compile.html', '🧑‍🏫 Expert-to-skill compiler'],
       ['use.html', '📱 Skill apps'],

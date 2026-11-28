@@ -3,7 +3,7 @@ name: Check generated artifacts
 # Skills are the single source of truth. The web index (web/skills.json) is
 # generated from skills/*/SKILL.md and committed; this job fails if it is stale.
 # The multi-platform exports (exports/) are no longer committed: they are built
-# here and linted, built before npm publish, and published to the 'exports' branch.
+# here and linted, built on demand by the CLI (the npm package no longer carries them), and published to the 'exports' branch.
 
 on:
   pull_request:

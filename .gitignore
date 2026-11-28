@@ -102,7 +102,7 @@ web/skills.json
 web/skills-index.json
 extension/skills.json
 python/pm_skills/skills.json
-# Generated from skills/ by scripts/build-exports.mjs: built before npm publish (prepack)
+# Generated from skills/ by scripts/build-exports.mjs: built on demand by the CLI from the npm package (scripts/build-exports.mjs --platform <tool>)
 # and published to the 'exports' branch for browsing. Only the two folders Google already
 # indexes (Cursor and Windsurf rules) are committed to main, so those links keep working.
 exports/*
@@ -171,3 +171,5 @@ web/report/
 # Generated launcher data (scripts/build-miniprogram.mjs)
 integrations/wechat-miniprogram/miniprogram/data/
 integrations/utools/data/
+# Claude Desktop bundle, built at deploy by scripts/build-mcpb.mjs.
+web/downloads/

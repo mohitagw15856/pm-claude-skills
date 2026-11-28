@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Demo videos: PM Skills in under a minute each</title>
+<meta name="description" content="Short demo videos of PM Skills, the open-source library of professional skills for AI assistants. Each shows one request and what comes back." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/demos.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .dm-wrap { max-width: 1000px; margin: 0 auto; padding: 16px 22px 70px; }
+  .dm-wrap h1 { font-size: 28px; margin-bottom: 6px; }
+  .lead, .muted { color: var(--muted); line-height: 1.6; }
+  .dm-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 18px; }
+  .dm-card { border: 1px solid var(--border); background: var(--panel); border-radius: 12px; overflow: hidden; }
+  .dm-card img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+  .dm-body { padding: 14px 16px 16px; }
+  .dm-body h2 { font-size: 17px; margin: 0 0 6px; }
+  .dm-body p { margin: 6px 0; line-height: 1.5; }
+  .dm-body code { font-size: 13px; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="dm-wrap">
+  <h1>Demo videos</h1>
+  <p class="lead">One skill per video, under a minute each: the request, what comes back, and how to install it. The interfaces shown are recreated for illustration, and the voice and visuals are AI-generated; each video says so.</p>
+  <p class="muted" id="status" role="status">Loading the videos…</p>
+  <div class="dm-grid" id="grid"></div>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  'use strict';
+  var ID = /^[A-Za-z0-9_-]{11}$/;
+  var NAME = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+  function el(tag, text) { var n = document.createElement(tag); if (text != null) n.textContent = text; return n; }
+  fetch('demos.json').then(function (r) { if (!r.ok) throw new Error('missing'); return r.json(); }).then(function (d) {
+    var grid = document.getElementById('grid');
+    var shown = 0;
+    (Array.isArray(d.videos) ? d.videos : []).forEach(function (v) {
+      // Ids and names go into addresses, so only well-formed ones are used.
+      if (!v || typeof v.id !== 'string' || !ID.test(v.id) || typeof v.skill !== 'string' || !NAME.test(v.skill)) return;
+      var watch = 'https://www.youtube.com/watch?v=' + v.id;
+      var card = el('article'); card.className = 'dm-card';
+      var link = el('a'); link.href = watch; link.rel = 'noopener';
+      var img = el('img'); img.src = 'https://i.ytimg.com/vi/' + v.id + '/maxresdefault.jpg'; img.loading = 'lazy';
+      img.alt = 'Watch on YouTube: ' + String(v.title || v.skill);
+      link.appendChild(img); card.appendChild(link);
+      var body = el('div'); body.className = 'dm-body';
+      body.appendChild(el('h2', String(v.title || v.skill)));
+      body.appendChild(el('p', String(v.summary || '')));
+      var p = el('p');
+      var w = el('a', 'Watch on YouTube'); w.href = watch; w.rel = 'noopener';
+      var s = el('a', 'Open the skill'); s.href = 'skill/' + v.skill + '.html';
+      p.appendChild(w); p.appendChild(document.createTextNode(' · ')); p.appendChild(s);
+      body.appendChild(p);
+      var install = el('p'); install.appendChild(el('code', 'npx pm-claude-skills add --skills ' + v.skill));
+      body.appendChild(install);
+      card.appendChild(body); grid.appendChild(card); shown++;
+    });
+    document.getElementById('status').textContent = shown ? shown + ' video' + (shown === 1 ? '' : 's') + '.' : 'No videos yet.';
+  }).catch(function () {
+    document.getElementById('status').textContent = 'The video list could not be loaded.';
+  });
+})();
+</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1402 skills exported. Copy a `.md rule` into the tool to use it.
+1411 skills exported. Copy a `.md rule` into the tool to use it.
 
 Every file ends with a provenance comment: library version, source path, the SHA-256 of the source
 `SKILL.md` and the licence. The same hash is published at `https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json`,
@@ -62,6 +62,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Altitude Shifter | `pm-comms` | `pm-comms/altitude-shifter/altitude-shifter.md` |
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/ambiguity-resolver.md` |
 | Analyst Relations Brief | `pm-pmm` | `pm-pmm/analyst-relations-brief/analyst-relations-brief.md` |
+| Analytics Event Taxonomy | `pm-data` | `pm-data/analytics-event-taxonomy/analytics-event-taxonomy.md` |
 | Announcement Card | `pm-visuals` | `pm-visuals/announcement-card/announcement-card.md` |
 | Annual Report Tutor | `pm-investing-literacy` | `pm-investing-literacy/annual-report-tutor/annual-report-tutor.md` |
 | API Docs Writer | `pm-engineering` | `pm-engineering/api-docs-writer/api-docs-writer.md` |
@@ -604,6 +605,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Frontend Design (pointer) | `pm-design-taste` | `pm-design-taste/frontend-design-pointer/frontend-design-pointer.md` |
 | Functional Assessment Prep | `pm-accessibility` | `pm-accessibility/functional-assessment-prep/functional-assessment-prep.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.md` |
+| Fundraising Memo | `pm-finance` | `pm-finance/fundraising-memo/fundraising-memo.md` |
 | Funeral Pricing Decoder | `pm-decoders` | `pm-decoders/funeral-pricing-decoder/funeral-pricing-decoder.md` |
 | Future Self Interview | `other` | `other/future-self-interview/future-self-interview.md` |
 | Future Selves Council | `pm-thinking` | `pm-thinking/future-selves-council/future-selves-council.md` |
@@ -744,6 +746,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Knowledge-Gap Map | `pm-learning` | `pm-learning/knowledge-gap-map/knowledge-gap-map.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.md` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/kpi-tracker-design.md` |
+| KPI Tree Builder | `pm-data` | `pm-data/kpi-tree-builder/kpi-tree-builder.md` |
 | Korean Job Application Essay (자기소개서) | `pm-korea` | `pm-korea/kr-cover-letter/kr-cover-letter.md` |
 | Korea Severance Pay (퇴직금) | `pm-korea` | `pm-korea/kr-severance-pay/kr-severance-pay.md` |
 | Korean Business Report (보고서 and 주간보고) | `pm-korea` | `pm-korea/kr-work-report/kr-work-report.md` |
@@ -947,6 +950,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Planning Application Statement | `pm-architecture` | `pm-architecture/planning-application-statement/planning-application-statement.md` |
 | Playwright CLI (pointer) | `pm-design-taste` | `pm-design-taste/playwright-cli-pointer/playwright-cli-pointer.md` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/pm-weekly-review.md` |
+| Podcast Show Notes | `pm-video` | `pm-video/podcast-show-notes/podcast-show-notes.md` |
 | Poke Holes In This | `pm-thinking` | `pm-thinking/poke-holes-in-this/poke-holes-in-this.md` |
 | Policy Drafter | `pm-cowork` | `pm-cowork/policy-drafter/policy-drafter.md` |
 | Policy Memo | `pm-gov` | `pm-gov/policy-memo/policy-memo.md` |
@@ -1194,6 +1198,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Sourdough Troubleshooter | `pm-hobbies` | `pm-hobbies/sourdough-troubleshooter/sourdough-troubleshooter.md` |
 | Spaced-Repetition Setup | `pm-learning` | `pm-learning/spaced-repetition-setup/spaced-repetition-setup.md` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/speak-at-the-council.md` |
+| Sponsor Read Script | `pm-video` | `pm-video/sponsor-read-script/sponsor-read-script.md` |
 | Spoon Planner | `pm-invisible-illness` | `pm-invisible-illness/spoon-planner/spoon-planner.md` |
 | Sports Parent Comms | `pm-sports-coaching` | `pm-sports-coaching/sports-parent-comms/sports-parent-comms.md` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/sports-scores.md` |
@@ -1264,7 +1269,9 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Teach Me in Layers | `pm-learning` | `pm-learning/teach-me-in-layers/teach-me-in-layers.md` |
 | Teach The Game | `pm-tabletop` | `pm-tabletop/teach-the-game/teach-the-game.md` |
 | Teaching Lesson Plan | `pm-cross` | `pm-cross/teaching-lesson-plan/teaching-lesson-plan.md` |
+| Team AI Rollout Plan | `pm-team-setup` | `pm-team-setup/team-ai-rollout-plan/team-ai-rollout-plan.md` |
 | Team Budget Tracker | `pm-cowork` | `pm-cowork/team-budget-tracker/team-budget-tracker.md` |
+| Team Context Interview | `pm-team-setup` | `pm-team-setup/team-context-interview/team-context-interview.md` |
 | Team Health Check | `pm-people` | `pm-people/team-health-check/team-health-check.md` |
 | Team Offsite Planner | `pm-people` | `pm-people/team-offsite-planner/team-offsite-planner.md` |
 | Tech Radar | `pm-engineering` | `pm-engineering/tech-radar/tech-radar.md` |
@@ -1364,6 +1371,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Verified Security Audit | `pm-fieldwork` | `pm-fieldwork/verified-security-audit/verified-security-audit.md` |
 | Version Chaos Untangler | `pm-cowork` | `pm-cowork/version-chaos-untangler/version-chaos-untangler.md` |
 | Vet Estimate Decoder | `pm-decoders` | `pm-decoders/vet-estimate-decoder/vet-estimate-decoder.md` |
+| Video Release Plan | `pm-video` | `pm-video/video-release-plan/video-release-plan.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/viral-content-framework.md` |
 | Viva Prep Pack | `pm-phd` | `pm-phd/viva-prep-pack/viva-prep-pack.md` |
 | Voice Agent Design | `pm-agentnative` | `pm-agentnative/voice-agent-design/voice-agent-design.md` |
@@ -1410,6 +1418,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Year in Review | `pm-career` | `pm-career/year-in-review/year-in-review.md` |
 | YouTube Script | `pm-creator` | `pm-creator/youtube-script/youtube-script.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/youtube-script-writer.md` |
+| YouTube Title and Description | `pm-video` | `pm-video/youtube-title-and-description/youtube-title-and-description.md` |
 | Retrenchment Package Check (South Africa) | `pm-africa` | `pm-africa/za-retrenchment-package-check/za-retrenchment-package-check.md` |
 | UIF Claim Guide (South Africa) | `pm-africa` | `pm-africa/za-uif-claim-guide/za-uif-claim-guide.md` |
 | 知乎回答 | `pm-zh-content` | `pm-zh-content/zhihu-answer/zhihu-answer.md` |

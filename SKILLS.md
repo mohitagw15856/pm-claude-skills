@@ -1,4 +1,4 @@
-# 🗂️ All 1390 Skills — full catalog
+# 🗂️ All 1399 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -292,7 +292,7 @@
 | **Threat Model** (`threat-model`) | Threat-model a system or feature to find where it could be attacked, before you build it. | — |
 | **Vulnerability Triage** (`vuln-triage`) | Triage a vulnerability or scanner finding — assess real severity, exploitability, and how urgently to fix. | — |
 
-## 📊 Data & Analytics (11 skills)
+## 📊 Data & Analytics (13 skills)
 
 ### `pm-analytics` — 3 skills
 
@@ -302,15 +302,17 @@
 | **Product Health Analysis** (`product-health-analysis`) | Interpret product metrics against goals and surface actionable signals. | — |
 | **Retention Analysis** (`retention-analysis`) | Structure a retention analysis, churn investigation, or engagement deep-dive for any product team. | — |
 
-### `pm-data` — 8 skills · 3 eval-scored
+### `pm-data` — 10 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **A/B Test Readout** (`ab-test-readout`) | Analyse a finished A/B test and write the readout — the result, whether it's statistically and practically significant, what it means, and the… | — |
+| **Analytics Event Taxonomy** (`analytics-event-taxonomy`) | Design a product analytics tracking plan: event names on one convention, the properties each event carries with types and allowed values, user and… | — |
 | **Cohort Analysis** (`cohort-analysis`) | Structure a cohort analysis for retention, LTV, or behavioural patterns. | ✅ 4/5 |
 | **Dashboard Brief** (`dashboard-brief`) | Convert a business question into a complete dashboard specification. | — |
 | **Data Pipeline Spec** (`data-pipeline-spec`) | Design an ETL/ELT data pipeline specification. | — |
 | **Data Quality Audit** (`data-quality-audit`) | Audit a dataset for the quality problems that silently break analysis — missingness, duplicates, outliers, type and range errors, consistency, and… | — |
+| **KPI Tree Builder** (`kpi-tree-builder`) | Break one top-level number into the arithmetic that produces it: a tree of drivers that multiply or add up to the KPI, each with a definition, an… | — |
 | **Metric Tree Builder** (`metric-tree-builder`) | Decompose a north-star metric into a driver tree — the inputs and sub-inputs that actually move it — so a team knows which levers to pull. | — |
 | **Metrics Framework** (`metrics-framework`) | Build a metrics framework for any product, team, or business. | ✅ 4.8/5 |
 | **SQL Query Explainer** (`sql-query-explainer`) | Explains, optimises, writes, and documents SQL queries. | ✅ 4.5/5 |
@@ -431,7 +433,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (93 skills)
+## 💰 Finance, Ops & Business (94 skills)
 
 ### `pm-accounting` — 6 skills · 6 eval-scored
 
@@ -502,13 +504,14 @@
 | **Rate Card** (`rate-card`) | Build a consulting/freelance rate card and pricing structure — and the floor rate to not go broke. | — |
 | **Statement of Work** (`statement-of-work`) | Write a tight Statement of Work (SOW) that prevents scope creep and payment disputes. | — |
 
-### `pm-finance` — 5 skills
+### `pm-finance` — 6 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Budget Variance Analysis** (`budget-variance-analysis`) | Produce a structured budget variance analysis from actual vs budget figures. | — |
 | **Financial Due Diligence** (`financial-due-diligence`) | Generate a financial due diligence checklist and analysis framework for any investment, acquisition, or partnership. | — |
 | **Financial Model Narrative** (`financial-model-narrative`) | Turn financial model outputs into a clear written narrative. | — |
+| **Fundraising Memo** (`fundraising-memo`) | Write the investment memo a founder sends before a meeting or a partner writes for their own firm: the company in one paragraph, the problem, why… | — |
 | **Investor Pitch Deck** (`investor-pitch-deck`) | Build the narrative and slide structure for an investor pitch deck. | — |
 | **Tax Planning Checklist** (`tax-planning-checklist`) | Generate a structured tax planning checklist and review framework for any individual or business context. | — |
 
@@ -723,7 +726,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 4/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (928 skills)
+## 🌍 Industries & Public Sector (934 skills)
 
 ### `other` — 22 skills · 12 eval-scored
 
@@ -2143,6 +2146,13 @@
 | **Lesson Plan Builder** (`lesson-plan-builder`) | Build a standards-aligned K-12 lesson plan with clear objectives, a timed activity sequence, checks for understanding, and differentiation. | — |
 | **Parent Conference Prep** (`parent-conference-prep`) | Prepare for a K-12 parent-teacher conference — including the hard ones. | — |
 
+### `pm-team-setup` — 2 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Team AI Rollout Plan** (`team-ai-rollout-plan`) | Plan how a team adopts shared AI skills over 30 days: what to standardise first, who owns the shared context and skills, how people are onboarded… | — |
+| **Team Context Interview** (`team-context-interview`) | Interview a team lead to build the shared context file that makes an AI assistant useful for the whole team: the product, customers, terminology… | — |
+
 ### `pm-thinking` — 25 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
@@ -2200,6 +2210,15 @@
 | **Euthanasia Conversation** (`euthanasia-conversation`) | Guide a veterinary team through a compassionate end-of-life conversation with a pet owner — quality-of-life assessment, the recommendation, and… | — |
 | **Treatment Plan Estimate** (`treatment-plan-estimate`) | Build a veterinary treatment plan with tiered options and a cost estimate to discuss with a pet owner. | — |
 | **Wellness Plan** (`wellness-plan`) | Build a preventive-care (wellness) plan for a pet by species, breed, and life stage. | — |
+
+### `pm-video` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Podcast Show Notes** (`podcast-show-notes`) | Turn a podcast episode transcript into show notes: a summary that makes someone want to listen, timestamped chapters, the guest's details, links… | — |
+| **Sponsor Read Script** (`sponsor-read-script`) | Write a host-read sponsor message for a video, podcast or newsletter that sounds like the creator, covers the sponsor's required points and… | — |
+| **Video Release Plan** (`video-release-plan`) | Plan the release of a finished video: the pre-publish checks, the publishing settings, what to post where in the first 48 hours, and which numbers… | — |
+| **YouTube Title and Description** (`youtube-title-and-description`) | Write the publishing metadata for a finished video: title options, the description with its first two lines doing the work, chapter timestamps… | — |
 
 ### `pm-vision` — 4 skills · 3 eval-scored
 
@@ -2275,4 +2294,4 @@
 
 ---
 
-_1390 skills across 171 bundles · 399 eval-scored (29%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1399 skills across 173 bundles · 399 eval-scored (29%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

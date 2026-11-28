@@ -72,6 +72,9 @@ export const STEPS = [
   "node scripts/build-disambiguation.mjs",
   "node scripts/check-eval-coverage.mjs --check --base origin/main",
   "node scripts/sync-bundles.mjs --check",
+  "node scripts/check-skill-homes.mjs",
+  "node scripts/build-mcpb.mjs --check",
+  "node scripts/build-sponsor-block.mjs --check",
   "node scripts/build-cursor-plugins.mjs --check",
   "node scripts/skill-audit.mjs",
 ];

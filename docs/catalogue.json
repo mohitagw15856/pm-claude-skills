@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
-  "bundles": 171,
-  "skills": 1368,
+  "bundles": 173,
+  "skills": 1377,
   "items": [
     {
       "bundle": "pm-2027",
@@ -2510,6 +2510,10 @@
           "description": "Analyse a finished A/B test and write the readout — the result, whether it's statistically and practically significant, what it means, and the ship/no-ship call."
         },
         {
+          "name": "analytics-event-taxonomy",
+          "description": "Design a product analytics tracking plan: event names on one convention, the properties each event carries with types and allowed values, user and account properties, and the questions each event answers."
+        },
+        {
           "name": "chart-data-extractor",
           "description": "Extract pixel-level data from an image of a chart or graph and produce a structured data table."
         },
@@ -2528,6 +2532,10 @@
         {
           "name": "data-quality-audit",
           "description": "Audit a dataset for the quality problems that silently break analysis — missingness, duplicates, outliers, type and range errors, consistency, and freshness — and produce a prioritised fix list."
+        },
+        {
+          "name": "kpi-tree-builder",
+          "description": "Break one top-level number into the arithmetic that produces it: a tree of drivers that multiply or add up to the KPI, each with a definition, an owner and the figure supplied."
         },
         {
           "name": "metric-tree-builder",
@@ -3780,6 +3788,10 @@
         {
           "name": "financial-model-narrative",
           "description": "Turn financial model outputs into a clear written narrative."
+        },
+        {
+          "name": "fundraising-memo",
+          "description": "Write the investment memo a founder sends before a meeting or a partner writes for their own firm: the company in one paragraph, the problem, why now, what has been built, the evidence so far, the plan for the money, the risks stated plainly and the terms sought."
         },
         {
           "name": "investor-pitch-deck",
@@ -6989,6 +7001,33 @@
       ]
     },
     {
+      "bundle": "pm-team-setup",
+      "description": "Getting a team onto shared AI skills: the interview that builds the shared context file, a 30-day rollout plan, a project context primer and a personal memory file",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-team-setup@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-team-setup"
+      },
+      "skills": [
+        {
+          "name": "ai-context-primer",
+          "description": "Build the context an AI needs to do a task well — the background, constraints, examples, and format it can't guess — so you get a great result on the first try instead of a generic one you have to keep correcting."
+        },
+        {
+          "name": "build-my-memory-file",
+          "description": "Interview you into a durable personal MEMORY.md — your decision rules, patterns, past failures, and preferences — that any AI can read to help you better, with privacy guardrails built in."
+        },
+        {
+          "name": "team-ai-rollout-plan",
+          "description": "Plan how a team adopts shared AI skills over 30 days: what to standardise first, who owns the shared context and skills, how people are onboarded, the rules for what the assistant may and may not do, and how to tell whether it is working."
+        },
+        {
+          "name": "team-context-interview",
+          "description": "Interview a team lead to build the shared context file that makes an AI assistant useful for the whole team: the product, customers, terminology, standards, templates and what the assistant must never do."
+        }
+      ]
+    },
+    {
       "bundle": "pm-thinking",
       "description": "Thinking-mode skills that change HOW your AI reasons, not just what it does: escape the generic answer, run cognitive panels, and adversarially stress-test your own decisions. Inspired by parallel-divergent-ideation research.",
       "category": "productivity",
@@ -7216,6 +7255,57 @@
         {
           "name": "wellness-plan",
           "description": "Build a preventive-care (wellness) plan for a pet by species, breed, and life stage."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-video",
+      "description": "Video and podcast production: YouTube scripts, short-form scripts, clip sheets, thumbnails, captions, titles and descriptions, show notes, sponsor reads, a release plan and demo video assembly",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-video@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-video"
+      },
+      "skills": [
+        {
+          "name": "clip-factory",
+          "description": "Turn one long video, podcast, or stream transcript into 8-12 short-form clips — each with a hook line, cut timestamps, captions, and a platform note for TikTok/Reels/Shorts — plus an honesty gate that kills clips that misrepresent the source."
+        },
+        {
+          "name": "demo-video-kit",
+          "description": "Produce a short product demo video from screen recordings: a shot list, narration, timed captions and the exact ffmpeg commands to cut, join and caption it, computed by the bundled script."
+        },
+        {
+          "name": "podcast-show-notes",
+          "description": "Turn a podcast episode transcript into show notes: a summary that makes someone want to listen, timestamped chapters, the guest's details, links mentioned, and quotes pulled exactly."
+        },
+        {
+          "name": "short-form-script",
+          "description": "Write a short-form video script for TikTok, Instagram Reels, or YouTube Shorts — built on the hook→retention→payoff structure that drives watch-time."
+        },
+        {
+          "name": "sponsor-read-script",
+          "description": "Write a host-read sponsor message for a video, podcast or newsletter that sounds like the creator, covers the sponsor's required points and carries a clear disclosure."
+        },
+        {
+          "name": "subtitle-caption",
+          "description": "Write or translate subtitles/captions that respect reading speed and timing rules."
+        },
+        {
+          "name": "thumbnail-creator",
+          "description": "Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code."
+        },
+        {
+          "name": "video-release-plan",
+          "description": "Plan the release of a finished video: the pre-publish checks, the publishing settings, what to post where in the first 48 hours, and which numbers to read afterwards and when."
+        },
+        {
+          "name": "youtube-script-writer",
+          "description": "Write a high-retention YouTube script — explainer, tutorial, video essay, review, or talking head — on the packaging then cold-open then value-stack then retention structure that holds watch time past the drop-off cliffs."
+        },
+        {
+          "name": "youtube-title-and-description",
+          "description": "Write the publishing metadata for a finished video: title options, the description with its first two lines doing the work, chapter timestamps, tags and a pinned comment."
         }
       ]
     },

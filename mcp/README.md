@@ -2,6 +2,12 @@
 
 A zero-dependency [Model Context Protocol](https://modelcontextprotocol.io) server that exposes this skill library to **any MCP client** (Claude Code, Claude Desktop, Cursor, Windsurf, Cline…). Instead of installing more than a thousand files, your assistant can **search and pull skills — and run workflow recipes — on demand**.
 
+## One-click install for Claude Desktop
+
+Download **[pm-skills.mcpb](https://mohitagw15856.github.io/pm-claude-skills/downloads/pm-skills.mcpb)** and open it. Claude Desktop installs the server from that one file: no config file to edit and no terminal. The bundle carries the server and every skill, runs offline and needs no API key. It is built from this repository by `node scripts/build-mcpb.mjs` on each deploy, following the MCPB manifest specification, version 0.3.
+
+The bundle has been checked to start and answer on its own, but it has not been installed through Claude Desktop's own installer from here. If it does not open, use the manual configuration below and please open an issue.
+
 ## One-line install (Claude Code)
 
 ```bash

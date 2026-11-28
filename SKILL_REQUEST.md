@@ -37,16 +37,21 @@ Add a request by opening an issue — these are current top asks from the commun
 
 | Skill | Profession | Requested By | Votes |
 |---|---|---|---|
-| `customer-health-scorecard` | Customer Success | [@mohitagw15856](https://github.com/mohitagw15856) | — |
-| `qbr-deck-writer` | Customer Success | [@mohitagw15856](https://github.com/mohitagw15856) | — |
-| `escalation-brief` | Customer Success | [@mohitagw15856](https://github.com/mohitagw15856) | — |
-| `fundraising-memo` | Startup / Founder | [@mohitagw15856](https://github.com/mohitagw15856) | — |
-| `youtube-script-writer` | Content Creator | [@mohitagw15856](https://github.com/mohitagw15856) | — |
-| `newsletter-issue-writer` | Content Creator | [@mohitagw15856](https://github.com/mohitagw15856) | — |
-| `analytics-event-taxonomy` | Data / Analytics | [@mohitagw15856](https://github.com/mohitagw15856) | — |
-| `kpi-tree-builder` | Data / Analytics | [@mohitagw15856](https://github.com/mohitagw15856) | — |
-| `dissertation-chapter-planner` | Academic | [@mohitagw15856](https://github.com/mohitagw15856) | — |
-| `board-minutes` | Governance | Community | — |
+| *No open requests right now. Open an issue to add one.* | | | |
+
+**Already built, sometimes under another name:**
+
+| Requested as | Use this skill |
+|---|---|
+| `customer-health-scorecard` | [`cs-health-scorecard`](skills/cs-health-scorecard/SKILL.md) |
+| `qbr-deck-writer` | [`qbr-deck`](skills/qbr-deck/SKILL.md) |
+| `escalation-brief` | [`cs-escalation-brief`](skills/cs-escalation-brief/SKILL.md) |
+| `newsletter-issue-writer` | [`newsletter-writer`](skills/newsletter-writer/SKILL.md) |
+| `dissertation-chapter-planner` | [`thesis-chapter-plan`](skills/thesis-chapter-plan/SKILL.md) |
+| `youtube-script-writer` | [`youtube-script-writer`](skills/youtube-script-writer/SKILL.md) |
+| `fundraising-memo` | [`fundraising-memo`](skills/fundraising-memo/SKILL.md) |
+| `analytics-event-taxonomy` | [`analytics-event-taxonomy`](skills/analytics-event-taxonomy/SKILL.md) |
+| `kpi-tree-builder` | [`kpi-tree-builder`](skills/kpi-tree-builder/SKILL.md) |
 
 > **To vote:** React with 👍 on the linked issue. To add a new request, open an issue with label `skill-request`.
 
