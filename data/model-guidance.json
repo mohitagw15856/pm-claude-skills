@@ -1729,6 +1729,11 @@
    "effort": "high",
    "rule": "long"
   },
+  "customer-kickoff-plan": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "customer-outage-notice": {
    "role": "deep",
    "effort": "high",
@@ -2450,6 +2455,11 @@
    "effort": "medium",
    "rule": "base"
   },
+  "essay-feedback-coach": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "estate-planning-kit": {
    "role": "default",
    "effort": "high",
@@ -2879,6 +2889,11 @@
    "role": "deep",
    "effort": "high",
    "rule": "high-stakes"
+  },
+  "flashcard-deck-builder": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
   },
   "fleet-compliance-audit-prep": {
    "role": "default",
@@ -4559,6 +4574,11 @@
    "role": "deep",
    "effort": "high",
    "rule": "high-stakes"
+  },
+  "past-paper-marker": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
   },
   "patient-communication": {
    "role": "default",
@@ -6372,6 +6392,11 @@
    "rule": "base"
   },
   "template-designer": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
+  "template-to-skill": {
    "role": "default",
    "effort": "medium",
    "rule": "base"

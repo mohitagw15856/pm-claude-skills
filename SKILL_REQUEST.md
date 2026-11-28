@@ -18,14 +18,14 @@ Have an idea for a skill? Add it here or upvote existing requests by leaving a �
 
 ## Milestone Unlocks
 
-Stars drive the roadmap. Here's what's queued:
+Stars set the order things were built in. All four milestones have been passed:
 
-| Milestone | Unlocks |
-|---|---|
-| ✅ 100 ⭐ | 10 Figma skills + quality rebuild across all skills (v6.0.0) |
-| 🔒 250 ⭐ | 10 Customer Success skills (health scorecard, QBR deck, escalation brief, churn analysis) |
-| 🔒 500 ⭐ | 25 more Engineering skills (CI/CD playbooks, debugging deep-dives, onboarding docs, SLO templates) |
-| 🔒 1000 ⭐ | Full Startup Founder kit (fundraising memo, pitch critique, co-founder agreement framework) |
+| Milestone | Unlocked | Status |
+|---|---|---|
+| ✅ 100 ⭐ | 10 Figma skills and a quality rebuild across all skills (v6.0.0) | Shipped |
+| ✅ 250 ⭐ | Customer Success skills | Shipped: [`cs-health-scorecard`](skills/cs-health-scorecard/SKILL.md), [`qbr-deck`](skills/qbr-deck/SKILL.md), [`cs-escalation-brief`](skills/cs-escalation-brief/SKILL.md), [`churn-analysis`](skills/churn-analysis/SKILL.md) and others in [`pm-cs`](plugins/pm-cs/) |
+| ✅ 500 ⭐ | More Engineering skills | Shipped: [`cicd-playbook`](skills/cicd-playbook/SKILL.md), [`debugging-log-analyser`](skills/debugging-log-analyser/SKILL.md), [`developer-onboarding-doc`](skills/developer-onboarding-doc/SKILL.md), [`slo-error-budget`](skills/slo-error-budget/SKILL.md) and others in [`pm-engineering`](plugins/pm-engineering/) |
+| ✅ 1000 ⭐ | Startup Founder kit | Partly shipped: [`fundraising-memo`](skills/fundraising-memo/SKILL.md), [`investor-pitch-deck`](skills/investor-pitch-deck/SKILL.md) and [`founder-market-fit`](skills/founder-market-fit/SKILL.md) exist. A pitch critique and a co-founder agreement framework are still open requests below. |
 
 **[Star this repo →](https://github.com/mohitagw15856/pm-claude-skills)**
 
@@ -37,7 +37,8 @@ Add a request by opening an issue — these are current top asks from the commun
 
 | Skill | Profession | Requested By | Votes |
 |---|---|---|---|
-| *No open requests right now. Open an issue to add one.* | | | |
+| `pitch-critique` | Startup / Founder | [@mohitagw15856](https://github.com/mohitagw15856) | — |
+| `cofounder-agreement-framework` | Startup / Founder | [@mohitagw15856](https://github.com/mohitagw15856) | — |
 
 **Already built, sometimes under another name:**
 

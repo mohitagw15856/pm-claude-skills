@@ -44,6 +44,9 @@ jobs:
         run: |
           set -euo pipefail
           cd exports
+          # This branch holds generated files only. Tell Vercel not to deploy it, or every
+          # publish shows a failed deployment.
+          printf '{\n  "$schema": "https://openapi.vercel.sh/vercel.json",\n  "git": { "deploymentEnabled": false }\n}\n' > vercel.json
           git init -q -b exports
           git config user.name "exports-bot"
           git config user.email "actions@github.com"

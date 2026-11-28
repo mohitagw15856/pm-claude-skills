@@ -17,6 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { createInterface } from 'node:readline';
 import { createRequire } from 'node:module';
 import { parseInputs } from '../bin/lib/inputs.mjs';
+import { lint as lintDocument, summarise as summariseLint } from '../bin/doclint.mjs';
 
 const PKG_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 
@@ -144,6 +145,32 @@ const READONLY = { readOnlyHint: true, destructiveHint: false, idempotentHint: t
 const CALCULATOR = { readOnlyHint: false, destructiveHint: false, idempotentHint: true, openWorldHint: false };
 
 const TOOLS = [
+  {
+    name: 'lint_document',
+    title: 'Lint a finished document',
+    description:
+      'Run deterministic checks on a finished Markdown document before showing it to anyone: placeholders left in, empty sections, a PRD with no number in its success metrics, action items with no owner or date, a key result with no number, a team context file that is not filled in. No model is involved, so the same text always gets the same findings. Use it on your own draft and fix what it reports. It checks structure and omissions; it cannot tell whether the content is right.',
+    inputSchema: {
+      type: 'object',
+      additionalProperties: false,
+      properties: {
+        markdown: { type: 'string', description: 'The document text.' },
+        type: { type: 'string', enum: ['auto', 'prd', 'update', 'postmortem', 'okr', 'meeting', 'roadmap', 'context', 'generic'], description: 'The kind of document. Defaults to auto, which detects it.' },
+      },
+      required: ['markdown'],
+    },
+    outputSchema: {
+      type: 'object',
+      properties: {
+        type: { type: 'string', description: 'The document type that was checked.' },
+        errors: { type: 'number' },
+        warnings: { type: 'number' },
+        findings: { type: 'array', items: { type: 'object', properties: { rule: { type: 'string' }, severity: { type: 'string' }, line: { type: 'number' }, message: { type: 'string' } }, required: ['rule', 'severity', 'line', 'message'] } },
+      },
+      required: ['type', 'errors', 'warnings', 'findings'],
+    },
+    annotations: { title: 'Lint a finished document', ...READONLY },
+  },
   {
     name: 'list_calculators',
     title: 'List the bundled calculators',
@@ -638,6 +665,16 @@ function runCalculator(args) {
 
 function runTool(name, args = {}) {
   if (name === 'check_contrast') return checkContrast(args);
+  if (name === 'lint_document') {
+    if (typeof args.markdown !== 'string') throw new Error('markdown is required and must be text');
+    if (args.markdown.length > 400000) throw new Error('the document is too long to lint (limit 400,000 characters)');
+    const { type, findings } = lintDocument(args.markdown, { type: args.type || 'auto' });
+    const totals = summariseLint(findings);
+    const text = findings.length
+      ? `${totals.errors} error(s), ${totals.warnings} warning(s) in a ${type} document:\n${findings.map((f) => `- line ${f.line} ${f.rule} (${f.severity}): ${f.message}`).join('\n')}`
+      : `No findings in a ${type} document.`;
+    return { text, structured: { type, errors: totals.errors, warnings: totals.warnings, findings } };
+  }
   if (name === 'list_calculators') return listCalculators(args);
   if (name === 'run_calculator') return runCalculator(args);
   if (name === 'disambiguate_skill') {

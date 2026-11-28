@@ -25,7 +25,7 @@ const args = process.argv.slice(2);
 const opt = (name) => { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : undefined; };
 
 // Everything mcp/server.mjs reads at runtime, at the same relative paths.
-const FILES = ['mcp/server.mjs', 'bin/lib/inputs.mjs', 'package.json', 'skill-tiers.json', 'workflows.json', 'skill-dupes-allow.json', 'LICENSE'];
+const FILES = ['mcp/server.mjs', 'bin/lib/inputs.mjs', 'bin/doclint.mjs', 'package.json', 'skill-tiers.json', 'workflows.json', 'skill-dupes-allow.json', 'LICENSE'];
 const DIRS = ['skills', 'schemas/skills'];
 
 export function manifest(version) {

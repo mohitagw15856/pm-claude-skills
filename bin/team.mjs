@@ -10,6 +10,7 @@
 //   npx pm-claude-skills team init
 //   npx pm-claude-skills team init --name "Payments team" --agents claude,cursor --bundles pm-daily-ten,pm-team-setup
 //   npx pm-claude-skills team init --dry-run
+//   npx pm-claude-skills team check                 is the setup complete and consistent?
 //   node bin/team.mjs --selftest
 //
 // It only creates files. Installing is still `npx pm-claude-skills sync`, and pinning
@@ -19,9 +20,12 @@ import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
 import { tmpdir } from 'node:os';
+import { loadConfig, satisfies } from './lib/teamconfig.mjs';
+import { lint } from './doclint.mjs';
 
 const NAME = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const AGENTS = new Set(['claude', 'cursor', 'codex', 'windsurf', 'gemini', 'copilot', 'cline', 'zed', 'aider', 'kilocode']);
+// The agents the CLI can install for. Kept equal to cli.mjs by a self-test, which reads that file.
+const AGENTS = new Set(['claude', 'hermes', 'codex', 'openclaw', 'copilot', 'gemini', 'qwen', 'iflow', 'kimi', 'cursor', 'windsurf', 'aider', 'kilocode', 'trae', 'qoder', 'lingma', 'codebuddy']);
 const VERSION = (() => { try { return createRequire(import.meta.url)('../package.json').version; } catch { return '0.0.0'; } })();
 
 const list = (value, fallback) => (value === undefined ? fallback : String(value).split(',').map((s) => s.trim()).filter(Boolean));
@@ -129,6 +133,33 @@ export function init(dir, opts = {}) {
   return result;
 }
 
+// `team check`: is this team's setup in a usable state? Read-only.
+export function check(dir, opts = {}) {
+  const results = [];
+  const add = (ok, label, hint = '') => results.push({ ok, label, hint });
+  const cfgPath = join(dir, '.pm-skills.json');
+  if (!existsSync(cfgPath)) add(false, '.pm-skills.json is missing', 'Run: npx pm-claude-skills team init');
+  else {
+    try {
+      const cfg = loadConfig(cfgPath, [...AGENTS]);
+      add(true, `.pm-skills.json is valid (${(cfg.bundles || []).length} bundle(s), ${(cfg.skills || []).length} extra skill(s), agents: ${(cfg.agents || []).join(', ') || 'none'})`);
+      const version = opts.version || VERSION;
+      if (cfg.version) add(satisfies(version, cfg.version), `this install is version ${version}; the team agreed on ${cfg.version}`, `Install a matching version: npx pm-claude-skills@${String(cfg.version).replace(/\.x/g, '')} sync`);
+    } catch (e) { add(false, `.pm-skills.json is not valid: ${e.message}`); }
+  }
+  const ctxPath = join(dir, 'CONTEXT.md');
+  if (!existsSync(ctxPath)) add(false, 'CONTEXT.md is missing', 'Run: npx pm-claude-skills team init');
+  else {
+    const { findings } = lint(readFileSync(ctxPath, 'utf8'), { type: 'context' });
+    const errors = findings.filter((f) => f.severity === 'error');
+    const warnings = findings.filter((f) => f.severity === 'warning');
+    add(errors.length === 0, errors.length ? `CONTEXT.md is not finished: ${errors.length} item(s) to fill in (first at line ${errors[0].line}: ${errors[0].message})` : 'CONTEXT.md is filled in and has an owner', 'See them all: npx pm-claude-skills lint CONTEXT.md --type context');
+    for (const w of warnings) add(true, `note: CONTEXT.md line ${w.line}: ${w.message}`);
+  }
+  add(existsSync(join(dir, 'TEAM-ONBOARDING.md')), existsSync(join(dir, 'TEAM-ONBOARDING.md')) ? 'TEAM-ONBOARDING.md is present' : 'TEAM-ONBOARDING.md is missing', 'Run: npx pm-claude-skills team init');
+  return results;
+}
+
 function selftest() {
   let fails = 0;
   const eq = (label, got, want) => { if (JSON.stringify(got) !== JSON.stringify(want)) { fails++; console.error(`  ✗ ${label}\n      got  ${JSON.stringify(got)}\n      want ${JSON.stringify(want)}`); } };
@@ -149,8 +180,26 @@ function selftest() {
     throws('unknown agent is refused', () => plan({ agents: 'notepad' }));
     throws('a bundle name with a path is refused', () => plan({ bundles: '../../etc' }));
     throws('an empty bundle list is refused', () => plan({ bundles: ' , ' }));
+    // The agent list must not drift from the CLI's own.
+    const cli = readFileSync(join(dirname(fileURLToPath(import.meta.url)), 'cli.mjs'), 'utf8');
+    const native = [...cli.match(/const NATIVE = new Set\(\[([^\]]*)\]\)/)[1].matchAll(/'([a-z0-9-]+)'/g)].map((m) => m[1]);
+    const rulefile = [...cli.match(/const RULEFILE = \{([^}]*)\}/)[1].matchAll(/([a-z0-9-]+):/g)].map((m) => m[1]);
+    const generated = [...cli.slice(cli.indexOf('const GENERATED = {')).matchAll(/^  ([a-z][a-z0-9-]*): \{/gm)].map((m) => m[1]);
+    eq('the agent list matches cli.mjs', [...AGENTS].sort(), [...new Set([...native, ...rulefile, ...generated])].sort());
+    const fresh = mkdtempSync(join(tmpdir(), 'pm-team-check-'));
+    try {
+      eq('an empty folder fails every check', check(fresh).map((r) => r.ok), [false, false, false]);
+      init(fresh, { name: 'Pay', version: '84.1.0', date: '2026-11-28' });
+      const before = check(fresh, { version: '84.2.0' });
+      eq('a fresh setup has a valid config and an unfinished context', [before[0].ok, before[1].ok, before.find((r) => /CONTEXT/.test(r.label)).ok, before[before.length - 1].ok], [true, true, false, true]);
+      eq('a different major version is flagged', check(fresh, { version: '85.0.0' })[1].ok, false);
+      writeFileSync(join(fresh, 'CONTEXT.md'), '# Team context: Pay\n\nOwner: Priya · Last reviewed: 2026-11-28\n\n## What we make\nRota software.\n\n## Who it is for\nCare homes.\n\n## Our terms\nShift swap.\n\n## The assistant must never\n- Invent numbers.\n');
+      eq('a finished setup passes', check(fresh, { version: '84.2.0' }).every((r) => r.ok), true);
+      writeFileSync(join(fresh, '.pm-skills.json'), '{ not json');
+      eq('a broken config is reported, not thrown', check(fresh)[0].ok, false);
+    } finally { rmSync(fresh, { recursive: true, force: true }); }
   } finally { rmSync(dir, { recursive: true, force: true }); }
-  console.log(fails ? `team selftest: ${fails} failure(s)` : 'team selftest: 12 passed ✓');
+  console.log(fails ? `team selftest: ${fails} failure(s)` : 'team selftest: 18 passed ✓');
   return fails ? 1 : 0;
 }
 
@@ -158,8 +207,15 @@ export function run(argv = process.argv.slice(2)) {
   if (argv.includes('--selftest')) return selftest();
   const sub = argv.find((a) => !a.startsWith('--'));
   const opt = (name) => { const i = argv.indexOf(name); return i >= 0 && argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[i + 1] : undefined; };
+  if (sub === 'check' && !argv.includes('--help')) {
+    const results = check(resolve('.'));
+    for (const r of results) console.log(`  ${r.ok ? '✓' : '✗'} ${r.label}${!r.ok && r.hint ? `\n      ${r.hint}` : ''}`);
+    const failed = results.filter((r) => !r.ok).length;
+    console.log(failed ? `\n${failed} thing(s) to fix.` : '\nThe team setup is in good shape. To confirm each laptop matches it: npx pm-claude-skills sync --check');
+    return failed ? 1 : 0;
+  }
   if (sub !== 'init' || argv.includes('--help')) {
-    console.log('Usage: pm-claude-skills team init [--name "Team name"] [--agents claude,cursor] [--bundles pm-daily-ten,pm-team-setup] [--dry-run]\n\nCreates .pm-skills.json, CONTEXT.md and TEAM-ONBOARDING.md in the current folder. Existing files are left alone.');
+    console.log('Usage: pm-claude-skills team init [--name "Team name"] [--agents claude,cursor] [--bundles pm-daily-ten,pm-team-setup] [--dry-run]\n       pm-claude-skills team check\n\ninit creates .pm-skills.json, CONTEXT.md and TEAM-ONBOARDING.md in the current folder. Existing files are left alone.\ncheck reports whether the config is valid, the context file is filled in and owned, and this install matches the agreed version.');
     return sub === 'init' || argv.includes('--help') ? 0 : 2;
   }
   let result;

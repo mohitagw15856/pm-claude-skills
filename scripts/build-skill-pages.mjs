@@ -12,6 +12,20 @@ import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const BASE = 'https://mohitagw15856.github.io/pm-claude-skills';
+// Demo videos (web/demos.json): a skill that has one shows it on its own page.
+const DEMOS = (() => {
+  try {
+    const list = JSON.parse(readFileSync(join(root, 'web', 'demos.json'), 'utf8')).videos || [];
+    return new Map(list.filter((v) => v && /^[A-Za-z0-9_-]{11}$/.test(String(v.id)) && typeof v.skill === 'string').map((v) => [v.skill, v]));
+  } catch { return new Map(); }
+})();
+const demoBlock = (name) => {
+  const v = DEMOS.get(name);
+  if (!v) return '';
+  const watch = `https://www.youtube.com/watch?v=${v.id}`;
+  return `\n  <p class="demo"><a href="${watch}" rel="noopener"><img src="https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg" alt="Watch on YouTube: ${esc(v.title || name)}" width="560" loading="lazy" style="max-width:100%;height:auto;border-radius:10px" /></a><br /><a href="${watch}" rel="noopener">Watch the short demo on YouTube</a></p>`;
+};
+
 // A skill's own share image when one has been rendered into web/og/, else the site card.
 // Only some skills have their own image, and pointing at a file that does not exist
 // leaves the link preview blank on every social platform.
@@ -343,7 +357,7 @@ ${existsSync(join(root, 'skills-i18n', 'zh', s.name, 'SKILL.md')) ? `<link rel="
     </div>
   </div>
 
-  <p class="lead">${esc(s.description)}</p>
+  <p class="lead">${esc(s.description)}</p>${demoBlock(s.name)}
   ${s.source && s.source !== 'None' ? `<p class="source">📚 Based on ${esc(s.source).replace(/\*(.+?)\*/g, '<em>$1</em>')}</p>` : ''}
 
   <div class="cta">

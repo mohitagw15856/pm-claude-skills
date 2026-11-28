@@ -1,4 +1,4 @@
-# 🗂️ All 1399 Skills — full catalog
+# 🗂️ All 1404 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -385,15 +385,16 @@
 | **Thumbnail Creator Skill (via Gemini)** (`thumbnail-creator`) | Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. | — |
 | **YouTube Script Writer** (`youtube-script-writer`) | Write a high-retention YouTube script — explainer, tutorial, video essay, review, or talking head — on the packaging then cold-open then… | — |
 
-## 🤝 Customers & Sales (26 skills)
+## 🤝 Customers & Sales (27 skills)
 
-### `pm-cs` — 7 skills · 2 eval-scored
+### `pm-cs` — 8 skills · 2 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Churn Analysis** (`churn-analysis`) | Produce a structured churn analysis that separates avoidable from unavoidable churn. | ✅ 4.5/5 |
 | **Customer Escalation Brief** (`cs-escalation-brief`) | Write a structured escalation brief for an at-risk customer account. | — |
 | **Customer Health Scorecard** (`cs-health-scorecard`) | Build a customer health scorecard for a specific account. | ✅ 4.8/5 |
+| **Customer Kickoff Plan** (`customer-kickoff-plan`) | Plan the start of work with a new customer: the kickoff meeting agenda, who does what on both sides, what success means and by when, the first two… | — |
 | **Customer Success Plan** (`customer-success-plan`) | Build a joint customer success plan for a specific account. | — |
 | **QBR Deck** (`qbr-deck`) | Build a Quarterly Business Review (QBR) deck structure and narrative for a customer account. | — |
 | **Renewal Playbook** (`renewal-playbook`) | Build a structured renewal playbook for a customer account. | — |
@@ -726,7 +727,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 4/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (934 skills)
+## 🌍 Industries & Public Sector (938 skills)
 
 ### `other` — 22 skills · 12 eval-scored
 
@@ -2100,15 +2101,18 @@
 | **Match Review** (`match-review`) | Review a match or competition for a team coach: what the plan was, what happened in each phase of the game, three things that worked and three to… | — |
 | **Sports Parent Comms** (`sports-parent-comms`) | Write messages from a youth sports coach or team manager to parents: the season welcome, weekly logistics, selection and playing-time… | — |
 
-### `pm-students` — 11 skills
+### `pm-students` — 14 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Essay Feedback Coach** (`essay-feedback-coach`) | Give a student feedback on an essay draft against their own rubric or assignment brief, without rewriting it: what the argument is, where it… | — |
 | **Exam Prep Planner** (`exam-prep-planner`) | Build a realistic exam-prep schedule with spaced repetition and retrieval practice — the plan that survives contact with an actual week. | — |
 | **Exam Study Plan** (`exam-study-plan`) | Build a backward-planned study schedule for an exam — using proven learning methods, not just re-reading — so you cover what matters and actually… | — |
 | **Financial Aid Appeal** (`financial-aid-appeal`) | Write a financial-aid appeal or scholarship request letter that aid offices act on — factual, documented, and specific about the ask. | — |
+| **Flashcard Deck Builder** (`flashcard-deck-builder`) | Turn notes, a chapter or a syllabus into flashcards built for spaced repetition: one fact per card, questions that force recall, and a file ready… | — |
 | **Language-Learning Plan** (`language-learning-plan`) | Build a realistic plan to learn a language for your actual goal — travel, conversation, work, or fluency — focused on what moves the needle… | — |
 | **Literature Review Builder** (`literature-review-builder`) | Structure a literature review that argues, not lists — thematic synthesis from your sources with the debate mapped and the gap identified. | — |
+| **Past Paper Marker** (`past-paper-marker`) | Mark a student's answer against the mark scheme they supply, point by point, and show exactly where marks were earned and lost and what a… | — |
 | **Personal Statement** (`personal-statement`) | Write a personal statement for a university, grad-school, or job application that's specific, coherent, and unmistakably you — showing fit and… | — |
 | **Scholarship Essay** (`scholarship-essay`) | Write a scholarship essay that stands out — a genuine, specific story that answers the prompt and shows why you deserve the award, without clichés. | — |
 | **Statement Coach** (`statement-coach`) | Coach a statement of purpose or personal essay to admission strength — structural diagnosis, specific feedback, and revision plans on YOUR draft… | — |
@@ -2146,12 +2150,13 @@
 | **Lesson Plan Builder** (`lesson-plan-builder`) | Build a standards-aligned K-12 lesson plan with clear objectives, a timed activity sequence, checks for understanding, and differentiation. | — |
 | **Parent Conference Prep** (`parent-conference-prep`) | Prepare for a K-12 parent-teacher conference — including the hard ones. | — |
 
-### `pm-team-setup` — 2 skills
+### `pm-team-setup` — 3 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Team AI Rollout Plan** (`team-ai-rollout-plan`) | Plan how a team adopts shared AI skills over 30 days: what to standardise first, who owns the shared context and skills, how people are onboarded… | — |
 | **Team Context Interview** (`team-context-interview`) | Interview a team lead to build the shared context file that makes an AI assistant useful for the whole team: the product, customers, terminology… | — |
+| **Template to Skill** (`template-to-skill`) | Turn a company's existing document template, with one or two good filled-in examples, into a skill that produces documents the way that company… | — |
 
 ### `pm-thinking` — 25 skills · 1 eval-scored
 
@@ -2294,4 +2299,4 @@
 
 ---
 
-_1399 skills across 173 bundles · 399 eval-scored (29%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1404 skills across 173 bundles · 399 eval-scored (28%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

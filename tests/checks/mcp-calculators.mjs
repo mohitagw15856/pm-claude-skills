@@ -61,6 +61,14 @@ try {
     const res = await call('run_calculator', r);
     ok(`refuses ${JSON.stringify(r).slice(0, 80)}`, res.isError === true, JSON.stringify(res).slice(0, 160));
   }
+
+  // The deterministic document linter, exposed as a tool.
+  const lint = await call('lint_document', { markdown: '# PRD: Export\n\n## Problem\nTBD\n\n## Success metrics\n- Users love it\n' });
+  const ls = lint.structuredContent;
+  ok('lint_document detects the type and reports findings', ls.type === 'prd' && ls.errors >= 3 && ls.findings.some((f) => f.rule === 'D001') && ls.findings.some((f) => f.rule === 'D004'), JSON.stringify(ls).slice(0, 200));
+  const clean = await call('lint_document', { markdown: '# Notes\n\nNothing wrong here.\n', type: 'generic' });
+  ok('a clean document has no findings', clean.structuredContent.findings.length === 0);
+  ok('lint_document refuses a non-text document', (await call('lint_document', { markdown: 42 })).isError === true);
 } catch (e) { fail++; console.error(`  ✗ ${e.message}`); }
 child.kill();
 console.log(`mcp calculators: ${pass} passed, ${fail} failed`);

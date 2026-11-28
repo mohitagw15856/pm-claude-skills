@@ -8,6 +8,8 @@
 //   npx pm-claude-skills lint prd.md
 //   npx pm-claude-skills lint docs/*.md --type prd --strict
 //   npx pm-claude-skills lint update.md --json
+//   npx pm-claude-skills lint CONTEXT.md --type context
+//   npx pm-claude-skills lint docs/*.md --format github     (annotations in a pull request)
 //   node bin/doclint.mjs --selftest
 //
 // Exit status: 0 clean, 1 when an error is found (or a warning under --strict), 2 on bad usage.
@@ -46,6 +48,42 @@ const TYPES = {
     ],
   },
 };
+
+Object.assign(TYPES, {
+  okr: {
+    label: 'OKR document',
+    signals: [/\bokrs?\b/i, /key results?/i, /^#+\s*objectives?\b/im],
+    sections: [
+      ['objectives', /objectives?/i],
+      ['key results', /key results?|\bkrs?\b/i],
+    ],
+  },
+  meeting: {
+    label: 'meeting notes',
+    signals: [/meeting notes/i, /^#+\s*(attendees|decisions|agenda)\b/im, /\battendees\b/i, /\bminutes\b/i],
+    sections: [
+      ['decisions', /decisions?|outcomes?|agreed/i],
+      ['action items', /actions?|next steps?|follow-?ups?|to-?dos?/i],
+    ],
+  },
+  roadmap: {
+    label: 'roadmap',
+    signals: [/\broadmap\b/i, /^#+\s*(now|next|later)\b/im, /\bq[1-4]\b/i],
+    sections: [
+      ['what is being worked on', /now|next|later|q[1-4]|themes?|initiatives?|roadmap|h[12]\b/i],
+    ],
+  },
+  context: {
+    label: 'team context file',
+    signals: [/team context/i, /the assistant must never/i, /^#+\s*our terms\b/im, /^#+\s*what we make\b/im],
+    sections: [
+      ['what the team makes', /what we (make|build|do)|product|about/i],
+      ['who it is for', /who it is for|customers?|users?|audience/i],
+      ['terms', /terms|glossary|vocabulary|language/i],
+      ['rules for the assistant', /must never|never|rules|do not/i],
+    ],
+  },
+});
 
 const PLACEHOLDERS = [
   [/\bTODO\b/, 'TODO'], [/\bTBD\b/, 'TBD'], [/\bTBC\b/, 'TBC'], [/\bXXX\b/, 'XXX'], [/\bFIXME\b/, 'FIXME'],
@@ -151,6 +189,35 @@ export function lint(text, opts = {}) {
     }
   }
 
+  // D009: an OKR key result with no number cannot be scored.
+  if (type === 'okr') {
+    for (const s of headed.filter((x) => /key results?|\bkrs?\b/i.test(x.title))) {
+      for (const b of s.body) {
+        const item = b.text.match(/^\s*([-*+]|\d+[.)])\s+(.*\S)/);
+        if (item && !/\d/.test(item[2])) add('D009', 'error', b.line, 'key result has no number, so it cannot be scored');
+      }
+    }
+  }
+
+  // D010: a roadmap table should say why each item is there (an outcome, goal, problem or metric column).
+  if (type === 'roadmap') {
+    lines.forEach((line, i) => {
+      const isHeader = /^\s*\|.*\|\s*$/.test(line) && /^\s*\|[\s:|-]+\|\s*$/.test(lines[i + 1] || '');
+      if (isHeader && !/outcome|goal|why|problem|metric|result|impact/i.test(line)) add('D010', 'warning', i + 1, 'roadmap table has no column for the outcome or reason');
+    });
+  }
+
+  // D011 to D013: a team context file must be filled in, owned and dated.
+  if (type === 'context') {
+    lines.forEach((line, i) => {
+      if (/^\s*\[[^\]]{3,}\]\s*$/.test(line)) add('D011', 'error', i + 1, 'template instruction left in place of content');
+    });
+    const owner = lines.findIndex((l) => /\bowner\s*:/i.test(l));
+    if (owner < 0) add('D012', 'error', 1, 'no owner is named (add a line such as "Owner: Priya")');
+    else if (/\bowner\s*:\s*(\[[^\]]*\]|tbd|tbc|\?+)?\s*(·|\||$)/i.test(lines[owner])) add('D012', 'error', owner + 1, 'the owner is not filled in');
+    if (!lines.some((l) => /(last reviewed|last updated|reviewed on|updated)\s*:?\s*.*\d{4}/i.test(l))) add('D013', 'warning', 1, 'no review date (add "Last reviewed: YYYY-MM-DD")');
+  }
+
   // D007: vague timing where a date belongs. D008: filler words.
   lines.forEach((line, i) => {
     const vague = line.match(VAGUE_DATES);
@@ -188,25 +255,35 @@ function selftest() {
   eq('empty document', rules('  \n'), ['D000@1']);
   eq('zero is a number in metrics', rules(goodPrd.replace('- 40% of finance users export in month one', '- 0 support tickets about export')), []);
   eq('forced type', lint('# Thing\n\ntext\n', { type: 'postmortem' }).findings.filter((f) => f.rule === 'D003').length, 4);
-  console.log(fails ? `doclint selftest: ${fails} failure(s)` : 'doclint selftest: 15 passed ✓');
+  eq('OKR key result with no number', rules('# OKRs Q1\n\n## Objective\nWin enterprise.\n\n## Key results\n- Close 12 enterprise deals\n- Delight customers\n'), ['D009@8']);
+  eq('meeting notes need decisions and actions', rules('# Meeting notes\n\nAttendees: Ana, Ben\n\n## Discussion\nTalked.\n', { type: 'meeting' }), ['D003@1', 'D003@1']);
+  eq('roadmap table with no outcome column', rules('# Roadmap\n\n## Now\n| Item | Team |\n|---|---|\n| SSO | Core |\n\n## Next\n| Item | Outcome |\n|---|---|\n| Audit log | Pass security review |\n'), ['D010@4']);
+  const ctx = '# Team context: Pay\n\nOwner: [name] · Last reviewed: 2026-11-28\n\n## What we make\n[Two sentences: the product.]\n\n## Who it is for\nFinance leads.\n\n## Our terms\nLedger.\n\n## The assistant must never\n- Invent numbers.\n';
+  eq('unfilled context file', rules(ctx), ['D001@3', 'D012@3', 'D011@6']);
+  eq('a filled context file is clean', rules(ctx.replace('[name]', 'Priya').replace('[Two sentences: the product.]', 'Rota software.')), []);
+  eq('context with no owner line or date', rules('# Team context\n\n## What we make\nX.\n\n## Customers\nY.\n\n## Glossary\nZ.\n\n## Rules\n- Never invent.\n', { type: 'context' }), ['D012@1', 'D013@1']);
+  console.log(fails ? `doclint selftest: ${fails} failure(s)` : 'doclint selftest: 21 passed ✓');
   return fails ? 1 : 0;
 }
 
 export function run(argv = process.argv.slice(2)) {
   if (argv.includes('--selftest')) return selftest();
   if (argv.includes('--help') || argv.includes('-h')) {
-    console.log('Usage: pm-claude-skills lint <file.md> [more files] [--type auto|prd|update|postmortem|generic] [--strict] [--json]\n\nRules: D000 empty document · D001 placeholder left in · D002 empty section · D003 missing section for the type\n       D004 PRD metrics with no number · D005 action item with no owner · D006 action item with no date\n       D007 vague timing · D008 filler word');
+    console.log('Usage: pm-claude-skills lint <file.md> [more files] [--type auto|prd|update|postmortem|okr|meeting|roadmap|context|generic] [--strict] [--json] [--format github]\n\nRules: D000 empty document · D001 placeholder left in · D002 empty section · D003 missing section for the type\n       D004 PRD metrics with no number · D005 action item with no owner · D006 action item with no date\n       D007 vague timing · D008 filler word · D009 key result with no number · D010 roadmap table with no outcome column\n       D011 context template line not filled in · D012 context file with no owner · D013 context file with no review date');
     return 0;
   }
   const flag = (f) => argv.includes(f);
   let type = 'auto';
+  let format = 'text';
   const files = [];
   for (let i = 0; i < argv.length; i++) {
     if (argv[i] === '--type') { type = argv[++i]; continue; }
+    if (argv[i] === '--format') { format = argv[++i]; continue; }
     if (argv[i].startsWith('--')) continue;
     files.push(argv[i]);
   }
-  if (!['auto', 'generic', ...Object.keys(TYPES)].includes(type)) { console.error(`Unknown --type "${type}". Use auto, prd, update, postmortem or generic.`); return 2; }
+  if (!['auto', 'generic', ...Object.keys(TYPES)].includes(type)) { console.error(`Unknown --type "${type}". Use auto, generic, ${Object.keys(TYPES).join(', ')}.`); return 2; }
+  if (!['text', 'github'].includes(format)) { console.error(`Unknown --format "${format}". Use text or github.`); return 2; }
   if (!files.length) { console.error('Give at least one Markdown file. See --help.'); return 2; }
   const report = [];
   for (const file of files) {
@@ -217,6 +294,16 @@ export function run(argv = process.argv.slice(2)) {
   const all = report.flatMap((r) => r.findings);
   const totals = summarise(all);
   if (flag('--json')) console.log(JSON.stringify({ files: report, totals }, null, 2));
+  else if (format === 'github') {
+    // GitHub Actions workflow commands: each finding is shown on its line in the pull request.
+    const clean = (v) => String(v).replace(/%/g, '%25').replace(/\r/g, '%0D').replace(/\n/g, '%0A');
+    const prop = (v) => clean(v).replace(/:/g, '%3A').replace(/,/g, '%2C');
+    for (const r of report) for (const f of r.findings) {
+      const level = f.severity === 'error' ? 'error' : f.severity === 'warning' ? 'warning' : 'notice';
+      console.log(`::${level} file=${prop(r.file)},line=${f.line},title=${prop(f.rule)}::${clean(f.message)}`);
+    }
+    console.log(`${totals.errors} error(s), ${totals.warnings} warning(s), ${totals.info} note(s) in ${report.length} file(s).`);
+  }
   else {
     for (const r of report) {
       console.log(`${r.file}  (${TYPES[r.type] ? TYPES[r.type].label : 'generic document'})`);

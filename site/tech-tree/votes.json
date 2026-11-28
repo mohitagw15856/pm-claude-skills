@@ -1,5 +1,18 @@
 {
   "_comment": "Open skill requests and their votes, read by scripts/build-tech-tree.mjs. Refresh with --refresh-votes (counts 👍 on open skill-request issues) or --seed-votes (adds open rows from SKILL_REQUEST.md). Shipped names are removed automatically.",
   "updated": "2026-11-28",
-  "requests": []
+  "requests": [
+    {
+      "name": "pitch-critique",
+      "profession": "Startup / Founder",
+      "votes": 0,
+      "issue": null
+    },
+    {
+      "name": "cofounder-agreement-framework",
+      "profession": "Startup / Founder",
+      "votes": 0,
+      "issue": null
+    }
+  ]
 }

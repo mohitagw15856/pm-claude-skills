@@ -27,6 +27,7 @@ def load(skill, name):
 video, VIDEO = load("demo-video-kit", "demo_video")
 graph, GRAPH = load("product-knowledge-graph", "knowledge_graph")
 capture, CAPTURE = load("live-competitor-capture", "capture_log")
+flash, FLASH = load("flashcard-deck-builder", "flashcards")
 
 
 class DemoVideoTests(unittest.TestCase):
@@ -186,6 +187,55 @@ class CaptureLogTests(unittest.TestCase):
             for argv in (["report", str(Path(d) / "missing.json")], ["add", str(log), "--flow", "x", "--url", "nope"]):
                 result = run(*argv)
                 self.assertNotEqual(result.returncode, 0)
+                self.assertNotIn("Traceback", result.stderr)
+
+
+
+class FlashcardTests(unittest.TestCase):
+    def write(self, directory, cards):
+        path = Path(directory) / "cards.json"
+        path.write_text(json.dumps(cards), encoding="utf-8")
+        return path
+
+    def test_fields_cannot_shift_columns_or_split_cards(self):
+        cards = [{"front": "a\tb\nc", "back": "x < y & \"z\"", "tag": "unit 1 / enzymes"}]
+        with tempfile.TemporaryDirectory() as d:
+            basic, cloze, nb, nc = flash.render(flash.load(self.write(d, cards)))
+        self.assertEqual((nb, nc, cloze), (1, 0, ""))
+        row = basic.splitlines()[3]
+        self.assertEqual(row, 'a b<br>c\tx &lt; y &amp; "z"\tunit-1-enzymes')
+        self.assertEqual(row.count("\t"), 2)
+
+    def test_cloze_markers_survive_escaping(self):
+        self.assertEqual(flash.cloze_field("If a < b then {{c1::b > a}} & {{c2::more::hint}}"),
+                         "If a &lt; b then {{c1::b &gt; a}} &amp; {{c2::more::hint}}")
+
+    def test_problems_are_found(self):
+        cards = [{"front": "Q", "back": "A"}, {"front": "q", "back": "B"}, {"front": "", "back": "x"},
+                 {"cloze": "no gap here"}, {"front": "F" * 201, "back": "B" * 301}]
+        with tempfile.TemporaryDirectory() as d:
+            found = flash.problems(flash.load(self.write(d, cards)))
+        self.assertEqual([(n, level) for n, level, _ in found],
+                         [(2, "warning"), (3, "error"), (4, "error"), (5, "warning"), (5, "warning")])
+
+    def test_export_writes_two_files_and_refuses_broken_decks(self):
+        good = [{"front": "Q", "back": "A", "tag": "t"}, {"cloze": "The {{c1::answer}}.", "tag": "t"}]
+        with tempfile.TemporaryDirectory() as d:
+            out = Path(d) / "deck.tsv"
+            ok = subprocess.run([sys.executable, str(FLASH), "export", str(self.write(d, good)), "--out", str(out)],
+                                capture_output=True, text=True)
+            self.assertEqual(ok.returncode, 0, ok.stderr)
+            self.assertEqual(out.read_text(encoding="utf-8").splitlines()[-1], "Q\tA\tt")
+            self.assertEqual((Path(d) / "deck-cloze.tsv").read_text(encoding="utf-8").splitlines()[-1], "The {{c1::answer}}.\tt")
+            self.assertIn("#notetype:Cloze", (Path(d) / "deck-cloze.tsv").read_text(encoding="utf-8"))
+        for bad in ([{"front": "Q", "back": ""}], [], {}, [{"front": 1, "back": "A"}],
+                    [{"front": "Q", "back": "A", "cloze": "The {{c1::x}}"}]):
+            with self.subTest(bad=bad), tempfile.TemporaryDirectory() as d:
+                out = Path(d) / "deck.tsv"
+                result = subprocess.run([sys.executable, str(FLASH), "export", str(self.write(d, bad)), "--out", str(out)],
+                                        capture_output=True, text=True)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertFalse(out.exists())
                 self.assertNotIn("Traceback", result.stderr)
 
 

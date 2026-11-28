@@ -1,0 +1,104 @@
+---
+name: customer-kickoff-plan
+description: "Plan the start of work with a new customer: the kickoff meeting agenda, who does what on both sides, what success means and by when, the first two weeks day by day, and the risks to raise before they bite. Use when asked to plan a customer kickoff, prepare the kickoff meeting, start an implementation, onboard this new client, or what should happen in the first two weeks. Produces a kickoff agenda with timings, a roles table for both sides, success criteria the customer has agreed, a first-fortnight plan with owners, and a list of things needed from the customer."
+---
+
+# Customer Kickoff Plan Skill
+
+The sale ends and the customer's doubt begins. The first two weeks decide whether the people who bought are proved right, and most projects that fail later were already off course at kickoff: nobody agreed what success meant, the customer's real decision-maker was not in the room, and the first deliverable depended on access nobody had requested. This skill plans the start so those three things are settled on day one. For the longer plan after kickoff, use `customer-success-plan`; for a freelancer's onboarding pack, use `client-onboarding-kit`.
+
+> **Not quite this?** Use `customer-success-plan` for the 90 to 180 day plan, and `statement-of-work` to define what was sold.
+
+## What This Skill Produces
+
+- **A kickoff agenda** with timings, an owner per item and the decision each item must reach
+- **A roles table** for both sides, including who can approve and who can block
+- **Success criteria**, written so the customer can agree or correct them in the meeting
+- **A first-fortnight plan**: what happens on which day, and who owns it
+- **A needs list**: access, data, people and decisions required from the customer, with dates
+- **Early risks** and what would show each is happening
+
+## Required Inputs
+
+Ask for these if not provided:
+- **What was sold**: scope, timeline, price basis, and anything promised in the sales process
+- **Who is involved** on both sides, and who signed
+- **Why the customer bought**, in their words, and what they are being judged on
+- **Known constraints**: dates, systems, security review, holidays
+- **What the handover from sales contains**, and what it does not
+
+Do not invent a commitment, a date or a success measure. If sales promised something that is not in the contract, list it as a question to settle before the meeting, not as a plan item.
+
+## Framework: Settle Three Things on Day One
+
+1. **Before the meeting.** Read the contract and the sales notes. Write down every promise. Send a short agenda and the needs list so the customer arrives with answers.
+2. **Open with their reason, not your process.** State why they bought, in their words, and ask them to correct it. A wrong assumption found here costs nothing.
+3. **Agree what success means.** Two or three outcomes, each with a measure and a date. Write them on screen and edit them together. If the room cannot agree, that is the first risk.
+4. **Name the people.** For each side: who decides, who does the work, who must be consulted, who can block. Find out who is missing from the meeting.
+5. **Walk the first two weeks.** Day by day, with one owner per item. The first visible result should arrive within the fortnight.
+6. **Ask for what you need.** Access, data, a named contact for each system, review time. Give each a date and say what slips if it is late.
+7. **Say how you will work.** One channel, one regular meeting, how issues are raised, what a status update looks like.
+8. **Raise the risks now.** The ones visible from the contract and the sales notes. Naming them early is cheap.
+9. **Close with decisions and actions**, read aloud, and send them the same day.
+
+## Output Format
+
+# Kickoff Plan: [customer] · [date]
+
+**They bought this because:** [their reason, to confirm]
+
+## Before the Meeting
+- [ ] [preparation item, owner]
+
+## Agenda ([total] minutes)
+| Time | Item | Owner | Must decide |
+|------|------|-------|-------------|
+
+## Roles
+| Role | Customer | Us | Can approve? |
+|------|----------|----|--------------|
+
+## Success Criteria (to agree in the meeting)
+| Outcome | Measure | By when | Agreed? |
+|---------|---------|---------|---------|
+
+## First Two Weeks
+| Day | What happens | Owner | Depends on |
+|-----|--------------|-------|------------|
+
+## Needed From the Customer
+| Item | From whom | By | If late |
+|------|-----------|----|---------|
+
+## Risks to Raise
+| Risk | Early sign | Proposed response |
+|------|-----------|-------------------|
+
+## Open Questions Before Kickoff
+[Promises not in the contract, unknown people, unclear scope]
+
+## Quality Checks
+
+- [ ] Success criteria have a measure and a date, and are marked as to be agreed
+- [ ] Every agenda item has an owner and a decision to reach
+- [ ] Every first-fortnight item has one owner
+- [ ] The needs list gives a date and a consequence for each item
+- [ ] Nothing was promised that is not in the supplied contract or notes
+- [ ] The approver and the possible blocker on the customer side are named or listed as unknown
+
+## Anti-Patterns
+
+- [ ] Do not spend the kickoff presenting your methodology
+- [ ] Do not leave success as "a smooth implementation"
+- [ ] Do not assume the buyer is the user or the approver
+- [ ] Do not discover on day eight that you need access you could have asked for on day one
+- [ ] Do not end without actions read aloud and sent the same day
+
+## Example Trigger Phrases
+
+- "Plan the kickoff for this new customer."
+- "Prepare the kickoff meeting agenda."
+- "What should happen in the first two weeks of this implementation?"
+- "We just signed them. How do we start well?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/customer-kickoff-plan.html

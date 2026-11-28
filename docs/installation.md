@@ -56,9 +56,20 @@ brew tap mohitagw15856/pm-claude-skills https://github.com/mohitagw15856/pm-clau
 brew install pm-claude-skills
 ```
 
+**Windows without Node.** From a clone of the repository, in PowerShell:
+
+```powershell
+.\scripts\install.ps1 -Agent claude -DryRun   # see what it would copy
+.\scripts\install.ps1 -Agent claude
+```
+
+It only copies files. It mirrors `scripts/install.sh` but has not been run on Windows from this repository, so use `-DryRun` first.
+
 **VS Code.** A small extension that finds a skill and copies or inserts its instructions: [`integrations/vscode/`](../integrations/vscode/README.md). It is not on the Marketplace yet; the README says how to run it.
 
 **A whole team.** `npx pm-claude-skills team init --name "Your team"` writes a team skill list, a shared context file to fill in and an onboarding checklist. See [docs/team-setup.md](team-setup.md).
+
+**Check a team setup.** `npx pm-claude-skills team check` reports whether the team config is valid, the shared context file is filled in and owned, and your install matches the agreed version.
 
 **Lint documents before commit.** The same document linter is a [pre-commit](https://pre-commit.com) hook, `pm-doclint`, defined in `.pre-commit-hooks.yaml`.
 

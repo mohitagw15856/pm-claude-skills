@@ -1,0 +1,91 @@
+---
+description: "Mark a student's answer against the mark scheme they supply, point by point, and show exactly where marks were earned and lost and what a full-mark answer would have added. Use when asked to mark this answer, how many marks would this get, mark my past paper, why did I lose marks, or check my answer against the mark scheme. Produces a marks table tied to each marking point, the total with any uncertainty stated, the pattern behind the lost marks, and one thing to practise next."
+globs:
+alwaysApply: false
+---
+
+# Past Paper Marker Skill
+
+Past papers only help if the marking is honest. Students mark their own work generously, counting what they meant instead of what they wrote, and learn nothing. An examiner awards marks for specific points on a mark scheme and gives none for a point that is implied, vague or in the wrong place. This skill marks the way the scheme does. It needs the mark scheme: without one, it will say what a good answer contains but will not invent a mark. For a revision timetable, use `exam-study-plan`.
+
+## What This Skill Produces
+
+- **A marks table**: each marking point, whether it was awarded, and the words in the answer that earned it
+- **A total**, as a range where the scheme leaves room for judgement
+- **Why marks were lost**, grouped: knowledge gap, missed command word, no working shown, vague wording, ran out of time
+- **What full marks needed**: the specific missing points, not a model essay
+- **One thing to practise**, chosen from the pattern
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The question**, with its mark allocation and command word
+- **The mark scheme or marking criteria**, exactly as published
+- **The student's answer**, as written, including working
+- **The level and exam board**, since conventions differ
+- **Whether it was timed**
+
+If there is no mark scheme, do not award a number. Give feedback against the question and say that marks cannot be assigned without the scheme. Never reconstruct a mark scheme from memory and present it as the board's.
+
+## Framework: Mark What Is on the Page
+
+1. **Read the command word.** "State", "explain", "evaluate" and "calculate" earn marks differently. An explanation given for a "state" question earns nothing extra; a statement given for "explain" loses the explanation marks.
+2. **Go through the scheme point by point.** For each marking point, find the words in the answer that meet it. Quote them. If you have to infer the point, it is not awarded.
+3. **Apply the scheme's own rules.** Accept listed alternatives; apply "allow" and "reject" notes; follow rules on error carried forward, units, significant figures and maximum marks per section.
+4. **For level-marked answers**, place the answer in a level using the descriptors, quote the descriptor that fits, then decide the mark within the level and say why it is not the level above.
+5. **State uncertainty.** Where a point is borderline, give the mark both ways and show the range.
+6. **Do not mark up for effort or length.** Extra correct material beyond the scheme earns nothing; contradictions can lose a mark where the scheme says so.
+7. **Find the pattern.** One lost mark is an accident; three lost the same way is the thing to fix.
+8. **Show the gap, not the answer.** List the points that were missing so the student can rewrite it themselves.
+
+## Output Format
+
+# Marked: [question reference] · [marks available]
+
+**Mark: [N] out of [total]** [or a range, with the reason]
+
+## Marking Points
+| # | Marking point (from the scheme) | Awarded | Evidence in the answer |
+|---|---------------------------------|---------|------------------------|
+
+## Where the Marks Went
+| Reason | Marks lost | Example |
+|--------|-----------:|---------|
+
+## What Full Marks Needed
+- [missing point]
+
+## Practise Next
+[One specific thing, and how]
+
+## Notes on the Marking
+[Borderline decisions, scheme rules applied, anything the scheme did not cover]
+
+## Quality Checks
+
+- [ ] Every awarded mark quotes the words that earned it
+- [ ] Every mark traces to a point in the supplied scheme
+- [ ] No mark was given for something implied but not written
+- [ ] Borderline points are shown as a range
+- [ ] The pattern behind lost marks is named
+- [ ] Without a mark scheme, no number was given
+
+## Anti-Patterns
+
+- [ ] Do not mark generously to encourage
+- [ ] Do not invent a mark scheme
+- [ ] Do not rewrite the student's answer for them
+- [ ] Do not award marks for length or for correct material the question did not ask for
+- [ ] Do not give a single confident mark where the scheme needs judgement
+
+## Example Trigger Phrases
+
+- "Mark this answer against the mark scheme."
+- "How many marks would this get?"
+- "Why did I lose marks on this question?"
+- "Mark my past paper."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/past-paper-marker.html
+
+<!-- pm-claude-skills v84.1.0 | skill: past-paper-marker | source: skills/past-paper-marker/SKILL.md | sha256: ebcd00fefb789375c0433218fa646ae1290721f40bec6e8bd96d60d774203c38 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

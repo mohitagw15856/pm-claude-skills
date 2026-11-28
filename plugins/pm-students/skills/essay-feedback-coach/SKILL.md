@@ -1,0 +1,89 @@
+---
+name: essay-feedback-coach
+description: "Give a student feedback on an essay draft against their own rubric or assignment brief, without rewriting it: what the argument is, where it holds, where it breaks, and the three changes that would improve it most. Use when asked to give feedback on my essay, is my argument clear, check my essay against the rubric, what should I fix first, or review my draft without rewriting it. Produces the argument as the reader understood it, feedback by rubric criterion with quoted evidence, three prioritised revisions, and questions that help the student fix it themselves."
+---
+
+# Essay Feedback Coach Skill
+
+Feedback that rewrites the essay teaches nothing and, in most courses, is not allowed. Feedback that says "be clearer" is useless. Good feedback tells the writer what a reader actually understood, shows the exact sentence where the argument lost them, and leaves the fixing to the writer. This skill gives that kind of feedback against the criteria the essay will be marked on. It does not write or rewrite passages. For marking a short exam answer against a mark scheme, use `past-paper-marker`.
+
+## What This Skill Produces
+
+- **The argument as read**: the thesis and line of reasoning the reader took from the draft, which may differ from what the writer intended
+- **Feedback by criterion**, each with a quoted example from the draft
+- **Three revisions in priority order**, with what each would change
+- **Questions for the writer** that point at the fix without supplying it
+- **A note on what is working**, so it survives the redraft
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The draft**
+- **The assignment brief and the rubric or marking criteria**
+- **The level and subject**, and the word limit
+- **What stage it is at**: a first draft needs argument feedback, a final draft needs precision
+- **The rules on help**: what assistance the course allows
+
+Do not write replacement sentences or paragraphs. If the student asks for a rewrite, explain that this skill gives feedback only and point them to their course's rules. Do not verify or supply sources: flag claims that need a citation and leave the finding to the student.
+
+## Framework: Reader First, Then Rubric
+
+1. **Say back the argument.** In two or three sentences, state the thesis and how the essay supports it, as a reader would. If that cannot be done, the first revision is the thesis.
+2. **Check the question was answered.** Compare the argument with the brief's wording. Essays lose most marks by answering a nearby question.
+3. **Walk the structure.** For each paragraph, name its job. Flag paragraphs with no clear job, two jobs, or a job that does not serve the thesis.
+4. **Test the evidence.** Is each claim supported? Is the evidence explained, or just placed? Flag unsupported claims and quotations left to speak for themselves.
+5. **Go through the rubric.** For each criterion, say where the draft sits and quote the passage that shows it.
+6. **Prioritise.** Choose the three changes with the largest effect, in order: argument, then structure, then evidence, then style. Do not list twenty.
+7. **Ask, do not tell.** Turn each revision into a question the writer can answer: "What is the strongest objection to your second point, and where do you answer it?"
+8. **Leave surface errors for last.** On an early draft, note the pattern (for example, long sentences that hide the verb) with one example, not every instance.
+
+## Output Format
+
+# Feedback: [essay title or question]
+
+**What I understood your argument to be:** [two or three sentences]
+**Does it answer the question set?** [yes / partly / no, with the reason]
+
+## By Criterion
+| Criterion | Where the draft is | Evidence (quoted) |
+|-----------|--------------------|-------------------|
+
+## Three Revisions, in Order
+1. **[revision]**: [why it matters most, and where in the draft]
+2.
+3.
+
+## Questions to Work Through
+- [question]
+
+## Keep This
+[What is working]
+
+## Not Checked
+[Sources, facts and anything outside the draft]
+
+## Quality Checks
+
+- [ ] The argument is stated back before any criticism
+- [ ] Every point of feedback quotes or locates the passage it concerns
+- [ ] Feedback is organised by the student's own rubric
+- [ ] There are three prioritised revisions, not a long list
+- [ ] No sentence or paragraph was rewritten for the student
+- [ ] Claims needing a source are flagged, with no source invented
+
+## Anti-Patterns
+
+- [ ] Do not rewrite the essay or supply model paragraphs
+- [ ] Do not give feedback that could apply to any essay
+- [ ] Do not correct every comma on a first draft
+- [ ] Do not invent or suggest specific sources
+- [ ] Do not predict a grade unless the rubric makes it mechanical, and then show the working
+
+## Example Trigger Phrases
+
+- "Give me feedback on my essay, but do not rewrite it."
+- "Check this draft against the rubric."
+- "Is my argument clear?"
+- "What should I fix first?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/essay-feedback-coach.html

@@ -37,7 +37,7 @@ Everything needed to do this yourself is in the library:
 npx pm-claude-skills team init --name "Your team"
 ```
 
-That writes a team skill list, a context file to fill in and an onboarding checklist. The [`team-context-interview`](../skills/team-context-interview/SKILL.md) skill interviews you to fill in the context, and [`team-ai-rollout-plan`](../skills/team-ai-rollout-plan/SKILL.md) plans the first month. The done-for-you offer is for teams that would rather have this set up with them.
+That writes a team skill list, a context file to fill in and an onboarding checklist. The [`team-context-interview`](../skills/team-context-interview/SKILL.md) skill interviews you to fill in the context, and [`team-ai-rollout-plan`](../skills/team-ai-rollout-plan/SKILL.md) plans the first month. The done-for-you offer is for teams that would rather have this set up with them. How a setup is run, step by step, is in the [delivery playbook](team-setup-playbook.md). `npx pm-claude-skills team check` tells you when a setup is complete.
 
 ## What it is not
 

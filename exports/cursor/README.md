@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1411 skills exported. Copy a `.mdc rule` into the tool to use it.
+1416 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 Every file ends with a provenance comment: library version, source path, the SHA-256 of the source
 `SKILL.md` and the licence. The same hash is published at `https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json`,
@@ -350,6 +350,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Customer Advisory Board | `pm-pmm` | `pm-pmm/customer-advisory-board/customer-advisory-board.mdc` |
 | Customer Incident Update | `pm-crisis` | `pm-crisis/customer-incident-update/customer-incident-update.mdc` |
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/customer-journey-map.mdc` |
+| Customer Kickoff Plan | `pm-cs` | `pm-cs/customer-kickoff-plan/customer-kickoff-plan.mdc` |
 | Customer Outage Notice | `pm-crisis` | `pm-crisis/customer-outage-notice/customer-outage-notice.mdc` |
 | Customer Success Plan | `pm-cs` | `pm-cs/customer-success-plan/customer-success-plan.mdc` |
 | CV Word Export | `pm-cv` | `pm-cv/cv-docx-export/cv-docx-export.mdc` |
@@ -494,6 +495,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Escalation Email | `pm-cowork` | `pm-cowork/escalation-email/escalation-email.mdc` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/escalation-tree.mdc` |
 | ESG Disclosure Draft | `pm-climate` | `pm-climate/esg-disclosure-draft/esg-disclosure-draft.mdc` |
+| Essay Feedback Coach | `pm-students` | `pm-students/essay-feedback-coach/essay-feedback-coach.mdc` |
 | Estate Planning Kit | `pm-money` | `pm-money/estate-planning-kit/estate-planning-kit.mdc` |
 | Estate Settlement Organizer | `pm-estate` | `pm-estate/estate-settlement-organizer/estate-settlement-organizer.mdc` |
 | Eulogy & Obituary Writer | `pm-grief` | `pm-grief/eulogy-and-obituary-writer/eulogy-and-obituary-writer.mdc` |
@@ -580,6 +582,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/first-maintainer-month.mdc` |
 | Five Minds | `pm-thinking` | `pm-thinking/five-minds/five-minds.mdc` |
 | Flare Day Planner | `pm-invisible-illness` | `pm-invisible-illness/flare-day-planner/flare-day-planner.mdc` |
+| Flashcard Deck Builder | `pm-students` | `pm-students/flashcard-deck-builder/flashcard-deck-builder.mdc` |
 | Fleet Compliance Audit Preparation | `pm-fleet` | `pm-fleet/fleet-compliance-audit-prep/fleet-compliance-audit-prep.mdc` |
 | Fleet Maintenance Programme | `pm-fleet` | `pm-fleet/fleet-maintenance-programme/fleet-maintenance-programme.mdc` |
 | Flight-Delay Compensation | `pm-lifeadmin` | `pm-lifeadmin/flight-delay-compensation/flight-delay-compensation.mdc` |
@@ -916,6 +919,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/partnership-proposal.mdc` |
 | Passive-Income Reality Check | `pm-wealth` | `pm-wealth/passive-income-reality-check/passive-income-reality-check.mdc` |
 | Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/password-and-2fa-setup.mdc` |
+| Past Paper Marker | `pm-students` | `pm-students/past-paper-marker/past-paper-marker.mdc` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/patient-communication.mdc` |
 | Patient Education Explainer | `pm-physio` | `pm-physio/patient-education-explainer/patient-education-explainer.mdc` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/pay-stub-decoder.mdc` |
@@ -1279,6 +1283,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Technical SEO Audit | `pm-seo` | `pm-seo/technical-seo-audit/technical-seo-audit.mdc` |
 | Technical Spec Template | `pm-delivery` | `pm-delivery/technical-spec-template/technical-spec-template.mdc` |
 | Template Designer | `pm-cowork` | `pm-cowork/template-designer/template-designer.mdc` |
+| Template to Skill | `pm-team-setup` | `pm-team-setup/template-to-skill/template-to-skill.mdc` |
 | Tenant Rights Explainer | `pm-legal` | `pm-legal/tenant-rights-explainer/tenant-rights-explainer.mdc` |
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/tenant-screening-guide.mdc` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/test-case-writer.mdc` |
