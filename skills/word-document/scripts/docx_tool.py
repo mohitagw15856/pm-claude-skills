@@ -22,23 +22,30 @@ from xml.sax.saxutils import escape
 
 W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
 
+def has_arabic(s):
+    return any("\u0600" <= ch <= "\u06FF" for ch in s)
+
 def runs_from_inline(text):
     out = []
+    rtl_tag = "<w:rtl/>" if has_arabic(text) else ""
     for tok in re.split(r"(\*\*.+?\*\*|\*.+?\*)", text):
         if not tok: continue
         if tok.startswith("**") and tok.endswith("**"):
-            out.append(f'<w:r><w:rPr><w:b/></w:rPr><w:t xml:space="preserve">{escape(tok[2:-2])}</w:t></w:r>')
+            out.append(f'<w:r><w:rPr><w:b/>{rtl_tag}</w:rPr><w:t xml:space="preserve">{escape(tok[2:-2])}</w:t></w:r>')
         elif tok.startswith("*") and tok.endswith("*"):
-            out.append(f'<w:r><w:rPr><w:i/></w:rPr><w:t xml:space="preserve">{escape(tok[1:-1])}</w:t></w:r>')
+            out.append(f'<w:r><w:rPr><w:i/>{rtl_tag}</w:rPr><w:t xml:space="preserve">{escape(tok[1:-1])}</w:t></w:r>')
         else:
-            out.append(f'<w:r><w:t xml:space="preserve">{escape(tok)}</w:t></w:r>')
+            rpr = f"<w:rPr>{rtl_tag}</w:rPr>" if rtl_tag else ""
+            out.append(f'<w:r>{rpr}<w:t xml:space="preserve">{escape(tok)}</w:t></w:r>')
     return "".join(out) or '<w:r><w:t/></w:r>'
 
 def para(text, style=None, numbered=False, bullet=False):
-    ppr = ""
-    if style: ppr = f'<w:pPr><w:pStyle w:val="{style}"/></w:pPr>'
-    if bullet: ppr = '<w:pPr><w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr></w:pPr>'
-    if numbered: ppr = '<w:pPr><w:numPr><w:ilvl w:val="0"/><w:numId w:val="2"/></w:numPr></w:pPr>'
+    bidi = "<w:bidi/>" if has_arabic(text) else ""
+    inner = ""
+    if style: inner = f'<w:pStyle w:val="{style}"/>'
+    elif bullet: inner = '<w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr>'
+    elif numbered: inner = '<w:numPr><w:ilvl w:val="0"/><w:numId w:val="2"/></w:numPr>'
+    ppr = f"<w:pPr>{inner}{bidi}</w:pPr>" if (inner or bidi) else ""
     return f'<w:p>{ppr}{runs_from_inline(text)}</w:p>'
 
 STYLES = f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>

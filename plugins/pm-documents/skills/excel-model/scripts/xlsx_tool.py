@@ -18,6 +18,7 @@ placeholders in string cells only. For rich formatting, use a real library.
 """
 import argparse, json, re, sys, zipfile, shutil
 from xml.sax.saxutils import escape
+def esc_attr(s): return escape(str(s)).replace('"', "&quot;")
 
 def col_letter(i):
     s = ""
@@ -68,7 +69,7 @@ def create(out, data):
             '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
             f'<sheetData>{"".join(cells_xml)}</sheetData></worksheet>')
     wb_sheets = "".join(
-        f'<sheet name="{escape(n)}" sheetId="{i+1}" r:id="rId{i+1}"/>' for i, (n, _) in enumerate(sheets))
+        f'<sheet name="{esc_attr(n)}" sheetId="{i+1}" r:id="rId{i+1}"/>' for i, (n, _) in enumerate(sheets))
     workbook = ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
         '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" '
         'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
@@ -95,7 +96,6 @@ def create(out, data):
     print(f"wrote {out}: {len(sheets)} sheet(s), {sum(len(r) for _, r in sheets)} row(s)")
 
 def fill(template, out, values):
-    shutil.copyfile(template, out + ".tmp")
     replaced = 0
     with zipfile.ZipFile(template) as zin, zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zout:
         for item in zin.namelist():
@@ -109,7 +109,6 @@ def fill(template, out, values):
                         text = text.replace(token, escape(str(v)))
                 data = text.encode("utf-8")
             zout.writestr(item, data)
-    import os; os.remove(out + ".tmp")
     print(f"wrote {out}: {replaced} placeholder(s) filled")
     if replaced == 0:
         print("warning: no {{placeholders}} found — check the template", file=sys.stderr)
