@@ -2,8 +2,10 @@ name: Publish pm-skills-tools to npm
 
 # Publishes the agent-tools subpackage (tools-pkg/). Its generated files are not
 # committed: prepack builds them from skills/. The version tracks the library
-# (tools-pkg/package.json). Manual dispatch, or npm publish from tools-pkg/ at release.
+# (tools-pkg/package.json). Runs when a GitHub release is published, or by manual dispatch.
 on:
+  release:
+    types: [published]
   workflow_dispatch:
 
 permissions:
@@ -23,8 +25,33 @@ jobs:
         run: |
           node scripts/build-tools-exports.mjs
           node --input-type=module -e "import { pick, toOpenAI } from './tools-pkg/tools.mjs'; if (toOpenAI(pick(['prd_template'])).length !== 1) process.exit(1); console.log('self-test ok');"
-      - name: Publish (public, with provenance)
+      # Trusted publishing needs npm 11.5.1 or newer.
+      - name: Update npm
+        run: npm install -g npm@^11.6.0 && npm --version
+
+      # OIDC first: with trusted publishing configured on npmjs.com for pm-skills-tools
+      # (workflow filename publish-tools.yml), npm exchanges the GitHub identity token for a
+      # short-lived publish credential and no secret is needed. Until that is set up, fall
+      # back to the NPM_TOKEN secret and say which one was used. See docs/OPERATIONS.md.
+      - name: Publish (trusted publishing, provenance)
         working-directory: tools-pkg
-        run: npm publish --provenance --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          FALLBACK_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          set -uo pipefail
+          PKG="$(node -p "require('./package.json').version")"
+          if npm view "pm-skills-tools@${PKG}" version >/dev/null 2>&1; then
+            echo "::notice::pm-skills-tools@${PKG} is already on npm. Nothing to publish."
+            exit 0
+          fi
+          # setup-node writes an .npmrc that expects NODE_AUTH_TOKEN; leave it empty for OIDC.
+          if NODE_AUTH_TOKEN="" npm publish --provenance --access public; then
+            echo "::notice::Published with npm trusted publishing (OIDC)."
+            exit 0
+          fi
+          if [ -z "$FALLBACK_TOKEN" ]; then
+            echo "::error::Trusted publishing failed and there is no NPM_TOKEN fallback. Configure trusted publishing on npmjs.com for pm-skills-tools (see docs/OPERATIONS.md)."
+            exit 1
+          fi
+          echo "::warning::Trusted publishing is not configured yet; publishing with NPM_TOKEN instead."
+          NODE_AUTH_TOKEN="$FALLBACK_TOKEN" npm publish --provenance --access public

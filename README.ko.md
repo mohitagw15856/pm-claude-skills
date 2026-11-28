@@ -1,6 +1,6 @@
 <sub>[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · **한국어** · [日本語](README.ja.md) · [Español](README.es.md) · [Português (BR)](README.pt-BR.md)</sub>
 
-# PM Skills: 1,399개의 전문 Agent Skills, 한국어로 물어보면 됩니다
+# PM Skills: 1,404개의 전문 Agent Skills, 한국어로 물어보면 됩니다
 
 > 이 번역은 기계 번역의 도움을 받아 관리됩니다. 원어민의 수정 PR을 환영합니다. 방법은 [CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요.
 
@@ -62,7 +62,7 @@ Claude Code에서는 `/plugin`을 입력하고 **pm-skills**를 검색해 설치
 
 ## 그 밖의 스킬
 
-PM Skills에는 기획, 개발, 데이터, 디자인, 마케팅, 영업, 인사, 법무, 재무 등 35개 직업에 걸친 1,000개가 넘는 범용 스킬이 있습니다. 한국어로 물어봐도 영어 스킬이 잘 작동하며, 결과는 한국어로 받을 수 있습니다. 전체 목록은 [SKILLS.md](SKILLS.md)에 있습니다.
+PM Skills에는 기획, 개발, 데이터, 디자인, 마케팅, 영업, 인사, 법무, 재무 등 35개 직업에 걸친 1,000개가 넘는 범용 스킬이 있습니다. 한국어로 물어봐도 영어 스킬이 잘 작동하며, 결과는 한국어로 받을 수 있습니다. 전체 목록은 [SKILLS.md](SKILLS.md)에 있습니다. 한국어로 번역된 스킬 10개는 [skills-i18n/ko/](skills-i18n/ko/README.md)에 있습니다(기계 번역, 원어민 검토 대기 중).
 
 - 일본에서 일한다면: [pm-japan](plugins/pm-japan/) (年末調整, 確定申告, 退職の手続き, 稟議書)
 - 브라우저에서 바로 써 보기: [Playground](https://mohitagw15856.github.io/pm-claude-skills/)

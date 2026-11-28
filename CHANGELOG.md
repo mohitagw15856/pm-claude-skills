@@ -18,8 +18,17 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 - **Demo videos page** (`demos.html`) and a generator for the README sponsor banner (`scripts/build-sponsor-block.mjs`).
 - **`scripts/check-skill-homes.mjs`:** fails a pull request that would move an existing skill's home bundle, and with it its export path.
 
+- **Five more skills:** `flashcard-deck-builder` (with an export script for Anki), `past-paper-marker`, `essay-feedback-coach`, `template-to-skill` and `customer-kickoff-plan`.
+- **Korean translations** of ten skills in `skills-i18n/ko/`, including the four Korea-specific ones. Machine translations awaiting native review.
+- **`pm-claude-skills team check`**, and a `context` type for the document linter, so a team can see whether its shared context file is finished.
+- **Linter types for OKRs, meeting notes and roadmaps**, a `--format github` output that annotates the line in a pull request, and a `lint_document` tool in the MCP server.
+- **Demo video on a skill's own page** when one exists, a Windows PowerShell installer (`scripts/install.ps1`), and a delivery playbook for Team Setup.
+- **`scripts/prune-merged-branches.mjs`:** lists merged branches that are safe to delete; deletes only with `--apply`.
+
 ### Changed
 - **The npm package no longer ships pre-built rule files for every tool.** The CLI builds the files for the one tool you install for, on first use. The package drops from about 165 MB unpacked to about 83 MB, and from 23,596 files to 6,951.
+- **Milestones table corrected** in `SKILL_REQUEST.md`: all four star milestones are passed, with what shipped for each and the two founder-kit items still open.
+- The `exports` branch now carries a setting that stops Vercel trying to deploy it.
 - **Skill requests tidied:** requests that were already built under another name now point to the skill that covers them.
 
 ## [84.1.0] - Fieldwork and sponsors - 2026-11-27

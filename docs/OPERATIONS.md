@@ -63,3 +63,18 @@ Nothing calls the Anthropic API automatically unless the **`ALLOW_API_SPEND`** v
 - **Cloudflare:** set it as a worker variable. It gates Claude for the site's free answers (otherwise Cloudflare Workers AI's free allowance) and the router's Claude fallback.
 
 Manual dispatches of benchmark workflows still run when you start them. The PM-8B teacher pass refuses to use Claude without `--allow-api-spend`; its free route is `training/run-on-gpu.sh`.
+
+## npm publishing without a token (one-time setup still to do)
+
+`npm-publish.yml` is already written for npm trusted publishing: GitHub proves to npm that the workflow is publishing, so no token is needed and none can expire. It fails today only because the npm side has not been switched on. On npmjs.com, signed in as the package owner:
+
+1. Open the package `pm-claude-skills`, then Settings, then Trusted publishing.
+2. Choose GitHub Actions and enter: user `mohitagw15856`, repository `pm-claude-skills`, workflow filename `npm-publish.yml`, environment left empty.
+3. Repeat for the package `pm-skills-tools` with workflow filename `publish-tools.yml`.
+
+After that, publishing a GitHub release publishes to npm by itself and no two-factor code is needed at release time. Once one release has gone out this way, delete the `NPM_TOKEN` secret.
+
+## Deleting merged branches
+
+`node scripts/prune-merged-branches.mjs` lists branches whose pull request merged and whose tip has not moved since. It changes nothing unless run with `--apply`. Branches named in a workflow, branches with an open pull request, and `main`, `media` and `exports` are always kept.
+

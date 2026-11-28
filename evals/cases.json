@@ -2168,6 +2168,58 @@
     {
       "skill": "fundraising-memo",
       "input": "Write an investment memo. We make software that reads supplier invoices for small construction firms and matches them to purchase orders. Seed round: raising 1.5m on a priced round to reach 100 paying customers. Evidence as of 15 November 2026: 23 paying customers at 290 a month each, first customer signed in March 2026, two have churned, 61 on the waiting list. Team: two founders, one was a quantity surveyor for nine years, the other led engineering at an accounting software company. What is not working: onboarding takes us about four hours per customer by hand. I do not have a sourced market size."
+    },
+    {
+      "skill": "flashcard-deck-builder",
+      "input": "Make flashcards from my biology notes for a first-year exam. Notes: Enzymes are biological catalysts. They lower the activation energy of a reaction. Each enzyme has an active site that fits a specific substrate (lock and key; induced fit is the updated model). Rate rises with temperature until the enzyme denatures. Optimum pH for pepsin is about 2. Competitive inhibitors bind the active site; non-competitive inhibitors bind elsewhere and change its shape. I can review about 20 cards a day and I use Anki."
+    },
+    {
+      "skill": "past-paper-marker",
+      "input": "Mark this. Question (4 marks): Explain why the rate of an enzyme-controlled reaction falls above the optimum temperature. Mark scheme: bonds in the enzyme break / tertiary structure changes (1); active site changes shape (1); substrate no longer fits / fewer enzyme-substrate complexes form (1); enzyme is denatured (1). Reject: enzyme is killed. My answer: Above the optimum the enzyme gets too hot and is killed, so it stops working. The active site is destroyed so the reaction is slower."
+    },
+    {
+      "skill": "essay-feedback-coach",
+      "input": "Feedback on my draft please, do not rewrite it. Question: To what extent was the Treaty of Versailles responsible for the outbreak of the Second World War? Rubric: argument and judgement (40%), use of evidence (30%), structure (20%), written accuracy (10%). 1,500 words, second-year undergraduate, first draft. My draft opens by describing the terms of the treaty for three paragraphs, then covers the Depression, then appeasement, and concludes that many factors were responsible. [draft pasted]"
+    },
+    {
+      "skill": "template-to-skill",
+      "input": "Turn our weekly stakeholder update into a skill. Template sections: Headline, Decisions needed, Progress, Risks, Next week. I have pasted two updates the team thinks are good and one that got complaints. In the good ones the headline is always one sentence with a status word, Decisions needed has at most two items each with a named decider and a date, and Progress is never more than five bullets. The bad one lists twelve activities and no decision. We never name individual customers in these. [three updates pasted, customer names removed]"
+    },
+    {
+      "skill": "customer-kickoff-plan",
+      "input": "Plan the kickoff. We sold a 12-week implementation of our scheduling software to a 300-bed hospital group. Contract: go-live for two wards by week 8, all wards by week 12, integration with their staff records system. Signed by their COO; our contact since then is the nursing operations manager. Sales notes say the COO wants to cut agency staff spend, and that we said we could import historical rotas, which is not in the contract. Their IT security review has not started. Kickoff is next Tuesday, 60 minutes."
+    },
+    {
+      "skill": "subtitle-caption",
+      "input": "Write English captions for this 40 second clip and keep them readable. Speaker talks fast. Transcript with rough times: 0:00 So the thing nobody tells you about sourdough is that the starter is almost never the problem. 0:06 It is the proofing. You are under-proofing because you are following the clock instead of the dough. 0:14 Poke it. If it springs back slowly and leaves a small dent, it is ready. 0:21 If it springs back at once, give it another thirty minutes. Output as SRT."
+    },
+    {
+      "skill": "ai-context-primer",
+      "input": "I am about to ask an assistant to draft a migration plan for moving our customer support tickets from an old helpdesk to a new one. Build the context it needs. What I know: 140,000 tickets over six years, 22 agents, we must keep attachments, the old tool's export is CSV only, go-live must avoid month end, and our support lead worries about losing macros. I have not decided who signs off."
+    },
+    {
+      "skill": "build-my-memory-file",
+      "input": "Interview me and build my memory file. I am a product manager at a logistics software company. I tend to over-commit on dates, I prefer written decisions over meetings, and I have been burned twice by starting a build before the data model was agreed. I do not want anything about my salary or my colleagues' names stored."
+    },
+    {
+      "skill": "programmatic-seo",
+      "input": "Plan programmatic SEO for a site that lists co-working spaces. Data I have per space: city, neighbourhood, price per day, opening hours, amenities, and number of desks, for about 2,400 spaces in 90 cities. I want pages like co-working spaces in [city] and co-working with [amenity] in [city]. I have no keyword volumes yet. I am worried about thin pages."
+    },
+    {
+      "skill": "schema-markup",
+      "input": "Write structured data for this page: a recipe for lemon drizzle cake on my baking blog. Prep 20 minutes, bake 45 minutes, serves 10. Ingredients and six method steps are on the page. There is one photo. I have 14 reader ratings averaging 4.6 shown on the page. Author is me, Hannah Okafor. I do not have nutrition information."
+    },
+    {
+      "skill": "seo-content-brief",
+      "input": "Write a content brief for the keyword how to write a product requirements document. Site: a blog for a product management tool, audience is new product managers. From my keyword tool: volume 2,900 a month, difficulty 41. The pages ranking now are long templates from two competitors and a university guide. Our angle: most PRDs fail because the problem section is weak. I want the writer to include our free template."
+    },
+    {
+      "skill": "investing-policy-statement",
+      "input": "Help me write my investing policy statement. I am 34, investing for retirement in about 30 years and for a house deposit in 5. I can put away 600 a month. I panicked and sold in 2020 and regretted it. I want rules that stop me doing that again. I hold a global index fund and some cash. I do not want to pick individual shares."
+    },
+    {
+      "skill": "stock-snapshot",
+      "input": "Give me a snapshot for a listed company with ticker ABC on the main US exchange. I want the last price, the day's range and the 52-week range, and I need to know how fresh the numbers are. If you cannot fetch live data in this session, tell me exactly what you could not get instead of filling it in."
     }
   ]
 }

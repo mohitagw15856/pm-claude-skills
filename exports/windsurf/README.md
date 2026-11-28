@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1411 skills exported. Copy a `.md rule` into the tool to use it.
+1416 skills exported. Copy a `.md rule` into the tool to use it.
 
 Every file ends with a provenance comment: library version, source path, the SHA-256 of the source
 `SKILL.md` and the licence. The same hash is published at `https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json`,
@@ -350,6 +350,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Customer Advisory Board | `pm-pmm` | `pm-pmm/customer-advisory-board/customer-advisory-board.md` |
 | Customer Incident Update | `pm-crisis` | `pm-crisis/customer-incident-update/customer-incident-update.md` |
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/customer-journey-map.md` |
+| Customer Kickoff Plan | `pm-cs` | `pm-cs/customer-kickoff-plan/customer-kickoff-plan.md` |
 | Customer Outage Notice | `pm-crisis` | `pm-crisis/customer-outage-notice/customer-outage-notice.md` |
 | Customer Success Plan | `pm-cs` | `pm-cs/customer-success-plan/customer-success-plan.md` |
 | CV Word Export | `pm-cv` | `pm-cv/cv-docx-export/cv-docx-export.md` |
@@ -494,6 +495,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Escalation Email | `pm-cowork` | `pm-cowork/escalation-email/escalation-email.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/escalation-tree.md` |
 | ESG Disclosure Draft | `pm-climate` | `pm-climate/esg-disclosure-draft/esg-disclosure-draft.md` |
+| Essay Feedback Coach | `pm-students` | `pm-students/essay-feedback-coach/essay-feedback-coach.md` |
 | Estate Planning Kit | `pm-money` | `pm-money/estate-planning-kit/estate-planning-kit.md` |
 | Estate Settlement Organizer | `pm-estate` | `pm-estate/estate-settlement-organizer/estate-settlement-organizer.md` |
 | Eulogy & Obituary Writer | `pm-grief` | `pm-grief/eulogy-and-obituary-writer/eulogy-and-obituary-writer.md` |
@@ -580,6 +582,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/first-maintainer-month.md` |
 | Five Minds | `pm-thinking` | `pm-thinking/five-minds/five-minds.md` |
 | Flare Day Planner | `pm-invisible-illness` | `pm-invisible-illness/flare-day-planner/flare-day-planner.md` |
+| Flashcard Deck Builder | `pm-students` | `pm-students/flashcard-deck-builder/flashcard-deck-builder.md` |
 | Fleet Compliance Audit Preparation | `pm-fleet` | `pm-fleet/fleet-compliance-audit-prep/fleet-compliance-audit-prep.md` |
 | Fleet Maintenance Programme | `pm-fleet` | `pm-fleet/fleet-maintenance-programme/fleet-maintenance-programme.md` |
 | Flight-Delay Compensation | `pm-lifeadmin` | `pm-lifeadmin/flight-delay-compensation/flight-delay-compensation.md` |
@@ -916,6 +919,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/partnership-proposal.md` |
 | Passive-Income Reality Check | `pm-wealth` | `pm-wealth/passive-income-reality-check/passive-income-reality-check.md` |
 | Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/password-and-2fa-setup.md` |
+| Past Paper Marker | `pm-students` | `pm-students/past-paper-marker/past-paper-marker.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/patient-communication.md` |
 | Patient Education Explainer | `pm-physio` | `pm-physio/patient-education-explainer/patient-education-explainer.md` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/pay-stub-decoder.md` |
@@ -1279,6 +1283,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Technical SEO Audit | `pm-seo` | `pm-seo/technical-seo-audit/technical-seo-audit.md` |
 | Technical Spec Template | `pm-delivery` | `pm-delivery/technical-spec-template/technical-spec-template.md` |
 | Template Designer | `pm-cowork` | `pm-cowork/template-designer/template-designer.md` |
+| Template to Skill | `pm-team-setup` | `pm-team-setup/template-to-skill/template-to-skill.md` |
 | Tenant Rights Explainer | `pm-legal` | `pm-legal/tenant-rights-explainer/tenant-rights-explainer.md` |
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/tenant-screening-guide.md` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/test-case-writer.md` |

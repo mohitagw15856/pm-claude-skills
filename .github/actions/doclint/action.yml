@@ -8,7 +8,7 @@ inputs:
     description: 'Markdown files to lint, separated by spaces. Shell globs are expanded, for example "docs/prd/*.md".'
     required: true
   type:
-    description: 'Document type: auto, prd, update, postmortem or generic.'
+    description: 'Document type: auto, prd, update, postmortem, okr, meeting, roadmap, context or generic.'
     required: false
     default: 'auto'
   strict:
@@ -27,7 +27,7 @@ runs:
         DOCLINT_BIN: ${{ github.action_path }}/../../../bin/doclint.mjs
       run: |
         set -euo pipefail
-        case "$DOCLINT_TYPE" in auto|prd|update|postmortem|generic) ;; *) echo "::error::type must be auto, prd, update, postmortem or generic"; exit 2 ;; esac
+        case "$DOCLINT_TYPE" in auto|prd|update|postmortem|okr|meeting|roadmap|context|generic) ;; *) echo "::error::type is not one the linter knows"; exit 2 ;; esac
         # Inputs arrive through the environment, never pasted into the script, and the file
         # list is expanded as glob patterns only: no command in an input can run.
         shopt -s nullglob
@@ -36,6 +36,7 @@ runs:
           for f in $pattern; do files+=("$f"); done
         done
         if [ "${#files[@]}" -eq 0 ]; then echo "::warning::No files matched: $DOCLINT_FILES"; exit 0; fi
-        args=(--type "$DOCLINT_TYPE")
+        # --format github makes each finding appear on its line in the pull request.
+        args=(--type "$DOCLINT_TYPE" --format github)
         if [ "$DOCLINT_STRICT" = "true" ]; then args+=(--strict); fi
         node "$DOCLINT_BIN" "${files[@]}" "${args[@]}"

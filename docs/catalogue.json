@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
   "bundles": 173,
-  "skills": 1377,
+  "skills": 1382,
   "items": [
     {
       "bundle": "pm-2027",
@@ -2311,6 +2311,10 @@
         {
           "name": "cs-health-scorecard",
           "description": "Build a customer health scorecard for a specific account."
+        },
+        {
+          "name": "customer-kickoff-plan",
+          "description": "Plan the start of work with a new customer: the kickoff meeting agenda, who does what on both sides, what success means and by when, the first two weeks day by day, and the risks to raise before they bite."
         },
         {
           "name": "customer-success-plan",
@@ -6827,6 +6831,10 @@
       },
       "skills": [
         {
+          "name": "essay-feedback-coach",
+          "description": "Give a student feedback on an essay draft against their own rubric or assignment brief, without rewriting it: what the argument is, where it holds, where it breaks, and the three changes that would improve it most."
+        },
+        {
           "name": "exam-prep-planner",
           "description": "Build a realistic exam-prep schedule with spaced repetition and retrieval practice — the plan that survives contact with an actual week."
         },
@@ -6839,12 +6847,20 @@
           "description": "Write a financial-aid appeal or scholarship request letter that aid offices act on — factual, documented, and specific about the ask."
         },
         {
+          "name": "flashcard-deck-builder",
+          "description": "Turn notes, a chapter or a syllabus into flashcards built for spaced repetition: one fact per card, questions that force recall, and a file ready to import into Anki or a similar app."
+        },
+        {
           "name": "language-learning-plan",
           "description": "Build a realistic plan to learn a language for your actual goal — travel, conversation, work, or fluency — focused on what moves the needle instead of endless app streaks."
         },
         {
           "name": "literature-review-builder",
           "description": "Structure a literature review that argues, not lists — thematic synthesis from your sources with the debate mapped and the gap identified."
+        },
+        {
+          "name": "past-paper-marker",
+          "description": "Mark a student's answer against the mark scheme they supply, point by point, and show exactly where marks were earned and lost and what a full-mark answer would have added."
         },
         {
           "name": "personal-statement",
@@ -7024,6 +7040,10 @@
         {
           "name": "team-context-interview",
           "description": "Interview a team lead to build the shared context file that makes an AI assistant useful for the whole team: the product, customers, terminology, standards, templates and what the assistant must never do."
+        },
+        {
+          "name": "template-to-skill",
+          "description": "Turn a company's existing document template, with one or two good filled-in examples, into a skill that produces documents the way that company writes them."
         }
       ]
     },

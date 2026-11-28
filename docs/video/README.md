@@ -106,6 +106,16 @@ Return the script as a table with the part, the seconds, and the line.
 - **Description:** A free, open-source skill that writes a short-form video script built on hook, retention and payoff, with on-screen text. Install: npx pm-claude-skills add --skills short-form-script. Source: https://github.com/mohitagw15856/pm-claude-skills
 - **Tags:** reels script, youtube shorts, tiktok script, short form video, claude skills, agent skills
 
+### 5. exam-study-plan
+
+- **Problem scene:** a student at a desk at night with a pile of textbooks and a wall calendar, unsure where to start.
+- **Request to record:** the eval case for `exam-study-plan` in `evals/cases.json`.
+- **Three callouts:** the week-by-week schedule counted back from the exam date, the study methods used (practice questions and spaced review, not re-reading), and the plan for the weak topic.
+- **Title:** Build a study plan that works back from your exam date: a free AI skill
+- **Description:** A free, open-source skill that builds a revision schedule backwards from the exam date, using practice questions and spaced review instead of re-reading. It works from the hours you really have. Install: npx pm-claude-skills add --skills exam-study-plan. Source: https://github.com/mohitagw15856/pm-claude-skills
+- **Tags:** study plan, exam revision, revision timetable, study schedule, claude skills, agent skills
+- **After publishing:** add an entry to `web/demos.json` (the video id, `exam-study-plan`, a title and a one-line summary). The demos page and the skill's own page pick it up from there.
+
 ## Assembling the video
 
 1. Record parts 2 to 4 as one screen recording and note the in and out times.

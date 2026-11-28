@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1399 live skills across 173 bundles, plus 12 retired names that still resolve.
+> 1404 live skills across 173 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -201,6 +201,15 @@ assuming the skill you want is missing.
 - `product-positioning-doc` · pm-gtm — Write a product positioning document and messaging framework.
 - `product-recall-check` · pm-lifeadmin — Find out whether something you own — a car, appliance, car seat, food item, or gadget — is under a safety recall, and what to do about it.
 
+**`customer-*`** (6)
+
+- `customer-advisory-board` · pm-pmm — Plan and run a customer advisory board (CAB).
+- `customer-incident-update` · pm-crisis — Write the customer-facing incident update during an outage — status-page post or email — that's honest about impact without over-promising.
+- `customer-journey-map` · pm-discovery — Build a customer journey map for a product, service, or experience.
+- `customer-kickoff-plan` · pm-cs — Plan the start of work with a new customer: the kickoff meeting agenda, who does what on both sides, what success means and by when, the first two weeks day by day, and the risks to raise before they bite.
+- `customer-outage-notice` · pm-crisis — Write clear customer-facing outage and service-disruption notifications.
+- `customer-success-plan` · pm-cs — Build a joint customer success plan for a specific account.
+
 **`email-*`** (6)
 
 - `email-agent-preflight` · pm-seatbelt — Run the pre-flight checklist before an agent touches an inbox — the read-vs-send permission line, the injection-in-email-body threat, the send-guard rules, and the blast-radius limits that keep a compromised agent from mailing the company.
@@ -244,14 +253,6 @@ assuming the skill you want is missing.
 - `client-offboarding` · pm-freelance — Wrap up a client project the right way — a clean handoff, a strong final impression, and the moves that turn a finished project into referrals and repeat work.
 - `client-onboarding-kit` · pm-freelance — Build a smooth client-onboarding process that starts projects on the right foot — clear expectations, the info you need, and a professional first impression that prevents problems later.
 - `client-red-flags` · pm-freelance — Spot a bad client before you sign — the warning signs of the projects that turn into unpaid, scope-creeping nightmares, and how to screen, price, or decline them.
-
-**`customer-*`** (5)
-
-- `customer-advisory-board` · pm-pmm — Plan and run a customer advisory board (CAB).
-- `customer-incident-update` · pm-crisis — Write the customer-facing incident update during an outage — status-page post or email — that's honest about impact without over-promising.
-- `customer-journey-map` · pm-discovery — Build a customer journey map for a product, service, or experience.
-- `customer-outage-notice` · pm-crisis — Write clear customer-facing outage and service-disruption notifications.
-- `customer-success-plan` · pm-cs — Build a joint customer success plan for a specific account.
 
 **`deck-*`** (5)
 
