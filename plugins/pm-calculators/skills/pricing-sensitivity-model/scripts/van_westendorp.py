@@ -18,6 +18,7 @@ import argparse, json, sys
 # ── xlsx writer (stdlib zip+XML — same approach as the excel-model skill) ─────
 import zipfile
 from xml.sax.saxutils import escape
+def esc_attr(s): return escape(str(s)).replace('"', "&quot;")
 
 def _col(i):
     s = ""
@@ -55,7 +56,7 @@ def write_xlsx(out, data):
     wb = ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
         '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" '
         'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>'
-        + "".join(f'<sheet name="{escape(n)}" sheetId="{i+1}" r:id="rId{i+1}"/>' for i, (n, _) in enumerate(sheets))
+        + "".join(f'<sheet name="{esc_attr(n)}" sheetId="{i+1}" r:id="rId{i+1}"/>' for i, (n, _) in enumerate(sheets))
         + '</sheets></workbook>')
     rels = ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
         '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
@@ -127,6 +128,7 @@ def main():
 
     tc, ch, ex, te = ([r[i] for r in clean] for i in range(4))
     lo, hi = min(tc), max(te)
+    if hi <= lo: hi = lo + 1.0
     prices = [round(lo + (hi - lo) * i / 60, 2) for i in range(61)]
     # The four classic cumulative curves.
     c_tc = cumulative(prices, tc, ascending=False)   # "too cheap at or below"

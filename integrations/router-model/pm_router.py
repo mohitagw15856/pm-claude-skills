@@ -26,6 +26,9 @@ need of on or our please should so that the their them this to us use want we wh
 with write you your""".split())
 LATIN = re.compile(r"[a-z0-9][a-z0-9+#.-]*")
 CJK = re.compile(r"[㐀-鿿]+")
+ARABIC = re.compile(r"[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF]{2,}")
+TASHKEEL = re.compile(r"[\u064B-\u065F\u0670\u0640]")
+AR_STOP = {"في", "من", "على", "إلى", "الى", "عن", "مع", "هذا", "هذه", "كيف", "ماذا", "هل", "أريد", "اريد"}
 MAX_FEATURES = 80  # per skill centroid, after weighting
 
 
@@ -37,6 +40,9 @@ def tokens(text):
     out = list(words) + [a + "_" + b for a, b in zip(words, words[1:])]
     for run in CJK.findall(text):
         out += [run] if len(run) == 1 else [run[i:i + 2] for i in range(len(run) - 1)]
+    clean_ar = TASHKEEL.sub("", text)
+    ar_words = [w for w in ARABIC.findall(clean_ar) if w not in AR_STOP]
+    out += ar_words + [a + "_" + b for a, b in zip(ar_words, ar_words[1:])]
     return out
 
 

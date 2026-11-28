@@ -23,6 +23,14 @@ def main(argv=None):
     ap.add_argument("--hours-week", type=float, default=40)
     ap.add_argument("--json", action="store_true")
     a = ap.parse_args(argv)
+    if a.target <= 0:
+        raise ValueError('target must be > 0')
+    if not (0 <= a.weeks_off < 52):
+        raise ValueError('weeks_off must be in [0, 52)')
+    if not (0 < a.billable_pct <= 100):
+        raise ValueError('billable_pct must be in (0, 100]')
+    if a.hours_week <= 0:
+        raise ValueError('hours_week must be > 0')
 
     need = a.target * (1 + a.extra_tax_pct / 100) + a.overhead
     working_weeks = 52 - a.weeks_off

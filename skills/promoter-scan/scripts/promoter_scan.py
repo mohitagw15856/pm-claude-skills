@@ -29,6 +29,7 @@ REDACT = [
     (re.compile(r"\b[A-Z]{2}\d{2}[A-Z0-9]{11,30}\b"), "[iban]"),
     (re.compile(r"\b(?:\+?\d[\d\s().-]{8,}\d)\b"), "[phone]"),
     (re.compile(r"https?://[^\s)]+"), "[url]"),
+    (re.compile(r"/(?:Users|home)/[A-Za-z0-9._-]+(?:/[^\s)\"'`]+)*"), "[user-path]"),
     (re.compile(r"(?i)(password|passwd|secret|token|bearer)\s*[:=]\s*\S+"), r"\1: [redacted]"),
 ]
 
@@ -98,7 +99,7 @@ def collect(paths):
 
 
 def terms(text):
-    words = re.findall(r"[a-z][a-z0-9'-]{2,}", text.lower())
+    words = re.findall(r"[a-z][a-z0-9'-]{2,}|[\u0600-\u06FF]{2,}", re.sub(r"[\u064B-\u065F\u0670\u0640]", "", text.lower()))
     return [w for w in words if w not in STOP]
 
 
@@ -150,7 +151,7 @@ def score(c, total):
 def label(c):
     verbs = Counter(w for t in c["items"] for w in terms(t) if w in VERBS)
     verb = verbs.most_common(1)[0][0] if verbs else (c["verb"] or "handle")
-    common = Counter(w for t in c["items"] for w in set(terms(t)) if w not in VERBS)
+    common = Counter(w for t in c["items"] for w in dict.fromkeys(terms(t)) if w not in VERBS)
     top = [w for w, _ in common.most_common(3)]
     return f"{verb} {' '.join(top)}".strip()
 
