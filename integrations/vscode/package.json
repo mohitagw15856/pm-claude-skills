@@ -1,0 +1,21 @@
+{
+  "name": "pm-skills",
+  "displayName": "PM Skills",
+  "description": "Find a professional skill (PRD, stakeholder update, postmortem and many more) and put its instructions into your editor or clipboard.",
+  "version": "0.1.0",
+  "publisher": "mohitagw15856",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/mohitagw15856/pm-claude-skills", "directory": "integrations/vscode" },
+  "engines": { "vscode": "^1.90.0" },
+  "categories": ["Other"],
+  "keywords": ["product management", "prompts", "skills", "ai", "claude"],
+  "main": "./extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      { "command": "pmSkills.copy", "title": "PM Skills: Find a skill and copy it" },
+      { "command": "pmSkills.insert", "title": "PM Skills: Find a skill and insert it here" },
+      { "command": "pmSkills.open", "title": "PM Skills: Find a skill and open its source" }
+    ]
+  }
+}

@@ -57,6 +57,11 @@ function main() {
   }
   copyFileSync(join(ROOT, 'data/risk-tiers.json'), join(ROOT, 'web/risk-tiers.json'));
   copyFileSync(join(ROOT, 'web/skills.json'), join(ROOT, 'python/pm_skills/skills.json'));
+  // New skills get a recorded home; an existing skill whose home moved is left for the check to report.
+  {
+    const r = spawnSync(process.execPath, [join(ROOT, 'scripts', 'check-skill-homes.mjs')], { cwd: ROOT, encoding: 'utf8' });
+    if (r.status !== 0 && !/home moved/.test(`${r.stdout}${r.stderr}`)) spawnSync(process.execPath, [join(ROOT, 'scripts', 'check-skill-homes.mjs'), '--update'], { cwd: ROOT });
+  }
   console.log('✓ copied data/risk-tiers.json to web/ and web/skills.json to python/pm_skills/');
   if (failed.length) { console.error(`\n${failed.length} generator(s) failed: ${failed.join(', ')}`); return 1; }
   console.log('\nRegenerated. If skills or bundles were added, run node scripts/sync-counts.mjs to update the counts in docs.\nThen review with git status and run npm run check.');

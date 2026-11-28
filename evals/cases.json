@@ -2132,6 +2132,42 @@
     {
       "skill": "portfolio-review",
       "input": "Review this, valued 20 November 2026. ISA: global index fund 42,000 (fee 0.12%), UK index fund 9,000 (fee 0.06%), technology fund 14,000 (fee 0.75%). Workplace pension: default fund 61,000 (fee unknown). Shares in my employer from the share scheme: 38,000. Cash: 12,000. My targets: 70% shares, 20% bonds, 10% cash, and no single company above 10%. I am 41 and this is for retirement."
+    },
+    {
+      "skill": "youtube-title-and-description",
+      "input": "Write the title, description, chapters and tags for my finished video. It is a 9 minute tutorial for hobby woodworkers on cutting a dovetail joint by hand. Outline with timings: 0:00 the finished joint, 0:40 tools you need, 1:55 marking out, 4:10 sawing the tails, 6:20 chopping the waste, 8:05 test fit and common mistakes. Links to include: my tool list page and the previous video on sharpening chisels. No sponsor."
+    },
+    {
+      "skill": "podcast-show-notes",
+      "input": "Write show notes from this transcript excerpt. Show: a weekly podcast for first-time managers. Guest is Priya Raman, head of people at a 200-person logistics company (please check the spelling with me). [00:02:10] Priya: The first mistake new managers make is keeping their old job as well as the new one. [00:14:30] She describes a weekly 15 minute check-in format. [00:27:45] Priya: If you only give feedback at review time, it is not feedback, it is a verdict. [00:35:00] She recommends a book whose title is unclear in the recording. Episode is 41 minutes. No sponsor this week."
+    },
+    {
+      "skill": "sponsor-read-script",
+      "input": "Write a 60 second and a 30 second host read for my cycling podcast. Sponsor brief: a bike insurance company. Required points: covers theft away from home, covers racing, cancel any time. Mandatory line: terms and conditions apply. Code RIDE15 for 15% off the first year. The brief also wants me to say it is the best cover on the market and that I have never had a claim refused. I have been a customer for two years and made one claim, for a stolen wheel, which was paid in nine days. My audience is mostly in the UK."
+    },
+    {
+      "skill": "video-release-plan",
+      "input": "I have finished a 14 minute video comparing three budget mirrorless cameras for beginners. I have 8,200 YouTube subscribers, a newsletter with 1,100 readers and an Instagram account. Goal: affiliate link clicks. One of the cameras was lent by the manufacturer. My analytics say my viewers are mostly online on weekday evenings UK time. Plan the release and what I should check afterwards."
+    },
+    {
+      "skill": "team-context-interview",
+      "input": "I lead a product team of six at a company that makes rota software for care homes. We all use AI assistants differently and the documents come out inconsistent. Interview me to build our shared context file. I can answer on product, customers and how we write PRDs. I am less sure about how our metrics are defined; our data analyst would know. We must never put resident names into any AI tool."
+    },
+    {
+      "skill": "team-ai-rollout-plan",
+      "input": "Plan a rollout for my team: 5 product managers and 2 designers at a B2B payments company. Everyone has access to Claude through work. People use their own prompts; one PM pasted a customer contract into a chat last month. The documents we write most are PRDs, weekly stakeholder updates and launch checklists, and PRDs usually take three review rounds. I will own this. Compliance says no customer personal data in any AI tool."
+    },
+    {
+      "skill": "analytics-event-taxonomy",
+      "input": "Design the tracking plan for our onboarding. Product: a team scheduling app. Flow: sign up, create a workspace, invite teammates, create the first schedule, publish it. Questions we need answered: where do people drop out, how long from signup to first published schedule, and does inviting a teammate in the first session predict week-4 retention. Today we have events called signup_click, SignUp Complete and wkspc_created. We operate in the EU and use a consent banner."
+    },
+    {
+      "skill": "kpi-tree-builder",
+      "input": "Build a KPI tree for monthly recurring revenue. Figures for October: MRR 184,000. Paying accounts at start of month 610, new accounts 42, churned accounts 19. Average seats per account 7.2. Price per seat 40. Target is 230,000 by March. Sales owns new accounts, customer success owns churn, nobody owns seats per account. Check whether these numbers add up."
+    },
+    {
+      "skill": "fundraising-memo",
+      "input": "Write an investment memo. We make software that reads supplier invoices for small construction firms and matches them to purchase orders. Seed round: raising 1.5m on a priced round to reach 100 paying customers. Evidence as of 15 November 2026: 23 paying customers at 290 a month each, first customer signed in March 2026, two have churned, 61 on the waiting list. Team: two founders, one was a quantity surveyor for nine years, the other led engineering at an accounting software company. What is not working: onboarding takes us about four hours per customer by hand. I do not have a sourced market size."
     }
   ]
 }

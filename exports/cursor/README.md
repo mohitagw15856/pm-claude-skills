@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1402 skills exported. Copy a `.mdc rule` into the tool to use it.
+1411 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 Every file ends with a provenance comment: library version, source path, the SHA-256 of the source
 `SKILL.md` and the licence. The same hash is published at `https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json`,
@@ -62,6 +62,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Altitude Shifter | `pm-comms` | `pm-comms/altitude-shifter/altitude-shifter.mdc` |
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/ambiguity-resolver.mdc` |
 | Analyst Relations Brief | `pm-pmm` | `pm-pmm/analyst-relations-brief/analyst-relations-brief.mdc` |
+| Analytics Event Taxonomy | `pm-data` | `pm-data/analytics-event-taxonomy/analytics-event-taxonomy.mdc` |
 | Announcement Card | `pm-visuals` | `pm-visuals/announcement-card/announcement-card.mdc` |
 | Annual Report Tutor | `pm-investing-literacy` | `pm-investing-literacy/annual-report-tutor/annual-report-tutor.mdc` |
 | API Docs Writer | `pm-engineering` | `pm-engineering/api-docs-writer/api-docs-writer.mdc` |
@@ -604,6 +605,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Frontend Design (pointer) | `pm-design-taste` | `pm-design-taste/frontend-design-pointer/frontend-design-pointer.mdc` |
 | Functional Assessment Prep | `pm-accessibility` | `pm-accessibility/functional-assessment-prep/functional-assessment-prep.mdc` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.mdc` |
+| Fundraising Memo | `pm-finance` | `pm-finance/fundraising-memo/fundraising-memo.mdc` |
 | Funeral Pricing Decoder | `pm-decoders` | `pm-decoders/funeral-pricing-decoder/funeral-pricing-decoder.mdc` |
 | Future Self Interview | `other` | `other/future-self-interview/future-self-interview.mdc` |
 | Future Selves Council | `pm-thinking` | `pm-thinking/future-selves-council/future-selves-council.mdc` |
@@ -744,6 +746,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Knowledge-Gap Map | `pm-learning` | `pm-learning/knowledge-gap-map/knowledge-gap-map.mdc` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.mdc` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/kpi-tracker-design.mdc` |
+| KPI Tree Builder | `pm-data` | `pm-data/kpi-tree-builder/kpi-tree-builder.mdc` |
 | Korean Job Application Essay (자기소개서) | `pm-korea` | `pm-korea/kr-cover-letter/kr-cover-letter.mdc` |
 | Korea Severance Pay (퇴직금) | `pm-korea` | `pm-korea/kr-severance-pay/kr-severance-pay.mdc` |
 | Korean Business Report (보고서 and 주간보고) | `pm-korea` | `pm-korea/kr-work-report/kr-work-report.mdc` |
@@ -947,6 +950,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Planning Application Statement | `pm-architecture` | `pm-architecture/planning-application-statement/planning-application-statement.mdc` |
 | Playwright CLI (pointer) | `pm-design-taste` | `pm-design-taste/playwright-cli-pointer/playwright-cli-pointer.mdc` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/pm-weekly-review.mdc` |
+| Podcast Show Notes | `pm-video` | `pm-video/podcast-show-notes/podcast-show-notes.mdc` |
 | Poke Holes In This | `pm-thinking` | `pm-thinking/poke-holes-in-this/poke-holes-in-this.mdc` |
 | Policy Drafter | `pm-cowork` | `pm-cowork/policy-drafter/policy-drafter.mdc` |
 | Policy Memo | `pm-gov` | `pm-gov/policy-memo/policy-memo.mdc` |
@@ -1194,6 +1198,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Sourdough Troubleshooter | `pm-hobbies` | `pm-hobbies/sourdough-troubleshooter/sourdough-troubleshooter.mdc` |
 | Spaced-Repetition Setup | `pm-learning` | `pm-learning/spaced-repetition-setup/spaced-repetition-setup.mdc` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/speak-at-the-council.mdc` |
+| Sponsor Read Script | `pm-video` | `pm-video/sponsor-read-script/sponsor-read-script.mdc` |
 | Spoon Planner | `pm-invisible-illness` | `pm-invisible-illness/spoon-planner/spoon-planner.mdc` |
 | Sports Parent Comms | `pm-sports-coaching` | `pm-sports-coaching/sports-parent-comms/sports-parent-comms.mdc` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/sports-scores.mdc` |
@@ -1264,7 +1269,9 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Teach Me in Layers | `pm-learning` | `pm-learning/teach-me-in-layers/teach-me-in-layers.mdc` |
 | Teach The Game | `pm-tabletop` | `pm-tabletop/teach-the-game/teach-the-game.mdc` |
 | Teaching Lesson Plan | `pm-cross` | `pm-cross/teaching-lesson-plan/teaching-lesson-plan.mdc` |
+| Team AI Rollout Plan | `pm-team-setup` | `pm-team-setup/team-ai-rollout-plan/team-ai-rollout-plan.mdc` |
 | Team Budget Tracker | `pm-cowork` | `pm-cowork/team-budget-tracker/team-budget-tracker.mdc` |
+| Team Context Interview | `pm-team-setup` | `pm-team-setup/team-context-interview/team-context-interview.mdc` |
 | Team Health Check | `pm-people` | `pm-people/team-health-check/team-health-check.mdc` |
 | Team Offsite Planner | `pm-people` | `pm-people/team-offsite-planner/team-offsite-planner.mdc` |
 | Tech Radar | `pm-engineering` | `pm-engineering/tech-radar/tech-radar.mdc` |
@@ -1364,6 +1371,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Verified Security Audit | `pm-fieldwork` | `pm-fieldwork/verified-security-audit/verified-security-audit.mdc` |
 | Version Chaos Untangler | `pm-cowork` | `pm-cowork/version-chaos-untangler/version-chaos-untangler.mdc` |
 | Vet Estimate Decoder | `pm-decoders` | `pm-decoders/vet-estimate-decoder/vet-estimate-decoder.mdc` |
+| Video Release Plan | `pm-video` | `pm-video/video-release-plan/video-release-plan.mdc` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/viral-content-framework.mdc` |
 | Viva Prep Pack | `pm-phd` | `pm-phd/viva-prep-pack/viva-prep-pack.mdc` |
 | Voice Agent Design | `pm-agentnative` | `pm-agentnative/voice-agent-design/voice-agent-design.mdc` |
@@ -1410,6 +1418,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Year in Review | `pm-career` | `pm-career/year-in-review/year-in-review.mdc` |
 | YouTube Script | `pm-creator` | `pm-creator/youtube-script/youtube-script.mdc` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/youtube-script-writer.mdc` |
+| YouTube Title and Description | `pm-video` | `pm-video/youtube-title-and-description/youtube-title-and-description.mdc` |
 | Retrenchment Package Check (South Africa) | `pm-africa` | `pm-africa/za-retrenchment-package-check/za-retrenchment-package-check.mdc` |
 | UIF Claim Guide (South Africa) | `pm-africa` | `pm-africa/za-uif-claim-guide/za-uif-claim-guide.mdc` |
 | 知乎回答 | `pm-zh-content` | `pm-zh-content/zhihu-answer/zhihu-answer.mdc` |

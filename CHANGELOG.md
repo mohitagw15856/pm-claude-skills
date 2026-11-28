@@ -9,6 +9,19 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Added
+- **Nine skills:** `youtube-title-and-description`, `podcast-show-notes`, `sponsor-read-script`, `video-release-plan`, `team-context-interview`, `team-ai-rollout-plan`, `analytics-event-taxonomy`, `kpi-tree-builder` and `fundraising-memo`. New `pm-video` and `pm-team-setup` bundles.
+- **`pm-claude-skills team init`:** writes a team skill list, a shared context file and an onboarding checklist. Existing files are never overwritten.
+- **Claude Desktop bundle** (`scripts/build-mcpb.mjs`), served from the site as `downloads/pm-skills.mcpb`.
+- **VS Code extension** in `integrations/vscode/`, a **Homebrew formula** in `Formula/`, and a **`pm-doclint` pre-commit hook**.
+- **Jira and Confluence** destinations in the write-back relay. The Atlassian site comes from configuration only, never from a request.
+- **Demo videos page** (`demos.html`) and a generator for the README sponsor banner (`scripts/build-sponsor-block.mjs`).
+- **`scripts/check-skill-homes.mjs`:** fails a pull request that would move an existing skill's home bundle, and with it its export path.
+
+### Changed
+- **The npm package no longer ships pre-built rule files for every tool.** The CLI builds the files for the one tool you install for, on first use. The package drops from about 165 MB unpacked to about 83 MB, and from 23,596 files to 6,951.
+- **Skill requests tidied:** requests that were already built under another name now point to the skill that covers them.
+
 ## [84.1.0] - Fieldwork and sponsors - 2026-11-27
 
 1,390 skills across 171 bundles (from 1,374 across 167 in v84.0.0).

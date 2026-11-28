@@ -1,0 +1,19 @@
+{
+  "_comment": "Demo videos shown on demos.html. Add an entry when a video is published: id is the YouTube video id.",
+  "videos": [
+    {
+      "id": "2ewtEaM28AU",
+      "skill": "youtube-script-writer",
+      "title": "Write a YouTube script that holds attention",
+      "summary": "One request returns three title and thumbnail concepts, three cold opens and a full script with visual cues.",
+      "published": "2026-11-27"
+    },
+    {
+      "id": "Q2Wbjx4Duck",
+      "skill": "pricing-strategy",
+      "title": "Design SaaS pricing tiers with an AI skill",
+      "summary": "One request returns the pricing model, the value metric, three tiers and a rollout plan.",
+      "published": "2026-11-27"
+    }
+  ]
+}

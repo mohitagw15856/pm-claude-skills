@@ -13,7 +13,7 @@ secret) and hands back the created object's URL.
 ```
 POST /writeback
 {
-  "dest": "github",                 // github | notion | linear | slack
+  "dest": "github",                 // github | notion | linear | slack | jira | confluence
   "title": "Q3 launch postmortem",
   "markdown": "## What happened\n…",
   "target": { "repo": "acme/app", "labels": ["ai-drafted"] }
@@ -28,6 +28,8 @@ POST /writeback
 | `github` | `repo` (`"owner/name"`), optional `labels` |
 | `notion` | `database_id` **or** `page_id` |
 | `linear` | `team_id` |
+| `jira` | `project_key` (for example `"PAY"`), optional `issue_type` (default `Task`) and `labels` |
+| `confluence` | `space_id` (numeric), optional `parent_id` |
 | `slack` | `channel` (id or name the bot is in) |
 
 ## Deploy
@@ -68,3 +70,11 @@ await fetch('https://pm-skills-writeback.<you>.workers.dev/writeback', {
   that returns `{ url }` and registering it in `ADAPTERS`.
 
 MIT © Mohit Aggarwal
+
+## Jira and Confluence
+
+Both use one Atlassian Cloud site and one API token. Set the secrets `ATLASSIAN_EMAIL` and `ATLASSIAN_TOKEN`, and the variable `ATLASSIAN_SITE` (for example `your-team.atlassian.net`).
+
+The site comes from that variable only. A request cannot name the host, so nobody who can reach the relay can have your token sent somewhere else. The markdown is sent as plain paragraphs: headings and tables arrive as text, not as formatted Jira or Confluence blocks.
+
+The request builders are covered by tests in `tests/checks/writeback-atlassian.mjs`. They have not been run against a live Atlassian site from this repository, so treat the first use as a test and check the created issue or page.

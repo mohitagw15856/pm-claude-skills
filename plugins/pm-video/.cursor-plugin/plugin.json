@@ -1,0 +1,21 @@
+{
+  "name": "pm-video",
+  "displayName": "PM Skills: Video",
+  "version": "1.0.0",
+  "description": "Video and podcast production: YouTube scripts, short-form scripts, clip sheets, thumbnails, captions, titles and descriptions, show notes, sponsor reads, a release plan and demo video assembly",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "youtube",
+    "podcast",
+    "creator"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

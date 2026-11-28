@@ -24,7 +24,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
 const skillsDir = join(root, 'skills');
 const pluginsDir = join(root, 'plugins');
-const exportsDir = join(root, 'exports');
+// Where the exports are written. Defaults to exports/ in the repository. The CLI sets
+// PM_SKILLS_EXPORTS_DIR when it builds one platform on demand from an installed package
+// whose own folder may not be writable.
+const exportsDir = process.env.PM_SKILLS_EXPORTS_DIR || join(root, 'exports');
+const platformDir = (platform) => join(exportsDir, platform.dir.replace(/^exports\//, ''));
 const VERSION = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8')).version;
 const SITE = 'https://mohitagw15856.github.io/pm-claude-skills';
 
@@ -362,7 +366,7 @@ const fileNameFor = (platform, skill) =>
 // Build the full path->content map a platform should produce.
 function planPlatform(key, platform, skills) {
   const files = new Map();
-  const base = join(root, platform.dir);
+  const base = platformDir(platform);
   for (const skill of skills) {
     const parts = [base];
     if (platform.groupByBundle) parts.push(skill.bundle);
@@ -475,7 +479,7 @@ if (checkMode) {
   }
   // Orphans: files under an active platform dir that we no longer plan to emit.
   for (const [, platform] of active) {
-    for (const path of listExistingFiles(join(root, platform.dir))) {
+    for (const path of listExistingFiles(platformDir(platform))) {
       if (!planned.has(path)) { console.error(`orphan: ${relative(root, path)}`); drift++; }
     }
   }
@@ -489,7 +493,7 @@ if (checkMode) {
 
 // Write mode: clean each active platform dir for deterministic output, then write.
 for (const [, platform] of active) {
-  rmSync(join(root, platform.dir), { recursive: true, force: true });
+  rmSync(platformDir(platform), { recursive: true, force: true });
 }
 let written = 0;
 for (const [path, content] of planned) {

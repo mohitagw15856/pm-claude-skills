@@ -322,6 +322,13 @@ jobs:
             echo "::warning::media branch not available; demo recordings are not in this deploy."
           fi
 
+      # One-click install for Claude Desktop: the MCP server and its skills as a single
+      # .mcpb file, served from the site. Built here, never committed.
+      - name: Build the Claude Desktop bundle
+        run: |
+          node scripts/build-mcpb.mjs --check
+          node scripts/build-mcpb.mjs --out web/downloads/pm-skills.mcpb
+
       - name: Upload web/ as Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:

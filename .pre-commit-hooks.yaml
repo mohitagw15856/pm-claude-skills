@@ -12,3 +12,12 @@
   language: node
   files: (^|/)SKILL\.md$
   pass_filenames: true
+#         - id: pm-doclint
+#           files: ^docs/(prd|updates|postmortems)/.*\.md$
+- id: pm-doclint
+  name: pm-doclint (finished documents)
+  description: Deterministic checks on PRDs, status updates and postmortems. Placeholders left in, a PRD with no number in its metrics, action items with no owner. No model call.
+  entry: node bin/doclint.mjs
+  language: node
+  types: [markdown]
+  pass_filenames: true

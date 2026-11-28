@@ -1,0 +1,21 @@
+{
+  "name": "pm-team-setup",
+  "displayName": "PM Skills: Team Setup",
+  "version": "1.0.0",
+  "description": "Getting a team onto shared AI skills: the interview that builds the shared context file, a 30-day rollout plan, a project context primer and a personal memory file",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "team",
+    "context",
+    "rollout",
+    "onboarding"
+  ],
+  "category": "productivity",
+  "skills": "./skills/"
+}

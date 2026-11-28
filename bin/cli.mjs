@@ -15,11 +15,11 @@
 //   --link           symlink instead of copy (native agents; falls back to copy)
 //   --lts            only long-term-support skills, refused unless each SKILL.md matches its pin (docs/LTS.md)
 //   --dry-run        print what would happen without writing
-import { readdirSync, existsSync, mkdirSync, rmSync, cpSync, symlinkSync, copyFileSync, statSync, readFileSync, writeFileSync } from 'node:fs';
+import { readdirSync, existsSync, mkdirSync, rmSync, cpSync, symlinkSync, copyFileSync, statSync, readFileSync, writeFileSync, accessSync, constants as fsConstants } from 'node:fs';
 import { join, dirname, basename, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
-import { homedir } from 'node:os';
+import { homedir, tmpdir } from 'node:os';
 import { createRequire } from 'node:module';
 import { createHash } from 'node:crypto';
 import { liteify } from './lib/lite.mjs';
@@ -479,14 +479,28 @@ function add(opts) {
     if (tooLong.length) console.log(`  note: ${tooLong.length} rule file(s) exceed ${gen.maxChars.toLocaleString('en')} characters and will be truncated by ${agent}: ${tooLong.slice(0, 5).join(', ')}${tooLong.length > 5 ? ', …' : ''}`);
   } else if (agent in RULEFILE) {
     const ext = RULEFILE[agent];
-    const exportDir = join(PKG_ROOT, 'exports', agent);
-    // exports/ ships in the npm package (built by prepack) but is not committed to git,
-    // so a run from a clone builds it from skills/ on first use.
-    if (!existsSync(exportDir) && existsSync(join(PKG_ROOT, 'scripts', 'build-exports.mjs'))) {
-      console.log('  building exports/ from skills/ (first run from a clone)…');
-      try { execFileSync(process.execPath, [join(PKG_ROOT, 'scripts', 'build-exports.mjs')], { cwd: PKG_ROOT, stdio: 'ignore' }); } catch { /* reported below */ }
+    // The npm package no longer carries pre-built rule files for every tool (they were
+    // most of its size). The one tool asked for is built here from skills/, on first use:
+    // into the package's own exports/ folder when that is writable (a clone, or the npx
+    // cache), otherwise into a per-version folder in the system temp directory.
+    let exportsRoot = join(PKG_ROOT, 'exports');
+    let exportDir = join(exportsRoot, agent);
+    const builder = join(PKG_ROOT, 'scripts', 'build-exports.mjs');
+    if (!existsSync(exportDir) && existsSync(builder)) {
+      let writable = true;
+      try { accessSync(PKG_ROOT, fsConstants.W_OK); } catch { writable = false; }
+      if (!writable) {
+        exportsRoot = join(tmpdir(), `pm-claude-skills-exports-${VERSION}`);
+        exportDir = join(exportsRoot, agent);
+      }
+      if (!existsSync(exportDir)) {
+        console.log(`  building the ${agent} rule files from skills/ (first run)…`);
+        try {
+          execFileSync(process.execPath, [builder, '--platform', agent], { cwd: PKG_ROOT, stdio: 'ignore', env: { ...process.env, PM_SKILLS_EXPORTS_DIR: exportsRoot } });
+        } catch { /* reported below */ }
+      }
     }
-    if (!existsSync(exportDir)) { console.error(`Error: ${exportDir} missing. Run: node scripts/build-exports.mjs`); process.exit(1); }
+    if (!existsSync(exportDir)) { console.error(`Error: could not build the ${agent} rule files. From a clone, run: node scripts/build-exports.mjs --platform ${agent}`); process.exit(1); }
     for (const f of listFiles(exportDir, ext).sort()) {
       if (basename(f) === 'README.md') continue;   // skip the generated index
       if (only && !only.has(basename(f, ext))) continue;
@@ -940,7 +954,7 @@ Usage:
   npx pm-claude-skills install <owner/repo>   # install skills from ANY GitHub repo — security-scanned + SkillSpec-graded
   npx pm-claude-skills install @<namespace>/<skill>   # by name from the signed community registry (hash-pinned; --verify-signature)
   npx pm-claude-skills prove --skill <dir> --tasks <file>  # A/B-verify a skill: on vs off, real token counts\n  npx pm-claude-skills mcp-audit [--connect]        # your MCP servers are charging you rent - measure it
-  npx pm-claude-skills skillcheck [--dir <path>]    # validate your own SKILL.md files (--strict, --json)\n  npx pm-claude-skills lint <file.md>               # lint a finished document: placeholders, PRD metrics with no number, unowned actions (--type, --strict, --json)\n  npx pm-claude-skills verify                 # integrity check: detect drift in anything "install" brought in
+  npx pm-claude-skills skillcheck [--dir <path>]    # validate your own SKILL.md files (--strict, --json)\n  npx pm-claude-skills team init                    # start a team setup: .pm-skills.json, CONTEXT.md and an onboarding checklist (--name, --agents, --bundles, --dry-run)\n  npx pm-claude-skills lint <file.md>               # lint a finished document: placeholders, PRD metrics with no number, unowned actions (--type, --strict, --json)\n  npx pm-claude-skills verify                 # integrity check: detect drift in anything "install" brought in
   npx pm-claude-skills chain <workflow>       # run a whole multi-skill pipeline (chain --list to see them)
   npx pm-claude-skills pipeline list|validate|run <id> --input in.json   # typed chains: each step bound to the next by contract
   npx pm-claude-skills mission list|plan|run <id> --input in.json        # pipelines chained into one long run with checkpoints and resume
@@ -1110,6 +1124,11 @@ else if (cmd === 'skillcheck') {
   process.argv = [process.argv[0], process.argv[1], ...process.argv.slice(3)];
   const { run } = await import('./skillcheck.mjs');
   run();
+}
+else if (cmd === 'team') {
+  // Start a team's shared setup: .pm-skills.json, CONTEXT.md and an onboarding checklist.
+  const { run } = await import('./team.mjs');
+  process.exit(run(process.argv.slice(3)));
 }
 else if (cmd === 'lint') {
   // Deterministic checks on a finished document (placeholders, a PRD with no number

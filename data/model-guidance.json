@@ -288,6 +288,11 @@
    "effort": "medium",
    "rule": "base"
   },
+  "analytics-event-taxonomy": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "announcement-card": {
    "role": "fast",
    "effort": "low",
@@ -3000,6 +3005,11 @@
    "effort": "low",
    "rule": "short"
   },
+  "fundraising-memo": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "funeral-pricing-decoder": {
    "role": "deep",
    "effort": "high",
@@ -3696,6 +3706,11 @@
    "rule": "base"
   },
   "kpi-tracker-design": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
+  "kpi-tree-builder": {
    "role": "default",
    "effort": "medium",
    "rule": "base"
@@ -4711,6 +4726,11 @@
    "rule": "vision"
   },
   "pm-weekly-review": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
+  "podcast-show-notes": {
    "role": "default",
    "effort": "medium",
    "rule": "base"
@@ -5951,6 +5971,11 @@
    "effort": "medium",
    "rule": "base"
   },
+  "sponsor-read-script": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "spoon-planner": {
    "role": "deep",
    "effort": "high",
@@ -6301,7 +6326,17 @@
    "effort": "medium",
    "rule": "base"
   },
+  "team-ai-rollout-plan": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "team-budget-tracker": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
+  "team-context-interview": {
    "role": "default",
    "effort": "medium",
    "rule": "base"
@@ -6801,6 +6836,11 @@
    "effort": "high",
    "rule": "high-stakes"
   },
+  "video-release-plan": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
   "viral-content-framework": {
    "role": "default",
    "effort": "high",
@@ -7027,6 +7067,11 @@
    "rule": "base"
   },
   "youtube-script-writer": {
+   "role": "default",
+   "effort": "medium",
+   "rule": "base"
+  },
+  "youtube-title-and-description": {
    "role": "default",
    "effort": "medium",
    "rule": "base"

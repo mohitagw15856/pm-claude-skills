@@ -47,6 +47,21 @@ curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main
     type: prd
 ```
 
+**Claude Desktop, one file.** Download [pm-skills.mcpb](https://mohitagw15856.github.io/pm-claude-skills/downloads/pm-skills.mcpb) and open it. Details and caveats are in [mcp/README.md](../mcp/README.md).
+
+**Homebrew.** For people who prefer `brew` to `npx` (it still installs Node as a dependency):
+
+```bash
+brew tap mohitagw15856/pm-claude-skills https://github.com/mohitagw15856/pm-claude-skills
+brew install pm-claude-skills
+```
+
+**VS Code.** A small extension that finds a skill and copies or inserts its instructions: [`integrations/vscode/`](../integrations/vscode/README.md). It is not on the Marketplace yet; the README says how to run it.
+
+**A whole team.** `npx pm-claude-skills team init --name "Your team"` writes a team skill list, a shared context file to fill in and an onboarding checklist. See [docs/team-setup.md](team-setup.md).
+
+**Lint documents before commit.** The same document linter is a [pre-commit](https://pre-commit.com) hook, `pm-doclint`, defined in `.pre-commit-hooks.yaml`.
+
 **n8n.** Two workflow templates in [`integrations/n8n/`](../integrations/n8n/README.md).
 
 ## Prerequisites
